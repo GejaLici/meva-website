@@ -14,8 +14,8 @@ export default function HomePage() {
   return (
     <>
       <PageHeader
-        title="NovaSculpt Clinic: Where Artistry Meets Aesthetic Excellence"
-        description="Experience personalized aesthetic treatments designed to enhance your unique features and boost your confidence. Our expert team is dedicated to providing exceptional care and transformative results."
+        title="NovaSculpt Clinic: Sculpting Confidence, Refining Beauty."
+        description="Step into a world where advanced science and artistic vision converge. At NovaSculpt Clinic, we offer bespoke aesthetic solutions, empowering you to look and feel your absolute best. Your transformation awaits."
       />
 
       <section className="py-16">
