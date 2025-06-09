@@ -23,8 +23,9 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-primary",
-        isActive ? "text-primary" : "text-foreground/80"
+        "text-sm font-medium relative transition-colors hover:text-primary py-2", // Added py-2 for consistent clickable area
+        "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+        isActive ? "text-primary after:w-full" : "text-foreground/80"
       )}
     >
       {children}
@@ -33,6 +34,9 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 };
 
 export function Header() {
+  const pathname = usePathname();
+  const isServicesActive = pathname.startsWith('/services') || pathname === '/services';
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -42,7 +46,14 @@ export function Header() {
           <NavLink href="/about">About Us</NavLink>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="text-sm font-medium text-foreground/80 hover:text-primary focus-visible:ring-0 focus-visible:ring-offset-0 px-0 hover:bg-transparent">
+              <Button
+                variant="ghost"
+                className={cn(
+                  "text-sm font-medium relative transition-colors hover:text-primary px-0 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 py-2", // Added py-2
+                  "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
+                  isServicesActive ? "text-primary after:w-full" : "text-foreground/80"
+                )}
+              >
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
