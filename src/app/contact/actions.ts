@@ -1,3 +1,4 @@
+
 'use server';
 
 import * as z from 'zod';
@@ -21,7 +22,7 @@ export async function submitContactForm(values: ContactFormValues): Promise<Subm
 
   if (!validationResult.success) {
     console.error('Validation failed:', validationResult.error.flatten().fieldErrors);
-    return { success: false, error: "Të dhënat e dërguara nuk janë të vlefshme." };
+    return { success: false, error: "The submitted data is not valid." };
   }
 
   // Simulate form submission

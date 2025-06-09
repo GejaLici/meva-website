@@ -1,3 +1,4 @@
+
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -15,13 +16,13 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { submitContactForm } from '../actions'; // Assuming actions.ts is in the parent directory
+import { submitContactForm } from '../actions';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Emri duhet të ketë të paktën 2 karaktere.' }),
-  email: z.string().email({ message: 'Ju lutem vendosni një email të vlefshëm.' }),
-  subject: z.string().min(5, { message: 'Subjekti duhet të ketë të paktën 5 karaktere.' }),
-  message: z.string().min(10, { message: 'Mesazhi duhet të ketë të paktën 10 karaktere.' }),
+  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  email: z.string().email({ message: 'Please enter a valid email address.' }),
+  subject: z.string().min(5, { message: 'Subject must be at least 5 characters.' }),
+  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
 export type ContactFormValues = z.infer<typeof formSchema>;
@@ -43,21 +44,21 @@ export function ContactForm() {
       const result = await submitContactForm(values);
       if (result.success) {
         toast({
-          title: 'Mesazhi u dërgua!',
-          description: 'Faleminderit që na kontaktuat. Do t\'ju përgjigjemi sa më shpejt të jetë e mundur.',
+          title: 'Message Sent!',
+          description: 'Thank you for contacting us. We will get back to you as soon as possible.',
         });
         form.reset();
       } else {
         toast({
-          title: 'Gabim!',
-          description: result.error || 'Ndodhi një gabim gjatë dërgimit të mesazhit. Ju lutem provoni përsëri.',
+          title: 'Error!',
+          description: result.error || 'An error occurred while sending the message. Please try again.',
           variant: 'destructive',
         });
       }
     } catch (error) {
       toast({
-        title: 'Gabim i papritur!',
-        description: 'Ndodhi një gabim i papritur. Ju lutem provoni përsëri më vonë.',
+        title: 'Unexpected Error!',
+        description: 'An unexpected error occurred. Please try again later.',
         variant: 'destructive',
       });
     }
@@ -71,9 +72,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Emri Juaj</FormLabel>
+              <FormLabel>Your Name</FormLabel>
               <FormControl>
-                <Input placeholder="p.sh. Ana Kola" {...field} />
+                <Input placeholder="e.g. John Doe" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -84,9 +85,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email Juaj</FormLabel>
+              <FormLabel>Your Email</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="p.sh. ana.kola@email.com" {...field} />
+                <Input type="email" placeholder="e.g. john.doe@email.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -97,9 +98,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subjekti</FormLabel>
+              <FormLabel>Subject</FormLabel>
               <FormControl>
-                <Input placeholder="p.sh. Kërkesë për konsultë" {...field} />
+                <Input placeholder="e.g. Consultation Request" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -110,10 +111,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Mesazhi Juaj</FormLabel>
+              <FormLabel>Your Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Shkruani mesazhin tuaj këtu..."
+                  placeholder="Type your message here..."
                   className="min-h-[120px]"
                   {...field}
                 />
@@ -123,7 +124,7 @@ export function ContactForm() {
           )}
         />
         <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" disabled={form.formState.isSubmitting}>
-          {form.formState.isSubmitting ? 'Duke dërguar...' : 'Dërgo Mesazhin'}
+          {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
       </form>
     </Form>
