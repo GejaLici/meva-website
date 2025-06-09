@@ -1,0 +1,70 @@
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { serviceCategories } from '@/lib/services';
+import { SITE_NAME } from '@/lib/constants';
+import { Logo } from './Logo';
+
+export function MobileNav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetTrigger asChild>
+        <Button variant="ghost" size="icon" className="md:hidden text-foreground">
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Toggle Navigation</span>
+        </Button>
+      </SheetTrigger>
+      <SheetContent side="left" className="w-full max-w-xs p-0 bg-background">
+        <SheetHeader className="border-b p-4">
+          <SheetTitle>
+            <Logo />
+          </SheetTitle>
+        </SheetHeader>
+        <nav className="flex flex-col space-y-2 p-4">
+          <Link
+            href="/"
+            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="services" className="border-b-0">
+              <AccordionTrigger className="px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground hover:no-underline [&[data-state=open]>svg]:text-primary">
+                Services
+              </AccordionTrigger>
+              <AccordionContent className="pl-4">
+                {serviceCategories.map((category) => (
+                  <Link
+                    key={category.id}
+                    href={`/services/${category.slug}`}
+                    className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {category.name}
+                  </Link>
+                ))}
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+          <Link
+            href="/contact"
+            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
+        </nav>
+      </SheetContent>
+    </Sheet>
+  );
+}
