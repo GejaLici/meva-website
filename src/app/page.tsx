@@ -4,19 +4,38 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
-import { PageHeader } from '@/components/shared/PageHeader';
 import { ArrowRight, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
 
-
 export default function HomePage() {
   return (
     <>
-      <PageHeader
-        title="NovaSculpt Clinic: Sculpting Confidence, Refining Beauty."
-        description="Step into a world where advanced science and artistic vision converge. At NovaSculpt Clinic, we offer bespoke aesthetic solutions, empowering you to look and feel your absolute best. Your transformation awaits."
-      />
+      {/* Hero Section */}
+      <section className="relative h-[calc(100vh-4rem)] min-h-[500px] md:min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://placehold.co/1920x1080.png"
+            alt="Modern aesthetic clinic backdrop"
+            layout="fill"
+            objectFit="cover"
+            priority
+            data-ai-hint="modern clinic serene"
+            className="filter brightness-50"
+          />
+        </div>
+        <div className="relative z-10 container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
+          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold mb-6 shadow-text">
+            Reveal Your Radiance. Redefine Your Beauty.
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto shadow-text-sm">
+            Experience the art of aesthetic transformation at NovaSculpt Clinic. Our expert team combines advanced technology with personalized care to help you achieve your ultimate aesthetic goals.
+          </p>
+          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 text-lg">
+            <Link href="/services">Explore Our Treatments</Link>
+          </Button>
+        </div>
+      </section>
 
       <section className="py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
