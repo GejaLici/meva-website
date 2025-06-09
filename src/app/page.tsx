@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -10,18 +11,18 @@ export default function HomePage() {
   return (
     <>
       <PageHeader
-        title="Mirësevini në NovaSculpt Clinic"
-        description="Eksploroni shërbimet tona të specializuara dhe zbuloni se si mund t'ju ndihmojmë të arrini pamjen tuaj ideale me profesionalizëm dhe përkujdesje maksimale."
+        title="Welcome to NovaSculpt Clinic"
+        description="Explore our specialized services and discover how we can help you achieve your ideal look with professionalism and maximum care."
       />
 
       <section className="py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              Shërbimet Tona Kryesore
+              Our Main Services
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Ne ofrojmë një gamë të gjerë procedurash estetike për fytyrën, gjoksin dhe trupin.
+              We offer a wide range of aesthetic procedures for the face, breasts, and body.
             </p>
           </div>
 
@@ -48,7 +49,7 @@ export default function HomePage() {
                   </CardDescription>
                   <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full">
                     <Link href={`/services/${category.slug}`}>
-                      Shiko më shumë <ArrowRight className="ml-2 h-4 w-4" />
+                      Learn more <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -61,13 +62,13 @@ export default function HomePage() {
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-            Gati për Transformimin Tuaj?
+            Ready for Your Transformation?
           </h2>
           <p className="mt-4 mb-8 text-lg text-muted-foreground max-w-xl mx-auto">
-            Kontaktoni me ne sot për një konsultë dhe lejoni ekipin tonë të ekspertëve t'ju udhëzojë drejt rezultateve që keni ëndërruar.
+            Contact us today for a consultation and let our team of experts guide you towards the results you've dreamed of.
           </p>
           <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="/contact">Na Kontaktoni</Link>
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
       </section>

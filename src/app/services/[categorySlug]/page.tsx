@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import { serviceCategories, getCategoryBySlug } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
@@ -19,7 +20,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const category = getCategoryBySlug(params.categorySlug);
   if (!category) {
-    return { title: 'Kategoria nuk u gjet' };
+    return { title: 'Category Not Found' };
   }
   return {
     title: category.name,
@@ -46,7 +47,7 @@ export default function ServiceCategoryPage({ params }: CategoryPageProps) {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            Nuk ka shërbime të disponueshme në këtë kategori për momentin.
+            There are no services available in this category at the moment.
           </p>
         )}
       </div>

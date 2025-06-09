@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Service } from '@/types/services';
@@ -33,7 +34,7 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
         </CardDescription>
         <Button asChild variant="link" className="mt-auto p-0 self-start text-accent hover:text-accent/90">
           <Link href={`/services/${categorySlug}/${service.slug}`}>
-            Mëso më shumë <ArrowRight className="ml-2 h-4 w-4" />
+            Learn more <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </CardContent>

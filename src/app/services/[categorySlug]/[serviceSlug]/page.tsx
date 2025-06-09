@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { serviceCategories, getServiceBySlugs } from '@/lib/services';
@@ -30,11 +31,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
   if (!service) {
-    return { title: 'Shërbimi nuk u gjet' };
+    return { title: 'Service Not Found' };
   }
   return {
     title: service.name,
-    description: `Mësoni më shumë rreth ${service.name} në NovaSculpt Clinic. ${service.description.substring(0,120)}...`,
+    description: `Learn more about ${service.name} at NovaSculpt Clinic. ${service.description.substring(0,120)}...`,
   };
 }
 
@@ -65,24 +66,24 @@ export default function ServicePage({ params }: ServicePageProps) {
             )}
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
-            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">Rreth Shërbimit</h2>
+            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">About the Service</h2>
             <p className="mb-6">{service.description}</p>
             
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">Çfarë të prisni?</h3>
+            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to expect?</h3>
             <p className="mb-4">
-              Në NovaSculpt Clinic, ne sigurojmë që çdo pacient të marrë një plan trajtimi të personalizuar. 
-              Procedura për {service.name.toLowerCase()} përfshin konsultime të detajuara, teknika moderne dhe një 
-              ndjekje të kujdesshme pas operacionit për të garantuar rezultate optimale dhe një rikuperim të shpejtë.
+              At NovaSculpt Clinic, we ensure that every patient receives a personalized treatment plan. 
+              The procedure for {service.name.toLowerCase()} includes detailed consultations, modern techniques, and careful 
+              post-operative follow-up to guarantee optimal results and a speedy recovery.
             </p>
             <ul className="list-disc pl-5 mb-6 space-y-1">
-              <li>Konsultë fillestare e detajuar</li>
-              <li>Plan trajtimi i personalizuar</li>
-              <li>Teknologji dhe metoda bashkëkohore</li>
-              <li>Kujdes post-operator i dedikuar</li>
+              <li>Detailed initial consultation</li>
+              <li>Personalized treatment plan</li>
+              <li>Modern technology and methods</li>
+              <li>Dedicated post-operative care</li>
             </ul>
             
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">Rezervoni një Konsultë</Link>
+              <Link href="/contact">Book a Consultation</Link>
             </Button>
           </div>
         </div>
