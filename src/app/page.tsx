@@ -1,3 +1,4 @@
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -36,6 +37,16 @@ export default function HomePage() {
           </Button>
         </div>
       </section>
+
+      {/* Global styles for text shadow, co-located for hero section specific enhancements */}
+      <style jsx global>{`
+        .shadow-text {
+          text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .shadow-text-sm {
+          text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+      `}</style>
 
       <section className="py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
