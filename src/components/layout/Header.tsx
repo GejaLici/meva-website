@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -38,6 +39,7 @@ export function Header() {
         <Logo />
         <nav className="hidden md:flex items-center space-x-6">
           <NavLink href="/">Home</NavLink>
+          <NavLink href="/about">About Us</NavLink>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="text-sm font-medium text-foreground/80 hover:text-primary focus-visible:ring-0 focus-visible:ring-offset-0 px-0 hover:bg-transparent">
@@ -51,8 +53,12 @@ export function Header() {
                   <Link href={`/services/${category.slug}`}>{category.name}</Link>
                 </DropdownMenuItem>
               ))}
+                 <DropdownMenuItem asChild>
+                  <Link href="/services">All Services</Link>
+                </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/contact">Contact</NavLink>
         </nav>
         <div className="md:hidden">

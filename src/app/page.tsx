@@ -5,7 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { testimonials } from '@/lib/testimonials';
+
 
 export default function HomePage() {
   return (
@@ -52,6 +55,45 @@ export default function HomePage() {
                       Learn more <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-background">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+              What Our Patients Say
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Hear from those who have experienced the NovaSculpt difference.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <Card key={testimonial.id} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardContent className="pt-6 flex-grow flex flex-col">
+                  <div className="flex items-center mb-4">
+                    <Avatar className="h-12 w-12 mr-4">
+                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.imageHint || 'person portrait'}/>
+                      <AvatarFallback>{testimonial.name.substring(0,1).toUpperCase()}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold text-primary">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.treatment}</p>
+                    </div>
+                  </div>
+                  <blockquote className="text-foreground italic border-l-4 border-accent pl-4 mb-4 flex-grow">
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div className="flex items-center text-yellow-500">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-current" />
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}

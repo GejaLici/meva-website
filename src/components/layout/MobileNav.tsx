@@ -1,13 +1,13 @@
+
 'use client';
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { serviceCategories } from '@/lib/services';
-import { SITE_NAME } from '@/lib/constants';
 import { Logo } from './Logo';
 
 export function MobileNav() {
@@ -35,6 +35,13 @@ export function MobileNav() {
           >
             Home
           </Link>
+          <Link
+            href="/about"
+            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+            onClick={() => setIsOpen(false)}
+          >
+            About Us
+          </Link>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="services" className="border-b-0">
@@ -52,9 +59,24 @@ export function MobileNav() {
                     {category.name}
                   </Link>
                 ))}
+                 <Link
+                    href="/services"
+                    className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    All Services
+                  </Link>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+
+          <Link
+            href="/faq"
+            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+            onClick={() => setIsOpen(false)}
+          >
+            FAQ
+          </Link>
 
           <Link
             href="/contact"
