@@ -63,7 +63,7 @@ export default function AboutPage() {
             </div>
             <div>
               <Image
-                src="https://placehold.co/600x450.png"
+                src="/images/aigen.jpeg"
                 alt="NovaSculpt Clinic Interior"
                 width={600}
                 height={450}
