@@ -6,9 +6,10 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
-import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Leaf, Smile } from 'lucide-react';
+import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Leaf } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
+import { cn } from '@/lib/utils';
 
 const DENTAL_CATEGORY_IDS = [
   'aesthetic-dentistry',
@@ -64,11 +65,11 @@ export default function HomePage() {
     {
       id: 'dental-services-summary',
       name: 'Comprehensive Dental Care',
-      slug: 'dental', 
+      slug: 'dental',
       description: 'Explore our full range of expert dental services, from cosmetic enhancements and orthodontics to surgical procedures and pediatric care, all tailored to your oral health needs.',
       image: 'https://placehold.co/800x600.png',
       imageHint: 'dental clinic modern',
-      icon: Sparkles, // Using Sparkles, as Smile icon seems not to be available or was previously Smile from lucide. Changed to Sparkles.
+      icon: Sparkles,
     },
   ];
 
@@ -89,10 +90,10 @@ export default function HomePage() {
           />
         </div>
         <div className="relative z-10 container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
-          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold mb-6 shadow-text">
             Reveal Your Radiance. Redefine Your Beauty.
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto shadow-text-sm">
             Experience the art of aesthetic transformation at NovaSculpt Clinic. Our expert team combines advanced technology with personalized care to help you achieve your ultimate aesthetic goals.
           </p>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 text-lg">
@@ -113,11 +114,17 @@ export default function HomePage() {
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {displayCategories.map((category) => {
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-6">
+            {displayCategories.map((category, index) => {
               const CategoryIcon = category.icon;
+              let colSpanClass = '';
+              if (index < 3) { // First three items
+                colSpanClass = 'md:col-span-2';
+              } else { // Last two items (index 3 and 4)
+                colSpanClass = 'md:col-span-3';
+              }
               return (
-                <Card key={category.id} className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", colSpanClass)}>
                   {category.image && (
                     <div className="relative w-full h-56 overflow-hidden">
                       <Image
@@ -194,7 +201,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-primary text-primary-foreground"> 
+      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-headline text-3xl font-bold sm:text-4xl">
             Ready for Your Transformation?
