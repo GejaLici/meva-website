@@ -11,11 +11,11 @@ function slugify(text: string): string {
     .replace(/--+/g, '-'); // Replace multiple - with single -
 }
 
-const facialSurgeryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
-  { id: 'op-hunde', name: 'Nose Surgery (Rhinoplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or resize the nose for aesthetic or functional improvement. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: '/images/beauty-natural-woman-studio.jpg' },
-  { id: 'rim-hunde', name: 'Nose Tip Reshaping', categorySlug: 'facial-surgery', description: 'Specialized surgical refinement of the nasal tip for improved definition and appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: '/images/beauty-natural-woman-studio.jpg' },
-  { id: 'rim-vesheve', name: 'Ear Reshaping (Otoplasty)', categorySlug: 'facial-surgery', description: 'Surgical correction of prominent or misshapen ears to create a more balanced facial appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'ear surgery otoplasty' },
-  { id: 'mbj-flokeve', name: 'Hair Transplant', categorySlug: 'facial-surgery', description: 'Surgical restoration of hair to areas with thinning or baldness, using advanced transplantation techniques. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'hair transplant procedure' },
+const facialSurgeryServicesBase: Omit<Service, 'slug'>[] = [
+  { id: 'op-hunde', name: 'Nose Surgery (Rhinoplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or resize the nose for aesthetic or functional improvement. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'rhinoplasty procedure' },
+  { id: 'rim-hunde', name: 'Nose Tip Reshaping', categorySlug: 'facial-surgery', description: 'Specialized surgical refinement of the nasal tip for improved definition and appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'nose tip surgery' },
+  { id: 'rim-vesheve', name: 'Ear Reshaping (Otoplasty)', categorySlug: 'facial-surgery', description: 'Surgical correction of prominent or misshapen ears to create a more balanced facial appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'otoplasty results' },
+  { id: 'mbj-flokeve', name: 'Hair Transplant', categorySlug: 'facial-surgery', description: 'Surgical restoration of hair to areas with thinning or baldness, using advanced transplantation techniques. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'hair transplant before after' },
   { id: 'mbj-mjekres', name: 'Beard Transplant', categorySlug: 'facial-surgery', description: 'Surgical procedure to enhance beard density and shape using hair transplantation. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'beard transplant results' },
   { id: 'mbj-vetullave', name: 'Eyebrow Transplant', categorySlug: 'facial-surgery', description: 'Surgical restoration or enhancement of eyebrows using hair transplantation for fuller, defined brows. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyebrow transplant detail' },
   { id: 'lift-vetullave', name: 'Eyebrow Lift (Browplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to elevate the eyebrows, reducing forehead wrinkles and creating a more youthful look. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyebrow lift surgery' },
@@ -24,7 +24,7 @@ const facialSurgeryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
   { id: 'rim-mjekres', name: 'Chin Augmentation (Genioplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or enhance the chin, improving facial balance and profile. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'chin augmentation surgery' },
 ];
 
-const facialTreatmentsServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const facialTreatmentsServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'lip-reshaping', name: 'Lip Reshaping & Augmentation', categorySlug: 'facial-treatments', description: 'Non-surgical enhancement of lips using fillers for improved volume, shape, and definition. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'lip fillers' },
   { id: 'xanthelasma-plasma-arc', name: 'Xanthelasma Removal (Plasma Arc)', categorySlug: 'facial-treatments', description: 'Non-invasive removal of xanthelasma (cholesterol deposits on eyelids) using Plasma Arc technology. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'xanthelasma plasma' },
   { id: 'multivitamin-treatment', name: 'Multivitamin Infusion Facial', categorySlug: 'facial-treatments', description: 'Revitalizing facial treatment infusing skin with essential vitamins for improved radiance and health. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'vitamin facial' },
@@ -43,14 +43,14 @@ const facialTreatmentsServicesBase: Omit<Service, 'slug' | 'image'>[] = [
   { id: 'chin-reshaping', name: 'Non-Surgical Chin Reshaping (Fillers)', categorySlug: 'facial-treatments', description: 'Enhancement or reshaping of the chin using dermal fillers for improved facial balance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'chin fillers' },
 ];
 
-const breastServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const breastServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'zmadh-gjoksit', name: 'Breast Augmentation', categorySlug: 'breasts', description: 'Detailed information about breast augmentation. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'breast augmentation' },
   { id: 'lift-gjoksit', name: 'Breast Lift', categorySlug: 'breasts', description: 'Detailed information about breast lift. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'breast lift' },
   { id: 'zvog-gjoksit', name: 'Breast Reduction', categorySlug: 'breasts', description: 'Detailed information about breast reduction. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'breast reduction' },
   { id: 'rikonst-gjoksit', name: 'Breast Reconstruction', categorySlug: 'breasts', description: 'Detailed information about breast reconstruction. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'breast reconstruction' },
 ];
 
-const bodyServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const bodyServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'lift-kraheve', name: 'Arm Lift', categorySlug: 'body', description: 'Detailed information about arm lift. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'arm lift' },
   { id: 'rim-barkut', name: 'Tummy Tuck', categorySlug: 'body', description: 'Detailed information about tummy tuck. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'tummy tuck' },
   { id: 'liposculptura', name: 'Liposculpture', categorySlug: 'body', description: 'Detailed information about liposculpture. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'liposculpture body' },
@@ -66,54 +66,54 @@ const bodyServicesBase: Omit<Service, 'slug' | 'image'>[] = [
   { id: 'laser-hair-removal', name: 'Laser Hair Removal', categorySlug: 'body', description: 'Detailed information about laser hair removal. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'hair removal' },
 ];
 
-const aestheticDentistryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const aestheticDentistryServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'teeth-whitening', name: 'Teeth Whitening', categorySlug: 'aesthetic-dentistry', description: 'Professional teeth whitening services for a brighter, more confident smile. Discover effective treatments and lasting results.', imageHint: 'teeth whitening smile' },
   { id: 'composite-veneers', name: 'Composite Veneers', categorySlug: 'aesthetic-dentistry', description: 'Transform your smile with custom-crafted composite veneers. Ideal for correcting chips, gaps, or discoloration.', imageHint: 'dental veneers beautiful' },
   { id: 'emax-veneers', name: 'E-Max Veneers', categorySlug: 'aesthetic-dentistry', description: 'Achieve a stunning, natural-looking smile with high-quality E-Max porcelain veneers, known for their durability and beauty.', imageHint: 'porcelain veneers smile' },
 ];
 
-const prostheticsServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const prostheticsServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'dental-crowns', name: 'Dental Crowns', categorySlug: 'prosthetics', description: 'Restore the strength, shape, and appearance of damaged teeth with custom-fitted dental crowns.', imageHint: 'dental crown tooth' },
   { id: 'dental-bridges', name: 'Dental Bridges', categorySlug: 'prosthetics', description: 'Replace missing teeth and restore your smile with durable and natural-looking dental bridges.', imageHint: 'dental bridge teeth' },
   { id: 'dentures', name: 'Dentures', categorySlug: 'prosthetics', description: 'Comfortable and custom-made dentures to replace missing teeth and improve oral function and aesthetics.', imageHint: 'dentures smile' },
 ];
 
-const orthodonticsServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const orthodonticsServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'invisalign', name: 'Invisalign', categorySlug: 'orthodontics', description: 'Straighten your teeth discreetly and comfortably with Invisalign clear aligners. The modern solution to a perfect smile.', imageHint: 'invisalign aligners smile' },
   { id: 'fixed-braces', name: 'Fixed Braces', categorySlug: 'orthodontics', description: 'Traditional fixed braces for effective teeth alignment and bite correction, suitable for various orthodontic needs.', imageHint: 'dental braces smile' },
   { id: 'removable-appliances', name: 'Removable Appliances', categorySlug: 'orthodontics', description: 'Customized removable orthodontic appliances for specific alignment needs and maintaining results.', imageHint: 'orthodontic appliance' },
 ];
 
-const restorativeDentistryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const restorativeDentistryServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'teeth-cleaning', name: 'Teeth Cleaning (Calculus Removal)', categorySlug: 'restorative-dentistry', description: 'Professional dental cleaning to remove plaque and calculus, promoting healthy gums and teeth.', imageHint: 'dental cleaning hygiene' },
   { id: 'dental-fillings', name: 'Dental Fillings', categorySlug: 'restorative-dentistry', description: 'Restore decayed teeth with durable dental fillings, matching the natural color of your teeth.', imageHint: 'tooth filling dental' },
   { id: 'root-canal-treatment', name: 'Root Canal Treatment', categorySlug: 'restorative-dentistry', description: 'Save infected teeth with expert root canal therapy, relieving pain and preserving your natural tooth.', imageHint: 'root canal procedure' },
 ];
 
-const oralSurgeryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const oralSurgeryServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'tooth-extraction', name: 'Tooth Extraction', categorySlug: 'oral-surgery', description: 'Safe and comfortable tooth extraction procedures, including wisdom teeth removal, by experienced oral surgeons.', imageHint: 'tooth extraction dental' },
   { id: 'dental-implants', name: 'Dental Implants', categorySlug: 'oral-surgery', description: 'Permanent solutions for missing teeth with high-quality dental implants that look and feel natural.', imageHint: 'dental implant surgery' },
   { id: 'apical-resection', name: 'Apical Resection (Apicoectomy)', categorySlug: 'oral-surgery', description: 'Specialized surgical procedure to treat infections at the root tip and save the natural tooth.', imageHint: 'dental surgery procedure' },
 ];
 
-const pediatricDentistryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+const pediatricDentistryServicesBase: Omit<Service, 'slug'>[] = [
   { id: 'primary-teeth-care', name: 'Primary Teeth Care (Milk Teeth)', categorySlug: 'pediatric-dentistry', description: 'Gentle and comprehensive dental care for children, focusing on the health of primary (milk) teeth.', imageHint: 'child dentist kids' },
   { id: 'teeth-fluoridation', name: 'Teeth Fluoridation', categorySlug: 'pediatric-dentistry', description: 'Protective fluoride treatments to strengthen children’s teeth and prevent cavities.', imageHint: 'fluoride treatment child' },
   { id: 'dental-sealants', name: 'Dental Sealants', categorySlug: 'pediatric-dentistry', description: 'Application of dental sealants to protect children’s molars from decay.', imageHint: 'dental sealants kids' },
 ];
 
 
-const facialSurgeryServices: Service[] = facialSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `/images/beauty-natural-woman-studio.jpg` }));
-const facialTreatmentsServices: Service[] = facialTreatmentsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `/images/cute-woman-lying-procedure-rejuvenation-skin.jpeg` }));
-const breastServices: Service[] = breastServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `/images/close-beauty-portrait-topless-woman-with-perfect-skin-natural-make-up-plump-nude-lips-blue-background.jpeg` }));
-const bodyServices: Service[] = bodyServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
+const facialSurgeryServices: Service[] = facialSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `/images/beauty-natural-woman-studio.jpg`, imageHint: s.imageHint || 'facial surgery procedure' }));
+const facialTreatmentsServices: Service[] = facialTreatmentsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `/images/cute-woman-lying-procedure-rejuvenation-skin.jpeg`, imageHint: s.imageHint || 'facial treatment application' }));
+const breastServices: Service[] = breastServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `/images/close-beauty-portrait-topless-woman-with-perfect-skin-natural-make-up-plump-nude-lips-blue-background.jpeg`, imageHint: s.imageHint || 'breast procedure result' }));
+const bodyServices: Service[] = bodyServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'body contouring detail' }));
 
-const aestheticDentistryServices: Service[] = aestheticDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
-const prostheticsServices: Service[] = prostheticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
-const orthodonticsServices: Service[] = orthodonticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
-const restorativeDentistryServices: Service[] = restorativeDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
-const oralSurgeryServices: Service[] = oralSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
-const pediatricDentistryServices: Service[] = pediatricDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
+const aestheticDentistryServices: Service[] = aestheticDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'aesthetic dentistry tool' }));
+const prostheticsServices: Service[] = prostheticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'dental prosthetic device' }));
+const orthodonticsServices: Service[] = orthodonticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'orthodontic tools' }));
+const restorativeDentistryServices: Service[] = restorativeDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'restorative dentistry procedure' }));
+const oralSurgeryServices: Service[] = oralSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'oral surgery equipment' }));
+const pediatricDentistryServices: Service[] = pediatricDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'child at dentist' }));
 
 
 export const serviceCategories: ServiceCategory[] = [
@@ -218,3 +218,6 @@ export const getServiceBySlugs = (categorySlug: string, serviceSlug: string): Se
   const category = getCategoryBySlug(categorySlug);
   return category?.services.find(service => service.slug === serviceSlug);
 };
+
+
+    
