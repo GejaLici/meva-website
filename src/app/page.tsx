@@ -10,7 +10,34 @@ import { ArrowRight, Star } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
 
+const DENTAL_CATEGORY_IDS = [
+  'aesthetic-dentistry',
+  'prosthetics',
+  'orthodontics',
+  'restorative-dentistry',
+  'oral-surgery',
+  'pediatric-dentistry',
+];
+
 export default function HomePage() {
+  const aestheticServiceCategories = serviceCategories.filter(
+    (category) => !DENTAL_CATEGORY_IDS.includes(category.id)
+  );
+
+  const displayCategories = [
+    ...aestheticServiceCategories,
+    {
+      id: 'dental-services-summary',
+      name: 'Comprehensive Dental Care',
+      slug: 'dental', // This will link to /services/dental
+      description: 'Explore our full range of expert dental services, from cosmetic enhancements and orthodontics to surgical procedures and pediatric care, all tailored to your oral health needs.',
+      image: 'https://placehold.co/800x600.png',
+      imageHint: 'dental clinic modern',
+      services: [], // Not used for this summary card in this context
+    },
+  ];
+
+
   return (
     <>
       {/* Hero Section */}
@@ -61,7 +88,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {serviceCategories.map((category) => (
+            {displayCategories.map((category) => (
               <Card key={category.id} className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {category.image && (
                   <div className="relative w-full h-56">

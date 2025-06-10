@@ -15,7 +15,6 @@ export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const aestheticCategories = serviceCategories.filter(cat => ['face', 'breasts', 'body'].includes(cat.id));
-  const dentalCategories = serviceCategories.filter(cat => !['face', 'breasts', 'body'].includes(cat.id));
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -53,7 +52,7 @@ export function MobileNav() {
                 Services
               </AccordionTrigger>
               <AccordionContent className="pl-4">
-                {aestheticCategories.length > 0 && aestheticCategories.map((category) => (
+                {aestheticCategories.map((category) => (
                   <Link
                     key={category.id}
                     href={`/services/${category.slug}`}
@@ -63,17 +62,14 @@ export function MobileNav() {
                     {category.name}
                   </Link>
                 ))}
-                {aestheticCategories.length > 0 && dentalCategories.length > 0 && <Separator className="my-2" />}
-                {dentalCategories.length > 0 && dentalCategories.map((category) => (
-                  <Link
-                    key={category.id}
-                    href={`/services/${category.slug}`}
-                    className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {category.name}
-                  </Link>
-                ))}
+                <Separator className="my-2" />
+                <Link
+                  href="/services/dental"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Dental Services
+                </Link>
                 <Separator className="my-2" />
                 <Link
                     href="/services"

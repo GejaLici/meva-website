@@ -39,7 +39,6 @@ export function Header() {
   const isServicesActive = pathname.startsWith('/services') || pathname === '/services';
 
   const aestheticCategories = serviceCategories.filter(cat => ['face', 'breasts', 'body'].includes(cat.id));
-  const dentalCategories = serviceCategories.filter(cat => !['face', 'breasts', 'body'].includes(cat.id));
 
 
   return (
@@ -64,17 +63,15 @@ export function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="max-h-[70vh] overflow-y-auto">
-              {aestheticCategories.length > 0 && aestheticCategories.map((category) => (
+              {aestheticCategories.map((category) => (
                 <DropdownMenuItem key={category.id} asChild>
                   <Link href={`/services/${category.slug}`}>{category.name}</Link>
                 </DropdownMenuItem>
               ))}
-              {aestheticCategories.length > 0 && dentalCategories.length > 0 && <DropdownMenuSeparator />}
-              {dentalCategories.length > 0 && dentalCategories.map((category) => (
-                <DropdownMenuItem key={category.id} asChild>
-                  <Link href={`/services/${category.slug}`}>{category.name}</Link>
-                </DropdownMenuItem>
-              ))}
+              <DropdownMenuSeparator />
+              <DropdownMenuItem asChild>
+                <Link href="/services/dental">Dental Services</Link>
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 <Link href="/services">All Services</Link>
