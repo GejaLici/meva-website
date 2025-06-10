@@ -203,6 +203,14 @@ export default function HomePage() {
 
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+              Further Insights & Support
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Stay informed and find answers to your questions.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             
             <Card className="flex flex-col text-center md:text-left shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -254,14 +262,14 @@ export default function HomePage() {
           </Button>
         </div>
       </section>
-      <style jsx global>{`
+      {/* <style jsx global>{`
         .shadow-text {
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .shadow-text-sm {
           text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-      `}</style>
+      `}</style> */}
     </>
   );
 }
