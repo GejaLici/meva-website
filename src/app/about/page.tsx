@@ -140,8 +140,8 @@ export default function AboutPage() {
                   <Image
                     src={member.imageUrl}
                     alt={member.name}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     data-ai-hint={member.imageHint}
                   />
                 </div>

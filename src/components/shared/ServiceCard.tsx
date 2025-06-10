@@ -19,8 +19,8 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
           <Image
             src={service.image}
             alt={service.name}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             data-ai-hint={service.imageHint || 'medical procedure'}
           />
         </div>

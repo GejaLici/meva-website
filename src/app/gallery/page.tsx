@@ -35,8 +35,8 @@ export default function GalleryPage() {
                        <Image
                         src={item.beforeImageUrl}
                         alt={`Before - ${item.procedureName}`}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: 'cover' }}
                         data-ai-hint={item.beforeImageHint}
                       />
                     </div>
@@ -47,8 +47,8 @@ export default function GalleryPage() {
                         <Image
                           src={item.afterImageUrl}
                           alt={`After - ${item.procedureName}`}
-                          layout="fill"
-                          objectFit="cover"
+                          fill
+                          style={{ objectFit: 'cover' }}
                           data-ai-hint={item.afterImageHint}
                         />
                     </div>

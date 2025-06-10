@@ -19,8 +19,8 @@ export function BlogCard({ post }: BlogCardProps) {
           <Image
             src={post.imageUrl}
             alt={post.title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             data-ai-hint={post.imageHint || 'blog post image'}
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
           />

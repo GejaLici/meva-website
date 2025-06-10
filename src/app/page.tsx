@@ -82,9 +82,9 @@ export default function HomePage() {
           <Image
             src="/images/portrait-woman.jpg"
             alt="Modern aesthetic clinic backdrop"
-            layout="fill"
-            objectFit="cover"
+            fill
             priority
+            style={{ objectFit: 'cover' }}
             data-ai-hint="modern clinic serene"
             className="filter brightness-50"
           />
@@ -130,8 +130,8 @@ export default function HomePage() {
                       <Image
                         src={category.image}
                         alt={category.name}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: 'cover' }}
                         data-ai-hint={category.imageHint || 'medical collage'}
                         className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
                       />
