@@ -19,7 +19,7 @@ import { MobileNav } from './MobileNav';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
   return (
     <Link
       href={href}
@@ -36,7 +36,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 
 export function Header() {
   const pathname = usePathname();
-  const isServicesActive = pathname.startsWith('/services') || pathname === '/services';
+  const isServicesActive = pathname.startsWith('/services');
 
   const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 
@@ -72,12 +72,10 @@ export function Header() {
               <DropdownMenuItem asChild>
                 <Link href="/services/dental">Dental Services</Link>
               </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem asChild>
-                <Link href="/services">All Services</Link>
-              </DropdownMenuItem>
+              {/* Removed "All Services" to simplify, can be re-added if needed */}
             </DropdownMenuContent>
           </DropdownMenu>
+          <NavLink href="/blog">Blog</NavLink>
           <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/contact">Contact</NavLink>
         </nav>

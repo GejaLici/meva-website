@@ -70,17 +70,18 @@ export function MobileNav() {
                 >
                   Dental Services
                 </Link>
-                <Separator className="my-2" />
-                <Link
-                    href="/services"
-                    className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    All Services
-                  </Link>
+                {/* Removed "All Services" to simplify, can be re-added if needed */}
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+
+          <Link
+            href="/blog"
+            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+            onClick={() => setIsOpen(false)}
+          >
+            Blog
+          </Link>
 
           <Link
             href="/faq"
