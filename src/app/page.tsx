@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Star, Smile, Heart, PersonStanding, Sparkles } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
 
@@ -25,15 +25,41 @@ export default function HomePage() {
   );
 
   const displayCategories = [
-    ...aestheticServiceCategories,
+    {
+      id: 'face',
+      name: 'Face (Aesthetic)',
+      slug: 'face',
+      description: serviceCategories.find(cat => cat.id === 'face')?.description || 'Specialized services for improving and reshaping facial features.',
+      image: serviceCategories.find(cat => cat.id === 'face')?.image || 'https://placehold.co/800x600.png',
+      imageHint: serviceCategories.find(cat => cat.id === 'face')?.imageHint || 'facial aesthetics',
+      icon: Smile,
+    },
+    {
+      id: 'breasts',
+      name: 'Breasts (Female)',
+      slug: 'breasts',
+      description: serviceCategories.find(cat => cat.id === 'breasts')?.description || 'Procedures for breast augmentation, lift, reduction, and reconstruction.',
+      image: serviceCategories.find(cat => cat.id === 'breasts')?.image || 'https://placehold.co/800x600.png',
+      imageHint: serviceCategories.find(cat => cat.id === 'breasts')?.imageHint || 'breast surgery',
+      icon: Heart,
+    },
+    {
+      id: 'body',
+      name: 'Body (Aesthetic)',
+      slug: 'body',
+      description: serviceCategories.find(cat => cat.id === 'body')?.description || 'Services for body contouring and reshaping for a harmonious appearance.',
+      image: serviceCategories.find(cat => cat.id === 'body')?.image || 'https://placehold.co/800x600.png',
+      imageHint: serviceCategories.find(cat => cat.id === 'body')?.imageHint || 'body contouring',
+      icon: PersonStanding,
+    },
     {
       id: 'dental-services-summary',
       name: 'Comprehensive Dental Care',
-      slug: 'dental', // This will link to /services/dental
+      slug: 'dental', 
       description: 'Explore our full range of expert dental services, from cosmetic enhancements and orthodontics to surgical procedures and pediatric care, all tailored to your oral health needs.',
       image: 'https://placehold.co/800x600.png',
       imageHint: 'dental clinic modern',
-      services: [], // Not used for this summary card in this context
+      icon: Sparkles,
     },
   ];
 
@@ -79,35 +105,43 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {displayCategories.map((category) => (
-              <Card key={category.id} className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                {category.image && (
-                  <div className="relative w-full h-56 overflow-hidden">
-                    <Image
-                      src={category.image}
-                      alt={category.name}
-                      layout="fill"
-                      objectFit="cover"
-                      data-ai-hint={category.imageHint || 'medical collage'}
-                      className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
-                    />
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="font-headline text-2xl text-primary group-hover:text-accent transition-colors duration-300">{category.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow flex flex-col">
-                  <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3">
-                    {category.description}
-                  </CardDescription>
-                  <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
-                    <Link href={`/services/${category.slug}`}>
-                      Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+            {displayCategories.map((category) => {
+              const CategoryIcon = category.icon;
+              return (
+                <Card key={category.id} className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  {category.image && (
+                    <div className="relative w-full h-56 overflow-hidden">
+                      <Image
+                        src={category.image}
+                        alt={category.name}
+                        layout="fill"
+                        objectFit="cover"
+                        data-ai-hint={category.imageHint || 'medical collage'}
+                        className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
+                      />
+                    </div>
+                  )}
+                  <CardHeader className="text-center">
+                    {CategoryIcon && (
+                      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                        <CategoryIcon className="h-6 w-6" />
+                      </div>
+                    )}
+                    <CardTitle className="font-headline text-2xl text-primary group-hover:text-accent transition-colors duration-300">{category.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col">
+                    <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3 text-center">
+                      {category.description}
+                    </CardDescription>
+                    <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
+                      <Link href={`/services/${category.slug}`}>
+                        Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -151,7 +185,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-background"> {/* Changed from bg-muted/50 to bg-background for variation */}
+      <section className="py-16 bg-background"> 
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
             Ready for Your Transformation?
@@ -167,3 +201,4 @@ export default function HomePage() {
     </>
   );
 }
+
