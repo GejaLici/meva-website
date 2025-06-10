@@ -66,16 +66,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Global styles for text shadow, co-located for hero section specific enhancements */}
-      <style jsx global>{`
-        .shadow-text {
-          text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .shadow-text-sm {
-          text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
-        }
-      `}</style>
-
       <section className="py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -88,7 +78,7 @@ export default function HomePage() {
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {displayCategories.map((category) => (
               <Card key={category.id} className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {category.image && (
