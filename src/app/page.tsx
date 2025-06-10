@@ -67,7 +67,7 @@ export default function HomePage() {
       name: 'Comprehensive Dental Care',
       slug: 'dental',
       description: 'Explore our full range of expert dental services, from cosmetic enhancements and orthodontics to surgical procedures and pediatric care, all tailored to your oral health needs.',
-      image: 'https://placehold.co/800x600.png',
+      image: '/images/dentist-turkey-antalya.jpg',
       imageHint: 'dental clinic modern',
       icon: Sparkles,
     },
@@ -287,14 +287,6 @@ export default function HomePage() {
           </Button>
         </div>
       </section>
-      {/* <style jsx global>{`
-        .shadow-text {
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .shadow-text-sm {
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-      `}</style> */}
     </>
   );
 }
