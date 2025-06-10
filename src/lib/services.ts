@@ -12,7 +12,7 @@ function slugify(text: string): string {
 }
 
 const facialSurgeryServicesBase: Omit<Service, 'slug'>[] = [
-  { id: 'op-hunde', name: 'Nose Surgery (Rhinoplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or resize the nose for aesthetic or functional improvement. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'rhinoplasty procedure' },
+  { id: 'op-hunde', name: 'Nose Surgery (Rhinoplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or resize the nose for aesthetic or functional improvement. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', image: '/images/woman-getting-ready-nose-job-surgery (1).jpg', imageHint: 'nose surgery detail' },
   { id: 'rim-hunde', name: 'Nose Tip Reshaping', categorySlug: 'facial-surgery', description: 'Specialized surgical refinement of the nasal tip for improved definition and appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'nose tip surgery' },
   { id: 'rim-vesheve', name: 'Ear Reshaping (Otoplasty)', categorySlug: 'facial-surgery', description: 'Surgical correction of prominent or misshapen ears to create a more balanced facial appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'otoplasty results' },
   { id: 'mbj-flokeve', name: 'Hair Transplant', categorySlug: 'facial-surgery', description: 'Surgical restoration of hair to areas with thinning or baldness, using advanced transplantation techniques. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'hair transplant before after' },
@@ -103,17 +103,17 @@ const pediatricDentistryServicesBase: Omit<Service, 'slug'>[] = [
 ];
 
 
-const facialSurgeryServices: Service[] = facialSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `/images/beauty-natural-woman-studio.jpg`, imageHint: s.imageHint || 'facial surgery procedure' }));
-const facialTreatmentsServices: Service[] = facialTreatmentsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `/images/cute-woman-lying-procedure-rejuvenation-skin.jpeg`, imageHint: s.imageHint || 'facial treatment application' }));
-const breastServices: Service[] = breastServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `/images/close-beauty-portrait-topless-woman-with-perfect-skin-natural-make-up-plump-nude-lips-blue-background.jpeg`, imageHint: s.imageHint || 'breast procedure result' }));
+const facialSurgeryServices: Service[] = facialSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || '/images/beauty-natural-woman-studio.jpg', imageHint: s.imageHint || 'facial surgery procedure' }));
+const facialTreatmentsServices: Service[] = facialTreatmentsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || '/images/cute-woman-lying-procedure-rejuvenation-skin.jpeg', imageHint: s.imageHint || 'facial treatment application' }));
+const breastServices: Service[] = breastServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || '/images/close-beauty-portrait-topless-woman-with-perfect-skin-natural-make-up-plump-nude-lips-blue-background.jpeg', imageHint: s.imageHint || 'breast procedure result' }));
 const bodyServices: Service[] = bodyServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'body contouring detail' }));
 
-const aestheticDentistryServices: Service[] = aestheticDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'aesthetic dentistry tool' }));
-const prostheticsServices: Service[] = prostheticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'dental prosthetic device' }));
-const orthodonticsServices: Service[] = orthodonticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'orthodontic tools' }));
-const restorativeDentistryServices: Service[] = restorativeDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'restorative dentistry procedure' }));
-const oralSurgeryServices: Service[] = oralSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'oral surgery equipment' }));
-const pediatricDentistryServices: Service[] = pediatricDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: s.imageHint || 'child at dentist' }));
+const aestheticDentistryServices: Service[] = aestheticDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: 'aesthetic dentistry tool' }));
+const prostheticsServices: Service[] = prostheticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: 'dental prosthetic device' }));
+const orthodonticsServices: Service[] = orthodonticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: 'orthodontic tools' }));
+const restorativeDentistryServices: Service[] = restorativeDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: 'restorative dentistry procedure' }));
+const oralSurgeryServices: Service[] = oralSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: 'oral surgery equipment' }));
+const pediatricDentistryServices: Service[] = pediatricDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || `https://placehold.co/600x400.png`, imageHint: 'child at dentist' }));
 
 
 export const serviceCategories: ServiceCategory[] = [
@@ -218,6 +218,5 @@ export const getServiceBySlugs = (categorySlug: string, serviceSlug: string): Se
   const category = getCategoryBySlug(categorySlug);
   return category?.services.find(service => service.slug === serviceSlug);
 };
-
 
     
