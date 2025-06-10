@@ -118,9 +118,9 @@ export default function HomePage() {
             {displayCategories.map((category, index) => {
               const CategoryIcon = category.icon;
               let colSpanClass = '';
-              if (index < 3) { // First three items
+              if (index < 3) { 
                 colSpanClass = 'md:col-span-2';
-              } else { // Last two items (index 3 and 4)
+              } else { 
                 colSpanClass = 'md:col-span-3';
               }
               return (
@@ -201,6 +201,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            
+            <Card className="flex flex-col text-center md:text-left shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="font-headline text-2xl font-bold text-primary">
+                  Explore Our Insights
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow flex flex-col items-center md:items-start">
+                <p className="text-muted-foreground mb-6">
+                  Dive into our blog for the latest trends, tips, and expert advice in aesthetic and dental care.
+                </p>
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
+                  <Link href="/blog">Read Our Blog</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="flex flex-col text-center md:text-left shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle className="font-headline text-2xl font-bold text-primary">
+                  Got Questions?
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow flex flex-col items-center md:items-start">
+                <p className="text-muted-foreground mb-6">
+                  Find answers to common queries about our procedures, recovery, and what to expect.
+                </p>
+                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground mt-auto">
+                  <Link href="/faq">Visit Our FAQ</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-headline text-3xl font-bold sm:text-4xl">
@@ -214,6 +254,14 @@ export default function HomePage() {
           </Button>
         </div>
       </section>
+      <style jsx global>{`
+        .shadow-text {
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .shadow-text-sm {
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+      `}</style>
     </>
   );
 }
