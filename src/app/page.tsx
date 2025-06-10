@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -16,7 +17,7 @@ export default function HomePage() {
       <section className="relative h-[calc(100vh-4rem)] min-h-[500px] md:min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080.png"
+            src="/images/portrait-woman.jpg"
             alt="Modern aesthetic clinic backdrop"
             layout="fill"
             objectFit="cover"
@@ -55,7 +56,7 @@ export default function HomePage() {
               Our Main Services
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              We offer a wide range of aesthetic procedures for the face, breasts, and body.
+              We offer a wide range of aesthetic and dental procedures.
             </p>
           </div>
 
@@ -77,7 +78,7 @@ export default function HomePage() {
                   <CardTitle className="font-headline text-2xl text-primary">{category.name}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col">
-                  <CardDescription className="text-muted-foreground mb-6 flex-grow">
+                  <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3">
                     {category.description}
                   </CardDescription>
                   <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full">

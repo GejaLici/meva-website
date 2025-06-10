@@ -10,6 +10,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
 import { serviceCategories } from '@/lib/services';
@@ -23,7 +24,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium relative transition-colors hover:text-primary py-2", // Added py-2 for consistent clickable area
+        "text-sm font-medium relative transition-colors hover:text-primary py-2",
         "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
         isActive ? "text-primary after:w-full" : "text-foreground/80"
       )}
@@ -37,6 +38,10 @@ export function Header() {
   const pathname = usePathname();
   const isServicesActive = pathname.startsWith('/services') || pathname === '/services';
 
+  const aestheticCategories = serviceCategories.filter(cat => ['face', 'breasts', 'body'].includes(cat.id));
+  const dentalCategories = serviceCategories.filter(cat => !['face', 'breasts', 'body'].includes(cat.id));
+
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -49,7 +54,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 className={cn(
-                  "text-sm font-medium relative transition-colors hover:text-primary px-0 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 py-2", // Added py-2
+                  "text-sm font-medium relative transition-colors hover:text-primary px-0 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 py-2", 
                   "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
                   isServicesActive ? "text-primary after:w-full" : "text-foreground/80"
                 )}
@@ -58,15 +63,22 @@ export function Header() {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              {serviceCategories.map((category) => (
+            <DropdownMenuContent align="start" className="max-h-[70vh] overflow-y-auto">
+              {aestheticCategories.length > 0 && aestheticCategories.map((category) => (
                 <DropdownMenuItem key={category.id} asChild>
                   <Link href={`/services/${category.slug}`}>{category.name}</Link>
                 </DropdownMenuItem>
               ))}
-                 <DropdownMenuItem asChild>
-                  <Link href="/services">All Services</Link>
+              {aestheticCategories.length > 0 && dentalCategories.length > 0 && <DropdownMenuSeparator />}
+              {dentalCategories.length > 0 && dentalCategories.map((category) => (
+                <DropdownMenuItem key={category.id} asChild>
+                  <Link href={`/services/${category.slug}`}>{category.name}</Link>
                 </DropdownMenuItem>
+              ))}
+              <DropdownMenuSeparator />
+              <DropdownMenuItem asChild>
+                <Link href="/services">All Services</Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <NavLink href="/faq">FAQ</NavLink>
