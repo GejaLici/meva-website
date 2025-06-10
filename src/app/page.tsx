@@ -82,33 +82,35 @@ export default function HomePage() {
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
               Our Main Services
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              We offer a wide range of aesthetic and dental procedures.
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              We offer a wide range of aesthetic and dental procedures, tailored to enhance your natural beauty and confidence.
             </p>
+            <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {displayCategories.map((category) => (
-              <Card key={category.id} className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={category.id} className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 {category.image && (
-                  <div className="relative w-full h-56">
+                  <div className="relative w-full h-56 overflow-hidden">
                     <Image
                       src={category.image}
                       alt={category.name}
                       layout="fill"
                       objectFit="cover"
                       data-ai-hint={category.imageHint || 'medical collage'}
+                      className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
                     />
                   </div>
                 )}
                 <CardHeader>
-                  <CardTitle className="font-headline text-2xl text-primary">{category.name}</CardTitle>
+                  <CardTitle className="font-headline text-2xl text-primary group-hover:text-accent transition-colors duration-300">{category.name}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col">
                   <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3">
                     {category.description}
                   </CardDescription>
-                  <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full">
+                  <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
                     <Link href={`/services/${category.slug}`}>
                       Learn more <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -120,7 +122,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-muted/50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
@@ -159,7 +161,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/50">
+      <section className="py-16 bg-background"> {/* Changed from bg-muted/50 to bg-background for variation */}
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
             Ready for Your Transformation?
