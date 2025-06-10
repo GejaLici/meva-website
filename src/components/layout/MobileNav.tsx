@@ -14,7 +14,7 @@ import { Logo } from './Logo';
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const aestheticCategories = serviceCategories.filter(cat => ['face', 'breasts', 'body'].includes(cat.id));
+  const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>

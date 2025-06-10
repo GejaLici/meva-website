@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
-import { ArrowRight, Star, Smile, Heart, PersonStanding, Sparkles } from 'lucide-react';
+import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Leaf } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
 
@@ -26,30 +26,39 @@ export default function HomePage() {
 
   const displayCategories = [
     {
-      id: 'face',
-      name: 'Face (Aesthetic)',
-      slug: 'face',
-      description: serviceCategories.find(cat => cat.id === 'face')?.description || 'Specialized services for improving and reshaping facial features.',
-      image: serviceCategories.find(cat => cat.id === 'face')?.image || 'https://placehold.co/800x600.png',
-      imageHint: serviceCategories.find(cat => cat.id === 'face')?.imageHint || 'facial aesthetics',
-      icon: Smile,
+      id: 'facial-surgery',
+      name: 'Facial Plastic Surgery',
+      slug: 'facial-surgery',
+      description: serviceCategories.find(cat => cat.id === 'facial-surgery')?.description || 'Expert surgical procedures to refine and restore facial harmony and youthfulness.',
+      image: serviceCategories.find(cat => cat.id === 'facial-surgery')?.image || 'https://placehold.co/800x600.png',
+      imageHint: serviceCategories.find(cat => cat.id === 'facial-surgery')?.imageHint || 'facial surgery precision',
+      icon: Gem,
+    },
+    {
+      id: 'facial-treatments',
+      name: 'Facial Treatments',
+      slug: 'facial-treatments',
+      description: serviceCategories.find(cat => cat.id === 'facial-treatments')?.description || 'Rejuvenate and enhance your features with our advanced non-surgical facial treatments.',
+      image: serviceCategories.find(cat => cat.id === 'facial-treatments')?.image || 'https://placehold.co/800x600.png',
+      imageHint: serviceCategories.find(cat => cat.id === 'facial-treatments')?.imageHint || 'facial treatment variety',
+      icon: Leaf,
     },
     {
       id: 'breasts',
-      name: 'Breasts (Female)',
+      name: 'Breast Procedures',
       slug: 'breasts',
       description: serviceCategories.find(cat => cat.id === 'breasts')?.description || 'Procedures for breast augmentation, lift, reduction, and reconstruction.',
       image: serviceCategories.find(cat => cat.id === 'breasts')?.image || 'https://placehold.co/800x600.png',
-      imageHint: serviceCategories.find(cat => cat.id === 'breasts')?.imageHint || 'breast surgery',
+      imageHint: serviceCategories.find(cat => cat.id === 'breasts')?.imageHint || 'breast surgery results',
       icon: Heart,
     },
     {
       id: 'body',
-      name: 'Body (Aesthetic)',
+      name: 'Body Contouring',
       slug: 'body',
       description: serviceCategories.find(cat => cat.id === 'body')?.description || 'Services for body contouring and reshaping for a harmonious appearance.',
       image: serviceCategories.find(cat => cat.id === 'body')?.image || 'https://placehold.co/800x600.png',
-      imageHint: serviceCategories.find(cat => cat.id === 'body')?.imageHint || 'body contouring',
+      imageHint: serviceCategories.find(cat => cat.id === 'body')?.imageHint || 'body contouring technology',
       icon: PersonStanding,
     },
     {
@@ -185,12 +194,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-background"> 
+      <section className="py-16 bg-primary text-primary-foreground"> 
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
             Ready for Your Transformation?
           </h2>
-          <p className="mt-4 mb-8 text-lg text-muted-foreground max-w-xl mx-auto">
+          <p className="mt-4 mb-8 text-lg max-w-xl mx-auto">
             Contact us today for a consultation and let our team of experts guide you towards the results you've dreamed of.
           </p>
           <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -201,4 +210,3 @@ export default function HomePage() {
     </>
   );
 }
-

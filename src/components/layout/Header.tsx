@@ -38,7 +38,7 @@ export function Header() {
   const pathname = usePathname();
   const isServicesActive = pathname.startsWith('/services') || pathname === '/services';
 
-  const aestheticCategories = serviceCategories.filter(cat => ['face', 'breasts', 'body'].includes(cat.id));
+  const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 
 
   return (

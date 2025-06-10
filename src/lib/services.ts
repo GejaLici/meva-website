@@ -11,33 +11,36 @@ function slugify(text: string): string {
     .replace(/--+/g, '-'); // Replace multiple - with single -
 }
 
-const faceServicesBase: Omit<Service, 'slug' | 'image'>[] = [
-  { id: 'op-hunde', name: 'Nose Surgery', categorySlug: 'face', description: 'Detailed information about nose surgery. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'nose surgery' },
-  { id: 'rim-hunde', name: 'Nose Reshaping', categorySlug: 'face', description: 'Detailed information about nose reshaping. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'nose reshaping' },
-  { id: 'rim-vesheve', name: 'Ear Reshaping', categorySlug: 'face', description: 'Detailed information about ear reshaping. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'ear surgery' },
-  { id: 'mbj-flokeve', name: 'Hair Transplant', categorySlug: 'face', description: 'Detailed information about hair transplant. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'hair transplant' },
-  { id: 'mbj-mjekres', name: 'Beard Transplant', categorySlug: 'face', description: 'Detailed information about beard transplant. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'beard transplant' },
-  { id: 'mbj-vetullave', name: 'Eyebrow Transplant', categorySlug: 'face', description: 'Detailed information about eyebrow transplant. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyebrow transplant' },
-  { id: 'lift-vetullave', name: 'Eyebrow Lift', categorySlug: 'face', description: 'Detailed information about eyebrow lift. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyebrow lift' },
-  { id: 'blefaroplastika', name: 'Blepharoplasty', categorySlug: 'face', description: 'Detailed information about blepharoplasty. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyelid surgery' },
-  { id: 'lift-fytyres', name: 'Face Lift', categorySlug: 'face', description: 'Detailed information about face lift. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'face lift' },
-  { id: 'rim-mjekres', name: 'Chin Remodeling', categorySlug: 'face', description: 'Detailed information about chin remodeling. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'chin remodel' },
-  { id: 'lip-reshaping', name: 'Lip Reshaping', categorySlug: 'face', description: 'Detailed information about lip reshaping. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'lip reshape' },
-  { id: 'xanthelasma-plasma-arc', name: 'Xanthelasma (Plasma Arc)', categorySlug: 'face', description: 'Detailed information about Xanthelasma treatment using plasma arc. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'xanthelasma treatment' },
-  { id: 'multivitamin-treatment', name: 'Multivitamin Treatment', categorySlug: 'face', description: 'Detailed information about multivitamin facial treatment. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'facial treatment' },
-  { id: 'eyelids-plasma-arc', name: 'Eyelids (Plasma Arc)', categorySlug: 'face', description: 'Detailed information about non-surgical eyelid lift using plasma arc. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyelid plasma' },
-  { id: 'cheekbone-reshaping', name: 'Cheekbone Reshaping', categorySlug: 'face', description: 'Detailed information about cheekbone reshaping and augmentation. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'cheekbone contour' },
-  { id: 'microdermabrasion', name: 'Microdermabrasion', categorySlug: 'face', description: 'Detailed information about microdermabrasion. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'skin exfoliation' },
-  { id: 'jawline-contouring', name: 'Jawline Contouring', categorySlug: 'face', description: 'Detailed information about jawline contouring. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'jawline definition' },
-  { id: 'wrinkle-fillers', name: 'Wrinkle Fillers', categorySlug: 'face', description: 'Detailed information about wrinkle fillers. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'dermal fillers' },
-  { id: 'prp-face', name: 'PRP for Face', categorySlug: 'face', description: 'Detailed information about PRP (Platelet-Rich Plasma) therapy for facial rejuvenation. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'prp facial' },
-  { id: 'dark-circles-treatment', name: 'Dark Circles Treatment', categorySlug: 'face', description: 'Detailed information about treatments for dark circles under the eyes. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'under eye' },
-  { id: 'prp-hair', name: 'PRP for Hair', categorySlug: 'face', description: 'Detailed information about PRP (Platelet-Rich Plasma) therapy for hair restoration. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'hair restoration' },
-  { id: 'white-peeling', name: 'White Peeling', categorySlug: 'face', description: 'Detailed information about white peeling treatment. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'chemical peel' },
-  { id: 'microneedling', name: 'Microneedling', categorySlug: 'face', description: 'Detailed information about microneedling. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'skin rejuvenation' },
-  { id: 'radiofrequency-face', name: 'Radiofrequency (Face)', categorySlug: 'face', description: 'Detailed information about radiofrequency treatments for facial skin tightening. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'skin tightening' },
-  { id: 'sulcus-filling', name: 'Sulcus Filling (Deep Wrinkles)', categorySlug: 'face', description: 'Detailed information about sulcus filling for deep wrinkles. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'wrinkle treatment' },
-  { id: 'chin-reshaping', name: 'Chin Reshaping', categorySlug: 'face', description: 'Detailed information about chin reshaping procedures. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'chin contour' },
+const facialSurgeryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+  { id: 'op-hunde', name: 'Nose Surgery (Rhinoplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or resize the nose for aesthetic or functional improvement. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'nose surgery precision' },
+  { id: 'rim-hunde', name: 'Nose Tip Reshaping', categorySlug: 'facial-surgery', description: 'Specialized surgical refinement of the nasal tip for improved definition and appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'nose tip surgery' },
+  { id: 'rim-vesheve', name: 'Ear Reshaping (Otoplasty)', categorySlug: 'facial-surgery', description: 'Surgical correction of prominent or misshapen ears to create a more balanced facial appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'ear surgery otoplasty' },
+  { id: 'mbj-flokeve', name: 'Hair Transplant', categorySlug: 'facial-surgery', description: 'Surgical restoration of hair to areas with thinning or baldness, using advanced transplantation techniques. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'hair transplant procedure' },
+  { id: 'mbj-mjekres', name: 'Beard Transplant', categorySlug: 'facial-surgery', description: 'Surgical procedure to enhance beard density and shape using hair transplantation. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'beard transplant results' },
+  { id: 'mbj-vetullave', name: 'Eyebrow Transplant', categorySlug: 'facial-surgery', description: 'Surgical restoration or enhancement of eyebrows using hair transplantation for fuller, defined brows. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyebrow transplant detail' },
+  { id: 'lift-vetullave', name: 'Eyebrow Lift (Browplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to elevate the eyebrows, reducing forehead wrinkles and creating a more youthful look. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyebrow lift surgery' },
+  { id: 'blefaroplastika', name: 'Eyelid Surgery (Blepharoplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to correct droopy eyelids or remove under-eye bags for a rejuvenated appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'eyelid surgery results' },
+  { id: 'lift-fytyres', name: 'Face Lift (Rhytidectomy)', categorySlug: 'facial-surgery', description: 'Comprehensive surgical procedure to address sagging skin, wrinkles, and signs of aging in the face and neck. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'face lift surgery' },
+  { id: 'rim-mjekres', name: 'Chin Augmentation (Genioplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or enhance the chin, improving facial balance and profile. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'chin augmentation surgery' },
+];
+
+const facialTreatmentsServicesBase: Omit<Service, 'slug' | 'image'>[] = [
+  { id: 'lip-reshaping', name: 'Lip Reshaping & Augmentation', categorySlug: 'facial-treatments', description: 'Non-surgical enhancement of lips using fillers for improved volume, shape, and definition. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'lip fillers' },
+  { id: 'xanthelasma-plasma-arc', name: 'Xanthelasma Removal (Plasma Arc)', categorySlug: 'facial-treatments', description: 'Non-invasive removal of xanthelasma (cholesterol deposits on eyelids) using Plasma Arc technology. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'xanthelasma plasma' },
+  { id: 'multivitamin-treatment', name: 'Multivitamin Infusion Facial', categorySlug: 'facial-treatments', description: 'Revitalizing facial treatment infusing skin with essential vitamins for improved radiance and health. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'vitamin facial' },
+  { id: 'eyelids-plasma-arc', name: 'Non-Surgical Eyelid Lift (Plasma Arc)', categorySlug: 'facial-treatments', description: 'Non-invasive tightening of eyelid skin using Plasma Arc technology as an alternative to surgical blepharoplasty. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'plasma eyelid lift' },
+  { id: 'cheekbone-reshaping', name: 'Cheekbone Contouring (Fillers)', categorySlug: 'facial-treatments', description: 'Non-surgical enhancement of cheekbones using dermal fillers for improved definition and facial contours. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'cheek fillers' },
+  { id: 'microdermabrasion', name: 'Microdermabrasion', categorySlug: 'facial-treatments', description: 'Exfoliating treatment to remove dead skin cells, improve skin texture, and reduce minor imperfections. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'microdermabrasion skin' },
+  { id: 'jawline-contouring', name: 'Jawline Contouring (Fillers/Threads)', categorySlug: 'facial-treatments', description: 'Non-surgical enhancement of the jawline using dermal fillers or threads for a more defined and sculpted look. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'jawline fillers' },
+  { id: 'wrinkle-fillers', name: 'Dermal Fillers for Wrinkles', categorySlug: 'facial-treatments', description: 'Injectable treatments to smooth out wrinkles and fine lines, restoring volume and youthfulness. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'dermal fillers face' },
+  { id: 'prp-face', name: 'PRP Facial Rejuvenation', categorySlug: 'facial-treatments', description: 'Platelet-Rich Plasma (PRP) therapy to stimulate collagen production and rejuvenate facial skin. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'prp facial therapy' },
+  { id: 'dark-circles-treatment', name: 'Under-Eye Dark Circles Treatment', categorySlug: 'facial-treatments', description: 'Treatments to reduce the appearance of dark circles under the eyes, tailored to the underlying cause. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'dark circles eye' },
+  { id: 'prp-hair', name: 'PRP Hair Restoration', categorySlug: 'facial-treatments', description: 'Platelet-Rich Plasma (PRP) therapy for the scalp to stimulate hair growth and improve hair density. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'prp hair treatment' },
+  { id: 'white-peeling', name: 'Chemical Peels (White Peeling)', categorySlug: 'facial-treatments', description: 'Superficial chemical peel to improve skin tone, texture, and reduce blemishes. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'chemical peel skin' },
+  { id: 'microneedling', name: 'Microneedling (Collagen Induction Therapy)', categorySlug: 'facial-treatments', description: 'Procedure using fine needles to create micro-injuries, stimulating collagen and elastin production for skin rejuvenation. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'microneedling device' },
+  { id: 'radiofrequency-face', name: 'Radiofrequency Skin Tightening (Face)', categorySlug: 'facial-treatments', description: 'Non-invasive treatment using radiofrequency energy to heat skin tissue, stimulating collagen and tightening the skin. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'radiofrequency facial' },
+  { id: 'sulcus-filling', name: 'Nasolabial Fold Fillers (Sulcus Filling)', categorySlug: 'facial-treatments', description: 'Dermal fillers to reduce the appearance of nasolabial folds (smile lines). Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'smile line fillers' },
+  { id: 'chin-reshaping', name: 'Non-Surgical Chin Reshaping (Fillers)', categorySlug: 'facial-treatments', description: 'Enhancement or reshaping of the chin using dermal fillers for improved facial balance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'chin fillers' },
 ];
 
 const breastServicesBase: Omit<Service, 'slug' | 'image'>[] = [
@@ -100,7 +103,8 @@ const pediatricDentistryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
 ];
 
 
-const faceServices: Service[] = faceServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
+const facialSurgeryServices: Service[] = facialSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
+const facialTreatmentsServices: Service[] = facialTreatmentsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
 const breastServices: Service[] = breastServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
 const bodyServices: Service[] = bodyServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
 
@@ -114,31 +118,40 @@ const pediatricDentistryServices: Service[] = pediatricDentistryServicesBase.map
 
 export const serviceCategories: ServiceCategory[] = [
   {
-    id: 'face',
-    name: 'FACE (Aesthetic)',
-    slug: 'face',
-    description: 'Specialized services for improving and reshaping facial features.',
-    services: faceServices.map(s => ({ ...s, categorySlug: 'face' })),
+    id: 'facial-surgery',
+    name: 'Facial Plastic Surgery',
+    slug: 'facial-surgery',
+    description: 'Expert surgical procedures to refine, enhance, and restore facial harmony and youthfulness.',
+    services: facialSurgeryServices.map(s => ({ ...s, categorySlug: 'facial-surgery' })),
     image: 'https://placehold.co/800x600.png',
-    imageHint: 'facial aesthetics'
+    imageHint: 'facial surgery instruments'
+  },
+  {
+    id: 'facial-treatments',
+    name: 'Facial Treatments',
+    slug: 'facial-treatments',
+    description: 'Advanced non-surgical and minimally invasive treatments to rejuvenate skin, enhance features, and address specific concerns.',
+    services: facialTreatmentsServices.map(s => ({ ...s, categorySlug: 'facial-treatments' })),
+    image: 'https://placehold.co/800x600.png',
+    imageHint: 'facial treatment collage'
   },
   {
     id: 'breasts',
-    name: 'BREASTS (Female)',
+    name: 'Breast Procedures',
     slug: 'breasts',
-    description: 'Procedures for breast augmentation, lift, reduction, and reconstruction.',
+    description: 'Surgical procedures for breast augmentation, lift, reduction, and reconstruction to achieve desired aesthetics and confidence.',
     services: breastServices.map(s => ({ ...s, categorySlug: 'breasts' })),
     image: 'https://placehold.co/800x600.png',
-    imageHint: 'breast surgery'
+    imageHint: 'breast surgery results'
   },
   {
     id: 'body',
-    name: 'BODY (Aesthetic)',
+    name: 'Body Contouring',
     slug: 'body',
-    description: 'Services for body contouring and reshaping for a harmonious appearance.',
+    description: 'Surgical and non-surgical services for body contouring, sculpting, and skin rejuvenation for a harmonious appearance.',
     services: bodyServices.map(s => ({ ...s, categorySlug: 'body' })),
     image: 'https://placehold.co/800x600.png',
-    imageHint: 'body contouring'
+    imageHint: 'body contouring technology'
   },
   {
     id: 'aesthetic-dentistry',
@@ -178,9 +191,9 @@ export const serviceCategories: ServiceCategory[] = [
   },
   {
     id: 'oral-surgery',
-    name: 'Oral Surgery',
+    name: 'Oral Surgery (Dental)',
     slug: 'oral-surgery',
-    description: 'Expert oral surgery services including extractions, implants, and specialized procedures.',
+    description: 'Expert dental surgery services including extractions, implants, and specialized procedures.',
     services: oralSurgeryServices.map(s => ({...s, categorySlug: 'oral-surgery'})),
     image: 'https://placehold.co/800x600.png',
     imageHint: 'oral surgery instruments'
