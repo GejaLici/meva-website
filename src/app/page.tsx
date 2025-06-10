@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
-import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Leaf } from 'lucide-react';
+import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Leaf, Images, BookOpen, HelpCircle } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
 import { cn } from '@/lib/utils';
@@ -208,20 +208,42 @@ export default function HomePage() {
               Further Insights & Support
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Stay informed and find answers to your questions.
+              Discover more about our work, stay informed, and find answers to your questions.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             
-            <Card className="flex flex-col text-center md:text-left shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="flex flex-col text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
+                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <Images className="h-6 w-6" />
+                </div>
+                <CardTitle className="font-headline text-2xl font-bold text-primary">
+                  View Our Gallery
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow flex flex-col items-center">
+                <p className="text-muted-foreground mb-6">
+                  See the stunning transformations and results our patients have achieved.
+                </p>
+                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground mt-auto">
+                  <Link href="/gallery">Visit Gallery</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="flex flex-col text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardHeader>
+                <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                  <BookOpen className="h-6 w-6" />
+                </div>
                 <CardTitle className="font-headline text-2xl font-bold text-primary">
                   Explore Our Insights
                 </CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col items-center md:items-start">
+              <CardContent className="flex-grow flex flex-col items-center">
                 <p className="text-muted-foreground mb-6">
-                  Dive into our blog for the latest trends, tips, and expert advice in aesthetic and dental care.
+                  Dive into our blog for trends, tips, and expert advice in aesthetic and dental care.
                 </p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link href="/blog">Read Our Blog</Link>
@@ -229,13 +251,16 @@ export default function HomePage() {
               </CardContent>
             </Card>
 
-            <Card className="flex flex-col text-center md:text-left shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card className="flex flex-col text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
+                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <HelpCircle className="h-6 w-6" />
+                </div>
                 <CardTitle className="font-headline text-2xl font-bold text-primary">
                   Got Questions?
                 </CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col items-center md:items-start">
+              <CardContent className="flex-grow flex flex-col items-center">
                 <p className="text-muted-foreground mb-6">
                   Find answers to common queries about our procedures, recovery, and what to expect.
                 </p>

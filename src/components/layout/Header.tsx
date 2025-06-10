@@ -75,6 +75,7 @@ export function Header() {
               {/* Removed "All Services" to simplify, can be re-added if needed */}
             </DropdownMenuContent>
           </DropdownMenu>
+          <NavLink href="/gallery">Gallery</NavLink>
           <NavLink href="/blog">Blog</NavLink>
           <NavLink href="/faq">FAQ</NavLink>
           <NavLink href="/contact">Contact</NavLink>

@@ -76,6 +76,14 @@ export function MobileNav() {
           </Accordion>
 
           <Link
+            href="/gallery"
+            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+            onClick={() => setIsOpen(false)}
+          >
+            Gallery
+          </Link>
+
+          <Link
             href="/blog"
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
