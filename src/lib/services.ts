@@ -12,8 +12,8 @@ function slugify(text: string): string {
 }
 
 const facialSurgeryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
-  { id: 'op-hunde', name: 'Nose Surgery (Rhinoplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or resize the nose for aesthetic or functional improvement. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'nose surgery precision' },
-  { id: 'rim-hunde', name: 'Nose Tip Reshaping', categorySlug: 'facial-surgery', description: 'Specialized surgical refinement of the nasal tip for improved definition and appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'nose tip surgery' },
+  { id: 'op-hunde', name: 'Nose Surgery (Rhinoplasty)', categorySlug: 'facial-surgery', description: 'Surgical procedure to reshape or resize the nose for aesthetic or functional improvement. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: '/images/beauty-natural-woman-studio.jpg' },
+  { id: 'rim-hunde', name: 'Nose Tip Reshaping', categorySlug: 'facial-surgery', description: 'Specialized surgical refinement of the nasal tip for improved definition and appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: '/images/beauty-natural-woman-studio.jpg' },
   { id: 'rim-vesheve', name: 'Ear Reshaping (Otoplasty)', categorySlug: 'facial-surgery', description: 'Surgical correction of prominent or misshapen ears to create a more balanced facial appearance. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'ear surgery otoplasty' },
   { id: 'mbj-flokeve', name: 'Hair Transplant', categorySlug: 'facial-surgery', description: 'Surgical restoration of hair to areas with thinning or baldness, using advanced transplantation techniques. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'hair transplant procedure' },
   { id: 'mbj-mjekres', name: 'Beard Transplant', categorySlug: 'facial-surgery', description: 'Surgical procedure to enhance beard density and shape using hair transplantation. Learn about the procedure, benefits, and recovery process at NovaSculpt Clinic.', imageHint: 'beard transplant results' },
@@ -123,7 +123,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'facial-surgery',
     description: 'Expert surgical procedures to refine, enhance, and restore facial harmony and youthfulness.',
     services: facialSurgeryServices.map(s => ({ ...s, categorySlug: 'facial-surgery' })),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/beauty-natural-woman-studio.jpg',
     imageHint: 'facial surgery instruments'
   },
   {
@@ -132,7 +132,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'facial-treatments',
     description: 'Advanced non-surgical and minimally invasive treatments to rejuvenate skin, enhance features, and address specific concerns.',
     services: facialTreatmentsServices.map(s => ({ ...s, categorySlug: 'facial-treatments' })),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/beauty-natural-woman-studio.jpg',
     imageHint: 'facial treatment collage'
   },
   {
@@ -141,7 +141,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'breasts',
     description: 'Surgical procedures for breast augmentation, lift, reduction, and reconstruction to achieve desired aesthetics and confidence.',
     services: breastServices.map(s => ({ ...s, categorySlug: 'breasts' })),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/beauty-natural-woman-studio.jpg',
     imageHint: 'breast surgery results'
   },
   {
@@ -150,7 +150,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'body',
     description: 'Surgical and non-surgical services for body contouring, sculpting, and skin rejuvenation for a harmonious appearance.',
     services: bodyServices.map(s => ({ ...s, categorySlug: 'body' })),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/beauty-natural-woman-studio.jpg',
     imageHint: 'body contouring technology'
   },
   {
@@ -159,7 +159,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'aesthetic-dentistry',
     description: 'Enhancing smiles with advanced cosmetic dental procedures for a radiant look.',
     services: aestheticDentistryServices.map(s => ({...s, categorySlug: 'aesthetic-dentistry'})),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/dentist-turkey-antalya.jpg',
     imageHint: 'cosmetic dentistry smile'
   },
   {
@@ -168,7 +168,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'prosthetics',
     description: 'Custom dental prosthetics to restore function and aesthetics for a complete smile.',
     services: prostheticsServices.map(s => ({...s, categorySlug: 'prosthetics'})),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/dentist-turkey-antalya.jpg',
     imageHint: 'dental prosthetics'
   },
   {
@@ -177,7 +177,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'orthodontics',
     description: 'Specialized orthodontic treatments for perfectly aligned teeth and a confident smile.',
     services: orthodonticsServices.map(s => ({...s, categorySlug: 'orthodontics'})),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/dentist-turkey-antalya.jpg',
     imageHint: 'orthodontics braces'
   },
   {
@@ -186,7 +186,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'restorative-dentistry',
     description: 'Comprehensive dental care including fillings, cleanings, and root canal treatments.',
     services: restorativeDentistryServices.map(s => ({...s, categorySlug: 'restorative-dentistry'})),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/dentist-turkey-antalya.jpg',
     imageHint: 'general dentistry tools'
   },
   {
@@ -195,7 +195,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'oral-surgery',
     description: 'Expert dental surgery services including extractions, implants, and specialized procedures.',
     services: oralSurgeryServices.map(s => ({...s, categorySlug: 'oral-surgery'})),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/dentist-turkey-antalya.jpg',
     imageHint: 'oral surgery instruments'
   },
   {
@@ -204,7 +204,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'pediatric-dentistry',
     description: 'Gentle and specialized dental care for children, ensuring a positive experience.',
     services: pediatricDentistryServices.map(s => ({...s, categorySlug: 'pediatric-dentistry'})),
-    image: 'https://placehold.co/800x600.png',
+    image: '/images/dentist-turkey-antalya.jpg',
     imageHint: 'child dentist office'
   },
 ];
