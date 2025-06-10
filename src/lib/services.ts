@@ -103,9 +103,9 @@ const pediatricDentistryServicesBase: Omit<Service, 'slug' | 'image'>[] = [
 ];
 
 
-const facialSurgeryServices: Service[] = facialSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
-const facialTreatmentsServices: Service[] = facialTreatmentsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
-const breastServices: Service[] = breastServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
+const facialSurgeryServices: Service[] = facialSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `/images/beauty-natural-woman-studio.jpg` }));
+const facialTreatmentsServices: Service[] = facialTreatmentsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `/images/cute-woman-lying-procedure-rejuvenation-skin.jpeg` }));
+const breastServices: Service[] = breastServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `/images/close-beauty-portrait-topless-woman-with-perfect-skin-natural-make-up-plump-nude-lips-blue-background.jpeg` }));
 const bodyServices: Service[] = bodyServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
 
 const aestheticDentistryServices: Service[] = aestheticDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: `https://placehold.co/600x400.png` }));
@@ -132,7 +132,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'facial-treatments',
     description: 'Advanced non-surgical and minimally invasive treatments to rejuvenate skin, enhance features, and address specific concerns.',
     services: facialTreatmentsServices.map(s => ({ ...s, categorySlug: 'facial-treatments' })),
-    image: '/images/beauty-natural-woman-studio.jpg',
+    image: '/images/cute-woman-lying-procedure-rejuvenation-skin.jpg',
     imageHint: 'facial treatment collage'
   },
   {
@@ -141,7 +141,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'breasts',
     description: 'Surgical procedures for breast augmentation, lift, reduction, and reconstruction to achieve desired aesthetics and confidence.',
     services: breastServices.map(s => ({ ...s, categorySlug: 'breasts' })),
-    image: '/images/beauty-natural-woman-studio.jpg',
+    image: '/images/close-beauty-portrait-topless-woman-with-perfect-skin-natural-make-up-plump-nude-lips-blue-background.jpg',
     imageHint: 'breast surgery results'
   },
   {
@@ -150,7 +150,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'body',
     description: 'Surgical and non-surgical services for body contouring, sculpting, and skin rejuvenation for a harmonious appearance.',
     services: bodyServices.map(s => ({ ...s, categorySlug: 'body' })),
-    image: '/images/beauty-natural-woman-studio.jpg',
+    image: '/images/slim-young-woman-measuring-her-thin-waist-with-tape-measure-fitness-diet-concept.jpg',
     imageHint: 'body contouring technology'
   },
   {
