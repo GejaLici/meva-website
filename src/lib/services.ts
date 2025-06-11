@@ -108,8 +108,8 @@ const facialTreatmentsServices: Service[] = facialTreatmentsServicesBase.map(s =
 const breastServices: Service[] = breastServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || 'https://placehold.co/600x400.png', imageHint: s.imageHint || slugify(s.name) }));
 const bodyServices: Service[] = bodyServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || 'https://placehold.co/600x400.png', imageHint: s.imageHint || slugify(s.name) }));
 
-const aestheticDentistryServices: Service[] = aestheticDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name),  image: s.image || 'https://placehold.co/600x400.png', imageHint: s.imageHint || slugify(s.name) }));
-const prostheticsServices: Service[] = prostheticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || 'https://placehold.co/600x400.png', imageHint: s.imageHint || slugify(s.name) }));
+const aestheticDentistryServices: Service[] = aestheticDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name),  image: '/images/Aesthetic Dentistry.png', imageHint: s.imageHint || slugify(s.name) }));
+const prostheticsServices: Service[] = prostheticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || '/images/Prosthetics.png', imageHint: s.imageHint || slugify(s.name) }));
 const orthodonticsServices: Service[] = orthodonticsServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || 'https://placehold.co/600x400.png', imageHint: s.imageHint || slugify(s.name) }));
 const restorativeDentistryServices: Service[] = restorativeDentistryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || 'https://placehold.co/600x400.png', imageHint: s.imageHint || slugify(s.name) }));
 const oralSurgeryServices: Service[] = oralSurgeryServicesBase.map(s => ({ ...s, slug: slugify(s.name), image: s.image || 'https://placehold.co/600x400.png', imageHint: s.imageHint || slugify(s.name) }));
@@ -159,7 +159,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'aesthetic-dentistry',
     description: 'Enhancing smiles with advanced cosmetic dental procedures for a radiant look.',
     services: aestheticDentistryServices.map(s => ({...s, categorySlug: 'aesthetic-dentistry'})),
-    image: 'https://placehold.co/600x400.png',
+    image: '/images/Aesthetic Dentistry.png',
     imageHint: 'cosmetic dentistry smile'
   },
   {
@@ -168,7 +168,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'prosthetics',
     description: 'Custom dental prosthetics to restore function and aesthetics for a complete smile.',
     services: prostheticsServices.map(s => ({...s, categorySlug: 'prosthetics'})),
-    image: 'https://placehold.co/600x400.png',
+    image: '/images/Prosthetics.png',
     imageHint: 'dental prosthetics'
   },
   {
@@ -177,7 +177,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'orthodontics',
     description: 'Specialized orthodontic treatments for perfectly aligned teeth and a confident smile.',
     services: orthodonticsServices.map(s => ({...s, categorySlug: 'orthodontics'})),
-    image: 'https://placehold.co/600x400.png',
+    image: '/images/Orthodontics.png',
     imageHint: 'orthodontics braces'
   },
   {
@@ -186,7 +186,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'restorative-dentistry',
     description: 'Comprehensive dental care including fillings, cleanings, and root canal treatments.',
     services: restorativeDentistryServices.map(s => ({...s, categorySlug: 'restorative-dentistry'})),
-    image: 'https://placehold.co/600x400.png',
+    image: '/images/Restorative & General Dentistry.png',
     imageHint: 'general dentistry tools'
   },
   {
@@ -195,7 +195,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'oral-surgery',
     description: 'Expert dental surgery services including extractions, implants, and specialized procedures.',
     services: oralSurgeryServices.map(s => ({...s, categorySlug: 'oral-surgery'})),
-    image: 'https://placehold.co/600x400.png',
+    image: '/images/Oral Surgery (Dental).png',
     imageHint: 'oral surgery instruments'
   },
   {
@@ -204,7 +204,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'pediatric-dentistry',
     description: 'Gentle and specialized dental care for children, ensuring a positive experience.',
     services: pediatricDentistryServices.map(s => ({...s, categorySlug: 'pediatric-dentistry'})),
-    image: 'https://placehold.co/600x400.png',
+    image: '/images/Pediatric Dentistry.png',
     imageHint: 'child dentist office'
   },
 ];

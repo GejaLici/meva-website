@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   description: 'Read the latest news, articles, and insights from NovaSculpt Clinic.',
 };
 
-export default function BlogPage() {
-  const posts = getAllBlogPosts();
+// Changed to async function to await data fetching
+export default async function BlogPage() {
+  const posts = await getAllBlogPosts();
 
   return (
     <>
@@ -27,7 +28,7 @@ export default function BlogPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No blog posts available at the moment. Please check back later.
+            No blog posts available at the moment. Please check back later or ensure your Firestore 'blogPosts' collection is populated.
           </p>
         )}
       </div>

@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { CalendarDays, UserCircle, Tag } from 'lucide-react';
-import { formatDate } from '@/lib/utils'; // We'll create this utility
+import { formatDate } from '@/lib/utils';
 
 interface BlogPostPageProps {
   params: {
@@ -15,15 +15,17 @@ interface BlogPostPageProps {
   };
 }
 
+// Changed to async function to await data fetching
 export async function generateStaticParams() {
-  const posts = getAllBlogPosts();
+  const posts = await getAllBlogPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
+// Changed to async function to await data fetching
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = getBlogPostBySlug(params.slug);
+  const post = await getBlogPostBySlug(params.slug);
   if (!post) {
     return { title: 'Post Not Found' };
   }
@@ -33,8 +35,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPostBySlug(params.slug);
+// Changed to async function to await data fetching
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const post = await getBlogPostBySlug(params.slug);
 
   if (!post) {
     notFound();
@@ -53,6 +56,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 fill
                 style={{ objectFit: 'cover' }}
                 data-ai-hint={post.imageHint || 'blog post feature image'}
+                quality={90} // Example: Increased quality
               />
             </div>
           )}
