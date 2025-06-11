@@ -1,7 +1,7 @@
 
 import { db } from './firebaseConfig';
 import { collection, getDocs, query, where, Timestamp } from 'firebase/firestore';
-import type { BlogPost } from '@/types/blog';
+import type { BlogPost, ContentBlock } from '@/types/blog'; // Import ContentBlock
 
 // Helper function to convert Firestore Timestamp to ISO string if necessary
 function mapFirestoreDocToBlogPost(doc: any): BlogPost {
@@ -15,6 +15,9 @@ function mapFirestoreDocToBlogPost(doc: any): BlogPost {
   }
   // If date is already a string, assume it's ISO format
 
+  // Ensure content is an array, default to empty array if not provided or not an array
+  const content: ContentBlock[] = Array.isArray(data.content) ? data.content : [];
+
   return {
     id: doc.id,
     slug: data.slug,
@@ -22,11 +25,11 @@ function mapFirestoreDocToBlogPost(doc: any): BlogPost {
     date: dateString,
     author: data.author,
     excerpt: data.excerpt,
-    content: data.content,
+    content: content, // Use the processed content
     imageUrl: data.imageUrl,
     imageHint: data.imageHint,
     category: data.category,
-  } as BlogPost;
+  } as BlogPost; // Cast as BlogPost, trusting content matches ContentBlock[]
 }
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
