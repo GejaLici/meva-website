@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
   },
-  description: 'NovaSculpt Clinic - Transforming your beauty with care and expertise.',
+  description: 'NexaSculpt Clinic - Transforming your beauty with care and expertise.',
 };
 
 export default function RootLayout({
@@ -38,3 +38,4 @@ export default function RootLayout({
     </html>
   );
 }
+

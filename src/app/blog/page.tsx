@@ -3,10 +3,11 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { BlogCard } from '@/components/blog/BlogCard';
 import { getAllBlogPosts } from '@/lib/blog';
 import type { Metadata } from 'next';
+import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Read the latest news, articles, and insights from NovaSculpt Clinic.',
+  description: `Read the latest news, articles, and insights from ${SITE_NAME}.`,
 };
 
 // Changed to async function to await data fetching
@@ -35,3 +36,4 @@ export default async function BlogPage() {
     </>
   );
 }
+

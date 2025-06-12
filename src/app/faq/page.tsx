@@ -3,10 +3,11 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { faqItems } from '@/lib/faq';
 import type { Metadata } from 'next';
+import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
-  description: 'Find answers to common questions about aesthetic procedures, consultations, recovery, and more at NovaSculpt Clinic.',
+  description: `Find answers to common questions about aesthetic procedures, consultations, recovery, and more at ${SITE_NAME}.`,
 };
 
 export default function FAQPage() {
@@ -22,10 +23,10 @@ export default function FAQPage() {
             {faqItems.map((item) => (
               <AccordionItem key={item.id} value={item.id} className="bg-card p-4 rounded-lg shadow-md">
                 <AccordionTrigger className="text-left font-semibold text-lg text-primary hover:no-underline">
-                  {item.question}
+                  {item.question.replace(/NovaSculpt Clinic/g, SITE_NAME)}
                 </AccordionTrigger>
                 <AccordionContent className="pt-2 text-muted-foreground">
-                  {item.answer}
+                  {item.answer.replace(/NovaSculpt Clinic/g, SITE_NAME)}
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -39,3 +40,4 @@ export default function FAQPage() {
     </>
   );
 }
+

@@ -6,10 +6,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Stethoscope, Lightbulb } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'About NovaSculpt Clinic',
-  description: 'Learn about NovaSculpt Clinic, our mission, our values, and our team of expert aesthetic specialists dedicated to transforming your beauty with care.',
+  title: `About ${SITE_NAME}`,
+  description: `Learn about ${SITE_NAME}, our mission, our values, and our team of expert aesthetic specialists dedicated to transforming your beauty with care.`,
 };
 
 const teamMembers = [
@@ -40,7 +41,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title="About NovaSculpt Clinic"
+        title={`About ${SITE_NAME}`}
         description="Transforming beauty with expertise, innovation, and compassionate care."
       />
 
@@ -52,7 +53,7 @@ export default function AboutPage() {
                 Our Philosophy: Your Beauty, Our Priority
               </h2>
               <p className="text-lg text-foreground mb-4">
-                At NovaSculpt Clinic, we believe that aesthetic enhancement is a journey towards greater self-confidence and well-being. Our core philosophy revolves around providing personalized care, utilizing the latest advancements in aesthetic medicine, and upholding the highest standards of safety and ethics.
+                At {SITE_NAME}, we believe that aesthetic enhancement is a journey towards greater self-confidence and well-being. Our core philosophy revolves around providing personalized care, utilizing the latest advancements in aesthetic medicine, and upholding the highest standards of safety and ethics.
               </p>
               <p className="text-muted-foreground mb-6">
                 We strive to understand your unique aspirations and tailor our treatments to achieve natural-looking, harmonious results that enhance your individual beauty. Our team is committed to creating a supportive and comfortable environment where you feel heard, respected, and empowered.
@@ -64,7 +65,7 @@ export default function AboutPage() {
             <div>
               <Image
                 src="/images/aigen.jpeg"
-                alt="NovaSculpt Clinic Interior"
+                alt={`${SITE_NAME} Interior`}
                 width={600}
                 height={450}
                 className="rounded-lg shadow-xl"
@@ -79,7 +80,7 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              Why Choose NovaSculpt?
+              Why Choose {SITE_NAME}?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               We are dedicated to excellence in every aspect of your care.
@@ -174,3 +175,4 @@ export default function AboutPage() {
     </>
   );
 }
+

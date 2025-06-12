@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-headline text-lg font-semibold text-primary mb-3">NovaSculpt Clinic</h3>
+            <h3 className="font-headline text-lg font-semibold text-primary mb-3">{SITE_NAME}</h3>
             <p className="text-sm text-muted-foreground">
               Rruga "Sami Frashëri", No. 123<br />
               Tirana, Albania<br />
@@ -63,3 +63,4 @@ export function Footer() {
     </footer>
   );
 }
+

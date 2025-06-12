@@ -5,10 +5,11 @@ import { getAllGalleryItems } from '@/lib/gallery';
 import type { GalleryItem } from '@/types/gallery';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Before & After Gallery',
-  description: 'View the stunning transformations achieved by our expert team at NovaSculpt Clinic. See real patient results from various aesthetic and dental procedures.',
+  description: `View the stunning transformations achieved by our expert team at ${SITE_NAME}. See real patient results from various aesthetic and dental procedures.`,
 };
 
 export default function GalleryPage() {
@@ -71,3 +72,4 @@ export default function GalleryPage() {
     </>
   );
 }
+

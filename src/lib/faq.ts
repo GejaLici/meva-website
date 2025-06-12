@@ -1,4 +1,6 @@
 
+import { SITE_NAME } from './constants';
+
 export interface FAQItem {
   id: string;
   question: string;
@@ -8,8 +10,8 @@ export interface FAQItem {
 export const faqItems: FAQItem[] = [
   {
     id: 'faq-1',
-    question: 'What should I expect during my first consultation?',
-    answer: 'Your first consultation at NovaSculpt Clinic is a comprehensive discussion with one of our expert specialists. We will discuss your aesthetic goals, evaluate your medical history, and explain suitable treatment options. This is a great opportunity to ask any questions you have and understand the potential outcomes, risks, and recovery process associated with your desired procedure.',
+    question: `What should I expect during my first consultation?`,
+    answer: `Your first consultation at ${SITE_NAME} is a comprehensive discussion with one of our expert specialists. We will discuss your aesthetic goals, evaluate your medical history, and explain suitable treatment options. This is a great opportunity to ask any questions you have and understand the potential outcomes, risks, and recovery process associated with your desired procedure.`,
   },
   {
     id: 'faq-2',
@@ -32,3 +34,4 @@ export const faqItems: FAQItem[] = [
     answer: 'Choosing the right procedure is a collaborative process. Our specialists will listen to your concerns and goals, assess your individual characteristics, and recommend the most appropriate treatments to achieve your desired outcome. We prioritize patient education and ensure you have all the information needed to make an informed decision.',
   },
 ];
+

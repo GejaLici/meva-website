@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { SITE_NAME } from '@/lib/constants';
 
 interface ServicePageProps {
   params: {
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
   return {
     title: service.name,
-    description: `Learn more about ${service.name} at NovaSculpt Clinic. ${service.description.substring(0,120)}...`,
+    description: `Learn more about ${service.name} at ${SITE_NAME}. ${service.description.substring(0,120)}...`,
   };
 }
 
@@ -71,7 +72,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             
             <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to expect?</h3>
             <p className="mb-4">
-              At NovaSculpt Clinic, we ensure that every patient receives a personalized treatment plan. 
+              At {SITE_NAME}, we ensure that every patient receives a personalized treatment plan. 
               The procedure for {service.name.toLowerCase()} includes detailed consultations, modern techniques, and careful 
               post-operative follow-up to guarantee optimal results and a speedy recovery.
             </p>
@@ -91,3 +92,4 @@ export default function ServicePage({ params }: ServicePageProps) {
     </>
   );
 }
+
