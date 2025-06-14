@@ -6,10 +6,14 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
-import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Leaf, Images, BookOpen, HelpCircle } from 'lucide-react';
+import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Leaf, Images, BookOpen, HelpCircle, ThumbsUp } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
 import { cn } from '@/lib/utils';
+import { getAllGalleryItems } from '@/lib/gallery';
+import type { GalleryItem as GalleryItemType } from '@/types/gallery';
+import { ContactForm } from '@/app/contact/_components/ContactForm';
+
 
 const DENTAL_CATEGORY_IDS = [
   'aesthetic-dentistry',
@@ -73,6 +77,8 @@ export default function HomePage() {
     },
   ];
 
+  const galleryPreviewItems = getAllGalleryItems().slice(0, 3);
+
 
   return (
     <>
@@ -94,7 +100,7 @@ export default function HomePage() {
             Reveal Your Radiance. Redefine Your Beauty.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto shadow-text-sm">
-            Experience the art of aesthetic transformation at NovaSculpt Clinic. Our expert team combines advanced technology with personalized care to help you achieve your ultimate aesthetic goals.
+            Experience the art of aesthetic transformation at NexaSculpt Clinic. Our expert team combines advanced technology with personalized care to help you achieve your ultimate aesthetic goals.
           </p>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 text-lg">
             <Link href="/services">Explore Our Treatments</Link>
@@ -102,6 +108,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Main Services Section */}
       <section className="py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -162,6 +169,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -169,7 +177,7 @@ export default function HomePage() {
               What Our Patients Say
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Hear from those who have experienced the NovaSculpt difference.
+              Hear from those who have experienced the NexaSculpt difference.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -201,6 +209,75 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Gallery Preview Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center p-3 rounded-full bg-primary text-primary-foreground mb-4">
+                <ThumbsUp className="h-8 w-8" />
+            </div>
+            <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+              Transformations We're Proud Of
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Glimpse into the stunning results our patients have achieved.
+            </p>
+          </div>
+          {galleryPreviewItems.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {galleryPreviewItems.map((item: GalleryItemType) => (
+                <Card key={item.id} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="font-headline text-xl text-primary text-center">{item.procedureName}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col space-y-4">
+                    <div>
+                      <h3 className="text-sm font-semibold text-muted-foreground mb-1 text-center">BEFORE</h3>
+                      <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden border">
+                         <Image
+                          src={item.beforeImageUrl}
+                          alt={`Before - ${item.procedureName}`}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          data-ai-hint={item.beforeImageHint}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-muted-foreground mb-1 text-center">AFTER</h3>
+                       <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden border">
+                          <Image
+                            src={item.afterImageUrl}
+                            alt={`After - ${item.procedureName}`}
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            data-ai-hint={item.afterImageHint}
+                          />
+                      </div>
+                    </div>
+                    {item.description && (
+                      <CardDescription className="text-sm text-muted-foreground mt-2 text-center flex-grow line-clamp-2">
+                        {item.description}
+                      </CardDescription>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : (
+             <p className="text-center text-lg text-muted-foreground">
+                Our gallery is currently being updated. Please check back soon!
+             </p>
+          )}
+          <div className="mt-12 text-center">
+            <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Link href="/gallery">View Full Gallery</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Further Insights & Support Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -274,19 +351,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Contact Form Section */}
       <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-headline text-3xl font-bold sm:text-4xl">
-            Ready for Your Transformation?
-          </h2>
-          <p className="mt-4 mb-8 text-lg max-w-xl mx-auto">
-            Contact us today for a consultation and let our team of experts guide you towards the results you've dreamed of.
-          </p>
-          <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="/contact">Contact Us</Link>
-          </Button>
+        <div className="container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold sm:text-4xl">
+              Ready for Your Transformation?
+            </h2>
+            <p className="mt-4 text-lg max-w-xl mx-auto">
+              Contact us today for a consultation. Fill out the form below, and our team of experts will guide you towards the results you've dreamed of.
+            </p>
+          </div>
+          <div className="bg-card p-8 md:p-10 rounded-lg shadow-2xl text-card-foreground">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </>
   );
 }
+
