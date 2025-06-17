@@ -180,26 +180,26 @@ export default function HomePage() {
               Hear from those who have experienced the NexaSculpt difference.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
               <Card key={testimonial.id} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="pt-6 flex-grow flex flex-col">
-                  <div className="flex items-center mb-4">
-                    <Avatar className="h-12 w-12 mr-4">
+                <CardContent className="p-4 md:p-6 flex-grow flex flex-col">
+                  <div className="flex items-center mb-3 md:mb-4">
+                    <Avatar className="h-10 w-10 md:h-12 md:w-12 mr-3 md:mr-4">
                       <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.imageHint || 'person portrait'}/>
                       <AvatarFallback>{testimonial.name.substring(0,1).toUpperCase()}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold text-primary">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.treatment}</p>
+                      <p className="font-semibold text-primary text-sm md:text-base">{testimonial.name}</p>
+                      <p className="text-xs md:text-sm text-muted-foreground">{testimonial.treatment}</p>
                     </div>
                   </div>
-                  <blockquote className="text-foreground italic border-l-4 border-accent pl-4 mb-4 flex-grow">
+                  <blockquote className="text-foreground italic border-l-4 border-accent pl-3 md:pl-4 mb-3 md:mb-4 flex-grow text-sm md:text-base">
                     "{testimonial.quote}"
                   </blockquote>
-                  <div className="flex items-center text-yellow-500">
+                  <div className="flex items-center text-yellow-500 mt-auto">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-current" />
+                      <Star key={i} className="h-4 w-4 md:h-5 md:w-5 fill-current" />
                     ))}
                   </div>
                 </CardContent>
