@@ -45,20 +45,20 @@ export default function AboutPage() {
         description="Transforming beauty with expertise, innovation, and compassionate care."
       />
 
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="font-headline text-3xl font-bold text-primary mb-6">
+              <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-6">
                 Our Philosophy: Your Beauty, Our Priority
               </h2>
-              <p className="text-lg text-foreground mb-4">
+              <p className="text-base md:text-lg text-foreground mb-4">
                 At {SITE_NAME}, we believe that aesthetic enhancement is a journey towards greater self-confidence and well-being. Our core philosophy revolves around providing personalized care, utilizing the latest advancements in aesthetic medicine, and upholding the highest standards of safety and ethics.
               </p>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-sm md:text-base text-muted-foreground mb-6">
                 We strive to understand your unique aspirations and tailor our treatments to achieve natural-looking, harmonious results that enhance your individual beauty. Our team is committed to creating a supportive and comfortable environment where you feel heard, respected, and empowered.
               </p>
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm md:text-base">
                 <Link href="/services">Explore Our Services</Link>
               </Button>
             </div>
@@ -76,68 +76,68 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/50">
+      <section className="py-12 md:py-16 bg-muted/50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="font-headline text-2xl md:text-3xl font-bold text-foreground sm:text-4xl">
               Why Choose {SITE_NAME}?
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               We are dedicated to excellence in every aspect of your care.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader>
-                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground mb-4">
-                  <Users className="h-6 w-6" />
+              <CardHeader className="p-4 md:p-6">
+                <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
+                  <Users className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
-                <CardTitle className="font-headline text-xl text-primary">Expert Team</CardTitle>
+                <CardTitle className="font-headline text-lg md:text-xl text-primary">Expert Team</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Our highly skilled and experienced specialists are leaders in their respective fields, committed to delivering exceptional results.</p>
+              <CardContent className="p-4 md:p-6 pt-0">
+                <p className="text-sm md:text-base text-muted-foreground">Our highly skilled and experienced specialists are leaders in their respective fields, committed to delivering exceptional results.</p>
               </CardContent>
             </Card>
             <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader>
-                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground mb-4">
-                  <Stethoscope className="h-6 w-6" />
+              <CardHeader className="p-4 md:p-6">
+                <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
+                  <Stethoscope className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
-                <CardTitle className="font-headline text-xl text-primary">Personalized Care</CardTitle>
+                <CardTitle className="font-headline text-lg md:text-xl text-primary">Personalized Care</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">We tailor every treatment plan to your unique needs and aesthetic goals, ensuring a personalized and effective approach.</p>
+              <CardContent className="p-4 md:p-6 pt-0">
+                <p className="text-sm md:text-base text-muted-foreground">We tailor every treatment plan to your unique needs and aesthetic goals, ensuring a personalized and effective approach.</p>
               </CardContent>
             </Card>
             <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader>
-                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground mb-4">
-                  <Lightbulb className="h-6 w-6" />
+              <CardHeader className="p-4 md:p-6">
+                <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
+                  <Lightbulb className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
-                <CardTitle className="font-headline text-xl text-primary">Advanced Technology</CardTitle>
+                <CardTitle className="font-headline text-lg md:text-xl text-primary">Advanced Technology</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">We invest in the latest, safest technologies and techniques to provide you with cutting-edge treatments and superior outcomes.</p>
+              <CardContent className="p-4 md:p-6 pt-0">
+                <p className="text-sm md:text-base text-muted-foreground">We invest in the latest, safest technologies and techniques to provide you with cutting-edge treatments and superior outcomes.</p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
       
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="font-headline text-2xl md:text-3xl font-bold text-foreground sm:text-4xl">
               Meet Our Experts
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Our team of dedicated professionals is here to guide you on your aesthetic journey.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {teamMembers.map((member) => (
               <Card key={member.name} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="relative w-full h-72">
+                <div className="relative w-full h-60 md:h-72">
                   <Image
                     src={member.imageUrl}
                     alt={member.name}
@@ -146,12 +146,12 @@ export default function AboutPage() {
                     data-ai-hint={member.imageHint}
                   />
                 </div>
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl text-primary">{member.name}</CardTitle>
-                  <p className="text-sm text-accent font-medium">{member.role}</p>
+                <CardHeader className="p-4 md:p-6">
+                  <CardTitle className="font-headline text-lg md:text-xl text-primary">{member.name}</CardTitle>
+                  <p className="text-xs md:text-sm text-accent font-medium">{member.role}</p>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm">{member.bio}</p>
+                <CardContent className="p-4 md:p-6 pt-0">
+                  <p className="text-muted-foreground text-xs md:text-sm line-clamp-4 md:line-clamp-none">{member.bio}</p>
                 </CardContent>
               </Card>
             ))}
@@ -159,15 +159,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-12 md:py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-headline text-3xl font-bold mb-6">
+          <h2 className="font-headline text-2xl md:text-3xl font-bold mb-4 md:mb-6">
             Ready to Start Your Transformation?
           </h2>
-          <p className="text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto">
             Schedule a consultation with our experts today and take the first step towards achieving your aesthetic goals.
           </p>
-          <Button asChild size="lg" variant="secondary" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button asChild size="lg" variant="secondary" className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm md:text-base">
             <Link href="/contact">Book Your Consultation</Link>
           </Button>
         </div>
