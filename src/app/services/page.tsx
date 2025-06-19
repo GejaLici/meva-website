@@ -13,7 +13,7 @@ import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: `Explore the comprehensive range of aesthetic and dental services offered at ${SITE_NAME}. Find the perfect treatment to enhance your beauty and well-being.`,
+  description: `Explore the comprehensive range of advanced aesthetic and dental services offered at ${SITE_NAME}. Discover treatments tailored by experts to enhance your beauty and well-being.`,
 };
 
 const mainServiceDisplayInfo = [
@@ -40,7 +40,7 @@ const mainServiceDisplayInfo = [
   {
     id: 'dental', // Special case for dental group
     nameOverride: 'Comprehensive Dental Care',
-    descriptionOverride: `Explore our full range of expert dental services, from cosmetic enhancements and orthodontics to surgical procedures and pediatric care, all tailored to your oral health needs.`,
+    descriptionOverride: serviceCategories.find(cat => cat.id === 'aesthetic-dentistry')?.description || `Explore our full range of expert dental services, from cosmetic enhancements and orthodontics to surgical procedures and pediatric care, all tailored to your oral health needs.`,
     imageOverride: '/images/dentist-turkey-antalya.jpg',
     imageHintOverride: 'dental clinic modern equipment',
     slugOverride: 'dental',
@@ -82,8 +82,8 @@ export default function ServicesOverviewPage() {
   return (
     <>
       <PageHeader
-        title="Our Services"
-        description={`Discover the wide array of specialized aesthetic and dental treatments designed to help you achieve your beauty and wellness goals. Our expert team at ${SITE_NAME} is dedicated to providing personalized care and exceptional results.`}
+        title="Our Advanced Aesthetic & Dental Services"
+        description={`Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at ${SITE_NAME}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results.`}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {displayedCategories.length > 0 ? (
@@ -91,10 +91,13 @@ export default function ServicesOverviewPage() {
             {displayedCategories.map((category, index) => {
               const CategoryIcon = category.icon;
               let colSpanClass = '';
+              // For 5 items, the layout is 2-2-2 for the first row (if only 3 items fit), 
+              // then 3-3 for the next row.
+              // Homepage layout for 5 items: first 3 items span 2 cols each, next 2 items span 3 cols each.
               if (index < 3) { 
-                colSpanClass = 'md:col-span-2';
+                colSpanClass = 'md:col-span-2'; // Facial Surgery, Facial Treatments, Breast Procedures
               } else { 
-                colSpanClass = 'md:col-span-3';
+                colSpanClass = 'md:col-span-3'; // Body Contouring, Dental Care
               }
               return (
                 <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", colSpanClass)}>
@@ -134,7 +137,7 @@ export default function ServicesOverviewPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No service categories are available at the moment. Please check back later.
+            No service categories are currently available. Please check back soon or contact our clinic for more information.
           </p>
         )}
       </div>

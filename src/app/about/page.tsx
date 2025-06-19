@@ -10,7 +10,7 @@ import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: `About ${SITE_NAME}`,
-  description: `Learn about ${SITE_NAME}, our mission, our values, and our team of expert aesthetic specialists dedicated to transforming your beauty with care.`,
+  description: `Discover the mission, values, and distinguished team of board-certified medical professionals at ${SITE_NAME}. Learn about our commitment to excellence in aesthetic and dental care.`,
 };
 
 const teamMembers = [
@@ -19,21 +19,21 @@ const teamMembers = [
     role: 'Lead Plastic Surgeon',
     imageUrl: 'https://placehold.co/300x300.png',
     imageHint: 'female doctor professional',
-    bio: 'Dr. Reed is a board-certified plastic surgeon with over 15 years of experience in complex aesthetic and reconstructive procedures. She is renowned for her meticulous attention to detail and patient-centered approach.',
+    bio: 'Dr. Reed is a board-certified plastic surgeon with over 15 years of experience in complex aesthetic and reconstructive procedures. She is renowned for her meticulous attention to detail, artistic vision, and patient-centered approach to achieving natural, harmonious results.',
   },
   {
     name: 'Dr. Marcus Chen',
     role: 'Dermatology & Aesthetics Specialist',
     imageUrl: 'https://placehold.co/300x300.png',
     imageHint: 'male doctor friendly',
-    bio: 'Dr. Chen specializes in non-invasive treatments, cosmetic dermatology, and advanced skincare. He is passionate about helping patients achieve radiant skin and natural-looking enhancements.',
+    bio: 'Dr. Chen specializes in advanced non-invasive treatments, cosmetic dermatology, and evidence-based skincare. He is passionate about leveraging the latest technologies to help patients achieve radiant skin and natural-looking enhancements, prioritizing safety and efficacy.',
   },
   {
     name: 'Sofia Petrova',
     role: 'Lead Aesthetician & Patient Coordinator',
     imageUrl: 'https://placehold.co/300x300.png',
     imageHint: 'female aesthetician clinic',
-    bio: 'Sofia brings a wealth of knowledge in advanced skincare treatments and ensures every patient feels welcomed and informed. She guides patients through their journey with warmth and expertise.',
+    bio: 'Sofia brings a wealth of knowledge in advanced skincare treatments and ensures every patient feels welcomed, informed, and supported. She expertly guides patients through their aesthetic journey with warmth, professionalism, and in-depth understanding of our procedures.',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         title={`About ${SITE_NAME}`}
-        description="Transforming beauty with expertise, innovation, and compassionate care."
+        description="Transforming beauty through medical expertise, technological innovation, and compassionate, patient-focused care."
       />
 
       <section className="py-12 md:py-16">
@@ -50,22 +50,22 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h2 className="font-headline text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-6">
-                Our Philosophy: Your Beauty, Our Priority
+                Our Philosophy: Your Beauty, Our Priority, Guided by Medical Excellence
               </h2>
               <p className="text-base md:text-lg text-foreground mb-4">
-                At {SITE_NAME}, we believe that aesthetic enhancement is a journey towards greater self-confidence and well-being. Our core philosophy revolves around providing personalized care, utilizing the latest advancements in aesthetic medicine, and upholding the highest standards of safety and ethics.
+                At {SITE_NAME}, we believe that aesthetic enhancement is a deeply personal journey towards greater self-confidence and well-being, grounded in medical science and safety. Our core philosophy revolves around providing highly personalized care, utilizing evidence-based advancements in aesthetic medicine, and upholding the highest medical and ethical standards.
               </p>
               <p className="text-sm md:text-base text-muted-foreground mb-6">
-                We strive to understand your unique aspirations and tailor our treatments to achieve natural-looking, harmonious results that enhance your individual beauty. Our team is committed to creating a supportive and comfortable environment where you feel heard, respected, and empowered.
+                We are committed to thoroughly understanding your unique aspirations and anatomical considerations. Our expert team tailors treatments to achieve natural-looking, harmonious results that enhance your individual beauty while prioritizing your health and safety. We foster a supportive, professional, and comfortable environment where you feel heard, respected, and empowered throughout your transformative experience.
               </p>
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm md:text-base">
-                <Link href="/services">Explore Our Services</Link>
+                <Link href="/services">Explore Our Advanced Services</Link>
               </Button>
             </div>
             <div>
               <Image
                 src="/images/aigen.jpeg"
-                alt={`${SITE_NAME} Interior`}
+                alt={`${SITE_NAME} state-of-the-art clinic interior`}
                 width={600}
                 height={450}
                 className="rounded-lg shadow-xl"
@@ -83,7 +83,7 @@ export default function AboutPage() {
               Why Choose {SITE_NAME}?
             </h2>
             <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              We are dedicated to excellence in every aspect of your care.
+             Our unwavering dedication to clinical excellence and patient-centered care distinguishes {SITE_NAME} as a premier destination for aesthetic and dental treatments.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -92,10 +92,10 @@ export default function AboutPage() {
                 <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
                   <Users className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
-                <CardTitle className="font-headline text-lg md:text-xl text-primary">Expert Team</CardTitle>
+                <CardTitle className="font-headline text-lg md:text-xl text-primary">Distinguished Medical Team</CardTitle>
               </CardHeader>
               <CardContent className="p-4 md:p-6 pt-0">
-                <p className="text-sm md:text-base text-muted-foreground">Our highly skilled and experienced specialists are leaders in their respective fields, committed to delivering exceptional results.</p>
+                <p className="text-sm md:text-base text-muted-foreground">Our distinguished team comprises board-certified specialists and highly skilled medical professionals, recognized leaders in their respective fields, dedicated to delivering superior, safe, and personalized outcomes.</p>
               </CardContent>
             </Card>
             <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -103,10 +103,10 @@ export default function AboutPage() {
                 <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
                   <Stethoscope className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
-                <CardTitle className="font-headline text-lg md:text-xl text-primary">Personalized Care</CardTitle>
+                <CardTitle className="font-headline text-lg md:text-xl text-primary">Personalized Patient Care</CardTitle>
               </CardHeader>
               <CardContent className="p-4 md:p-6 pt-0">
-                <p className="text-sm md:text-base text-muted-foreground">We tailor every treatment plan to your unique needs and aesthetic goals, ensuring a personalized and effective approach.</p>
+                <p className="text-sm md:text-base text-muted-foreground">At {SITE_NAME}, personalized care is paramount. We meticulously tailor each treatment plan to your unique anatomical considerations, aesthetic aspirations, and overall well-being, ensuring an effective and deeply individualized approach.</p>
               </CardContent>
             </Card>
             <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -114,10 +114,10 @@ export default function AboutPage() {
                 <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
                   <Lightbulb className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
-                <CardTitle className="font-headline text-lg md:text-xl text-primary">Advanced Technology</CardTitle>
+                <CardTitle className="font-headline text-lg md:text-xl text-primary">Advanced Technology & Techniques</CardTitle>
               </CardHeader>
               <CardContent className="p-4 md:p-6 pt-0">
-                <p className="text-sm md:text-base text-muted-foreground">We invest in the latest, safest technologies and techniques to provide you with cutting-edge treatments and superior outcomes.</p>
+                <p className="text-sm md:text-base text-muted-foreground">We are committed to integrating the latest, clinically-proven, and safest medical technologies and advanced procedural techniques. This investment ensures our patients benefit from cutting-edge treatments that deliver superior, predictable outcomes and enhanced safety.</p>
               </CardContent>
             </Card>
           </div>
@@ -128,10 +128,10 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12">
             <h2 className="font-headline text-2xl md:text-3xl font-bold text-foreground sm:text-4xl">
-              Meet Our Experts
+              Meet Our Medical Experts
             </h2>
             <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our team of dedicated professionals is here to guide you on your aesthetic journey.
+              Our team of dedicated, highly qualified medical professionals is committed to guiding you with expertise and compassion throughout your aesthetic journey at {SITE_NAME}.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -162,17 +162,16 @@ export default function AboutPage() {
       <section className="py-12 md:py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-headline text-2xl md:text-3xl font-bold mb-4 md:mb-6">
-            Ready to Start Your Transformation?
+            Begin Your Transformation Journey
           </h2>
           <p className="text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto">
-            Schedule a consultation with our experts today and take the first step towards achieving your aesthetic goals.
+           We invite you to schedule a comprehensive consultation with our medical experts today. Take the decisive first step towards achieving your aesthetic aspirations in a safe, supportive, and professional environment.
           </p>
           <Button asChild size="lg" variant="secondary" className="bg-accent hover:bg-accent/90 text-accent-foreground text-sm md:text-base">
-            <Link href="/contact">Book Your Consultation</Link>
+            <Link href="/contact">Book Your Confidential Consultation</Link>
           </Button>
         </div>
       </section>
     </>
   );
 }
-

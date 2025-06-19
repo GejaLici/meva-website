@@ -10,6 +10,7 @@ import type { Metadata } from 'next';
 import { CalendarDays, UserCircle, Tag } from 'lucide-react';
 import { formatDate, cn } from '@/lib/utils';
 import type { ContentBlock, ContentLeaf, RichTextSpan } from '@/types/blog';
+import { SITE_NAME } from '@/lib/constants';
 
 interface BlogPostPageProps {
   params: {
@@ -27,11 +28,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const post = await getBlogPostBySlug(params.slug);
   if (!post) {
-    return { title: 'Post Not Found' };
+    return { 
+      title: `Post Not Found | ${SITE_NAME}`,
+      description: `The requested blog post could not be found on ${SITE_NAME}.` 
+    };
   }
+  const metaDescription = post.excerpt.length > 155 
+    ? `${post.excerpt.substring(0, 152)}...` 
+    : post.excerpt;
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: `${post.title} | ${SITE_NAME} Blog`,
+    description: metaDescription,
+    keywords: post.category ? `${post.category}, ${post.title}, ${SITE_NAME}` : `${post.title}, ${SITE_NAME}`,
+    authors: post.author ? [{ name: post.author }] : [{ name: SITE_NAME }],
   };
 }
 
@@ -59,7 +68,7 @@ function renderRichText(spans: ContentLeaf[] | undefined): JSX.Element | null {
 // Main content rendering function
 function renderContentBlocks(blocks: ContentBlock[] | undefined): (JSX.Element | null)[] | null {
   if (!blocks || blocks.length === 0) {
-    return [<p key="no-content" className="text-muted-foreground">This post has no content yet.</p>];
+    return [<p key="no-content" className="text-muted-foreground">This post has no content yet. Please check back later for updates.</p>];
   }
 
   return blocks.map((block) => {
@@ -78,8 +87,8 @@ function renderContentBlocks(blocks: ContentBlock[] | undefined): (JSX.Element |
               'text-3xl mt-6': block.level === 2,
               'text-2xl mt-5': block.level === 3,
               'text-xl mt-4': block.level === 4,
-              'text-lg mt-3': block.level === 5, // Corrected from base
-              'text-base mt-2 font-semibold': block.level === 6, // Corrected from base
+              'text-lg mt-3': block.level === 5, 
+              'text-base mt-2 font-semibold': block.level === 6, 
             }
           )}>
             {renderRichText(block.children)}
@@ -189,7 +198,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <div className="mt-12 text-center">
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="/blog">Back to Blog</Link>
+              <Link href="/blog">Back to All Blog Articles</Link>
             </Button>
           </div>
         </article>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
   },
-  description: 'NexaSculpt Clinic - Transforming your beauty with care and expertise.',
+  description: `${SITE_NAME}: Premier aesthetic and dental services. Our board-certified specialists offer advanced treatments for transformative results with utmost care and expertise.`,
 };
 
 export default function RootLayout({
@@ -38,4 +38,3 @@ export default function RootLayout({
     </html>
   );
 }
-

@@ -8,10 +8,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
+import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Dental Services',
-  description: 'Explore our comprehensive range of dental services, from aesthetic treatments to oral surgery and pediatric care.',
+  title: `Comprehensive Dental Services at ${SITE_NAME}`,
+  description: `Explore our extensive range of expert dental services at ${SITE_NAME}, from advanced aesthetic treatments and orthodontics to oral surgery and specialized pediatric care.`,
 };
 
 const dentalCategoryIds = [
@@ -29,8 +30,8 @@ export default function DentalServicesPage() {
   return (
     <>
       <PageHeader
-        title="Dental Services"
-        description="Discover our wide array of specialized dental treatments designed to enhance your smile and oral health. Our expert team offers everything from cosmetic enhancements to comprehensive surgical and pediatric care."
+        title="Comprehensive Dental Services"
+        description={`Discover our wide array of specialized dental treatments at ${SITE_NAME}, designed to enhance your smile and safeguard your oral health. Our expert dental team offers everything from advanced cosmetic enhancements and orthodontics to comprehensive surgical procedures and dedicated pediatric care.`}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {dentalCategories.length > 0 ? (
@@ -66,7 +67,7 @@ export default function DentalServicesPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No dental service categories are available at the moment. Please check back later.
+            No dental service categories are currently available. Please contact our clinic for the latest information.
           </p>
         )}
       </div>

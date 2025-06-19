@@ -100,10 +100,10 @@ export default function HomePage() {
             Reveal Your Radiance. Redefine Your Beauty.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto shadow-text-sm">
-            Experience the art of aesthetic transformation at NexaSculpt Clinic. Our expert team combines advanced technology with personalized care to help you achieve your ultimate aesthetic goals.
+            Experience the science and art of aesthetic transformation at NexaSculpt Clinic. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.
           </p>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 text-lg">
-            <Link href="/services">Explore Our Treatments</Link>
+            <Link href="/services">Explore Our Expert Treatments</Link>
           </Button>
         </div>
       </section>
@@ -113,10 +113,10 @@ export default function HomePage() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              Our Main Services
+              Our Premier Aesthetic & Dental Services
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              We offer a wide range of aesthetic and dental procedures, tailored to enhance your natural beauty and confidence.
+              At NexaSculpt Clinic, we provide a comprehensive suite of advanced aesthetic and dental procedures, meticulously tailored by our specialists to enhance your natural beauty and elevate your confidence.
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -177,7 +177,7 @@ export default function HomePage() {
               What Our Patients Say
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Hear from those who have experienced the NexaSculpt difference.
+              Hear from those who have experienced the NexaSculpt difference and entrusted us with their care.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -185,21 +185,21 @@ export default function HomePage() {
               <Card key={testimonial.id} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-4 md:p-6 flex-grow flex flex-col">
                   <div className="flex items-center mb-3 md:mb-4">
-                    <Avatar className="h-10 w-10 md:h-12 md:w-12 mr-3 md:mr-4">
+                    <Avatar className="h-8 w-8 md:h-12 md:w-12 mr-3 md:mr-4">
                       <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.imageHint || 'person portrait'}/>
                       <AvatarFallback>{testimonial.name.substring(0,1).toUpperCase()}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold text-primary text-sm md:text-base">{testimonial.name}</p>
-                      <p className="text-xs md:text-sm text-muted-foreground">{testimonial.treatment}</p>
+                      <p className="font-semibold text-primary text-xs md:text-base">{testimonial.name}</p>
+                      <p className="text-xs text-muted-foreground">{testimonial.treatment}</p>
                     </div>
                   </div>
-                  <blockquote className="text-foreground italic border-l-4 border-accent pl-3 md:pl-4 mb-3 md:mb-4 flex-grow text-sm md:text-base">
+                  <blockquote className="text-foreground italic border-l-4 border-accent pl-3 md:pl-4 mb-3 md:mb-4 flex-grow text-xs md:text-base">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center text-yellow-500 mt-auto">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 md:h-5 md:w-5 fill-current" />
+                      <Star key={i} className="h-3.5 w-3.5 md:h-5 md:w-5 fill-current" />
                     ))}
                   </div>
                 </CardContent>
@@ -220,7 +220,7 @@ export default function HomePage() {
               Transformations We're Proud Of
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Glimpse into the stunning results our patients have achieved.
+              Witness the meticulous skill and artistry of our specialists through these real patient outcomes. Glimpse into the stunning results our patients have achieved.
             </p>
           </div>
           {galleryPreviewItems.length > 0 ? (
@@ -266,12 +266,12 @@ export default function HomePage() {
             </div>
           ) : (
              <p className="text-center text-lg text-muted-foreground">
-                Our gallery is currently being updated. Please check back soon!
+                Our gallery showcasing patient transformations is currently being updated. Please check back soon.
              </p>
           )}
           <div className="mt-12 text-center">
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/gallery">View Full Gallery</Link>
+              <Link href="/gallery">View Full Gallery of Results</Link>
             </Button>
           </div>
         </div>
@@ -282,10 +282,10 @@ export default function HomePage() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              Further Insights & Support
+              Further Insights & Expert Support
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover more about our work, stay informed, and find answers to your questions.
+              Explore in-depth information about our specialized treatments, stay informed with the latest advancements in aesthetic care, and find comprehensive answers to your questions from our expert team.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -296,15 +296,15 @@ export default function HomePage() {
                   <Images className="h-6 w-6" />
                 </div>
                 <CardTitle className="font-headline text-2xl font-bold text-primary">
-                  View Our Gallery
+                  View Our Transformations
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col items-center">
                 <p className="text-muted-foreground mb-6">
-                  See the stunning transformations and results our patients have achieved.
+                  See the stunning transformations and real-patient results our expert medical team has achieved.
                 </p>
                 <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground mt-auto">
-                  <Link href="/gallery">Visit Gallery</Link>
+                  <Link href="/gallery">Visit Patient Gallery</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -315,15 +315,15 @@ export default function HomePage() {
                   <BookOpen className="h-6 w-6" />
                 </div>
                 <CardTitle className="font-headline text-2xl font-bold text-primary">
-                  Explore Our Insights
+                  Explore Our Expert Insights
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col items-center">
                 <p className="text-muted-foreground mb-6">
-                  Dive into our blog for trends, tips, and expert advice in aesthetic and dental care.
+                  Dive into our blog for the latest trends, procedural insights, and expert advice in advanced aesthetic and dental care.
                 </p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
-                  <Link href="/blog">Read Our Blog</Link>
+                  <Link href="/blog">Read Our Expert Blog</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -334,15 +334,15 @@ export default function HomePage() {
                   <HelpCircle className="h-6 w-6" />
                 </div>
                 <CardTitle className="font-headline text-2xl font-bold text-primary">
-                  Got Questions?
+                  Frequently Asked Questions
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col items-center">
                 <p className="text-muted-foreground mb-6">
-                  Find answers to common queries about our procedures, recovery, and what to expect.
+                  Find comprehensive answers to common queries about our procedures, recovery protocols, and what to expect during your journey with us.
                 </p>
                 <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground mt-auto">
-                  <Link href="/faq">Visit Our FAQ</Link>
+                  <Link href="/faq">Visit Our Comprehensive FAQ</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -359,7 +359,7 @@ export default function HomePage() {
               Ready for Your Transformation?
             </h2>
             <p className="mt-4 text-lg max-w-xl mx-auto">
-              Contact us today for a consultation. Fill out the form below, and our team of experts will guide you towards the results you've dreamed of.
+              Initiate your journey towards your desired aesthetic outcomes. Contact NexaSculpt Clinic today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways.
             </p>
           </div>
           <div className="bg-card p-8 md:p-10 rounded-lg shadow-2xl text-card-foreground">
@@ -370,4 +370,3 @@ export default function HomePage() {
     </>
   );
 }
-

@@ -34,9 +34,13 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   if (!service) {
     return { title: 'Service Not Found' };
   }
+  // Ensure description is concise for metadata
+  const metaDescription = service.description.length > 155 
+    ? `${service.description.substring(0, 152)}...` 
+    : service.description;
   return {
     title: service.name,
-    description: `Learn more about ${service.name} at ${SITE_NAME}. ${service.description.substring(0,120)}...`,
+    description: `Explore ${service.name} at ${SITE_NAME}. ${metaDescription}`,
   };
 }
 
@@ -67,24 +71,22 @@ export default function ServicePage({ params }: ServicePageProps) {
             )}
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
-            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">About the Service</h2>
+            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">About {service.name}</h2>
             <p className="mb-6">{service.description}</p>
             
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to expect?</h3>
+            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to Expect at {SITE_NAME}</h3>
             <p className="mb-4">
-              At {SITE_NAME}, we ensure that every patient receives a personalized treatment plan. 
-              The procedure for {service.name.toLowerCase()} includes detailed consultations, modern techniques, and careful 
-              post-operative follow-up to guarantee optimal results and a speedy recovery.
+              At {SITE_NAME}, your journey begins with a comprehensive consultation where our specialists develop a personalized treatment plan tailored to your specific needs and desired outcomes for {service.name.toLowerCase()}. We utilize modern, evidence-based techniques and state-of-the-art technology. Our commitment extends to meticulous post-operative care and follow-up, ensuring optimal results, your comfort, and a smooth recovery process.
             </p>
             <ul className="list-disc pl-5 mb-6 space-y-1">
-              <li>Detailed initial consultation</li>
-              <li>Personalized treatment plan</li>
-              <li>Modern technology and methods</li>
-              <li>Dedicated post-operative care</li>
+              <li>Thorough, confidential initial consultation with a specialist.</li>
+              <li>Custom-developed treatment plan based on comprehensive assessment.</li>
+              <li>Application of advanced medical technology and proven procedural methods.</li>
+              <li>Dedicated, attentive post-operative care and follow-up.</li>
             </ul>
             
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">Book a Consultation</Link>
+              <Link href="/contact">Book a Confidential Consultation</Link>
             </Button>
           </div>
         </div>
@@ -92,4 +94,3 @@ export default function ServicePage({ params }: ServicePageProps) {
     </>
   );
 }
-

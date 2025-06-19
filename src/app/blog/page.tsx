@@ -6,8 +6,8 @@ import type { Metadata } from 'next';
 import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: `Read the latest news, articles, and insights from ${SITE_NAME}.`,
+  title: `Expert Blog | ${SITE_NAME}`,
+  description: `Stay informed with the latest advancements, expert tips, and insightful articles from the forefront of aesthetic and dental care, curated by the professionals at ${SITE_NAME}.`,
 };
 
 // Changed to async function to await data fetching
@@ -17,8 +17,8 @@ export default async function BlogPage() {
   return (
     <>
       <PageHeader
-        title="Our Blog"
-        description="Stay updated with the latest news, tips, and insights from the world of aesthetic and dental care."
+        title="Our Expert Insights Blog"
+        description={`Stay informed with the latest advancements, expert tips, and insightful articles from the forefront of aesthetic and dental care, curated by the professionals at ${SITE_NAME}.`}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {posts.length > 0 ? (
@@ -29,11 +29,10 @@ export default async function BlogPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No blog posts available at the moment. Please check back later or ensure your Firestore 'blogPosts' collection is populated.
+            No blog posts are available at this moment. Please check back later, or ensure your Firestore 'blogPosts' collection is populated with valid entries.
           </p>
         )}
       </div>
     </>
   );
 }
-

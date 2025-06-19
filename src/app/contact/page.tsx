@@ -6,8 +6,8 @@ import type { Metadata } from 'next';
 import { SITE_NAME, SITE_DOMAIN } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: `Contact ${SITE_NAME} for inquiries, consultations, or to book an appointment. We are here to help you.`,
+  title: `Contact ${SITE_NAME} | Inquiries & Consultations`,
+  description: `Contact ${SITE_NAME} for expert inquiries, confidential consultations, or to book an appointment. Our professional team is ready to assist you with your aesthetic and dental needs.`,
 };
 
 export default function ContactPage() {
@@ -15,12 +15,12 @@ export default function ContactPage() {
     <>
       <PageHeader
         title="Contact Us"
-        description="We are here to answer any questions you may have. Fill out the form below or contact us directly."
+        description={`We are dedicated to providing comprehensive information and support. Should you have any inquiries or wish to discuss your aesthetic goals, please complete the secure form below, or contact our professional team directly. We are here to assist you.`}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-start">
           <div className="bg-card p-8 rounded-lg shadow-lg">
-            <h2 className="font-headline text-2xl font-semibold text-primary mb-6">Contact Information</h2>
+            <h2 className="font-headline text-2xl font-semibold text-primary mb-6">Our Clinic Details & Direct Contact</h2>
             <div className="space-y-4 text-foreground">
               <div className="flex items-start">
                 <MapPin className="h-6 w-6 mr-3 mt-1 text-accent flex-shrink-0" />
@@ -45,14 +45,14 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="mt-8">
-                <h3 className="font-headline text-xl font-semibold text-primary mb-3">Working Hours</h3>
+                <h3 className="font-headline text-xl font-semibold text-primary mb-3">Clinic Operating Hours</h3>
                 <p className="text-foreground">Monday - Friday: 09:00 - 18:00</p>
                 <p className="text-foreground">Saturday: 09:00 - 14:00</p>
                 <p className="text-foreground">Sunday: Closed</p>
             </div>
           </div>
           <div className="bg-card p-8 rounded-lg shadow-lg">
-            <h2 className="font-headline text-2xl font-semibold text-primary mb-6">Send Us a Message</h2>
+            <h2 className="font-headline text-2xl font-semibold text-primary mb-6">Secure Inquiry Form</h2>
             <ContactForm />
           </div>
         </div>
@@ -60,4 +60,3 @@ export default function ContactPage() {
     </>
   );
 }
-

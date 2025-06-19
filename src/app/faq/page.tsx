@@ -6,16 +6,16 @@ import type { Metadata } from 'next';
 import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions',
-  description: `Find answers to common questions about aesthetic procedures, consultations, recovery, and more at ${SITE_NAME}.`,
+  title: `Frequently Asked Questions | ${SITE_NAME}`,
+  description: `Find comprehensive answers to common questions about aesthetic procedures, consultations, recovery, and care pathways at ${SITE_NAME}.`,
 };
 
 export default function FAQPage() {
   return (
     <>
       <PageHeader
-        title="Frequently Asked Questions"
-        description="Find answers to your questions about our services and procedures."
+        title="Frequently Asked Questions (FAQ)"
+        description={`Find comprehensive answers to frequently asked questions regarding our specialized services, advanced procedures, pre-operative preparation, and post-treatment care at ${SITE_NAME}.`}
       />
       <div className="container mx-auto max-w-screen-md px-4 py-12 sm:px-6 lg:px-8">
         {faqItems.length > 0 ? (
@@ -23,21 +23,20 @@ export default function FAQPage() {
             {faqItems.map((item) => (
               <AccordionItem key={item.id} value={item.id} className="bg-card p-4 rounded-lg shadow-md">
                 <AccordionTrigger className="text-left font-semibold text-lg text-primary hover:no-underline">
-                  {item.question.replace(/NovaSculpt Clinic/g, SITE_NAME)}
+                  {item.question.replace(/NexaSculpt Clinic/g, SITE_NAME)}
                 </AccordionTrigger>
                 <AccordionContent className="pt-2 text-muted-foreground">
-                  {item.answer.replace(/NovaSculpt Clinic/g, SITE_NAME)}
+                  {item.answer.replace(/NexaSculpt Clinic/g, SITE_NAME)}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No FAQs available at the moment. Please check back later.
+            No FAQs are available at the moment. Please contact our clinic directly if you have specific questions.
           </p>
         )}
       </div>
     </>
   );
 }
-

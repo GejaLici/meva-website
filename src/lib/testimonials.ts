@@ -14,26 +14,25 @@ export const testimonials: Testimonial[] = [
   {
     id: 'testimonial-1',
     name: 'Sarah L.',
-    quote: `${SITE_NAME} changed my life! The results of my nose reshaping are fantastic, and the team was so supportive throughout the process. I feel more confident than ever.`,
-    treatment: 'Nose Reshaping',
+    quote: `${SITE_NAME} truly transformed my confidence! The results of my nose reshaping are fantastic, exceeding all my expectations. The entire team was incredibly professional and supportive throughout the entire process. I couldn't be happier.`,
+    treatment: 'Nose Reshaping (Rhinoplasty)',
     avatar: 'https://placehold.co/100x100.png',
     imageHint: 'happy woman',
   },
   {
     id: 'testimonial-2',
     name: 'Michael B.',
-    quote: `I was hesitant about getting a hair transplant, but the experts at ${SITE_NAME} made me feel comfortable. The procedure was smooth, and the results are incredibly natural. Highly recommend!`,
-    treatment: 'Hair Transplant',
+    quote: `I was initially hesitant about undergoing a hair transplant, but the specialists at ${SITE_NAME} were exceptional. They explained everything clearly and made me feel completely comfortable. The procedure was smooth, and the results are remarkably natural. Highly recommend their expertise!`,
+    treatment: 'Hair Transplant (FUE)',
     avatar: 'https://placehold.co/100x100.png',
     imageHint: 'smiling man',
   },
   {
     id: 'testimonial-3',
     name: 'Emily R.',
-    quote: `The breast augmentation I received at ${SITE_NAME} exceeded my expectations. The doctors listened to my desires and delivered beautiful, natural-looking results. The care was exceptional.`,
+    quote: `My breast augmentation experience at ${SITE_NAME} was outstanding. The surgeons attentively listened to my aesthetic goals and delivered beautiful, natural-looking results that perfectly suit my frame. The post-operative care and attention to detail were exceptional.`,
     treatment: 'Breast Augmentation',
     avatar: 'https://placehold.co/100x100.png',
     imageHint: 'confident person',
   },
 ];
-
