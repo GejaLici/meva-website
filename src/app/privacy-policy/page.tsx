@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
         description={`Last updated: ${new Date().toLocaleDateString()}`}
       />
       <div className="container mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:px-8 prose prose-lg text-foreground">
-        <p>Welcome to ${SITE_NAME} (hereinafter referred to as "we," "us," or "our"). We are steadfastly committed to protecting your personal information and your fundamental right to privacy. This Privacy Policy governs your access to and use of our website, ${SITE_DOMAIN}, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site"). If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at info@{SITE_DOMAIN}.</p>
+        <p>Welcome to {SITE_NAME} (hereinafter referred to as "we," "us," or "our"). We are steadfastly committed to protecting your personal information and your fundamental right to privacy. This Privacy Policy governs your access to and use of our website, {SITE_DOMAIN}, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site"). If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at info@{SITE_DOMAIN}.</p>
         
         <h2>1. INFORMATION WE COLLECT</h2>
         <p>We collect personal information that you voluntarily provide to us when you register on the Site, express an interest in obtaining information about us or our products and services, when you participate in activities on the Site, or otherwise when you contact us.</p>

@@ -67,7 +67,7 @@ export default function DentalServicesPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No dental service categories are currently available. Please contact ${SITE_NAME} for the latest information.
+            No dental service categories are currently available. Please contact {SITE_NAME} for the latest information.
           </p>
         )}
       </div>

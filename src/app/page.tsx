@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
-import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Leaf, Images, BookOpen, HelpCircle, ThumbsUp } from 'lucide-react';
+import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Images, BookOpen, HelpCircle, ThumbsUp, Leaf } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
 import { cn } from '@/lib/utils';
@@ -84,7 +84,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[calc(100vh-4rem)] min-h-[500px] md:min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative h-[calc(100vh-3rem)] min-h-[450px] md:min-h-[550px] flex items-center justify-center text-center text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/portrait-woman.jpg"
@@ -97,13 +97,13 @@ export default function HomePage() {
           />
         </div>
         <div className="relative z-10 container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
-          <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold mb-6 shadow-text">
+          <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold mb-6 shadow-text">
             Reveal Your Radiance. Redefine Your Beauty.
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto shadow-text-sm">
-            Experience the science and art of aesthetic transformation at ${SITE_NAME}. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.
+          <p className="text-base sm:text-lg md:text-xl mb-10 max-w-2xl mx-auto shadow-text-sm">
+            Experience the science and art of aesthetic transformation at {SITE_NAME}. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.
           </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 text-lg">
+          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 text-base">
             <Link href="/services">Explore Our Expert Treatments</Link>
           </Button>
         </div>
@@ -117,7 +117,7 @@ export default function HomePage() {
               Our Premier Aesthetic & Dental Services
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              At ${SITE_NAME}, we provide a comprehensive suite of advanced aesthetic and dental procedures, meticulously tailored by our specialists to enhance your natural beauty and elevate your confidence.
+              At {SITE_NAME}, we provide a comprehensive suite of advanced aesthetic and dental procedures, meticulously tailored by our specialists to enhance your natural beauty and elevate your confidence.
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -178,7 +178,7 @@ export default function HomePage() {
               What Our Patients Say
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Hear from those who have experienced the ${SITE_NAME} difference and entrusted us with their care.
+              Hear from those who have experienced the {SITE_NAME} difference and entrusted us with their care.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -186,21 +186,21 @@ export default function HomePage() {
               <Card key={testimonial.id} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-4 md:p-6 flex-grow flex flex-col">
                   <div className="flex items-center mb-3 md:mb-4">
-                    <Avatar className="h-8 w-8 md:h-12 md:w-12 mr-3 md:mr-4">
+                    <Avatar className="h-8 w-8 md:h-10 md:w-10 mr-3 md:mr-3">
                       <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.imageHint || 'person portrait'}/>
                       <AvatarFallback>{testimonial.name.substring(0,1).toUpperCase()}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold text-primary text-xs md:text-base">{testimonial.name}</p>
+                      <p className="font-semibold text-primary text-xs md:text-sm">{testimonial.name}</p>
                       <p className="text-xs text-muted-foreground">{testimonial.treatment}</p>
                     </div>
                   </div>
-                  <blockquote className="text-foreground italic border-l-4 border-accent pl-3 md:pl-4 mb-3 md:mb-4 flex-grow text-xs md:text-base">
+                  <blockquote className="text-foreground italic border-l-4 border-accent pl-3 md:pl-4 mb-3 md:mb-4 flex-grow text-xs md:text-sm">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center text-yellow-500 mt-auto">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-3.5 w-3.5 md:h-5 md:w-5 fill-current" />
+                      <Star key={i} className="h-3 w-3 md:h-4 md:w-4 fill-current" />
                     ))}
                   </div>
                 </CardContent>
@@ -221,7 +221,7 @@ export default function HomePage() {
               Transformations We're Proud Of
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Witness the meticulous skill and artistry of our specialists through these real patient outcomes. Glimpse into the stunning results our patients have achieved at ${SITE_NAME}.
+              Witness the meticulous skill and artistry of our specialists through these real patient outcomes. Glimpse into the stunning results our patients have achieved at {SITE_NAME}.
             </p>
           </div>
           {galleryPreviewItems.length > 0 ? (
@@ -286,7 +286,7 @@ export default function HomePage() {
               Further Insights & Expert Support
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore in-depth information about our specialized treatments, stay informed with the latest advancements in aesthetic care, and find comprehensive answers to your questions from our expert team at ${SITE_NAME}.
+              Explore in-depth information about our specialized treatments, stay informed with the latest advancements in aesthetic care, and find comprehensive answers to your questions from our expert team at {SITE_NAME}.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -360,7 +360,7 @@ export default function HomePage() {
               Ready for Your Transformation?
             </h2>
             <p className="mt-4 text-lg max-w-xl mx-auto">
-              Initiate your journey towards your desired aesthetic outcomes. Contact ${SITE_NAME} today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways.
+              Initiate your journey towards your desired aesthetic outcomes. Contact {SITE_NAME} today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways.
             </p>
           </div>
           <div className="bg-card p-8 md:p-10 rounded-lg shadow-2xl text-card-foreground">

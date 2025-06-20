@@ -51,7 +51,7 @@ export default function ServiceCategoryPage({ params }: CategoryPageProps) {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            There are no services available in this category at the moment. Please contact ${SITE_NAME} for more details.
+            There are no services available in this category at the moment. Please contact {SITE_NAME} for more details.
           </p>
         )}
       </div>

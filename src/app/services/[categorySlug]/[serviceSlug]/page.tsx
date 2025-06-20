@@ -76,9 +76,9 @@ export default function ServicePage({ params }: ServicePageProps) {
             <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">About {service.name}</h2>
             <p className="mb-6">{service.description}</p>
             
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to Expect at ${SITE_NAME}</h3>
+            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to Expect at {SITE_NAME}</h3>
             <p className="mb-4">
-              At ${SITE_NAME}, your journey begins with a comprehensive consultation where our specialists develop a personalized treatment plan tailored to your specific needs and desired outcomes for {service.name.toLowerCase()}. We utilize modern, evidence-based techniques and state-of-the-art technology. Our commitment extends to meticulous post-operative care and follow-up, ensuring optimal results, your comfort, and a smooth recovery process.
+              At {SITE_NAME}, your journey begins with a comprehensive consultation where our specialists develop a personalized treatment plan tailored to your specific needs and desired outcomes for {service.name.toLowerCase()}. We utilize modern, evidence-based techniques and state-of-the-art technology. Our commitment extends to meticulous post-operative care and follow-up, ensuring optimal results, your comfort, and a smooth recovery process.
             </p>
             <ul className="list-disc pl-5 mb-6 space-y-1">
               <li>Thorough, confidential initial consultation with a specialist.</li>
