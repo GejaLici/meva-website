@@ -23,10 +23,10 @@ export default function FAQPage() {
             {faqItems.map((item) => (
               <AccordionItem key={item.id} value={item.id} className="bg-card p-4 rounded-lg shadow-md">
                 <AccordionTrigger className="text-left font-semibold text-lg text-primary hover:no-underline">
-                  {item.question.replace(/NexaSculpt Clinic/g, SITE_NAME)}
+                  {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="pt-2 text-muted-foreground">
-                  {item.answer.replace(/NexaSculpt Clinic/g, SITE_NAME)}
+                  {item.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}

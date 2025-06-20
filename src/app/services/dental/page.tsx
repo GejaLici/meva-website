@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: `Comprehensive Dental Services at ${SITE_NAME}`,
+  title: `Comprehensive Dental Services | ${SITE_NAME}`,
   description: `Explore our extensive range of expert dental services at ${SITE_NAME}, from advanced aesthetic treatments and orthodontics to oral surgery and specialized pediatric care.`,
 };
 
@@ -67,7 +67,7 @@ export default function DentalServicesPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No dental service categories are currently available. Please contact our clinic for the latest information.
+            No dental service categories are currently available. Please contact ${SITE_NAME} for the latest information.
           </p>
         )}
       </div>

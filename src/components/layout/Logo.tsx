@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { SITE_NAME } from '@/lib/constants';
 
@@ -10,8 +11,8 @@ const LogoSvg = () => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    <path d="M20 80L50 20L80 80L65 80L50 50L35 80L20 80Z" />
-    <path d="M50 20L60 40H40L50 20Z" opacity="0.7"/>
+    {/* Simple M shape for Meva */}
+    <path d="M20 80 V 20 L 50 50 L 80 20 V 80 H 65 V 40 L 50 60 L 35 40 V 80 H 20 Z" />
   </svg>
 );
 

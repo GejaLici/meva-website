@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Our Services',
+  title: `Our Services | ${SITE_NAME}`,
   description: `Explore the comprehensive range of advanced aesthetic and dental services offered at ${SITE_NAME}. Discover treatments tailored by experts to enhance your beauty and well-being.`,
 };
 
@@ -91,13 +91,10 @@ export default function ServicesOverviewPage() {
             {displayedCategories.map((category, index) => {
               const CategoryIcon = category.icon;
               let colSpanClass = '';
-              // For 5 items, the layout is 2-2-2 for the first row (if only 3 items fit), 
-              // then 3-3 for the next row.
-              // Homepage layout for 5 items: first 3 items span 2 cols each, next 2 items span 3 cols each.
               if (index < 3) { 
-                colSpanClass = 'md:col-span-2'; // Facial Surgery, Facial Treatments, Breast Procedures
+                colSpanClass = 'md:col-span-2';
               } else { 
-                colSpanClass = 'md:col-span-3'; // Body Contouring, Dental Care
+                colSpanClass = 'md:col-span-3';
               }
               return (
                 <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", colSpanClass)}>

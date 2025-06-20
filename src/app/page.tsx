@@ -13,6 +13,7 @@ import { cn } from '@/lib/utils';
 import { getAllGalleryItems } from '@/lib/gallery';
 import type { GalleryItem as GalleryItemType } from '@/types/gallery';
 import { ContactForm } from '@/app/contact/_components/ContactForm';
+import { SITE_NAME } from '@/lib/constants';
 
 
 const DENTAL_CATEGORY_IDS = [
@@ -100,7 +101,7 @@ export default function HomePage() {
             Reveal Your Radiance. Redefine Your Beauty.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl mx-auto shadow-text-sm">
-            Experience the science and art of aesthetic transformation at NexaSculpt Clinic. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.
+            Experience the science and art of aesthetic transformation at ${SITE_NAME}. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.
           </p>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 text-lg">
             <Link href="/services">Explore Our Expert Treatments</Link>
@@ -116,7 +117,7 @@ export default function HomePage() {
               Our Premier Aesthetic & Dental Services
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              At NexaSculpt Clinic, we provide a comprehensive suite of advanced aesthetic and dental procedures, meticulously tailored by our specialists to enhance your natural beauty and elevate your confidence.
+              At ${SITE_NAME}, we provide a comprehensive suite of advanced aesthetic and dental procedures, meticulously tailored by our specialists to enhance your natural beauty and elevate your confidence.
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -177,7 +178,7 @@ export default function HomePage() {
               What Our Patients Say
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Hear from those who have experienced the NexaSculpt difference and entrusted us with their care.
+              Hear from those who have experienced the ${SITE_NAME} difference and entrusted us with their care.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -220,7 +221,7 @@ export default function HomePage() {
               Transformations We're Proud Of
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Witness the meticulous skill and artistry of our specialists through these real patient outcomes. Glimpse into the stunning results our patients have achieved.
+              Witness the meticulous skill and artistry of our specialists through these real patient outcomes. Glimpse into the stunning results our patients have achieved at ${SITE_NAME}.
             </p>
           </div>
           {galleryPreviewItems.length > 0 ? (
@@ -285,7 +286,7 @@ export default function HomePage() {
               Further Insights & Expert Support
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore in-depth information about our specialized treatments, stay informed with the latest advancements in aesthetic care, and find comprehensive answers to your questions from our expert team.
+              Explore in-depth information about our specialized treatments, stay informed with the latest advancements in aesthetic care, and find comprehensive answers to your questions from our expert team at ${SITE_NAME}.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -359,7 +360,7 @@ export default function HomePage() {
               Ready for Your Transformation?
             </h2>
             <p className="mt-4 text-lg max-w-xl mx-auto">
-              Initiate your journey towards your desired aesthetic outcomes. Contact NexaSculpt Clinic today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways.
+              Initiate your journey towards your desired aesthetic outcomes. Contact ${SITE_NAME} today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways.
             </p>
           </div>
           <div className="bg-card p-8 md:p-10 rounded-lg shadow-2xl text-card-foreground">

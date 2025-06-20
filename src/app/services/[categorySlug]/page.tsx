@@ -4,6 +4,7 @@ import { serviceCategories, getCategoryBySlug } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { ServiceCard } from '@/components/shared/ServiceCard';
 import type { Metadata } from 'next';
+import { SITE_NAME } from '@/lib/constants';
 
 interface CategoryPageProps {
   params: {
@@ -20,10 +21,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const category = getCategoryBySlug(params.categorySlug);
   if (!category) {
-    return { title: 'Category Not Found' };
+    return { 
+      title: `Category Not Found | ${SITE_NAME}`,
+      description: `The requested service category could not be found at ${SITE_NAME}.`
+    };
   }
   return {
-    title: category.name,
+    title: `${category.name} | ${SITE_NAME}`,
     description: category.description,
   };
 }
@@ -47,7 +51,7 @@ export default function ServiceCategoryPage({ params }: CategoryPageProps) {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            There are no services available in this category at the moment.
+            There are no services available in this category at the moment. Please contact ${SITE_NAME} for more details.
           </p>
         )}
       </div>

@@ -65,7 +65,7 @@ export default function GalleryPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            Our patient gallery is currently being updated with new transformations. Please check back soon to see the exceptional results achieved by our specialists.
+            Our patient gallery is currently being updated with new transformations. Please check back soon to see the exceptional results achieved by our specialists at ${SITE_NAME}.
           </p>
         )}
       </div>

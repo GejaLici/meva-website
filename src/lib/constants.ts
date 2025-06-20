@@ -1,4 +1,4 @@
 
-export const SITE_NAME = "NexaSculpt Clinic";
-export const SITE_DOMAIN = "nexasculpt.com";
+export const SITE_NAME = "Meva Clinic";
+export const SITE_DOMAIN = "mevaclinic.com";
 
