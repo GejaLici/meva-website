@@ -30,7 +30,7 @@ export function MobileNav() {
             <Logo />
           </SheetTitle>
         </SheetHeader>
-        <nav className="flex flex-col space-y-2 p-4 overflow-y-auto max-h-[calc(100vh-4rem)]">
+        <nav className="flex flex-col space-y-2 p-4 overflow-y-auto max-h-[calc(100vh-3.5rem)]">
           <Link
             href="/"
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
@@ -70,7 +70,6 @@ export function MobileNav() {
                 >
                   Dental Services
                 </Link>
-                {/* Removed "All Services" to simplify, can be re-added if needed */}
               </AccordionContent>
             </AccordionItem>
           </Accordion>
