@@ -4,8 +4,8 @@ import { SITE_NAME } from '@/lib/constants';
 
 const LogoSvg = () => (
   <svg 
-    width="36" 
-    height="36" 
+    width="32" 
+    height="32" 
     viewBox="0 0 100 100" 
     fill="currentColor" 
     xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2 text-primary hover:text-primary/90 transition-colors">
       <LogoSvg />
-      <span className="font-headline text-xl font-semibold">{SITE_NAME}</span>
+      <span className="font-headline text-lg font-semibold">{SITE_NAME}</span>
     </Link>
   );
 }

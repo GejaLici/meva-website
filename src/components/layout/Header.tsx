@@ -24,7 +24,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
     <Link
       href={href}
       className={cn(
-        "text-xs font-medium relative transition-colors hover:text-primary py-1.5",
+        "text-xs font-medium relative transition-colors hover:text-primary py-1",
         "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
         isActive ? "text-primary after:w-full" : "text-foreground/80"
       )}
@@ -43,9 +43,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-14 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-12 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo />
-        <nav className="hidden md:flex items-center space-x-4">
+        <nav className="hidden md:flex items-center space-x-3">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About Us</NavLink>
           <DropdownMenu>
@@ -53,7 +53,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 className={cn(
-                  "text-xs font-medium relative transition-colors hover:text-primary px-0 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 py-1.5", 
+                  "text-xs font-medium relative transition-colors hover:text-primary px-0 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 py-1", 
                   "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
                   isServicesActive ? "text-primary after:w-full" : "text-foreground/80"
                 )}
