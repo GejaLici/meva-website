@@ -7,12 +7,12 @@ import { getFirestore } from 'firebase/firestore';
 // You can find this in your Firebase project settings:
 // Project settings > General > Your apps > SDK setup and configuration (select "Config").
 const firebaseConfig: FirebaseOptions = {
-  apiKey: "YOUR_API_KEY", // Replace with your API key
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com", // Replace with your Auth domain
-  projectId: "YOUR_PROJECT_ID", // Replace with your Project ID
-  storageBucket: "YOUR_PROJECT_ID.appspot.com", // Replace with your Storage Bucket
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID", // Replace with your Messaging Sender ID
-  appId: "YOUR_APP_ID", // Replace with your App ID
+  apiKey: "AIzaSyDiQNKo2ypylk2ERrsTJhpMb0M2ts-HKRc", // Replace with your API key
+  authDomain: "novasculpt-clinic.firebaseapp.com", // Replace with your Auth domain
+  projectId: "novasculpt-clinic", // Replace with your Project ID
+  storageBucket: "novasculpt-clinic.firebasestorage.app", // Replace with your Storage Bucket
+  messagingSenderId: "1080954631981", // Replace with your Messaging Sender ID
+  appId: "1:1080954631981:web:1deb8a110d6bb81e8f05a4", // Replace with your App ID
   // measurementId: "YOUR_MEASUREMENT_ID" // Optional: if you use Analytics
 };
 
