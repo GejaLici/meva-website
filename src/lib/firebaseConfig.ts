@@ -2,18 +2,27 @@
 import { initializeApp, getApps, getApp, type FirebaseOptions } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
-// TODO: IMPORTANT!
-// Replace the following with your actual Firebase project's configuration.
-// You can find this in your Firebase project settings:
-// Project settings > General > Your apps > SDK setup and configuration (select "Config").
+// =================================================================
+// IMPORTANT! - TODO: CONFIGURE FIREBASE
+// =================================================================
+// You must replace the following placeholder values with your actual
+// Firebase project's configuration. You can find this in your
+// Firebase project console:
+//
+// Project settings > General > Your apps > Web app > SDK setup and configuration
+//
+// Select "Config" to see these values.
+//
+// Using these placeholder values WILL cause your application to fail.
+// =================================================================
 const firebaseConfig: FirebaseOptions = {
-  apiKey: "AIzaSyDiQNKo2ypylk2ERrsTJhpMb0M2ts-HKRc", // Replace with your API key
-  authDomain: "novasculpt-clinic.firebaseapp.com", // Replace with your Auth domain
-  projectId: "novasculpt-clinic", // Replace with your Project ID
-  storageBucket: "novasculpt-clinic.firebasestorage.app", // Replace with your Storage Bucket
-  messagingSenderId: "1080954631981", // Replace with your Messaging Sender ID
-  appId: "1:1080954631981:web:1deb8a110d6bb81e8f05a4", // Replace with your App ID
-  // measurementId: "YOUR_MEASUREMENT_ID" // Optional: if you use Analytics
+  apiKey: "AIzaSyDiQNKo2ypylk2ERrsTJhpMb0M2ts-HKRc",
+  authDomain: "novasculpt-clinic.firebaseapp.com",
+  projectId: "novasculpt-clinic",
+  storageBucket: "novasculpt-clinic.appspot.com",
+  messagingSenderId: "REPLACE_WITH_1080954631981YOUR_MESSAGING_SENDER_ID",
+  appId: "1:1080954631981:web:1deb8a110d6bb81e8f05a4",
+  // measurementId: "REPLACE_WITH_YOUR_MEASUREMENT_ID" // Optional: if you use Google Analytics
 };
 
 // Initialize Firebase
