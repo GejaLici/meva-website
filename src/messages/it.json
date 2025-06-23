@@ -1,0 +1,46 @@
+{
+  "Site": {
+    "name": "Clinica Meva"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "gallery": "Galleria",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contatti"
+  },
+  "Footer": {
+    "quickLinks": "Link Rapidi",
+    "connectWithUs": "Connettiti Con Noi",
+    "connectMessage": "Rimani aggiornato con le nostre ultime notizie e offerte.",
+    "copyright": "© {currentYear} {siteName}. Tutti i diritti riservati.",
+    "privacyPolicy": "Informativa sulla Privacy",
+    "termsOfService": "Termini di Servizio",
+    "aiCredit": "Sito web progettato da un designer esperto di IA."
+  },
+  "ContactForm": {
+    "name": "Il Tuo Nome",
+    "namePlaceholder": "es. Mario Rossi",
+    "email": "La Tua Email",
+    "emailPlaceholder": "es. mario.rossi@email.com",
+    "subject": "Oggetto",
+    "subjectPlaceholder": "es. Richiesta di Consulto",
+    "message": "Il Tuo Messaggio",
+    "messagePlaceholder": "Scrivi qui il tuo messaggio...",
+    "send": "Invia Messaggio",
+    "sending": "Invio in corso...",
+    "successTitle": "Messaggio Inviato!",
+    "successDescription": "Grazie per averci contattato. Ti risponderemo il prima possibile.",
+    "errorTitle": "Errore!",
+    "errorDescription": "Si è verificato un errore durante l'invio del messaggio. Riprova.",
+    "unexpectedErrorTitle": "Errore Inaspettato!",
+    "unexpectedErrorDescription": "Si è verificato un errore inaspettato. Riprova più tardi."
+  },
+  "HomePage": {
+    "heroTitle": "Rivela la Tua Luminosità. Ridefinisci la Tua Bellezza.",
+    "heroDescription": "Vivi la scienza e l'arte della trasformazione estetica presso la {siteName}. I nostri professionisti medici altamente qualificati combinano tecnologia all'avanguardia con cure personalizzate per aiutarti a raggiungere i tuoi massimi obiettivi estetici e di benessere.",
+    "exploreTreatments": "Esplora i Nostri Trattamenti Esperti"
+  }
+}

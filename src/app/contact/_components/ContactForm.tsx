@@ -17,6 +17,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { submitContactForm } from '../actions';
+import { useTranslations } from 'next-intl';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -28,6 +29,7 @@ const formSchema = z.object({
 export type ContactFormValues = z.infer<typeof formSchema>;
 
 export function ContactForm() {
+  const t = useTranslations('ContactForm');
   const { toast } = useToast();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
@@ -44,21 +46,21 @@ export function ContactForm() {
       const result = await submitContactForm(values);
       if (result.success) {
         toast({
-          title: 'Message Sent!',
-          description: 'Thank you for contacting us. We will get back to you as soon as possible.',
+          title: t('successTitle'),
+          description: t('successDescription'),
         });
         form.reset();
       } else {
         toast({
-          title: 'Error!',
-          description: result.error || 'An error occurred while sending the message. Please try again.',
+          title: t('errorTitle'),
+          description: result.error || t('errorDescription'),
           variant: 'destructive',
         });
       }
     } catch (error) {
       toast({
-        title: 'Unexpected Error!',
-        description: 'An unexpected error occurred. Please try again later.',
+        title: t('unexpectedErrorTitle'),
+        description: t('unexpectedErrorDescription'),
         variant: 'destructive',
       });
     }
@@ -72,9 +74,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your Name</FormLabel>
+              <FormLabel>{t('name')}</FormLabel>
               <FormControl>
-                <Input placeholder="e.g. John Doe" {...field} />
+                <Input placeholder={t('namePlaceholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -85,9 +87,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your Email</FormLabel>
+              <FormLabel>{t('email')}</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="e.g. john.doe@email.com" {...field} />
+                <Input type="email" placeholder={t('emailPlaceholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -98,9 +100,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>{t('subject')}</FormLabel>
               <FormControl>
-                <Input placeholder="e.g. Consultation Request" {...field} />
+                <Input placeholder={t('subjectPlaceholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -111,10 +113,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your Message</FormLabel>
+              <FormLabel>{t('message')}</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Type your message here..."
+                  placeholder={t('messagePlaceholder')}
                   className="min-h-[120px]"
                   {...field}
                 />
@@ -124,7 +126,7 @@ export function ContactForm() {
           )}
         />
         <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" disabled={form.formState.isSubmitting}>
-          {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
+          {form.formState.isSubmitting ? t('sending') : t('send')}
         </Button>
       </form>
     </Form>

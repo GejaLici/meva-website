@@ -1,0 +1,46 @@
+{
+  "Site": {
+    "name": "Klinika Meva"
+  },
+  "Navigation": {
+    "home": "Kryefaqja",
+    "about": "Rreth Nesh",
+    "services": "Shërbimet",
+    "gallery": "Galeria",
+    "blog": "Blogu",
+    "faq": "Pyetje të Shpeshta",
+    "contact": "Kontakt"
+  },
+  "Footer": {
+    "quickLinks": "Linqe të Shpejta",
+    "connectWithUs": "Lidhuni Me Ne",
+    "connectMessage": "Qëndroni të informuar me lajmet dhe ofertat tona më të fundit.",
+    "copyright": "© {currentYear} {siteName}. Të gjitha të drejtat të rezervuara.",
+    "privacyPolicy": "Politika e Privatësisë",
+    "termsOfService": "Kushtet e Shërbimit",
+    "aiCredit": "Faqja e internetit e projektuar nga një stilist ekspert i AI."
+  },
+  "ContactForm": {
+    "name": "Emri Juaj",
+    "namePlaceholder": "p.sh. Gjon Gjoni",
+    "email": "Emaili Juaj",
+    "emailPlaceholder": "p.sh. gjon.gjoni@email.com",
+    "subject": "Subjekti",
+    "subjectPlaceholder": "p.sh. Kërkesë për Konsultim",
+    "message": "Mesazhi Juaj",
+    "messagePlaceholder": "Shkruani mesazhin tuaj këtu...",
+    "send": "Dërgo Mesazhin",
+    "sending": "Duke dërguar...",
+    "successTitle": "Mesazhi u Dërgua!",
+    "successDescription": "Faleminderit që na kontaktuat. Do t'ju përgjigjemi sa më shpejt të jetë e mundur.",
+    "errorTitle": "Gabim!",
+    "errorDescription": "Ndodhi një gabim gjatë dërgimit të mesazhit. Ju lutemi provoni përsëri.",
+    "unexpectedErrorTitle": "Gabim i Papritur!",
+    "unexpectedErrorDescription": "Ndodhi një gabim i papritur. Ju lutemi provoni më vonë."
+  },
+  "HomePage": {
+    "heroTitle": "Zbuloni Shkëlqimin Tuaj. Ripërcaktoni Bukurinë Tuaj.",
+    "heroDescription": "Përjetoni shkencën dhe artin e transformimit estetik në {siteName}. Profesionistët tanë mjekësorë shumë të aftë kombinojnë teknologjinë më të fundit me kujdesin e personalizuar për t'ju ndihmuar të arrini qëllimet tuaja përfundimtare estetike dhe të mirëqenies.",
+    "exploreTreatments": "Eksploroni Trajtimet Tona Eksperte"
+  }
+}
