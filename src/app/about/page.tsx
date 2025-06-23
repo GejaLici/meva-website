@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Stethoscope, Lightbulb } from 'lucide-react';
 import type { Metadata } from 'next';
-import { Link } from '@/navigation';
+import Link from 'next/link';
 import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {

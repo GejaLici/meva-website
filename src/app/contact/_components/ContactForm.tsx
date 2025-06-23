@@ -17,7 +17,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { submitContactForm } from '../actions';
-import { useTranslations } from 'next-intl';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -29,7 +28,6 @@ const formSchema = z.object({
 export type ContactFormValues = z.infer<typeof formSchema>;
 
 export function ContactForm() {
-  const t = useTranslations('ContactForm');
   const { toast } = useToast();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
@@ -46,21 +44,21 @@ export function ContactForm() {
       const result = await submitContactForm(values);
       if (result.success) {
         toast({
-          title: t('successTitle'),
-          description: t('successDescription'),
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We will get back to you as soon as possible.",
         });
         form.reset();
       } else {
         toast({
-          title: t('errorTitle'),
-          description: result.error || t('errorDescription'),
+          title: "Error!",
+          description: result.error || "An error occurred while sending the message. Please try again.",
           variant: 'destructive',
         });
       }
     } catch (error) {
       toast({
-        title: t('unexpectedErrorTitle'),
-        description: t('unexpectedErrorDescription'),
+        title: "Unexpected Error!",
+        description: "An unexpected error occurred. Please try again later.",
         variant: 'destructive',
       });
     }
@@ -74,9 +72,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t('name')}</FormLabel>
+              <FormLabel>Your Name</FormLabel>
               <FormControl>
-                <Input placeholder={t('namePlaceholder')} {...field} />
+                <Input placeholder="e.g. John Doe" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -87,9 +85,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t('email')}</FormLabel>
+              <FormLabel>Your Email</FormLabel>
               <FormControl>
-                <Input type="email" placeholder={t('emailPlaceholder')} {...field} />
+                <Input type="email" placeholder="e.g. john.doe@email.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -100,9 +98,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t('subject')}</FormLabel>
+              <FormLabel>Subject</FormLabel>
               <FormControl>
-                <Input placeholder={t('subjectPlaceholder')} {...field} />
+                <Input placeholder="e.g. Consultation Request" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -113,10 +111,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>{t('message')}</FormLabel>
+              <FormLabel>Your Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder={t('messagePlaceholder')}
+                  placeholder="Type your message here..."
                   className="min-h-[120px]"
                   {...field}
                 />
@@ -126,7 +124,7 @@ export function ContactForm() {
           )}
         />
         <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" disabled={form.formState.isSubmitting}>
-          {form.formState.isSubmitting ? t('sending') : t('send')}
+          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </form>
     </Form>
