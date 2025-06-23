@@ -1,4 +1,3 @@
-
 'use client';
 
 import { usePathname } from 'next/navigation';
@@ -38,6 +37,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 
 export function Header() {
   const t = useTranslations('Navigation');
+  const tSite = useTranslations('Site');
   const pathname = usePathname();
   const isServicesActive = pathname.includes('/services');
 
@@ -46,7 +46,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo />
+        <Logo siteName={tSite('name')} />
         <nav className="hidden md:flex items-center space-x-6">
           <NavLink href="/">{t('home')}</NavLink>
           <NavLink href="/about">{t('about')}</NavLink>

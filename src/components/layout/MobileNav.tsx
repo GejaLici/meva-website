@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -14,6 +13,7 @@ import { useTranslations } from 'next-intl';
 
 export function MobileNav() {
   const t = useTranslations('Navigation');
+  const tSite = useTranslations('Site');
   const [isOpen, setIsOpen] = useState(false);
 
   const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
@@ -29,7 +29,7 @@ export function MobileNav() {
       <SheetContent side="left" className="w-full max-w-xs p-0 bg-background">
         <SheetHeader className="border-b p-4">
           <SheetTitle>
-            <Logo />
+            <Logo siteName={tSite('name')} />
           </SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col space-y-2 p-4 overflow-y-auto max-h-[calc(100vh-4rem)]">

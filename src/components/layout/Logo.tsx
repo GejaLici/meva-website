@@ -1,5 +1,4 @@
 import { Link } from '@/navigation';
-import { useTranslations } from 'next-intl';
 
 const LogoSvg = () => (
   <svg 
@@ -16,12 +15,11 @@ const LogoSvg = () => (
 );
 
 
-export function Logo() {
-  const t = useTranslations('Site');
+export function Logo({ siteName }: { siteName: string }) {
   return (
     <Link href="/" className="flex items-center gap-2 text-primary hover:text-primary/90 transition-colors">
       <LogoSvg />
-      <span className="font-headline text-xl font-semibold">{t('name')}</span>
+      <span className="font-headline text-xl font-semibold">{siteName}</span>
     </Link>
   );
 }
