@@ -29,7 +29,7 @@ export default async function RootLayout({
   // The <html> and <body> tags are now in the root layout at `src/app/layout.tsx`.
   // This layout just provides the internationalization context and page structure.
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <Header />
       <main className="flex-grow">
         {children}
