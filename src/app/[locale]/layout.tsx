@@ -1,24 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
-import '../../globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { Toaster } from "@/components/ui/toaster";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, getTranslations} from 'next-intl/server';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
-  display: 'swap',
-});
+import React from 'react';
 
 export async function generateMetadata({params: {locale}} : {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'Site'});
@@ -41,18 +26,15 @@ export default async function RootLayout({
 }>) {
   const messages = await getMessages();
 
+  // The <html> and <body> tags are now in the root layout at `src/app/layout.tsx`.
+  // This layout just provides the internationalization context and page structure.
   return (
-    <html lang={locale} className={`${inter.variable} ${poppins.variable}`}>
-      <body className="font-body antialiased flex flex-col min-h-screen bg-background">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-          <Toaster />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </NextIntlClientProvider>
   );
 }
