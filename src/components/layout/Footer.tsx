@@ -1,3 +1,6 @@
+
+'use client';
+
 import { SITE_DOMAIN } from '@/lib/constants';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { useTranslations } from 'next-intl';

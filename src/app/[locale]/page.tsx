@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
@@ -10,7 +11,7 @@ import { cn } from '@/lib/utils';
 import { getAllGalleryItems } from '@/lib/gallery';
 import type { GalleryItem as GalleryItemType } from '@/types/gallery';
 import { Skeleton } from '@/components/ui/skeleton';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation';
 
 const ContactForm = dynamic(
@@ -51,9 +52,9 @@ const DENTAL_CATEGORY_IDS = [
   'pediatric-dentistry',
 ];
 
-export default function HomePage() {
-  const t = useTranslations('HomePage');
-  const tSite = useTranslations('Site');
+export default async function HomePage() {
+  const t = await getTranslations('HomePage');
+  const tSite = await getTranslations('Site');
   
   const aestheticServiceCategories = serviceCategories.filter(
     (category) => !DENTAL_CATEGORY_IDS.includes(category.id)
