@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { serviceCategories } from '@/lib/services';
@@ -10,8 +11,36 @@ import { testimonials } from '@/lib/testimonials';
 import { cn } from '@/lib/utils';
 import { getAllGalleryItems } from '@/lib/gallery';
 import type { GalleryItem as GalleryItemType } from '@/types/gallery';
-import { ContactForm } from '@/app/contact/_components/ContactForm';
 import { SITE_NAME } from '@/lib/constants';
+import { Skeleton } from '@/components/ui/skeleton';
+
+const ContactForm = dynamic(
+  () => import('@/app/contact/_components/ContactForm').then((mod) => mod.ContactForm),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="space-y-6">
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-20" />
+          <Skeleton className="h-10 w-full" />
+        </div>
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-20" />
+          <Skeleton className="h-10 w-full" />
+        </div>
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-20" />
+          <Skeleton className="h-10 w-full" />
+        </div>
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-24" />
+          <Skeleton className="h-24 w-full" />
+        </div>
+        <Skeleton className="h-10 w-full" />
+      </div>
+    ),
+  }
+);
 
 
 const DENTAL_CATEGORY_IDS = [
@@ -369,3 +398,5 @@ export default function HomePage() {
     </>
   );
 }
+
+    
