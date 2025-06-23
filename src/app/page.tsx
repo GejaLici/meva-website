@@ -1,2 +1,5 @@
-// This file is intentionally blank. The content is now handled in /src/app/[locale]/page.tsx
-// to support internationalization. You can delete this file.
+// This page is not rendered when using next-intl, but the file is required
+// by Next.js to be a valid React component to prevent build errors.
+export default function RootPage() {
+  return null;
+}

@@ -1,2 +1,11 @@
-// This file is intentionally blank. The layout is now handled in /src/app/[locale]/layout.tsx
-// to support internationalization. You can delete this file.
+import React from 'react';
+
+// This root layout is required by the Next.js App Router.
+// It renders the children passed from the internationalized layout.
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
+}
