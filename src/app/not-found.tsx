@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { Button } from '@/components/ui/button';
 import { PageHeader } from '@/components/shared/PageHeader';
 
