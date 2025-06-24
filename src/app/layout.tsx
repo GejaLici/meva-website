@@ -5,8 +5,6 @@ import './globals.css';
 import { SITE_NAME } from '@/lib/constants';
 import React from 'react';
 import { Toaster } from "@/components/ui/toaster";
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -21,6 +19,7 @@ const poppins = Poppins({
   display: 'swap',
 });
 
+// Note: The `lang` attribute is now set in the [locale]/layout.tsx file.
 export const metadata: Metadata = {
   title: {
     default: SITE_NAME,
@@ -35,13 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    // The `lang` attribute is managed by the `[locale]/layout.tsx` file.
+    <html className={`${inter.variable} ${poppins.variable}`}>
       <body className="font-body antialiased flex flex-col min-h-screen bg-background">
-        <Header />
-        <main className="flex-grow">
           {children}
-        </main>
-        <Footer />
         <Toaster />
       </body>
     </html>
