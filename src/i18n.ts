@@ -1,2 +1,6 @@
-// This file is intentionally left blank.
-// The `next-intl` configuration is in the root `i18n.ts` to ensure it's found by the build system.
+
+import {getRequestConfig} from 'next-intl/server';
+ 
+export default getRequestConfig(async ({locale}) => ({
+  messages: (await import(`./messages/${locale}.json`)).default
+}));
