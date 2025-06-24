@@ -1,2 +1,4 @@
 
-// This file's content has been moved to src/messages/en.json to align with Next.js conventions for projects with a src folder.
+{
+    "comment": "This file's content has been moved to src/messages/en.json to resolve a build configuration issue."
+}
