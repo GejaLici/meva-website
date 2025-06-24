@@ -20,7 +20,7 @@ const firebaseConfig: FirebaseOptions = {
   authDomain: "novasculpt-clinic.firebaseapp.com",
   projectId: "novasculpt-clinic",
   storageBucket: "novasculpt-clinic.appspot.com",
-  messagingSenderId: "REPLACE_WITH_1080954631981YOUR_MESSAGING_SENDER_ID",
+  messagingSenderId: "1080954631981",
   appId: "1:1080954631981:web:1deb8a110d6bb81e8f05a4",
   // measurementId: "REPLACE_WITH_YOUR_MEASUREMENT_ID" // Optional: if you use Google Analytics
 };
