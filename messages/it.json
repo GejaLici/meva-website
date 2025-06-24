@@ -1,1 +1,89 @@
-// This file is intentionally left blank after reverting internationalization changes.
+
+{
+  "SITE_NAME": "Clinica Meva",
+  "Header": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "dental_services": "Servizi Dentali",
+    "gallery": "Galleria",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contatti",
+    "language": "Lingua",
+    "english": "Inglese",
+    "italian": "Italiano"
+  },
+  "Footer": {
+    "quick_links": "Link Rapidi",
+    "connect_with_us": "Rimani Connesso",
+    "stay_updated": "Rimani aggiornato con le nostre ultime novità e offerte.",
+    "copyright": "© {currentYear} {siteName}. Tutti i diritti riservati.",
+    "privacy_policy": "Informativa sulla Privacy",
+    "terms_of_service": "Termini di Servizio",
+    "designed_by": "Sito web progettato da un'esperta IA designer."
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Rivela il Tuo Splendore. Ridefinisci la Tua Bellezza.",
+      "description": "Vivi la scienza e l'arte della trasformazione estetica presso {siteName}. I nostri medici professionisti altamente qualificati combinano tecnologia all'avanguardia con cure personalizzate per aiutarti a raggiungere i tuoi massimi obiettivi estetici e di benessere.",
+      "cta": "Esplora i Nostri Trattamenti Esperti"
+    },
+    "services": {
+      "title": "I Nostri Servizi Estetici e Dentali d'Eccellenza",
+      "description": "Presso {siteName}, offriamo una gamma completa di procedure estetiche e dentali avanzate, meticolosamente personalizzate dai nostri specialisti per esaltare la tua bellezza naturale ed elevare la tua fiducia.",
+      "learn_more": "Scopri di più"
+    },
+    "testimonials": {
+      "title": "Cosa Dicono i Nostri Pazienti",
+      "description": "Ascolta le testimonianze di coloro che hanno vissuto l'esperienza {siteName} e ci hanno affidato la loro cura."
+    },
+    "gallery": {
+      "title": "Trasformazioni di Cui Siamo Orgogliosi",
+      "description": "Ammira la meticolosa abilità e l'arte dei nostri specialisti attraverso questi risultati reali su pazienti. Dai un'occhiata ai risultati straordinari che i nostri pazienti hanno ottenuto presso {siteName}.",
+      "cta": "Guarda la Galleria Completa dei Risultati",
+      "before": "PRIMA",
+      "after": "DOPO"
+    },
+    "insights": {
+      "title": "Approfondimenti e Supporto Esperto",
+      "description": "Esplora informazioni approfondite sui nostri trattamenti specializzati, rimani informato sugli ultimi progressi nella cura estetica e trova risposte complete alle tue domande dal nostro team di esperti presso {siteName}.",
+      "gallery_card_title": "Guarda le Nostre Trasformazioni",
+      "gallery_card_desc": "Ammira le straordinarie trasformazioni e i risultati reali ottenuti dal nostro team medico esperto.",
+      "gallery_card_cta": "Visita la Galleria Pazienti",
+      "blog_card_title": "Esplora i Nostri Approfondimenti",
+      "blog_card_desc": "Immergiti nel nostro blog per le ultime tendenze, approfondimenti procedurali e consigli di esperti in estetica avanzata e cure dentali.",
+      "blog_card_cta": "Leggi il Nostro Blog Esperto",
+      "faq_card_title": "Domande Frequenti",
+      "faq_card_desc": "Trova risposte complete alle domande comuni sulle nostre procedure, protocolli di recupero e cosa aspettarti durante il tuo percorso con noi.",
+      "faq_card_cta": "Visita le Nostre FAQ Complete"
+    },
+    "contact": {
+      "title": "Pronto per la Tua Trasformazione?",
+      "description": "Inizia il tuo viaggio verso i risultati estetici desiderati. Contatta oggi {siteName} per una consulenza riservata. Compila il modulo sottostante e il nostro team dedicato di esperti medici ti contatterà prontamente per discutere le tue aspirazioni e guidarti attraverso i nostri percorsi di trattamento personalizzati."
+    }
+  },
+  "ContactForm": {
+    "name_label": "Nome Completo",
+    "name_placeholder": "Inserisci il tuo nome completo",
+    "email_label": "Indirizzo Email",
+    "email_placeholder": "Inserisci il tuo indirizzo email",
+    "subject_label": "Oggetto",
+    "subject_placeholder": "Qual è l'oggetto del tuo messaggio?",
+    "message_label": "Messaggio",
+    "message_placeholder": "Descrivi la tua richiesta in dettaglio.",
+    "submit_button": "Invia Messaggio",
+    "submitting_button": "Invio in corso...",
+    "success_title": "Messaggio Inviato",
+    "success_description": "Grazie per averci contattato. Ti risponderemo al più presto.",
+    "error_title": "Errore nell'Invio del Messaggio",
+    "error_description": "Si è verificato un errore imprevisto. Riprova.",
+    "server_error_description": "Si è verificato un errore imprevisto del server. Controlla i log del server per maggiori dettagli."
+  },
+  "ValidationErrors": {
+    "name_min": "Il nome deve contenere almeno 2 caratteri.",
+    "email_invalid": "Inserisci un indirizzo email valido.",
+    "subject_min": "L'oggetto deve contenere almeno 5 caratteri.",
+    "message_min": "Il messaggio deve contenere almeno 10 caratteri."
+  }
+}

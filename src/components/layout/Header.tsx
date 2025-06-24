@@ -1,7 +1,7 @@
 
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/navigation';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -15,15 +15,16 @@ import { cn } from '@/lib/utils';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
 import { MobileNav } from './MobileNav';
-import { SITE_NAME } from '@/lib/constants';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const pathname = usePathname();
   const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
   return (
     <Link
-      href={href}
+      href={href as any}
       className={cn(
         "text-sm font-medium relative transition-colors hover:text-primary py-2",
         "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full",
@@ -36,6 +37,9 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 };
 
 export function Header() {
+  const t = useTranslations('Header');
+  const s = useTranslations('SITE_NAME');
+  const siteName = s('self');
   const pathname = usePathname();
   const isServicesActive = pathname.includes('/services');
 
@@ -44,10 +48,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo siteName={SITE_NAME} />
+        <Logo siteName={siteName} />
         <nav className="hidden md:flex items-center space-x-6">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About Us</NavLink>
+          <NavLink href="/">{t('home')}</NavLink>
+          <NavLink href="/about">{t('about')}</NavLink>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -58,7 +62,7 @@ export function Header() {
                   isServicesActive ? "text-primary after:w-full" : "text-foreground/80"
                 )}
               >
-                Services
+                {t('services')}
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -70,16 +74,17 @@ export function Header() {
               ))}
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
-                <Link href="/services/dental">Dental Services</Link>
+                <Link href="/services/dental">{t('dental_services')}</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <NavLink href="/gallery">Gallery</NavLink>
-          <NavLink href="/blog">Blog</NavLink>
-          <NavLink href="/faq">FAQ</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/gallery">{t('gallery')}</NavLink>
+          <NavLink href="/blog">{t('blog')}</NavLink>
+          <NavLink href="/faq">{t('faq')}</NavLink>
+          <NavLink href="/contact">{t('contact')}</NavLink>
         </nav>
         <div className="flex items-center gap-2">
+          <LanguageSwitcher />
           <div className="md:hidden">
             <MobileNav />
           </div>

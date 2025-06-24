@@ -1,1 +1,2 @@
-// This file is intentionally left blank after reverting internationalization changes.
+// This file is intentionally left blank.
+// The active configuration has been moved to /src/i18n.ts.

@@ -9,10 +9,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Separator } from '@/components/ui/separator';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
-import { SITE_NAME } from '@/lib/constants';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export function MobileNav() {
+  const t = useTranslations('Header');
+  const s = useTranslations('SITE_NAME');
+  const siteName = s('self');
   const [isOpen, setIsOpen] = useState(false);
   const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 
@@ -27,7 +30,7 @@ export function MobileNav() {
       <SheetContent side="left" className="w-full max-w-xs p-0 bg-background">
         <SheetHeader className="border-b p-4">
           <SheetTitle>
-            <Logo siteName={SITE_NAME} />
+            <Logo siteName={siteName} />
           </SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col space-y-2 p-4 overflow-y-auto max-h-[calc(100vh-4rem)]">
@@ -36,20 +39,20 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            Home
+            {t('home')}
           </Link>
           <Link
             href="/about"
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            About Us
+            {t('about')}
           </Link>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="services" className="border-b-0">
               <AccordionTrigger className="px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground hover:no-underline [&[data-state=open]>svg]:text-primary">
-                Services
+                {t('services')}
               </AccordionTrigger>
               <AccordionContent className="pl-4">
                 {aestheticCategories.map((category) => (
@@ -68,7 +71,7 @@ export function MobileNav() {
                   className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                   onClick={() => setIsOpen(false)}
                 >
-                  Dental Services
+                  {t('dental_services')}
                 </Link>
               </AccordionContent>
             </AccordionItem>
@@ -79,7 +82,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            Gallery
+            {t('gallery')}
           </Link>
 
           <Link
@@ -87,7 +90,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            Blog
+            {t('blog')}
           </Link>
 
           <Link
@@ -95,7 +98,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            FAQ
+            {t('faq')}
           </Link>
 
           <Link
@@ -103,7 +106,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            Contact
+            {t('contact')}
           </Link>
         </nav>
       </SheetContent>
