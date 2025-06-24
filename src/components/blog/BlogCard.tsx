@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import { Link } from 'next-intl/navigation';
 import Image from 'next/image';
 import type { BlogPost } from '@/types/blog';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';

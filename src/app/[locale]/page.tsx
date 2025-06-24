@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 import { getAllGalleryItems } from '@/lib/gallery';
 import type { GalleryItem as GalleryItemType } from '@/types/gallery';
 import { Skeleton } from '@/components/ui/skeleton';
-import Link from 'next/link';
+import { Link } from 'next-intl/navigation';
 import { SITE_NAME } from '@/lib/constants';
 import { useTranslations } from 'next-intl';
 

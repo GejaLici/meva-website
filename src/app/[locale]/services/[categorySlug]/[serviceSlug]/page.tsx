@@ -5,7 +5,7 @@ import { serviceCategories, getServiceBySlugs } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
+import { Link } from 'next-intl/navigation';
 import type { Metadata } from 'next';
 import { SITE_NAME } from '@/lib/constants';
 

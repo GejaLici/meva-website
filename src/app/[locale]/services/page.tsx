@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import { Link } from 'next-intl/navigation';
 import Image from 'next/image';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { serviceCategories } from '@/lib/services';
