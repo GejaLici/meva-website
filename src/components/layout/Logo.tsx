@@ -1,7 +1,7 @@
 
 'use client';
 
-import { Link } from '@/navigation';
+import Link from 'next/link';
 
 const LogoSvg = () => (
   <svg 
