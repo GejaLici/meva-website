@@ -1,0 +1,32 @@
+
+{
+  "Site": {
+    "title": "Clinica Meva"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "gallery": "Galleria",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contatti"
+  },
+  "Footer": {
+    "quickLinks": "Link Rapidi",
+    "connectWithUs": "Connettiti Con Noi",
+    "stayUpdated": "Rimani aggiornato con le nostre ultime notizie e offerte.",
+    "allRightsReserved": "Tutti i diritti riservati.",
+    "designedBy": "Sito web progettato da un esperto designer AI."
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Cambia lingua",
+    "en": "Inglese",
+    "it": "Italiano"
+  },
+  "HomePage": {
+    "heroTitle": "Rivela il Tuo Splendore. Ridefinisci la Tua Bellezza.",
+    "heroSubtitle": "Sperimenta la scienza e l'arte della trasformazione estetica presso {siteName}. I nostri professionisti medici altamente qualificati combinano tecnologia all'avanguardia con cure personalizzate per aiutarti a raggiungere i tuoi massimi obiettivi estetici e di benessere.",
+    "heroButton": "Scopri i Nostri Trattamenti Esperti"
+  }
+}
