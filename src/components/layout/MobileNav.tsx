@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Separator } from '@/components/ui/separator';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
-import { Link } from 'next-intl/client';
+import { Link } from 'next-intl/navigation';
 import { SITE_NAME } from '@/lib/constants';
 import { useTranslations } from 'next-intl';
 

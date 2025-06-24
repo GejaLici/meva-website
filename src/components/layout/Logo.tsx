@@ -1,7 +1,7 @@
 
 'use client';
 
-import { Link } from 'next-intl/client';
+import { Link } from 'next-intl/navigation';
 
 const LogoSvg = () => (
   <svg 

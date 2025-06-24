@@ -1,7 +1,7 @@
 
 'use client';
 
-import { usePathname } from 'next-intl/client';
+import { usePathname, Link } from 'next-intl/navigation';
 import { useTranslations } from 'next-intl';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -16,7 +16,6 @@ import { cn } from '@/lib/utils';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
 import { MobileNav } from './MobileNav';
-import { Link } from 'next-intl/client';
 import { SITE_NAME } from '@/lib/constants';
 import { LanguageSwitcher } from './LanguageSwitcher';
 

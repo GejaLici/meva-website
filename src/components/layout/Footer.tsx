@@ -3,7 +3,7 @@
 
 import { SITE_NAME, SITE_DOMAIN } from '@/lib/constants';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
-import { Link } from 'next-intl/client';
+import { Link } from 'next-intl/navigation';
 import { useTranslations } from 'next-intl';
 
 export function Footer() {
