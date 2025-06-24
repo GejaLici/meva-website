@@ -1,11 +1,12 @@
+'use client';
 
 import { Link } from 'next-intl/navigation';
 import { Button } from '@/components/ui/button';
 import { PageHeader } from '@/components/shared/PageHeader';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 
-export default async function NotFound() {
-  const t = await getTranslations('NotFound');
+export default function NotFound() {
+  const t = useTranslations('NotFound');
 
   return (
     <>
