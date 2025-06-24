@@ -1,8 +1,7 @@
-
 'use client';
 
 import { usePathname, Link } from 'next-intl/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -22,6 +21,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const pathname = usePathname();
   const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
+
   return (
     <Link
       href={href}
@@ -39,7 +39,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 export function Header() {
   const pathname = usePathname();
   const t = useTranslations('Navigation');
-  const isServicesActive = pathname.includes('/services');
+  const isServicesActive = pathname.startsWith('/services');
 
   const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 

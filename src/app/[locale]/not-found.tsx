@@ -1,9 +1,9 @@
 'use client';
 
 import { Link } from 'next-intl/navigation';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { PageHeader } from '@/components/shared/PageHeader';
-import { useTranslations } from 'next-intl';
 
 export default function NotFound() {
   const t = useTranslations('NotFound');
