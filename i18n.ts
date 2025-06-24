@@ -1,2 +1,5 @@
-// This file is intentionally left blank.
-// The `next-intl` configuration is in `src/i18n.ts` to support projects with a `src` directory.
+import {getRequestConfig} from 'next-intl/server';
+ 
+export default getRequestConfig(async ({locale}) => ({
+  messages: (await import(`./messages/${locale}.json`)).default
+}));
