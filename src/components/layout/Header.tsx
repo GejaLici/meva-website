@@ -16,10 +16,7 @@ import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
 import { MobileNav } from './MobileNav';
 import { SITE_NAME } from '@/lib/constants';
-import { Link } from '@/navigation';
-import { useTranslations } from 'next-intl';
-import { LanguageSwitcher } from './LanguageSwitcher';
-
+import Link from 'next/link';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const pathname = usePathname();
@@ -39,7 +36,6 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 };
 
 export function Header() {
-  const t = useTranslations('Navigation');
   const pathname = usePathname();
   const isServicesActive = pathname.includes('/services');
 
@@ -50,8 +46,8 @@ export function Header() {
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo siteName={SITE_NAME} />
         <nav className="hidden md:flex items-center space-x-6">
-          <NavLink href="/">{t('home')}</NavLink>
-          <NavLink href="/about">{t('about')}</NavLink>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/about">About Us</NavLink>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -62,7 +58,7 @@ export function Header() {
                   isServicesActive ? "text-primary after:w-full" : "text-foreground/80"
                 )}
               >
-                {t('services')}
+                Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -78,13 +74,12 @@ export function Header() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <NavLink href="/gallery">{t('gallery')}</NavLink>
-          <NavLink href="/blog">{t('blog')}</NavLink>
-          <NavLink href="/faq">{t('faq')}</NavLink>
-          <NavLink href="/contact">{t('contact')}</NavLink>
+          <NavLink href="/gallery">Gallery</NavLink>
+          <NavLink href="/blog">Blog</NavLink>
+          <NavLink href="/faq">FAQ</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
         </nav>
         <div className="flex items-center gap-2">
-          <LanguageSwitcher />
           <div className="md:hidden">
             <MobileNav />
           </div>
