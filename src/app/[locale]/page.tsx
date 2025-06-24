@@ -55,7 +55,6 @@ const DENTAL_CATEGORY_IDS = [
 
 export default function HomePage() {
   const t = useTranslations('HomePage');
-  const tNav = useTranslations('Navigation');
   const aestheticServiceCategories = serviceCategories.filter(
     (category) => !DENTAL_CATEGORY_IDS.includes(category.id)
   );
