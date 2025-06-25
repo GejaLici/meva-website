@@ -1,2 +1,4 @@
-// This file is intentionally left blank.
-// The configuration has been moved to next.config.js to support the build environment.
+// This file re-exports the configuration from next.config.js
+// to resolve a build conflict where this empty file was being prioritized.
+import nextConfig from './next.config.js';
+export default nextConfig;

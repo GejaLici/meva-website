@@ -28,5 +28,11 @@
     "heroTitle": "Reveal Your Radiance. Redefine Your Beauty.",
     "heroSubtitle": "Experience the science and art of aesthetic transformation at {siteName}. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.",
     "heroButton": "Explore Our Expert Treatments"
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist or has been moved.",
+    "suggestion": "You can return to the homepage or check the URL for errors.",
+    "homeButton": "Return to Homepage"
   }
 }

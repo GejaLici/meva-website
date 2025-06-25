@@ -1,4 +1,3 @@
-
 'use client';
 
 import { SITE_NAME, SITE_DOMAIN } from '@/lib/constants';
