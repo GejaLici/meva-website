@@ -1,4 +1,2 @@
-// This file re-exports the configuration from next.config.js
-// to resolve a build conflict where this empty file was being prioritized.
-import nextConfig from './next.config.js';
-export default nextConfig;
+// This file is intentionally left blank.
+// The Next.js configuration is now located in next.config.js to ensure compatibility.
