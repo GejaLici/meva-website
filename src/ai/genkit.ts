@@ -1,8 +1,2 @@
-import {genkit} from 'genkit';
-import {googleAI} from '@genkit-ai/googleai';
-
-export const ai = genkit({
-  plugins: [
-    googleAI(),
-  ],
-});
+// This file is no longer used and has been left blank.
+// The AI (Genkit) feature has been removed for simplification.

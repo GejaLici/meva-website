@@ -8,13 +8,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Separator } from '@/components/ui/separator';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
-import { Link } from 'next-intl/navigation';
+import Link from 'next/link';
 import { SITE_NAME } from '@/lib/constants';
-import { useTranslations } from 'next-intl';
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const t = useTranslations('Navigation');
   const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 
   return (
@@ -37,20 +35,20 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            {t('home')}
+            Home
           </Link>
           <Link
             href="/about"
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            {t('about')}
+            About Us
           </Link>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="services" className="border-b-0">
               <AccordionTrigger className="px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground hover:no-underline [&[data-state=open]>svg]:text-primary">
-                {t('services')}
+                Services
               </AccordionTrigger>
               <AccordionContent className="pl-4">
                 {aestheticCategories.map((category) => (
@@ -80,7 +78,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            {t('gallery')}
+            Gallery
           </Link>
 
           <Link
@@ -88,7 +86,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            {t('blog')}
+            Blog
           </Link>
 
           <Link
@@ -96,7 +94,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            {t('faq')}
+            FAQ
           </Link>
 
           <Link
@@ -104,7 +102,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            {t('contact')}
+            Contact
           </Link>
         </nav>
       </SheetContent>

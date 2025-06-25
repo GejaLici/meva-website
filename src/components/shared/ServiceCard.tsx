@@ -1,5 +1,4 @@
-
-import { Link } from 'next-intl/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 import type { Service } from '@/types/services';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';

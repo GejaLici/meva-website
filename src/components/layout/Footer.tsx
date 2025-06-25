@@ -2,13 +2,10 @@
 
 import { SITE_NAME, SITE_DOMAIN } from '@/lib/constants';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
-import { Link } from 'next-intl/navigation';
-import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const t = useTranslations('Footer');
-  const tNav = useTranslations('Navigation');
 
   return (
     <footer className="border-t bg-card text-card-foreground">
@@ -24,17 +21,17 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="font-headline text-lg font-semibold text-primary mb-3">{t('quickLinks')}</h3>
+            <h3 className="font-headline text-lg font-semibold text-primary mb-3">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="text-muted-foreground hover:text-primary transition-colors">{tNav('home')}</Link></li>
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">{tNav('about')}</Link></li>
-              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">{tNav('services')}</Link></li>
-              <li><Link href="/faq" className="text-muted-foreground hover:text-primary transition-colors">{tNav('faq')}</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">{tNav('contact')}</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/faq" className="text-muted-foreground hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-headline text-lg font-semibold text-primary mb-3">{t('connectWithUs')}</h3>
+            <h3 className="font-headline text-lg font-semibold text-primary mb-3">Connect With Us</h3>
             <div className="flex space-x-4">
               <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-6 w-6" />
@@ -50,18 +47,18 @@ export function Footer() {
               </a>
             </div>
              <p className="text-sm text-muted-foreground mt-4">
-              {t('stayUpdated')}
+              Stay updated with our latest news and offers.
             </p>
           </div>
         </div>
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>© {currentYear} {SITE_NAME}. {t('allRightsReserved')}</p>
+          <p>© {currentYear} {SITE_NAME}. All rights reserved.</p>
           <p className="mt-1">
             <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link> | 
             <Link href="/terms-of-service" className="hover:text-primary transition-colors ml-1">Terms of Service</Link>
           </p>
           <p className="mt-2">
-            {t('designedBy')}
+            Website designed by an expert AI designer.
           </p>
         </div>
       </div>

@@ -1,1 +1,2 @@
-// This file is intentionally left blank. The i18n configuration is now located at /src/i18n.ts
+// This file is no longer used and has been left blank.
+// The internationalization (i18n) feature has been removed for simplification.
