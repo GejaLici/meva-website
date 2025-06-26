@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import { serviceCategories } from '@/lib/services';
@@ -119,5 +121,3 @@ export function ServiceCategoryGrid() {
     </>
   );
 }
-
-    

@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import type { Service } from '@/types/services';
@@ -15,10 +17,13 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   const t = useTranslations('Services.items');
   const serviceName = t(`${service.id}.name`);
   // Get the raw string, which includes HTML tags
-  const serviceDescription = t(`${service.id}.description`);
+  const serviceDescription = t.rich(`${service.id}.description`, {
+    p: (chunks) => chunks,
+    b: (chunks) => chunks,
+  });
 
   // Strip the HTML tags to get plain text
-  const plainDescription = serviceDescription.replace(/<[^>]*>?/gm, '');
+  const plainDescription = serviceDescription.toString().replace(/<[^>]*>?/gm, '');
 
   const truncatedDescription = plainDescription.length > 120 
     ? plainDescription.substring(0, 120) + '...' 
