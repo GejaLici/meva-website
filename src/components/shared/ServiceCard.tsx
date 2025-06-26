@@ -14,7 +14,15 @@ interface ServiceCardProps {
 export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   const t = useTranslations('Services.items');
   const serviceName = t(`${service.id}.name`);
+  // Get the raw string, which includes HTML tags
   const serviceDescription = t(`${service.id}.description`);
+
+  // Strip the HTML tags to get plain text
+  const plainDescription = serviceDescription.replace(/<[^>]*>?/gm, '');
+
+  const truncatedDescription = plainDescription.length > 120 
+    ? plainDescription.substring(0, 120) + '...' 
+    : plainDescription;
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -34,7 +42,7 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
       </CardHeader>
       <CardContent className="flex-grow flex flex-col">
         <CardDescription className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow">
-          {serviceDescription.substring(0, 100) + (serviceDescription.length > 100 ? '...' : '')}
+          {truncatedDescription}
         </CardDescription>
         <Button asChild variant="link" className="mt-auto p-0 self-start text-accent hover:text-accent/90">
           <Link href={`/services/${categorySlug}/${service.slug}`}>
@@ -45,5 +53,3 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
     </Card>
   );
 }
-
-    
