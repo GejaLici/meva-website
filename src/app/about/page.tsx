@@ -11,30 +11,6 @@ export const metadata: Metadata = {
   description: `Discover the mission, values, and distinguished team of board-certified medical professionals at Meva Clinic. Learn about our commitment to excellence in aesthetic and dental care.`,
 };
 
-const teamMembers = [
-  {
-    name: 'Dr. Evelyn Reed',
-    role: 'Lead Plastic Surgeon',
-    imageUrl: 'https://placehold.co/300x300.png',
-    imageHint: 'female doctor professional',
-    bio: 'Dr. Reed is a board-certified plastic surgeon with over 15 years of experience in complex aesthetic and reconstructive procedures. She is renowned for her meticulous attention to detail, artistic vision, and patient-centered approach to achieving natural, harmonious results.',
-  },
-  {
-    name: 'Dr. Marcus Chen',
-    role: 'Dermatology & Aesthetics Specialist',
-    imageUrl: 'https://placehold.co/300x300.png',
-    imageHint: 'male doctor friendly',
-    bio: 'Dr. Chen specializes in advanced non-invasive treatments, cosmetic dermatology, and evidence-based skincare. He is passionate about leveraging the latest technologies to help patients achieve radiant skin and natural-looking enhancements, prioritizing safety and efficacy.',
-  },
-  {
-    name: 'Sofia Petrova',
-    role: 'Lead Aesthetician & Patient Coordinator',
-    imageUrl: 'https://placehold.co/300x300.png',
-    imageHint: 'female aesthetician clinic',
-    bio: 'Sofia brings a wealth of knowledge in advanced skincare treatments and ensures every patient feels welcomed, informed, and supported. She expertly guides patients through their aesthetic journey with warmth, professionalism, and in-depth understanding of our procedures.',
-  },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -118,41 +94,6 @@ export default function AboutPage() {
                 <p className="text-sm md:text-base text-muted-foreground">We are committed to integrating the latest, clinically-proven, and safest medical technologies and advanced procedural techniques. This investment ensures our patients benefit from cutting-edge treatments that deliver superior, predictable outcomes and enhanced safety.</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-      
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 md:mb-12">
-            <h2 className="font-headline text-2xl md:text-3xl font-bold text-foreground sm:text-4xl">
-              Meet Our Medical Experts
-            </h2>
-            <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our team of dedicated, highly qualified medical professionals is committed to guiding you with expertise and compassion throughout your aesthetic journey at Meva Clinic.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {teamMembers.map((member) => (
-              <Card key={member.name} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="relative w-full h-60 md:h-72">
-                  <Image
-                    src={member.imageUrl}
-                    alt={member.name}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    data-ai-hint={member.imageHint}
-                  />
-                </div>
-                <CardHeader className="p-4 md:p-6">
-                  <CardTitle className="font-headline text-lg md:text-xl text-primary">{member.name}</CardTitle>
-                  <p className="text-xs md:text-sm text-accent font-medium">{member.role}</p>
-                </CardHeader>
-                <CardContent className="p-4 md:p-6 pt-0">
-                  <p className="text-muted-foreground text-xs md:text-sm line-clamp-4 md:line-clamp-none">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
