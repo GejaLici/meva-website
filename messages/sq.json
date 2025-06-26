@@ -130,10 +130,10 @@
       "prp-face": { "name": "Rinovimi i Fytyrës me PRP", "description": "<p>Një procedurë që përdor plazmën e pasur me trombocite (PRP) nga gjaku juaj, e cila injektohet në lëkurë për të stimuluar prodhimin e kolagjenit dhe për të përmirësuar teksturën dhe elasticitetin e lëkurës.</p>" },
       "dark-circles-treatment": { "name": "Trajtimi i Rrathëve të Zinj Poshtë Syve", "description": "<p>Një sërë trajtimesh që synojnë të zvogëlojnë pamjen e rrathëve të zinj poshtë syve, duke përfshirë mbushësit, terapinë me lazer ose trajtimet topike, në varësi të shkakut themelor.</p>" },
       "prp-hair": { "name": "Restaurimi i Flokëve me PRP", "description": "<p>Një trajtim jo-kirurgjikal për rënien e flokëve ku plazma e pasur me trombocite nga gjaku i pacientit injektohet në lëkurën e kokës për të stimuluar rritjen e flokëve.</p>" },
-      "white-peeling": { "name": "Peeling Kimik (Peeling i Bardhë)", "description": "<p>Një trajtim për rinovimin e lëkurës që aplikon një solucion kimik në lëkurë për ta eksfoliuar dhe përfundimisht për ta hequr atë, duke zbuluar lëkurë më të lëmuar dhe më pak të rrudhur.</p>" },
+      "white-peeling": { "name": "Peeling Kimik", "description": "<p>Një trajtim për rinovimin e lëkurës që aplikon një solucion kimik në lëkurë për ta eksfoliuar dhe përfundimisht për ta hequr atë, duke zbuluar lëkurë më të lëmuar dhe më pak të rrudhur.</p>" },
       "microneedling": { "name": "Microneedling (Terapia e Induksionit të Kolagjenit)", "description": "<p>Një procedurë që përdor gjilpëra të holla për të krijuar shpime të vogla në lëkurë, duke stimuluar prodhimin e kolagjenit dhe elastinës për të përmirësuar teksturën e lëkurës dhe për të zvogëluar pamjen e shenjave dhe rrudhave.</p>" },
       "radiofrequency-face": { "name": "Shtrëngimi i Lëkurës me Radiofrekuencë (Fytyrë)", "description": "<p>Një metodë jo-kirurgjikale e shtrëngimit të lëkurës që përdor energji për të ngrohur shtresat më të thella të lëkurës, duke stimuluar prodhimin e kolagjenit dhe duke përmirësuar qëndrueshmërinë dhe teksturën e lëkurës.</p>" },
-      "sulcus-filling": { "name": "Mbushës për Rrudhat Nazolabiale (Mbushja e Sulkuseve)", "description": "<p>Një procedurë jo-kirurgjikale ku mbushësit dermalë injektohen në rrudhat që shkojnë nga anët e hundës në cepat e gojës, duke zbutur pamjen e tyre.</p>" },
+      "sulcus-filling": { "name": "Mbushës për Rrudhat Nazolabiale", "description": "<p>Një procedurë jo-kirurgjikale ku mbushësit dermalë injektohen në rrudhat që shkojnë nga anët e hundës në cepat e gojës, duke zbutur pamjen e tyre.</p>" },
       "chin-reshaping": { "name": "Rimodelimi jo-kirurgjikal i Mjekrës (Mbushës)", "description": "<p>Një procedurë që përdor mbushës të injektueshëm për të rimodeluar dhe zmadhuar mjekrën, duke përmirësuar ekuilibrin e fytyrës dhe duke krijuar një profil më të fortë të mjekrës pa kirurgji.</p>" },
       "zmadh-gjoksit": { "name": "Zmadhimi i Gjoksit", "description": "<p>Një procedurë kirurgjikale për të rritur madhësinë e gjirit përmes vendosjes së implanteve të gjirit nën indin e gjirit ose muskujt.</p>" },
       "lift-gjoksit": { "name": "Ngritja e Gjoksit", "description": "<p>Një procedurë kirurgjikale për të ngritur dhe rimodeluar gjinjtë duke hequr lëkurën e tepërt dhe duke shtrënguar indin përreth për të rivendosur një profil më rinor të gjirit.</p>" },
@@ -161,12 +161,12 @@
       "invisalign": { "name": "Invisalign", "description": "<p>Një seri alignerësh transparentë dhe të personalizuar që drejtojnë gradualisht dhëmbët me kalimin e kohës, duke shërbyer si një alternativë ndaj telave tradicionale.</p>" },
       "fixed-braces": { "name": "Telat Fikse", "description": "<p>Pajisje ortodontike tradicionale të përdorura për të korrigjuar dhëmbët dhe nofullat e shtrembëruara.</p>" },
       "removable-appliances": { "name": "Aparatet e Lëvizshme", "description": "<p>Pajisje ortodontike që mund të vendosen dhe hiqen nga pacienti për të korrigjuar problemet dentare.</p>" },
-      "teeth-cleaning": { "name": "Pastrimi i Dhëmbëve (Heqja e Gurëzave)", "description": "<p>Pastrim profesional për të hequr pllakën dhe gurëzat nga dhëmbët për të parandaluar kariesin dhe sëmundjet e mishrave të dhëmbëve.</p>" },
+      "teeth-cleaning": { "name": "Pastrimi i Dhëmbëve (Pastrimi i Gurëzave)", "description": "<p>Pastrim profesional për të hequr pllakën dhe gurëzat nga dhëmbët për të parandaluar kariesin dhe sëmundjet e mishrave të dhëmbëve.</p>" },
       "dental-fillings": { "name": "Mbushjet Dentare", "description": "<p>Materiale të përdorura për të mbushur dhe restauruar dhëmbët e dëmtuar nga kariesi, duke parandaluar dëmtimin e mëtejshëm.</p>" },
       "root-canal-treatment": { "name": "Trajtimi i Kanalit të Rrënjës", "description": "<p>Një procedurë dentare për të hequr pulpën e infektuar nga brenda një dhëmbi për ta shpëtuar atë dhe për të lehtësuar dhimbjen.</p>" },
       "tooth-extraction": { "name": "Heqja e Dhëmbit", "description": "<p>Heqja e një dhëmbi nga foleja e tij alveolare në kockën e nofullës.</p>" },
       "dental-implants": { "name": "Implantet Dentare", "description": "<p>Pajisje kirurgjikale të vendosura në kockën e nofullës për të zëvendësuar dhëmbët që mungojnë dhe për të siguruar një bazë për zëvendësime fikse ose të lëvizshme.</p>" },
-      "apical-resection": { "name": "Rezeksioni Apikal (Apikotomia)", "description": "<p>Një procedurë kirurgjikale për të hequr majën e rrënjës së një dhëmbi dhe indin e infektuar përreth.</p>" },
+      "apical-resection": { "name": "Kirurgji Endodontike (Apikotomi)", "description": "<p>Një procedurë kirurgjikale për të hequr majën e rrënjës së një dhëmbi dhe indin e infektuar përreth.</p>" },
       "primary-teeth-care": { "name": "Kujdesi për Dhëmbët e Qumështit", "description": "<p>Kujdes i specializuar dentar për fëmijët, i fokusuar në ruajtjen e shëndetit të dhëmbëve të qumështit për të siguruar zhvillimin e duhur të dhëmbëve të përhershëm.</p>" },
       "teeth-fluoridation": { "name": "Fluorizimi i Dhëmbëve", "description": "<p>Aplikimi i fluorit në dhëmbë për të forcuar smaltin dhe për të parandaluar prishjen e dhëmbëve.</p>" },
       "dental-sealants": { "name": "Sigilantët Dentarë", "description": "<p>Shtresa të holla mbrojtëse të aplikuara në sipërfaqet përtypëse të dhëmbëve të pasmë për të parandaluar kariesin.</p>" }
@@ -174,3 +174,4 @@
   }
 }
 
+    

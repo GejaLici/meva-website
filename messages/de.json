@@ -130,10 +130,10 @@
       "prp-face": { "name": "PRP-Gesichtsverjüngung", "description": "<p>Ein Verfahren, bei dem das plättchenreiche Plasma (PRP) aus Ihrem eigenen Blut verwendet und in die Haut injiziert wird, um die Kollagenproduktion anzuregen und die Hautstruktur und -elastizität zu verbessern.</p>" },
       "dark-circles-treatment": { "name": "Behandlung von Augenringen", "description": "<p>Eine Reihe von Behandlungen, die darauf abzielen, das Erscheinungsbild von Augenringen zu reduzieren, einschließlich Füllstoffen, Lasertherapie oder topischen Behandlungen, abhängig von der zugrunde liegenden Ursache.</p>" },
       "prp-hair": { "name": "PRP-Haarwiederherstellung", "description": "<p>Eine nicht-chirurgische Behandlung von Haarausfall, bei der plättchenreiches Plasma aus dem Blut des Patienten in die Kopfhaut injiziert wird, um das Haarwachstum anzuregen.</p>" },
-      "white-peeling": { "name": "Chemisches Peeling (Weißes Peeling)", "description": "<p>Eine Hauterneuerungsbehandlung, bei der eine chemische Lösung auf die Haut aufgetragen wird, um sie zu peelen und schließlich abzulösen, wodurch eine glattere, weniger faltige Haut zum Vorschein kommt.</p>" },
+      "white-peeling": { "name": "Chemisches Peeling", "description": "<p>Eine Hauterneuerungsbehandlung, bei der eine chemische Lösung auf die Haut aufgetragen wird, um sie zu peelen und schließlich abzulösen, wodurch eine glattere, weniger faltige Haut zum Vorschein kommt.</p>" },
       "microneedling": { "name": "Microneedling (Kollagen-Induktionstherapie)", "description": "<p>Ein Verfahren, bei dem feine Nadeln verwendet werden, um winzige Einstiche in der Haut zu erzeugen, die die Kollagen- und Elastinproduktion anregen, um die Hautstruktur zu verbessern und das Erscheinungsbild von Narben und Falten zu reduzieren.</p>" },
       "radiofrequency-face": { "name": "Radiofrequenz-Hautstraffung (Gesicht)", "description": "<p>Eine nicht-chirurgische Methode zur Hautstraffung, bei der Energie verwendet wird, um die tieferen Hautschichten zu erwärmen, die Kollagenproduktion anzuregen und die Hautstraffheit und -struktur zu verbessern.</p>" },
-      "sulcus-filling": { "name": "Nasolabialfalten-Füller (Sulcus-Füllung)", "description": "<p>Ein nicht-chirurgischer Eingriff, bei dem Hautfüller in die Falten injiziert werden, die von den Seiten der Nase zu den Mundwinkeln verlaufen, um deren Erscheinungsbild zu mildern.</p>" },
+      "sulcus-filling": { "name": "Nasolabialfalten-Füller", "description": "<p>Ein nicht-chirurgischer Eingriff, bei dem Hautfüller in die Falten injiziert werden, die von den Seiten der Nase zu den Mundwinkeln verlaufen, um deren Erscheinungsbild zu mildern.</p>" },
       "chin-reshaping": { "name": "Nicht-chirurgische Kinnkorrektur (Füllstoffe)", "description": "<p>Ein Verfahren, bei dem injizierbare Füllstoffe verwendet werden, um das Kinn neu zu formen und zu vergrößern, das Gleichgewicht im Gesicht zu verbessern und ein stärkeres Kinnprofil ohne Operation zu schaffen.</p>" },
       "zmadh-gjoksit": { "name": "Brustvergrößerung", "description": "<p>Ein chirurgischer Eingriff zur Vergrößerung der Brustgröße durch die Platzierung von Brustimplantaten unter dem Brustgewebe oder den Muskeln.</p>" },
       "lift-gjoksit": { "name": "Bruststraffung", "description": "<p>Ein chirurgischer Eingriff zur Anhebung und Umformung der Brüste durch Entfernung überschüssiger Haut und Straffung des umgebenden Gewebes, um ein jugendlicheres Brustprofil wiederherzustellen.</p>" },
@@ -166,7 +166,7 @@
       "root-canal-treatment": { "name": "Wurzelkanalbehandlung", "description": "<p>Ein zahnärztlicher Eingriff zur Entfernung der infizierten Pulpa aus dem Inneren eines Zahns, um ihn zu retten und Schmerzen zu lindern.</p>" },
       "tooth-extraction": { "name": "Zahnextraktion", "description": "<p>Die Entfernung eines Zahnes aus seinem Alveolarknochen im Kieferknochen.</p>" },
       "dental-implants": { "name": "Zahnimplantate", "description": "<p>Chirurgische Vorrichtungen, die in den Kieferknochen eingesetzt werden, um fehlende Zähne zu ersetzen und eine Basis für festsitzenden oder herausnehmbaren Zahnersatz zu bilden.</p>" },
-      "apical-resection": { "name": "Apikale Resektion (Apikoektomie)", "description": "<p>Ein chirurgischer Eingriff zur Entfernung der Spitze der Zahnwurzel und des umgebenden infizierten Gewebes.</p>" },
+      "apical-resection": { "name": "Wurzelspitzenresektion (Apikoektomie)", "description": "<p>Ein chirurgischer Eingriff zur Entfernung der Spitze der Zahnwurzel und des umgebenden infizierten Gewebes.</p>" },
       "primary-teeth-care": { "name": "Pflege der Milchzähne", "description": "<p>Spezialisierte zahnärztliche Versorgung für Kinder, die sich auf die Erhaltung der Gesundheit der Milchzähne konzentriert, um eine ordnungsgemäße Entwicklung der bleibenden Zähne zu gewährleisten.</p>" },
       "teeth-fluoridation": { "name": "Zahnfluoridierung", "description": "<p>Die Anwendung von Fluorid auf die Zähne, um den Zahnschmelz zu stärken und Karies vorzubeugen.</p>" },
       "dental-sealants": { "name": "Zahnversiegelungen", "description": "<p>Dünne Schutzschichten, die auf die Kauflächen der Backenzähne aufgetragen werden, um Karies zu verhindern.</p>" }
@@ -174,3 +174,4 @@
   }
 }
 
+    

@@ -130,10 +130,10 @@
       "prp-face": { "name": "PRP Facial Rejuvenation", "description": "<p>A procedure that uses your own blood's platelet-rich plasma (PRP), which is injected into the skin to stimulate collagen production and improve skin texture and elasticity.</p>" },
       "dark-circles-treatment": { "name": "Under-Eye Dark Circles Treatment", "description": "<p>A range of treatments aimed at reducing the appearance of dark circles under the eyes, including fillers, laser therapy, or topical treatments, depending on the underlying cause.</p>" },
       "prp-hair": { "name": "PRP Hair Restoration", "description": "<p>A non-surgical treatment for hair loss where platelet-rich plasma from the patient's blood is injected into the scalp to stimulate hair growth.</p>" },
-      "white-peeling": { "name": "Chemical Peels (White Peeling)", "description": "<p>A skin-resurfacing treatment that applies a chemical solution to the skin to exfoliate it and eventually peel it off, revealing smoother, less-wrinkled skin.</p>" },
+      "white-peeling": { "name": "Chemical Peel", "description": "<p>A skin-resurfacing treatment that applies a chemical solution to the skin to exfoliate it and eventually peel it off, revealing smoother, less-wrinkled skin.</p>" },
       "microneedling": { "name": "Microneedling (Collagen Induction Therapy)", "description": "<p>A procedure that uses fine needles to create tiny punctures in the skin, stimulating collagen and elastin production to improve skin texture and reduce the appearance of scars and wrinkles.</p>" },
       "radiofrequency-face": { "name": "Radiofrequency Skin Tightening (Face)", "description": "<p>A non-surgical method of skin tightening that uses energy to heat the deeper layers of skin, stimulating collagen production and improving skin firmness and texture.</p>" },
-      "sulcus-filling": { "name": "Nasolabial Fold Fillers (Sulcus Filling)", "description": "<p>A non-surgical procedure where dermal fillers are injected into the creases that run from the sides of the nose to the corners of the mouth, softening their appearance.</p>" },
+      "sulcus-filling": { "name": "Nasolabial Fold Fillers", "description": "<p>A non-surgical procedure where dermal fillers are injected into the creases that run from the sides of the nose to the corners of the mouth, softening their appearance.</p>" },
       "chin-reshaping": { "name": "Non-Surgical Chin Reshaping (Fillers)", "description": "<p>A procedure that uses injectable fillers to reshape and augment the chin, improving facial balance and creating a stronger chin profile without surgery.</p>" },
       "zmadh-gjoksit": { "name": "Breast Augmentation", "description": "<p>A surgical procedure to increase breast size through the placement of breast implants under the breast tissue or muscles.</p>" },
       "lift-gjoksit": { "name": "Breast Lift", "description": "<p>A surgical procedure to raise and reshape the breasts by removing excess skin and tightening the surrounding tissue to restore a more youthful breast profile.</p>" },
@@ -161,12 +161,12 @@
       "invisalign": { "name": "Invisalign", "description": "<p>A series of clear, custom-made aligners that gradually straighten teeth over time, serving as an alternative to traditional braces.</p>" },
       "fixed-braces": { "name": "Fixed Braces", "description": "<p>Traditional orthodontic devices used to correct misaligned teeth and jaws.</p>" },
       "removable-appliances": { "name": "Removable Appliances", "description": "<p>Orthodontic devices that can be put in and taken out by the patient to correct dental problems.</p>" },
-      "teeth-cleaning": { "name": "Teeth Cleaning (Calculus Removal)", "description": "<p>Professional cleaning to remove plaque and tartar from teeth to prevent cavities and gum disease.</p>" },
+      "teeth-cleaning": { "name": "Teeth Cleaning (Tartar Removal)", "description": "<p>Professional cleaning to remove plaque and tartar from teeth to prevent cavities and gum disease.</p>" },
       "dental-fillings": { "name": "Dental Fillings", "description": "<p>Materials used to fill and restore teeth damaged by decay, preventing further damage.</p>" },
       "root-canal-treatment": { "name": "Root Canal Treatment", "description": "<p>A dental procedure to remove the infected pulp from inside a tooth to save it and relieve pain.</p>" },
       "tooth-extraction": { "name": "Tooth Extraction", "description": "<p>The removal of a tooth from its alveolar socket in the jawbone.</p>" },
       "dental-implants": { "name": "Dental Implants", "description": "<p>Surgical fixtures placed into the jawbone to replace missing teeth and provide a base for fixed or removable replacements.</p>" },
-      "apical-resection": { "name": "Apical Resection (Apicoectomy)", "description": "<p>A surgical procedure to remove the tip of a tooth's root and the surrounding infected tissue.</p>" },
+      "apical-resection": { "name": "Root End Surgery (Apicoectomy)", "description": "<p>A surgical procedure to remove the tip of a tooth's root and the surrounding infected tissue.</p>" },
       "primary-teeth-care": { "name": "Primary Teeth Care (Milk Teeth)", "description": "<p>Specialized dental care for children, focusing on maintaining the health of primary teeth to ensure proper development of permanent teeth.</p>" },
       "teeth-fluoridation": { "name": "Teeth Fluoridation", "description": "<p>The application of fluoride to teeth to strengthen enamel and prevent tooth decay.</p>" },
       "dental-sealants": { "name": "Dental Sealants", "description": "<p>Thin protective coatings applied to the chewing surfaces of back teeth to prevent cavities.</p>" }
@@ -174,3 +174,4 @@
   }
 }
 
+    

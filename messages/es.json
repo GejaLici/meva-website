@@ -130,10 +130,10 @@
       "prp-face": { "name": "Rejuvenecimiento Facial con PRP", "description": "<p>Un procedimiento que utiliza el plasma rico en plaquetas (PRP) de su propia sangre, que se inyecta en la piel para estimular la producción de colágeno y mejorar la textura y elasticidad de la piel.</p>" },
       "dark-circles-treatment": { "name": "Tratamiento de Ojeras", "description": "<p>Una gama de tratamientos destinados a reducir la apariencia de las ojeras, incluyendo rellenos, terapia con láser o tratamientos tópicos, dependiendo de la causa subyacente.</p>" },
       "prp-hair": { "name": "Restauración Capilar con PRP", "description": "<p>Un tratamiento no quirúrgico para la caída del cabello en el que se inyecta plasma rico en plaquetas de la sangre del paciente en el cuero cabelludo para estimular el crecimiento del cabello.</p>" },
-      "white-peeling": { "name": "Peelings Químicos (Peeling Blanco)", "description": "<p>Un tratamiento de rejuvenecimiento de la piel que aplica una solución química a la piel para exfoliarla y eventualmente desprenderla, revelando una piel más suave y con menos arrugas.</p>" },
+      "white-peeling": { "name": "Peeling Químico", "description": "<p>Un tratamiento de rejuvenecimiento de la piel que aplica una solución química a la piel para exfoliarla y eventualmente desprenderla, revelando una piel más suave y con menos arrugas.</p>" },
       "microneedling": { "name": "Microneedling (Terapia de Inducción de Colágeno)", "description": "<p>Un procedimiento que utiliza agujas finas para crear pequeñas punciones en la piel, estimulando la producción de colágeno y elastina para mejorar la textura de la piel y reducir la apariencia de cicatrices y arrugas.</p>" },
       "radiofrequency-face": { "name": "Estiramiento de la Piel por Radiofrecuencia (Cara)", "description": "<p>Un método no quirúrgico de estiramiento de la piel que utiliza energía para calentar las capas más profundas de la piel, estimulando la producción de colágeno y mejorando la firmeza y textura de la piel.</p>" },
-      "sulcus-filling": { "name": "Rellenos de Pliegues Nasolabiales (Relleno de Surcos)", "description": "<p>Un procedimiento no quirúrgico en el que se inyectan rellenos dérmicos en los pliegues que van desde los lados de la nariz hasta las comisuras de la boca, suavizando su apariencia.</p>" },
+      "sulcus-filling": { "name": "Rellenos de Pliegues Nasolabiales", "description": "<p>Un procedimiento no quirúrgico en el que se inyectan rellenos dérmicos en los pliegues que van desde los lados de la nariz hasta las comisuras de la boca, suavizando su apariencia.</p>" },
       "chin-reshaping": { "name": "Remodelación de Mentón no Quirúrgica (Rellenos)", "description": "<p>Un procedimiento que utiliza rellenos inyectables para remodelar y aumentar el mentón, mejorando el equilibrio facial y creando un perfil de mentón más fuerte sin cirugía.</p>" },
       "zmadh-gjoksit": { "name": "Aumento de Senos", "description": "<p>Un procedimiento quirúrgico para aumentar el tamaño de los senos mediante la colocación de implantes mamarios debajo del tejido mamario o los músculos.</p>" },
       "lift-gjoksit": { "name": "Levantamiento de Senos", "description": "<p>Un procedimiento quirúrgico para levantar y remodelar los senos eliminando el exceso de piel y tensando el tejido circundante para restaurar un perfil mamario más juvenil.</p>" },
@@ -166,7 +166,7 @@
       "root-canal-treatment": { "name": "Tratamiento de Conducto Radicular", "description": "<p>Un procedimiento dental para eliminar la pulpa infectada del interior de un diente para salvarlo y aliviar el dolor.</p>" },
       "tooth-extraction": { "name": "Extracción Dental", "description": "<p>La extracción de un diente de su alvéolo en el hueso maxilar.</p>" },
       "dental-implants": { "name": "Implantes Dentales", "description": "<p>Dispositivos quirúrgicos que se colocan en el hueso maxilar para reemplazar los dientes faltantes y proporcionar una base para reemplazos fijos o removibles.</p>" },
-      "apical-resection": { "name": "Resección Apical (Apicectomía)", "description": "<p>Un procedimiento quirúrgico para eliminar la punta de la raíz de un diente y el tejido infectado circundante.</p>" },
+      "apical-resection": { "name": "Cirugía Endodóntica (Apicectomía)", "description": "<p>Un procedimiento quirúrgico para eliminar la punta de la raíz de un diente y el tejido infectado circundante.</p>" },
       "primary-teeth-care": { "name": "Cuidado de los Dientes Primarios (Dientes de Leche)", "description": "<p>Atención dental especializada para niños, enfocada en mantener la salud de los dientes primarios para asegurar el desarrollo adecuado de los dientes permanentes.</p>" },
       "teeth-fluoridation": { "name": "Fluoración Dental", "description": "<p>La aplicación de flúor a los dientes para fortalecer el esmalte y prevenir la caries dental.</p>" },
       "dental-sealants": { "name": "Selladores Dentales", "description": "<p>Finas capas protectoras que se aplican a las superficies de masticación de los dientes posteriores para prevenir las caries.</p>" }
@@ -174,3 +174,4 @@
   }
 }
 
+    
