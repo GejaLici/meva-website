@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
+import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: `Comprehensive Dental Services | Meva Clinic`,
@@ -24,6 +25,7 @@ const dentalCategoryIds = [
 
 export default function DentalServicesPage() {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
+  const t = useTranslations('Services.categories');
 
   return (
     <>
@@ -34,34 +36,38 @@ export default function DentalServicesPage() {
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {dentalCategories.length > 0 ? (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {dentalCategories.map((category: ServiceCategory) => (
-              <Card key={category.id} className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                {category.image && (
-                  <div className="relative w-full h-56">
-                    <Image
-                      src={category.image}
-                      alt={category.name}
-                      layout="fill"
-                      objectFit="cover"
-                      data-ai-hint={category.imageHint || 'dental service collage'}
-                    />
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="font-headline text-2xl text-primary">{category.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow flex flex-col">
-                  <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3">
-                    {category.description}
-                  </CardDescription>
-                  <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full">
-                    <Link href={`/services/${category.slug}`}>
-                      Explore {category.name} <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+            {dentalCategories.map((category: ServiceCategory) => {
+              const categoryName = t(`${category.id}.name`);
+              const categoryDescription = t(`${category.id}.description`);
+              return (
+                <Card key={category.id} className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  {category.image && (
+                    <div className="relative w-full h-56">
+                      <Image
+                        src={category.image}
+                        alt={categoryName}
+                        layout="fill"
+                        objectFit="cover"
+                        data-ai-hint={category.imageHint || 'dental service collage'}
+                      />
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="font-headline text-2xl text-primary">{categoryName}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col">
+                    <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3">
+                      {categoryDescription}
+                    </CardDescription>
+                    <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full">
+                      <Link href={`/services/${category.slug}`}>
+                        Explore {categoryName} <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
@@ -72,3 +78,5 @@ export default function DentalServicesPage() {
     </>
   );
 }
+
+    

@@ -43,6 +43,7 @@ const ContactForm = dynamic(
 
 export default function HomePage() {
   const t = useTranslations('HomePage');
+  const tTestimonials = useTranslations('Testimonials');
   const galleryPreviewItems = getAllGalleryItems().slice(0, 3);
 
   return (
@@ -106,16 +107,16 @@ export default function HomePage() {
                 <CardContent className="p-4 md:p-6 flex-grow flex flex-col">
                   <div className="flex items-center mb-3 md:mb-4">
                     <Avatar className="h-8 w-8 md:h-10 md:w-10 mr-3 md:mr-3">
-                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.imageHint || 'person portrait'}/>
-                      <AvatarFallback>{testimonial.name.substring(0,1).toUpperCase()}</AvatarFallback>
+                      <AvatarImage src={testimonial.avatar} alt={tTestimonials(`${testimonial.id}.name`)} data-ai-hint={testimonial.imageHint || 'person portrait'}/>
+                      <AvatarFallback>{tTestimonials(`${testimonial.id}.name`).substring(0,1).toUpperCase()}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-semibold text-primary text-xs md:text-sm">{testimonial.name}</p>
-                      <p className="text-xs text-muted-foreground">{testimonial.treatment}</p>
+                      <p className="font-semibold text-primary text-xs md:text-sm">{tTestimonials(`${testimonial.id}.name`)}</p>
+                      <p className="text-xs text-muted-foreground">{tTestimonials(`${testimonial.id}.treatment`)}</p>
                     </div>
                   </div>
                   <blockquote className="text-foreground italic border-l-4 border-accent pl-3 md:pl-4 mb-3 md:mb-4 flex-grow text-xs md:text-sm">
-                    "{testimonial.quote}"
+                    "{tTestimonials(`${testimonial.id}.quote`)}"
                   </blockquote>
                   <div className="flex items-center text-yellow-500 mt-auto">
                     {[...Array(5)].map((_, i) => (
@@ -290,3 +291,5 @@ export default function HomePage() {
     </>
   );
 }
+
+    

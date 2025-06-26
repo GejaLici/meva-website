@@ -14,6 +14,7 @@ import { useTranslations } from 'next-intl';
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('Navigation');
+  const tServices = useTranslations('Services.categories');
   const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 
   return (
@@ -59,7 +60,7 @@ export function MobileNav() {
                     className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     onClick={() => setIsOpen(false)}
                   >
-                    {category.name}
+                    {tServices(`${category.id}.name`)}
                   </Link>
                 ))}
                 <Separator className="my-2" />
@@ -110,3 +111,5 @@ export function MobileNav() {
     </Sheet>
   );
 }
+
+    
