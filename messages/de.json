@@ -75,6 +75,7 @@
   "NotFound": {
     "title": "404 - Seite nicht gefunden",
     "description": "Entschuldigung, die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben.",
+    "suggestion": "Sie können zur Startseite zurückkehren oder die URL auf Fehler überprüfen.",
     "homeButton": "Zurück zur Startseite"
   },
   "Testimonials": {
@@ -142,7 +143,7 @@
       "lift-kraheve": { "name": "Armstraffung", "description": "<p>Ein chirurgischer Eingriff zur Umformung der Unterarme, von der Achselhöhle bis zum Ellbogen, durch Entfernung von überschüssiger Haut und Fett.</p>" },
       "rim-barkut": { "name": "Bauchdeckenstraffung", "description": "<p>Ein chirurgischer Eingriff zur Entfernung von überschüssiger Haut und Fett vom Bauch, um einen glatteren, strafferen Bauchbereich zu schaffen.</p>" },
       "liposculptura": { "name": "Liposkulptur", "description": "<p>Eine Form der Fettabsaugung, die überschüssiges Fett entfernt und den Körper konturiert, um eine definiertere, geformtere Form zu schaffen.</p>" },
-      "rim-vitheve-bbl": { "name": "BBL (Gesäßkorrektur)", "description": "<p>Ein chirurgischer Eingriff, der Fett von anderen Körperteilen auf das Gesäß überträgt, um dessen Größe, Form und Kontur zu verbessern.</p>" },
+      "rim-vitheve-bbl": { "name": "Gesäßvergrößerung (BBL)", "description": "<p>Ein chirurgischer Eingriff, der Fett von anderen Körperteilen auf das Gesäß überträgt, um dessen Größe, Form und Kontur zu verbessern.</p>" },
       "labioplastika": { "name": "Labioplastik", "description": "<p>Ein chirurgischer Eingriff zur Umformung oder Verkleinerung der Schamlippen für mehr Komfort oder aus ästhetischen Gründen.</p>" },
       "lift-kofsheve": { "name": "Oberschenkelstraffung", "description": "<p>Ein chirurgischer Eingriff zur Umformung der Oberschenkel durch Reduzierung von überschüssiger Haut und Fett, was zu glatterer Haut und besser proportionierten Konturen führt.</p>" },
       "gynecomastia": { "name": "Gynäkomastie", "description": "<p>Ein chirurgischer Eingriff zur Reduzierung von vergrößertem Brustgewebe bei Männern durch Fettabsaugung und/oder Entfernung von überschüssigem Drüsengewebe.</p>" },
@@ -166,7 +167,7 @@
       "root-canal-treatment": { "name": "Wurzelkanalbehandlung", "description": "<p>Ein zahnärztlicher Eingriff zur Entfernung der infizierten Pulpa aus dem Inneren eines Zahns, um ihn zu retten und Schmerzen zu lindern.</p>" },
       "tooth-extraction": { "name": "Zahnextraktion", "description": "<p>Die Entfernung eines Zahnes aus seinem Alveolarknochen im Kieferknochen.</p>" },
       "dental-implants": { "name": "Zahnimplantate", "description": "<p>Chirurgische Vorrichtungen, die in den Kieferknochen eingesetzt werden, um fehlende Zähne zu ersetzen und eine Basis für festsitzenden oder herausnehmbaren Zahnersatz zu bilden.</p>" },
-      "apical-resection": { "name": "Wurzelspitzenresektion (Apikoektomie)", "description": "<p>Ein chirurgischer Eingriff zur Entfernung der Spitze der Zahnwurzel und des umgebenden infizierten Gewebes.</p>" },
+      "apical-resection": { "name": "Wurzelspitzenresektion", "description": "<p>Ein chirurgischer Eingriff zur Entfernung der Spitze der Zahnwurzel und des umgebenden infizierten Gewebes.</p>" },
       "primary-teeth-care": { "name": "Pflege der Milchzähne", "description": "<p>Spezialisierte zahnärztliche Versorgung für Kinder, die sich auf die Erhaltung der Gesundheit der Milchzähne konzentriert, um eine ordnungsgemäße Entwicklung der bleibenden Zähne zu gewährleisten.</p>" },
       "teeth-fluoridation": { "name": "Zahnfluoridierung", "description": "<p>Die Anwendung von Fluorid auf die Zähne, um den Zahnschmelz zu stärken und Karies vorzubeugen.</p>" },
       "dental-sealants": { "name": "Zahnversiegelungen", "description": "<p>Dünne Schutzschichten, die auf die Kauflächen der Backenzähne aufgetragen werden, um Karies zu verhindern.</p>" }
@@ -185,5 +186,189 @@
     "journeyTitle": "Beginnen Sie Ihre Transformationsreise",
     "journeyP1": "Wir laden Sie ein, noch heute eine umfassende Beratung mit unseren medizinischen Experten zu vereinbaren. Machen Sie den entscheidenden ersten Schritt zur Verwirklichung Ihrer ästhetischen Wünsche in einer sicheren, unterstützenden und professionellen Umgebung.",
     "journeyButton": "Buchen Sie Ihre vertrauliche Beratung"
+  },
+  "ContactPage": {
+    "metaTitle": "Kontakt {siteName} | Anfragen & Beratungen",
+    "metaDescription": "Kontaktieren Sie {siteName} für Expertenanfragen, vertrauliche Beratungen oder um einen Termin zu buchen. Unser professionelles Team ist bereit, Sie bei Ihren ästhetischen und zahnärztlichen Bedürfnissen zu unterstützen.",
+    "title": "Kontaktieren Sie uns",
+    "description": "Wir sind bestrebt, umfassende Informationen und Unterstützung zu bieten. Sollten Sie Fragen haben oder Ihre ästhetischen Ziele besprechen wollen, füllen Sie bitte das sichere Formular unten aus oder kontaktieren Sie unser professionelles Team direkt. Wir sind hier, um Ihnen zu helfen.",
+    "detailsTitle": "Unsere Klinikdetails & direkter Kontakt",
+    "addressLabel": "Adresse:",
+    "addressValue": "Rruga \"Sami Frashëri\", Nr. 123, Tirana, Albanien",
+    "phoneLabel": "Telefon:",
+    "emailLabel": "E-Mail:",
+    "hoursTitle": "Öffnungszeiten der Klinik",
+    "hoursWeekdays": "Montag - Freitag: 09:00 - 18:00",
+    "hoursSaturday": "Samstag: 09:00 - 14:00",
+    "hoursSunday": "Sonntag: Geschlossen",
+    "formTitle": "Sicheres Anfrageformular"
+  },
+  "FaqPage": {
+    "metaTitle": "Häufig gestellte Fragen | {siteName}",
+    "metaDescription": "Finden Sie umfassende Antworten auf häufige Fragen zu ästhetischen Verfahren, Beratungen, Genesung und Behandlungspfaden bei {siteName}.",
+    "title": "Häufig gestellte Fragen (FAQ)",
+    "description": "Finden Sie umfassende Antworten auf häufig gestellte Fragen zu unseren spezialisierten Dienstleistungen, fortschrittlichen Verfahren, präoperativer Vorbereitung und postoperativer Betreuung bei {siteName}.",
+    "noResults": "Derzeit sind keine FAQs verfügbar. Bitte kontaktieren Sie unsere Klinik direkt, wenn Sie spezielle Fragen haben."
+  },
+  "FAQ": {
+    "faq-1": {
+      "question": "Was erwartet mich bei meiner ersten Beratung in der {siteName}?",
+      "answer": "<p>Ihre Erstberatung in der {siteName} ist ein vertrauliches und umfassendes Gespräch mit einem unserer medizinischen Spezialisten. In dieser Sitzung besprechen wir ausführlich Ihre ästhetischen Ziele, führen eine sorgfältige Bewertung Ihrer relevanten Krankengeschichte durch und erklären Ihnen klar die am besten geeigneten Behandlungsoptionen. Diese Zeit ermöglicht es Ihnen, alle Fragen zu stellen und ein vollständiges Verständnis der möglichen Ergebnisse, Vorteile, spezifischen Risiken und des erwarteten Genesungsprozesses für Ihren vorgeschlagenen Eingriff zu erlangen. Unser Ziel ist es, Sie mit allen notwendigen Informationen auszustatten, um eine gut informierte Entscheidung über Ihre Pflege zu treffen.</p>"
+    },
+    "faq-2": {
+      "question": "Wie lange ist die typische Genesungszeit für ästhetische Eingriffe?",
+      "answer": "<p>Die Genesungszeiten variieren erheblich je nach Art und Invasivität des durchgeführten Eingriffs. Nicht-invasive Behandlungen wie bestimmte Gesichtsbehandlungen oder leichte chemische Peelings können wenig bis gar keine Ausfallzeit erfordern und eine sofortige Rückkehr zu den täglichen Aktivitäten ermöglichen. Minimalinvasive Eingriffe wie injizierbare Füllstoffe können zu leichten Schwellungen oder Blutergüssen für einige Tage führen. Chirurgische Eingriffe wie ein Facelifting oder eine Bauchdeckenstraffung erfordern eine längere Genesungszeit von möglicherweise mehreren Wochen für eine vollständige Heilung. In der {siteName} stellen wir detaillierte, personalisierte postoperative Pflegeanweisungen und engagierte Unterstützung zur Verfügung, um einen reibungslosen, komfortablen und effizienten Genesungsprozess zu gewährleisten.</p>"
+    },
+    "faq-3": {
+      "question": "Sind die Ergebnisse ästhetischer Behandlungen dauerhaft?",
+      "answer": "<p>Die Langlebigkeit der Ergebnisse von ästhetischen Behandlungen hängt stark von dem spezifischen Eingriff, individuellen Patientenfaktoren wie Genetik und Lebensstil sowie der laufenden Pflege ab. Chirurgische Veränderungen wie Rhinoplastik oder Brustvergrößerung mit Implantaten bieten im Allgemeinen langanhaltende, oft als dauerhaft angesehene strukturelle Veränderungen, obwohl der natürliche Alterungsprozess fortschreitet. Nicht-chirurgische Behandlungen wie Hautfüller oder Botulinumtoxin-Injektionen sind vorübergehend und erfordern in der Regel Nachbehandlungen in regelmäßigen Abständen (z.B. alle 6-18 Monate für Füller, 3-4 Monate für Botox), um den gewünschten Effekt zu erhalten. Lebensstilfaktoren wie Ernährung, Sonneneinstrahlung, Hautpflegeroutine und Rauchen beeinflussen ebenfalls maßgeblich die Haltbarkeit der Ergebnisse. Unsere Spezialisten in der {siteName} werden Ihnen während Ihrer Beratung eine realistische Erwartung der Langlebigkeit der Ergebnisse geben.</p>"
+    },
+    "faq-4": {
+      "question": "Welche potenziellen Risiken sind mit ästhetischen Eingriffen verbunden?",
+      "answer": "<p>Alle medizinischen und chirurgischen Eingriffe bergen ein gewisses inhärentes Risiko, obwohl schwerwiegende Komplikationen selten sind, wenn ästhetische Behandlungen von qualifizierten, erfahrenen medizinischen Fachleuten in einer akkreditierten Einrichtung wie der {siteName} durchgeführt werden. Mögliche Risiken, die je nach Eingriff variieren, können Blutergüsse, Schwellungen, Unbehagen, Infektionen, Blutungen, Narbenbildung oder eine unerwünschte Reaktion auf Anästhesie oder injizierte Materialien umfassen. Während Ihrer umfassenden präoperativen Beratung werden unsere Spezialisten alle potenziellen Risiken und Vorteile, die für Ihren gewählten Eingriff spezifisch sind, ausführlich besprechen, um sicherzustellen, dass Sie ein vollständiges Verständnis haben, bevor Sie fortfahren. Wir priorisieren die Patientensicherheit über alles und halten uns an die strengsten medizinischen Protokolle.</p>"
+    },
+    "faq-5": {
+      "question": "Wie bestimme ich, welcher ästhetische Eingriff für mich der richtige ist?",
+      "answer": "<p>Die Wahl des am besten geeigneten ästhetischen Eingriffs ist ein entscheidender und kollaborativer Entscheidungsprozess, der zusammen mit Ihrem Spezialisten in der {siteName} getroffen wird. Er beginnt mit einer detaillierten Beratung, bei der unsere Experten aufmerksam auf Ihre Bedenken, ästhetischen Wünsche und Erwartungen eingehen. Anschließend führen wir eine gründliche Bewertung Ihrer individuellen anatomischen Merkmale, Ihres Hauttyps und Ihrer allgemeinen Gesundheit durch. Basierend auf dieser umfassenden Bewertung empfehlen wir die am besten geeigneten und effektivsten Behandlungsoptionen, die darauf zugeschnitten sind, Ihr gewünschtes, natürlich aussehendes Ergebnis zu erzielen. Wir legen Wert auf die Aufklärung der Patienten und stellen sicher, dass Sie alle notwendigen Informationen erhalten, um eine informierte und selbstbewusste Entscheidung über Ihren Behandlungsweg zu treffen.</p>"
+    }
+  },
+  "GalleryPage": {
+    "metaTitle": "Vorher & Nachher Patientengalerie | {siteName}",
+    "metaDescription": "Sehen Sie die bemerkenswerten Transformationen, die von unserem medizinischen Expertenteam in der {siteName} erzielt wurden. Entdecken Sie echte Patientenergebnisse unserer fortschrittlichen ästhetischen und zahnärztlichen Eingriffe.",
+    "title": "Patienten Vorher & Nachher Galerie",
+    "description": "Erleben Sie die transformative Kraft unserer fortschrittlichen ästhetischen und zahnärztlichen Expertise. Entdecken Sie echte Patientenergebnisse, die in der {siteName} erzielt wurden.",
+    "noResults": "Unsere Patientengalerie wird derzeit mit neuen Transformationen aktualisiert. Bitte schauen Sie bald wieder vorbei, um die außergewöhnlichen Ergebnisse zu sehen, die unsere Spezialisten in der {siteName} erzielt haben.",
+    "before": "VORHER",
+    "after": "NACHHER"
+  },
+  "Gallery": {
+    "gallery-1": { "procedureName": "Nasenkorrektur (Rhinoplastik)", "description": "Deutliche Verbesserung der Nasenbrücke und der Spitzendefinition." },
+    "gallery-2": { "procedureName": "Brustvergrößerung", "description": "Verbessertes Volumen und verbesserte Brustform, wodurch ein natürliches Aussehen erzielt wird." },
+    "gallery-3": { "procedureName": "E-Max Veneers", "description": "Vollständige Lächentransformation mit verbesserter Farbe, Form und Ausrichtung." },
+    "gallery-4": { "procedureName": "Facelifting (Rhytidektomie)", "description": "Verjüngtes Gesichtserscheinungsbild mit reduzierter Erschlaffung und Falten." },
+    "gallery-5": { "procedureName": "Lippenvergrößerung", "description": "Vollere, gut definierte Lippen, die mit Hautfüllern erzielt werden." },
+    "gallery-6": { "procedureName": "Haartransplantation", "description": "Signifikante Wiederherstellung der Haardichte in den behandelten Bereichen." }
+  },
+  "BlogPage": {
+    "metaTitle": "Experten-Blog | {siteName}",
+    "metaDescription": "Bleiben Sie informiert mit den neuesten Fortschritten, Expertentipps und aufschlussreichen Artikeln aus der vordersten Reihe der ästhetischen und zahnärztlichen Versorgung, kuratiert von den Fachleuten der {siteName}.",
+    "title": "Unser Experten-Einblicke-Blog",
+    "description": "Bleiben Sie informiert mit den neuesten Fortschritten, Expertentipps und aufschlussreichen Artikeln aus der vordersten Reihe der ästhetischen und zahnärztlichen Versorgung, kuratiert von den Fachleuten der {siteName}.",
+    "noPosts": "Momentan sind keine Blogbeiträge verfügbar. Bitte schauen Sie später wieder vorbei oder stellen Sie sicher, dass Ihre Firestore 'blogPosts'-Sammlung mit gültigen Einträgen gefüllt ist.",
+    "readMore": "Weiterlesen"
+  },
+  "BlogPostPage": {
+    "metaTitle": "{postTitle} | {siteName} Blog",
+    "metaDescription": "{postExcerpt}",
+    "postNotFoundTitle": "Beitrag nicht gefunden | {siteName}",
+    "postNotFoundDescription": "Der angeforderte Blogbeitrag konnte auf {siteName} nicht gefunden werden.",
+    "publishedOn": "Veröffentlicht am {date}",
+    "by": "Von {author}",
+    "noContent": "Dieser Beitrag hat noch keinen Inhalt. Bitte schauen Sie später für Updates wieder vorbei.",
+    "backButton": "Zurück zu allen Blog-Artikeln"
+  },
+  "ServiceDetailsPage": {
+    "aboutTitle": "Über {serviceName}",
+    "whatToExpectTitle": "Was Sie in der {siteName} erwartet",
+    "whatToExpectP1": "In der {siteName} beginnt Ihre Reise mit einer umfassenden Beratung, bei der unsere Spezialisten einen personalisierten Behandlungsplan entwickeln, der auf Ihre spezifischen Bedürfnisse und gewünschten Ergebnisse für {serviceName} zugeschnitten ist. Wir verwenden moderne, evidenzbasierte Techniken und modernste Technologie. Unser Engagement erstreckt sich auf eine sorgfältige postoperative Betreuung und Nachsorge, um optimale Ergebnisse, Ihren Komfort und einen reibungslosen Genesungsprozess zu gewährleisten.",
+    "whatToExpectL1": "Gründliche, vertrauliche Erstberatung mit einem Spezialisten.",
+    "whatToExpectL2": "Individuell entwickelter Behandlungsplan auf Basis einer umfassenden Beurteilung.",
+    "whatToExpectL3": "Anwendung fortschrittlicher Medizintechnik und bewährter Verfahrensmethoden.",
+    "whatToExpectL4": "Engagierte, aufmerksame postoperative Betreuung und Nachsorge.",
+    "consultationButton": "Buchen Sie eine vertrauliche Beratung",
+    "serviceNotFoundTitle": "Dienst nicht gefunden | {siteName}",
+    "serviceNotFoundDescription": "Der angeforderte Dienst konnte bei {siteName} nicht gefunden werden."
+  },
+  "ServicesOverviewPage": {
+    "metaTitle": "Unsere Leistungen | {siteName}",
+    "metaDescription": "Entdecken Sie das umfassende Angebot an fortschrittlichen ästhetischen und zahnärztlichen Leistungen, die in der {siteName} angeboten werden. Entdecken Sie von Experten maßgeschneiderte Behandlungen zur Steigerung Ihrer Schönheit und Ihres Wohlbefindens.",
+    "title": "Unsere fortschrittlichen ästhetischen & zahnärztlichen Leistungen",
+    "description": "Entdecken Sie das umfassende Spektrum spezialisierter ästhetischer und zahnärztlicher Behandlungen, die in der {siteName} angeboten werden. Jede Dienstleistung ist sorgfältig darauf ausgelegt, Ihnen zu helfen, Ihre individuellen Schönheits- und Wellnessziele zu erreichen. Unser medizinisches Expertenteam ist bestrebt, fortschrittliche, personalisierte Pflege zu bieten und außergewöhnliche, dauerhafte Ergebnisse zu liefern."
+  },
+  "DentalServicesPage": {
+    "metaTitle": "Umfassende zahnärztliche Leistungen | {siteName}",
+    "metaDescription": "Entdecken Sie unser umfangreiches Angebot an zahnärztlichen Expertenleistungen in der {siteName}, von fortschrittlichen ästhetischen Behandlungen und Kieferorthopädie bis hin zu Oralchirurgie und spezialisierter Kinderzahnheilkunde.",
+    "title": "Umfassende zahnärztliche Leistungen",
+    "description": "Entdecken Sie unser breites Spektrum an spezialisierten zahnärztlichen Behandlungen in der {siteName}, die darauf ausgelegt sind, Ihr Lächeln zu verbessern und Ihre Mundgesundheit zu schützen. Unser zahnärztliches Expertenteam bietet alles von fortschrittlichen kosmetischen Verbesserungen und Kieferorthopädie bis hin zu umfassenden chirurgischen Eingriffen und engagierter Kinderzahnheilkunde.",
+    "exploreButton": "Entdecken Sie {categoryName}",
+    "noResults": "Derzeit sind keine zahnärztlichen Leistungskategorien verfügbar. Bitte kontaktieren Sie {siteName} für die neuesten Informationen."
+  },
+  "ServiceCategoryPage": {
+    "categoryNotFoundTitle": "Kategorie nicht gefunden | {siteName}",
+    "categoryNotFoundDescription": "Die angeforderte Dienstleistungskategorie konnte bei {siteName} nicht gefunden werden.",
+    "noResults": "In dieser Kategorie sind derzeit keine Dienstleistungen verfügbar. Bitte kontaktieren Sie {siteName} für weitere Details."
+  },
+  "PrivacyPolicyPage": {
+    "metaTitle": "Datenschutzrichtlinie | {siteName}",
+    "metaDescription": "Offizielle Datenschutzrichtlinie für {siteName}. Verstehen Sie, wie wir Ihre persönlichen Daten in Übereinstimmung mit den Datenschutzbestimmungen sammeln, verwenden und schützen.",
+    "title": "Datenschutzrichtlinie",
+    "lastUpdated": "Letzte Aktualisierung: {date}",
+    "p1": "Willkommen bei {siteName} (im Folgenden als „wir“, „uns“ oder „unser“ bezeichnet). Wir sind fest entschlossen, Ihre persönlichen Daten und Ihr grundlegendes Recht auf Privatsphäre zu schützen. Diese Datenschutzrichtlinie regelt Ihren Zugriff auf und Ihre Nutzung unserer Website, {SITE_DOMAIN}, einschließlich aller anderen Medienformen, Medienkanäle, mobilen Websites oder mobilen Anwendungen, die damit verbunden sind (zusammenfassend als „Website“ bezeichnet). Wenn Sie Fragen oder Bedenken zu dieser Datenschutzerklärung oder unseren Praktiken bezüglich Ihrer persönlichen Daten haben, kontaktieren Sie uns bitte unter info@{SITE_DOMAIN}.",
+    "h2_1": "1. VON UNS GESAMMELTE INFORMATIONEN",
+    "p2_1": "Wir sammeln persönliche Informationen, die Sie uns freiwillig zur Verfügung stellen, wenn Sie sich auf der Website registrieren, Interesse an Informationen über uns oder unsere Produkte und Dienstleistungen bekunden, an Aktivitäten auf der Website teilnehmen oder uns anderweitig kontaktieren.",
+    "p2_2": "Die von uns gesammelten persönlichen Informationen hängen vom Kontext Ihrer Interaktionen mit uns und der Website, den von Ihnen getroffenen Entscheidungen und den von Ihnen genutzten Produkten und Funktionen ab. Die persönlichen Informationen, die wir sammeln können, umfassen unter anderem: vollständige Namen; Telefonnummern; E-Mail-Adressen; Postanschriften; Berufsbezeichnungen; Kontaktpräferenzen; Authentifizierungsdaten; Rechnungsadressen; und andere ähnliche Informationen, die für die Bereitstellung unserer Dienstleistungen und Mitteilungen erforderlich sind.",
+    "h2_2": "2. WIE WIR IHRE INFORMATIONEN VERWENDEN",
+    "p3_1": "Wir verwenden persönliche Informationen, die über unsere Website gesammelt werden, für eine Vielzahl legitimer Geschäftszwecke, wie unten beschrieben. Wir verarbeiten Ihre persönlichen Informationen für diese Zwecke unter Berufung auf unsere legitimen Geschäftsinteressen, um einen Vertrag mit Ihnen abzuschließen oder zu erfüllen, mit Ihrer ausdrücklichen Zustimmung und/oder zur Einhaltung unserer gesetzlichen Verpflichtungen.",
+    "p3_l1": "Um die Kontoerstellung und den Anmeldevorgang zu erleichtern.",
+    "p3_l2": "Um Erfahrungsberichte mit Ihrer vorherigen Zustimmung zu veröffentlichen.",
+    "p3_l3": "Um Feedback anzufordern und Sie bezüglich Ihrer Nutzung der Website zu kontaktieren.",
+    "p3_l4": "Um die Kommunikation zwischen Benutzern mit deren Zustimmung zu ermöglichen.",
+    "p3_l5": "Um Benutzerkonten zu verwalten und deren Richtigkeit zu wahren.",
+    "p3_l6": "Um Ihnen administrative Informationen zu senden, wie z.B. Informationen zu unseren Dienstleistungen, Änderungen unserer Bedingungen und Richtlinien.",
+    "p3_l7": "Um unsere Dienste zu schützen, einschließlich der Überwachung und Verhinderung von Betrug.",
+    "p3_l8": "Um unsere Bedingungen und Richtlinien für Geschäftszwecke durchzusetzen, gesetzliche und behördliche Anforderungen zu erfüllen oder im Zusammenhang mit unseren vertraglichen Verpflichtungen.",
+    "p3_l9": "Um auf rechtliche Anfragen zu reagieren und Schaden zu verhindern, wie es das geltende Recht vorschreibt.",
+    "p3_l10": "Um Ihre Anfragen nach Dienstleistungen oder Terminen zu erfüllen und zu verwalten.",
+    "p3_l11": "Um dem Benutzer Dienstleistungen zu liefern und deren Lieferung zu erleichtern.",
+    "p3_l12": "Um auf Benutzeranfragen zu antworten und den Benutzern umfassende Unterstützung zu bieten.",
+    "h2_3": "3. WERDEN IHRE INFORMATIONEN MIT JEMANDEM GETEILT?",
+    "p4_1": "Wir geben Ihre persönlichen Daten nur mit Ihrer ausdrücklichen Zustimmung weiter, um geltende Gesetze einzuhalten, Ihnen unsere Dienstleistungen bereitzustellen, Ihre Rechte zu schützen oder legitime Geschäftsverpflichtungen zu erfüllen. Wir können Daten auf der folgenden Rechtsgrundlage verarbeiten oder weitergeben: Zustimmung, berechtigte Interessen, Erfüllung eines Vertrags, gesetzliche Verpflichtungen, lebenswichtige Interessen.",
+    "h2_4": "4. VERWENDEN WIR COOKIES UND ANDERE TRACKING-TECHNOLOGIEN?",
+    "p5_1": "Wir können Cookies und ähnliche Tracking-Technologien (wie Web-Beacons und Pixel) verwenden, um auf Informationen zuzugreifen oder diese zu speichern. Spezifische Informationen darüber, wie wir solche Technologien verwenden und wie Sie bestimmte Cookies ablehnen können, sind in unserer separaten Cookie-Richtlinie (falls zutreffend) aufgeführt oder werden hier detailliert, wenn keine separate Richtlinie bereitgestellt wird.",
+    "h2_5": "5. WIE LANGE BEWAHREN WIR IHRE INFORMATIONEN AUF?",
+    "p6_1": "Wir werden Ihre persönlichen Daten nur so lange aufbewahren, wie es für die in dieser Datenschutzrichtlinie dargelegten Zwecke erforderlich ist, es sei denn, eine längere Aufbewahrungsfrist ist gesetzlich vorgeschrieben oder zulässig (wie z.B. Steuer-, Buchhaltungs- oder andere gesetzliche oder behördliche Anforderungen). Kein Zweck in dieser Richtlinie erfordert, dass wir Ihre persönlichen Daten länger aufbewahren als den Zeitraum, in dem Benutzer ein Konto bei uns haben, zuzüglich einer angemessenen Frist für Archivierungs- oder rechtliche Zwecke.",
+    "h2_6": "6. WIE SCHÜTZEN WIR IHRE INFORMATIONEN?",
+    "p7_1": "Wir haben angemessene technische und organisatorische Sicherheitsmaßnahmen implementiert, die darauf ausgelegt sind, die Sicherheit aller von uns verarbeiteten persönlichen Informationen zu schützen. Diese Maßnahmen zielen darauf ab, unbefugten Zugriff, Offenlegung, Änderung oder Zerstörung Ihrer persönlichen Daten zu verhindern. Trotz unserer Sicherheitsvorkehrungen und kontinuierlichen Bemühungen, Ihre Informationen zu schützen, kann jedoch keine elektronische Übertragung über das Internet oder Informationsspeichertechnologie als 100% sicher garantiert werden. Daher können wir nicht versprechen oder garantieren, dass Hacker, Cyberkriminelle oder andere unbefugte Dritte unsere Sicherheit nicht überwinden und Ihre Informationen unrechtmäßig sammeln, darauf zugreifen, stehlen oder ändern können. Die Übertragung persönlicher Informationen zu und von unserer Website erfolgt auf Ihr eigenes Risiko.",
+    "h2_7": "7. WAS SIND IHRE DATENSCHUTZRECHTE?",
+    "p8_1": "In einigen Regionen, wie dem Europäischen Wirtschaftsraum (EWR) und dem Vereinigten Königreich (UK), haben Sie bestimmte Rechte gemäß den geltenden Datenschutzgesetzen. Dazu gehören möglicherweise das Recht, (i) Zugang zu Ihren persönlichen Daten anzufordern und eine Kopie davon zu erhalten, (ii) die Berichtigung oder Löschung Ihrer persönlichen Daten zu verlangen; (iii) die Verarbeitung Ihrer persönlichen Daten einzuschränken; und (iv) gegebenenfalls auf Datenübertragbarkeit. Unter bestimmten Umständen haben Sie möglicherweise auch das Recht, der Verarbeitung Ihrer persönlichen Daten zu widersprechen. Um eine solche Anfrage zu stellen, verwenden Sie bitte die unten angegebenen Kontaktdaten.",
+    "h2_8": "8. AKTUALISIERUNGEN DIESER RICHTLINIE",
+    "p9_1": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren, um Änderungen unserer Praktiken oder aus anderen betrieblichen, rechtlichen oder regulatorischen Gründen widerzuspiegeln. Die aktualisierte Version wird durch ein aktualisiertes „Überarbeitet“- oder „Letzte Aktualisierung“-Datum angezeigt, und die aktualisierte Version wird wirksam, sobald sie auf der Website zugänglich ist. Wir empfehlen Ihnen, diese Datenschutzrichtlinie regelmäßig zu überprüfen, um darüber informiert zu sein, wie wir Ihre Informationen schützen.",
+    "h2_9": "9. WIE KÖNNEN SIE UNS BEZÜGLICH DIESER RICHTLINIE KONTAKTIEREN?",
+    "p10_1": "Wenn Sie Fragen, Kommentare oder Bedenken zu dieser Datenschutzrichtlinie oder unseren Datenpraktiken haben, können Sie unseren Datenschutzbeauftragten per E-Mail unter info@{SITE_DOMAIN} kontaktieren oder uns per Post unter folgender Adresse erreichen:",
+    "p10_2": "{siteName}<br />z.Hd.: Datenschutzbeauftragter<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tirana, Albanien"
+  },
+  "TermsOfServicePage": {
+    "metaTitle": "Nutzungsbedingungen | {siteName}",
+    "metaDescription": "Offizielle Nutzungsbedingungen für {siteName}. Verstehen Sie die Regeln und Richtlinien für die Nutzung unserer Website und Dienstleistungen.",
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Letzte Aktualisierung: {date}",
+    "h2_1": "1. ZUSTIMMUNG ZU DEN BEDINGUNGEN",
+    "p1_1": "Diese Nutzungsbedingungen („Bedingungen“) stellen eine rechtlich bindende Vereinbarung zwischen Ihnen, ob persönlich oder im Namen einer juristischen Person („Sie“ oder „Benutzer“), und {siteName} („wir“, „uns“ oder „unser“) bezüglich Ihres Zugriffs auf und Ihrer Nutzung der Website {SITE_DOMAIN} sowie aller anderen Medienformen, Medienkanäle, mobilen Websites oder mobilen Anwendungen dar, die damit verbunden, verlinkt oder anderweitig verbunden sind (zusammenfassend die „Website“ und „Dienste“).",
+    "p1_2": "Sie erkennen an und stimmen zu, dass Sie durch den Zugriff auf die Website und/oder die Nutzung unserer Dienste diese Nutzungsbedingungen gelesen, verstanden haben und sich damit einverstanden erklären, an alle diese Nutzungsbedingungen gebunden zu sein. Wenn Sie nicht mit allen diesen Nutzungsbedingungen einverstanden sind, ist Ihnen die Nutzung der Website und unserer Dienste ausdrücklich untersagt und Sie müssen die Nutzung sofort einstellen.",
+    "p1_3": "Zusätzliche Geschäftsbedingungen oder Dokumente, die von Zeit zu Zeit auf der Website veröffentlicht werden können, werden hiermit ausdrücklich durch Bezugnahme hierin aufgenommen.",
+    "h2_2": "2. GEISTIGE EIGENTUMSRECHTE",
+    "p2_1": "Sofern nicht anders angegeben, sind die Website und die Dienste unser Eigentum. Alle Quellcodes, Datenbanken, Funktionalitäten, Software, Website-Designs, Audio-, Video-, Text-, Foto- und Grafikdateien auf der Website (zusammenfassend der „Inhalt“) und die darin enthaltenen Marken, Dienstleistungsmarken und Logos (die „Marken“) sind unser Eigentum oder von uns kontrolliert oder an uns lizenziert. Sie sind durch Urheber- und Markenrechte sowie verschiedene andere geistige Eigentumsrechte und Gesetze gegen unlauteren Wettbewerb in Albanien, ausländischen Rechtsordnungen und internationalen Konventionen geschützt. Sofern nicht ausdrücklich in diesen Bedingungen vorgesehen, darf kein Teil der Website, der Dienste, des Inhalts oder der Marken kopiert, reproduziert, aggregiert, neu veröffentlicht, hochgeladen, gepostet, öffentlich angezeigt, kodiert, übersetzt, übertragen, verteilt, verkauft, lizenziert oder anderweitig für kommerzielle Zwecke genutzt werden, ohne unsere ausdrückliche vorherige schriftliche Genehmigung.",
+    "h2_3": "3. ZUSICHERUNGEN UND GEWÄHRLEISTUNGEN DES BENUTZERS",
+    "p3_1": "Durch die Nutzung der Website und der Dienste versichern und garantieren Sie, dass: (1) alle von Ihnen übermittelten Registrierungsinformationen wahr, genau, aktuell und vollständig sind; (2) Sie die Richtigkeit dieser Informationen wahren und diese Registrierungsinformationen bei Bedarf umgehend aktualisieren werden; (3) Sie die Rechtsfähigkeit besitzen und sich zur Einhaltung dieser Nutzungsbedingungen verpflichten; (4) Sie in Ihrer Gerichtsbarkeit nicht minderjährig sind oder, falls minderjährig, die elterliche Erlaubnis zur Nutzung der Website erhalten haben; (5) Sie nicht über automatisierte oder nicht-menschliche Mittel, sei es durch einen Bot, ein Skript oder anderweitig, auf die Website oder die Dienste zugreifen werden; (6) Sie die Website oder die Dienste nicht für illegale oder nicht autorisierte Zwecke nutzen werden; und (7) Ihre Nutzung der Website oder der Dienste keine geltenden Gesetze oder Vorschriften verletzt.",
+    "h2_4": "4. MEDIZINISCHER HAFTUNGSAUSSCHLUSS",
+    "p4_1": "Die auf dieser Website bereitgestellten Informationen dienen nur zu allgemeinen Informations- und Bildungszwecken und stellen keine medizinische Beratung, Diagnose oder Behandlung dar und sollten nicht als solche ausgelegt werden. Suchen Sie bei Fragen zu einer Erkrankung oder vorgeschlagenen Behandlungsoptionen immer den Rat Ihres Arztes oder eines anderen qualifizierten Gesundheitsdienstleisters ein. Missachten Sie niemals professionellen medizinischen Rat oder zögern Sie nicht, ihn einzuholen, weil Sie etwas auf dieser Website gelesen haben.",
+    "p4_2": "Die Nutzung von Informationen, die von <a>{siteName}</a>, seinen Mitarbeitern, Auftragnehmern, anderen auf der Website auf Einladung von <a>{siteName}</a> erscheinenden Personen oder anderen Besuchern der Website bereitgestellt werden, erfolgt ausschließlich auf Ihr eigenes Risiko. <a>{siteName}</a> empfiehlt oder befürwortet keine spezifischen Tests, Ärzte, Produkte, Verfahren, Meinungen oder andere Informationen, die auf der Website erwähnt werden können.",
+    "h2_5": "5. VERBOTENE AKTIVITÄTEN",
+    "p5_1": "Sie dürfen die Website oder die Dienste nicht für andere Zwecke nutzen als die, für die wir die Website und die Dienste zur Verfügung stellen. Die Website und die Dienste dürfen nicht im Zusammenhang mit kommerziellen Unternehmungen verwendet werden, es sei denn, diese werden von uns ausdrücklich schriftlich gebilligt oder genehmigt.",
+    "p5_2": "Als Benutzer der Website erklären Sie sich damit einverstanden, sich nicht an verbotenen Aktivitäten zu beteiligen. Eine vollständige Liste der verbotenen Aktivitäten finden Sie in unseren umfassenden Online-Dokumenten.",
+    "p5_3": "Jede Nutzung der Website oder der Dienste, die gegen die vorstehenden Bestimmungen verstößt, stellt einen Verstoß gegen diese Nutzungsbedingungen dar und kann unter anderem zur Beendigung oder Aussetzung Ihrer Rechte zur Nutzung der Website und der Dienste führen.",
+    "h2_6": "6. LAUFZEIT UND KÜNDIGUNG",
+    "p6_1": "Diese Nutzungsbedingungen bleiben in vollem Umfang in Kraft, solange Sie die Website oder die Dienste nutzen. OHNE EINSCHRÄNKUNG ANDERER BESTIMMUNGEN DIESER NUTZUNGSBEDINGUNGEN BEHALTEN WIR UNS DAS RECHT VOR, NACH EIGENEM ERMESSEN UND OHNE ANKÜNDIGUNG ODER HAFTUNG DEN ZUGANG ZU UND DIE NUTZUNG DER WEBSITE UND DER DIENSTE (EINSCHLIESSLICH DER SPERRUNG BESTIMMTER IP-ADRESSEN) FÜR JEDE PERSON AUS JEDEM GRUND ODER OHNE GRUND ZU VERWEIGERN, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF DIE VERLETZUNG EINER ZUSICHERUNG, GEWÄHRLEISTUNG ODER VERPFLICHTUNG, DIE IN DIESEN NUTZUNGSBEDINGUNGEN ODER IN GELTENDEN GESETZEN ODER VORSCHRIFTEN ENTHALTEN IST. WIR KÖNNEN IHRE NUTZUNG ODER TEILNAHME AN DER WEBSITE UND DEN DIENSTEN BEENDEN ODER IHR KONTO UND ALLE VON IHNEN GEPOSTETEN INHALTE ODER INFORMATIONEN JEDERZEIT OHNE VORWARNUNG NACH EIGENEM ERMESSEN LÖSCHEN.",
+    "h2_7": "7. GELTENDES RECHT",
+    "p7_1": "Diese Nutzungsbedingungen und Ihre Nutzung der Website und der Dienste unterliegen den Gesetzen Albaniens und werden in Übereinstimmung mit diesen ausgelegt, die für in Albanien geschlossene und vollständig zu erfüllende Vereinbarungen gelten, ohne Rücksicht auf die Grundsätze des Kollisionsrechts.",
+    "h2_8": "8. HAFTUNGSAUSSCHLUSS",
+    "p8_1": "DIE WEBSITE UND DIE DIENSTE WERDEN <strong>„WIE BESEHEN“</strong> UND <strong>„WIE VERFÜGBAR“</strong> BEREITGESTELLT. SIE STIMMEN ZU, DASS IHRE NUTZUNG DER WEBSITE UND UNSERER DIENSTE AUF IHR EIGENES RISIKO ERFOLGT. SOWEIT GESETZLICH ZULÄSSIG, SCHLIESSEN WIR ALLE AUSDRÜCKLICHEN ODER STILLSCHWEIGENDEN GEWÄHRLEISTUNGEN IM ZUSAMMENHANG MIT DER WEBSITE UND DEN DIENSTEN UND IHRER NUTZUNG DAVON AUS, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF DIE STILLSCHWEIGENDEN GEWÄHRLEISTUNGEN DER MARKTGÄNGIGKEIT, DER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND DER NICHTVERLETZUNG VON RECHTEN.",
+    "p8_2": "WIR ÜBERNEHMEN KEINE GEWÄHRLEISTUNGEN ODER ZUSICHERUNGEN HINSICHTLICH DER RICHTIGKEIT ODER VOLLSTÄNDIGKEIT DES INHALTS DER WEBSITE ODER DES INHALTS VON WEBSITES, DIE MIT DER WEBSITE VERLINKT SIND, UND WIR ÜBERNEHMEN KEINE HAFTUNG ODER VERANTWORTUNG FÜR (1) FEHLER, IRRTÜMER ODER UNGENAUIGKEITEN VON INHALTEN UND MATERIALIEN, (2) PERSONEN- ODER SACHSCHÄDEN JEGLICHER ART, DIE SICH AUS IHREM ZUGRIFF AUF UND IHRER NUTZUNG DER WEBSITE ODER DER DIENSTE ERGEBEN, (3) JEGLICHEN UNBEFUGTEN ZUGRIFF AUF ODER DIE NUTZUNG UNSERER SICHEREN SERVER UND/ODER ALLER DARIN GESPEICHERTEN PERSÖNLICHEN INFORMATIONEN UND/ODER FINANZINFORMATIONEN.",
+    "p8_3": "IN KEINEM FALL SIND WIR ODER UNSERE DIREKTOREN, MITARBEITER ODER VERTRETER IHNEN ODER DRITTEN GEGENÜBER FÜR DIREKTE, INDIREKTE, FOLGE-, BEISPIELHAFTE, ZUFÄLLIGE, BESONDERE ODER STRAFENDE SCHÄDEN HAFTBAR, EINSCHLIESSLICH ENTGANGENEN GEWINNS, ENTGANGENER EINNAHMEN, DATENVERLUST ODER ANDERER SCHÄDEN, DIE SICH AUS IHRER NUTZUNG DER WEBSITE ODER DER DIENSTE ERGEBEN, SELBST WENN WIR AUF DIE MÖGLICHKEIT SOLCHER SCHÄDEN HINGEWIESEN WURDEN.",
+    "h2_9": "9. SCHADLOSHALTUNG",
+    "p9_1": "Sie erklären sich damit einverstanden, uns, einschließlich unserer Tochtergesellschaften, verbundenen Unternehmen und all unserer jeweiligen leitenden Angestellten, Vertreter, Partner und Mitarbeiter, von jeglichem Verlust, Schaden, Haftung, Anspruch oder Forderung, einschließlich angemessener Anwaltsgebühren und -kosten, die von Dritten aufgrund oder infolge von: (1) Ihren Beiträgen; (2) der Nutzung der Dienste; (3) der Verletzung dieser Nutzungsbedingungen; (4) jeder Verletzung Ihrer Zusicherungen und Gewährleistungen, die in diesen Nutzungsbedingungen dargelegt sind; (5) Ihrer Verletzung der Rechte Dritter, einschließlich, aber nicht beschränkt auf geistige Eigentumsrechte; oder (6) jeder offenkundig schädlichen Handlung gegenüber einem anderen Benutzer der Website oder der Dienste, mit dem Sie über die Website verbunden waren, zu verteidigen, zu entschädigen und schadlos zu halten. Ungeachtet des Vorstehenden behalten wir uns das Recht vor, auf Ihre Kosten die ausschließliche Verteidigung und Kontrolle über jede Angelegenheit zu übernehmen, für die Sie uns entschädigen müssen, und Sie erklären sich damit einverstanden, auf Ihre Kosten mit unserer Verteidigung solcher Ansprüche zusammenzuarbeiten.",
+    "h2_10": "10. KONTAKTIEREN SIE UNS",
+    "p10_1": "Um eine Beschwerde bezüglich der Website oder der Dienste zu lösen oder weitere Informationen zur Nutzung der Website oder der Dienste zu erhalten, kontaktieren Sie uns bitte unter:",
+    "p10_2": "{siteName}<br />z.Hd.: Rechtsabteilung<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tirana, Albanien<br />E-Mail: info@{SITE_DOMAIN}"
   }
 }

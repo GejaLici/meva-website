@@ -75,6 +75,7 @@
   "NotFound": {
     "title": "404 - Faqja Nuk u Gjet",
     "description": "Na vjen keq, faqja që po kërkoni nuk ekziston ose është zhvendosur.",
+    "suggestion": "Mund të ktheheni në faqen kryesore ose të kontrolloni URL-në për gabime.",
     "homeButton": "Kthehu në Faqen Kryesore"
   },
   "Testimonials": {
@@ -185,5 +186,190 @@
     "journeyTitle": "Filloni Udhëtimin Tuaj të Transformimit",
     "journeyP1": "Ju ftojmë të caktoni një konsultë gjithëpërfshirëse me ekspertët tanë mjekësorë sot. Hidhni hapin e parë vendimtar drejt arritjes së aspiratave tuaja estetike në një mjedis të sigurt, mbështetës dhe profesional.",
     "journeyButton": "Rezervoni Konsultën Tuaj Konfidenciale"
+  },
+  "ContactPage": {
+    "metaTitle": "Kontaktoni {siteName} | Kërkesa & Konsulta",
+    "metaDescription": "Kontaktoni {siteName} për kërkesa nga ekspertë, konsultime konfidenciale, ose për të rezervuar një takim. Ekipi ynë profesional është i gatshëm t'ju ndihmojë me nevojat tuaja estetike dhe dentare.",
+    "title": "Na Kontaktoni",
+    "description": "Ne jemi të përkushtuar të ofrojmë informacion dhe mbështetje gjithëpërfshirëse. Nëse keni ndonjë pyetje ose dëshironi të diskutoni qëllimet tuaja estetike, ju lutemi plotësoni formularin e sigurt më poshtë, ose kontaktoni direkt ekipin tonë profesional. Ne jemi këtu për t'ju ndihmuar.",
+    "detailsTitle": "Detajet e Klinikës Sonë & Kontakti Direkt",
+    "addressLabel": "Adresa:",
+    "addressValue": "Rruga \"Sami Frashëri\", Nr. 123, Tiranë, Shqipëri",
+    "phoneLabel": "Telefoni:",
+    "emailLabel": "Email:",
+    "hoursTitle": "Orari i Punës së Klinikës",
+    "hoursWeekdays": "E hënë - E premte: 09:00 - 18:00",
+    "hoursSaturday": "E shtunë: 09:00 - 14:00",
+    "hoursSunday": "E diel: Mbyllur",
+    "formTitle": "Formular i Sigurt për Kërkesa"
+  },
+  "FaqPage": {
+    "metaTitle": "Pyetje të Shpeshta | {siteName}",
+    "metaDescription": "Gjeni përgjigje të plota për pyetjet e zakonshme rreth procedurave estetike, konsultimeve, rikuperimit dhe rrugëve të kujdesit në {siteName}.",
+    "title": "Pyetje të Shpeshta (FAQ)",
+    "description": "Gjeni përgjigje të plota për pyetjet e shpeshta lidhur me shërbimet tona të specializuara, procedurat e avancuara, përgatitjen para-operative dhe kujdesin pas trajtimit në {siteName}.",
+    "noResults": "Për momentin nuk ka pyetje të shpeshta. Ju lutemi kontaktoni direkt klinikën tonë nëse keni pyetje specifike."
+  },
+  "FAQ": {
+    "faq-1": {
+      "question": "Çfarë duhet të pres gjatë konsultës sime të parë në {siteName}?",
+      "answer": "<p>Konsulta juaj fillestare në {siteName} është një takim konfidencial dhe gjithëpërfshirës me një nga specialistët tanë mjekësorë ekspertë. Gjatë kësaj seance, ne do të diskutojmë tërësisht objektivat tuaja estetike, do të kryejmë një vlerësim të kujdesshëm të historisë suaj mjekësore përkatëse dhe do të shpjegojmë qartë opsionet më të përshtatshme të trajtimit në dispozicion. Kjo kohë e dedikuar ju lejon të bëni çdo pyetje dhe të fitoni një kuptim të plotë të rezultateve të mundshme, përfitimeve, rreziqeve specifike dhe procesit të parashikuar të rimëkëmbjes për procedurën tuaj të propozuar. Qëllimi ynë është t'ju fuqizojmë me të gjithë informacionin e nevojshëm për të marrë një vendim të mirë-informuar për kujdesin tuaj.</p>"
+    },
+    "faq-2": {
+      "question": "Sa zgjat periudha tipike e rimëkëmbjes për procedurat estetike?",
+      "answer": "<p>Periudhat e rimëkëmbjes ndryshojnë ndjeshëm në varësi të llojit specifik dhe invazivitetit të procedurës së kryer. Trajtimet jo-invazive, siç janë disa trajtime të fytyrës ose peeling kimik i lehtë, mund të përfshijnë pak ose aspak kohë rikuperimi, duke lejuar një kthim të menjëhershëm në aktivitetet e përditshme. Procedurat minimalisht invazive si mbushësit e injektueshëm mund të rezultojnë në ënjtje të lehtë ose mavijosje për disa ditë. Procedurat kirurgjikale, si një lifting i fytyrës ose abdominoplastika, do të kërkojnë një periudhë më të gjatë rikuperimi, potencialisht disa javë, për shërim të plotë. Në {siteName}, ne ofrojmë udhëzime të detajuara, të personalizuara për kujdesin pas operacionit dhe mbështetje të dedikuar për të siguruar një proces rimëkëmbjeje të qetë, të rehatshëm dhe efikas.</p>"
+    },
+    "faq-3": {
+      "question": "A janë rezultatet e trajtimeve estetike të përhershme?",
+      "answer": "<p>Jetëgjatësia e rezultateve nga trajtimet estetike varet shumë nga procedura specifike e ndërmarrë, faktorët individualë të pacientit si gjenetika dhe stili i jetesës, dhe mirëmbajtja e vazhdueshme. Ndryshimet kirurgjikale, si rinoplastika ose zmadhimi i gjoksit me implante, në përgjithësi ofrojnë ndryshime strukturore afatgjata, shpesh të konsideruara të përhershme, megjithëse plakja natyrale do të vazhdojë. Trajtimet jo-kirurgjikale si mbushësit dermalë ose injeksionet e toksinës botulinike janë të përkohshme dhe zakonisht kërkojnë trajtime pasuese në intervale të rregullta (p.sh., çdo 6-18 muaj për mbushësit, 3-4 muaj për Botox) për të ruajtur efektin e dëshiruar. Faktorët e stilit të jetesës duke përfshirë dietën, ekspozimin në diell, regjimin e kujdesit të lëkurës dhe pirjen e duhanit gjithashtu ndikojnë ndjeshëm në qëndrueshmërinë e rezultateve. Specialistët tanë në {siteName} do t'ju ofrojnë një pritshmëri realiste të jetëgjatësisë së rezultateve gjatë konsultës suaj.</p>"
+    },
+    "faq-4": {
+      "question": "Cilat janë rreziqet e mundshme të lidhura me procedurat estetike?",
+      "answer": "<p>Të gjitha procedurat mjekësore dhe kirurgjikale mbartin një nivel të caktuar rreziku të natyrshëm, megjithëse komplikimet serioze janë të rralla kur trajtimet estetike kryhen nga profesionistë mjekësorë të kualifikuar dhe me përvojë në një institucion të akredituar si {siteName}. Rreziqet e mundshme, të cilat ndryshojnë sipas procedurës, mund të përfshijnë mavijosje, ënjtje, siklet, infeksion, gjakderdhje, dhëmbëza, ose një reaksion advers ndaj anestezisë ose materialeve të injektuara. Gjatë konsultës suaj gjithëpërfshirëse para trajtimit, specialistët tanë do të diskutojnë tërësisht të gjitha rreziqet dhe përfitimet e mundshme specifike për procedurën tuaj të zgjedhur, duke siguruar që ju të keni një kuptim të plotë përpara se të vazhdoni. Ne i japim përparësi sigurisë së pacientit mbi të gjitha dhe i përmbahemi protokolleve më të rrepta mjekësore.</p>"
+    },
+    "faq-5": {
+      "question": "Si e përcaktoj se cila procedurë estetike është e duhura për mua?",
+      "answer": "<p>Zgjedhja e procedurës estetike më të përshtatshme është një proces vendimmarrës thelbësor dhe bashkëpunues i ndërmarrë me specialistin tuaj në {siteName}. Ai fillon me një konsultë të detajuar ku ekspertët tanë do të dëgjojnë me vëmendje shqetësimet tuaja, aspiratat estetike dhe pritshmëritë. Më pas do të kryejmë një vlerësim të thellë të karakteristikave tuaja individuale anatomike, llojit të lëkurës dhe shëndetit të përgjithshëm. Bazuar në këtë vlerësim gjithëpërfshirës, ne do të rekomandojmë opsionet më të përshtatshme dhe efektive të trajtimit të përshtatura për të arritur rezultatin tuaj të dëshiruar, me pamje natyrale. Ne jemi të përkushtuar ndaj edukimit të pacientit, duke siguruar që ju të merrni të gjithë informacionin e nevojshëm për të marrë një vendim të informuar dhe të sigurt në lidhje me rrugën tuaj të kujdesit.</p>"
+    }
+  },
+  "GalleryPage": {
+    "metaTitle": "Galeria e Pacientëve Para & Pas | {siteName}",
+    "metaDescription": "Shikoni transformimet e jashtëzakonshme të arritura nga ekipi ynë mjekësor ekspert në {siteName}. Eksploroni rezultatet reale të pacientëve nga procedurat tona të avancuara estetike dhe dentare.",
+    "title": "Galeria e Pacientëve Para & Pas",
+    "description": "Dëshmoni fuqinë transformuese të ekspertizës sonë të avancuar estetike dhe dentare. Eksploroni rezultatet reale të pacientëve të arritura në {siteName}.",
+    "noResults": "Galeria jonë e pacientëve po përditësohet aktualisht me transformime të reja. Ju lutemi kthehuni së shpejti për të parë rezultatet e jashtëzakonshme të arritura nga specialistët tanë në {siteName}.",
+    "before": "PARA",
+    "after": "PAS"
+  },
+  "Gallery": {
+    "gallery-1": { "procedureName": "Rinoplastika (Operacioni i Hundës)", "description": "Përmirësim i ndjeshëm në urën e hundës dhe definimin e majës." },
+    "gallery-2": { "procedureName": "Zmadhimi i Gjoksit", "description": "Vëllim i shtuar dhe formë e përmirësuar e gjoksit, duke arritur një pamje natyrale." },
+    "gallery-3": { "procedureName": "Fasetat E-Max", "description": "Transformim i plotë i buzëqeshjes me ngjyrë, formë dhe rreshtim të përmirësuar." },
+    "gallery-4": { "procedureName": "Lifting i Fytyrës (Rhytidectomy)", "description": "Pamje e rinovuar e fytyrës me lëkurë të varur dhe rrudha të reduktuara." },
+    "gallery-5": { "procedureName": "Zmadhimi i Buzëve", "description": "Buzë më të plota dhe të definuara mirë të arritura me mbushës dermalë." },
+    "gallery-6": { "procedureName": "Transplantimi i Flokëve", "description": "Restaurim i ndjeshëm i dendësisë së flokëve në zonat e trajtuara." }
+  },
+  "BlogPage": {
+    "metaTitle": "Blogu i Ekspertëve | {siteName}",
+    "metaDescription": "Qëndroni të informuar me përparimet më të fundit, këshillat e ekspertëve dhe artikujt insightful nga fronti i kujdesit estetik dhe dentar, të kuruar nga profesionistët në {siteName}.",
+    "title": "Blogu ynë i Vështrimeve të Ekspertëve",
+    "description": "Qëndroni të informuar me përparimet më të fundit, këshillat e ekspertëve dhe artikujt insightful nga fronti i kujdesit estetik dhe dentar, të kuruar nga profesionistët në {siteName}.",
+    "noPosts": "Nuk ka postime në blog për momentin. Ju lutemi kthehuni më vonë, ose sigurohuni që koleksioni juaj 'blogPosts' në Firestore të jetë i populluar me të dhëna të vlefshme.",
+    "readMore": "Lexo më shumë"
+  },
+  "BlogPostPage": {
+    "metaTitle": "{postTitle} | Blogu i {siteName}",
+    "metaDescription": "{postExcerpt}",
+    "postNotFoundTitle": "Postimi nuk u gjet | {siteName}",
+    "postNotFoundDescription": "Postimi i kërkuar në blog nuk u gjet në {siteName}.",
+    "publishedOn": "Publikuar më {date}",
+    "by": "Nga {author}",
+    "noContent": "Ky postim nuk ka ende përmbajtje. Ju lutemi kthehuni më vonë për përditësime.",
+    "backButton": "Kthehu te të gjithë Artikujt e Blogut"
+  },
+  "ServiceDetailsPage": {
+    "aboutTitle": "Rreth {serviceName}",
+    "whatToExpectTitle": "Çfarë të Presësh në {siteName}",
+    "whatToExpectP1": "Në {siteName}, udhëtimi juaj fillon me një konsultë gjithëpërfshirëse ku specialistët tanë zhvillojnë një plan trajtimi të personalizuar të përshtatur për nevojat tuaja specifike dhe rezultatet e dëshiruara për {serviceName}. Ne përdorim teknika moderne, të bazuara në prova dhe teknologji të fundit. Angazhimi ynë shtrihet në kujdesin e përpiktë pas operacionit dhe ndjekjen, duke siguruar rezultate optimale, komoditetin tuaj dhe një proces të qetë rikuperimi.",
+    "whatToExpectL1": "Konsultë fillestare e plotë, konfidenciale me një specialist.",
+    "whatToExpectL2": "Plan trajtimi i zhvilluar posaçërisht bazuar në vlerësimin gjithëpërfshirës.",
+    "whatToExpectL3": "Zbatimi i teknologjisë së avancuar mjekësore dhe metodave të provuara procedurale.",
+    "whatToExpectL4": "Kujdes dhe ndjekje e dedikuar dhe e vëmendshme pas operacionit.",
+    "consultationButton": "Rezervoni një Konsultë Konfidenciale",
+    "serviceNotFoundTitle": "Shërbimi nuk u gjet | {siteName}",
+    "serviceNotFoundDescription": "Shërbimi i kërkuar nuk u gjet në {siteName}."
+  },
+  "ServicesOverviewPage": {
+    "metaTitle": "Shërbimet Tona | {siteName}",
+    "metaDescription": "Eksploroni gamën e gjerë të shërbimeve të avancuara estetike dhe dentare të ofruara në {siteName}. Zbuloni trajtime të përshtatura nga ekspertët për të përmirësuar bukurinë dhe mirëqenien tuaj.",
+    "title": "Shërbimet Tona të Avancuara Estetike & Dentare",
+    "description": "Eksploroni spektrin e gjerë të trajtimeve të specializuara estetike dhe dentare të ofruara në {siteName}. Çdo shërbim është projektuar me përpikëri për t'ju ndihmuar të arrini objektivat tuaja të veçanta të bukurisë dhe mirëqenies. Ekipi ynë mjekësor ekspert është i përkushtuar të ofrojë kujdes të avancuar, të personalizuar dhe të japë rezultate të jashtëzakonshme dhe afatgjata."
+  },
+  "DentalServicesPage": {
+    "metaTitle": "Shërbime Dentare Gjithëpërfshirëse | {siteName}",
+    "metaDescription": "Eksploroni gamën tonë të gjerë të shërbimeve dentare eksperte në {siteName}, nga trajtimet e avancuara estetike dhe ortodoncia te kirurgjia orale dhe kujdesi i specializuar pediatrik.",
+    "title": "Shërbime Dentare Gjithëpërfshirëse",
+    "description": "Zbuloni gamën tonë të gjerë të trajtimeve të specializuara dentare në {siteName}, të dizajnuara për të përmirësuar buzëqeshjen tuaj dhe për të mbrojtur shëndetin tuaj oral. Ekipi ynë ekspert dentar ofron gjithçka, nga përmirësimet e avancuara kozmetike dhe ortodoncia te procedurat gjithëpërfshirëse kirurgjikale dhe kujdesi i dedikuar pediatrik.",
+    "exploreButton": "Eksploroni {categoryName}",
+    "noResults": "Nuk ka kategori shërbimesh dentare të disponueshme për momentin. Ju lutemi kontaktoni {siteName} për informacionet më të fundit."
+  },
+  "ServiceCategoryPage": {
+    "categoryNotFoundTitle": "Kategoria nuk u gjet | {siteName}",
+    "categoryNotFoundDescription": "Kategoria e kërkuar e shërbimit nuk u gjet në {siteName}.",
+    "noResults": "Nuk ka shërbime të disponueshme në këtë kategori për momentin. Ju lutemi kontaktoni {siteName} për më shumë detaje."
+  },
+  "PrivacyPolicyPage": {
+    "metaTitle": "Politika e Privatësisë | {siteName}",
+    "metaDescription": "Politika zyrtare e Privatësisë për {siteName}. Kuptoni se si ne mbledhim, përdorim dhe mbrojmë informacionin tuaj personal në përputhje me rregulloret e mbrojtjes së të dhënave.",
+    "title": "Politika e Privatësisë",
+    "lastUpdated": "Përditësuar së fundi: {date}",
+    "p1": "Mirë se vini në {siteName} (në tekstin e mëtejmë i referuar si \"ne\", \"neve\", ose \"tonë\"). Ne jemi të përkushtuar me vendosmëri për të mbrojtur informacionin tuaj personal dhe të drejtën tuaj themelore për privatësi. Kjo Politikë e Privatësisë rregullon aksesin dhe përdorimin tuaj të uebsajtit tonë, {SITE_DOMAIN}, duke përfshirë çdo formë tjetër mediash, kanalesh mediatike, uebsajtesh mobile, ose aplikacionesh mobile të lidhura me të (kolektivisht, \"Sajti\"). Nëse keni ndonjë pyetje ose shqetësim në lidhje me këtë njoftim privatësie, ose praktikat tona në lidhje me informacionin tuaj personal, ju lutemi na kontaktoni në info@{SITE_DOMAIN}.",
+    "h2_1": "1. INFORMACIONI QË MBLEDHIM",
+    "p2_1": "Ne mbledhim informacion personal që ju na jepni vullnetarisht kur regjistroheni në Sajt, shprehni interes për të marrë informacion rreth nesh ose produkteve dhe shërbimeve tona, kur merrni pjesë në aktivitete në Sajt, ose ndryshe kur na kontaktoni.",
+    "p2_2": "Informacioni personal që ne mbledhim varet nga konteksti i ndërveprimeve tuaja me ne dhe Sajtin, zgjedhjet që bëni, dhe produktet dhe veçoritë që përdorni. Informacioni personal që mund të mbledhim përfshin, por nuk kufizohet në: emra të plotë; numra telefoni; adresa emaili; adresa postare; tituj profesionalë; preferencat e kontaktit; të dhëna autentifikimi; adresa faturimi; dhe informacione të tjera të ngjashme të nevojshme për ofrimin e shërbimeve dhe komunikimeve tona.",
+    "h2_2": "2. SI E PËRDORIM INFORMACIONIN TUAJ",
+    "p3_1": "Ne përdorim informacionin personal të mbledhur përmes Sajtit tonë për një sërë qëllimesh legjitime biznesi siç përshkruhet më poshtë. Ne përpunojmë informacionin tuaj personal për këto qëllime duke u mbështetur në interesat tona legjitime të biznesit, për të hyrë në ose për të kryer një kontratë me ju, me pëlqimin tuaj të shprehur, dhe/ose për pajtueshmërinë me detyrimet tona ligjore.",
+    "p3_l1": "Për të lehtësuar krijimin e llogarisë dhe procesin e hyrjes.",
+    "p3_l2": "Për të postuar dëshmi me pëlqimin tuaj paraprak.",
+    "p3_l3": "Për të kërkuar feedback dhe për t'ju kontaktuar në lidhje me përdorimin tuaj të Sajtit.",
+    "p3_l4": "Për të mundësuar komunikimet ndërmjet përdoruesve me pëlqimin e secilit përdorues.",
+    "p3_l5": "Për të menaxhuar llogaritë e përdoruesve dhe për të ruajtur saktësinë e tyre.",
+    "p3_l6": "Për t'ju dërguar informacion administrativ, siç është informacioni në lidhje me shërbimet tona, ndryshimet në termat, kushtet dhe politikat tona.",
+    "p3_l7": "Për të mbrojtur Shërbimet tona, duke përfshirë monitorimin dhe parandalimin e mashtrimit.",
+    "p3_l8": "Për të zbatuar termat, kushtet dhe politikat tona për qëllime biznesi, për të përmbushur kërkesat ligjore dhe rregullatore, ose në lidhje me detyrimet tona kontraktuale.",
+    "p3_l9": "Për t'iu përgjigjur kërkesave ligjore dhe për të parandaluar dëmin siç kërkohet nga ligji në fuqi.",
+    "p3_l10": "Për të përmbushur dhe menaxhuar kërkesat tuaja për shërbime ose takime.",
+    "p3_l11": "Për të dorëzuar dhe lehtësuar dorëzimin e shërbimeve tek përdoruesi.",
+    "p3_l12": "Për t'iu përgjigjur pyetjeve të përdoruesve dhe për të ofruar mbështetje gjithëpërfshirëse për përdoruesit.",
+    "h2_3": "3. A DO TË NDASHET INFORMACIONI JUAJ ME DIKË?",
+    "p4_1": "Ne e ndajmë informacionin tuaj personal vetëm me pëlqimin tuaj të shprehur, për të respektuar ligjet në fuqi, për t'ju ofruar shërbimet tona, për të mbrojtur të drejtat tuaja, ose për të përmbushur detyrime legjitime biznesi. Ne mund të përpunojmë ose të ndajmë të dhëna bazuar në bazën ligjore të mëposhtme: Pëlqimi, Interesat Legjitime, Kryerja e një Kontrate, Detyrimet Ligjore, Interesat Vitale.",
+    "h2_4": "4. A PËRDORIM COOKIES DHE TEKNOLOGJI TË TJERA GJURMUESE?",
+    "p5_1": "Ne mund të përdorim cookies dhe teknologji të ngjashme gjurmuese (siç janë web beacons dhe pixels) për të aksesuar ose ruajtur informacion. Informacion specifik se si ne përdorim teknologji të tilla dhe se si mund të refuzoni disa cookies është paraqitur në Njoftimin tonë të veçantë për Cookies (nëse aplikohet) ose do të detajohet këtu nëse nuk ofrohet një njoftim i veçantë.",
+    "h2_5": "5. SA GJATË E MBAJMË INFORMACIONIN TUAJ?",
+    "p6_1": "Ne do ta mbajmë informacionin tuaj personal vetëm për aq kohë sa është e nevojshme për qëllimet e përcaktuara në këtë politikë privatësie, përveç nëse një periudhë më e gjatë mbajtjeje kërkohet ose lejohet nga ligji (si taksat, kontabiliteti, ose kërkesa të tjera ligjore ose rregullatore). Asnjë qëllim në këtë politikë nuk do të kërkojë që ne ta mbajmë informacionin tuaj personal për më gjatë se periudha kohore në të cilën përdoruesit kanë një llogari me ne plus një periudhë e arsyeshme për qëllime arkivore ose ligjore.",
+    "h2_6": "6. SI E MBAJMË TË SIGURT INFORMACIONIN TUAJ?",
+    "p7_1": "Ne kemi zbatuar masa të përshtatshme teknike dhe organizative të sigurisë të dizajnuara për të mbrojtur sigurinë e çdo informacioni personal që përpunojmë. Këto masa synojnë të parandalojnë aksesin, zbulimin, ndryshimin ose shkatërrimin e paautorizuar të të dhënave tuaja personale. Megjithatë, pavarësisht masave tona mbrojtëse dhe përpjekjeve të vazhdueshme për të siguruar informacionin tuaj, asnjë transmetim elektronik përmes internetit ose teknologji e ruajtjes së informacionit nuk mund të garantohet të jetë 100% i sigurt. Prandaj, ne nuk mund të premtojmë ose garantojmë se hakerat, kriminelët kibernetikë, ose palë të tjera të paautorizuara nuk do të jenë në gjendje të mposhtin sigurinë tonë dhe të mbledhin, aksesojnë, vjedhin ose modifikojnë në mënyrë të papërshtatshme informacionin tuaj. Transmetimi i informacionit personal në dhe nga Sajti ynë është në rrezikun tuaj.",
+    "h2_7": "7. CILAT JANË TË DREJTAT TUAJA TË PRIVATËSISË?",
+    "p8_1": "Në disa rajone, si Zona Ekonomike Evropiane (ZEE) dhe Mbretëria e Bashkuar (MB), ju keni të drejta të caktuara sipas ligjeve të zbatueshme të mbrojtjes së të dhënave. Këto mund të përfshijnë të drejtën (i) për të kërkuar akses dhe për të marrë një kopje të informacionit tuaj personal, (ii) për të kërkuar korrigjimin ose fshirjen e informacionit tuaj personal; (iii) për të kufizuar përpunimin e informacionit tuaj personal; dhe (iv) nëse aplikohet, për portabilitetin e të dhënave. Në rrethana të caktuara, ju mund të keni gjithashtu të drejtën të kundërshtoni përpunimin e informacionit tuaj personal. Për të bërë një kërkesë të tillë, ju lutemi përdorni detajet e kontaktit të dhëna më poshtë.",
+    "h2_8": "8. PËRDITËSIMET E KËSAJ POLITIKE",
+    "p9_1": "Ne mund ta përditësojmë këtë politikë privatësie herë pas here për të reflektuar ndryshimet në praktikat tona ose për arsye të tjera operacionale, ligjore ose rregullatore. Versioni i përditësuar do të tregohet me një datë të përditësuar \"Rishikuar\" ose \"Përditësuar së fundi\" dhe versioni i përditësuar do të jetë efektiv sapo të jetë i aksesueshëm në Sajt. Ne ju inkurajojmë të rishikoni shpesh këtë politikë privatësie për të qenë të informuar se si po e mbrojmë informacionin tuaj.",
+    "h2_9": "9. SI MUND TË NA KONTAKTONI PËR KËTË POLITIKË?",
+    "p10_1": "Nëse keni pyetje, komente, ose shqetësime në lidhje me këtë politikë privatësie, ose praktikat tona të të dhënave, mund të kontaktoni Oficerin tonë të Mbrojtjes së të Dhënave me email në info@{SITE_DOMAIN} ose të na kontaktoni me postë në:",
+    "p10_2": "{siteName}<br />Për vëmendje: Oficeri i Mbrojtjes së të Dhënave<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tiranë, Shqipëri"
+  },
+  "TermsOfServicePage": {
+    "metaTitle": "Kushtet e Shërbimit | {siteName}",
+    "metaDescription": "Kushtet zyrtare të Shërbimit për {siteName}. Kuptoni rregullat dhe udhëzimet për përdorimin e uebsajtit dhe shërbimeve tona.",
+    "title": "Kushtet e Shërbimit",
+    "lastUpdated": "Përditësuar së fundi: {date}",
+    "h2_1": "1. MARRËVESHJA PËR KUSHTET",
+    "p1_1": "Këto Kushte të Shërbimit (\"Kushtet\") përbëjnë një marrëveshje ligjërisht të detyrueshme të bërë midis jush, qoftë personalisht ose në emër të një entiteti (\"ju\" ose \"Përdorues\"), dhe {siteName} (\"ne\", \"neve\", ose \"tonë\"), në lidhje me aksesin dhe përdorimin tuaj të uebsajtit {SITE_DOMAIN} si dhe çdo forme tjetër mediatike, kanali mediatik, uebsajti mobil, ose aplikacioni mobil i lidhur me të (kolektivisht, \"Sajti\" dhe \"Shërbimet\").",
+    "p1_2": "Ju pranoni dhe bini dakord që duke hyrë në Sajt dhe/ose duke përdorur Shërbimet tona, ju keni lexuar, kuptuar dhe bini dakord të jeni të lidhur nga të gjitha këto Kushte të Shërbimit. Nëse nuk jeni dakord me të gjitha këto Kushte të Shërbimit, atëherë ju jeni shprehimisht të ndaluar të përdorni Sajtin dhe Shërbimet tona, dhe duhet të ndërprisni përdorimin menjëherë.",
+    "p1_3": "Kushtet dhe rregulloret shtesë ose dokumentet që mund të postohen në Sajt herë pas here, përfshihen shprehimisht këtu me anë të referencës.",
+    "h2_2": "2. TË DREJTAT E PRONËSISË INTELEKTUALE",
+    "p2_1": "Përveçse kur tregohet ndryshe, Sajti dhe Shërbimet janë pronë e jona. I gjithë kodi burimor, bazat e të dhënave, funksionaliteti, softueri, dizajnet e uebsajtit, audio, video, teksti, fotografitë dhe grafikat në Sajt (kolektivisht, \"Përmbajtja\") dhe markat tregtare, markat e shërbimit dhe logot e përfshira në të (\"Markat\") janë në pronësi ose të kontrolluara nga ne ose të licencuara për ne. Ato mbrohen nga ligjet e të drejtës së autorit dhe markës tregtare dhe të drejta të tjera të ndryshme të pronësisë intelektuale dhe ligje të konkurrencës së pandershme të Shqipërisë, juridiksioneve të huaja dhe konventave ndërkombëtare. Përveçse kur parashikohet shprehimisht në këto Kushte, asnjë pjesë e Sajtit, Shërbimeve, Përmbajtjes ose Markave nuk mund të kopjohet, riprodhohet, grumbullohet, ripublikohet, ngarkohet, postohet, shfaqet publikisht, kodohet, përkthehet, transmetohet, shpërndahet, shitet, licencohet ose shfrytëzohet ndryshe për çfarëdo qëllimi komercial, pa lejen tonë të shprehur paraprake me shkrim.",
+    "h2_3": "3. PËRFAQËSIMET DHE GARANCITË E PËRDORUESIT",
+    "p3_1": "Duke përdorur Sajtin dhe Shërbimet, ju përfaqësoni dhe garantoni se: (1) të gjitha informacionet e regjistrimit që paraqisni do të jenë të vërteta, të sakta, aktuale dhe të plota; (2) ju do të ruani saktësinë e këtij informacioni dhe do ta përditësoni menjëherë informacionin e regjistrimit sipas nevojës; (3) ju keni aftësinë ligjore dhe bini dakord të respektoni këto Kushte të Shërbimit; (4) ju nuk jeni i mitur në juridiksionin ku banoni, ose nëse jeni i mitur, keni marrë leje prindërore për të përdorur Sajtin; (5) ju nuk do të aksesoni Sajtin ose Shërbimet përmes mjeteve të automatizuara ose jo-njerëzore, qoftë përmes një roboti, skripti, ose ndryshe; (6) ju nuk do të përdorni Sajtin ose Shërbimet për ndonjë qëllim të paligjshëm ose të paautorizuar; dhe (7) përdorimi juaj i Sajtit ose Shërbimeve nuk do të shkelë asnjë ligj ose rregullore të zbatueshme.",
+    "h2_4": "4. MOHIMI MJEKËSOR",
+    "p4_1": "Informacioni i ofruar në këtë Sajt është vetëm për qëllime informative dhe arsimore të përgjithshme dhe nuk përbën, dhe nuk duhet të interpretohet si, këshillë mjekësore, diagnozë, ose trajtim. Gjithmonë kërkoni këshillën e mjekut tuaj ose të një ofruesi tjetër të kualifikuar të shëndetit për çdo pyetje që mund të keni në lidhje me një gjendje mjekësore ose opsionet e propozuara të trajtimit. Asnjëherë mos shpërfillni këshillën mjekësore profesionale ose mos vononi në kërkimin e saj për shkak të diçkaje që keni lexuar në këtë Sajt.",
+    "p4_2": "Mbështetja në çdo informacion të ofruar nga <a>{siteName}</a>, punonjësit e tij, kontraktorët, të tjerët që shfaqen në Sajt me ftesë të <a>{siteName}</a>, ose vizitorë të tjerë të Sajtit është tërësisht në rrezikun tuaj. <a>{siteName}</a> nuk rekomandon ose miraton ndonjë test, mjek, produkt, procedurë, opinion, ose informacion tjetër specifik që mund të përmendet në Sajt.",
+    "h2_5": "5. AKTIVITETET E NDALUARA",
+    "p5_1": "Ju nuk mund të aksesoni ose përdorni Sajtin ose Shërbimet për ndonjë qëllim tjetër përveç atij për të cilin ne i vëmë në dispozicion Sajtin dhe Shërbimet. Sajti dhe Shërbimet nuk mund të përdoren në lidhje me ndonjë përpjekje komerciale përveç atyre që janë specifikisht të miratuara ose të aprovuara nga ne me shkrim.",
+    "p5_2": "Si përdorues i Sajtit, ju bini dakord të mos angazhoheni në aktivitete të ndaluara. Një listë e plotë e aktiviteteve të ndaluara mund të gjendet në dokumentet tona të plota online.",
+    "p5_3": "Çdo përdorim i Sajtit ose Shërbimeve në shkelje të sa më sipër shkel këto Kushte të Shërbimit dhe mund të rezultojë, ndër të tjera, në përfundimin ose pezullimin e të drejtave tuaja për të përdorur Sajtin dhe Shërbimet.",
+    "h2_6": "6. AFATI DHE PËRFUNDIMI",
+    "p6_1": "Këto Kushte të Shërbimit do të mbeten në fuqi të plotë ndërsa ju përdorni Sajtin ose Shërbimet. PA KUFIZUAR ASNJË DISPOZITË TJETËR TË KËTYRE KUSHTEVE TË SHËRBIMIT, NE REZERVOJMË TË DREJTËN, NË DISKRECIONIN TONË TË VETËM DHE PA NJOFTIM OSE PËRGJEGJËSI, TË MOhojmë AKSESIN DHE PËRDORIMIN E SAJTIT DHE SHËRBIMEVE (DUKE PËRFSHIRË BLOKIMIN E DISA ADRESAVE IP), PËR ÇDO PERSON PËR ÇDO ARSYE OSE PA ARSYE, DUKE PËRFSHIRË PA KUFIZIM PËR SHKELJE TË ÇDO PËRFAQËSIMI, GARANCIE, OSE ZOTIMI TË PËRFSHIRË NË KËTO KUSHTE TË SHËRBIMIT OSE TË ÇDO LIGJI OSE RREGULLOREJE TË ZBATUESHME. NE MUND TË PËRFUNDOJMË PËRDORIMIN OSE PJESËMARRJEN TUAJ NË SAJT DHE SHËRBIME OSE TË FSHIJIM LLOGARINË TUAJ DHE ÇDO PËRMBAJTJE OSE INFORMACION QË KENI POSTUAR NË ÇDO KOHË, PA PARALAJMËRIM, NË DISKRECIONIN TONË TË VETËM.",
+    "h2_7": "7. LIGJI I ZBATUESHËM",
+    "p7_1": "Këto Kushte të Shërbimit dhe përdorimi juaj i Sajtit dhe Shërbimeve rregullohen dhe interpretohen në përputhje me ligjet e Shqipërisë të zbatueshme për marrëveshjet e bëra dhe që do të kryhen tërësisht brenda Shqipërisë, pa marrë parasysh parimet e saj të konfliktit të ligjeve.",
+    "h2_8": "8. MOHIMI I PËRGJEGJËSISË",
+    "p8_1": "SAJTI DHE SHËRBIMET OFROHEN <strong>SIÇ JANË</strong> DHE <strong>SIÇ JANË NË DISPOZICION</strong>. JU PRANONI QË PËRDORIMI JUAJ I SAJTIT DHE SHËRBIMEVE TONA DO TË JETË NË RREZIKUN TUAJ TË VETËM. NË MASËN MË TË PLOTË TË LEJUAR NGA LIGJI, NE MOhojmë TË GJITHA GARANCITË, TË SHPREHURA OSE TË NËNKUPTUARA, NË LIDHJE ME SAJTIN DHE SHËRBIMET DHE PËRDORIMIN TUAJ TË TYRE, DUKE PËRFSHIRË, PA KUFIZIM, GARANCITË E NËNKUPTUARA TË TREGTUESHMËRISË, PËRSHTATSHMËRISË PËR NJË QËLLIM TË CAKTUAR DHE MOS-SHKELJES.",
+    "p8_2": "NE NUK BËJMË ASNJË GARANCI OSE PËRFAQËSIM NË LIDHJE ME SAKTËSINË OSE PLOTËSINË E PËRMBAJTJES SË SAJTIT OSE PËRMBAJTJES SË ÇDO UEBSAJTI TË LIDHUR ME SAJTIN DHE NUK DO TË MARRIM ASNJË PËRGJEGJËSI PËR (1) GABIME, MANGËSI, OSE PASAKTËSI TË PËRMBAJTJES DHE MATERIALEVE, (2) DËMTIM PERSONAL OSE DËMTIM PASUROR, TË ÇFARËDO NATYRE QOFTË, QË REZULTON NGA AKSESI DHE PËRDORIMI JUAJ I SAJTIT OSE SHËRBIMEVE, (3) ÇDO AKSES TË PA AUTORIZUAR OSE PËRDORIM TË SERVERËVE TANË TË SIGURT DHE/OSE TË GJITHË DHE ÇDO INFORMACIONI PERSONAL DHE/OSE FINANCIAR TË RUAJTUR NË TO.",
+    "p8_3": "NË ASNJË RAST NE OSE DREJTORËT, PUNONJËSIT, OSE AGJENTËT TANË NUK DO TË JENË PËRGJEGJËS NDAJ JUSH OSE ÇDO PALE TË TRETË PËR ÇDO DËM TË DREJTPËRDREJTË, TË TËRTHORTË, PASOJË, SHEMBULLOR, RASTËSOR, SPECIAL, OSE NDËSHKUES, DUKE PËRFSHIRË FITIMIN E HUMBUR, TË ARDHURAT E HUMBURA, HUMBJEN E TË DHËNAVE, OSE DËME TË TJERA QË RRJEDHIN NGA PËRDORIMI JUAJ I SAJTIT OSE SHËRBIMEVE, EDHE NËSE JEMI KËSHILLUAR PËR MUNDËSINË E DËMEVE TË TILLA.",
+    "h2_9": "9. DËMSHPËRBLIMI",
+    "p9_1": "Ju bini dakord të mbroni, dëmshpërbleni dhe të na mbani të padëmtuar, duke përfshirë filialet tona, kompanitë e lidhura dhe të gjithë zyrtarët, agjentët, partnerët dhe punonjësit tanë përkatës, nga dhe kundër çdo humbjeje, dëmi, përgjegjësie, pretendimi ose kërkese, duke përfshirë tarifat dhe shpenzimet e arsyeshme të avokatëve, të bëra nga çdo palë e tretë për shkak të ose që rrjedhin nga: (1) Kontributet tuaja; (2) përdorimi i Shërbimeve; (3) shkelja e këtyre Kushteve të Shërbimit; (4) çdo shkelje e përfaqësimeve dhe garancive tuaja të përcaktuara në këto Kushte të Shërbimit; (5) shkelja juaj e të drejtave të një pale të tretë, duke përfshirë por pa u kufizuar në të drejtat e pronësisë intelektuale; ose (6) çdo veprim i dëmshëm i hapur ndaj çdo përdoruesi tjetër të Sajtit ose Shërbimeve me të cilin jeni lidhur përmes Sajtit. Megjithatë, ne rezervojmë të drejtën, me shpenzimet tuaja, të marrim përsipër mbrojtjen dhe kontrollin ekskluziv të çdo çështjeje për të cilën ju kërkohet të na dëmshpërbleni, dhe ju bini dakord të bashkëpunoni, me shpenzimet tuaja, me mbrojtjen tonë të këtyre pretendimeve.",
+    "h2_10": "10. NA KONTAKTONI",
+    "p10_1": "Për të zgjidhur një ankesë në lidhje me Sajtin ose Shërbimet ose për të marrë informacion të mëtejshëm në lidhje me përdorimin e Sajtit ose Shërbimeve, ju lutemi na kontaktoni në:",
+    "p10_2": "{siteName}<br />Për vëmendje: Departamenti Ligjor<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tiranë, Shqipëri<br />Email: info@{SITE_DOMAIN}"
   }
 }
+

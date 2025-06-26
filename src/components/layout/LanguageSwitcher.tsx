@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname, useRouter } from '@/navigation';
+import { usePathname, useRouter, locales as supportedLocales } from '@/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   DropdownMenu,
@@ -19,14 +19,10 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  const locales = [
-    { code: 'en', name: t('en') },
-    { code: 'it', name: t('it') },
-    { code: 'sq', name: t('sq') },
-    { code: 'de', name: t('de') },
-    { code: 'fr', name: t('fr') },
-    { code: 'es', name: t('es') },
-  ];
+  const locales = supportedLocales.map((code) => ({
+    code: code,
+    name: t(code as any),
+  }));
 
   const handleLocaleChange = (nextLocale: string) => {
     startTransition(() => {
