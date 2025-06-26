@@ -15,7 +15,6 @@ import { cn } from '@/lib/utils';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
 import { MobileNav } from './MobileNav';
-import { SITE_NAME } from '@/lib/constants';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const pathname = usePathname();
@@ -44,7 +43,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Logo siteName={SITE_NAME} />
+        <Logo siteName="Meva Clinic" />
         <nav className="hidden md:flex items-center space-x-6">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About Us</NavLink>

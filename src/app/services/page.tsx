@@ -8,11 +8,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Gem, Leaf, Heart, PersonStanding, Sparkles } from 'lucide-react';
 import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
-import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: `Our Services | ${SITE_NAME}`,
-  description: `Explore the comprehensive range of advanced aesthetic and dental services offered at ${SITE_NAME}. Discover treatments tailored by experts to enhance your beauty and well-being.`,
+  title: `Our Services | Meva Clinic`,
+  description: `Explore the comprehensive range of advanced aesthetic and dental services offered at Meva Clinic. Discover treatments tailored by experts to enhance your beauty and well-being.`,
 };
 
 const mainServiceDisplayInfo = [
@@ -82,7 +81,7 @@ export default function ServicesOverviewPage() {
     <>
       <PageHeader
         title="Our Advanced Aesthetic & Dental Services"
-        description={`Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at ${SITE_NAME}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results.`}
+        description={`Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at Meva Clinic. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results.`}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {displayedCategories.length > 0 ? (

@@ -4,11 +4,10 @@ import { getAllGalleryItems } from '@/lib/gallery';
 import type { GalleryItem } from '@/types/gallery';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import type { Metadata } from 'next';
-import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: `Before & After Patient Gallery | ${SITE_NAME}`,
-  description: `View the remarkable transformations achieved by our expert medical team at ${SITE_NAME}. Explore real patient results from our advanced aesthetic and dental procedures.`,
+  title: `Before & After Patient Gallery | Meva Clinic`,
+  description: `View the remarkable transformations achieved by our expert medical team at Meva Clinic. Explore real patient results from our advanced aesthetic and dental procedures.`,
 };
 
 export default function GalleryPage() {
@@ -18,7 +17,7 @@ export default function GalleryPage() {
     <>
       <PageHeader
         title="Patient Before & After Gallery"
-        description={`Witness the transformative power of our advanced aesthetic and dental expertise. Explore real patient results achieved at ${SITE_NAME}.`}
+        description={`Witness the transformative power of our advanced aesthetic and dental expertise. Explore real patient results achieved at Meva Clinic.`}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {items.length > 0 ? (
@@ -64,7 +63,7 @@ export default function GalleryPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            Our patient gallery is currently being updated with new transformations. Please check back soon to see the exceptional results achieved by our specialists at {SITE_NAME}.
+            Our patient gallery is currently being updated with new transformations. Please check back soon to see the exceptional results achieved by our specialists at Meva Clinic.
           </p>
         )}
       </div>

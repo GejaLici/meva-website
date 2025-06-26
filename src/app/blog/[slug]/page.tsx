@@ -9,7 +9,6 @@ import type { Metadata } from 'next';
 import { CalendarDays, UserCircle, Tag } from 'lucide-react';
 import { formatDate, cn } from '@/lib/utils';
 import type { ContentBlock, ContentLeaf, RichTextSpan } from '@/types/blog';
-import { SITE_NAME } from '@/lib/constants';
 
 interface BlogPostPageProps {
   params: {
@@ -28,18 +27,18 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = await getBlogPostBySlug(params.slug);
   if (!post) {
     return { 
-      title: `Post Not Found | ${SITE_NAME}`,
-      description: `The requested blog post could not be found on ${SITE_NAME}.` 
+      title: `Post Not Found | Meva Clinic`,
+      description: `The requested blog post could not be found on Meva Clinic.` 
     };
   }
   const metaDescription = post.excerpt.length > 155 
     ? `${post.excerpt.substring(0, 152)}...` 
     : post.excerpt;
   return {
-    title: `${post.title} | ${SITE_NAME} Blog`,
+    title: `${post.title} | Meva Clinic Blog`,
     description: metaDescription,
-    keywords: post.category ? `${post.category}, ${post.title}, ${SITE_NAME}` : `${post.title}, ${SITE_NAME}`,
-    authors: post.author ? [{ name: post.author }] : [{ name: SITE_NAME }],
+    keywords: post.category ? `${post.category}, ${post.title}, Meva Clinic` : `${post.title}, Meva Clinic`,
+    authors: post.author ? [{ name: post.author }] : [{ name: 'Meva Clinic' }],
   };
 }
 

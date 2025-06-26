@@ -9,7 +9,6 @@ import { Separator } from '@/components/ui/separator';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
 import Link from 'next/link';
-import { SITE_NAME } from '@/lib/constants';
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +25,7 @@ export function MobileNav() {
       <SheetContent side="left" className="w-full max-w-xs p-0 bg-background">
         <SheetHeader className="border-b p-4">
           <SheetTitle>
-            <Logo siteName={SITE_NAME} />
+            <Logo siteName="Meva Clinic" />
           </SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col space-y-2 p-4 overflow-y-auto max-h-[calc(100vh-4rem)]">

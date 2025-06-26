@@ -7,11 +7,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
-import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: `Comprehensive Dental Services | ${SITE_NAME}`,
-  description: `Explore our extensive range of expert dental services at ${SITE_NAME}, from advanced aesthetic treatments and orthodontics to oral surgery and specialized pediatric care.`,
+  title: `Comprehensive Dental Services | Meva Clinic`,
+  description: `Explore our extensive range of expert dental services at Meva Clinic, from advanced aesthetic treatments and orthodontics to oral surgery and specialized pediatric care.`,
 };
 
 const dentalCategoryIds = [
@@ -30,7 +29,7 @@ export default function DentalServicesPage() {
     <>
       <PageHeader
         title="Comprehensive Dental Services"
-        description={`Discover our wide array of specialized dental treatments at ${SITE_NAME}, designed to enhance your smile and safeguard your oral health. Our expert dental team offers everything from advanced cosmetic enhancements and orthodontics to comprehensive surgical procedures and dedicated pediatric care.`}
+        description={`Discover our wide array of specialized dental treatments at Meva Clinic, designed to enhance your smile and safeguard your oral health. Our expert dental team offers everything from advanced cosmetic enhancements and orthodontics to comprehensive surgical procedures and dedicated pediatric care.`}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {dentalCategories.length > 0 ? (
@@ -66,7 +65,7 @@ export default function DentalServicesPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No dental service categories are currently available. Please contact ${SITE_NAME} for the latest information.
+            No dental service categories are currently available. Please contact Meva Clinic for the latest information.
           </p>
         )}
       </div>

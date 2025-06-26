@@ -5,11 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Stethoscope, Lightbulb } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: `About ${SITE_NAME}`,
-  description: `Discover the mission, values, and distinguished team of board-certified medical professionals at ${SITE_NAME}. Learn about our commitment to excellence in aesthetic and dental care.`,
+  title: `About Meva Clinic`,
+  description: `Discover the mission, values, and distinguished team of board-certified medical professionals at Meva Clinic. Learn about our commitment to excellence in aesthetic and dental care.`,
 };
 
 const teamMembers = [
@@ -40,7 +39,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title={`About ${SITE_NAME}`}
+        title={`About Meva Clinic`}
         description="Transforming beauty through medical expertise, technological innovation, and compassionate, patient-focused care."
       />
 
@@ -52,7 +51,7 @@ export default function AboutPage() {
                 Our Philosophy: Your Beauty, Our Priority, Guided by Medical Excellence
               </h2>
               <p className="text-base md:text-lg text-foreground mb-4">
-                At ${SITE_NAME}, we believe that aesthetic enhancement is a deeply personal journey towards greater self-confidence and well-being, grounded in medical science and safety. Our core philosophy revolves around providing highly personalized care, utilizing evidence-based advancements in aesthetic medicine, and upholding the highest medical and ethical standards.
+                At Meva Clinic, we believe that aesthetic enhancement is a deeply personal journey towards greater self-confidence and well-being, grounded in medical science and safety. Our core philosophy revolves around providing highly personalized care, utilizing evidence-based advancements in aesthetic medicine, and upholding the highest medical and ethical standards.
               </p>
               <p className="text-sm md:text-base text-muted-foreground mb-6">
                 We are committed to thoroughly understanding your unique aspirations and anatomical considerations. Our expert team tailors treatments to achieve natural-looking, harmonious results that enhance your individual beauty while prioritizing your health and safety. We foster a supportive, professional, and comfortable environment where you feel heard, respected, and empowered throughout your transformative experience.
@@ -64,7 +63,7 @@ export default function AboutPage() {
             <div>
               <Image
                 src="/images/aigen.jpeg"
-                alt={`${SITE_NAME} state-of-the-art clinic interior`}
+                alt={`Meva Clinic state-of-the-art clinic interior`}
                 width={600}
                 height={450}
                 className="rounded-lg shadow-xl"
@@ -79,10 +78,10 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12">
             <h2 className="font-headline text-2xl md:text-3xl font-bold text-foreground sm:text-4xl">
-              Why Choose ${SITE_NAME}?
+              Why Choose Meva Clinic?
             </h2>
             <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-             Our unwavering dedication to clinical excellence and patient-centered care distinguishes ${SITE_NAME} as a premier destination for aesthetic and dental treatments.
+             Our unwavering dedication to clinical excellence and patient-centered care distinguishes Meva Clinic as a premier destination for aesthetic and dental treatments.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -105,7 +104,7 @@ export default function AboutPage() {
                 <CardTitle className="font-headline text-lg md:text-xl text-primary">Personalized Patient Care</CardTitle>
               </CardHeader>
               <CardContent className="p-4 md:p-6 pt-0">
-                <p className="text-sm md:text-base text-muted-foreground">At ${SITE_NAME}, personalized care is paramount. We meticulously tailor each treatment plan to your unique anatomical considerations, aesthetic aspirations, and overall well-being, ensuring an effective and deeply individualized approach.</p>
+                <p className="text-sm md:text-base text-muted-foreground">At Meva Clinic, personalized care is paramount. We meticulously tailor each treatment plan to your unique anatomical considerations, aesthetic aspirations, and overall well-being, ensuring an effective and deeply individualized approach.</p>
               </CardContent>
             </Card>
             <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -130,7 +129,7 @@ export default function AboutPage() {
               Meet Our Medical Experts
             </h2>
             <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our team of dedicated, highly qualified medical professionals is committed to guiding you with expertise and compassion throughout your aesthetic journey at ${SITE_NAME}.
+              Our team of dedicated, highly qualified medical professionals is committed to guiding you with expertise and compassion throughout your aesthetic journey at Meva Clinic.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

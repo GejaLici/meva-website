@@ -2,11 +2,10 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { faqItems } from '@/lib/faq';
 import type { Metadata } from 'next';
-import { SITE_NAME } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: `Frequently Asked Questions | ${SITE_NAME}`,
-  description: `Find comprehensive answers to common questions about aesthetic procedures, consultations, recovery, and care pathways at ${SITE_NAME}.`,
+  title: `Frequently Asked Questions | Meva Clinic`,
+  description: `Find comprehensive answers to common questions about aesthetic procedures, consultations, recovery, and care pathways at Meva Clinic.`,
 };
 
 export default function FAQPage() {
@@ -14,7 +13,7 @@ export default function FAQPage() {
     <>
       <PageHeader
         title="Frequently Asked Questions (FAQ)"
-        description={`Find comprehensive answers to frequently asked questions regarding our specialized services, advanced procedures, pre-operative preparation, and post-treatment care at ${SITE_NAME}.`}
+        description={`Find comprehensive answers to frequently asked questions regarding our specialized services, advanced procedures, pre-operative preparation, and post-treatment care at Meva Clinic.`}
       />
       <div className="container mx-auto max-w-screen-md px-4 py-12 sm:px-6 lg:px-8">
         {faqItems.length > 0 ? (

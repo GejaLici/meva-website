@@ -2,11 +2,11 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { ContactForm } from './_components/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import type { Metadata } from 'next';
-import { SITE_NAME, SITE_DOMAIN } from '@/lib/constants';
+import { SITE_DOMAIN } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: `Contact ${SITE_NAME} | Inquiries & Consultations`,
-  description: `Contact ${SITE_NAME} for expert inquiries, confidential consultations, or to book an appointment. Our professional team is ready to assist you with your aesthetic and dental needs.`,
+  title: `Contact Meva Clinic | Inquiries & Consultations`,
+  description: `Contact Meva Clinic for expert inquiries, confidential consultations, or to book an appointment. Our professional team is ready to assist you with your aesthetic and dental needs.`,
 };
 
 export default function ContactPage() {

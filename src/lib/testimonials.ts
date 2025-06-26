@@ -1,5 +1,3 @@
-import { SITE_NAME } from './constants';
-
 export interface Testimonial {
   id: string;
   name: string;
