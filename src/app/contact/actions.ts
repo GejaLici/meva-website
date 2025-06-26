@@ -1,17 +1,8 @@
 'use server';
 
-import * as z from 'zod';
-import { db } from '@/lib/firebaseConfig'; // Ensure this path is correct
+import { db } from '@/lib/firebaseConfig';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import type { ContactFormValues } from './_components/ContactForm'; // Assuming type is exported from here
-
-// Schema can remain the same, or be co-located with the form component if preferred
-const formSchema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  subject: z.string().min(5),
-  message: z.string().min(10),
-});
+import { formSchema, type ContactFormValues } from '@/app/[locale]/contact/_components/ContactForm';
 
 interface SubmitResult {
     success: boolean;

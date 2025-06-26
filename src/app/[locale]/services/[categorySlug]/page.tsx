@@ -20,11 +20,14 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
+  const siteTitle = tSite('title');
+
   const category = getCategoryBySlug(params.categorySlug);
   if (!category) {
     return { 
-      title: `Category Not Found | Meva Clinic`,
-      description: `The requested service category could not be found at Meva Clinic.`
+      title: `Category Not Found | ${siteTitle}`,
+      description: `The requested service category could not be found at ${siteTitle}.`
     };
   }
 
@@ -33,14 +36,16 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const categoryDescription = t(`${category.id}.description`);
 
   return {
-    title: `${categoryName} | Meva Clinic`,
+    title: `${categoryName} | ${siteTitle}`,
     description: categoryDescription,
   };
 }
 
-export default function ServiceCategoryPage({ params }: CategoryPageProps) {
+export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(params.categorySlug);
   const t = useTranslations('Services.categories');
+  const tSite = await getTranslations('Site');
+  const siteTitle = tSite('title');
 
   if (!category) {
     notFound();
@@ -61,12 +66,10 @@ export default function ServiceCategoryPage({ params }: CategoryPageProps) {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            There are no services available in this category at the moment. Please contact Meva Clinic for more details.
+            There are no services available in this category at the moment. Please contact {siteTitle} for more details.
           </p>
         )}
       </div>
     </>
   );
 }
-
-    

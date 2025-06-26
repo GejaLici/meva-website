@@ -1,2 +1,1 @@
-
-export const SITE_DOMAIN = "mevaclinic.com";
+export const SITE_DOMAIN = "novasculptclinic.com";

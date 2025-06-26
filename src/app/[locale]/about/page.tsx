@@ -1,19 +1,27 @@
+'use client';
+
 import Image from 'next/image';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
 import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
+// Note: Metadata is static here because this is a client component.
+// For dynamic metadata based on locale, this would need to be a server component
+// or data would need to be passed from a parent server component.
 export const metadata: Metadata = {
-  title: `About Meva Clinic`,
-  description: `Discover the mission, values, and distinguished team of board-certified medical professionals at Meva Clinic. Learn about our commitment to excellence in aesthetic and dental care.`,
+  title: `About NovaSculpt Clinic`,
+  description: `Discover the mission, values, and distinguished team of board-certified medical professionals at NovaSculpt Clinic. Learn about our commitment to excellence in aesthetic and dental care.`,
 };
 
 export default function AboutPage() {
+  const t = useTranslations('Site');
+
   return (
     <>
       <PageHeader
-        title={`About Meva Clinic`}
+        title={`About ${t('title')}`}
         description="Transforming beauty through medical expertise, technological innovation, and compassionate, patient-focused care."
       />
 
@@ -25,7 +33,7 @@ export default function AboutPage() {
                 Our Philosophy: Your Beauty, Our Priority, Guided by Medical Excellence
               </h2>
               <p className="text-base md:text-lg text-foreground mb-4">
-                At Meva Clinic, we believe that aesthetic enhancement is a deeply personal journey towards greater self-confidence and well-being, grounded in medical science and safety. Our core philosophy revolves around providing highly personalized care, utilizing evidence-based advancements in aesthetic medicine, and upholding the highest medical and ethical standards.
+                At {t('title')}, we believe that aesthetic enhancement is a deeply personal journey towards greater self-confidence and well-being, grounded in medical science and safety. Our core philosophy revolves around providing highly personalized care, utilizing evidence-based advancements in aesthetic medicine, and upholding the highest medical and ethical standards.
               </p>
               <p className="text-sm md:text-base text-muted-foreground mb-6">
                 We are committed to thoroughly understanding your unique aspirations and anatomical considerations. Our expert team tailors treatments to achieve natural-looking, harmonious results that enhance your individual beauty while prioritizing your health and safety. We foster a supportive, professional, and comfortable environment where you feel heard, respected, and empowered throughout your transformative experience.
@@ -37,7 +45,7 @@ export default function AboutPage() {
             <div>
               <Image
                 src="/images/aigen.jpeg"
-                alt={`Meva Clinic state-of-the-art clinic interior`}
+                alt={`NovaSculpt Clinic state-of-the-art clinic interior`}
                 width={600}
                 height={450}
                 className="rounded-lg shadow-xl"

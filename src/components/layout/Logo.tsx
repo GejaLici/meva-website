@@ -1,6 +1,7 @@
 'use client';
 
 import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 const LogoSvg = () => (
   <svg 
@@ -11,17 +12,18 @@ const LogoSvg = () => (
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
   >
-    {/* Simple M shape for Meva */}
+    {/* Simple M shape for Meva/Nova - can be updated to be more brand-specific */}
     <path d="M20 80 V 20 L 50 50 L 80 20 V 80 H 65 V 40 L 50 60 L 35 40 V 80 H 20 Z" />
   </svg>
 );
 
 
-export function Logo({ siteName }: { siteName: string }) {
+export function Logo() {
+  const t = useTranslations('Site');
   return (
     <Link href="/" className="flex items-center gap-2 text-primary hover:text-primary/90 transition-colors">
       <LogoSvg />
-      <span className="font-headline text-xl font-semibold">{siteName}</span>
+      <span className="font-headline text-xl font-semibold">{t('title')}</span>
     </Link>
   );
 }

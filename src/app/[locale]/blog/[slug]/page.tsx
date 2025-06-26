@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 import { CalendarDays, UserCircle, Tag } from 'lucide-react';
 import { formatDate, cn } from '@/lib/utils';
 import type { ContentBlock, ContentLeaf, RichTextSpan } from '@/types/blog';
+import { getTranslations } from 'next-intl/server';
 
 interface BlogPostPageProps {
   params: {
@@ -25,21 +26,23 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const t = await getTranslations({locale: params.locale, namespace: 'Site'});
+  const siteTitle = t('title');
   const post = await getBlogPostBySlug(params.slug);
   if (!post) {
     return { 
-      title: `Post Not Found | Meva Clinic`,
-      description: `The requested blog post could not be found on Meva Clinic.` 
+      title: `Post Not Found | ${siteTitle}`,
+      description: `The requested blog post could not be found on ${siteTitle}.` 
     };
   }
   const metaDescription = post.excerpt.length > 155 
     ? `${post.excerpt.substring(0, 152)}...` 
     : post.excerpt;
   return {
-    title: `${post.title} | Meva Clinic Blog`,
+    title: `${post.title} | ${siteTitle} Blog`,
     description: metaDescription,
-    keywords: post.category ? `${post.category}, ${post.title}, Meva Clinic` : `${post.title}, Meva Clinic`,
-    authors: post.author ? [{ name: post.author }] : [{ name: 'Meva Clinic' }],
+    keywords: post.category ? `${post.category}, ${post.title}, ${siteTitle}` : `${post.title}, ${siteTitle}`,
+    authors: post.author ? [{ name: post.author }] : [{ name: siteTitle }],
   };
 }
 
@@ -107,7 +110,6 @@ function renderContentBlocks(blocks: ContentBlock[] | undefined): (JSX.Element |
                 style={{ objectFit: 'contain' }}
                 data-ai-hint={block.imageHint}
                 className="bg-muted"
-                quality={90}
               />
             </div>
             {block.caption && block.caption.length > 0 && (
@@ -168,7 +170,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 fill
                 style={{ objectFit: 'cover' }}
                 data-ai-hint={post.imageHint || 'blog post feature image'}
-                quality={90}
               />
             </div>
           )}

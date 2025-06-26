@@ -7,12 +7,16 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
-import { useTranslations } from 'next-intl';
+import { useTranslations, getTranslations } from 'next-intl';
 
-export const metadata: Metadata = {
-  title: `Comprehensive Dental Services | Meva Clinic`,
-  description: `Explore our extensive range of expert dental services at Meva Clinic, from advanced aesthetic treatments and orthodontics to oral surgery and specialized pediatric care.`,
-};
+export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
+  const t = await getTranslations({locale, namespace: 'Site'});
+  const siteTitle = t('title');
+  return {
+    title: `Comprehensive Dental Services | ${siteTitle}`,
+    description: `Explore our extensive range of expert dental services at ${siteTitle}, from advanced aesthetic treatments and orthodontics to oral surgery and specialized pediatric care.`,
+  };
+}
 
 const dentalCategoryIds = [
   'aesthetic-dentistry',
@@ -23,15 +27,17 @@ const dentalCategoryIds = [
   'pediatric-dentistry',
 ];
 
-export default function DentalServicesPage() {
+export default async function DentalServicesPage() {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
   const t = useTranslations('Services.categories');
+  const tSite = await getTranslations('Site');
+  const siteTitle = tSite('title');
 
   return (
     <>
       <PageHeader
         title="Comprehensive Dental Services"
-        description={`Discover our wide array of specialized dental treatments at Meva Clinic, designed to enhance your smile and safeguard your oral health. Our expert dental team offers everything from advanced cosmetic enhancements and orthodontics to comprehensive surgical procedures and dedicated pediatric care.`}
+        description={`Discover our wide array of specialized dental treatments at ${siteTitle}, designed to enhance your smile and safeguard your oral health. Our expert dental team offers everything from advanced cosmetic enhancements and orthodontics to comprehensive surgical procedures and dedicated pediatric care.`}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {dentalCategories.length > 0 ? (
@@ -46,8 +52,8 @@ export default function DentalServicesPage() {
                       <Image
                         src={category.image}
                         alt={categoryName}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{objectFit: 'cover'}}
                         data-ai-hint={category.imageHint || 'dental service collage'}
                       />
                     </div>
@@ -71,12 +77,10 @@ export default function DentalServicesPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No dental service categories are currently available. Please contact Meva Clinic for the latest information.
+            No dental service categories are currently available. Please contact {siteTitle} for the latest information.
           </p>
         )}
       </div>
     </>
   );
 }
-
-    

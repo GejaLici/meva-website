@@ -3,11 +3,16 @@ import { ContactForm } from './_components/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import type { Metadata } from 'next';
 import { SITE_DOMAIN } from '@/lib/constants';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: `Contact Meva Clinic | Inquiries & Consultations`,
-  description: `Contact Meva Clinic for expert inquiries, confidential consultations, or to book an appointment. Our professional team is ready to assist you with your aesthetic and dental needs.`,
-};
+export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
+  const t = await getTranslations({locale, namespace: 'Site'});
+  const siteTitle = t('title');
+  return {
+    title: `Contact ${siteTitle} | Inquiries & Consultations`,
+    description: `Contact ${siteTitle} for expert inquiries, confidential consultations, or to book an appointment. Our professional team is ready to assist you with your aesthetic and dental needs.`,
+  };
+}
 
 export default function ContactPage() {
   return (

@@ -28,7 +28,7 @@ export function MobileNav() {
       <SheetContent side="left" className="w-full max-w-xs p-0 bg-background">
         <SheetHeader className="border-b p-4">
           <SheetTitle>
-            <Logo siteName="Meva Clinic" />
+            <Logo />
           </SheetTitle>
         </SheetHeader>
         <nav className="flex flex-col space-y-2 p-4 overflow-y-auto max-h-[calc(100vh-4rem)]">
@@ -111,5 +111,3 @@ export function MobileNav() {
     </Sheet>
   );
 }
-
-    

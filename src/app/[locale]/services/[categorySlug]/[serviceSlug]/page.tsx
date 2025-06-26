@@ -31,32 +31,36 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
+  const siteTitle = tSite('title');
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
   
   if (!service) {
     return { 
-        title: `Service Not Found | Meva Clinic`,
-        description: `The requested service could not be found at Meva Clinic.` 
+        title: `Service Not Found | ${siteTitle}`,
+        description: `The requested service could not be found at ${siteTitle}.` 
     };
   }
 
   const t = await getTranslations({locale: params.locale, namespace: 'Services.items'});
   const serviceName = t(`${service.id}.name`);
-  const serviceDescription = t(`${service.id}.description`);
+  const serviceDescription = t.rich(`${service.id}.description`, {p: (chunks) => chunks}).toString();
 
   const metaDescription = serviceDescription.length > 155 
     ? `${serviceDescription.substring(0, 152)}...` 
     : serviceDescription;
 
   return {
-    title: `${serviceName} | Meva Clinic`,
-    description: `Explore ${serviceName} at Meva Clinic. ${metaDescription}`,
+    title: `${serviceName} | ${siteTitle}`,
+    description: `Explore ${serviceName} at ${siteTitle}. ${metaDescription}`,
   };
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
+export default async function ServicePage({ params }: ServicePageProps) {
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
   const t = useTranslations('Services.items');
+  const tSite = await getTranslations('Site');
+  const siteTitle = tSite('title');
 
   if (!service) {
     notFound();
@@ -91,9 +95,9 @@ export default function ServicePage({ params }: ServicePageProps) {
             <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">About {serviceName}</h2>
             <div className="mb-6">{serviceDescription}</div>
             
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to Expect at Meva Clinic</h3>
+            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to Expect at {siteTitle}</h3>
             <p className="mb-4">
-              At Meva Clinic, your journey begins with a comprehensive consultation where our specialists develop a personalized treatment plan tailored to your specific needs and desired outcomes for {serviceName.toLowerCase()}. We utilize modern, evidence-based techniques and state-of-the-art technology. Our commitment extends to meticulous post-operative care and follow-up, ensuring optimal results, your comfort, and a smooth recovery process.
+              At {siteTitle}, your journey begins with a comprehensive consultation where our specialists develop a personalized treatment plan tailored to your specific needs and desired outcomes for {serviceName.toLowerCase()}. We utilize modern, evidence-based techniques and state-of-the-art technology. Our commitment extends to meticulous post-operative care and follow-up, ensuring optimal results, your comfort, and a smooth recovery process.
             </p>
             <ul className="list-disc pl-5 mb-6 space-y-1">
               <li>Thorough, confidential initial consultation with a specialist.</li>
@@ -111,5 +115,3 @@ export default function ServicePage({ params }: ServicePageProps) {
     </>
   );
 }
-
-    

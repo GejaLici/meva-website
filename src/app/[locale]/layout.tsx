@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
 import {getTranslations} from 'next-intl/server';
+import { locales } from '@/navigation';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,18 +21,16 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-// Can be imported from a shared config
-const locales = ['en', 'it', 'sq'];
-
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
   const t = await getTranslations({locale, namespace: 'Site'});
+  const siteTitle = t('title');
  
   return {
     title: {
-      default: t('title'),
-      template: `%s | ${t('title')}`,
+      default: siteTitle,
+      template: `%s | ${siteTitle}`,
     },
-    description: `Meva Clinic: Premier aesthetic and dental services. Our board-certified specialists offer advanced treatments for transformative results with utmost care and expertise.`,
+    description: `${siteTitle}: Premier aesthetic and dental services. Our board-certified specialists offer advanced treatments for transformative results with utmost care and expertise.`,
   };
 }
 
