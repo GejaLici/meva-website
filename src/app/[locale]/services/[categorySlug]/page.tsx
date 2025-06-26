@@ -4,7 +4,6 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { ServiceCard } from '@/components/shared/ServiceCard';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { useTranslations } from 'next-intl';
 
 interface CategoryPageProps {
   params: {
@@ -21,19 +20,20 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
+  const tPage = await getTranslations({locale: params.locale, namespace: 'ServiceCategoryPage'});
+  const tCategories = await getTranslations({locale: params.locale, namespace: 'Services.categories'});
   const siteTitle = tSite('title');
-
   const category = getCategoryBySlug(params.categorySlug);
+  
   if (!category) {
     return { 
-      title: `Category Not Found | ${siteTitle}`,
-      description: `The requested service category could not be found at ${siteTitle}.`
+      title: tPage('categoryNotFoundTitle', {siteTitle}),
+      description: tPage('categoryNotFoundDescription', {siteTitle})
     };
   }
 
-  const t = await getTranslations({locale: params.locale, namespace: 'Services.categories'});
-  const categoryName = t(`${category.id}.name`);
-  const categoryDescription = t(`${category.id}.description`);
+  const categoryName = tCategories(`${category.id}.name`);
+  const categoryDescription = tCategories(`${category.id}.description`);
 
   return {
     title: `${categoryName} | ${siteTitle}`,
@@ -43,16 +43,16 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(params.categorySlug);
-  const t = useTranslations('Services.categories');
-  const tSite = await getTranslations('Site');
-  const siteTitle = tSite('title');
-
+  const tCategories = await getTranslations({locale: params.locale, namespace: 'Services.categories'});
+  const tPage = await getTranslations({locale: params.locale, namespace: 'ServiceCategoryPage'});
+  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
+  
   if (!category) {
     notFound();
   }
-
-  const categoryName = t(`${category.id}.name`);
-  const categoryDescription = t(`${category.id}.description`);
+  
+  const categoryName = tCategories(`${category.id}.name`);
+  const categoryDescription = tCategories(`${category.id}.description`);
 
   return (
     <>
@@ -66,7 +66,7 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            There are no services available in this category at the moment. Please contact {siteTitle} for more details.
+            {tPage('noResults', {siteTitle: tSite('title')})}
           </p>
         )}
       </div>

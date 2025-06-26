@@ -1,16 +1,22 @@
-import { Link } from '@/navigation';
+'use client';
+
+import { Link, usePathname } from '@/navigation';
 import Image from 'next/image';
 import type { BlogPost } from '@/types/blog';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CalendarDays, UserCircle } from 'lucide-react';
 import { formatDate } from '@/lib/utils';
+import { useLocale, useTranslations } from 'next-intl';
 
 interface BlogCardProps {
   post: BlogPost;
 }
 
 export function BlogCard({ post }: BlogCardProps) {
+  const t = useTranslations('BlogPage');
+  const locale = useLocale();
+
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
       {post.imageUrl && (
@@ -32,7 +38,7 @@ export function BlogCard({ post }: BlogCardProps) {
         <div className="text-xs text-muted-foreground flex items-center space-x-4 mt-1">
           <div className="flex items-center">
             <CalendarDays className="mr-1.5 h-3.5 w-3.5" />
-            <span>{formatDate(post.date)}</span>
+            <span>{formatDate(post.date, locale)}</span>
           </div>
           {post.author && (
             <div className="flex items-center">
@@ -48,7 +54,7 @@ export function BlogCard({ post }: BlogCardProps) {
         </CardDescription>
         <Button asChild variant="link" className="mt-auto p-0 self-start text-accent hover:text-accent/90 group-hover:text-primary transition-colors duration-300">
           <Link href={`/blog/${post.slug}`}>
-            Read more <ArrowRight className="ml-2 h-4 w-4" />
+            {t('readMore')} <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </CardContent>

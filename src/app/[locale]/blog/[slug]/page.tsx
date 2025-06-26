@@ -8,7 +8,7 @@ import { Link } from '@/navigation';
 import type { Metadata } from 'next';
 import { CalendarDays, UserCircle, Tag } from 'lucide-react';
 import { formatDate, cn } from '@/lib/utils';
-import type { ContentBlock, ContentLeaf, RichTextSpan } from '@/types/blog';
+import type { ContentBlock, ContentLeaf } from '@/types/blog';
 import { getTranslations } from 'next-intl/server';
 
 interface BlogPostPageProps {
@@ -26,21 +26,25 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const t = await getTranslations({locale: params.locale, namespace: 'Site'});
-  const siteTitle = t('title');
+  const t = await getTranslations({locale: params.locale, namespace: 'BlogPostPage'});
+  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
+  const siteTitle = tSite('title');
   const post = await getBlogPostBySlug(params.slug);
+
   if (!post) {
     return { 
-      title: `Post Not Found | ${siteTitle}`,
-      description: `The requested blog post could not be found on ${siteTitle}.` 
+      title: t('postNotFoundTitle', { siteTitle }),
+      description: t('postNotFoundDescription', { siteTitle }),
     };
   }
+
   const metaDescription = post.excerpt.length > 155 
     ? `${post.excerpt.substring(0, 152)}...` 
     : post.excerpt;
+
   return {
-    title: `${post.title} | ${siteTitle} Blog`,
-    description: metaDescription,
+    title: t('metaTitle', { postTitle: post.title, siteTitle }),
+    description: t('metaDescription', { postExcerpt: metaDescription }),
     keywords: post.category ? `${post.category}, ${post.title}, ${siteTitle}` : `${post.title}, ${siteTitle}`,
     authors: post.author ? [{ name: post.author }] : [{ name: siteTitle }],
   };
@@ -58,7 +62,6 @@ function renderRichText(spans: ContentLeaf[] | undefined): JSX.Element | null {
           if (span.italic) element = <em>{element}</em>;
           if (span.underline) element = <u>{element}</u>;
           if (span.code) element = <code className="bg-muted px-1 py-0.5 rounded text-sm font-mono text-foreground/80">{element}</code>;
-          // Note: Using a standard `a` tag here. If internal linking is needed, `next-intl`'s Link would be better.
           if (span.link) element = <a href={span.link} className="text-accent hover:text-accent/80 underline" target="_blank" rel="noopener noreferrer">{element}</a>;
           return <React.Fragment key={index}>{element}</React.Fragment>;
         }
@@ -69,14 +72,14 @@ function renderRichText(spans: ContentLeaf[] | undefined): JSX.Element | null {
 }
 
 // Main content rendering function
-function renderContentBlocks(blocks: ContentBlock[] | undefined): (JSX.Element | null)[] | null {
+async function renderContentBlocks(blocks: ContentBlock[] | undefined, locale: string): Promise<(JSX.Element | null)[] | null> {
   if (!blocks || blocks.length === 0) {
-    return [<p key="no-content" className="text-muted-foreground">This post has no content yet. Please check back later for updates.</p>];
+    const t = await getTranslations({locale, namespace: 'BlogPostPage'});
+    return [<p key="no-content" className="text-muted-foreground">{t('noContent')}</p>];
   }
 
   return blocks.map((block) => {
     if (!block || !block.id || !block.type) {
-      // console.warn('Invalid block structure:', block);
       return null; 
     }
     switch (block.type) {
@@ -143,7 +146,6 @@ function renderContentBlocks(blocks: ContentBlock[] | undefined): (JSX.Element |
           </blockquote>
         )
       default:
-        // console.warn('Unknown block type:', (block as any).type);
         return null;
     }
   });
@@ -152,10 +154,13 @@ function renderContentBlocks(blocks: ContentBlock[] | undefined): (JSX.Element |
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getBlogPostBySlug(params.slug);
+  const t = await getTranslations({locale: params.locale, namespace: 'BlogPostPage'});
 
   if (!post) {
     notFound();
   }
+  
+  const renderedContent = await renderContentBlocks(post.content, params.locale);
 
   return (
     <>
@@ -177,12 +182,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="mb-6 text-sm text-muted-foreground flex flex-wrap items-center gap-x-6 gap-y-2">
             <div className="flex items-center">
               <CalendarDays className="mr-2 h-4 w-4" />
-              <span>Published on {formatDate(post.date)}</span>
+              <span>{t('publishedOn', { date: formatDate(post.date, params.locale) })}</span>
             </div>
             {post.author && (
               <div className="flex items-center">
                 <UserCircle className="mr-2 h-4 w-4" />
-                <span>By {post.author}</span>
+                <span>{t('by', { author: post.author })}</span>
               </div>
             )}
             {post.category && (
@@ -194,12 +199,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
           
           <div className="mt-8 space-y-6">
-            {renderContentBlocks(post.content)}
+            {renderedContent}
           </div>
 
           <div className="mt-12 text-center">
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="/blog">Back to All Blog Articles</Link>
+              <Link href="/blog">{t('backButton')}</Link>
             </Button>
           </div>
         </article>

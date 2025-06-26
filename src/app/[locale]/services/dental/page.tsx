@@ -7,14 +7,14 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
-import { useTranslations, getTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
-  const t = await getTranslations({locale, namespace: 'Site'});
-  const siteTitle = t('title');
+  const t = await getTranslations({locale, namespace: 'DentalServicesPage'});
+  const tSite = await getTranslations({locale, namespace: 'Site'});
   return {
-    title: `Comprehensive Dental Services | ${siteTitle}`,
-    description: `Explore our extensive range of expert dental services at ${siteTitle}, from advanced aesthetic treatments and orthodontics to oral surgery and specialized pediatric care.`,
+    title: t('metaTitle', {siteTitle: tSite('title')}),
+    description: t('metaDescription', {siteTitle: tSite('title')}),
   };
 }
 
@@ -27,24 +27,25 @@ const dentalCategoryIds = [
   'pediatric-dentistry',
 ];
 
-export default async function DentalServicesPage() {
+export default async function DentalServicesPage({params: {locale}}: {params: {locale: string}}) {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
-  const t = useTranslations('Services.categories');
-  const tSite = await getTranslations('Site');
+  const tPage = await getTranslations({locale, namespace: 'DentalServicesPage'});
+  const tCategories = await getTranslations({locale, namespace: 'Services.categories'});
+  const tSite = await getTranslations({locale, namespace: 'Site'});
   const siteTitle = tSite('title');
 
   return (
     <>
       <PageHeader
-        title="Comprehensive Dental Services"
-        description={`Discover our wide array of specialized dental treatments at ${siteTitle}, designed to enhance your smile and safeguard your oral health. Our expert dental team offers everything from advanced cosmetic enhancements and orthodontics to comprehensive surgical procedures and dedicated pediatric care.`}
+        title={tPage('title')}
+        description={tPage('description', {siteTitle})}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {dentalCategories.length > 0 ? (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {dentalCategories.map((category: ServiceCategory) => {
-              const categoryName = t(`${category.id}.name`);
-              const categoryDescription = t(`${category.id}.description`);
+              const categoryName = tCategories(`${category.id}.name`);
+              const categoryDescription = tCategories(`${category.id}.description`);
               return (
                 <Card key={category.id} className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   {category.image && (
@@ -67,7 +68,7 @@ export default async function DentalServicesPage() {
                     </CardDescription>
                     <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full">
                       <Link href={`/services/${category.slug}`}>
-                        Explore {categoryName} <ArrowRight className="ml-2 h-4 w-4" />
+                        {tPage('exploreButton', {categoryName})} <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -77,7 +78,7 @@ export default async function DentalServicesPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No dental service categories are currently available. Please contact {siteTitle} for the latest information.
+            {tPage('noResults', {siteTitle})}
           </p>
         )}
       </div>

@@ -5,25 +5,24 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
-  const t = await getTranslations({locale, namespace: 'Site'});
-  const siteTitle = t('title');
+  const t = await getTranslations({locale, namespace: 'BlogPage'});
+  const tSite = await getTranslations({locale, namespace: 'Site'});
   return {
-    title: `Expert Blog | ${siteTitle}`,
-    description: `Stay informed with the latest advancements, expert tips, and insightful articles from the forefront of aesthetic and dental care, curated by the professionals at ${siteTitle}.`,
+    title: t('metaTitle', { siteTitle: tSite('title') }),
+    description: t('metaDescription', { siteTitle: tSite('title') }),
   };
 }
 
-// Changed to async function to await data fetching
-export default async function BlogPage() {
+export default async function BlogPage({params: {locale}}: {params: {locale: string}}) {
   const posts = await getAllBlogPosts();
-  const t = await getTranslations('Site');
-  const siteTitle = t('title');
+  const t = await getTranslations({locale, namespace: 'BlogPage'});
+  const tSite = await getTranslations({locale, namespace: 'Site'});
 
   return (
     <>
       <PageHeader
-        title="Our Expert Insights Blog"
-        description={`Stay informed with the latest advancements, expert tips, and insightful articles from the forefront of aesthetic and dental care, curated by the professionals at ${siteTitle}.`}
+        title={t('title')}
+        description={t('description', {siteTitle: tSite('title')})}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {posts.length > 0 ? (
@@ -34,7 +33,7 @@ export default async function BlogPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            No blog posts are available at this moment. Please check back later, or ensure your Firestore 'blogPosts' collection is populated with valid entries.
+            {t('noPosts')}
           </p>
         )}
       </div>

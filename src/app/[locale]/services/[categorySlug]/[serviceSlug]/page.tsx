@@ -7,7 +7,6 @@ import { Card } from '@/components/ui/card';
 import { Link } from '@/navigation';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { useTranslations } from 'next-intl';
 
 interface ServicePageProps {
   params: {
@@ -32,19 +31,20 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
+  const tDetails = await getTranslations({locale: params.locale, namespace: 'ServiceDetailsPage'});
+  const tItems = await getTranslations({locale: params.locale, namespace: 'Services.items'});
   const siteTitle = tSite('title');
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
   
   if (!service) {
     return { 
-        title: `Service Not Found | ${siteTitle}`,
-        description: `The requested service could not be found at ${siteTitle}.` 
+        title: tDetails('serviceNotFoundTitle', { siteTitle }),
+        description: tDetails('serviceNotFoundDescription', { siteTitle }) 
     };
   }
-
-  const t = await getTranslations({locale: params.locale, namespace: 'Services.items'});
-  const serviceName = t(`${service.id}.name`);
-  const serviceDescription = t.rich(`${service.id}.description`, {p: (chunks) => chunks}).toString();
+  
+  const serviceName = tItems(`${service.id}.name`);
+  const serviceDescription = tItems.rich(`${service.id}.description`, {p: (chunks) => chunks}).toString().replace(/<[^>]*>?/gm, '');
 
   const metaDescription = serviceDescription.length > 155 
     ? `${serviceDescription.substring(0, 152)}...` 
@@ -58,16 +58,17 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
 export default async function ServicePage({ params }: ServicePageProps) {
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
-  const t = useTranslations('Services.items');
-  const tSite = await getTranslations('Site');
+  const tItems = await getTranslations({locale: params.locale, namespace: 'Services.items'});
+  const tDetails = await getTranslations({locale: params.locale, namespace: 'ServiceDetailsPage'});
+  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
   const siteTitle = tSite('title');
 
   if (!service) {
     notFound();
   }
 
-  const serviceName = t(`${service.id}.name`);
-  const serviceDescription = t.rich(`${service.id}.description`, {
+  const serviceName = tItems(`${service.id}.name`);
+  const serviceDescription = tItems.rich(`${service.id}.description`, {
     p: (chunks) => <p className="mb-4">{chunks}</p>,
     b: (chunks) => <strong>{chunks}</strong>,
   });
@@ -92,22 +93,22 @@ export default async function ServicePage({ params }: ServicePageProps) {
             )}
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
-            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">About {serviceName}</h2>
+            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
             <div className="mb-6">{serviceDescription}</div>
             
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">What to Expect at {siteTitle}</h3>
+            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteTitle })}</h3>
             <p className="mb-4">
-              At {siteTitle}, your journey begins with a comprehensive consultation where our specialists develop a personalized treatment plan tailored to your specific needs and desired outcomes for {serviceName.toLowerCase()}. We utilize modern, evidence-based techniques and state-of-the-art technology. Our commitment extends to meticulous post-operative care and follow-up, ensuring optimal results, your comfort, and a smooth recovery process.
+              {tDetails('whatToExpectP1', { siteTitle, serviceName: serviceName.toLowerCase() })}
             </p>
             <ul className="list-disc pl-5 mb-6 space-y-1">
-              <li>Thorough, confidential initial consultation with a specialist.</li>
-              <li>Custom-developed treatment plan based on comprehensive assessment.</li>
-              <li>Application of advanced medical technology and proven procedural methods.</li>
-              <li>Dedicated, attentive post-operative care and follow-up.</li>
+              <li>{tDetails('whatToExpectL1')}</li>
+              <li>{tDetails('whatToExpectL2')}</li>
+              <li>{tDetails('whatToExpectL3')}</li>
+              <li>{tDetails('whatToExpectL4')}</li>
             </ul>
             
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">Book a Confidential Consultation</Link>
+              <Link href="/contact">{tDetails('consultationButton')}</Link>
             </Button>
           </div>
         </div>

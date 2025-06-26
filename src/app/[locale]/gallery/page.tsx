@@ -7,24 +7,27 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
-  const t = await getTranslations({locale, namespace: 'Site'});
-  const siteTitle = t('title');
+  const t = await getTranslations({locale, namespace: 'GalleryPage'});
+  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const siteTitle = tSite('title');
   return {
-    title: `Before & After Patient Gallery | ${siteTitle}`,
-    description: `View the remarkable transformations achieved by our expert medical team at ${siteTitle}. Explore real patient results from our advanced aesthetic and dental procedures.`,
+    title: t('metaTitle', { siteTitle }),
+    description: t('metaDescription', { siteTitle }),
   };
 }
 
-export default async function GalleryPage() {
+export default async function GalleryPage({params: {locale}}: {params: {locale: string}}) {
   const items = getAllGalleryItems();
-  const t = await getTranslations('Site');
-  const siteTitle = t('title');
+  const tPage = await getTranslations({locale, namespace: 'GalleryPage'});
+  const tGallery = await getTranslations({locale, namespace: 'Gallery'});
+  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const siteTitle = tSite('title');
 
   return (
     <>
       <PageHeader
-        title="Patient Before & After Gallery"
-        description={`Witness the transformative power of our advanced aesthetic and dental expertise. Explore real patient results achieved at ${siteTitle}.`}
+        title={tPage('title')}
+        description={tPage('description', { siteTitle })}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {items.length > 0 ? (
@@ -32,15 +35,15 @@ export default async function GalleryPage() {
             {items.map((item: GalleryItem) => (
               <Card key={item.id} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader className="pb-3">
-                  <CardTitle className="font-headline text-xl text-primary text-center">{item.procedureName}</CardTitle>
+                  <CardTitle className="font-headline text-xl text-primary text-center">{tGallery(`${item.id}.procedureName`)}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col space-y-4">
                   <div>
-                    <h3 className="text-sm font-semibold text-muted-foreground mb-1 text-center">BEFORE</h3>
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-1 text-center">{tPage('before')}</h3>
                     <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden border">
                        <Image
                         src={item.beforeImageUrl}
-                        alt={`Before - ${item.procedureName}`}
+                        alt={`${tPage('before')} - ${tGallery(`${item.id}.procedureName`)}`}
                         fill
                         style={{ objectFit: 'cover' }}
                         data-ai-hint={item.beforeImageHint}
@@ -48,20 +51,20 @@ export default async function GalleryPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-muted-foreground mb-1 text-center">AFTER</h3>
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-1 text-center">{tPage('after')}</h3>
                      <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden border">
                         <Image
                           src={item.afterImageUrl}
-                          alt={`After - ${item.procedureName}`}
+                          alt={`${tPage('after')} - ${tGallery(`${item.id}.procedureName`)}`}
                           fill
                           style={{ objectFit: 'cover' }}
                           data-ai-hint={item.afterImageHint}
                         />
                     </div>
                   </div>
-                  {item.description && (
+                  {tGallery.rich(`${item.id}.description`) && (
                     <CardDescription className="text-sm text-muted-foreground mt-2 text-center flex-grow">
-                      {item.description}
+                      {tGallery(`${item.id}.description`)}
                     </CardDescription>
                   )}
                 </CardContent>
@@ -70,7 +73,7 @@ export default async function GalleryPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            Our patient gallery is currently being updated with new transformations. Please check back soon to see the exceptional results achieved by our specialists at {siteTitle}.
+            {tPage('noResults', { siteTitle })}
           </p>
         )}
       </div>

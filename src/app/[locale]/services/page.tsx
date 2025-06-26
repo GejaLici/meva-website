@@ -4,23 +4,23 @@ import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
-  const t = await getTranslations({locale, namespace: 'Site'});
-  const siteTitle = t('title');
+  const t = await getTranslations({locale, namespace: 'ServicesOverviewPage'});
+  const tSite = await getTranslations({locale, namespace: 'Site'});
   return {
-    title: `Our Services | ${siteTitle}`,
-    description: `Explore the comprehensive range of advanced aesthetic and dental services offered at ${siteTitle}. Discover treatments tailored by experts to enhance your beauty and well-being.`,
+    title: t('metaTitle', {siteTitle: tSite('title')}),
+    description: t('metaDescription', {siteTitle: tSite('title')}),
   };
 }
 
-export default async function ServicesOverviewPage() {
-  const t = await getTranslations('Site');
-  const siteTitle = t('title');
-
+export default async function ServicesOverviewPage({params: {locale}}: {params: {locale: string}}) {
+  const t = await getTranslations({locale, namespace: 'ServicesOverviewPage'});
+  const tSite = await getTranslations({locale, namespace: 'Site'});
+  
   return (
     <>
       <PageHeader
-        title="Our Advanced Aesthetic & Dental Services"
-        description={`Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at ${siteTitle}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results.`}
+        title={t('title')}
+        description={t('description', {siteTitle: tSite('title')})}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         <ServiceCategoryGrid />
