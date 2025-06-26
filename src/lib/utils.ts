@@ -18,3 +18,8 @@ export function formatDate(dateString: string, locale: string, options?: Intl.Da
     return new Date(dateString).toLocaleDateString(undefined, options || defaultOptions);
   }
 }
+
+export function stripHtml(html: string): string {
+  if (!html) return '';
+  return html.replace(/<[^>]*>?/gm, '');
+}

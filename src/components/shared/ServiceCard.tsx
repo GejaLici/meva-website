@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { stripHtml } from '@/lib/utils';
 
 interface ServiceCardProps {
   service: Service;
@@ -16,14 +17,12 @@ interface ServiceCardProps {
 export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   const t = useTranslations('Services.items');
   const serviceName = t(`${service.id}.name`);
-  // Get the raw string, which includes HTML tags
-  const serviceDescription = t.rich(`${service.id}.description`, {
-    p: (chunks) => chunks,
-    b: (chunks) => chunks,
+  const serviceDescriptionHtml = t.rich(`${service.id}.description`, {
+    p: (chunks) => `<p>${chunks}</p>`,
+    b: (chunks) => `<strong>${chunks}</strong>`,
   });
 
-  // Strip the HTML tags to get plain text
-  const plainDescription = serviceDescription.toString().replace(/<[^>]*>?/gm, '');
+  const plainDescription = stripHtml(serviceDescriptionHtml.toString());
 
   const truncatedDescription = plainDescription.length > 120 
     ? plainDescription.substring(0, 120) + '...' 

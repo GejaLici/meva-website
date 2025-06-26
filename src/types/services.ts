@@ -13,5 +13,3 @@ export interface ServiceCategory {
   image?: string;
   imageHint?: string;
 }
-
-    

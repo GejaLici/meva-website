@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/card';
 import { Link } from '@/navigation';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { stripHtml } from '@/lib/utils';
 
 interface ServicePageProps {
   params: {
@@ -45,15 +46,16 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
   
   const serviceName = tItems(`${service.id}.name`);
-  const serviceDescription = tItems.rich(`${service.id}.description`, {p: (chunks) => chunks}).toString().replace(/<[^>]*>?/gm, '');
+  const serviceDescriptionHtml = tItems.rich(`${service.id}.description`, {p: (chunks) => chunks}).toString();
+  const serviceDescription = stripHtml(serviceDescriptionHtml);
 
   const metaDescription = serviceDescription.length > 155 
     ? `${serviceDescription.substring(0, 152)}...` 
     : serviceDescription;
 
   return {
-    title: tDetails('metaTitle', { serviceName, siteTitle }),
-    description: tDetails('metaDescription', { serviceName, excerpt: metaDescription }),
+    title: `${serviceName} | ${siteTitle}`,
+    description: metaDescription,
   };
 }
 
