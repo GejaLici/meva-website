@@ -171,5 +171,19 @@
       "teeth-fluoridation": { "name": "Zahnfluoridierung", "description": "<p>Die Anwendung von Fluorid auf die Zähne, um den Zahnschmelz zu stärken und Karies vorzubeugen.</p>" },
       "dental-sealants": { "name": "Zahnversiegelungen", "description": "<p>Dünne Schutzschichten, die auf die Kauflächen der Backenzähne aufgetragen werden, um Karies zu verhindern.</p>" }
     }
+  },
+  "AboutPage": {
+    "metaTitle": "Über die Meva Klinik",
+    "metaDescription": "Entdecken Sie die Mission, die Werte und das angesehene Team von zertifizierten medizinischen Fachleuten in der {siteName}. Erfahren Sie mehr über unser Engagement für Exzellenz in der ästhetischen und zahnärztlichen Versorgung.",
+    "headerTitle": "Über {siteName}",
+    "headerDescription": "Schönheit transformieren durch medizinisches Fachwissen, technologische Innovation und mitfühlende, patientenorientierte Betreuung.",
+    "philosophyTitle": "Unsere Philosophie: Ihre Schönheit, unsere Priorität, geleitet von medizinischer Exzellenz",
+    "philosophyP1": "In der {siteName} glauben wir, dass die ästhetische Verbesserung eine zutiefst persönliche Reise zu mehr Selbstvertrauen und Wohlbefinden ist, die auf medizinischer Wissenschaft und Sicherheit beruht. Unsere Kernphilosophie dreht sich um die Bereitstellung hochgradig personalisierter Betreuung, die Nutzung evidenzbasierter Fortschritte in der ästhetischen Medizin und die Einhaltung der höchsten medizinischen und ethischen Standards.",
+    "philosophyP2": "Wir sind bestrebt, Ihre einzigartigen Wünsche und anatomischen Gegebenheiten gründlich zu verstehen. Unser Expertenteam schneidet Behandlungen zu, um natürlich aussehende, harmonische Ergebnisse zu erzielen, die Ihre individuelle Schönheit unterstreichen und gleichzeitig Ihre Gesundheit und Sicherheit priorisieren. Wir fördern eine unterstützende, professionelle und komfortable Umgebung, in der Sie sich während Ihrer transformativen Erfahrung gehört, respektiert und gestärkt fühlen.",
+    "philosophyButton": "Entdecken Sie unsere fortschrittlichen Dienstleistungen",
+    "imageAlt": "{siteName} hochmoderne Klinik-Innenausstattung",
+    "journeyTitle": "Beginnen Sie Ihre Transformationsreise",
+    "journeyP1": "Wir laden Sie ein, noch heute eine umfassende Beratung mit unseren medizinischen Experten zu vereinbaren. Machen Sie den entscheidenden ersten Schritt zur Verwirklichung Ihrer ästhetischen Wünsche in einer sicheren, unterstützenden und professionellen Umgebung.",
+    "journeyButton": "Buchen Sie Ihre vertrauliche Beratung"
   }
 }

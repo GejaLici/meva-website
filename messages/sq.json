@@ -171,5 +171,19 @@
       "teeth-fluoridation": { "name": "Fluorizimi i Dhëmbëve", "description": "<p>Aplikimi i fluorit në dhëmbë për të forcuar smaltin dhe për të parandaluar prishjen e dhëmbëve.</p>" },
       "dental-sealants": { "name": "Sigilantët Dentarë", "description": "<p>Shtresa të holla mbrojtëse të aplikuara në sipërfaqet përtypëse të dhëmbëve të pasmë për të parandaluar kariesin.</p>" }
     }
+  },
+  "AboutPage": {
+    "metaTitle": "Rreth Klinikës Meva",
+    "metaDescription": "Zbuloni misionin, vlerat dhe ekipin e shquar të profesionistëve mjekësorë të certifikuar në {siteName}. Mësoni rreth angazhimit tonë për përsosmëri në kujdesin estetik dhe dentar.",
+    "headerTitle": "Rreth {siteName}",
+    "headerDescription": "Transformimi i bukurisë përmes ekspertizës mjekësore, inovacionit teknologjik dhe kujdesit të dhembshur dhe të përqendruar te pacienti.",
+    "philosophyTitle": "Filozofia jonë: Bukuria juaj, Prioriteti ynë, e Udhëhequr nga Përsosmëria Mjekësore",
+    "philosophyP1": "Në {siteName}, ne besojmë se përmirësimi estetik është një udhëtim thellësisht personal drejt vetëbesimit dhe mirëqenies më të madhe, i bazuar në shkencën dhe sigurinë mjekësore. Filozofia jonë kryesore sillet rreth ofrimit të kujdesit shumë të personalizuar, duke përdorur përparimet e bazuara në prova në mjekësinë estetike dhe duke mbajtur standardet më të larta mjekësore dhe etike.",
+    "philosophyP2": "Ne jemi të përkushtuar të kuptojmë tërësisht aspiratat tuaja unike dhe konsideratat anatomike. Ekipi ynë ekspert përshtat trajtimet për të arritur rezultate harmonike me pamje natyrale që rrisin bukurinë tuaj individuale duke i dhënë përparësi shëndetit dhe sigurisë suaj. Ne nxisim një mjedis mbështetës, profesional dhe të rehatshëm ku ju ndiheni të dëgjuar, të respektuar dhe të fuqizuar gjatë përvojës suaj transformuese.",
+    "philosophyButton": "Eksploroni Shërbimet Tona të Avancuara",
+    "imageAlt": "Brendësia e klinikës moderne të {siteName}",
+    "journeyTitle": "Filloni Udhëtimin Tuaj të Transformimit",
+    "journeyP1": "Ju ftojmë të caktoni një konsultë gjithëpërfshirëse me ekspertët tanë mjekësorë sot. Hidhni hapin e parë vendimtar drejt arritjes së aspiratave tuaja estetike në një mjedis të sigurt, mbështetës dhe profesional.",
+    "journeyButton": "Rezervoni Konsultën Tuaj Konfidenciale"
   }
 }

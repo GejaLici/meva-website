@@ -121,7 +121,7 @@
       "rim-mjekres": { "name": "Mentoplastica", "description": "<p>Una procedura chirurgica per rimodellare o migliorare il mento, sia con un impianto che rimodellando l'osso, per migliorare l'equilibrio delle proporzioni facciali.</p>" },
       "lip-reshaping": { "name": "Rimodellamento e Aumento delle Labbra", "description": "<p>Una procedura estetica per migliorare l'aspetto delle labbra aumentandone la pienezza, la forma, la struttura o la simmetria, spesso utilizzando filler dermici.</p>" },
       "xanthelasma-plasma-arc": { "name": "Rimozione Depositi Palpebrali (Plasma)", "description": "<p>Questo è un trattamento non chirurgico per rimuovere le macchie gialle di colesterolo che si trovano sulle palpebre. Utilizziamo un preciso dispositivo al plasma per eliminare delicatamente questi depositi, donandoti una pelle più liscia con tempi di recupero molto brevi.</p>" },
-      "multivitamin-treatment": { "name": "Trattamento Viso con Infusione Multivitaminica", "description": "<p>Un trattamento viso che infonde una miscela di vitamine, minerali e antiossidanti direttamente nella pelle per nutrirla, idratarla e rivitalizzarla, risultando in un colorito più radioso.</p>" },
+      "multivitamin-treatment": { "name": "Trattamento Viso con Infusione Multivitaminica", "description": "<p>Un trattamento viso che infonde una miscela di vitamine, minerali e antiossidanti directly nella pelle per nutrirla, idratarla e rivitalizzarla, risultando in un colorito più radioso.</p>" },
       "eyelids-plasma-arc": { "name": "Lifting non Chirurgico delle Palpebre (Arco al Plasma)", "description": "<p>Un trattamento non invasivo che utilizza l'energia del plasma per sollevare e rassodare la pelle delle palpebre, riducendo l'aspetto della pelle cadente e delle rughe senza intervento chirurgico.</p>" },
       "cheekbone-reshaping": { "name": "Contouring degli Zigomi (Filler)", "description": "<p>Una procedura non chirurgica che utilizza filler dermici per migliorare e definire gli zigomi, ripristinando il volume e creando una struttura facciale più modellata.</p>" },
       "microdermabrasion": { "name": "Microdermoabrasione", "description": "<p>Una procedura minimamente invasiva che rinnova la pelle levigando delicatamente lo strato esterno spesso, trattando i danni del sole, le rughe e altri problemi della pelle.</p>" },
@@ -171,5 +171,19 @@
       "teeth-fluoridation": { "name": "Fluorizzazione dei Denti", "description": "<p>L'applicazione di fluoro sui denti per rafforzare lo smalto e prevenire la carie.</p>" },
       "dental-sealants": { "name": "Sigillanti Dentali", "description": "<p>Sottili rivestimenti protettivi applicati sulle superfici masticatorie dei denti posteriori per prevenire le carie.</p>" }
     }
+  },
+  "AboutPage": {
+    "metaTitle": "Chi siamo - Clinica Meva",
+    "metaDescription": "Scopri la missione, i valori e il distinto team di professionisti medici certificati della {siteName}. Scopri il nostro impegno per l'eccellenza nelle cure estetiche e dentali.",
+    "headerTitle": "Chi siamo - {siteName}",
+    "headerDescription": "Trasformare la bellezza attraverso competenza medica, innovazione tecnologica e cure compassionevoli incentrate sul paziente.",
+    "philosophyTitle": "La nostra filosofia: la tua bellezza, la nostra priorità, guidata dall'eccellenza medica",
+    "philosophyP1": "Alla {siteName}, crediamo che il miglioramento estetico sia un viaggio profondamente personale verso una maggiore fiducia in se stessi e benessere, fondato sulla scienza medica e sulla sicurezza. La nostra filosofia di base ruota attorno alla fornitura di cure altamente personalizzate, all'utilizzo di progressi basati sull'evidenza nella medicina estetica e al rispetto dei più alti standard medici ed etici.",
+    "philosophyP2": "Ci impegniamo a comprendere a fondo le tue aspirazioni uniche e le considerazioni anatomiche. Il nostro team di esperti personalizza i trattamenti per ottenere risultati armoniosi e dall'aspetto naturale che esaltano la tua bellezza individuale dando priorità alla tua salute e sicurezza. Promuoviamo un ambiente di supporto, professionale e confortevole in cui ti senti ascoltato, rispettato e potenziato durante la tua esperienza di trasformazione.",
+    "philosophyButton": "Esplora i nostri servizi avanzati",
+    "imageAlt": "Interno della clinica all'avanguardia di {siteName}",
+    "journeyTitle": "Inizia il tuo viaggio di trasformazione",
+    "journeyP1": "Ti invitiamo a programmare una consulenza completa con i nostri esperti medici oggi. Fai il primo passo decisivo verso il raggiungimento delle tue aspirazioni estetiche in un ambiente sicuro, di supporto e professionale.",
+    "journeyButton": "Prenota la tua consulenza confidenziale"
   }
 }

@@ -110,7 +110,7 @@
     },
     "items": {
       "op-hunde": { "name": "Rhinoplastie", "description": "<p>Une procédure chirurgicale pour remodeler le nez afin d'améliorer l'apparence et/ou la fonction. Elle peut modifier la taille ou la forme du nez, ajuster l'angle entre le nez et la lèvre supérieure, ou corriger des problèmes respiratoires.</p>" },
-      "rim-hunde": { "name": "Remodelage de la Pointe du Nez", "description": "<p>Une procédure ciblée qui affine spécifiquement la forme, la taille ou la projection de la pointe nasale, souvent avec moins de temps d'arrêt qu'une rhinoplastie complète.</p>" },
+      "rim-hunde": { "name": "Remodelage de la Pointe du Nez", "description": "<p>Une procédure ciblée qui affine spécifiquement la forme, la taille ou la projection de la pointe nasale, often avec moins de temps d'arrêt qu'une rhinoplastie complète.</p>" },
       "rim-vesheve": { "name": "Otoplastie", "description": "<p>Une procédure chirurgicale pour modifier la taille, la forme ou la position des oreilles. Elle est couramment pratiquée pour corriger les oreilles décollées ou pour traiter des oreilles déformées par une blessure.</p>" },
       "mbj-flokeve": { "name": "Greffe de Cheveux", "description": "<p>Une technique chirurgicale qui déplace les follicules pileux d'une partie du corps (le site donneur) vers une partie chauve ou dégarnie du corps (le site receveur). Elle est principalement utilisée pour traiter la calvitie masculine.</p>" },
       "mbj-mjekres": { "name": "Greffe de Barbe", "description": "<p>Similaire à une greffe de cheveux, cette procédure consiste à transplanter des follicules pileux dans la zone de la barbe pour augmenter la densité, combler les zones clairsemées ou remodeler la barbe.</p>" },
@@ -171,5 +171,19 @@
       "teeth-fluoridation": { "name": "Fluoration des Dents", "description": "<p>L'application de fluorure sur les dents pour renforcer l'émail et prévenir la carie dentaire.</p>" },
       "dental-sealants": { "name": "Scellants Dentaires", "description": "<p>Fines couches protectrices appliquées sur les surfaces de mastication des dents postérieures pour prévenir les caries.</p>" }
     }
+  },
+  "AboutPage": {
+    "metaTitle": "À propos de la Clinique Meva",
+    "metaDescription": "Découvrez la mission, les valeurs et l'équipe distinguée de professionnels de la santé certifiés de la {siteName}. Apprenez-en davantage sur notre engagement envers l'excellence des soins esthétiques et dentaires.",
+    "headerTitle": "À propos de {siteName}",
+    "headerDescription": "Transformer la beauté grâce à l'expertise médicale, l'innovation technologique et des soins compatissants et axés sur le patient.",
+    "philosophyTitle": "Notre philosophie : votre beauté, notre priorité, guidée par l'excellence médicale",
+    "philosophyP1": "À la {siteName}, nous croyons que l'amélioration esthétique est un voyage profondément personnel vers une plus grande confiance en soi et un plus grand bien-être, fondé sur la science médicale et la sécurité. Notre philosophie de base s'articule autour de la fourniture de soins hautement personnalisés, de l'utilisation des avancées fondées sur des preuves en médecine esthétique et du respect des normes médicales et éthiques les plus élevées.",
+    "philosophyP2": "Nous nous engageons à comprendre en profondeur vos aspirations uniques et vos considérations anatomiques. Notre équipe d'experts adapte les traitements pour obtenir des résultats harmonieux et d'apparence naturelle qui rehaussent votre beauté individuelle tout en priorisant votre santé et votre sécurité. Nous favorisons un environnement de soutien, professionnel et confortable où vous vous sentez entendu, respecté et responsabilisé tout au long de votre expérience de transformation.",
+    "philosophyButton": "Découvrez nos services avancés",
+    "imageAlt": "Intérieur de la clinique ultramoderne de {siteName}",
+    "journeyTitle": "Commencez votre voyage de transformation",
+    "journeyP1": "Nous vous invitons à planifier une consultation complète avec nos experts médicaux dès aujourd'hui. Faites le premier pas décisif vers la réalisation de vos aspirations esthétiques dans un environnement sûr, favorable et professionnel.",
+    "journeyButton": "Réservez votre consultation confidentielle"
   }
 }

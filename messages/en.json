@@ -171,5 +171,19 @@
       "teeth-fluoridation": { "name": "Teeth Fluoridation", "description": "<p>The application of fluoride to teeth to strengthen enamel and prevent tooth decay.</p>" },
       "dental-sealants": { "name": "Dental Sealants", "description": "<p>Thin protective coatings applied to the chewing surfaces of back teeth to prevent cavities.</p>" }
     }
+  },
+  "AboutPage": {
+    "metaTitle": "About Meva Clinic",
+    "metaDescription": "Discover the mission, values, and distinguished team of board-certified medical professionals at {siteName}. Learn about our commitment to excellence in aesthetic and dental care.",
+    "headerTitle": "About {siteName}",
+    "headerDescription": "Transforming beauty through medical expertise, technological innovation, and compassionate, patient-focused care.",
+    "philosophyTitle": "Our Philosophy: Your Beauty, Our Priority, Guided by Medical Excellence",
+    "philosophyP1": "At {siteName}, we believe that aesthetic enhancement is a deeply personal journey towards greater self-confidence and well-being, grounded in medical science and safety. Our core philosophy revolves around providing highly personalized care, utilizing evidence-based advancements in aesthetic medicine, and upholding the highest medical and ethical standards.",
+    "philosophyP2": "We are committed to thoroughly understanding your unique aspirations and anatomical considerations. Our expert team tailors treatments to achieve natural-looking, harmonious results that enhance your individual beauty while prioritizing your health and safety. We foster a supportive, professional, and comfortable environment where you feel heard, respected, and empowered throughout your transformative experience.",
+    "philosophyButton": "Explore Our Advanced Services",
+    "imageAlt": "{siteName} state-of-the-art clinic interior",
+    "journeyTitle": "Begin Your Transformation Journey",
+    "journeyP1": "We invite you to schedule a comprehensive consultation with our medical experts today. Take the decisive first step towards achieving your aesthetic aspirations in a safe, supportive, and professional environment.",
+    "journeyButton": "Book Your Confidential Consultation"
   }
 }

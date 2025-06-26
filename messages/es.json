@@ -171,5 +171,19 @@
       "teeth-fluoridation": { "name": "Fluoración Dental", "description": "<p>La aplicación de flúor a los dientes para fortalecer el esmalte y prevenir la caries dental.</p>" },
       "dental-sealants": { "name": "Selladores Dentales", "description": "<p>Finas capas protectoras que se aplican a las superficies de masticación de los dientes posteriores para prevenir las caries.</p>" }
     }
+  },
+  "AboutPage": {
+    "metaTitle": "Sobre la Clínica Meva",
+    "metaDescription": "Descubra la misión, los valores y el distinguido equipo de profesionales médicos certificados de {siteName}. Conozca nuestro compromiso con la excelencia en el cuidado estético y dental.",
+    "headerTitle": "Sobre {siteName}",
+    "headerDescription": "Transformando la belleza a través de la experiencia médica, la innovación tecnológica y un cuidado compasivo y centrado en el paciente.",
+    "philosophyTitle": "Nuestra filosofía: su belleza, nuestra prioridad, guiada por la excelencia médica",
+    "philosophyP1": "En {siteName}, creemos que la mejora estética es un viaje profundamente personal hacia una mayor confianza en uno mismo y bienestar, basado en la ciencia médica y la seguridad. Nuestra filosofía central gira en torno a brindar una atención altamente personalizada, utilizando avances basados en la evidencia en medicina estética y manteniendo los más altos estándares médicos y éticos.",
+    "philosophyP2": "Nos comprometemos a comprender a fondo sus aspiraciones únicas y consideraciones anatómicas. Nuestro equipo de expertos adapta los tratamientos para lograr resultados armoniosos y de aspecto natural que realzan su belleza individual mientras priorizan su salud y seguridad. Fomentamos un entorno de apoyo, profesional y cómodo donde se sienta escuchado, respetado y empoderado durante su experiencia transformadora.",
+    "philosophyButton": "Explore nuestros servicios avanzados",
+    "imageAlt": "Interior de la clínica de última generación de {siteName}",
+    "journeyTitle": "Comience su viaje de transformación",
+    "journeyP1": "Le invitamos a programar una consulta integral con nuestros expertos médicos hoy mismo. Dé el primer paso decisivo para alcanzar sus aspiraciones estéticas en un entorno seguro, de apoyo y profesional.",
+    "journeyButton": "Reserve su consulta confidencial"
   }
 }
