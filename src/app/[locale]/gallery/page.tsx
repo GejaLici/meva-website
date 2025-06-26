@@ -8,8 +8,8 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
-  const t = await getTranslations({locale, namespace: 'GalleryPage'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const t = await getTranslations('GalleryPage');
+  const tSite = await getTranslations('Site');
   const siteTitle = tSite('title');
   return {
     title: t('metaTitle', { siteTitle }),
