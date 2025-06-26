@@ -1,7 +1,7 @@
 
 {
   "Site": {
-    "title": "Clínica NovaSculpt"
+    "title": "Clínica Meva"
   },
   "Navigation": {
     "home": "Inicio",
@@ -33,17 +33,17 @@
   },
   "HomePage": {
     "heroTitle": "Revele su resplandor. Redefina su belleza.",
-    "heroSubtitle": "Experimente la ciencia y el arte de la transformación estética en la Clínica NovaSculpt. Nuestros profesionales médicos altamente cualificados combinan tecnología de vanguardia con una atención personalizada para ayudarle a alcanzar sus objetivos estéticos y de bienestar definitivos.",
+    "heroSubtitle": "Experimente la ciencia y el arte de la transformación estética en la Clínica Meva. Nuestros profesionales médicos altamente cualificados combinan tecnología de vanguardia con una atención personalizada para ayudarle a alcanzar sus objetivos estéticos y de bienestar definitivos.",
     "heroButton": "Explore nuestros tratamientos expertos",
     "servicesTitle": "Nuestros principales servicios estéticos y dentales",
-    "servicesSubtitle": "En la Clínica NovaSculpt, ofrecemos un conjunto completo de procedimientos estéticos y dentales avanzados, meticulosamente adaptados por nuestros especialistas para realzar su belleza natural y elevar su confianza.",
+    "servicesSubtitle": "En la Clínica Meva, ofrecemos un conjunto completo de procedimientos estéticos y dentales avanzados, meticulosamente adaptados por nuestros especialistas para realzar su belleza natural y elevar su confianza.",
     "testimonialsTitle": "Lo que dicen nuestros pacientes",
-    "testimonialsSubtitle": "Escuche a aquellos que han experimentado la diferencia de la Clínica NovaSculpt y nos han confiado su cuidado.",
+    "testimonialsSubtitle": "Escuche a aquellos que han experimentado la diferencia de la Clínica Meva y nos han confiado su cuidado.",
     "galleryTitle": "Transformaciones de las que estamos orgullosos",
-    "gallerySubtitle": "Sea testigo de la habilidad meticulosa y el arte de nuestros especialistas a través de estos resultados reales de pacientes. Eche un vistazo a los impresionantes resultados que nuestros pacientes han logrado en la Clínica NovaSculpt.",
+    "gallerySubtitle": "Sea testigo de la habilidad meticulosa y el arte de nuestros especialistas a través de estos resultados reales de pacientes. Eche un vistazo a los impresionantes resultados que nuestros pacientes han logrado en la Clínica Meva.",
     "galleryButton": "Ver la galería completa de resultados",
     "insightsTitle": "Más información y apoyo de expertos",
-    "insightsSubtitle": "Explore información detallada sobre nuestros tratamientos especializados, manténgase informado con los últimos avances en el cuidado estético y encuentre respuestas completas a sus preguntas de nuestro equipo de expertos en la Clínica NovaSculpt.",
+    "insightsSubtitle": "Explore información detallada sobre nuestros tratamientos especializados, manténgase informado con los últimos avances en el cuidado estético y encuentre respuestas completas a sus preguntas de nuestro equipo de expertos en la Clínica Meva.",
     "insightsGalleryTitle": "Vea nuestras transformaciones",
     "insightsGalleryDesc": "Vea las impresionantes transformaciones y los resultados reales de los pacientes que nuestro equipo médico experto ha logrado.",
     "insightsGalleryButton": "Visite la galería de pacientes",
@@ -54,7 +54,7 @@
     "insightsFaqDesc": "Encuentre respuestas completas a las consultas comunes sobre nuestros procedimientos, protocolos de recuperación y qué esperar durante su viaje con nosotros.",
     "insightsFaqButton": "Visite nuestras preguntas frecuentes completas",
     "contactTitle": "¿Listo para su transformación?",
-    "contactSubtitle": "Inicie su viaje hacia los resultados estéticos deseados. Póngase en contacto con la Clínica NovaSculpt hoy mismo para una consulta confidencial. Complete el siguiente formulario y nuestro equipo dedicado de expertos médicos se pondrá en contacto con usted a la brevedad para discutir sus aspiraciones y guiarlo a través de nuestros planes de tratamiento personalizados."
+    "contactSubtitle": "Inicie su viaje hacia los resultados estéticos deseados. Póngase en contacto con la Clínica Meva hoy mismo para una consulta confidencial. Complete el siguiente formulario y nuestro equipo dedicado de expertos médicos se pondrá en contacto con usted a la brevedad para discutir sus aspiraciones y guiarlo a través de nuestros planes de tratamiento personalizados."
   },
   "ContactForm": {
     "nameLabel": "Nombre completo",
@@ -80,17 +80,17 @@
   "Testimonials": {
     "testimonial-1": {
       "name": "Sara L.",
-      "quote": "¡La Clínica NovaSculpt realmente transformó mi confianza! Los resultados de mi remodelación de nariz son fantásticos, superando todas mis expectativas. Todo el equipo fue increíblemente profesional y solidario durante todo el proceso. No podría estar más feliz.",
+      "quote": "¡La Clínica Meva realmente transformó mi confianza! Los resultados de mi remodelación de nariz son fantásticos, superando todas mis expectativas. Todo el equipo fue increíblemente profesional y solidario durante todo el proceso. No podría estar más feliz.",
       "treatment": "Remodelación de nariz (Rinoplastia)"
     },
     "testimonial-2": {
       "name": "Miguel B.",
-      "quote": "Inicialmente dudaba en someterme a un trasplante de cabello, pero los especialistas de la Clínica NovaSculpt fueron excepcionales. Me explicaron todo claramente y me hicieron sentir completamente cómodo. El procedimiento fue sencillo y los resultados son notablemente naturales. ¡Recomiendo encarecidamente su experiencia!",
+      "quote": "Inicialmente dudaba en someterme a un trasplante de cabello, pero los especialistas de la Clínica Meva fueron excepcionales. Me explicaron todo claramente y me hicieron sentir completamente cómodo. El procedimiento fue sencillo y los resultados son notablemente naturales. ¡Recomiendo encarecidamente su experiencia!",
       "treatment": "Trasplante de cabello (FUE)"
     },
     "testimonial-3": {
       "name": "Emilia R.",
-      "quote": "Mi experiencia de aumento de senos en la Clínica NovaSculpt fue excepcional. Los cirujanos escucharon atentamente mis objetivos estéticos y ofrecieron resultados hermosos y de aspecto natural que se adaptan perfectamente a mi cuerpo. La atención postoperatoria y la atención al detalle fueron excepcionales.",
+      "quote": "Mi experiencia de aumento de senos en la Clínica Meva fue excepcional. Los cirujanos escucharon atentamente mis objetivos estéticos y ofrecieron resultados hermosos y de aspecto natural que se adaptan perfectamente a mi cuerpo. La atención postoperatoria y la atención al detalle fueron excepcionales.",
       "treatment": "Aumento de senos"
     }
   },

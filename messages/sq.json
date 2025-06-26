@@ -1,7 +1,7 @@
 
 {
   "Site": {
-    "title": "Klinika NovaSculpt"
+    "title": "Klinika Meva"
   },
   "Navigation": {
     "home": "Kreu",
@@ -33,17 +33,17 @@
   },
   "HomePage": {
     "heroTitle": "Zbuloni Rrezatimin Tuaj. Ripërcaktoni Bukurinë Tuaj.",
-    "heroSubtitle": "Përjetoni shkencën dhe artin e transformimit estetik në Klinikën NovaSculpt. Profesionistët tanë mjekësorë të kualifikuar kombinojnë teknologjinë më të fundit me kujdesin e personalizuar për t'ju ndihmuar të arrini qëllimet tuaja përfundimtare estetike dhe të mirëqenies.",
+    "heroSubtitle": "Përjetoni shkencën dhe artin e transformimit estetik në Klinikën Meva. Profesionistët tanë mjekësorë të kualifikuar kombinojnë teknologjinë më të fundit me kujdesin e personalizuar për t'ju ndihmuar të arrini qëllimet tuaja përfundimtare estetike dhe të mirëqenies.",
     "heroButton": "Eksploroni Trajtimet Tona Eksperte",
     "servicesTitle": "Shërbimet Tona Kryesore Estetike & Dentare",
-    "servicesSubtitle": "Në Klinikën NovaSculpt, ne ofrojmë një suitë të plotë të procedurave të avancuara estetike dhe dentare, të përshtatura me përpikëri nga specialistët tanë për të përmirësuar bukurinë tuaj natyrore dhe për të ngritur vetëbesimin tuaj.",
+    "servicesSubtitle": "Në Klinikën Meva, ne ofrojmë një suitë të plotë të procedurave të avancuara estetike dhe dentare, të përshtatura me përpikëri nga specialistët tanë për të përmirësuar bukurinë tuaj natyrore dhe për të ngritur vetëbesimin tuaj.",
     "testimonialsTitle": "Çfarë Thonë Pacientët Tanë",
-    "testimonialsSubtitle": "Dëgjoni nga ata që kanë përjetuar ndryshimin në Klinikën NovaSculpt dhe na kanë besuar kujdesin e tyre.",
+    "testimonialsSubtitle": "Dëgjoni nga ata që kanë përjetuar ndryshimin në Klinikën Meva dhe na kanë besuar kujdesin e tyre.",
     "galleryTitle": "Transformimet për të Cilat Jemi Krenarë",
-    "gallerySubtitle": "Dëshmoni aftësinë dhe artin e përpiktë të specialistëve tanë përmes këtyre rezultateve reale të pacientëve. Hidhni një vështrim në rezultatet mahnitëse që pacientët tanë kanë arritur në Klinikën NovaSculpt.",
+    "gallerySubtitle": "Dëshmoni aftësinë dhe artin e përpiktë të specialistëve tanë përmes këtyre rezultateve reale të pacientëve. Hidhni një vështrim në rezultatet mahnitëse që pacientët tanë kanë arritur në Klinikën Meva.",
     "galleryButton": "Shikoni Galerinë e Plotë të Rezultateve",
     "insightsTitle": "Informacione të Mëtejshme & Mbështetje Eksperte",
-    "insightsSubtitle": "Eksploroni informacion të thelluar rreth trajtimeve tona të specializuara, qëndroni të informuar me përparimet më të fundit në kujdesin estetik dhe gjeni përgjigje të plota për pyetjet tuaja nga ekipi ynë ekspert në Klinikën NovaSculpt.",
+    "insightsSubtitle": "Eksploroni informacion të thelluar rreth trajtimeve tona të specializuara, qëndroni të informuar me përparimet më të fundit në kujdesin estetik dhe gjeni përgjigje të plota për pyetjet tuaja nga ekipi ynë ekspert në Klinikën Meva.",
     "insightsGalleryTitle": "Shikoni Transformimet Tona",
     "insightsGalleryDesc": "Shikoni transformimet mahnitëse dhe rezultatet reale të pacientëve që ekipi ynë mjekësor ekspert ka arritur.",
     "insightsGalleryButton": "Vizitoni Galerinë e Pacientëve",
@@ -54,7 +54,7 @@
     "insightsFaqDesc": "Gjeni përgjigje të plota për pyetjet e zakonshme rreth procedurave tona, protokolleve të rimëkëmbjes dhe çfarë të prisni gjatë udhëtimit tuaj me ne.",
     "insightsFaqButton": "Vizitoni FAQ-in Tonë të Plotë",
     "contactTitle": "Gati për Transformimin Tuaj?",
-    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni Klinikën NovaSculpt sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar."
+    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni Klinikën Meva sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar."
   },
   "ContactForm": {
     "nameLabel": "Emri i Plotë",
@@ -80,17 +80,17 @@
   "Testimonials": {
     "testimonial-1": {
       "name": "Sara L.",
-      "quote": "Klinika NovaSculpt me të vërtetë transformoi vetëbesimin tim! Rezultatet e rimodelimit të hundës sime janë fantastike, duke i tejkaluar të gjitha pritshmëritë e mia. I gjithë ekipi ishte jashtëzakonisht profesional dhe mbështetës gjatë gjithë procesit. Nuk mund të isha më e lumtur.",
+      "quote": "Klinika Meva me të vërtetë transformoi vetëbesimin tim! Rezultatet e rimodelimit të hundës sime janë fantastike, duke i tejkaluar të gjitha pritshmëritë e mia. I gjithë ekipi ishte jashtëzakonisht profesional dhe mbështetës gjatë gjithë procesit. Nuk mund të isha më e lumtur.",
       "treatment": "Rimodelimi i Hundës (Rinoplastika)"
     },
     "testimonial-2": {
       "name": "Mikeli B.",
-      "quote": "Fillimisht hezitoja t'i nënshtrohesha një transplanti flokësh, por specialistët në Klinikën NovaSculpt ishin të jashtëzakonshëm. Ata shpjeguan gjithçka qartë dhe më bënë të ndihesha plotësisht rehat. Procedura ishte e lehtë dhe rezultatet janë jashtëzakonisht natyrale. Rekomandoj fuqimisht ekspertizën e tyre!",
+      "quote": "Fillimisht hezitoja t'i nënshtrohesha një transplanti flokësh, por specialistët në Klinikën Meva ishin të jashtëzakonshëm. Ata shpjeguan gjithçka qartë dhe më bënë të ndihesha plotësisht rehat. Procedura ishte e lehtë dhe rezultatet janë jashtëzakonisht natyrale. Rekomandoj fuqimisht ekspertizën e tyre!",
       "treatment": "Transplant Flokësh (FUE)"
     },
     "testimonial-3": {
       "name": "Emilia R.",
-      "quote": "Përvoja ime e zmadhimit të gjoksit në Klinikën NovaSculpt ishte e jashtëzakonshme. Kirurgët dëgjuan me vëmendje qëllimet e mia estetike dhe ofruan rezultate të bukura dhe me pamje natyrale që i përshtaten në mënyrë perfekte trupit tim. Kujdesi pas operacionit dhe vëmendja ndaj detajeve ishin të jashtëzakonshme.",
+      "quote": "Përvoja ime e zmadhimit të gjoksit në Klinikën Meva ishte e jashtëzakonshme. Kirurgët dëgjuan me vëmendje qëllimet e mia estetike dhe ofruan rezultate të bukura dhe me pamje natyrale që i përshtaten në mënyrë perfekte trupit tim. Kujdesi pas operacionit dhe vëmendja ndaj detajeve ishin të jashtëzakonshme.",
       "treatment": "Zmadhimi i Gjoksit"
     }
   },

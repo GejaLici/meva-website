@@ -1,7 +1,7 @@
 
 {
   "Site": {
-    "title": "NovaSculpt Clinic"
+    "title": "Meva Clinic"
   },
   "Navigation": {
     "home": "Home",
@@ -33,17 +33,17 @@
   },
   "HomePage": {
     "heroTitle": "Reveal Your Radiance. Redefine Your Beauty.",
-    "heroSubtitle": "Experience the science and art of aesthetic transformation at NovaSculpt Clinic. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.",
+    "heroSubtitle": "Experience the science and art of aesthetic transformation at Meva Clinic. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.",
     "heroButton": "Explore Our Expert Treatments",
     "servicesTitle": "Our Premier Aesthetic & Dental Services",
-    "servicesSubtitle": "At NovaSculpt Clinic, we provide a comprehensive suite of advanced aesthetic and dental procedures, meticulously tailored by our specialists to enhance your natural beauty and elevate your confidence.",
+    "servicesSubtitle": "At Meva Clinic, we provide a comprehensive suite of advanced aesthetic and dental procedures, meticulously tailored by our specialists to enhance your natural beauty and elevate your confidence.",
     "testimonialsTitle": "What Our Patients Say",
-    "testimonialsSubtitle": "Hear from those who have experienced the NovaSculpt Clinic difference and entrusted us with their care.",
+    "testimonialsSubtitle": "Hear from those who have experienced the Meva Clinic difference and entrusted us with their care.",
     "galleryTitle": "Transformations We're Proud Of",
-    "gallerySubtitle": "Witness the meticulous skill and artistry of our specialists through these real patient outcomes. Glimpse into the stunning results our patients have achieved at NovaSculpt Clinic.",
+    "gallerySubtitle": "Witness the meticulous skill and artistry of our specialists through these real patient outcomes. Glimpse into the stunning results our patients have achieved at Meva Clinic.",
     "galleryButton": "View Full Gallery of Results",
     "insightsTitle": "Further Insights & Expert Support",
-    "insightsSubtitle": "Explore in-depth information about our specialized treatments, stay informed with the latest advancements in aesthetic care, and find comprehensive answers to your questions from our expert team at NovaSculpt Clinic.",
+    "insightsSubtitle": "Explore in-depth information about our specialized treatments, stay informed with the latest advancements in aesthetic care, and find comprehensive answers to your questions from our expert team at Meva Clinic.",
     "insightsGalleryTitle": "View Our Transformations",
     "insightsGalleryDesc": "See the stunning transformations and real-patient results our expert medical team has achieved.",
     "insightsGalleryButton": "Visit Patient Gallery",
@@ -54,7 +54,7 @@
     "insightsFaqDesc": "Find comprehensive answers to common queries about our procedures, recovery protocols, and what to expect during your journey with us.",
     "insightsFaqButton": "Visit Our Comprehensive FAQ",
     "contactTitle": "Ready for Your Transformation?",
-    "contactSubtitle": "Initiate your journey towards your desired aesthetic outcomes. Contact NovaSculpt Clinic today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways."
+    "contactSubtitle": "Initiate your journey towards your desired aesthetic outcomes. Contact Meva Clinic today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways."
   },
   "ContactForm": {
     "nameLabel": "Full Name",
@@ -80,17 +80,17 @@
   "Testimonials": {
     "testimonial-1": {
       "name": "Sarah L.",
-      "quote": "NovaSculpt Clinic truly transformed my confidence! The results of my nose reshaping are fantastic, exceeding all my expectations. The entire team was incredibly professional and supportive throughout the entire process. I couldn't be happier.",
+      "quote": "Meva Clinic truly transformed my confidence! The results of my nose reshaping are fantastic, exceeding all my expectations. The entire team was incredibly professional and supportive throughout the entire process. I couldn't be happier.",
       "treatment": "Nose Reshaping (Rhinoplasty)"
     },
     "testimonial-2": {
       "name": "Michael B.",
-      "quote": "I was initially hesitant about undergoing a hair transplant, but the specialists at NovaSculpt Clinic were exceptional. They explained everything clearly and made me feel completely comfortable. The procedure was smooth, and the results are remarkably natural. Highly recommend their expertise!",
+      "quote": "I was initially hesitant about undergoing a hair transplant, but the specialists at Meva Clinic were exceptional. They explained everything clearly and made me feel completely comfortable. The procedure was smooth, and the results are remarkably natural. Highly recommend their expertise!",
       "treatment": "Hair Transplant (FUE)"
     },
     "testimonial-3": {
       "name": "Emily R.",
-      "quote": "My breast augmentation experience at NovaSculpt Clinic was outstanding. The surgeons attentively listened to my aesthetic goals and delivered beautiful, natural-looking results that perfectly suit my frame. The post-operative care and attention to detail were exceptional.",
+      "quote": "My breast augmentation experience at Meva Clinic was outstanding. The surgeons attentively listened to my aesthetic goals and delivered beautiful, natural-looking results that perfectly suit my frame. The post-operative care and attention to detail were exceptional.",
       "treatment": "Breast Augmentation"
     }
   },
@@ -173,5 +173,3 @@
     }
   }
 }
-
-    

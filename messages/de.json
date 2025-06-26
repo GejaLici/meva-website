@@ -1,7 +1,7 @@
 
 {
   "Site": {
-    "title": "NovaSculpt Klinik"
+    "title": "Meva Klinik"
   },
   "Navigation": {
     "home": "Startseite",
@@ -33,17 +33,17 @@
   },
   "HomePage": {
     "heroTitle": "Entdecken Sie Ihre Ausstrahlung. Definieren Sie Ihre Schönheit neu.",
-    "heroSubtitle": "Erleben Sie die Wissenschaft und Kunst der ästhetischen Transformation in der NovaSculpt Klinik. Unsere hochqualifizierten medizinischen Fachkräfte kombinieren modernste Technologie mit persönlicher Betreuung, um Ihnen zu helfen, Ihre ultimativen ästhetischen und Wellness-Ziele zu erreichen.",
+    "heroSubtitle": "Erleben Sie die Wissenschaft und Kunst der ästhetischen Transformation in der Meva Klinik. Unsere hochqualifizierten medizinischen Fachkräfte kombinieren modernste Technologie mit persönlicher Betreuung, um Ihnen zu helfen, Ihre ultimativen ästhetischen und Wellness-Ziele zu erreichen.",
     "heroButton": "Entdecken Sie unsere Expertenbehandlungen",
     "servicesTitle": "Unsere erstklassigen ästhetischen & zahnärztlichen Leistungen",
-    "servicesSubtitle": "In der NovaSculpt Klinik bieten wir eine umfassende Palette fortschrittlicher ästhetischer und zahnärztlicher Verfahren, die von unseren Spezialisten sorgfältig auf Sie zugeschnitten werden, um Ihre natürliche Schönheit zu unterstreichen und Ihr Selbstvertrauen zu stärken.",
+    "servicesSubtitle": "In der Meva Klinik bieten wir eine umfassende Palette fortschrittlicher ästhetischer und zahnärztlicher Verfahren, die von unseren Spezialisten sorgfältig auf Sie zugeschnitten werden, um Ihre natürliche Schönheit zu unterstreichen und Ihr Selbstvertrauen zu stärken.",
     "testimonialsTitle": "Was unsere Patienten sagen",
-    "testimonialsSubtitle": "Hören Sie von denen, die den Unterschied der NovaSculpt Klinik erlebt und uns ihre Pflege anvertraut haben.",
+    "testimonialsSubtitle": "Hören Sie von denen, die den Unterschied der Meva Klinik erlebt und uns ihre Pflege anvertraut haben.",
     "galleryTitle": "Transformationen, auf die wir stolz sind",
-    "gallerySubtitle": "Erleben Sie das akribische Können und die Kunstfertigkeit unserer Spezialisten anhand dieser echten Patientenergebnisse. Werfen Sie einen Blick auf die atemberaubenden Ergebnisse, die unsere Patienten in der NovaSculpt Klinik erzielt haben.",
+    "gallerySubtitle": "Erleben Sie das akribische Können und die Kunstfertigkeit unserer Spezialisten anhand dieser echten Patientenergebnisse. Werfen Sie einen Blick auf die atemberaubenden Ergebnisse, die unsere Patienten in der Meva Klinik erzielt haben.",
     "galleryButton": "Vollständige Galerie der Ergebnisse ansehen",
     "insightsTitle": "Weitere Einblicke & Expertenunterstützung",
-    "insightsSubtitle": "Erkunden Sie detaillierte Informationen über unsere spezialisierten Behandlungen, bleiben Sie über die neuesten Fortschritte in der ästhetischen Pflege informiert und finden Sie umfassende Antworten auf Ihre Fragen von unserem Expertenteam in der NovaSculpt Klinik.",
+    "insightsSubtitle": "Erkunden Sie detaillierte Informationen über unsere spezialisierten Behandlungen, bleiben Sie über die neuesten Fortschritte in der ästhetischen Pflege informiert und finden Sie umfassende Antworten auf Ihre Fragen von unserem Expertenteam in der Meva Klinik.",
     "insightsGalleryTitle": "Sehen Sie unsere Transformationen",
     "insightsGalleryDesc": "Sehen Sie die atemberaubenden Transformationen und echten Patientenergebnisse, die unser medizinisches Expertenteam erzielt hat.",
     "insightsGalleryButton": "Patientengalerie besuchen",
@@ -54,7 +54,7 @@
     "insightsFaqDesc": "Finden Sie umfassende Antworten auf häufige Fragen zu unseren Verfahren, Genesungsprotokollen und was Sie während Ihrer Reise mit uns erwartet.",
     "insightsFaqButton": "Besuchen Sie unsere umfassenden FAQ",
     "contactTitle": "Bereit für Ihre Transformation?",
-    "contactSubtitle": "Beginnen Sie Ihre Reise zu Ihren gewünschten ästhetischen Ergebnissen. Kontaktieren Sie die NovaSculpt Klinik noch heute für eine vertrauliche Beratung. Füllen Sie das untenstehende Formular aus, und unser engagiertes Team von medizinischen Experten wird sich umgehend mit Ihnen in Verbindung setzen, um Ihre Wünsche zu besprechen und Sie durch unsere personalisierten Behandlungswege zu führen."
+    "contactSubtitle": "Beginnen Sie Ihre Reise zu Ihren gewünschten ästhetischen Ergebnissen. Kontaktieren Sie die Meva Klinik noch heute für eine vertrauliche Beratung. Füllen Sie das untenstehende Formular aus, und unser engagiertes Team von medizinischen Experten wird sich umgehend mit Ihnen in Verbindung setzen, um Ihre Wünsche zu besprechen und Sie durch unsere personalisierten Behandlungswege zu führen."
   },
   "ContactForm": {
     "nameLabel": "Vollständiger Name",
@@ -80,17 +80,17 @@
   "Testimonials": {
     "testimonial-1": {
       "name": "Sarah L.",
-      "quote": "Die NovaSculpt Klinik hat mein Selbstvertrauen wirklich verwandelt! Die Ergebnisse meiner Nasenkorrektur sind fantastisch und übertreffen alle meine Erwartungen. Das gesamte Team war während des gesamten Prozesses unglaublich professionell und unterstützend. Ich könnte nicht glücklicher sein.",
+      "quote": "Die Meva Klinik hat mein Selbstvertrauen wirklich verwandelt! Die Ergebnisse meiner Nasenkorrektur sind fantastisch und übertreffen alle meine Erwartungen. Das gesamte Team war während des gesamten Prozesses unglaublich professionell und unterstützend. Ich könnte nicht glücklicher sein.",
       "treatment": "Nasenkorrektur (Rhinoplastik)"
     },
     "testimonial-2": {
       "name": "Michael B.",
-      "quote": "Ich war anfangs zögerlich, eine Haartransplantation durchführen zu lassen, aber die Spezialisten der NovaSculpt Klinik waren außergewöhnlich. Sie erklärten alles klar und gaben mir ein vollkommenes Gefühl der Sicherheit. Der Eingriff verlief reibungslos und die Ergebnisse sind bemerkenswert natürlich. Sehr zu empfehlen!",
+      "quote": "Ich war anfangs zögerlich, eine Haartransplantation durchführen zu lassen, aber die Spezialisten der Meva Klinik waren außergewöhnlich. Sie erklärten alles klar und gaben mir ein vollkommenes Gefühl der Sicherheit. Der Eingriff verlief reibungslos und die Ergebnisse sind bemerkenswert natürlich. Sehr zu empfehlen!",
       "treatment": "Haartransplantation (FUE)"
     },
     "testimonial-3": {
       "name": "Emily R.",
-      "quote": "Meine Erfahrung mit der Brustvergrößerung in der NovaSculpt Klinik war hervorragend. Die Chirurgen hörten aufmerksam auf meine ästhetischen Ziele und lieferten wunderschöne, natürlich aussehende Ergebnisse, die perfekt zu meiner Figur passen. Die postoperative Betreuung und die Liebe zum Detail waren außergewöhnlich.",
+      "quote": "Meine Erfahrung mit der Brustvergrößerung in der Meva Klinik war hervorragend. Die Chirurgen hörten aufmerksam auf meine ästhetischen Ziele und lieferten wunderschöne, natürlich aussehende Ergebnisse, die perfekt zu meiner Figur passen. Die postoperative Betreuung und die Liebe zum Detail waren außergewöhnlich.",
       "treatment": "Brustvergrößerung"
     }
   },
@@ -173,5 +173,3 @@
     }
   }
 }
-
-    

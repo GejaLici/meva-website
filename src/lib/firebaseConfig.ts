@@ -17,9 +17,9 @@ import { getFirestore } from 'firebase/firestore';
 // =================================================================
 const firebaseConfig: FirebaseOptions = {
   apiKey: "AIzaSyDiQNKo2ypylk2ERrsTJhpMb0M2ts-HKRc",
-  authDomain: "novasculpt-clinic.firebaseapp.com",
-  projectId: "novasculpt-clinic",
-  storageBucket: "novasculpt-clinic.appspot.com",
+  authDomain: "mevaclinic.firebaseapp.com",
+  projectId: "mevaclinic",
+  storageBucket: "mevaclinic.appspot.com",
   messagingSenderId: "1080954631981",
   appId: "1:1080954631981:web:1deb8a110d6bb81e8f05a4",
   // measurementId: "REPLACE_WITH_YOUR_MEASUREMENT_ID" // Optional: if you use Google Analytics

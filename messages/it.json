@@ -1,7 +1,7 @@
 
 {
   "Site": {
-    "title": "Clinica NovaSculpt"
+    "title": "Clinica Meva"
   },
   "Navigation": {
     "home": "Home",
@@ -33,17 +33,17 @@
   },
   "HomePage": {
     "heroTitle": "Rivela la tua radiosità. Ridefinisci la tua bellezza.",
-    "heroSubtitle": "Sperimenta la scienza e l'arte della trasformazione estetica presso la Clinica NovaSculpt. I nostri professionisti medici altamente qualificati combinano tecnologia all'avanguardia con cure personalizzate per aiutarti a raggiungere i tuoi massimi obiettivi estetici e di benessere.",
+    "heroSubtitle": "Sperimenta la scienza e l'arte della trasformazione estetica presso la Clinica Meva. I nostri professionisti medici altamente qualificati combinano tecnologia all'avanguardia con cure personalizzate per aiutarti a raggiungere i tuoi massimi obiettivi estetici e di benessere.",
     "heroButton": "Esplora i nostri trattamenti esperti",
     "servicesTitle": "I nostri principali servizi estetici e dentistici",
-    "servicesSubtitle": "Alla Clinica NovaSculpt, offriamo una suite completa di procedure estetiche e dentali avanzate, meticolosamente personalizzate dai nostri specialisti per esaltare la tua bellezza naturale ed elevare la tua fiducia.",
+    "servicesSubtitle": "Alla Clinica Meva, offriamo una suite completa di procedure estetiche e dentali avanzate, meticolosamente personalizzate dai nostri specialisti per esaltare la tua bellezza naturale ed elevare la tua fiducia.",
     "testimonialsTitle": "Cosa dicono i nostri pazienti",
-    "testimonialsSubtitle": "Ascolta coloro che hanno vissuto la differenza della Clinica NovaSculpt e ci hanno affidato le loro cure.",
+    "testimonialsSubtitle": "Ascolta coloro che hanno vissuto la differenza della Clinica Meva e ci hanno affidato le loro cure.",
     "galleryTitle": "Trasformazioni di cui siamo orgogliosi",
-    "gallerySubtitle": "Ammira l'abilità meticolosa e l'arte dei nostri specialisti attraverso questi risultati reali dei pazienti. Dai uno sguardo ai risultati straordinari che i nostri pazienti hanno ottenuto alla Clinica NovaSculpt.",
+    "gallerySubtitle": "Ammira l'abilità meticolosa e l'arte dei nostri specialisti attraverso questi risultati reali dei pazienti. Dai uno sguardo ai risultati straordinari che i nostri pazienti hanno ottenuto alla Clinica Meva.",
     "galleryButton": "Guarda la galleria completa dei risultati",
     "insightsTitle": "Approfondimenti e supporto esperto",
-    "insightsSubtitle": "Esplora informazioni approfondite sui nostri trattamenti specializzati, rimani informato con gli ultimi progressi nella cura estetica e trova risposte complete alle tue domande dal nostro team di esperti alla Clinica NovaSculpt.",
+    "insightsSubtitle": "Esplora informazioni approfondite sui nostri trattamenti specializzati, rimani informato con gli ultimi progressi nella cura estetica e trova risposte complete alle tue domande dal nostro team di esperti alla Clinica Meva.",
     "insightsGalleryTitle": "Guarda le nostre trasformazioni",
     "insightsGalleryDesc": "Guarda le trasformazioni straordinarie e i risultati reali dei pazienti che il nostro team medico esperto ha ottenuto.",
     "insightsGalleryButton": "Visita la galleria pazienti",
@@ -54,7 +54,7 @@
     "insightsFaqDesc": "Trova risposte complete alle domande comuni sulle nostre procedure, protocolli di recupero e cosa aspettarsi durante il tuo percorso con noi.",
     "insightsFaqButton": "Visita le nostre FAQ complete",
     "contactTitle": "Pronto per la tua trasformazione?",
-    "contactSubtitle": "Inizia il tuo viaggio verso i risultati estetici desiderati. Contatta oggi la Clinica NovaSculpt per una consulenza confidenziale. Compila il modulo sottostante e il nostro team dedicato di esperti medici si metterà prontamente in contatto con te per discutere le tue aspirazioni e guidarti attraverso i nostri percorsi di trattamento personalizzati."
+    "contactSubtitle": "Inizia il tuo viaggio verso i risultati estetici desiderati. Contatta oggi la Clinica Meva per una consulenza confidenziale. Compila il modulo sottostante e il nostro team dedicato di esperti medici si metterà prontamente in contatto con te per discutere le tue aspirazioni e guidarti attraverso i nostri percorsi di trattamento personalizzati."
   },
   "ContactForm": {
     "nameLabel": "Nome completo",
@@ -80,17 +80,17 @@
   "Testimonials": {
     "testimonial-1": {
       "name": "Sara L.",
-      "quote": "La Clinica NovaSculpt ha veramente trasformato la mia fiducia! I risultati del mio rimodellamento del naso sono fantastici, superando tutte le mie aspettative. L'intero team è stato incredibilmente professionale e di supporto durante tutto il processo. Non potrei essere più felice.",
+      "quote": "La Clinica Meva ha veramente trasformato la mia fiducia! I risultati del mio rimodellamento del naso sono fantastici, superando tutte le mie aspettative. L'intero team è stato incredibilmente professionale e di supporto durante tutto il processo. Non potrei essere più felice.",
       "treatment": "Rimodellamento del naso (Rinoplastica)"
     },
     "testimonial-2": {
       "name": "Michele B.",
-      "quote": "Inizialmente ero titubante riguardo al trapianto di capelli, ma gli specialisti della Clinica NovaSculpt sono stati eccezionali. Mi hanno spiegato tutto chiaramente e mi hanno fatto sentire completamente a mio agio. La procedura è stata fluida e i risultati sono notevolmente naturali. Raccomando vivamente la loro competenza!",
+      "quote": "Inizialmente ero titubante riguardo al trapianto di capelli, ma gli specialisti della Clinica Meva sono stati eccezionali. Mi hanno spiegato tutto chiaramente e mi hanno fatto sentire completamente a mio agio. La procedura è stata fluida e i risultati sono notevolmente naturali. Raccomando vivamente la loro competenza!",
       "treatment": "Trapianto di capelli (FUE)"
     },
     "testimonial-3": {
       "name": "Emilia R.",
-      "quote": "La mia esperienza di mastoplastica additiva alla Clinica NovaSculpt è stata eccezionale. I chirurghi hanno ascoltato attentamente i miei obiettivi estetici e hanno fornito risultati bellissimi e naturali che si adattano perfettamente alla mia corporatura. L'assistenza post-operatoria e l'attenzione ai dettagli sono state eccezionali.",
+      "quote": "La mia esperienza di mastoplastica additiva alla Clinica Meva è stata eccezionale. I chirurghi hanno ascoltato attentamente i miei obiettivi estetici e hanno fornito risultati bellissimi e naturali che si adattano perfettamente alla mia corporatura. L'assistenza post-operatoria e l'attenzione ai dettagli sono state eccezionali.",
       "treatment": "Mastoplastica additiva"
     }
   },
