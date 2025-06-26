@@ -14,8 +14,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 }
 
 export default async function PrivacyPolicyPage({params: {locale}}: {params: {locale: string}}) {
-  const t = await getTranslations({locale, namespace: 'PrivacyPolicyPage'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const t = await getTranslations('PrivacyPolicyPage');
+  const tSite = await getTranslations('Site');
   const siteTitle = tSite('title');
   const today = formatDate(new Date().toISOString(), locale);
   

@@ -72,9 +72,9 @@ function renderRichText(spans: ContentLeaf[] | undefined): JSX.Element | null {
 }
 
 // Main content rendering function
-async function renderContentBlocks(blocks: ContentBlock[] | undefined, locale: string): Promise<(JSX.Element | null)[] | null> {
+async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<(JSX.Element | null)[] | null> {
   if (!blocks || blocks.length === 0) {
-    const t = await getTranslations({locale, namespace: 'BlogPostPage'});
+    const t = await getTranslations('BlogPostPage');
     return [<p key="no-content" className="text-muted-foreground">{t('noContent')}</p>];
   }
 
@@ -154,13 +154,13 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined, locale: s
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getBlogPostBySlug(params.slug);
-  const t = await getTranslations({locale: params.locale, namespace: 'BlogPostPage'});
+  const t = await getTranslations('BlogPostPage');
 
   if (!post) {
     notFound();
   }
   
-  const renderedContent = await renderContentBlocks(post.content, params.locale);
+  const renderedContent = await renderContentBlocks(post.content);
 
   return (
     <>

@@ -58,9 +58,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 
 export default async function ServicePage({ params }: ServicePageProps) {
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
-  const tItems = await getTranslations({locale: params.locale, namespace: 'Services.items'});
-  const tDetails = await getTranslations({locale: params.locale, namespace: 'ServiceDetailsPage'});
-  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
+  const tItems = await getTranslations('Services.items');
+  const tDetails = await getTranslations('ServiceDetailsPage');
+  const tSite = await getTranslations('Site');
   const siteTitle = tSite('title');
 
   if (!service) {

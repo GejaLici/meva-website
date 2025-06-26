@@ -14,8 +14,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 }
 
 export default async function TermsOfServicePage({params: {locale}}: {params: {locale: string}}) {
-  const t = await getTranslations({locale, namespace: 'TermsOfServicePage'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const t = await getTranslations('TermsOfServicePage');
+  const tSite = await getTranslations('Site');
   const siteTitle = tSite('title');
   const today = formatDate(new Date().toISOString(), locale);
 

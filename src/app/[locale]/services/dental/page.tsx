@@ -27,11 +27,11 @@ const dentalCategoryIds = [
   'pediatric-dentistry',
 ];
 
-export default async function DentalServicesPage({params: {locale}}: {params: {locale: string}}) {
+export default async function DentalServicesPage() {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
-  const tPage = await getTranslations({locale, namespace: 'DentalServicesPage'});
-  const tCategories = await getTranslations({locale, namespace: 'Services.categories'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const tPage = await getTranslations('DentalServicesPage');
+  const tCategories = await getTranslations('Services.categories');
+  const tSite = await getTranslations('Site');
   const siteTitle = tSite('title');
 
   return (

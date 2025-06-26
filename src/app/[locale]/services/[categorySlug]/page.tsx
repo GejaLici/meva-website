@@ -43,9 +43,9 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(params.categorySlug);
-  const tCategories = await getTranslations({locale: params.locale, namespace: 'Services.categories'});
-  const tPage = await getTranslations({locale: params.locale, namespace: 'ServiceCategoryPage'});
-  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
+  const tCategories = await getTranslations('Services.categories');
+  const tPage = await getTranslations('ServiceCategoryPage');
+  const tSite = await getTranslations('Site');
   
   if (!category) {
     notFound();

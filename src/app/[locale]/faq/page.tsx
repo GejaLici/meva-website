@@ -13,10 +13,10 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   };
 }
 
-export default async function FAQPage({params: {locale}}: {params: {locale: string}}) {
-  const tSite = await getTranslations({locale, namespace: 'Site'});
-  const tPage = await getTranslations({locale, namespace: 'FaqPage'});
-  const tFaq = await getTranslations({locale, namespace: 'FAQ'});
+export default async function FAQPage() {
+  const tSite = await getTranslations('Site');
+  const tPage = await getTranslations('FaqPage');
+  const tFaq = await getTranslations('FAQ');
   const siteTitle = tSite('title');
 
   return (

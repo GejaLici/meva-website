@@ -16,11 +16,11 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   };
 }
 
-export default async function GalleryPage({params: {locale}}: {params: {locale: string}}) {
+export default async function GalleryPage() {
   const items = getAllGalleryItems();
-  const tPage = await getTranslations({locale, namespace: 'GalleryPage'});
-  const tGallery = await getTranslations({locale, namespace: 'Gallery'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const tPage = await getTranslations('GalleryPage');
+  const tGallery = await getTranslations('Gallery');
+  const tSite = await getTranslations('Site');
   const siteTitle = tSite('title');
 
   return (

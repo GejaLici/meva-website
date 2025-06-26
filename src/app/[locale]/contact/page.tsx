@@ -15,9 +15,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   };
 }
 
-export default async function ContactPage({params: {locale}}: {params: {locale: string}}) {
-  const t = await getTranslations({locale, namespace: 'ContactPage'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+export default async function ContactPage() {
+  const t = await getTranslations('ContactPage');
 
   return (
     <>

@@ -12,9 +12,9 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   };
 }
 
-export default async function ServicesOverviewPage({params: {locale}}: {params: {locale: string}}) {
-  const t = await getTranslations({locale, namespace: 'ServicesOverviewPage'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+export default async function ServicesOverviewPage() {
+  const t = await getTranslations('ServicesOverviewPage');
+  const tSite = await getTranslations('Site');
   
   return (
     <>
