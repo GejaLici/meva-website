@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import { serviceCategories, getCategoryBySlug } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
@@ -36,8 +37,8 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const categoryDescription = tCategories(`${category.id}.description`);
 
   return {
-    title: `${categoryName} | ${siteTitle}`,
-    description: categoryDescription,
+    title: tPage('metaTitle', { categoryName, siteTitle }),
+    description: tPage('metaDescription', { categoryDescription }),
   };
 }
 
@@ -45,7 +46,6 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   const category = getCategoryBySlug(params.categorySlug);
   const tCategories = await getTranslations('Services.categories');
   const tPage = await getTranslations('ServiceCategoryPage');
-  const tSite = await getTranslations('Site');
   
   if (!category) {
     notFound();
@@ -66,7 +66,7 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            {tPage('noResults', {siteTitle: tSite('title')})}
+            {tPage('noResults')}
           </p>
         )}
       </div>

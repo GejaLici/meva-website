@@ -1,3 +1,4 @@
+
 import {createLocalizedPathnamesNavigation} from 'next-intl/navigation';
 
 export const locales = ['en', 'it', 'sq', 'de', 'fr', 'es'] as const;
@@ -42,7 +43,7 @@ export const pathnames = {
    '/faq': {
     en: '/faq',
     it: '/faq',
-    sq: '/faq',
+    sq: '/pyetje-te-shpeshta',
     de: '/faq',
     fr: '/faq',
     es: '/faq'

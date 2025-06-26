@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Klinika Meva"
+    "title": "Klinika Meva",
+    "siteDescription": "Klinika Meva: Shërbime estetike dhe dentare të nivelit të lartë. Specialistët tanë të certifikuar ofrojnë trajtime të avancuara për rezultate transformuese me kujdesin dhe ekspertizën më të madhe."
   },
   "Navigation": {
     "home": "Kreu",
@@ -121,12 +122,12 @@
       "lift-fytyres": { "name": "Lifting i Fytyrës", "description": "<p>Një procedurë kirurgjikale për të përmirësuar shenjat e dukshme të plakjes në fytyrë dhe qafë, si lëshimi i lëkurës, rrudhat e thella dhe lëkura e lirshme.</p>" },
       "rim-mjekres": { "name": "Genioplastika", "description": "<p>Një procedurë kirurgjikale për të rimodeluar ose përmirësuar mjekrën, qoftë me një implant ose duke rimodeluar kockën, për të përmirësuar ekuilibrin e përmasave të fytyrës.</p>" },
       "lip-reshaping": { "name": "Rimodelimi dhe Zmadhimi i Buzëve", "description": "<p>Një procedurë kozmetike për të përmirësuar pamjen e buzëve duke rritur plotësinë, formën, strukturën ose simetrinë e tyre, shpesh duke përdorur mbushës dermalë.</p>" },
-      "xanthelasma-plasma-arc": { "name": "Heqja e Depozitave në Qepalla (Plazma)", "description": "<p>Ky është një trajtim jo-kirurgjikal për të hequr njollat e verdha të kolesterolit që gjenden në qepalla. Ne përdorim një pajisje plazme të saktë për të pastruar butësisht këto depozita, duke ju dhënë një lëkurë më të lëmuar me shumë pak kohë rikuperimi.</p>" },
+      "xanthelasma-plasma-arc": { "name": "Heqja e Depozitave në Qepalla", "description": "<p>Ky është një trajtim jo-kirurgjikal për të hequr njollat e verdha të kolesterolit që gjenden në qepalla. Ne përdorim një pajisje plazme të saktë për të pastruar butësisht këto depozita, duke ju dhënë një lëkurë më të lëmuar me shumë pak kohë rikuperimi.</p>" },
       "multivitamin-treatment": { "name": "Trajtim Fytyre me Infuzion Multivitaminash", "description": "<p>Një trajtim fytyre që injekton një përzierje vitaminash, mineralesh dhe antioksidantësh direkt në lëkurë për ta ushqyer, hidratuar dhe rigjallëruar atë, duke rezultuar në një çehre më rrezatuese.</p>" },
-      "eyelids-plasma-arc": { "name": "Lifting jo-kirurgjikal i Qepallave (Hark Plazma)", "description": "<p>Një trajtim jo-invaziv që përdor energjinë e plazmës për të ngritur dhe shtrënguar lëkurën në qepalla, duke reduktuar pamjen e lëkurës së varur dhe rrudhave pa kirurgji.</p>" },
+      "eyelids-plasma-arc": { "name": "Lifting jo-kirurgjikal i Qepallave", "description": "<p>Një trajtim jo-invaziv që përdor energjinë e plazmës për të ngritur dhe shtrënguar lëkurën në qepalla, duke reduktuar pamjen e lëkurës së varur dhe rrudhave pa kirurgji.</p>" },
       "cheekbone-reshaping": { "name": "Konturimi i Mollëzave (Mbushës)", "description": "<p>Një procedurë jo-kirurgjikale që përdor mbushës dermalë për të përmirësuar dhe definuar mollëzat, duke rikthyer volumin dhe duke krijuar një strukturë fytyre më të konturuar.</p>" },
       "microdermabrasion": { "name": "Mikrodermabrazioni", "description": "<p>Një procedurë minimalisht invazive që rinovon lëkurën duke lëmuar butësisht shtresën e jashtme të trashë, duke trajtuar dëmtimet nga dielli, rrudhat dhe probleme të tjera të lëkurës.</p>" },
-      "jawline-contouring": { "name": "Konturimi i Nofullës (Filler/Fije)", "description": "<p>Një teknikë jo-kirurgjikale për të përcaktuar dhe skulpturuar vijën e nofullës duke përdorur mbushës dermalë ose fije PDO, duke krijuar një profil më të mprehtë dhe më rinor.</p>" },
+      "jawline-contouring": { "name": "Konturimi i Nofullës", "description": "<p>Një teknikë jo-kirurgjikale për të përcaktuar dhe skulpturuar vijën e nofullës duke përdorur mbushës dermalë ose fije PDO, duke krijuar një profil më të mprehtë dhe më rinor.</p>" },
       "wrinkle-fillers": { "name": "Mbushës Dermalë për Rrudhat", "description": "<p>Injektimet e acidit hialuronik ose mbushësve të tjerë për të mbushur rrudhat dhe linjat e holla, duke rivendosur volumin dhe duke lëmuar teksturën e lëkurës për një pamje të rinovuar.</p>" },
       "prp-face": { "name": "Rinovimi i Fytyrës me PRP", "description": "<p>Një procedurë që përdor plazmën e pasur me trombocite (PRP) nga gjaku juaj, e cila injektohet në lëkurë për të stimuluar prodhimin e kolagjenit dhe për të përmirësuar teksturën dhe elasticitetin e lëkurës.</p>" },
       "dark-circles-treatment": { "name": "Trajtimi i Rrathëve të Zinj Poshtë Syve", "description": "<p>Një sërë trajtimesh që synojnë të zvogëlojnë pamjen e rrathëve të zinj poshtë syve, duke përfshirë mbushësit, terapinë me lazer ose trajtimet topike, në varësi të shkakut themelor.</p>" },
@@ -135,7 +136,7 @@
       "microneedling": { "name": "Microneedling", "description": "<p>Një procedurë që përdor gjilpëra të holla për të krijuar shpime të vogla në lëkurë, duke stimuluar prodhimin e kolagjenit dhe elastinës për të përmirësuar teksturën e lëkurës dhe për të zvogëluar pamjen e shenjave dhe rrudhave.</p>" },
       "radiofrequency-face": { "name": "Radiofrekuenca e Fytyrës", "description": "<p>Një metodë jo-kirurgjikale e shtrëngimit të lëkurës që përdor energji për të ngrohur shtresat më të thella të lëkurës, duke stimuluar prodhimin e kolagjenit dhe duke përmirësuar qëndrueshmërinë dhe teksturën e lëkurës.</p>" },
       "sulcus-filling": { "name": "Mbushës për Rrudhat Nazolabiale", "description": "<p>Një procedurë jo-kirurgjikale ku mbushësit dermalë injektohen në rrudhat që shkojnë nga anët e hundës në cepat e gojës, duke zbutur pamjen e tyre.</p>" },
-      "chin-reshaping": { "name": "Rimodelimi jo-kirurgjikal i Mjekrës (Mbushës)", "description": "<p>Një procedurë që përdor mbushës të injektueshëm për të rimodeluar dhe zmadhuar mjekrën, duke përmirësuar ekuilibrin e fytyrës dhe duke krijuar një profil më të fortë të mjekrës pa kirurgji.</p>" },
+      "chin-reshaping": { "name": "Rimodelimi jo-kirurgjikal i Mjekrës", "description": "<p>Një procedurë që përdor mbushës të injektueshëm për të rimodeluar dhe zmadhuar mjekrën, duke përmirësuar ekuilibrin e fytyrës dhe duke krijuar një profil më të fortë të mjekrës pa kirurgji.</p>" },
       "zmadh-gjoksit": { "name": "Zmadhimi i Gjoksit", "description": "<p>Një procedurë kirurgjikale për të rritur madhësinë e gjirit përmes vendosjes së implanteve të gjirit nën indin e gjirit ose muskujt.</p>" },
       "lift-gjoksit": { "name": "Ngritja e Gjoksit", "description": "<p>Një procedurë kirurgjikale për të ngritur dhe rimodeluar gjinjtë duke hequr lëkurën e tepërt dhe duke shtrënguar indin përreth për të rivendosur një profil më rinor të gjirit.</p>" },
       "zvog-gjoksit": { "name": "Zvogëlimi i Gjoksit", "description": "<p>Një procedurë kirurgjikale për të hequr yndyrën e tepërt të gjirit, indin gjëndror dhe lëkurën për të arritur një madhësi gjiri në përpjesëtim me trupin dhe për të lehtësuar shqetësimin e lidhur me gjinjtë tepër të mëdhenj.</p>" },
@@ -167,7 +168,7 @@
       "root-canal-treatment": { "name": "Trajtimi i Kanalit të Rrënjës", "description": "<p>Një procedurë dentare për të hequr pulpën e infektuar nga brenda një dhëmbi për ta shpëtuar atë dhe për të lehtësuar dhimbjen.</p>" },
       "tooth-extraction": { "name": "Heqja e Dhëmbit", "description": "<p>Heqja e një dhëmbi nga foleja e tij alveolare në kockën e nofullës.</p>" },
       "dental-implants": { "name": "Implantet Dentare", "description": "<p>Pajisje kirurgjikale të vendosura në kockën e nofullës për të zëvendësuar dhëmbët që mungojnë dhe për të siguruar një bazë për zëvendësime fikse ose të lëvizshme.</p>" },
-      "apical-resection": { "name": "Kirurgjia e Majës së Rrënjës (Apikotomi)", "description": "<p>Një procedurë kirurgjikale për të hequr majën e rrënjës së një dhëmbi dhe indin e infektuar përreth.</p>" },
+      "apical-resection": { "name": "Kirurgjia e Majës së Rrënjës", "description": "<p>Një procedurë kirurgjikale për të hequr majën e rrënjës së një dhëmbi dhe indin e infektuar përreth.</p>" },
       "primary-teeth-care": { "name": "Kujdesi për Dhëmbët e Qumështit", "description": "<p>Kujdes i specializuar dentar për fëmijët, i fokusuar në ruajtjen e shëndetit të dhëmbëve të qumështit për të siguruar zhvillimin e duhur të dhëmbëve të përhershëm.</p>" },
       "teeth-fluoridation": { "name": "Fluorizimi i Dhëmbëve", "description": "<p>Aplikimi i fluorit në dhëmbë për të forcuar smaltin dhe për të parandaluar prishjen e dhëmbëve.</p>" },
       "dental-sealants": { "name": "Sigilantët Dentarë", "description": "<p>Shtresa të holla mbrojtëse të aplikuara në sipërfaqet përtypëse të dhëmbëve të pasmë për të parandaluar kariesin.</p>" }
@@ -268,6 +269,8 @@
     "backButton": "Kthehu te të gjithë Artikujt e Blogut"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Eksploroni {serviceName} në {siteName}. {excerpt}",
     "aboutTitle": "Rreth {serviceName}",
     "whatToExpectTitle": "Çfarë të Presësh në {siteName}",
     "whatToExpectP1": "Në {siteName}, udhëtimi juaj fillon me një konsultë gjithëpërfshirëse ku specialistët tanë zhvillojnë një plan trajtimi të personalizuar të përshtatur për nevojat tuaja specifike dhe rezultatet e dëshiruara për {serviceName}. Ne përdorim teknika moderne, të bazuara në prova dhe teknologji të fundit. Angazhimi ynë shtrihet në kujdesin e përpiktë pas operacionit dhe ndjekjen, duke siguruar rezultate optimale, komoditetin tuaj dhe një proces të qetë rikuperimi.",
@@ -294,6 +297,8 @@
     "noResults": "Nuk ka kategori shërbimesh dentare të disponueshme për momentin. Ju lutemi kontaktoni {siteName} për informacionet më të fundit."
   },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Kategoria nuk u gjet | {siteName}",
     "categoryNotFoundDescription": "Kategoria e kërkuar e shërbimit nuk u gjet në {siteName}.",
     "noResults": "Nuk ka shërbime të disponueshme në këtë kategori për momentin. Ju lutemi kontaktoni {siteName} për më shumë detaje."

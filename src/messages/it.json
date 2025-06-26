@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Clinica Meva"
+    "title": "Clinica Meva",
+    "siteDescription": "Clinica Meva: Servizi estetici e dentistici di prim'ordine. I nostri specialisti certificati offrono trattamenti avanzati per risultati trasformativi con la massima cura e competenza."
   },
   "Navigation": {
     "home": "Home",
@@ -121,13 +122,13 @@
       "lift-fytyres": { "name": "Lifting del Viso", "description": "<p>Una procedura chirurgica per migliorare i segni visibili dell'invecchiamento del viso e del collo, come rilassamento, pieghe profonde e pelle lassa.</p>" },
       "rim-mjekres": { "name": "Mentoplastica", "description": "<p>Una procedura chirurgica per rimodellare o migliorare il mento, sia con un impianto che rimodellando l'osso, per migliorare l'equilibrio delle proporzioni facciali.</p>" },
       "lip-reshaping": { "name": "Rimodellamento e Aumento delle Labbra", "description": "<p>Una procedura estetica per migliorare l'aspetto delle labbra aumentandone la pienezza, la forma, la struttura o la simmetria, spesso utilizzando filler dermici.</p>" },
-      "xanthelasma-plasma-arc": { "name": "Rimozione Depositi Palpebrali (Plasma)", "description": "<p>Questo è un trattamento non chirurgico per rimuovere le macchie gialle di colesterolo che si trovano sulle palpebre. Utilizziamo un preciso dispositivo al plasma per eliminare delicatamente questi depositi, donandoti una pelle più liscia con tempi di recupero molto brevi.</p>" },
+      "xanthelasma-plasma-arc": { "name": "Rimozione Depositi Palpebrali", "description": "<p>Questo è un trattamento non chirurgico per rimuovere le macchie gialle di colesterolo che si trovano sulle palpebre. Utilizziamo un preciso dispositivo al plasma per eliminare delicatamente questi depositi, donandoti una pelle più liscia con tempi di recupero molto brevi.</p>" },
       "multivitamin-treatment": { "name": "Trattamento Viso con Infusione Multivitaminica", "description": "<p>Un trattamento viso che infonde una miscela di vitamine, minerali e antiossidanti direttamente nella pelle per nutrirla, idratarla e rivitalizzarla, risultando in un colorito più radioso.</p>" },
-      "eyelids-plasma-arc": { "name": "Lifting non Chirurgico delle Palpebre (Arco al Plasma)", "description": "<p>Un trattamento non invasivo che utilizza l'energia del plasma per sollevare e rassodare la pelle delle palpebre, riducendo l'aspetto della pelle cadente e delle rughe senza intervento chirurgico.</p>" },
+      "eyelids-plasma-arc": { "name": "Lifting non Chirurgico delle Palpebre", "description": "<p>Un trattamento non invasivo che utilizza l'energia del plasma per sollevare e rassodare la pelle delle palpebre, riducendo l'aspetto della pelle cadente e delle rughe senza intervento chirurgico.</p>" },
       "cheekbone-reshaping": { "name": "Contouring degli Zigomi (Filler)", "description": "<p>Una procedura non chirurgica che utilizza filler dermici per migliorare e definire gli zigomi, ripristinando il volume e creando una struttura facciale più modellata.</p>" },
       "microdermabrasion": { "name": "Microdermoabrasione", "description": "<p>Una procedura minimamente invasiva che rinnova la pelle levigando delicatamente lo strato esterno spesso, trattando i danni del sole, le rughe e altri problemi della pelle.</p>" },
-      "jawline-contouring": { "name": "Contouring della linea mascellare (Filler/Fili)", "description": "<p>Una tecnica non chirurgica per definire e scolpire la linea mascellare utilizzando filler dermici o fili in PDO, creando un profilo più nitido e giovanile.</p>" },
-      "wrinkle-fillers": { "name": "Filler dermici per le rughe", "description": "<p>Iniezioni di acido ialuronico o altri filler per riempire rughe e linee sottili, ripristinando il volume e levigando la texture della pelle per un aspetto ringiovanito.</p>" },
+      "jawline-contouring": { "name": "Contouring della Linea Mascellare", "description": "<p>Una tecnica non chirurgica per definire e scolpire la linea mascellare utilizzando filler dermici o fili in PDO, creando un profilo più nitido e giovanile.</p>" },
+      "wrinkle-fillers": { "name": "Filler Dermici per le Rughe", "description": "<p>Iniezioni di acido ialuronico o altri filler per riempire rughe e linee sottili, ripristinando il volume e levigando la texture della pelle per un aspetto ringiovanito.</p>" },
       "prp-face": { "name": "Ringiovanimento del Viso con PRP", "description": "<p>Una procedura che utilizza il plasma ricco di piastrine (PRP) del tuo stesso sangue, che viene iniettato nella pelle per stimolare la produzione di collagene e migliorare la texture e l'elasticità della pelle.</p>" },
       "dark-circles-treatment": { "name": "Trattamento delle Occhiaie", "description": "<p>Una serie di trattamenti volti a ridurre l'aspetto delle occhiaie, tra cui filler, terapia laser o trattamenti topici, a seconda della causa sottostante.</p>" },
       "prp-hair": { "name": "Ripristino dei Capelli con PRP", "description": "<p>Un trattamento non chirurgico per la caduta dei capelli in cui il plasma ricco di piastrine del sangue del paziente viene iniettato nel cuoio capelluto per stimolare la crescita dei capelli.</p>" },
@@ -135,7 +136,7 @@
       "microneedling": { "name": "Microneedling", "description": "<p>Una procedura che utilizza aghi sottili per creare piccole punture nella pelle, stimolando la produzione di collagene ed elastina per migliorare la texture della pelle e ridurre l'aspetto di cicatrici e rughe.</p>" },
       "radiofrequency-face": { "name": "Radiofrequenza per il Viso", "description": "<p>Un metodo non chirurgico di rassodamento della pelle che utilizza l'energia per riscaldare gli strati più profondi della pelle, stimolando la produzione di collagene e migliorando la compattezza e la texture della pelle.</p>" },
       "sulcus-filling": { "name": "Filler per Pieghe Nasolabiali", "description": "<p>Una procedura non chirurgica in cui i filler dermici vengono iniettati nelle pieghe che vanno dai lati del naso agli angoli della bocca, attenuandone l'aspetto.</p>" },
-      "chin-reshaping": { "name": "Rimodellamento non Chirurgico del Mento (Filler)", "description": "<p>Una procedura che utilizza filler iniettabili per rimodellare e aumentare il mento, migliorando l'equilibrio del viso e creando un profilo del mento più forte senza intervento chirurgico.</p>" },
+      "chin-reshaping": { "name": "Rimodellamento non Chirurgico del Mento", "description": "<p>Una procedura che utilizza filler iniettabili per rimodellare e aumentare il mento, migliorando l'equilibrio del viso e creando un profilo del mento più forte senza intervento chirurgico.</p>" },
       "zmadh-gjoksit": { "name": "Mastoplastica Additiva", "description": "<p>Una procedura chirurgica per aumentare le dimensioni del seno attraverso il posizionamento di protesi mammarie sotto il tessuto mammario o i muscoli.</p>" },
       "lift-gjoksit": { "name": "Mastopessi", "description": "<p>Una procedura chirurgica per sollevare e rimodellare il seno rimuovendo la pelle in eccesso e rassodando il tessuto circostante per ripristinare un profilo del seno più giovane.</p>" },
       "zvog-gjoksit": { "name": "Mastoplastica Riduttiva", "description": "<p>Una procedura chirurgica per rimuovere il grasso mammario in eccesso, il tessuto ghiandolare e la pelle per ottenere una dimensione del seno proporzionata al corpo e per alleviare il disagio associato a seni eccessivamente grandi.</p>" },
@@ -167,7 +168,7 @@
       "root-canal-treatment": { "name": "Devitalizzazione", "description": "<p>Una procedura odontoiatrica per rimuovere la polpa infetta dall'interno di un dente per salvarlo e alleviare il dolore.</p>" },
       "tooth-extraction": { "name": "Estrazione Dentale", "description": "<p>La rimozione di un dente dal suo alveolo nell'osso mascellare.</p>" },
       "dental-implants": { "name": "Impianti Dentali", "description": "<p>Dispositivi chirurgici inseriti nell'osso mascellare per sostituire i denti mancanti e fornire una base per sostituzioni fisse o rimovibili.</p>" },
-      "apical-resection": { "name": "Chirurgia Endodontica (Apicectomia)", "description": "<p>Una procedura chirurgica per rimuovere la punta della radice di un dente e il tessuto infetto circostante.</p>" },
+      "apical-resection": { "name": "Apicectomia", "description": "<p>Una procedura chirurgica per rimuovere la punta della radice di un dente e il tessuto infetto circostante.</p>" },
       "primary-teeth-care": { "name": "Cura dei Denti da Latte", "description": "<p>Cure dentali specializzate per bambini, incentrate sul mantenimento della salute dei denti primari per garantire un corretto sviluppo dei denti permanenti.</p>" },
       "teeth-fluoridation": { "name": "Fluorizzazione dei Denti", "description": "<p>L'applicazione di fluoro sui denti per rafforzare lo smalto e prevenire la carie.</p>" },
       "dental-sealants": { "name": "Sigillanti Dentali", "description": "<p>Sottili rivestimenti protettivi applicati sulle superfici masticatorie dei denti posteriori per prevenire le carie.</p>" }
@@ -268,6 +269,8 @@
     "backButton": "Torna a Tutti gli Articoli del Blog"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Esplora {serviceName} presso {siteName}. {excerpt}",
     "aboutTitle": "Informazioni su {serviceName}",
     "whatToExpectTitle": "Cosa Aspettarsi da {siteName}",
     "whatToExpectP1": "Presso {siteName}, il tuo percorso inizia con una consulenza completa in cui i nostri specialisti sviluppano un piano di trattamento personalizzato su misura per le tue esigenze specifiche e i risultati desiderati per {serviceName}. Utilizziamo tecniche moderne basate sull'evidenza e tecnologie all'avanguardia. Il nostro impegno si estende a una meticolosa assistenza post-operatoria e a un follow-up, garantendo risultati ottimali, il tuo comfort e un processo di recupero senza intoppi.",
@@ -294,6 +297,8 @@
     "noResults": "Al momento non sono disponibili categorie di servizi dentistici. Si prega di contattare {siteName} per le informazioni più recenti."
   },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Categoria Non Trovata | {siteName}",
     "categoryNotFoundDescription": "La categoria di servizio richiesta non è stata trovata presso {siteName}.",
     "noResults": "Al momento non sono disponibili servizi in questa categoria. Si prega di contattare {siteName} per maggiori dettagli."
@@ -343,7 +348,7 @@
     "title": "Termini di Servizio",
     "lastUpdated": "Ultimo aggiornamento: {date}",
     "h2_1": "1. ACCETTAZIONE DEI TERMINI",
-    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personalmente che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
+    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personally che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
     "p1_2": "Riconosci e accetti che accedendo al Sito e/o utilizzando i nostri Servizi, hai letto, compreso e accetti di essere vincolato da tutti questi Termini di servizio. Se non sei d'accordo con tutti questi Termini di servizio, ti è espressamente vietato utilizzare il Sito e i nostri Servizi e devi interromperne immediatamente l'uso.",
     "p1_3": "Termini e condizioni supplementari o documenti che possono essere pubblicati sul Sito di volta in volta sono qui espressamente incorporati per riferimento.",
     "h2_2": "2. DIRITTI DI PROPRIETÀ INTELLETTUALE",

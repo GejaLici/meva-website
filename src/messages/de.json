@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Meva Klinik"
+    "title": "Meva Klinik",
+    "siteDescription": "Meva Klinik: Erstklassige ästhetische und zahnärztliche Dienstleistungen. Unsere zertifizierten Spezialisten bieten fortschrittliche Behandlungen für transformative Ergebnisse mit höchster Sorgfalt und Expertise."
   },
   "Navigation": {
     "home": "Startseite",
@@ -116,26 +117,26 @@
       "mbj-flokeve": { "name": "Haartransplantation", "description": "<p>Ein chirurgischer Eingriff, bei dem Haarfollikel von einem Teil des Körpers (dem Spenderbereich) zu einem kahlen oder kahl werdenden Teil des Körpers (dem Empfängerbereich) bewegt werden. Er wird hauptsächlich zur Behandlung von männlichem Haarausfall eingesetzt.</p>" },
       "mbj-mjekres": { "name": "Barttransplantation", "description": "<p>Ähnlich wie eine Haartransplantation, beinhaltet dieser Eingriff die Transplantation von Haarfollikeln in den Bartbereich, um die Dichte zu erhöhen, kahle Stellen aufzufüllen oder den Bart neu zu formen.</p>" },
       "mbj-vetullave": { "name": "Augenbrauentransplantation", "description": "<p>Ein Eingriff, bei dem Haarfollikel in die Augenbrauen transplantiert werden, um vollere, definiertere Brauen zu schaffen, oft für diejenigen mit von Natur aus dünnen Brauen oder Haarausfall.</p>" },
-      "lift-vetullave": { "name": "Augenbrauenlift (Browplastik)", "description": "<p>Ein chirurgischer Eingriff, um schlaffe Augenbrauen anzuheben und das Erscheinungsbild von Falten auf der Stirn und zwischen den Augen zu verbessern, was zu einem jugendlicheren und ausgeruhteren Aussehen führt.</p>" },
+      "lift-vetullave": { "name": "Augenbrauenlift", "description": "<p>Ein chirurgischer Eingriff, um schlaffe Augenbrauen anzuheben und das Erscheinungsbild von Falten auf der Stirn und zwischen den Augen zu verbessern, was zu einem jugendlicheren und ausgeruhteren Aussehen führt.</p>" },
       "blefaroplastika": { "name": "Augenlidchirurgie (Blepharoplastik)", "description": "<p>Eine Operation zur Verbesserung des Aussehens der Augenlider. Sie kann an den Oberlidern, den Unterlidern oder beiden durchgeführt werden, um schlaffe Haut, überschüssiges Fett oder Tränensäcke zu entfernen.</p>" },
-      "lift-fytyres": { "name": "Facelift (Rhytidektomie)", "description": "<p>Ein chirurgischer Eingriff, um die sichtbaren Zeichen des Alterns im Gesicht und am Hals, wie Erschlaffung, tiefe Falten und lose Haut, zu verbessern.</p>" },
-      "rim-mjekres": { "name": "Kinnvergrößerung (Genioplastik)", "description": "<p>Ein chirurgischer Eingriff zur Umformung oder Vergrößerung des Kinns, entweder durch ein Implantat oder durch eine Umformung des Knochens, um die Proportionen des Gesichts auszugleichen.</p>" },
+      "lift-fytyres": { "name": "Facelift", "description": "<p>Ein chirurgischer Eingriff, um die sichtbaren Zeichen des Alterns im Gesicht und am Hals, wie Erschlaffung, tiefe Falten und lose Haut, zu verbessern.</p>" },
+      "rim-mjekres": { "name": "Kinnvergrößerung", "description": "<p>Ein chirurgischer Eingriff zur Umformung oder Vergrößerung des Kinns, entweder durch ein Implantat oder durch eine Umformung des Knochens, um die Proportionen des Gesichts auszugleichen.</p>" },
       "lip-reshaping": { "name": "Lippenkorrektur & -vergrößerung", "description": "<p>Ein kosmetischer Eingriff zur Verbesserung des Aussehens der Lippen durch Vergrößerung von Volumen, Form, Struktur oder Symmetrie, oft unter Verwendung von Hautfüllern.</p>" },
       "xanthelasma-plasma-arc": { "name": "Entfernung von Augenlidablagerungen (Plasma)", "description": "<p>Dies ist eine nicht-chirurgische Behandlung zur Entfernung von gelben Cholesterinflecken auf den Augenlidern. Wir verwenden ein präzises Plasmagerät, um diese Ablagerungen sanft zu entfernen, was Ihnen eine glattere Haut mit sehr geringer Erholungszeit beschert.</p>" },
       "multivitamin-treatment": { "name": "Multivitamin-Infusions-Gesichtsbehandlung", "description": "<p>Eine Gesichtsbehandlung, bei der eine Mischung aus Vitaminen, Mineralien und Antioxidantien direkt in die Haut infundiert wird, um sie zu nähren, mit Feuchtigkeit zu versorgen und zu revitalisieren, was zu einem strahlenderen Teint führt.</p>" },
-      "eyelids-plasma-arc": { "name": "Nicht-chirurgisches Augenlid-Lifting (Plasma-Lichtbogen)", "description": "<p>Eine nicht-invasive Behandlung, die Plasmaenergie verwendet, um die Haut an den Augenlidern zu straffen und anzuheben, wodurch das Erscheinungsbild von schlaffer Haut und Falten ohne Operation reduziert wird.</p>" },
+      "eyelids-plasma-arc": { "name": "Nicht-chirurgisches Augenlid-Lifting", "description": "<p>Eine nicht-invasive Behandlung, die Plasmaenergie verwendet, um die Haut an den Augenlidern zu straffen und anzuheben, wodurch das Erscheinungsbild von schlaffer Haut und Falten ohne Operation reduziert wird.</p>" },
       "cheekbone-reshaping": { "name": "Wangenknochen-Konturierung (Füllstoffe)", "description": "<p>Ein nicht-chirurgischer Eingriff, der Hautfüller verwendet, um die Wangenknochen zu verbessern und zu definieren, Volumen wiederherzustellen und eine konturiertere Gesichtsstruktur zu schaffen.</p>" },
       "microdermabrasion": { "name": "Mikrodermabrasion", "description": "<p>Ein minimal-invasives Verfahren, das die Haut durch sanftes Abschleifen der dicken äußeren Schicht erneuert, um Sonnenschäden, Falten und andere Hautprobleme zu behandeln.</p>" },
-      "jawline-contouring": { "name": "Kieferlinien-Konturierung (Füllstoffe/Fäden)", "description": "<p>Eine nicht-chirurgische Technik zur Definition und Formung der Kieferlinie unter Verwendung von Hautfüllern oder PDO-Fäden, um ein schärferes, jugendlicheres Profil zu schaffen.</p>" },
+      "jawline-contouring": { "name": "Kieferlinien-Konturierung", "description": "<p>Eine nicht-chirurgische Technik zur Definition und Formung der Kieferlinie unter Verwendung von Hautfüllern oder PDO-Fäden, um ein schärferes, jugendlicheres Profil zu schaffen.</p>" },
       "wrinkle-fillers": { "name": "Hautfüller für Falten", "description": "<p>Injektionen von Hyaluronsäure oder anderen Füllstoffen zur Auffüllung von Falten und Fältchen, zur Wiederherstellung von Volumen und zur Glättung des Hautbildes für ein verjüngtes Aussehen.</p>" },
       "prp-face": { "name": "PRP-Gesichtsverjüngung", "description": "<p>Ein Verfahren, bei dem das plättchenreiche Plasma (PRP) aus Ihrem eigenen Blut verwendet und in die Haut injiziert wird, um die Kollagenproduktion anzuregen und die Hautstruktur und -elastizität zu verbessern.</p>" },
       "dark-circles-treatment": { "name": "Behandlung von Augenringen", "description": "<p>Eine Reihe von Behandlungen, die darauf abzielen, das Erscheinungsbild von Augenringen zu reduzieren, einschließlich Füllstoffen, Lasertherapie oder topischen Behandlungen, abhängig von der zugrunde liegenden Ursache.</p>" },
       "prp-hair": { "name": "PRP-Haarwiederherstellung", "description": "<p>Eine nicht-chirurgische Behandlung von Haarausfall, bei der plättchenreiches Plasma aus dem Blut des Patienten in die Kopfhaut injiziert wird, um das Haarwachstum anzuregen.</p>" },
       "white-peeling": { "name": "Chemisches Peeling", "description": "<p>Eine Hauterneuerungsbehandlung, bei der eine chemische Lösung auf die Haut aufgetragen wird, um sie zu peelen und schließlich abzulösen, wodurch eine glattere, weniger faltige Haut zum Vorschein kommt.</p>" },
-      "microneedling": { "name": "Microneedling (Kollagen-Induktionstherapie)", "description": "<p>Ein Verfahren, bei dem feine Nadeln verwendet werden, um winzige Einstiche in der Haut zu erzeugen, die die Kollagen- und Elastinproduktion anregen, um die Hautstruktur zu verbessern und das Erscheinungsbild von Narben und Falten zu reduzieren.</p>" },
+      "microneedling": { "name": "Microneedling", "description": "<p>Ein Verfahren, bei dem feine Nadeln verwendet werden, um winzige Einstiche in der Haut zu erzeugen, die die Kollagen- und Elastinproduktion anregen, um die Hautstruktur zu verbessern und das Erscheinungsbild von Narben und Falten zu reduzieren.</p>" },
       "radiofrequency-face": { "name": "Radiofrequenz-Hautstraffung (Gesicht)", "description": "<p>Eine nicht-chirurgische Methode zur Hautstraffung, bei der Energie verwendet wird, um die tieferen Hautschichten zu erwärmen, die Kollagenproduktion anzuregen und die Hautstraffheit und -struktur zu verbessern.</p>" },
       "sulcus-filling": { "name": "Nasolabialfalten-Füller", "description": "<p>Ein nicht-chirurgischer Eingriff, bei dem Hautfüller in die Falten injiziert werden, die von den Seiten der Nase zu den Mundwinkeln verlaufen, um deren Erscheinungsbild zu mildern.</p>" },
-      "chin-reshaping": { "name": "Nicht-chirurgische Kinnkorrektur (Füllstoffe)", "description": "<p>Ein Verfahren, bei dem injizierbare Füllstoffe verwendet werden, um das Kinn neu zu formen und zu vergrößern, das Gleichgewicht im Gesicht zu verbessern und ein stärkeres Kinnprofil ohne Operation zu schaffen.</p>" },
+      "chin-reshaping": { "name": "Nicht-chirurgische Kinnkorrektur", "description": "<p>Ein Verfahren, bei dem injizierbare Füllstoffe verwendet werden, um das Kinn neu zu formen und zu vergrößern, das Gleichgewicht im Gesicht zu verbessern und ein stärkeres Kinnprofil ohne Operation zu schaffen.</p>" },
       "zmadh-gjoksit": { "name": "Brustvergrößerung", "description": "<p>Ein chirurgischer Eingriff zur Vergrößerung der Brustgröße durch die Platzierung von Brustimplantaten unter dem Brustgewebe oder den Muskeln.</p>" },
       "lift-gjoksit": { "name": "Bruststraffung", "description": "<p>Ein chirurgischer Eingriff zur Anhebung und Umformung der Brüste durch Entfernung überschüssiger Haut und Straffung des umgebenden Gewebes, um ein jugendlicheres Brustprofil wiederherzustellen.</p>" },
       "zvog-gjoksit": { "name": "Brustverkleinerung", "description": "<p>Ein chirurgischer Eingriff zur Entfernung von überschüssigem Brustfett, Drüsengewebe und Haut, um eine Brustgröße zu erreichen, die proportional zum Körper ist, und um die mit übermäßig großen Brüsten verbundenen Beschwerden zu lindern.</p>" },
@@ -268,6 +269,8 @@
     "backButton": "Zurück zu allen Blog-Artikeln"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Erkunden Sie {serviceName} bei {siteName}. {excerpt}",
     "aboutTitle": "Über {serviceName}",
     "whatToExpectTitle": "Was Sie in der {siteName} erwartet",
     "whatToExpectP1": "In der {siteName} beginnt Ihre Reise mit einer umfassenden Beratung, bei der unsere Spezialisten einen personalisierten Behandlungsplan entwickeln, der auf Ihre spezifischen Bedürfnisse und gewünschten Ergebnisse für {serviceName} zugeschnitten ist. Wir verwenden moderne, evidenzbasierte Techniken und modernste Technologie. Unser Engagement erstreckt sich auf eine sorgfältige postoperative Betreuung und Nachsorge, um optimale Ergebnisse, Ihren Komfort und einen reibungslosen Genesungsprozess zu gewährleisten.",
@@ -294,6 +297,8 @@
     "noResults": "Derzeit sind keine zahnärztlichen Leistungskategorien verfügbar. Bitte kontaktieren Sie {siteName} für die neuesten Informationen."
   },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Kategorie nicht gefunden | {siteName}",
     "categoryNotFoundDescription": "Die angeforderte Dienstleistungskategorie konnte bei {siteName} nicht gefunden werden.",
     "noResults": "In dieser Kategorie sind derzeit keine Dienstleistungen verfügbar. Bitte kontaktieren Sie {siteName} für weitere Details."

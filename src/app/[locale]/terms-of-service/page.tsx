@@ -1,3 +1,4 @@
+
 import { PageHeader } from '@/components/shared/PageHeader';
 import { SITE_DOMAIN } from '@/lib/constants';
 import type { Metadata } from 'next';
@@ -40,6 +41,7 @@ export default async function TermsOfServicePage({params: {locale}}: {params: {l
         <h2>{t('h2_4')}</h2>
         <p>{t('p4_1')}</p>
         <p>{t.rich('p4_2', {
+          siteName: siteTitle,
           a: (chunks) => <a href={`mailto:info@${SITE_DOMAIN}`}>{chunks}</a>,
         })}</p>
 

@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { serviceCategories, getServiceBySlugs } from '@/lib/services';
@@ -51,8 +52,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     : serviceDescription;
 
   return {
-    title: `${serviceName} | ${siteTitle}`,
-    description: `Explore ${serviceName} at ${siteTitle}. ${metaDescription}`,
+    title: tDetails('metaTitle', { serviceName, siteTitle }),
+    description: tDetails('metaDescription', { serviceName, excerpt: metaDescription }),
   };
 }
 

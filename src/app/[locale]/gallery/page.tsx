@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { getAllGalleryItems } from '@/lib/gallery';
@@ -27,7 +28,7 @@ export default async function GalleryPage() {
     <>
       <PageHeader
         title={tPage('title')}
-        description={tPage('description', { siteTitle })}
+        description={tPage('description')}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {items.length > 0 ? (

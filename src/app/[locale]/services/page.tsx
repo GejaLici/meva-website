@@ -1,3 +1,4 @@
+
 import { PageHeader } from '@/components/shared/PageHeader';
 import type { Metadata } from 'next';
 import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
@@ -14,13 +15,12 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 
 export default async function ServicesOverviewPage() {
   const t = await getTranslations('ServicesOverviewPage');
-  const tSite = await getTranslations('Site');
   
   return (
     <>
       <PageHeader
         title={t('title')}
-        description={t('description', {siteTitle: tSite('title')})}
+        description={t('description')}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         <ServiceCategoryGrid />

@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Clinique Meva"
+    "title": "Clinique Meva",
+    "siteDescription": "Clinique Meva : Services esthétiques et dentaires de premier ordre. Nos spécialistes certifiés proposent des traitements avancés pour des résultats transformateurs avec le plus grand soin et expertise."
   },
   "Navigation": {
     "home": "Accueil",
@@ -121,13 +122,13 @@
       "lift-fytyres": { "name": "Lifting du Visage", "description": "<p>Une procédure chirurgicale pour améliorer les signes visibles du vieillissement du visage et du cou, tels que l'affaissement, les plis profonds et la peau lâche.</p>" },
       "rim-mjekres": { "name": "Génioplastie", "description": "<p>Une procédure chirurgicale pour remodeler ou améliorer le menton, soit avec un implant, soit en remodelant l'os, pour améliorer l'équilibre des proportions faciales.</p>" },
       "lip-reshaping": { "name": "Remodelage et Augmentation des Lèvres", "description": "<p>Une procédure cosmétique pour améliorer l'apparence des lèvres en augmentant leur volume, leur forme, leur structure ou leur symétrie, souvent à l'aide de produits de comblement dermique.</p>" },
-      "xanthelasma-plasma-arc": { "name": "Élimination des Dépôts sur les Paupières (Plasma)", "description": "<p>Ceci est un traitement non chirurgical pour enlever les taches de cholestérol jaunes trouvées sur les paupières. Nous utilisons un appareil à plasma précis pour éliminer en douceur ces dépôts, vous donnant une peau plus lisse avec très peu de temps de récupération.</p>" },
+      "xanthelasma-plasma-arc": { "name": "Élimination des Dépôts sur les Paupières", "description": "<p>Ceci est un traitement non chirurgical pour enlever les taches de cholestérol jaunes trouvées sur les paupières. Nous utilisons un appareil à plasma précis pour éliminer en douceur ces dépôts, vous donnant une peau plus lisse avec très peu de temps de récupération.</p>" },
       "multivitamin-treatment": { "name": "Soin du Visage par Infusion Multivitaminée", "description": "<p>Un traitement du visage qui infuse un mélange de vitamines, de minéraux et d'antioxydants directement dans la peau pour la nourrir, l'hydrater et la revitaliser, résultant en un teint plus éclatant.</p>" },
-      "eyelids-plasma-arc": { "name": "Lifting des Paupières non Chirurgical (Arc Plasma)", "description": "<p>Un traitement non invasif qui utilise l'énergie plasma pour soulever et resserrer la peau des paupières, réduisant l'apparence de la peau affaissée et des rides sans chirurgie.</p>" },
+      "eyelids-plasma-arc": { "name": "Lifting des Paupières non Chirurgical", "description": "<p>Un traitement non invasif qui utilise l'énergie plasma pour soulever et resserrer la peau des paupières, réduisant l'apparence de la peau affaissée et des rides sans chirurgie.</p>" },
       "cheekbone-reshaping": { "name": "Contour des Pommettes (Fillers)", "description": "<p>Une procédure non chirurgicale qui utilise des produits de comblement dermique pour améliorer et définir les pommettes, restaurer le volume et créer une structure faciale plus profilée.</p>" },
       "microdermabrasion": { "name": "Microdermabrasion", "description": "<p>Une procédure minimalement invasive qui renouvelle la peau en ponçant doucement la couche externe épaisse, traitant les dommages causés par le soleil, les rides et autres problèmes de peau.</p>" },
-      "jawline-contouring": { "name": "Contour de la mâchoire (Fillers/Fils)", "description": "<p>Une technique non chirurgicale pour définir et sculpter la ligne de la mâchoire à l'aide de produits de comblement dermique ou de fils PDO, créant un profil plus net et plus jeune.</p>" },
-      "wrinkle-fillers": { "name": "Produits de comblement dermique pour les rides", "description": "<p>Injections d'acide hyaluronique ou d'autres produits de comblement pour combler les rides et ridules, restaurer le volume et lisser la texture de la peau pour une apparence rajeunie.</p>" },
+      "jawline-contouring": { "name": "Contour de la Mâchoire", "description": "<p>Une technique non chirurgicale pour définir et sculpter la ligne de la mâchoire à l'aide de produits de comblement dermique ou de fils PDO, créant un profil plus net et plus jeune.</p>" },
+      "wrinkle-fillers": { "name": "Produits de Comblement Dermique pour les Rides", "description": "<p>Injections d'acide hyaluronique ou d'autres produits de comblement pour combler les rides et ridules, restaurer le volume et lisser la texture de la peau pour une apparence rajeunie.</p>" },
       "prp-face": { "name": "Rajeunissement du Visage par PRP", "description": "<p>Une procédure qui utilise le plasma riche en plaquettes (PRP) de votre propre sang, qui est injecté dans la peau pour stimuler la production de collagène et améliorer la texture et l'élasticité de la peau.</p>" },
       "dark-circles-treatment": { "name": "Traitement des Cernes", "description": "<p>Une gamme de traitements visant à réduire l'apparence des cernes sous les yeux, y compris les produits de comblement, la thérapie au laser ou les traitements topiques, en fonction de la cause sous-jacente.</p>" },
       "prp-hair": { "name": "Restauration Capillaire par PRP", "description": "<p>Un traitement non chirurgical de la perte de cheveux où le plasma riche en plaquettes du sang du patient est injecté dans le cuir chevelu pour stimuler la croissance des cheveux.</p>" },
@@ -135,7 +136,7 @@
       "microneedling": { "name": "Microneedling", "description": "<p>Une procédure qui utilise de fines aiguilles pour créer de minuscules perforations dans la peau, stimulant la production de collagène et d'élastine pour améliorer la texture de la peau et réduire l'apparence des cicatrices et des rides.</p>" },
       "radiofrequency-face": { "name": "Radiofréquence Faciale", "description": "<p>Une méthode non chirurgicale de raffermissement de la peau qui utilise de l'énergie pour chauffer les couches profondes de la peau, stimulant la production de collagène et améliorant la fermeté et la texture de la peau.</p>" },
       "sulcus-filling": { "name": "Comblement des Sillons Nasogéniens", "description": "<p>Une procédure non chirurgicale où des produits de comblement dermique sont injectés dans les plis qui vont des côtés du nez aux coins de la bouche, adoucissant leur apparence.</p>" },
-      "chin-reshaping": { "name": "Remodelage du Menton non Chirurgical (Fillers)", "description": "<p>Une procédure qui utilise des produits de comblement injectables pour remodeler et augmenter le menton, améliorant l'équilibre du visage et créant un profil de menton plus fort sans chirurgie.</p>" },
+      "chin-reshaping": { "name": "Remodelage du Menton non Chirurgical", "description": "<p>Une procédure qui utilise des produits de comblement injectables pour remodeler et augmenter le menton, améliorant l'équilibre du visage et créant un profil de menton plus fort sans chirurgie.</p>" },
       "zmadh-gjoksit": { "name": "Augmentation Mammaire", "description": "<p>Une procédure chirurgicale pour augmenter la taille des seins par la mise en place d'implants mammaires sous le tissu mammaire ou les muscles.</p>" },
       "lift-gjoksit": { "name": "Lifting Mammaire", "description": "<p>Une procédure chirurgicale pour remonter et remodeler les seins en retirant l'excès de peau et en resserrant les tissus environnants pour restaurer un profil mammaire plus jeune.</p>" },
       "zvog-gjoksit": { "name": "Réduction Mammaire", "description": "<p>Une procédure chirurgicale pour enlever l'excès de graisse mammaire, de tissu glandulaire et de peau pour obtenir une taille de sein proportionnée au corps et pour soulager l'inconfort associé à des seins trop gros.</p>" },
@@ -167,7 +168,7 @@
       "root-canal-treatment": { "name": "Traitement de Canal", "description": "<p>Une procédure dentaire pour enlever la pulpe infectée de l'intérieur d'une dent pour la sauver et soulager la douleur.</p>" },
       "tooth-extraction": { "name": "Extraction Dentaire", "description": "<p>L'enlèvement d'une dent de son alvéole dans l'os de la mâchoire.</p>" },
       "dental-implants": { "name": "Implants Dentaires", "description": "<p>Dispositifs chirurgicaux placés dans l'os de la mâchoire pour remplacer les dents manquantes et fournir une base pour des prothèses fixes ou amovibles.</p>" },
-      "apical-resection": { "name": "Chirurgie de l'Apex de la Racine (Apicectomie)", "description": "<p>Une procédure chirurgicale pour enlever l'extrémité de la racine d'une dent et les tissus infectés environnants.</p>" },
+      "apical-resection": { "name": "Chirurgie Endodontique", "description": "<p>Une procédure chirurgicale pour enlever l'extrémité de la racine d'une dent et les tissus infectés environnants.</p>" },
       "primary-teeth-care": { "name": "Soins des Dents de Lait", "description": "<p>Soins dentaires spécialisés pour les enfants, axés sur le maintien de la santé des dents de lait pour assurer le bon développement des dents permanentes.</p>" },
       "teeth-fluoridation": { "name": "Fluoration des Dents", "description": "<p>L'application de fluorure sur les dents pour renforcer l'émail et prévenir la carie dentaire.</p>" },
       "dental-sealants": { "name": "Scellants Dentaires", "description": "<p>Fines couches protectrices appliquées sur les surfaces de mastication des dents postérieures pour prévenir les caries.</p>" }
@@ -268,6 +269,8 @@
     "backButton": "Retour à tous les articles du blog"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Découvrez {serviceName} à {siteName}. {excerpt}",
     "aboutTitle": "À propos de {serviceName}",
     "whatToExpectTitle": "À quoi s'attendre à la {siteName}",
     "whatToExpectP1": "À la {siteName}, votre parcours commence par une consultation complète au cours de laquelle nos spécialistes élaborent un plan de traitement personnalisé adapté à vos besoins spécifiques et aux résultats souhaités pour {serviceName}. Nous utilisons des techniques modernes fondées sur des données probantes et une technologie de pointe. Notre engagement s'étend à des soins postopératoires méticuleux et à un suivi, garantissant des résultats optimaux, votre confort et un processus de récupération en douceur.",
@@ -294,6 +297,8 @@
     "noResults": "Aucune catégorie de service dentaire n'est actuellement disponible. Veuillez contacter {siteName} pour les dernières informations."
   },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Catégorie non trouvée | {siteName}",
     "categoryNotFoundDescription": "La catégorie de service demandée n'a pas pu être trouvée à la {siteName}.",
     "noResults": "Aucun service n'est disponible dans cette catégorie pour le moment. Veuillez contacter {siteName} pour plus de détails."

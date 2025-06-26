@@ -1,3 +1,4 @@
+
 import { PageHeader } from '@/components/shared/PageHeader';
 import { BlogCard } from '@/components/blog/BlogCard';
 import { getAllBlogPosts } from '@/lib/blog';
@@ -16,13 +17,12 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 export default async function BlogPage() {
   const posts = await getAllBlogPosts();
   const t = await getTranslations('BlogPage');
-  const tSite = await getTranslations('Site');
 
   return (
     <>
       <PageHeader
         title={t('title')}
-        description={t('description', {siteTitle: tSite('title')})}
+        description={t('description')}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {posts.length > 0 ? (

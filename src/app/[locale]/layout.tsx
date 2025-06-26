@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Inter, Poppins } from 'next/font/google';
 import './../globals.css';
@@ -30,7 +31,7 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
       default: siteTitle,
       template: `%s | ${siteTitle}`,
     },
-    description: `${siteTitle}: Premier aesthetic and dental services. Our board-certified specialists offer advanced treatments for transformative results with utmost care and expertise.`,
+    description: t('siteDescription'),
   };
 }
 
@@ -41,6 +42,11 @@ export default function RootLayout({
   children: React.ReactNode;
   params: {locale: string};
 }) {
+  if (!locales.includes(locale as any)) {
+    // This will be caught by the middleware, but as a fallback
+    return null;
+  }
+  
   const messages = useMessages();
 
   return (
