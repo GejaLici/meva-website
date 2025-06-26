@@ -3,15 +3,14 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { serviceCategories } from '@/lib/services';
-import { ArrowRight, Star, Gem, Heart, PersonStanding, Sparkles, Images, BookOpen, HelpCircle, ThumbsUp, Leaf } from 'lucide-react';
+import { Star, ThumbsUp, Images, BookOpen, HelpCircle } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { testimonials } from '@/lib/testimonials';
-import { cn } from '@/lib/utils';
 import { getAllGalleryItems } from '@/lib/gallery';
 import type { GalleryItem as GalleryItemType } from '@/types/gallery';
 import { Skeleton } from '@/components/ui/skeleton';
 import Link from 'next/link';
+import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
 
 const ContactForm = dynamic(
   () => import('@/app/contact/_components/ContactForm').then((mod) => mod.ContactForm),
@@ -42,56 +41,7 @@ const ContactForm = dynamic(
 );
 
 export default function HomePage() {
-  const displayCategories = [
-    {
-      id: 'facial-surgery',
-      name: 'Facial Plastic Surgery',
-      slug: 'facial-surgery',
-      description: serviceCategories.find(cat => cat.id === 'facial-surgery')?.description || 'Expert surgical procedures to refine and restore facial harmony and youthfulness.',
-      image: serviceCategories.find(cat => cat.id === 'facial-surgery')?.image || 'https://placehold.co/800x600.png',
-      imageHint: serviceCategories.find(cat => cat.id === 'facial-surgery')?.imageHint || 'facial surgery precision',
-      icon: Gem,
-    },
-    {
-      id: 'facial-treatments',
-      name: 'Facial Treatments',
-      slug: 'facial-treatments',
-      description: serviceCategories.find(cat => cat.id === 'facial-treatments')?.description || 'Rejuvenate and enhance your features with our advanced non-surgical facial treatments.',
-      image: serviceCategories.find(cat => cat.id === 'facial-treatments')?.image || 'https://placehold.co/800x600.png',
-      imageHint: serviceCategories.find(cat => cat.id === 'facial-treatments')?.imageHint || 'facial treatment variety',
-      icon: Leaf,
-    },
-    {
-      id: 'breasts',
-      name: 'Breast Procedures',
-      slug: 'breasts',
-      description: serviceCategories.find(cat => cat.id === 'breasts')?.description || 'Procedures for breast augmentation, lift, reduction, and reconstruction.',
-      image: serviceCategories.find(cat => cat.id === 'breasts')?.image || 'https://placehold.co/800x600.png',
-      imageHint: serviceCategories.find(cat => cat.id === 'breasts')?.imageHint || 'breast surgery results',
-      icon: Heart,
-    },
-    {
-      id: 'body',
-      name: 'Body Contouring',
-      slug: 'body',
-      description: serviceCategories.find(cat => cat.id === 'body')?.description || 'Services for body contouring and reshaping for a harmonious appearance.',
-      image: serviceCategories.find(cat => cat.id === 'body')?.image || 'https://placehold.co/800x600.png',
-      imageHint: serviceCategories.find(cat => cat.id === 'body')?.imageHint || 'body contouring technology',
-      icon: PersonStanding,
-    },
-    {
-      id: 'dental-services-summary',
-      name: 'Comprehensive Dental Care',
-      slug: 'dental',
-      description: 'Explore our full range of expert dental services, from cosmetic enhancements and orthodontics to surgical procedures and pediatric care, all tailored to your oral health needs.',
-      image: '/images/dentist-turkey-antalya.jpg',
-      imageHint: 'dental clinic modern',
-      icon: Sparkles,
-    },
-  ];
-
   const galleryPreviewItems = getAllGalleryItems().slice(0, 3);
-
 
   return (
     <>
@@ -133,52 +83,7 @@ export default function HomePage() {
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-6">
-            {displayCategories.map((category, index) => {
-              const CategoryIcon = category.icon;
-              let colSpanClass = '';
-              if (index < 3) { 
-                colSpanClass = 'md:col-span-2';
-              } else { 
-                colSpanClass = 'md:col-span-3';
-              }
-              return (
-                <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", colSpanClass)}>
-                  {category.image && (
-                    <div className="relative w-full h-56 overflow-hidden">
-                      <Image
-                        src={category.image}
-                        alt={category.name}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                        data-ai-hint={category.imageHint || 'medical collage'}
-                        className="group-hover:scale-105 transition-transform duration-300 ease-in-out"
-                      />
-                    </div>
-                  )}
-                  <CardHeader className="text-center">
-                    {CategoryIcon && (
-                      <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
-                        <CategoryIcon className="h-6 w-6" />
-                      </div>
-                    )}
-                    <CardTitle className="font-headline text-2xl text-primary group-hover:text-accent transition-colors duration-300">{category.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow flex flex-col">
-                    <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3 text-center">
-                      {category.description}
-                    </CardDescription>
-                    <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
-                      <Link href={`/services/${category.slug}`}>
-                        Learn more <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
+          <ServiceCategoryGrid />
         </div>
       </section>
 

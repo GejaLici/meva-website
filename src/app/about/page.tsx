@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, Stethoscope, Lightbulb } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -46,54 +44,6 @@ export default function AboutPage() {
                 data-ai-hint="modern clinic interior"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 md:py-16 bg-muted/50">
-        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 md:mb-12">
-            <h2 className="font-headline text-2xl md:text-3xl font-bold text-foreground sm:text-4xl">
-              Why Choose Meva Clinic?
-            </h2>
-            <p className="mt-3 md:mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-             Our unwavering dedication to clinical excellence and patient-centered care distinguishes Meva Clinic as a premier destination for aesthetic and dental treatments.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="p-4 md:p-6">
-                <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
-                  <Users className="h-5 w-5 md:h-6 md:w-6" />
-                </div>
-                <CardTitle className="font-headline text-lg md:text-xl text-primary">Distinguished Medical Team</CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 md:p-6 pt-0">
-                <p className="text-sm md:text-base text-muted-foreground">Our distinguished team comprises board-certified specialists and highly skilled medical professionals, recognized leaders in their respective fields, dedicated to delivering superior, safe, and personalized outcomes.</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="p-4 md:p-6">
-                <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
-                  <Stethoscope className="h-5 w-5 md:h-6 md:w-6" />
-                </div>
-                <CardTitle className="font-headline text-lg md:text-xl text-primary">Personalized Patient Care</CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 md:p-6 pt-0">
-                <p className="text-sm md:text-base text-muted-foreground">At Meva Clinic, personalized care is paramount. We meticulously tailor each treatment plan to your unique anatomical considerations, aesthetic aspirations, and overall well-being, ensuring an effective and deeply individualized approach.</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="p-4 md:p-6">
-                <div className="mx-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full bg-primary text-primary-foreground mb-3 md:mb-4">
-                  <Lightbulb className="h-5 w-5 md:h-6 md:w-6" />
-                </div>
-                <CardTitle className="font-headline text-lg md:text-xl text-primary">Advanced Technology & Techniques</CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 md:p-6 pt-0">
-                <p className="text-sm md:text-base text-muted-foreground">We are committed to integrating the latest, clinically-proven, and safest medical technologies and advanced procedural techniques. This investment ensures our patients benefit from cutting-edge treatments that deliver superior, predictable outcomes and enhanced safety.</p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
