@@ -25,14 +25,34 @@ const firebaseConfig: FirebaseOptions = {
   // measurementId: "REPLACE_WITH_YOUR_MEASUREMENT_ID" // Optional: if you use Google Analytics
 };
 
-// Initialize Firebase
-let app;
-if (!getApps().length) {
-  app = initializeApp(firebaseConfig);
-} else {
-  app = getApp();
-}
 
-const db = getFirestore(app);
+// Check if the config is using placeholder values.
+const isConfigured = firebaseConfig.apiKey && !firebaseConfig.apiKey.startsWith("AIza");
+
+let app;
+let db;
+
+if (isConfigured) {
+  // Initialize Firebase
+  if (!getApps().length) {
+    app = initializeApp(firebaseConfig);
+  } else {
+    app = getApp();
+  }
+  db = getFirestore(app);
+} else {
+  console.warn(`
+    *************************************************************************
+    * FIREBASE IS NOT CONFIGURED!                                           *
+    *                                                                       *
+    * Please open src/lib/firebaseConfig.ts and replace the placeholder     *
+    * values with your actual Firebase project's configuration.             *
+    *                                                                       *
+    * The contact form and blog will not work until Firebase is configured. *
+    *************************************************************************
+  `);
+  app = null;
+  db = null;
+}
 
 export { db, app };

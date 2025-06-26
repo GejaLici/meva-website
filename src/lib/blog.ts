@@ -34,7 +34,7 @@ function mapFirestoreDocToBlogPost(doc: any): BlogPost {
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   if (!db) {
-    console.error("Firestore is not initialized. Ensure firebaseConfig.ts is correctly set up.");
+    console.error("Firebase is not configured. Blog posts cannot be fetched.");
     return [];
   }
   try {
@@ -52,7 +52,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
   if (!db) {
-    console.error("Firestore is not initialized. Ensure firebaseConfig.ts is correctly set up.");
+    console.error("Firebase is not configured. Blog posts cannot be fetched.");
     return undefined;
   }
   try {

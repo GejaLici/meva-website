@@ -10,6 +10,12 @@ interface SubmitResult {
 }
 
 export async function submitContactForm(values: ContactFormValues): Promise<SubmitResult> {
+  if (!db) {
+    const errorMessage = "Firebase is not configured on the server. The contact form is disabled.";
+    console.error(errorMessage);
+    return { success: false, error: errorMessage };
+  }
+
   const validationResult = formSchema.safeParse(values);
 
   if (!validationResult.success) {
@@ -18,18 +24,14 @@ export async function submitContactForm(values: ContactFormValues): Promise<Subm
   }
 
   try {
-    // IMPORTANT: Ensure 'db' is correctly initialized in firebaseConfig.ts
-    // and your Firebase project has Firestore enabled with appropriate security rules.
     const docRef = await addDoc(collection(db, "contactSubmissions"), {
       ...values,
-      submittedAt: serverTimestamp(), // Adds a server-side timestamp
+      submittedAt: serverTimestamp(),
     });
     console.log("Contact form data saved to Firestore with ID: ", docRef.id);
     return { success: true };
   } catch (error) {
     console.error('Error submitting form to Firestore:', error);
-    // It's good practice to provide a more generic error to the client
-    // and log the specific error server-side for debugging.
     let errorMessage = "Failed to send message due to a server error.";
     if (error instanceof Error && error.message.includes('PERMISSION_DENIED')) {
         errorMessage = "Failed to send message. Please ensure Firebase configuration is correct and permissions are set.";
