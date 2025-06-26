@@ -23,6 +23,9 @@ export default function LanguageSwitcher() {
     { code: 'en', name: t('en') },
     { code: 'it', name: t('it') },
     { code: 'sq', name: t('sq') },
+    { code: 'de', name: t('de') },
+    { code: 'fr', name: t('fr') },
+    { code: 'es', name: t('es') },
   ];
 
   const handleLocaleChange = (nextLocale: string) => {

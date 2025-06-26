@@ -1,0 +1,113 @@
+
+{
+  "Site": {
+    "title": "Clínica NovaSculpt"
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "services": "Servicios",
+    "gallery": "Galería",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "dentalServices": "Servicios Dentales"
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Cambiar idioma",
+    "en": "Inglés",
+    "it": "Italiano",
+    "sq": "Albanés",
+    "de": "Alemán",
+    "fr": "Francés",
+    "es": "Español"
+  },
+  "Footer": {
+    "quickLinks": "Enlaces rápidos",
+    "connectWithUs": "Conecta con nosotros",
+    "stayUpdated": "Manténgase actualizado con nuestras últimas noticias y ofertas.",
+    "allRightsReserved": "Todos los derechos reservados.",
+    "designedBy": "Sitio web diseñado por un experto diseñador de IA.",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio"
+  },
+  "HomePage": {
+    "heroTitle": "Revele su resplandor. Redefina su belleza.",
+    "heroSubtitle": "Experimente la ciencia y el arte de la transformación estética en la Clínica NovaSculpt. Nuestros profesionales médicos altamente cualificados combinan tecnología de vanguardia con una atención personalizada para ayudarle a alcanzar sus objetivos estéticos y de bienestar definitivos.",
+    "heroButton": "Explore nuestros tratamientos expertos",
+    "servicesTitle": "Nuestros principales servicios estéticos y dentales",
+    "servicesSubtitle": "En la Clínica NovaSculpt, ofrecemos un conjunto completo de procedimientos estéticos y dentales avanzados, meticulosamente adaptados por nuestros especialistas para realzar su belleza natural y elevar su confianza.",
+    "testimonialsTitle": "Lo que dicen nuestros pacientes",
+    "testimonialsSubtitle": "Escuche a aquellos que han experimentado la diferencia de la Clínica NovaSculpt y nos han confiado su cuidado.",
+    "galleryTitle": "Transformaciones de las que estamos orgullosos",
+    "gallerySubtitle": "Sea testigo de la habilidad meticulosa y el arte de nuestros especialistas a través de estos resultados reales de pacientes. Eche un vistazo a los impresionantes resultados que nuestros pacientes han logrado en la Clínica NovaSculpt.",
+    "galleryButton": "Ver la galería completa de resultados",
+    "insightsTitle": "Más información y apoyo de expertos",
+    "insightsSubtitle": "Explore información detallada sobre nuestros tratamientos especializados, manténgase informado con los últimos avances en el cuidado estético y encuentre respuestas completas a sus preguntas de nuestro equipo de expertos en la Clínica NovaSculpt.",
+    "insightsGalleryTitle": "Vea nuestras transformaciones",
+    "insightsGalleryDesc": "Vea las impresionantes transformaciones y los resultados reales de los pacientes que nuestro equipo médico experto ha logrado.",
+    "insightsGalleryButton": "Visite la galería de pacientes",
+    "insightsBlogTitle": "Explore nuestras perspectivas de expertos",
+    "insightsBlogDesc": "Sumérjase en nuestro blog para conocer las últimas tendencias, conocimientos sobre procedimientos y consejos de expertos en cuidados estéticos y dentales avanzados.",
+    "insightsBlogButton": "Lea nuestro blog de expertos",
+    "insightsFaqTitle": "Preguntas frecuentes",
+    "insightsFaqDesc": "Encuentre respuestas completas a las consultas comunes sobre nuestros procedimientos, protocolos de recuperación y qué esperar durante su viaje con nosotros.",
+    "insightsFaqButton": "Visite nuestras preguntas frecuentes completas",
+    "contactTitle": "¿Listo para su transformación?",
+    "contactSubtitle": "Inicie su viaje hacia los resultados estéticos deseados. Póngase en contacto con la Clínica NovaSculpt hoy mismo para una consulta confidencial. Complete el siguiente formulario y nuestro equipo dedicado de expertos médicos se pondrá en contacto con usted a la brevedad para discutir sus aspiraciones y guiarlo a través de nuestros planes de tratamiento personalizados."
+  },
+  "ContactForm": {
+    "nameLabel": "Nombre completo",
+    "namePlaceholder": "Ingrese su nombre completo",
+    "emailLabel": "Dirección de correo electrónico",
+    "emailPlaceholder": "Ingrese su dirección de correo electrónico",
+    "subjectLabel": "Asunto",
+    "subjectPlaceholder": "¿Cuál es el asunto de su mensaje?",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Describa su consulta en detalle.",
+    "submitButton": "Enviar mensaje",
+    "submittingButton": "Enviando...",
+    "successTitle": "Mensaje enviado",
+    "successDescription": "Gracias por contactarnos. Nos pondremos en contacto con usted en breve.",
+    "errorTitle": "Error al enviar el mensaje",
+    "genericError": "Ocurrió un error inesperado. Por favor, inténtelo de nuevo."
+  },
+  "NotFound": {
+    "title": "404 - Página no encontrada",
+    "description": "Lo sentimos, la página que está buscando no existe o ha sido movida.",
+    "homeButton": "Volver a la página de inicio"
+  },
+  "Testimonials": {
+    "testimonial-1": {
+      "name": "Sara L.",
+      "quote": "¡La Clínica NovaSculpt realmente transformó mi confianza! Los resultados de mi remodelación de nariz son fantásticos, superando todas mis expectativas. Todo el equipo fue increíblemente profesional y solidario durante todo el proceso. No podría estar más feliz.",
+      "treatment": "Remodelación de nariz (Rinoplastia)"
+    },
+    "testimonial-2": {
+      "name": "Miguel B.",
+      "quote": "Inicialmente dudaba en someterme a un trasplante de cabello, pero los especialistas de la Clínica NovaSculpt fueron excepcionales. Me explicaron todo claramente y me hicieron sentir completamente cómodo. El procedimiento fue sencillo y los resultados son notablemente naturales. ¡Recomiendo encarecidamente su experiencia!",
+      "treatment": "Trasplante de cabello (FUE)"
+    },
+    "testimonial-3": {
+      "name": "Emilia R.",
+      "quote": "Mi experiencia de aumento de senos en la Clínica NovaSculpt fue excepcional. Los cirujanos escucharon atentamente mis objetivos estéticos y ofrecieron resultados hermosos y de aspecto natural que se adaptan perfectamente a mi cuerpo. La atención postoperatoria y la atención al detalle fueron excepcionales.",
+      "treatment": "Aumento de senos"
+    }
+  },
+  "Services": {
+    "categories": {
+      "facial-surgery": {
+        "name": "Cirugía Facial",
+        "description": "FYTYRA (Cara)"
+      },
+      "breasts": {
+        "name": "Cirugía de Senos",
+        "description": "GJOKSI (Senos – Mujeres)"
+      },
+      "body": {
+        "name": "Cirugía Corporal",
+        "description": "TRUPI (Cuerpo)"
+      }
+    }
+  }
+}
