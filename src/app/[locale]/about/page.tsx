@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 
 export const metadata: Metadata = {
   title: `About Meva Clinic`,

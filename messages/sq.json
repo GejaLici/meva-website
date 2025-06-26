@@ -1,0 +1,77 @@
+
+{
+  "Site": {
+    "title": "Klinika Meva"
+  },
+  "Navigation": {
+    "home": "Kreu",
+    "about": "Rreth Nesh",
+    "services": "Shërbimet",
+    "gallery": "Galeria",
+    "blog": "Blogu",
+    "faq": "Pyetje të Shpeshta",
+    "contact": "Kontakti",
+    "dentalServices": "Shërbimet Dentare"
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Ndrysho gjuhën",
+    "en": "Anglisht",
+    "it": "Italisht",
+    "sq": "Shqip"
+  },
+  "Footer": {
+    "quickLinks": "Linqe të Shpejta",
+    "connectWithUs": "Lidhuni me Ne",
+    "stayUpdated": "Qëndroni të informuar me lajmet dhe ofertat tona më të fundit.",
+    "allRightsReserved": "Të gjitha të drejtat e rezervuara.",
+    "designedBy": "Uebfaqe e dizajnuar nga një stilist ekspert i AI.",
+    "privacyPolicy": "Politika e Privatësisë",
+    "termsOfService": "Kushtet e Shërbimit"
+  },
+  "HomePage": {
+    "heroTitle": "Zbuloni Rrezatimin Tuaj. Ripërcaktoni Bukurinë Tuaj.",
+    "heroSubtitle": "Përjetoni shkencën dhe artin e transformimit estetik në Klinikën Meva. Profesionistët tanë mjekësorë të kualifikuar kombinojnë teknologjinë më të fundit me kujdesin e personalizuar për t'ju ndihmuar të arrini qëllimet tuaja përfundimtare estetike dhe të mirëqenies.",
+    "heroButton": "Eksploroni Trajtimet Tona Eksperte",
+    "servicesTitle": "Shërbimet Tona Kryesore Estetike & Dentare",
+    "servicesSubtitle": "Në Klinikën Meva, ne ofrojmë një suitë të plotë të procedurave të avancuara estetike dhe dentare, të përshtatura me përpikëri nga specialistët tanë për të përmirësuar bukurinë tuaj natyrore dhe për të ngritur vetëbesimin tuaj.",
+    "testimonialsTitle": "Çfarë Thonë Pacientët Tanë",
+    "testimonialsSubtitle": "Dëgjoni nga ata që kanë përjetuar ndryshimin në Klinikën Meva dhe na kanë besuar kujdesin e tyre.",
+    "galleryTitle": "Transformimet për të Cilat Jemi Krenarë",
+    "gallerySubtitle": "Dëshmoni aftësinë dhe artin e përpiktë të specialistëve tanë përmes këtyre rezultateve reale të pacientëve. Hidhni një vështrim në rezultatet mahnitëse që pacientët tanë kanë arritur në Klinikën Meva.",
+    "galleryButton": "Shikoni Galerinë e Plotë të Rezultateve",
+    "insightsTitle": "Informacione të Mëtejshme & Mbështetje Eksperte",
+    "insightsSubtitle": "Eksploroni informacion të thelluar rreth trajtimeve tona të specializuara, qëndroni të informuar me përparimet më të fundit në kujdesin estetik dhe gjeni përgjigje të plota për pyetjet tuaja nga ekipi ynë ekspert në Klinikën Meva.",
+    "insightsGalleryTitle": "Shikoni Transformimet Tona",
+    "insightsGalleryDesc": "Shikoni transformimet mahnitëse dhe rezultatet reale të pacientëve që ekipi ynë mjekësor ekspert ka arritur.",
+    "insightsGalleryButton": "Vizitoni Galerinë e Pacientëve",
+    "insightsBlogTitle": "Eksploroni Informacionet Tona Eksperte",
+    "insightsBlogDesc": "Zhytuni në blogun tonë për tendencat më të fundit, informacionet procedurale dhe këshillat e ekspertëve në kujdesin e avancuar estetik dhe dentar.",
+    "insightsBlogButton": "Lexoni Blogun Tonë Ekspert",
+    "insightsFaqTitle": "Pyetje të Shpeshta",
+    "insightsFaqDesc": "Gjeni përgjigje të plota për pyetjet e zakonshme rreth procedurave tona, protokolleve të rimëkëmbjes dhe çfarë të prisni gjatë udhëtimit tuaj me ne.",
+    "insightsFaqButton": "Vizitoni FAQ-in Tonë të Plotë",
+    "contactTitle": "Gati për Transformimin Tuaj?",
+    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni Klinikën Meva sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar."
+  },
+  "ContactForm": {
+    "nameLabel": "Emri i Plotë",
+    "namePlaceholder": "Shkruani emrin tuaj të plotë",
+    "emailLabel": "Adresa Email",
+    "emailPlaceholder": "Shkruani adresën tuaj email",
+    "subjectLabel": "Subjekti",
+    "subjectPlaceholder": "Cili është subjekti i mesazhit tuaj?",
+    "messageLabel": "Mesazhi",
+    "messagePlaceholder": "Ju lutemi përshkruani kërkesën tuaj në detaje.",
+    "submitButton": "Dërgo Mesazhin",
+    "submittingButton": "Duke dërguar...",
+    "successTitle": "Mesazhi u Dërgua",
+    "successDescription": "Faleminderit që na kontaktuat. Ne do t'ju kthejmë përgjigje së shpejti.",
+    "errorTitle": "Gabim në Dërgimin e Mesazhit",
+    "genericError": "Ndodhi një gabim i papritur. Ju lutemi provoni përsëri."
+  },
+  "NotFound": {
+    "title": "404 - Faqja Nuk u Gjet",
+    "description": "Na vjen keq, faqja që po kërkoni nuk ekziston ose është zhvendosur.",
+    "homeButton": "Kthehu në Faqen Kryesore"
+  }
+}

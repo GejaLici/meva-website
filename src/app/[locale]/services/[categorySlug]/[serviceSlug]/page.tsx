@@ -4,7 +4,7 @@ import { serviceCategories, getServiceBySlugs } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import type { Metadata } from 'next';
 
 interface ServicePageProps {

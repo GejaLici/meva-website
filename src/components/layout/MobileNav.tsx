@@ -8,10 +8,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Separator } from '@/components/ui/separator';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
-import Link from 'next/link';
+import { Link } from '@/navigation';
+import { useTranslations } from 'next-intl';
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations('Navigation');
   const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 
   return (
@@ -34,20 +36,20 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            Home
+            {t('home')}
           </Link>
           <Link
             href="/about"
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            About Us
+            {t('about')}
           </Link>
           
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="services" className="border-b-0">
               <AccordionTrigger className="px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground hover:no-underline [&[data-state=open]>svg]:text-primary">
-                Services
+                {t('services')}
               </AccordionTrigger>
               <AccordionContent className="pl-4">
                 {aestheticCategories.map((category) => (
@@ -66,7 +68,7 @@ export function MobileNav() {
                   className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                   onClick={() => setIsOpen(false)}
                 >
-                  Dental Services
+                  {t('dentalServices')}
                 </Link>
               </AccordionContent>
             </AccordionItem>
@@ -77,7 +79,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            Gallery
+            {t('gallery')}
           </Link>
 
           <Link
@@ -85,7 +87,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            Blog
+            {t('blog')}
           </Link>
 
           <Link
@@ -93,7 +95,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            FAQ
+            {t('faq')}
           </Link>
 
           <Link
@@ -101,7 +103,7 @@ export function MobileNav() {
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}
           >
-            Contact
+            {t('contact')}
           </Link>
         </nav>
       </SheetContent>

@@ -1,0 +1,77 @@
+
+{
+  "Site": {
+    "title": "Clinica Meva"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "services": "Servizi",
+    "gallery": "Galleria",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contatti",
+    "dentalServices": "Servizi Dentali"
+  },
+  "LanguageSwitcher": {
+    "changeLanguage": "Cambia lingua",
+    "en": "Inglese",
+    "it": "Italiano",
+    "sq": "Albanese"
+  },
+  "Footer": {
+    "quickLinks": "Link Rapidi",
+    "connectWithUs": "Resta in Contatto",
+    "stayUpdated": "Rimani aggiornato con le nostre ultime notizie e offerte.",
+    "allRightsReserved": "Tutti i diritti riservati.",
+    "designedBy": "Sito web progettato da un esperto designer AI.",
+    "privacyPolicy": "Politica sulla Privacy",
+    "termsOfService": "Termini di Servizio"
+  },
+  "HomePage": {
+    "heroTitle": "Rivela la Tua Luminosità. Ridefinisci la Tua Bellezza.",
+    "heroSubtitle": "Sperimenta la scienza e l'arte della trasformazione estetica presso la Clinica Meva. I nostri professionisti medici altamente qualificati combinano tecnologia all'avanguardia con cure personalizzate per aiutarti a raggiungere i tuoi massimi obiettivi estetici e di benessere.",
+    "heroButton": "Esplora i Nostri Trattamenti Esperti",
+    "servicesTitle": "I Nostri Servizi Estetici e Dentali d'Eccellenza",
+    "servicesSubtitle": "Alla Clinica Meva, offriamo una suite completa di procedure estetiche e dentali avanzate, meticolosamente personalizzate dai nostri specialisti per esaltare la tua bellezza naturale ed elevare la tua fiducia.",
+    "testimonialsTitle": "Cosa Dicono i Nostri Pazienti",
+    "testimonialsSubtitle": "Ascolta coloro che hanno vissuto la differenza della Clinica Meva e ci hanno affidato le loro cure.",
+    "galleryTitle": "Trasformazioni di Cui Siamo Orgogliosi",
+    "gallerySubtitle": "Ammira l'abilità meticolosa e l'arte dei nostri specialisti attraverso questi risultati reali dei pazienti. Dai uno sguardo ai risultati straordinari che i nostri pazienti hanno ottenuto alla Clinica Meva.",
+    "galleryButton": "Guarda la Galleria Completa dei Risultati",
+    "insightsTitle": "Approfondimenti e Supporto Esperto",
+    "insightsSubtitle": "Esplora informazioni approfondite sui nostri trattamenti specializzati, rimani informato con gli ultimi progressi nella cura estetica e trova risposte complete alle tue domande dal nostro team di esperti alla Clinica Meva.",
+    "insightsGalleryTitle": "Guarda le Nostre Trasformazioni",
+    "insightsGalleryDesc": "Guarda le trasformazioni straordinarie e i risultati reali dei pazienti che il nostro team medico esperto ha ottenuto.",
+    "insightsGalleryButton": "Visita la Galleria Pazienti",
+    "insightsBlogTitle": "Esplora i Nostri Approfondimenti Esperti",
+    "insightsBlogDesc": "Immergiti nel nostro blog per le ultime tendenze, approfondimenti procedurali e consigli di esperti in cure estetiche e dentali avanzate.",
+    "insightsBlogButton": "Leggi il Nostro Blog Esperto",
+    "insightsFaqTitle": "Domande Frequenti",
+    "insightsFaqDesc": "Trova risposte complete alle domande comuni sulle nostre procedure, protocolli di recupero e cosa aspettarsi durante il tuo percorso con noi.",
+    "insightsFaqButton": "Visita le Nostre FAQ Complete",
+    "contactTitle": "Pronto per la Tua Trasformazione?",
+    "contactSubtitle": "Inizia il tuo viaggio verso i risultati estetici desiderati. Contatta oggi la Clinica Meva per una consulenza confidenziale. Compila il modulo sottostante e il nostro team dedicato di esperti medici si metterà prontamente in contatto con te per discutere le tue aspirazioni e guidarti attraverso i nostri percorsi di trattamento personalizzati."
+  },
+  "ContactForm": {
+    "nameLabel": "Nome Completo",
+    "namePlaceholder": "Inserisci il tuo nome completo",
+    "emailLabel": "Indirizzo Email",
+    "emailPlaceholder": "Inserisci il tuo indirizzo email",
+    "subjectLabel": "Oggetto",
+    "subjectPlaceholder": "Qual è l'oggetto del tuo messaggio?",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Descrivi la tua richiesta in dettaglio.",
+    "submitButton": "Invia Messaggio",
+    "submittingButton": "Invio in corso...",
+    "successTitle": "Messaggio Inviato",
+    "successDescription": "Grazie per averci contattato. Ti risponderemo al più presto.",
+    "errorTitle": "Errore nell'Invio del Messaggio",
+    "genericError": "Si è verificato un errore imprevisto. Riprova."
+  },
+  "NotFound": {
+    "title": "404 - Pagina Non Trovata",
+    "description": "Spiacenti, la pagina che stai cercando non esiste o è stata spostata.",
+    "homeButton": "Torna alla Homepage"
+  }
+}

@@ -15,9 +15,10 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { submitContactForm } from '../actions';
+import { submitContactForm } from '@/app/contact/actions';
 import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -31,6 +32,8 @@ export type ContactFormValues = z.infer<typeof formSchema>;
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const t = useTranslations('ContactForm');
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -47,15 +50,15 @@ export function ContactForm() {
       const result = await submitContactForm(values);
       if (result.success) {
         toast({
-          title: 'Message Sent',
-          description: 'Thank you for contacting us. We will get back to you shortly.',
+          title: t('successTitle'),
+          description: t('successDescription'),
         });
         form.reset();
       } else {
         toast({
           variant: 'destructive',
-          title: 'Error Sending Message',
-          description: result.error || 'An unexpected error occurred. Please try again.',
+          title: t('errorTitle'),
+          description: result.error || t('genericError'),
         });
       }
     } catch (error) {
@@ -77,9 +80,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full Name</FormLabel>
+              <FormLabel>{t('nameLabel')}</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your full name" {...field} />
+                <Input placeholder={t('namePlaceholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -90,9 +93,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email Address</FormLabel>
+              <FormLabel>{t('emailLabel')}</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email address" {...field} />
+                <Input placeholder={t('emailPlaceholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -103,9 +106,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>{t('subjectLabel')}</FormLabel>
               <FormControl>
-                <Input placeholder="What is the subject of your message?" {...field} />
+                <Input placeholder={t('subjectPlaceholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -116,10 +119,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>{t('messageLabel')}</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Please describe your inquiry in detail."
+                  placeholder={t('messagePlaceholder')}
                   className="min-h-[120px]"
                   {...field}
                 />
@@ -130,7 +133,7 @@ export function ContactForm() {
         />
         <Button type="submit" disabled={isSubmitting} className="w-full bg-primary hover:bg-primary/90">
           {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {isSubmitting ? 'Sending...' : 'Send Message'}
+          {isSubmitting ? t('submittingButton') : t('submitButton')}
         </Button>
       </form>
     </Form>

@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/blog';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import type { Metadata } from 'next';
 import { CalendarDays, UserCircle, Tag } from 'lucide-react';
 import { formatDate, cn } from '@/lib/utils';
@@ -13,6 +13,7 @@ import type { ContentBlock, ContentLeaf, RichTextSpan } from '@/types/blog';
 interface BlogPostPageProps {
   params: {
     slug: string;
+    locale: string;
   };
 }
 
@@ -54,7 +55,8 @@ function renderRichText(spans: ContentLeaf[] | undefined): JSX.Element | null {
           if (span.italic) element = <em>{element}</em>;
           if (span.underline) element = <u>{element}</u>;
           if (span.code) element = <code className="bg-muted px-1 py-0.5 rounded text-sm font-mono text-foreground/80">{element}</code>;
-          if (span.link) element = <Link href={span.link} className="text-accent hover:text-accent/80 underline" target="_blank" rel="noopener noreferrer">{element}</Link>;
+          // Note: Using a standard `a` tag here. If internal linking is needed, `next-intl`'s Link would be better.
+          if (span.link) element = <a href={span.link} className="text-accent hover:text-accent/80 underline" target="_blank" rel="noopener noreferrer">{element}</a>;
           return <React.Fragment key={index}>{element}</React.Fragment>;
         }
         return null;

@@ -9,11 +9,12 @@ import { testimonials } from '@/lib/testimonials';
 import { getAllGalleryItems } from '@/lib/gallery';
 import type { GalleryItem as GalleryItemType } from '@/types/gallery';
 import { Skeleton } from '@/components/ui/skeleton';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
+import { useTranslations } from 'next-intl';
 
 const ContactForm = dynamic(
-  () => import('@/app/contact/_components/ContactForm').then((mod) => mod.ContactForm),
+  () => import('@/app/[locale]/contact/_components/ContactForm').then((mod) => mod.ContactForm),
   {
     ssr: false,
     loading: () => (
@@ -41,6 +42,7 @@ const ContactForm = dynamic(
 );
 
 export default function HomePage() {
+  const t = useTranslations('HomePage');
   const galleryPreviewItems = getAllGalleryItems().slice(0, 3);
 
   return (
@@ -60,13 +62,13 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
           <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold mb-6 shadow-text">
-            Reveal Your Radiance. Redefine Your Beauty.
+            {t('heroTitle')}
           </h1>
           <p className="text-base sm:text-lg md:text-xl mb-10 max-w-2xl mx-auto shadow-text-sm">
-            Experience the science and art of aesthetic transformation at Meva Clinic. Our highly skilled medical professionals combine state-of-the-art technology with personalized care to help you achieve your ultimate aesthetic and wellness goals.
+            {t('heroSubtitle')}
           </p>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground py-3 px-8 text-base">
-            <Link href="/services">Explore Our Expert Treatments</Link>
+            <Link href="/services">{t('heroButton')}</Link>
           </Button>
         </div>
       </section>
@@ -76,10 +78,10 @@ export default function HomePage() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              Our Premier Aesthetic & Dental Services
+              {t('servicesTitle')}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              At Meva Clinic, we provide a comprehensive suite of advanced aesthetic and dental procedures, meticulously tailored by our specialists to enhance your natural beauty and elevate your confidence.
+              {t('servicesSubtitle')}
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -92,10 +94,10 @@ export default function HomePage() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              What Our Patients Say
+              {t('testimonialsTitle')}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Hear from those who have experienced the Meva Clinic difference and entrusted us with their care.
+              {t('testimonialsSubtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -135,10 +137,10 @@ export default function HomePage() {
                 <ThumbsUp className="h-8 w-8" />
             </div>
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              Transformations We're Proud Of
+              {t('galleryTitle')}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Witness the meticulous skill and artistry of our specialists through these real patient outcomes. Glimpse into the stunning results our patients have achieved at Meva Clinic.
+              {t('gallerySubtitle')}
             </p>
           </div>
           {galleryPreviewItems.length > 0 ? (
@@ -189,7 +191,7 @@ export default function HomePage() {
           )}
           <div className="mt-12 text-center">
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/gallery">View Full Gallery of Results</Link>
+              <Link href="/gallery">{t('galleryButton')}</Link>
             </Button>
           </div>
         </div>
@@ -200,10 +202,10 @@ export default function HomePage() {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              Further Insights & Expert Support
+              {t('insightsTitle')}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore in-depth information about our specialized treatments, stay informed with the latest advancements in aesthetic care, and find comprehensive answers to your questions from our expert team at Meva Clinic.
+              {t('insightsSubtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -214,15 +216,15 @@ export default function HomePage() {
                   <Images className="h-6 w-6" />
                 </div>
                 <CardTitle className="font-headline text-2xl font-bold text-primary">
-                  View Our Transformations
+                  {t('insightsGalleryTitle')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col items-center">
                 <p className="text-muted-foreground mb-6">
-                  See the stunning transformations and real-patient results our expert medical team has achieved.
+                  {t('insightsGalleryDesc')}
                 </p>
                 <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground mt-auto">
-                  <Link href="/gallery">Visit Patient Gallery</Link>
+                  <Link href="/gallery">{t('insightsGalleryButton')}</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -233,15 +235,15 @@ export default function HomePage() {
                   <BookOpen className="h-6 w-6" />
                 </div>
                 <CardTitle className="font-headline text-2xl font-bold text-primary">
-                  Explore Our Expert Insights
+                  {t('insightsBlogTitle')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col items-center">
                 <p className="text-muted-foreground mb-6">
-                  Dive into our blog for the latest trends, procedural insights, and expert advice in advanced aesthetic and dental care.
+                  {t('insightsBlogDesc')}
                 </p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
-                  <Link href="/blog">Read Our Expert Blog</Link>
+                  <Link href="/blog">{t('insightsBlogButton')}</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -252,15 +254,15 @@ export default function HomePage() {
                   <HelpCircle className="h-6 w-6" />
                 </div>
                 <CardTitle className="font-headline text-2xl font-bold text-primary">
-                  Frequently Asked Questions
+                  {t('insightsFaqTitle')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col items-center">
                 <p className="text-muted-foreground mb-6">
-                  Find comprehensive answers to common queries about our procedures, recovery protocols, and what to expect during your journey with us.
+                  {t('insightsFaqDesc')}
                 </p>
                 <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground mt-auto">
-                  <Link href="/faq">Visit Our Comprehensive FAQ</Link>
+                  <Link href="/faq">{t('insightsFaqButton')}</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -274,10 +276,10 @@ export default function HomePage() {
         <div className="container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold sm:text-4xl">
-              Ready for Your Transformation?
+              {t('contactTitle')}
             </h2>
             <p className="mt-4 text-lg max-w-xl mx-auto">
-              Initiate your journey towards your desired aesthetic outcomes. Contact Meva Clinic today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways.
+              {t('contactSubtitle')}
             </p>
           </div>
           <div className="bg-card p-8 md:p-10 rounded-lg shadow-2xl text-card-foreground">

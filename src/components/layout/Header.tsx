@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -15,10 +15,18 @@ import { cn } from '@/lib/utils';
 import { serviceCategories } from '@/lib/services';
 import { Logo } from './Logo';
 import { MobileNav } from './MobileNav';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
-  const pathname = usePathname();
-  const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
+  const currentPathname = usePathname();
+  // We need to remove the locale from the pathname to compare
+  const pathnameWithoutLocale = currentPathname.replace(/^\/(en|it|sq)/, '') || '/';
+  
+  // Also adjust href for comparison if it's not the root
+  const adjustedHref = href === '/' ? '/' : href;
+
+  const isActive = pathnameWithoutLocale === adjustedHref || (adjustedHref !== "/" && pathnameWithoutLocale.startsWith(adjustedHref));
 
   return (
     <Link
@@ -35,8 +43,10 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 };
 
 export function Header() {
-  const pathname = usePathname();
-  const isServicesActive = pathname.startsWith('/services');
+  const t = useTranslations('Navigation');
+  const currentPathname = usePathname();
+  const pathnameWithoutLocale = currentPathname.replace(/^\/(en|it|sq)/, '') || '/';
+  const isServicesActive = pathnameWithoutLocale.startsWith('/services');
 
   const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
 
@@ -45,8 +55,8 @@ export function Header() {
       <div className="container mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo siteName="Meva Clinic" />
         <nav className="hidden md:flex items-center space-x-6">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About Us</NavLink>
+          <NavLink href="/">{t('home')}</NavLink>
+          <NavLink href="/about">{t('about')}</NavLink>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -57,7 +67,7 @@ export function Header() {
                   isServicesActive ? "text-primary after:w-full" : "text-foreground/80"
                 )}
               >
-                Services
+                {t('services')}
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -69,16 +79,17 @@ export function Header() {
               ))}
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
-                <Link href="/services/dental">Dental Services</Link>
+                <Link href="/services/dental">{t('dentalServices')}</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <NavLink href="/gallery">Gallery</NavLink>
-          <NavLink href="/blog">Blog</NavLink>
-          <NavLink href="/faq">FAQ</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/gallery">{t('gallery')}</NavLink>
+          <NavLink href="/blog">{t('blog')}</NavLink>
+          <NavLink href="/faq">{t('faq')}</NavLink>
+          <NavLink href="/contact">{t('contact')}</NavLink>
         </nav>
         <div className="flex items-center gap-2">
+          <LanguageSwitcher />
           <div className="md:hidden">
             <MobileNav />
           </div>

@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import { Link } from '@/navigation';
 import Image from 'next/image';
 import type { BlogPost } from '@/types/blog';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CalendarDays, UserCircle } from 'lucide-react';
-import { formatDate } from '@/lib/utils'; // We'll create this utility
+import { formatDate } from '@/lib/utils';
 
 interface BlogCardProps {
   post: BlogPost;
