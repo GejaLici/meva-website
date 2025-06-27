@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
   
   const serviceName = t(`Services.items.${service.id}.name`);
-  const serviceDescriptionHtml = t.rich(`Services.items.${service.id}.description`, {p: (chunks) => chunks}).toString();
+  const serviceDescriptionHtml = t(`Services.items.${service.id}.description`);
   const serviceDescription = stripHtml(serviceDescriptionHtml);
 
   const metaDescription = serviceDescription.length > 155 
