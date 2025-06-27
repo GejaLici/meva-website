@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Link } from '@/navigation';
@@ -15,9 +16,10 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
-  const t = useTranslations('Services');
-  const serviceName = t(`items.${service.id}.name`);
-  const serviceDescriptionHtml = t.rich(`items.${service.id}.description`, {
+  const tServices = useTranslations('Services');
+  const tNav = useTranslations('Navigation');
+  const serviceName = tServices(`items.${service.id}.name`);
+  const serviceDescriptionHtml = tServices.rich(`items.${service.id}.description`, {
     p: (chunks) => `<p>${chunks}</p>`,
     b: (chunks) => `<strong>${chunks}</strong>`,
   });
@@ -48,9 +50,9 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
         <CardDescription className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow">
           {truncatedDescription}
         </CardDescription>
-        <Button asChild variant="link" className="mt-auto p-0 self-start text-accent hover:text-accent/90">
+        <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
           <Link href={`/services/${categorySlug}/${service.slug}`}>
-            Learn more <ArrowRight className="ml-2 h-4 w-4" />
+            {tNav('learnMore')} <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </CardContent>

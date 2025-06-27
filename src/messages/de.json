@@ -12,7 +12,9 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Kontakt",
-    "dentalServices": "Zahnärztliche Leistungen"
+    "dentalServices": "Zahnärztliche Leistungen",
+    "exploreService": "Entdecken Sie {categoryName}",
+    "learnMore": "Mehr erfahren"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Sprache ändern",
@@ -286,8 +288,7 @@
     "metaTitle": "Unsere Leistungen | {siteName}",
     "metaDescription": "Entdecken Sie das umfassende Angebot an fortschrittlichen ästhetischen und zahnärztlichen Leistungen, die in der {siteName} angeboten werden. Entdecken Sie von Experten maßgeschneiderte Behandlungen zur Steigerung Ihrer Schönheit und Ihres Wohlbefindens.",
     "title": "Unsere fortschrittlichen ästhetischen & zahnärztlichen Leistungen",
-    "description": "Entdecken Sie das umfassende Spektrum spezialisierter ästhetischer und zahnärztlicher Behandlungen, die in der {siteName} angeboten werden. Jede Dienstleistung ist sorgfältig darauf ausgelegt, Ihnen zu helfen, Ihre individuellen Schönheits- und Wellnessziele zu erreichen. Unser medizinisches Expertenteam ist bestrebt, fortschrittliche, personalisierte Pflege zu bieten und außergewöhnliche, dauerhafte Ergebnisse zu liefern.",
-    "exploreButtonText": "Entdecken Sie {categoryName}"
+    "description": "Entdecken Sie das umfassende Spektrum spezialisierter ästhetischer und zahnärztlicher Behandlungen, die in der {siteName} angeboten werden. Jede Dienstleistung ist sorgfältig darauf ausgelegt, Ihnen zu helfen, Ihre individuellen Schönheits- und Wellnessziele zu erreichen. Unser medizinisches Expertenteam ist bestrebt, fortschrittliche, personalisierte Pflege zu bieten und außergewöhnliche, dauerhafte Ergebnisse zu liefern."
   },
   "DentalServicesPage": {
     "metaTitle": "Umfassende zahnärztliche Leistungen | {siteName}",

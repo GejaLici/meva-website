@@ -33,6 +33,7 @@ export default async function DentalServicesPage() {
   const tPage = await getTranslations('DentalServicesPage');
   const tServices = await getTranslations('Services');
   const tSite = await getTranslations('Site');
+  const tNav = await getTranslations('Navigation');
   const siteTitle = tSite('title');
 
   return (
@@ -67,9 +68,9 @@ export default async function DentalServicesPage() {
                     <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3">
                       {categoryDescription}
                     </CardDescription>
-                    <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full">
+                    <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
                       <Link href={`/services/${category.slug}`}>
-                        {tPage('exploreButton', {categoryName})} <ArrowRight className="ml-2 h-4 w-4" />
+                        {tNav('exploreService', {categoryName})} <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </CardContent>

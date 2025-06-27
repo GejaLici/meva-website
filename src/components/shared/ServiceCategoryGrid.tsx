@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Link } from '@/navigation';
@@ -23,7 +24,7 @@ interface ServiceCategoryGridProps {
 
 export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryGridProps) {
   const tServices = useTranslations('Services');
-  const tOverview = useTranslations('ServicesOverviewPage');
+  const tNav = useTranslations('Navigation');
 
   const categories = (
     homePageLayout
@@ -53,7 +54,7 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
         )}
         <CardHeader className="text-center">
           {CategoryIcon && (
-            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
+            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
               <CategoryIcon className="h-6 w-6" />
             </div>
           )}
@@ -63,9 +64,9 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
           <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3 text-center">
             {category.description}
           </CardDescription>
-          <Button asChild className="mt-auto w-full bg-accent text-accent-foreground hover:bg-accent/90 transition-colors duration-300">
+          <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
             <Link href={`/services/${category.slug}`}>
-              {tOverview('exploreButtonText', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
+              {tNav('exploreService', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </CardContent>

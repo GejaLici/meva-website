@@ -12,7 +12,9 @@
     "blog": "Blogu",
     "faq": "Pyetje të Shpeshta",
     "contact": "Kontakti",
-    "dentalServices": "Shërbimet Dentare"
+    "dentalServices": "Shërbimet Dentare",
+    "exploreService": "Eksploro {categoryName}",
+    "learnMore": "Mëso më shumë"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Ndrysho gjuhën",
@@ -286,8 +288,7 @@
     "metaTitle": "Shërbimet Tona | {siteName}",
     "metaDescription": "Eksploroni gamën e gjerë të shërbimeve të avancuara estetike dhe dentare të ofruara në {siteName}. Zbuloni trajtime të përshtatura nga ekspertët për të përmirësuar bukurinë dhe mirëqenien tuaj.",
     "title": "Shërbimet Tona të Avancuara Estetike & Dentare",
-    "description": "Eksploroni spektrin e gjerë të trajtimeve të specializuara estetike dhe dentare të ofruara në {siteName}. Çdo shërbim është projektuar me përpikëri për t'ju ndihmuar të arrini objektivat tuaja të veçanta të bukurisë dhe mirëqenies. Ekipi ynë mjekësor ekspert është i përkushtuar të ofrojë kujdes të avancuar, të personalizuar dhe të japë rezultate të jashtëzakonshme dhe afatgjata.",
-    "exploreButtonText": "Eksploro {categoryName}"
+    "description": "Eksploroni spektrin e gjerë të trajtimeve të specializuara estetike dhe dentare të ofruara në {siteName}. Çdo shërbim është projektuar me përpikëri për t'ju ndihmuar të arrini objektivat tuaja të veçanta të bukurisë dhe mirëqenies. Ekipi ynë mjekësor ekspert është i përkushtuar të ofrojë kujdes të avancuar, të personalizuar dhe të japë rezultate të jashtëzakonshme dhe afatgjata."
   },
   "DentalServicesPage": {
     "metaTitle": "Shërbime Dentare Gjithëpërfshirëse | {siteName}",
