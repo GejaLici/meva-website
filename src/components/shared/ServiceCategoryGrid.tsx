@@ -81,20 +81,11 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
         </p>
       );
     }
-    const row1Categories = categories.slice(0, 3);
-    const row2Categories = categories.slice(3);
     
     return (
-      <div className="flex flex-col items-center gap-8">
-        {row1Categories.length > 0 && (
-          <div className="w-full flex flex-col md:flex-row gap-8 justify-center md:justify-evenly">
-            {row1Categories.map(category => renderCard(category, "w-full md:max-w-sm"))}
-          </div>
-        )}
-        {row2Categories.length > 0 && (
-          <div className="w-full flex flex-col md:flex-row gap-8 justify-center md:justify-evenly">
-            {row2Categories.map(category => renderCard(category, "w-full md:max-w-sm"))}
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+        {categories.map((category, index) =>
+          renderCard(category, index < 3 ? 'md:col-span-2' : 'md:col-span-3')
         )}
       </div>
     );
