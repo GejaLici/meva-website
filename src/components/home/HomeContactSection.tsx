@@ -4,7 +4,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { useTranslations } from 'next-intl';
 
 const ContactForm = dynamic(
-  () => import('@/app/[locale]/contact/_components/ContactForm').then((mod) => mod.ContactForm),
+  () => import('@/components/contact/ContactForm').then((mod) => mod.ContactForm),
   {
     ssr: false,
     loading: () => (

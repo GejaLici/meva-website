@@ -1,6 +1,6 @@
 
 import { PageHeader } from '@/components/shared/PageHeader';
-import { ContactForm } from './_components/ContactForm';
+import { ContactForm } from '@/components/contact/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import type { Metadata } from 'next';
 import { SITE_DOMAIN } from '@/lib/constants';
