@@ -20,11 +20,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const tSite = await getTranslations('Site');
-  const tPage = await getTranslations('ServiceCategoryPage');
-  const tServices = await getTranslations('Services');
+  const { locale, categorySlug } = params;
+  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const tPage = await getTranslations({locale, namespace: 'ServiceCategoryPage'});
+  const tServices = await getTranslations({locale, namespace: 'Services'});
+  
   const siteTitle = tSite('title');
-  const category = getCategoryBySlug(params.categorySlug);
+  const category = getCategoryBySlug(categorySlug);
   
   if (!category) {
     return { 

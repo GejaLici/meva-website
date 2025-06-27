@@ -33,19 +33,23 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
-  const t = await getTranslations();
-  const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
-  const siteTitle = t('Site.title');
+  const { locale, categorySlug, serviceSlug } = params;
+  const tSite = await getTranslations({ locale, namespace: 'Site' });
+  const tDetails = await getTranslations({ locale, namespace: 'ServiceDetailsPage' });
+  const tServices = await getTranslations({ locale, namespace: 'Services' });
+
+  const service = getServiceBySlugs(categorySlug, serviceSlug);
+  const siteTitle = tSite('title');
 
   if (!service) {
     return {
-      title: t('ServiceDetailsPage.serviceNotFoundTitle', { siteTitle }),
-      description: t('ServiceDetailsPage.serviceNotFoundDescription', { siteTitle })
+      title: tDetails('serviceNotFoundTitle', { siteTitle }),
+      description: tDetails('serviceNotFoundDescription', { siteTitle })
     };
   }
 
-  const serviceName = t(`Services.items.${service.id}.name`);
-  const serviceDescriptionRaw = t(`Services.items.${service.id}.description`);
+  const serviceName = tServices(`items.${service.id}.name`);
+  const serviceDescriptionRaw = tServices(`items.${service.id}.description`);
   const serviceDescription = stripHtml(serviceDescriptionRaw);
 
   const metaDescription = serviceDescription.length > 155
@@ -53,21 +57,25 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     : serviceDescription;
 
   return {
-    title: t('ServiceDetailsPage.metaTitle', { serviceName, siteTitle }),
-    description: t('ServiceDetailsPage.metaDescription', { serviceName, excerpt: metaDescription }),
+    title: tDetails('metaTitle', { serviceName, siteTitle }),
+    description: tDetails('metaDescription', { serviceName, excerpt: metaDescription }),
   };
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
-  const t = await getTranslations();
-  const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
+  const { locale, categorySlug, serviceSlug } = params;
+  const tSite = await getTranslations({ locale, namespace: 'Site' });
+  const tDetails = await getTranslations({ locale, namespace: 'ServiceDetailsPage' });
+  const tServices = await getTranslations({ locale, namespace: 'Services' });
+  
+  const service = getServiceBySlugs(categorySlug, serviceSlug);
 
   if (!service) {
     notFound();
   }
 
-  const siteTitle = t('Site.title');
-  const serviceName = t(`Services.items.${service.id}.name`);
+  const siteTitle = tSite('title');
+  const serviceName = tServices(`items.${service.id}.name`);
 
   return (
     <>
@@ -89,26 +97,22 @@ export default async function ServicePage({ params }: ServicePageProps) {
             )}
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
-            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{t('ServiceDetailsPage.aboutTitle', { serviceName })}</h2>
-            <div className="mb-6">
-              {t.rich(`Services.items.${service.id}.description`, {
-                p: (chunks) => <p>{chunks}</p>
-              })}
-            </div>
+            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
+            <div className="mb-6" dangerouslySetInnerHTML={{ __html: tServices(`items.${service.id}.description`) }} />
             
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{t('ServiceDetailsPage.whatToExpectTitle', { siteTitle })}</h3>
+            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteTitle })}</h3>
             <p className="mb-4">
-              {t('ServiceDetailsPage.whatToExpectP1', { siteTitle, serviceName: serviceName.toLowerCase() })}
+              {tDetails('whatToExpectP1', { siteTitle, serviceName: serviceName.toLowerCase() })}
             </p>
             <ul className="list-disc pl-5 mb-6 space-y-1">
-              <li>{t('ServiceDetailsPage.whatToExpectL1')}</li>
-              <li>{t('ServiceDetailsPage.whatToExpectL2')}</li>
-              <li>{t('ServiceDetailsPage.whatToExpectL3')}</li>
-              <li>{t('ServiceDetailsPage.whatToExpectL4')}</li>
+              <li>{tDetails('whatToExpectL1')}</li>
+              <li>{tDetails('whatToExpectL2')}</li>
+              <li>{tDetails('whatToExpectL3')}</li>
+              <li>{tDetails('whatToExpectL4')}</li>
             </ul>
             
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">{t('ServiceDetailsPage.consultationButton')}</Link>
+              <Link href="/contact">{tDetails('consultationButton')}</Link>
             </Button>
           </div>
         </div>

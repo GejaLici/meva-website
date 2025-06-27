@@ -40,7 +40,7 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
     <>
       {categories.length > 0 ? (
         <div className={cn(
-          "grid grid-cols-1 gap-8",
+          "grid grid-cols-2 gap-8",
           homePageLayout ? "md:grid-cols-6" : "md:grid-cols-2 lg:grid-cols-3"
         )}>
           {categories.map((category) => {
