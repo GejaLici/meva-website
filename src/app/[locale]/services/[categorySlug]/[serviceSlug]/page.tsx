@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { serviceCategories, getServiceBySlugs } from '@/lib/services';
+import { getServiceBySlugs } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -9,6 +9,7 @@ import { Link } from '@/navigation';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { stripHtml } from '@/lib/utils';
+import { serviceCategories } from '@/lib/services';
 
 interface ServicePageProps {
   params: {
@@ -32,46 +33,41 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
-  const tSite = await getTranslations('Site');
-  const tServices = await getTranslations('Services');
-  const tDetails = await getTranslations('ServiceDetailsPage');
-  
-  const siteTitle = tSite('title');
+  const t = await getTranslations();
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
-  
+  const siteTitle = t('Site.title');
+
   if (!service) {
-    return { 
-        title: tDetails('serviceNotFoundTitle', { siteTitle }),
-        description: tDetails('serviceNotFoundDescription', { siteTitle }) 
+    return {
+      title: t('ServiceDetailsPage.serviceNotFoundTitle', { siteTitle }),
+      description: t('ServiceDetailsPage.serviceNotFoundDescription', { siteTitle })
     };
   }
-  
-  const serviceName = tServices(`items.${service.id}.name`);
-  const serviceDescriptionHtml = tServices(`items.${service.id}.description`);
-  const serviceDescription = stripHtml(serviceDescriptionHtml);
 
-  const metaDescription = serviceDescription.length > 155 
-    ? `${serviceDescription.substring(0, 152)}...` 
+  const serviceName = t(`Services.items.${service.id}.name`);
+  const serviceDescriptionRaw = t(`Services.items.${service.id}.description`);
+  const serviceDescription = stripHtml(serviceDescriptionRaw);
+
+  const metaDescription = serviceDescription.length > 155
+    ? `${serviceDescription.substring(0, 152)}...`
     : serviceDescription;
 
   return {
-    title: tDetails('metaTitle', { serviceName, siteTitle }),
-    description: tDetails('metaDescription', { serviceName, excerpt: metaDescription }),
+    title: t('ServiceDetailsPage.metaTitle', { serviceName, siteTitle }),
+    description: t('ServiceDetailsPage.metaDescription', { serviceName, excerpt: metaDescription }),
   };
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
+  const t = await getTranslations();
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
-  const tDetails = await getTranslations('ServiceDetailsPage');
-  const tServices = await getTranslations('Services');
-  const tSite = await getTranslations('Site');
 
   if (!service) {
     notFound();
   }
 
-  const siteTitle = tSite('title');
-  const serviceName = tServices(`items.${service.id}.name`);
+  const siteTitle = t('Site.title');
+  const serviceName = t(`Services.items.${service.id}.name`);
 
   return (
     <>
@@ -93,26 +89,26 @@ export default async function ServicePage({ params }: ServicePageProps) {
             )}
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
-            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
+            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{t('ServiceDetailsPage.aboutTitle', { serviceName })}</h2>
             <div className="mb-6">
-              {tServices.rich(`items.${service.id}.description`, {
+              {t.rich(`Services.items.${service.id}.description`, {
                 p: (chunks) => <p>{chunks}</p>
               })}
             </div>
             
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteTitle })}</h3>
+            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{t('ServiceDetailsPage.whatToExpectTitle', { siteTitle })}</h3>
             <p className="mb-4">
-              {tDetails('whatToExpectP1', { siteTitle, serviceName: serviceName.toLowerCase() })}
+              {t('ServiceDetailsPage.whatToExpectP1', { siteTitle, serviceName: serviceName.toLowerCase() })}
             </p>
             <ul className="list-disc pl-5 mb-6 space-y-1">
-              <li>{tDetails('whatToExpectL1')}</li>
-              <li>{tDetails('whatToExpectL2')}</li>
-              <li>{tDetails('whatToExpectL3')}</li>
-              <li>{tDetails('whatToExpectL4')}</li>
+              <li>{t('ServiceDetailsPage.whatToExpectL1')}</li>
+              <li>{t('ServiceDetailsPage.whatToExpectL2')}</li>
+              <li>{t('ServiceDetailsPage.whatToExpectL3')}</li>
+              <li>{t('ServiceDetailsPage.whatToExpectL4')}</li>
             </ul>
             
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">{tDetails('consultationButton')}</Link>
+              <Link href="/contact">{t('ServiceDetailsPage.consultationButton')}</Link>
             </Button>
           </div>
         </div>
