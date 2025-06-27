@@ -63,7 +63,7 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
           <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3 text-center">
             {category.description}
           </CardDescription>
-          <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
+          <Button asChild className="mt-auto w-full bg-accent text-accent-foreground hover:bg-accent/90 transition-colors duration-300">
             <Link href={`/services/${category.slug}`}>
               {tOverview('exploreButtonText', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -84,8 +84,11 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
     
     return (
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
-        {categories.map((category, index) =>
-          renderCard(category, index < 3 ? 'md:col-span-2' : 'md:col-span-3')
+        {categories.slice(0, 3).map((category) =>
+          renderCard(category, 'md:col-span-2')
+        )}
+        {categories.slice(3, 5).map((category) =>
+          renderCard(category, 'md:col-span-3')
         )}
       </div>
     );
