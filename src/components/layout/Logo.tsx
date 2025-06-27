@@ -17,8 +17,8 @@ export function Logo() {
       <Image
         src="/images/logo.png"
         alt={siteTitle}
-        width={110}
-        height={28}
+        width={90}
+        height={23}
         priority
       />
     </Link>
