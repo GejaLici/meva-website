@@ -15,6 +15,5 @@ export interface ServiceCategory {
   imageHint?: string;
   // New properties for homepage display
   displayOnHome?: boolean;
-  homeColSpan?: string;
   icon?: string;
 }
