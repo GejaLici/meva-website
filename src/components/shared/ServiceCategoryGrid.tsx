@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Link } from '@/navigation';
@@ -10,75 +11,34 @@ import { ArrowRight, Gem, Leaf, Heart, PersonStanding, Sparkles } from 'lucide-r
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 
-const mainServiceDisplayInfo = [
-  {
-    id: 'facial-surgery',
-    icon: Gem,
-    colSpan: 'md:col-span-2',
-  },
-  {
-    id: 'facial-treatments',
-    icon: Leaf,
-    colSpan: 'md:col-span-2',
-  },
-  {
-    id: 'breasts',
-    icon: Heart,
-    colSpan: 'md:col-span-2',
-  },
-  {
-    id: 'body',
-    icon: PersonStanding,
-    colSpan: 'md:col-span-3',
-  },
-  {
-    id: 'dental-summary', 
-    slugOverride: 'dental',
-    icon: Sparkles,
-    colSpan: 'md:col-span-3',
-    image: '/images/dentist-turkey-antalya.jpg',
-    imageHint: 'dental clinic modern equipment'
-  },
-];
+// Map icon names from services.ts to actual components
+const ICONS: { [key: string]: React.ElementType } = {
+  Gem,
+  Leaf,
+  Heart,
+  PersonStanding,
+  Sparkles,
+};
 
 export function ServiceCategoryGrid() {
   const t = useTranslations('Services');
   
-  const displayedCategories = mainServiceDisplayInfo.map(info => {
-    const category = serviceCategories.find(cat => cat.id === info.id);
-    if(info.id === 'dental-summary') {
-      return {
-        id: info.id,
-        name: t('categories.dental-summary.name'),
-        description: t('categories.dental-summary.description'),
-        slug: info.slugOverride || info.id,
-        image: info.image,
-        imageHint: info.imageHint,
-        icon: info.icon,
-        colSpan: info.colSpan,
-        services: [],
-      }
-    }
-    
-    if (!category) return null;
-
-    return {
+  const displayedCategories = serviceCategories
+    .filter((cat) => cat.displayOnHome)
+    .map(category => ({
       ...category,
       name: t(`categories.${category.id}.name`),
       description: t(`categories.${category.id}.description`),
-      icon: info.icon,
-      colSpan: info.colSpan,
-    };
-  }).filter(Boolean) as (ServiceCategory & { icon?: React.ElementType, colSpan?: string })[];
+    }));
 
   return (
     <>
       {displayedCategories.length > 0 ? (
         <div className="grid grid-cols-1 gap-8 md:grid-cols-6">
           {displayedCategories.map((category) => {
-            const CategoryIcon = category.icon;
+            const CategoryIcon = category.icon ? ICONS[category.icon] : null;
             return (
-              <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", category.colSpan)}>
+              <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", category.homeColSpan)}>
                 {category.image && (
                   <div className="relative w-full h-56 overflow-hidden">
                     <Image

@@ -98,28 +98,40 @@ export const serviceCategories: ServiceCategory[] = [
     slug: 'facial-surgery',
     services: facialSurgeryServices,
     image: '/images/beauty-natural-woman-studio.jpg',
-    imageHint: 'facial surgery instruments'
+    imageHint: 'facial surgery instruments',
+    displayOnHome: true,
+    homeColSpan: 'md:col-span-2',
+    icon: 'Gem'
   },
   {
     id: 'facial-treatments',
     slug: 'facial-treatments',
     services: facialTreatmentsServices,
     image: '/images/cute-woman-lying-procedure-rejuvenation-skin.jpg',
-    imageHint: 'facial treatment collage'
+    imageHint: 'facial treatment collage',
+    displayOnHome: true,
+    homeColSpan: 'md:col-span-2',
+    icon: 'Leaf'
   },
   {
     id: 'breasts',
     slug: 'breasts',
     services: breastServices,
     image: '/images/close-beauty-portrait-topless-woman-with-perfect-skin-natural-make-up-plump-nude-lips-blue-background.jpg',
-    imageHint: 'breast surgery results'
+    imageHint: 'breast surgery results',
+    displayOnHome: true,
+    homeColSpan: 'md:col-span-2',
+    icon: 'Heart'
   },
   {
     id: 'body',
     slug: 'body',
     services: bodyServices,
     image: '/images/slim-young-woman-measuring-her-thin-waist-with-tape-measure-fitness-diet-concept.jpg',
-    imageHint: 'body contouring technology'
+    imageHint: 'body contouring technology',
+    displayOnHome: true,
+    homeColSpan: 'md:col-span-3',
+    icon: 'PersonStanding'
   },
   {
     id: 'aesthetic-dentistry',
@@ -162,6 +174,16 @@ export const serviceCategories: ServiceCategory[] = [
     services: pediatricDentistryServices,
     image: '/images/Pediatric Dentistry.png',
     imageHint: 'child dentist office'
+  },
+  {
+    id: 'dental-summary',
+    slug: 'dental',
+    services: [], // This is a summary card, no individual services needed here.
+    image: '/images/dentist-turkey-antalya.jpg',
+    imageHint: 'dental clinic modern equipment',
+    displayOnHome: true,
+    homeColSpan: 'md:col-span-3',
+    icon: 'Sparkles'
   },
 ];
 
