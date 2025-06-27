@@ -11,11 +11,10 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
-  const t = await getTranslations({locale, namespace: 'DentalServicesPage'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const t = await getTranslations({locale});
   return {
-    title: t('metaTitle', {siteTitle: tSite('title')}),
-    description: t('metaDescription', {siteTitle: tSite('title')}),
+    title: t('DentalServicesPage.metaTitle', {siteTitle: t('Site.title')}),
+    description: t('DentalServicesPage.metaDescription', {siteTitle: t('Site.title')}),
   };
 }
 
@@ -30,24 +29,21 @@ const dentalCategoryIds = [
 
 export default async function DentalServicesPage() {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
-  const tPage = await getTranslations('DentalServicesPage');
-  const tServices = await getTranslations('Services');
-  const tSite = await getTranslations('Site');
-  const tNav = await getTranslations('Navigation');
-  const siteTitle = tSite('title');
+  const t = await getTranslations();
+  const siteTitle = t('Site.title');
 
   return (
     <>
       <PageHeader
-        title={tPage('title')}
-        description={tPage('description')}
+        title={t('DentalServicesPage.title')}
+        description={t('DentalServicesPage.description')}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {dentalCategories.length > 0 ? (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {dentalCategories.map((category: ServiceCategory) => {
-              const categoryName = tServices(`categories.${category.id}.name`);
-              const categoryDescription = tServices(`categories.${category.id}.description`);
+              const categoryName = t(`Services.categories.${category.id}.name`);
+              const categoryDescription = t(`Services.categories.${category.id}.description`);
               return (
                 <Card key={category.id} className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   {category.image && (
@@ -70,7 +66,7 @@ export default async function DentalServicesPage() {
                     </CardDescription>
                     <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
                       <Link href={`/services/${category.slug}`}>
-                        {tNav('exploreService', {categoryName})} <ArrowRight className="ml-2 h-4 w-4" />
+                        {t('Navigation.exploreService', {categoryName})} <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -80,7 +76,7 @@ export default async function DentalServicesPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            {tPage('noResults', {siteTitle})}
+            {t('DentalServicesPage.noResults', {siteTitle})}
           </p>
         )}
       </div>

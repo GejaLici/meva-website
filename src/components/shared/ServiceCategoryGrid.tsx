@@ -23,8 +23,7 @@ interface ServiceCategoryGridProps {
 }
 
 export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryGridProps) {
-  const tServices = useTranslations('Services');
-  const tNav = useTranslations('Navigation');
+  const t = useTranslations();
 
   const categories = (
     homePageLayout
@@ -32,8 +31,8 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
       : serviceCategories.filter(cat => cat.id !== 'dental-summary')
   ).map(category => ({
     ...category,
-    name: tServices(`categories.${category.id}.name`),
-    description: tServices(`categories.${category.id}.description`),
+    name: t(`Services.categories.${category.id}.name`),
+    description: t(`Services.categories.${category.id}.description`),
   }));
 
   const renderCard = (category: any, className?: string) => {
@@ -66,7 +65,7 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
           </CardDescription>
           <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
             <Link href={`/services/${category.slug}`}>
-              {tNav('exploreService', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
+              {t('Navigation.exploreService', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </CardContent>
