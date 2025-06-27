@@ -286,7 +286,8 @@
     "metaTitle": "I Nostri Servizi | {siteName}",
     "metaDescription": "Esplora la gamma completa di servizi estetici e dentali avanzati offerti da {siteName}. Scopri trattamenti su misura realizzati da esperti per migliorare la tua bellezza e il tuo benessere.",
     "title": "I Nostri Servizi Estetici e Dentali Avanzati",
-    "description": "Esplora lo spettro completo di trattamenti estetici e dentali specializzati offerti da {siteName}. Ogni servizio è meticolosamente progettato per aiutarti a raggiungere i tuoi distinti obiettivi di bellezza e benessere. Il nostro team medico esperto è dedicato a fornire cure avanzate e personalizzate e a fornire risultati eccezionali e duraturi."
+    "description": "Esplora lo spettro completo di trattamenti estetici e dentali specializzati offerti da {siteName}. Ogni servizio è meticolosamente progettato per aiutarti a raggiungere i tuoi distinti obiettivi di bellezza e benessere. Il nostro team medico esperto è dedicato a fornire cure avanzate e personalizzate e a fornire risultati eccezionali e duraturi.",
+    "exploreButtonText": "Esplora {categoryName}"
   },
   "DentalServicesPage": {
     "metaTitle": "Servizi Dentali Completi | {siteName}",

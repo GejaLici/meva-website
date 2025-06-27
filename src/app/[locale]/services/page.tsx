@@ -5,8 +5,8 @@ import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
-  const t = await getTranslations({locale, namespace: 'ServicesOverviewPage'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const t = await getTranslations('ServicesOverviewPage');
+  const tSite = await getTranslations('Site');
   return {
     title: t('metaTitle', {siteTitle: tSite('title')}),
     description: t('metaDescription', {siteTitle: tSite('title')}),
@@ -23,7 +23,7 @@ export default async function ServicesOverviewPage() {
         description={t('description')}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
-        <ServiceCategoryGrid />
+        <ServiceCategoryGrid homePageLayout={false} />
       </div>
     </>
   );

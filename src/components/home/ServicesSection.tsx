@@ -16,7 +16,7 @@ export function ServicesSection() {
           </p>
           <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
         </div>
-        <ServiceCategoryGrid />
+        <ServiceCategoryGrid homePageLayout={true} />
       </div>
     </section>
   );

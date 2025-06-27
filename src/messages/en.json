@@ -286,7 +286,8 @@
     "metaTitle": "Our Services | {siteName}",
     "metaDescription": "Explore the comprehensive range of advanced aesthetic and dental services offered at {siteName}. Discover treatments tailored by experts to enhance your beauty and well-being.",
     "title": "Our Advanced Aesthetic & Dental Services",
-    "description": "Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at {siteName}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results."
+    "description": "Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at {siteName}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results.",
+    "exploreButtonText": "Explore {categoryName}"
   },
   "DentalServicesPage": {
     "metaTitle": "Comprehensive Dental Services | {siteName}",

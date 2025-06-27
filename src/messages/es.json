@@ -286,7 +286,8 @@
     "metaTitle": "Nuestros Servicios | {siteName}",
     "metaDescription": "Explore la gama completa de servicios estéticos y dentales avanzados que se ofrecen en {siteName}. Descubra tratamientos personalizados por expertos para realzar su belleza y bienestar.",
     "title": "Nuestros Servicios Estéticos y Dentales Avanzados",
-    "description": "Explore el espectro completo de tratamientos estéticos y dentales especializados que se ofrecen en {siteName}. Cada servicio está diseñado meticulosamente para ayudarle a alcanzar sus objetivos de belleza y bienestar distintivos. Nuestro equipo médico experto está dedicado a proporcionar atención avanzada y personalizada y a ofrecer resultados excepcionales y duraderos."
+    "description": "Explore el espectro completo de tratamientos estéticos y dentales especializados que se ofrecen en {siteName}. Cada servicio está diseñado meticulosamente para ayudarle a alcanzar sus objetivos de belleza y bienestar distintivos. Nuestro equipo médico experto está dedicado a proporcionar atención avanzada y personalizada y a ofrecer resultados excepcionales y duraderos.",
+    "exploreButtonText": "Explorar {categoryName}"
   },
   "DentalServicesPage": {
     "metaTitle": "Servicios Dentales Integrales | {siteName}",

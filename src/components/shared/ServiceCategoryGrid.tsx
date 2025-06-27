@@ -4,14 +4,12 @@
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import { serviceCategories } from '@/lib/services';
-import type { ServiceCategory } from '@/types/services';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Gem, Leaf, Heart, PersonStanding, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 
-// Map icon names from services.ts to actual components
 const ICONS: { [key: string]: React.ElementType } = {
   Gem,
   Leaf,
@@ -20,25 +18,37 @@ const ICONS: { [key: string]: React.ElementType } = {
   Sparkles,
 };
 
-export function ServiceCategoryGrid() {
-  const t = useTranslations('Services');
-  
-  const displayedCategories = serviceCategories
-    .filter((cat) => cat.displayOnHome)
-    .map(category => ({
-      ...category,
-      name: t(`categories.${category.id}.name`),
-      description: t(`categories.${category.id}.description`),
-    }));
+interface ServiceCategoryGridProps {
+  homePageLayout?: boolean;
+}
+
+export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryGridProps) {
+  const tServices = useTranslations('Services');
+  const tOverview = useTranslations('ServicesOverviewPage');
+
+  const categories = (
+    homePageLayout
+      ? serviceCategories.filter(cat => cat.displayOnHome)
+      : serviceCategories.filter(cat => cat.id !== 'dental-summary')
+  ).map(category => ({
+    ...category,
+    name: tServices(`categories.${category.id}.name`),
+    description: tServices(`categories.${category.id}.description`),
+  }));
 
   return (
     <>
-      {displayedCategories.length > 0 ? (
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-6">
-          {displayedCategories.map((category) => {
+      {categories.length > 0 ? (
+        <div className={cn(
+          "grid grid-cols-1 gap-8",
+          homePageLayout ? "md:grid-cols-6" : "md:grid-cols-2 lg:grid-cols-3"
+        )}>
+          {categories.map((category) => {
             const CategoryIcon = category.icon ? ICONS[category.icon] : null;
+            const gridSpan = homePageLayout ? category.homeColSpan : '';
+
             return (
-              <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", category.homeColSpan)}>
+              <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", gridSpan)}>
                 {category.image && (
                   <div className="relative w-full h-56 overflow-hidden">
                     <Image
@@ -65,7 +75,7 @@ export function ServiceCategoryGrid() {
                   </CardDescription>
                   <Button asChild className="mt-auto bg-primary hover:bg-primary/90 text-primary-foreground w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
                     <Link href={`/services/${category.slug}`}>
-                      Explore {category.name} <ArrowRight className="ml-2 h-4 w-4" />
+                      {tOverview('exploreButtonText', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </CardContent>
