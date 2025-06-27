@@ -2,7 +2,7 @@
 
 import { db } from '@/lib/firebaseConfig';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { formSchema, type ContactFormValues } from './ContactForm';
+import { formSchema, type ContactFormValues } from './schema';
 
 interface SubmitResult {
     success: boolean;
