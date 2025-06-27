@@ -15,7 +15,7 @@ export function Logo() {
       aria-label={siteTitle}
     >
       <Image
-        src="/images/logo.png"
+        src="/images/logo1.png"
         alt={siteTitle}
         width={90}
         height={23}
