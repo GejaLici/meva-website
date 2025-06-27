@@ -1,7 +1,7 @@
 export interface Service {
   id: string;
   slug: string;
-  categorySlug: string;
+  categorySlug?: string; // Make optional as it's added dynamically
   image?: string;
   imageHint?: string;
 }
