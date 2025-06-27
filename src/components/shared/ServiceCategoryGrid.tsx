@@ -42,15 +42,15 @@ const mainServiceDisplayInfo = [
 ];
 
 export function ServiceCategoryGrid() {
-  const t = useTranslations('Services.categories');
+  const t = useTranslations('Services');
   
   const displayedCategories = mainServiceDisplayInfo.map(info => {
     const category = serviceCategories.find(cat => cat.id === info.id);
     if(info.id === 'dental-summary') {
       return {
         id: info.id,
-        name: t('dental-summary.name'),
-        description: t('dental-summary.description'),
+        name: t('categories.dental-summary.name'),
+        description: t('categories.dental-summary.description'),
         slug: info.slugOverride || info.id,
         image: info.image,
         imageHint: info.imageHint,
@@ -64,8 +64,8 @@ export function ServiceCategoryGrid() {
 
     return {
       ...category,
-      name: t(`${category.id}.name`),
-      description: t(`${category.id}.description`),
+      name: t(`categories.${category.id}.name`),
+      description: t(`categories.${category.id}.description`),
       icon: info.icon,
       colSpan: info.colSpan,
     };

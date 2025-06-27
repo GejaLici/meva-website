@@ -15,9 +15,9 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
-  const t = useTranslations('Services.items');
-  const serviceName = t(`${service.id}.name`);
-  const serviceDescriptionHtml = t.rich(`${service.id}.description`, {
+  const t = useTranslations('Services');
+  const serviceName = t(`items.${service.id}.name`);
+  const serviceDescriptionHtml = t.rich(`items.${service.id}.description`, {
     p: (chunks) => `<p>${chunks}</p>`,
     b: (chunks) => `<strong>${chunks}</strong>`,
   });

@@ -32,9 +32,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
-  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
-  const tDetails = await getTranslations({locale: params.locale, namespace: 'ServiceDetailsPage'});
-  const tItems = await getTranslations({locale: params.locale, namespace: 'Services.items'});
+  const tSite = await getTranslations('Site');
+  const tDetails = await getTranslations('ServiceDetailsPage');
+  const tServices = await getTranslations('Services');
   const siteTitle = tSite('title');
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
   
@@ -45,8 +45,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     };
   }
   
-  const serviceName = tItems(`${service.id}.name`);
-  const serviceDescriptionHtml = tItems.rich(`${service.id}.description`, {p: (chunks) => chunks}).toString();
+  const serviceName = tServices(`items.${service.id}.name`);
+  const serviceDescriptionHtml = tServices.rich(`items.${service.id}.description`, {p: (chunks) => chunks}).toString();
   const serviceDescription = stripHtml(serviceDescriptionHtml);
 
   const metaDescription = serviceDescription.length > 155 
@@ -54,14 +54,14 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     : serviceDescription;
 
   return {
-    title: `${serviceName} | ${siteTitle}`,
-    description: metaDescription,
+    title: tDetails('metaTitle', { serviceName: serviceName, siteTitle }),
+    description: tDetails('metaDescription', { serviceName: serviceName, excerpt: metaDescription }),
   };
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
   const service = getServiceBySlugs(params.categorySlug, params.serviceSlug);
-  const tItems = await getTranslations('Services.items');
+  const tServices = await getTranslations('Services');
   const tDetails = await getTranslations('ServiceDetailsPage');
   const tSite = await getTranslations('Site');
   const siteTitle = tSite('title');
@@ -70,8 +70,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
     notFound();
   }
 
-  const serviceName = tItems(`${service.id}.name`);
-  const serviceDescription = tItems.rich(`${service.id}.description`, {
+  const serviceName = tServices(`items.${service.id}.name`);
+  const serviceDescription = tServices.rich(`items.${service.id}.description`, {
     p: (chunks) => <p className="mb-4">{chunks}</p>,
     b: (chunks) => <strong>{chunks}</strong>,
   });

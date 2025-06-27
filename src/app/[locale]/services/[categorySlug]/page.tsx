@@ -20,9 +20,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-  const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
-  const tPage = await getTranslations({locale: params.locale, namespace: 'ServiceCategoryPage'});
-  const tCategories = await getTranslations({locale: params.locale, namespace: 'Services.categories'});
+  const tSite = await getTranslations('Site');
+  const tPage = await getTranslations('ServiceCategoryPage');
+  const tServices = await getTranslations('Services');
   const siteTitle = tSite('title');
   const category = getCategoryBySlug(params.categorySlug);
   
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     };
   }
 
-  const categoryName = tCategories(`${category.id}.name`);
-  const categoryDescription = tCategories(`${category.id}.description`);
+  const categoryName = tServices(`categories.${category.id}.name`);
+  const categoryDescription = tServices(`categories.${category.id}.description`);
 
   return {
     title: tPage('metaTitle', { categoryName, siteTitle }),
@@ -44,15 +44,15 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(params.categorySlug);
-  const tCategories = await getTranslations('Services.categories');
+  const tServices = await getTranslations('Services');
   const tPage = await getTranslations('ServiceCategoryPage');
   
   if (!category) {
     notFound();
   }
   
-  const categoryName = tCategories(`${category.id}.name`);
-  const categoryDescription = tCategories(`${category.id}.description`);
+  const categoryName = tServices(`categories.${category.id}.name`);
+  const categoryDescription = tServices(`categories.${category.id}.description`);
 
   return (
     <>

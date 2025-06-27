@@ -11,8 +11,8 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
-  const t = await getTranslations({locale, namespace: 'DentalServicesPage'});
-  const tSite = await getTranslations({locale, namespace: 'Site'});
+  const t = await getTranslations('DentalServicesPage');
+  const tSite = await getTranslations('Site');
   return {
     title: t('metaTitle', {siteTitle: tSite('title')}),
     description: t('metaDescription', {siteTitle: tSite('title')}),
@@ -31,7 +31,7 @@ const dentalCategoryIds = [
 export default async function DentalServicesPage() {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
   const tPage = await getTranslations('DentalServicesPage');
-  const tCategories = await getTranslations('Services.categories');
+  const tServices = await getTranslations('Services');
   const tSite = await getTranslations('Site');
   const siteTitle = tSite('title');
 
@@ -45,8 +45,8 @@ export default async function DentalServicesPage() {
         {dentalCategories.length > 0 ? (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {dentalCategories.map((category: ServiceCategory) => {
-              const categoryName = tCategories(`${category.id}.name`);
-              const categoryDescription = tCategories(`${category.id}.description`);
+              const categoryName = tServices(`categories.${category.id}.name`);
+              const categoryDescription = tServices(`categories.${category.id}.description`);
               return (
                 <Card key={category.id} className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   {category.image && (

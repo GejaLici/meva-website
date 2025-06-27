@@ -44,7 +44,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 
 export function Header() {
   const t = useTranslations('Navigation');
-  const tServices = useTranslations('Services.categories');
+  const tServices = useTranslations('Services');
   const currentPathname = usePathname();
   const pathnameWithoutLocale = currentPathname.replace(/^\/(en|it|sq|de|fr|es)/, '') || '/';
   const isServicesActive = pathnameWithoutLocale.startsWith('/services');
@@ -75,7 +75,7 @@ export function Header() {
             <DropdownMenuContent align="start" className="max-h-[70vh] overflow-y-auto">
               {aestheticCategories.map((category) => (
                 <DropdownMenuItem key={category.id} asChild>
-                  <Link href={`/services/${category.slug}`}>{tServices(`${category.id}.name`)}</Link>
+                  <Link href={`/services/${category.slug}`}>{tServices(`categories.${category.id}.name`)}</Link>
                 </DropdownMenuItem>
               ))}
               <DropdownMenuSeparator />
