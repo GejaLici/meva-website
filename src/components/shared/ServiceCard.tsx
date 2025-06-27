@@ -15,9 +15,10 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
-  const t = useTranslations();
-  const serviceName = t(`Services.items.${service.id}.name`);
-  const serviceDescriptionHtml = t.rich(`Services.items.${service.id}.description`, {
+  const tNav = useTranslations('Navigation');
+  const tServices = useTranslations('Services');
+  const serviceName = tServices(`items.${service.id}.name`);
+  const serviceDescriptionHtml = tServices.rich(`items.${service.id}.description`, {
     p: (chunks) => `<p>${chunks}</p>`,
     b: (chunks) => `<strong>${chunks}</strong>`,
   }).toString();
@@ -50,7 +51,7 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
         </CardDescription>
         <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
           <Link href={`/services/${categorySlug}/${service.slug}`}>
-            {t('Navigation.learnMore')} <ArrowRight className="ml-2 h-4 w-4" />
+            {tNav('learnMore')} <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </CardContent>

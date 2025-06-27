@@ -23,7 +23,8 @@ interface ServiceCategoryGridProps {
 }
 
 export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryGridProps) {
-  const t = useTranslations();
+  const tNav = useTranslations('Navigation');
+  const tServices = useTranslations('Services');
 
   const categories = (
     homePageLayout
@@ -31,8 +32,8 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
       : serviceCategories.filter(cat => cat.id !== 'dental-summary')
   ).map(category => ({
     ...category,
-    name: t(`Services.categories.${category.id}.name`),
-    description: t(`Services.categories.${category.id}.description`),
+    name: tServices(`categories.${category.id}.name`),
+    description: tServices(`categories.${category.id}.description`),
   }));
 
   const renderCard = (category: any, className?: string) => {
@@ -65,7 +66,7 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
           </CardDescription>
           <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
             <Link href={`/services/${category.slug}`}>
-              {t('Navigation.exploreService', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
+              {tNav('exploreService', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </CardContent>
@@ -74,14 +75,6 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
   };
   
   if (homePageLayout) {
-    if (categories.length === 0) {
-      return (
-        <p className="text-center text-lg text-muted-foreground">
-          No featured services are available at the moment.
-        </p>
-      );
-    }
-    
     return (
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         {categories.slice(0, 3).map((category) =>
