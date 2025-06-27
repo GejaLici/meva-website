@@ -67,7 +67,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   const siteTitle = t('Site.title');
   const serviceName = t(`Services.items.${service.id}.name`);
-  const serviceDescriptionHtml = t(`Services.items.${service.id}.description`);
 
   return (
     <>
@@ -90,7 +89,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
             <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{t('ServiceDetailsPage.aboutTitle', { serviceName })}</h2>
-            <div className="mb-6" dangerouslySetInnerHTML={{ __html: serviceDescriptionHtml }} />
+            <div className="mb-6">
+              {t.rich(`Services.items.${service.id}.description`, {
+                p: (chunks) => <p>{chunks}</p>
+              })}
+            </div>
             
             <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{t('ServiceDetailsPage.whatToExpectTitle', { siteTitle })}</h3>
             <p className="mb-4">
