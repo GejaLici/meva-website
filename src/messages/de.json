@@ -2,7 +2,7 @@
 {
   "Site": {
     "title": "Meva Klinik",
-    "siteDescription": "Meva Klinik: Erstklassige ästhetische und zahnärztliche Dienstleistungen. Unsere zertifizierten Spezialisten bieten fortschrittliche Behandlungen für transformative Ergebnisse mit höchster Sorgfalt und Expertise."
+    "description": "Meva Klinik: Erstklassige ästhetische und zahnärztliche Dienstleistungen. Unsere zertifizierten Spezialisten bieten fortschrittliche Behandlungen für transformative Ergebnisse mit höchster Sorgfalt und Expertise."
   },
   "Navigation": {
     "home": "Startseite",

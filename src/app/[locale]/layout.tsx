@@ -31,7 +31,7 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
       default: siteTitle,
       template: `%s | ${siteTitle}`,
     },
-    description: t('siteDescription'),
+    description: t('description'),
   };
 }
 

@@ -2,7 +2,7 @@
 {
   "Site": {
     "title": "Klinika Meva",
-    "siteDescription": "Klinika Meva: Shërbime estetike dhe dentare të nivelit të lartë. Specialistët tanë të certifikuar ofrojnë trajtime të avancuara për rezultate transformuese me kujdesin dhe ekspertizën më të madhe."
+    "description": "Klinika Meva: Shërbime estetike dhe dentare të nivelit të lartë. Specialistët tanë të certifikuar ofrojnë trajtime të avancuara për rezultate transformuese me kujdesin dhe ekspertizën më të madhe."
   },
   "Navigation": {
     "home": "Kreu",

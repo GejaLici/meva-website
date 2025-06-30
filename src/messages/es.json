@@ -2,7 +2,7 @@
 {
   "Site": {
     "title": "Clínica Meva",
-    "siteDescription": "Clínica Meva: Servicios estéticos y dentales de primer nivel. Nuestros especialistas certificados ofrecen tratamientos avanzados para resultados transformadores con el máximo cuidado y experiencia."
+    "description": "Clínica Meva: Servicios estéticos y dentales de primer nivel. Nuestros especialistas certificados ofrecen tratamientos avanzados para resultados transformadores con el máximo cuidado y experiencia."
   },
   "Navigation": {
     "home": "Inicio",

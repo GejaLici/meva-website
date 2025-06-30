@@ -2,7 +2,7 @@
 {
   "Site": {
     "title": "Clinica Meva",
-    "siteDescription": "Clinica Meva: Servizi estetici e dentistici di prim'ordine. I nostri specialisti certificati offrono trattamenti avanzati per risultati trasformativi con la massima cura e competenza."
+    "description": "Clinica Meva: Servizi estetici e dentistici di prim'ordine. I nostri specialisti certificati offrono trattamenti avanzati per risultati trasformativi con la massima cura e competenza."
   },
   "Navigation": {
     "home": "Home",
@@ -350,7 +350,7 @@
     "title": "Termini di Servizio",
     "lastUpdated": "Ultimo aggiornamento: {date}",
     "h2_1": "1. ACCETTAZIONE DEI TERMINI",
-    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personalmente che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
+    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personally che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
     "p1_2": "Riconosci e accetti che accedendo al Sito e/o utilizzando i nostri Servizi, hai letto, compreso e accetti di essere vincolato da tutti questi Termini di servizio. Se non sei d'accordo con tutti questi Termini di servizio, ti è espressamente vietato utilizzare il Sito e i nostri Servizi e devi interromperne immediatamente l'uso.",
     "p1_3": "Termini e condizioni supplementari o documenti che possono essere pubblicati sul Sito di volta in volta sono qui espressamente incorporati per riferimento.",
     "h2_2": "2. DIRITTI DI PROPRIETÀ INTELLETTUALE",

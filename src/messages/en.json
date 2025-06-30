@@ -2,7 +2,7 @@
 {
   "Site": {
     "title": "Meva Clinic",
-    "siteDescription": "Meva Clinic: Premier aesthetic and dental services. Our board-certified specialists offer advanced treatments for transformative results with utmost care and expertise."
+    "description": "Meva Clinic: Premier aesthetic and dental services. Our board-certified specialists offer advanced treatments for transformative results with utmost care and expertise."
   },
   "Navigation": {
     "home": "Home",
