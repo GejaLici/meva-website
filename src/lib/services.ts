@@ -16,7 +16,7 @@ const facialSurgeryServices: Service[] = [
 
 const facialTreatmentsServices: Service[] = [
   { id: 'lip-reshaping', slug: 'lip-reshaping', image: '/images/Lip Reshaping & Augmentation.png', imageHint: 'lip fillers application' },
-  { id: 'xanthelasma-plasma-arc', slug: 'eyelid-deposit-removal', image: '/images/Xanthelasma Removal (Plasma Arc).png', imageHint: 'xanthelasma plasma device' },
+  { id: 'xanthelasma-plasma-arc', slug: 'eyelid-deposit-removal', image: '/images/eyelid-deposit-removal.png', imageHint: 'xanthelasma plasma device' },
   { id: 'multivitamin-treatment', slug: 'multivitamin-infusion-facial', image: '/images/Multivitamin Infusion Facial.png', imageHint: 'vitamin facial therapy' },
   { id: 'eyelids-plasma-arc', slug: 'non-surgical-eyelid-lift', image: '/images/Non-Surgical Eyelid Lift (Plasma Arc).png', imageHint: 'plasma eyelid treatment' },
   { id: 'cheekbone-reshaping', slug: 'cheekbone-contouring', image: '/images/Cheekbone Contouring (Fillers).png', imageHint: 'cheek fillers injection' },
