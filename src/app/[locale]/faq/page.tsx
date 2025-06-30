@@ -9,8 +9,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   const t = await getTranslations({locale, namespace: 'FaqPage'});
   const tSite = await getTranslations({locale, namespace: 'Site'});
   return {
-    title: t('metaTitle', { siteTitle: tSite('title') }),
-    description: t('metaDescription', { siteTitle: tSite('title') }),
+    title: t('metaTitle', { siteName: tSite('title') }),
+    description: t('metaDescription', { siteName: tSite('title') }),
   };
 }
 
@@ -18,7 +18,7 @@ export default async function FAQPage() {
   const tSite = await getTranslations('Site');
   const tPage = await getTranslations('FaqPage');
   const tFaq = await getTranslations('FAQ');
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
 
   return (
     <>
@@ -32,11 +32,11 @@ export default async function FAQPage() {
             {faqItems.map((item) => (
               <AccordionItem key={item.id} value={item.id} className="bg-card p-4 rounded-lg shadow-md">
                 <AccordionTrigger className="text-left font-semibold text-lg text-primary hover:no-underline">
-                  {tFaq(`${item.id}.question`, { siteName: siteTitle })}
+                  {tFaq(`${item.id}.question`, { siteName: siteName })}
                 </AccordionTrigger>
                 <AccordionContent className="pt-2 text-muted-foreground">
                   {tFaq.rich(`${item.id}.answer`, { 
-                    siteName: siteTitle,
+                    siteName: siteName,
                     p: (chunks) => <p>{chunks}</p> 
                   })}
                 </AccordionContent>

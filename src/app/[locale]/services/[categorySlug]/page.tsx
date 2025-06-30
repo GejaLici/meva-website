@@ -25,13 +25,13 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const tPage = await getTranslations({locale, namespace: 'ServiceCategoryPage'});
   const tServices = await getTranslations({locale, namespace: 'Services'});
   
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
   const category = getCategoryBySlug(categorySlug);
   
   if (!category) {
     return { 
-      title: tPage('categoryNotFoundTitle', {siteTitle}),
-      description: tPage('categoryNotFoundDescription', {siteTitle})
+      title: tPage('categoryNotFoundTitle', {siteName}),
+      description: tPage('categoryNotFoundDescription', {siteName})
     };
   }
 
@@ -39,14 +39,14 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const categoryDescription = tServices(`categories.${category.id}.description`);
 
   return {
-    title: tPage('metaTitle', { categoryName, siteTitle }),
+    title: tPage('metaTitle', { categoryName, siteName }),
     description: tPage('metaDescription', { categoryDescription }),
   };
 }
 
 export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(params.categorySlug);
-  const tServices = await getTranslations('Services');
+  const tServices = useTranslations('Services');
   const tPage = await getTranslations('ServiceCategoryPage');
   
   if (!category) {

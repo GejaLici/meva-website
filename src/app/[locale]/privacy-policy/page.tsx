@@ -9,15 +9,15 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   const t = await getTranslations({locale, namespace: 'PrivacyPolicyPage'});
   const tSite = await getTranslations({locale, namespace: 'Site'});
   return {
-    title: t('metaTitle', { siteTitle: tSite('title') }),
-    description: t('metaDescription', { siteTitle: tSite('title') }),
+    title: t('metaTitle', { siteName: tSite('title') }),
+    description: t('metaDescription', { siteName: tSite('title') }),
   };
 }
 
 export default async function PrivacyPolicyPage({params: {locale}}: {params: {locale: string}}) {
   const t = await getTranslations('PrivacyPolicyPage');
   const tSite = await getTranslations('Site');
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
   const today = formatDate(new Date().toISOString(), locale);
   
   return (
@@ -27,7 +27,7 @@ export default async function PrivacyPolicyPage({params: {locale}}: {params: {lo
         description={t('lastUpdated', { date: today })}
       />
       <div className="container mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:px-8 prose prose-lg text-foreground">
-        <p>{t('p1', { siteTitle, SITE_DOMAIN })}</p>
+        <p>{t('p1', { siteName, SITE_DOMAIN })}</p>
         
         <h2>{t('h2_1')}</h2>
         <p>{t('p2_1')}</p>
@@ -72,7 +72,7 @@ export default async function PrivacyPolicyPage({params: {locale}}: {params: {lo
         <p>{t('p10_1', { SITE_DOMAIN })}</p>
         <p>
           {t.rich('p10_2', {
-            siteTitle: siteTitle,
+            siteName: siteName,
             br: () => <br />
           })}
         </p>

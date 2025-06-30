@@ -9,8 +9,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   const t = await getTranslations({locale, namespace: 'BlogPage'});
   const tSite = await getTranslations({locale, namespace: 'Site'});
   return {
-    title: t('metaTitle', { siteTitle: tSite('title') }),
-    description: t('metaDescription', { siteTitle: tSite('title') }),
+    title: t('metaTitle', { siteName: tSite('title') }),
+    description: t('metaDescription', { siteName: tSite('title') }),
   };
 }
 

@@ -13,8 +13,8 @@ import { getTranslations } from 'next-intl/server';
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale});
   return {
-    title: t('DentalServicesPage.metaTitle', {siteTitle: t('Site.title')}),
-    description: t('DentalServicesPage.metaDescription', {siteTitle: t('Site.title')}),
+    title: t('DentalServicesPage.metaTitle', {siteName: t('Site.title')}),
+    description: t('DentalServicesPage.metaDescription', {siteName: t('Site.title')}),
   };
 }
 
@@ -30,7 +30,7 @@ const dentalCategoryIds = [
 export default async function DentalServicesPage() {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
   const t = await getTranslations();
-  const siteTitle = t('Site.title');
+  const siteName = t('Site.title');
 
   return (
     <>
@@ -76,7 +76,7 @@ export default async function DentalServicesPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            {t('DentalServicesPage.noResults', {siteTitle})}
+            {t('DentalServicesPage.noResults', {siteName})}
           </p>
         )}
       </div>

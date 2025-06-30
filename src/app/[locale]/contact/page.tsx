@@ -9,10 +9,10 @@ import { getTranslations } from 'next-intl/server';
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'ContactPage'});
   const tSite = await getTranslations({locale, namespace: 'Site'});
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
   return {
-    title: t('metaTitle', { siteTitle }),
-    description: t('metaDescription', { siteTitle }),
+    title: t('metaTitle', { siteName }),
+    description: t('metaDescription', { siteName }),
   };
 }
 

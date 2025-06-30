@@ -29,13 +29,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const t = await getTranslations({locale: params.locale, namespace: 'BlogPostPage'});
   const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
   const post = await getBlogPostBySlug(params.slug);
 
   if (!post) {
     return { 
-      title: t('postNotFoundTitle', { siteTitle }),
-      description: t('postNotFoundDescription', { siteTitle }),
+      title: t('postNotFoundTitle', { siteName }),
+      description: t('postNotFoundDescription', { siteName }),
     };
   }
 
@@ -44,10 +44,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     : post.excerpt;
 
   return {
-    title: t('metaTitle', { postTitle: post.title, siteTitle }),
+    title: t('metaTitle', { postTitle: post.title, siteName }),
     description: t('metaDescription', { postExcerpt: metaDescription }),
-    keywords: post.category ? `${post.category}, ${post.title}, ${siteTitle}` : `${post.title}, ${siteTitle}`,
-    authors: post.author ? [{ name: post.author }] : [{ name: siteTitle }],
+    keywords: post.category ? `${post.category}, ${post.title}, ${siteName}` : `${post.title}, ${siteName}`,
+    authors: post.author ? [{ name: post.author }] : [{ name: siteName }],
   };
 }
 

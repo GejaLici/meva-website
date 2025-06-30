@@ -10,10 +10,10 @@ import { getTranslations } from 'next-intl/server';
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'GalleryPage'});
   const tSite = await getTranslations({locale, namespace: 'Site'});
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
   return {
-    title: t('metaTitle', { siteTitle }),
-    description: t('metaDescription', { siteTitle }),
+    title: t('metaTitle', { siteName }),
+    description: t('metaDescription', { siteName }),
   };
 }
 
@@ -22,7 +22,7 @@ export default async function GalleryPage() {
   const tPage = await getTranslations('GalleryPage');
   const tGallery = await getTranslations('Gallery');
   const tSite = await getTranslations('Site');
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
 
   return (
     <>
@@ -74,7 +74,7 @@ export default async function GalleryPage() {
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            {tPage('noResults', { siteTitle })}
+            {tPage('noResults', { siteName })}
           </p>
         )}
       </div>

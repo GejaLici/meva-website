@@ -39,12 +39,12 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   const tServices = await getTranslations({ locale, namespace: 'Services' });
 
   const service = getServiceBySlugs(categorySlug, serviceSlug);
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
 
   if (!service) {
     return {
-      title: tDetails('serviceNotFoundTitle', { siteTitle }),
-      description: tDetails('serviceNotFoundDescription', { siteTitle })
+      title: tDetails('serviceNotFoundTitle', { siteName }),
+      description: tDetails('serviceNotFoundDescription', { siteName })
     };
   }
 
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     : serviceDescription;
 
   return {
-    title: tDetails('metaTitle', { serviceName, siteTitle }),
+    title: tDetails('metaTitle', { serviceName, siteName }),
     description: tDetails('metaDescription', { serviceName, excerpt: metaDescription }),
   };
 }
@@ -74,7 +74,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     notFound();
   }
 
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
   const serviceName = tServices(`items.${service.id}.name`);
 
   return (
@@ -100,9 +100,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
             <div className="mb-6" dangerouslySetInnerHTML={{ __html: tServices(`items.${service.id}.description`) }} />
             
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteTitle })}</h3>
+            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteName })}</h3>
             <p className="mb-4">
-              {tDetails('whatToExpectP1', { siteTitle, serviceName: serviceName.toLowerCase() })}
+              {tDetails('whatToExpectP1', { siteName, serviceName: serviceName.toLowerCase() })}
             </p>
             <ul className="list-disc pl-5 mb-6 space-y-1">
               <li>{tDetails('whatToExpectL1')}</li>

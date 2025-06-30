@@ -9,15 +9,15 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   const t = await getTranslations({locale, namespace: 'TermsOfServicePage'});
   const tSite = await getTranslations({locale, namespace: 'Site'});
   return {
-    title: t('metaTitle', { siteTitle: tSite('title') }),
-    description: t('metaDescription', { siteTitle: tSite('title') }),
+    title: t('metaTitle', { siteName: tSite('title') }),
+    description: t('metaDescription', { siteName: tSite('title') }),
   };
 }
 
 export default async function TermsOfServicePage({params: {locale}}: {params: {locale: string}}) {
   const t = await getTranslations('TermsOfServicePage');
   const tSite = await getTranslations('Site');
-  const siteTitle = tSite('title');
+  const siteName = tSite('title');
   const today = formatDate(new Date().toISOString(), locale);
 
   return (
@@ -28,7 +28,7 @@ export default async function TermsOfServicePage({params: {locale}}: {params: {l
       />
       <div className="container mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:px-8 prose prose-lg text-foreground">
         <h2>{t('h2_1')}</h2>
-        <p>{t('p1_1', { siteTitle, SITE_DOMAIN })}</p>
+        <p>{t('p1_1', { siteName, SITE_DOMAIN })}</p>
         <p>{t('p1_2')}</p>
         <p>{t('p1_3')}</p>
 
@@ -41,7 +41,7 @@ export default async function TermsOfServicePage({params: {locale}}: {params: {l
         <h2>{t('h2_4')}</h2>
         <p>{t('p4_1')}</p>
         <p>{t.rich('p4_2', {
-          siteName: siteTitle,
+          siteName: siteName,
           a: (chunks) => <a href={`mailto:info@${SITE_DOMAIN}`}>{chunks}</a>,
         })}</p>
 
@@ -69,7 +69,7 @@ export default async function TermsOfServicePage({params: {locale}}: {params: {l
         <h2>{t('h2_10')}</h2>
         <p>{t('p10_1', { SITE_DOMAIN })}</p>
         <p>{t.rich('p10_2', {
-            siteTitle: siteTitle,
+            siteName: siteName,
             br: () => <br />
           })}
         </p>
