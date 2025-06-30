@@ -1,3 +1,6 @@
+
+'use client';
+
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
