@@ -5,7 +5,6 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { ServiceCard } from '@/components/shared/ServiceCard';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { stripHtml } from '@/lib/utils';
 
 interface CategoryPageProps {
   params: {
@@ -49,7 +48,6 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   const category = getCategoryBySlug(params.categorySlug);
   const tServices = await getTranslations('Services');
   const tPage = await getTranslations('ServiceCategoryPage');
-  const tNav = await getTranslations('Navigation');
   
   if (!category) {
     notFound();
@@ -57,7 +55,7 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   
   const categoryName = tServices(`categories.${category.id}.name`);
   const categoryDescription = tServices(`categories.${category.id}.description`);
-  const learnMoreText = tNav('learnMore');
+  const learnMoreText = "Learn More";
 
   return (
     <>
@@ -67,19 +65,18 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {category.services.map((service) => {
               const serviceName = tServices(`items.${service.id}.name`);
-              const serviceDescriptionHtml = tServices.rich(`items.${service.id}.description`, {
-                p: (chunks) => `<p>${chunks}</p>`,
-                b: (chunks) => `<strong>${chunks}</strong>`,
-              }).toString();
-              const plainDescription = stripHtml(serviceDescriptionHtml);
-
+              const serviceDescription = tServices.rich(`items.${service.id}.description`, {
+                p: (chunks) => <p>{chunks}</p>,
+                b: (chunks) => <strong>{chunks}</strong>,
+              });
+              
               return (
                 <ServiceCard 
                   key={service.id} 
                   service={service} 
                   categorySlug={category.slug}
                   serviceName={serviceName}
-                  serviceDescription={plainDescription}
+                  serviceDescription={serviceDescription}
                   learnMoreText={learnMoreText}
                 />
               )
