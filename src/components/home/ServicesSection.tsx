@@ -1,9 +1,10 @@
-'use client';
-import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
-import { useTranslations } from 'next-intl';
 
-export function ServicesSection() {
-  const t = useTranslations('HomePage');
+import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
+import { getTranslations } from 'next-intl/server';
+
+export async function ServicesSection() {
+  const t = await getTranslations('HomePage');
+  
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">

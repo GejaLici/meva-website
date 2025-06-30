@@ -67,7 +67,7 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
           <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3 text-center">
             {category.description}
           </CardDescription>
-          <Button asChild className="mt-auto w-full bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground transition-colors duration-300">
+          <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
             <Link href={category.id === 'dental-summary' ? '/services/dental' : `/services/${category.slug}`}>
               {category.exploreText} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

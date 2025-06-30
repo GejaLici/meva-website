@@ -40,13 +40,13 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
   return {
     title: tPage('metaTitle', { categoryName, siteName }),
-    description: tPage('metaDescription', { categoryDescription }),
+    description: tPage('metaDescription', { categoryName, categoryDescription, siteName }),
   };
 }
 
 export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(params.categorySlug);
-  const tServices = useTranslations('Services');
+  const tServices = await getTranslations('Services');
   const tPage = await getTranslations('ServiceCategoryPage');
   
   if (!category) {
