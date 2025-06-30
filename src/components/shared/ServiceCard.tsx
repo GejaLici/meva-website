@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Link } from '@/navigation';
@@ -6,29 +7,16 @@ import type { Service } from '@/types/services';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { useTranslations } from 'next-intl';
-import { stripHtml } from '@/lib/utils';
 
 interface ServiceCardProps {
   service: Service;
   categorySlug: string;
+  serviceName: string;
+  serviceDescription: string;
+  learnMoreText: string;
 }
 
-export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
-  const tNav = useTranslations('Navigation');
-  const tServices = useTranslations('Services');
-  const serviceName = tServices(`items.${service.id}.name`);
-  const serviceDescriptionHtml = tServices.rich(`items.${service.id}.description`, {
-    p: (chunks) => `<p>${chunks}</p>`,
-    b: (chunks) => `<strong>${chunks}</strong>`,
-  }).toString();
-
-  const plainDescription = stripHtml(serviceDescriptionHtml);
-
-  const truncatedDescription = plainDescription.length > 120 
-    ? plainDescription.substring(0, 120) + '...' 
-    : plainDescription;
-
+export function ServiceCard({ service, categorySlug, serviceName, serviceDescription, learnMoreText }: ServiceCardProps) {
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       {service.image && (
@@ -47,11 +35,11 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
       </CardHeader>
       <CardContent className="flex-grow flex flex-col">
         <CardDescription className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow">
-          {truncatedDescription}
+          {serviceDescription}
         </CardDescription>
         <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
           <Link href={`/services/${categorySlug}/${service.slug}`}>
-            {tNav('learnMore')} <ArrowRight className="ml-2 h-4 w-4" />
+            {learnMoreText} <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </CardContent>

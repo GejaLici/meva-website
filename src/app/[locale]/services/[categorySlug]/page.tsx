@@ -5,6 +5,7 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { ServiceCard } from '@/components/shared/ServiceCard';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { stripHtml } from '@/lib/utils';
 
 interface CategoryPageProps {
   params: {
@@ -48,6 +49,7 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   const category = getCategoryBySlug(params.categorySlug);
   const tServices = await getTranslations('Services');
   const tPage = await getTranslations('ServiceCategoryPage');
+  const tNav = await getTranslations('Navigation');
   
   if (!category) {
     notFound();
@@ -55,6 +57,7 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   
   const categoryName = tServices(`categories.${category.id}.name`);
   const categoryDescription = tServices(`categories.${category.id}.description`);
+  const learnMoreText = tNav('learnMore');
 
   return (
     <>
@@ -62,9 +65,28 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {category.services.length > 0 ? (
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {category.services.map((service) => (
-              <ServiceCard key={service.id} service={service} categorySlug={category.slug} />
-            ))}
+            {category.services.map((service) => {
+              const serviceName = tServices(`items.${service.id}.name`);
+              const serviceDescriptionHtml = tServices.rich(`items.${service.id}.description`, {
+                p: (chunks) => `<p>${chunks}</p>`,
+                b: (chunks) => `<strong>${chunks}</strong>`,
+              }).toString();
+              const plainDescription = stripHtml(serviceDescriptionHtml);
+              const truncatedDescription = plainDescription.length > 120 
+                ? plainDescription.substring(0, 120) + '...' 
+                : plainDescription;
+
+              return (
+                <ServiceCard 
+                  key={service.id} 
+                  service={service} 
+                  categorySlug={category.slug}
+                  serviceName={serviceName}
+                  serviceDescription={truncatedDescription}
+                  learnMoreText={learnMoreText}
+                />
+              )
+            })}
           </div>
         ) : (
           <p className="text-center text-lg text-muted-foreground">
