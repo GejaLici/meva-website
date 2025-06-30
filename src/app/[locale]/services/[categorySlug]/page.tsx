@@ -72,9 +72,6 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
                 b: (chunks) => `<strong>${chunks}</strong>`,
               }).toString();
               const plainDescription = stripHtml(serviceDescriptionHtml);
-              const truncatedDescription = plainDescription.length > 120 
-                ? plainDescription.substring(0, 120) + '...' 
-                : plainDescription;
 
               return (
                 <ServiceCard 
@@ -82,7 +79,7 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
                   service={service} 
                   categorySlug={category.slug}
                   serviceName={serviceName}
-                  serviceDescription={truncatedDescription}
+                  serviceDescription={plainDescription}
                   learnMoreText={learnMoreText}
                 />
               )
