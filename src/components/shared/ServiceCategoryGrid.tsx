@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Link } from '@/navigation';
@@ -65,7 +64,7 @@ export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryG
             {category.description}
           </CardDescription>
           <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
-            <Link href={`/services/${category.slug}`}>
+            <Link href={category.id === 'dental-summary' ? '/services/dental' : `/services/${category.slug}`}>
               {tNav('exploreService', { categoryName: category.name })} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
