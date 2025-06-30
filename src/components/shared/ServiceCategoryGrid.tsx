@@ -1,13 +1,9 @@
-'use client';
-
 import { Link } from '@/navigation';
 import Image from 'next/image';
-import { serviceCategories } from '@/lib/services';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Gem, Leaf, Heart, PersonStanding, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
 
 const ICONS: { [key: string]: React.ElementType } = {
   Gem,
@@ -17,29 +13,25 @@ const ICONS: { [key: string]: React.ElementType } = {
   Sparkles,
 };
 
+interface CategoryGridItem {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  exploreText: string;
+  image?: string;
+  imageHint?: string;
+  icon?: string;
+}
+
 interface ServiceCategoryGridProps {
+  categories: CategoryGridItem[];
   homePageLayout?: boolean;
 }
 
-export function ServiceCategoryGrid({ homePageLayout = false }: ServiceCategoryGridProps) {
-  const tNav = useTranslations('Navigation');
-  const tServices = useTranslations('Services');
-
-  const categories = (
-    homePageLayout
-      ? serviceCategories.filter(cat => cat.displayOnHome)
-      : serviceCategories.filter(cat => cat.id !== 'dental-summary')
-  ).map(category => {
-    const name = tServices(`categories.${category.id}.name`);
-    return {
-      ...category,
-      name,
-      description: tServices(`categories.${category.id}.description`),
-      exploreText: tNav('exploreService', { categoryName: name }),
-    };
-  });
-
-  const renderCard = (category: (typeof categories)[0], className?: string) => {
+export function ServiceCategoryGrid({ categories, homePageLayout = false }: ServiceCategoryGridProps) {
+  
+  const renderCard = (category: CategoryGridItem, className?: string) => {
     const CategoryIcon = category.icon ? ICONS[category.icon] : null;
     return (
       <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", className)}>
