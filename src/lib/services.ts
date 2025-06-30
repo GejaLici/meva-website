@@ -92,6 +92,15 @@ const pediatricDentistryServices: Service[] = [
   { id: 'dental-sealants', slug: 'dental-sealants', image: '/images/Dental Sealants.png', imageHint: 'dental sealants kids teeth' },
 ];
 
+export const dentalCategoryIds = [
+  'aesthetic-dentistry',
+  'prosthetics',
+  'orthodontics',
+  'restorative-dentistry',
+  'oral-surgery',
+  'pediatric-dentistry',
+];
+
 export const serviceCategories: ServiceCategory[] = [
   {
     id: 'facial-surgery',

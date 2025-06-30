@@ -1,10 +1,11 @@
 
 import { notFound } from 'next/navigation';
-import { serviceCategories, getCategoryBySlug } from '@/lib/services';
+import { serviceCategories, getCategoryBySlug, dentalCategoryIds } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
-import { ServiceCard } from '@/components/shared/ServiceCard';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { AestheticServiceList } from '@/components/services/AestheticServiceList';
+import { DentalServiceList } from '@/components/services/DentalServiceList';
 
 interface CategoryPageProps {
   params: {
@@ -14,9 +15,11 @@ interface CategoryPageProps {
 }
 
 export async function generateStaticParams() {
-  return serviceCategories.map((category) => ({
-    categorySlug: category.slug,
-  }));
+  return serviceCategories
+    .filter(cat => cat.id !== 'dental-summary') // Exclude summary card which has its own page
+    .map((category) => ({
+      categorySlug: category.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
@@ -57,31 +60,39 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   const categoryDescription = tServices(`categories.${category.id}.description`);
   const learnMoreText = "Learn More";
 
+  const isDental = dentalCategoryIds.includes(category.id);
+  
+  const serviceTranslations = category.services.reduce((acc, service) => {
+    acc[service.id] = {
+      name: tServices(`items.${service.id}.name`),
+      description: tServices.rich(`items.${service.id}.description`, {
+        p: (chunks) => <p>{chunks}</p>,
+        b: (chunks) => <strong>{chunks}</strong>
+      })
+    };
+    return acc;
+  }, {} as { [id: string]: { name: string; description: React.ReactNode } });
+
   return (
     <>
       <PageHeader title={categoryName} description={categoryDescription} />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {category.services.length > 0 ? (
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {category.services.map((service) => {
-              const serviceName = tServices(`items.${service.id}.name`);
-              const serviceDescription = tServices.rich(`items.${service.id}.description`, {
-                p: (chunks) => <p>{chunks}</p>,
-                b: (chunks) => <strong>{chunks}</strong>,
-              });
-              
-              return (
-                <ServiceCard 
-                  key={service.id} 
-                  service={service} 
-                  categorySlug={category.slug}
-                  serviceName={serviceName}
-                  serviceDescription={serviceDescription}
-                  learnMoreText={learnMoreText}
-                />
-              )
-            })}
-          </div>
+          isDental ? (
+            <DentalServiceList
+              services={category.services}
+              categorySlug={category.slug}
+              serviceTranslations={serviceTranslations}
+              learnMoreText={learnMoreText}
+            />
+          ) : (
+            <AestheticServiceList
+              services={category.services}
+              categorySlug={category.slug}
+              serviceTranslations={serviceTranslations}
+              learnMoreText={learnMoreText}
+            />
+          )
         ) : (
           <p className="text-center text-lg text-muted-foreground">
             {tPage('noResults')}

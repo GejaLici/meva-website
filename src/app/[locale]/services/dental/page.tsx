@@ -2,7 +2,7 @@
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import { PageHeader } from '@/components/shared/PageHeader';
-import { serviceCategories } from '@/lib/services';
+import { serviceCategories, dentalCategoryIds } from '@/lib/services';
 import type { ServiceCategory } from '@/types/services';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -18,15 +18,6 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
     description: t('metaDescription', {siteName: tSite('title')}),
   };
 }
-
-const dentalCategoryIds = [
-  'aesthetic-dentistry',
-  'prosthetics',
-  'orthodontics',
-  'restorative-dentistry',
-  'oral-surgery',
-  'pediatric-dentistry',
-];
 
 export default async function DentalServicesPage() {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
