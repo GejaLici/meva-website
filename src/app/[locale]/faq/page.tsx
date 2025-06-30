@@ -24,7 +24,7 @@ export default async function FAQPage() {
     <>
       <PageHeader
         title={tPage('title')}
-        description={tPage('description')}
+        description={tPage('description', { siteName })}
       />
       <div className="container mx-auto max-w-screen-md px-4 py-12 sm:px-6 lg:px-8">
         {faqItems.length > 0 ? (

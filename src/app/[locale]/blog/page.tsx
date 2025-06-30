@@ -17,12 +17,14 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 export default async function BlogPage() {
   const posts = await getAllBlogPosts();
   const t = await getTranslations('BlogPage');
+  const tSite = await getTranslations('Site');
+  const siteName = tSite('title');
 
   return (
     <>
       <PageHeader
         title={t('title')}
-        description={t('description')}
+        description={t('description', { siteName })}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {posts.length > 0 ? (
