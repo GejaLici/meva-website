@@ -57,8 +57,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     : serviceDescription;
 
   return {
-    title: tDetails('metaTitle', { serviceName, siteName }),
-    description: tDetails('metaDescription', { serviceName, excerpt: metaDescription }),
+    title: serviceName,
+    description: metaDescription,
   };
 }
 
@@ -123,3 +123,4 @@ export default async function ServicePage({ params }: ServicePageProps) {
     </>
   );
 }
+
