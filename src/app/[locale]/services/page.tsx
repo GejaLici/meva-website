@@ -17,6 +17,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 
 export default async function ServicesOverviewPage() {
   const tOverview = await getTranslations('ServicesOverviewPage');
+  const tSite = await getTranslations('Site');
+  const siteName = tSite('title');
   
   const aestheticCategories = serviceCategories.filter(
     cat => !dentalCategoryIds.includes(cat.id) && cat.id !== 'dental-summary'
@@ -30,7 +32,7 @@ export default async function ServicesOverviewPage() {
     <>
       <PageHeader
         title={tOverview('title')}
-        description={tOverview('description')}
+        description={tOverview('description', { siteName })}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         
