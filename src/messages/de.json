@@ -288,10 +288,10 @@
     "metaDescription": "Entdecken Sie das umfassende Angebot an fortschrittlichen ästhetischen und zahnärztlichen Leistungen, die in der {siteName} angeboten werden. Entdecken Sie von Experten maßgeschneiderte Behandlungen zur Steigerung Ihrer Schönheit und Ihres Wohlbefindens.",
     "title": "Unsere fortschrittlichen ästhetischen & zahnärztlichen Leistungen",
     "description": "Entdecken Sie das umfassende Spektrum spezialisierter ästhetischer und zahnärztlicher Behandlungen, die in der {siteName} angeboten werden. Jede Dienstleistung ist sorgfältig darauf ausgelegt, Ihnen zu helfen, Ihre individuellen Schönheits- und Wellnessziele zu erreichen. Unser medizinisches Expertenteam ist bestrebt, fortschrittliche, personalisierte Pflege zu bieten und außergewöhnliche, dauerhafte Ergebnisse zu liefern.",
-    "aestheticServicesTitle": "Unsere erstklassigen ästhetischen Dienstleistungen in der {siteName}",
-    "aestheticServicesSubtitle": "Von subtilen Verbesserungen bis hin zu transformativen chirurgischen Eingriffen – entdecken Sie unser Angebot an ästhetischen Behandlungen, die Ihr Aussehen verjüngen und Ihr Selbstvertrauen stärken.",
-    "dentalServicesTitle": "Unsere umfassende zahnärztliche Versorgung in der {siteName}",
-    "dentalServicesSubtitle": "Erreichen Sie ein gesundes, schönes Lächeln mit unserem gesamten Spektrum an zahnärztlichen Leistungen, das von kosmetischer Zahnmedizin und Kieferorthopädie bis hin zu komplexer Oralchirurgie reicht."
+    "aestheticServicesTitle": "Ästhetische Leistungen",
+    "aestheticServicesSubtitle": "Von dezenten Verbesserungen bis hin zu transformativen chirurgischen Eingriffen, entdecken Sie unser Angebot an ästhetischen Behandlungen. Unser Expertenteam widmet sich der Verjüngung Ihres Aussehens und der Stärkung Ihres Selbstvertrauens durch persönliche Betreuung.",
+    "dentalServicesTitle": "Zahnärztliche Leistungen",
+    "dentalServicesSubtitle": "Erreichen Sie ein gesundes, schönes Lächeln mit unserem gesamten Spektrum an zahnärztlichen Leistungen. Wir decken alles ab, von der kosmetischen Zahnmedizin und Kieferorthopädie bis hin zur komplexen Oralchirurgie, alles mit Präzision und Sorgfalt durchgeführt."
   },
   "ServiceCategoryPage": {
     "metaTitle": "{categoryName} | {siteName}",
@@ -374,3 +374,5 @@
     "p10_2": "{siteName}<br />z.Hd.: Rechtsabteilung<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tirana, Albanien<br />E-Mail: info@{SITE_DOMAIN}"
   }
 }
+
+    

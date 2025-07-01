@@ -288,10 +288,10 @@
     "metaDescription": "Eksploroni gamën e gjerë të shërbimeve të avancuara estetike dhe dentare të ofruara në {siteName}. Zbuloni trajtime të përshtatura nga ekspertët për të përmirësuar bukurinë dhe mirëqenien tuaj.",
     "title": "Shërbimet Tona të Avancuara Estetike & Dentare",
     "description": "Eksploroni spektrin e gjerë të trajtimeve të specializuara estetike dhe dentare të ofruara në {siteName}. Çdo shërbim është projektuar me përpikëri për t'ju ndihmuar të arrini objektivat tuaja të veçanta të bukurisë dhe mirëqenies. Ekipi ynë mjekësor ekspert është i përkushtuar të ofrojë kujdes të avancuar, të personalizuar dhe të japë rezultate të jashtëzakonshme dhe afatgjata.",
-    "aestheticServicesTitle": "Shërbimet tona kryesore estetike në {siteName}",
-    "aestheticServicesSubtitle": "Nga përmirësimet delikate deri te procedurat kirurgjikale transformuese, zbuloni paketën tonë të trajtimeve estetike të dizajnuara për të rinovuar pamjen tuaj dhe për të rritur besimin tuaj.",
-    "dentalServicesTitle": "Kujdesi ynë gjithëpërfshirës dentar në {siteName}",
-    "dentalServicesSubtitle": "Arrini një buzëqeshje të shëndetshme dhe të bukur me gamën tonë të plotë të shërbimeve dentare, duke filluar nga stomatologjia kozmetike dhe ortodoncia deri te kirurgjia orale komplekse."
+    "aestheticServicesTitle": "Shërbimet Estetike",
+    "aestheticServicesSubtitle": "Nga përmirësimet delikate te procedurat kirurgjikale transformuese, zbuloni paketën tonë të trajtimeve estetike. Ekipi ynë ekspert është i përkushtuar të rinovojë pamjen tuaj dhe të rrisë besimin tuaj me kujdes të personalizuar.",
+    "dentalServicesTitle": "Shërbimet Dentare",
+    "dentalServicesSubtitle": "Arrini një buzëqeshje të shëndetshme dhe të bukur me gamën tonë të plotë të shërbimeve dentare. Ne mbulojmë gjithçka, nga stomatologjia kozmetike dhe ortodoncia deri te kirurgjia orale komplekse, të gjitha të kryera me saktësi dhe kujdes."
   },
   "ServiceCategoryPage": {
     "metaTitle": "{categoryName} | {siteName}",
@@ -374,3 +374,5 @@
     "p10_2": "{siteName}<br />Për vëmendje: Departamenti Ligjor<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tiranë, Shqipëri<br />Email: info@{SITE_DOMAIN}"
   }
 }
+
+    

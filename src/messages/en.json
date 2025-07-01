@@ -288,10 +288,10 @@
     "metaDescription": "Explore the comprehensive range of advanced aesthetic and dental services offered at {siteName}. Discover treatments tailored by experts to enhance your beauty and well-being.",
     "title": "Our Advanced Aesthetic & Dental Services",
     "description": "Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at {siteName}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results.",
-    "aestheticServicesTitle": "Our Premier Aesthetic Services at {siteName}",
-    "aestheticServicesSubtitle": "From subtle enhancements to transformative surgical procedures, discover our suite of aesthetic treatments designed to rejuvenate your appearance and boost your confidence.",
-    "dentalServicesTitle": "Our Comprehensive Dental Care at {siteName}",
-    "dentalServicesSubtitle": "Achieve a healthy, beautiful smile with our full range of dental services, spanning from cosmetic dentistry and orthodontics to complex oral surgery."
+    "aestheticServicesTitle": "Aesthetic Services",
+    "aestheticServicesSubtitle": "From subtle enhancements to transformative surgical procedures, discover our suite of aesthetic treatments. Our expert team is dedicated to rejuvenating your appearance and boosting your confidence with personalized care.",
+    "dentalServicesTitle": "Dental Services",
+    "dentalServicesSubtitle": "Achieve a healthy, beautiful smile with our full range of dental services. We cover everything from cosmetic dentistry and orthodontics to complex oral surgery, all delivered with precision and care."
   },
   "ServiceCategoryPage": {
     "metaTitle": "{categoryName} | {siteName}",
@@ -374,3 +374,5 @@
     "p10_2": "{siteName}<br />Attn: Legal Department<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albania<br />Email: info@{SITE_DOMAIN}"
   }
 }
+
+    

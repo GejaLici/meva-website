@@ -288,10 +288,10 @@
     "metaDescription": "Esplora la gamma completa di servizi estetici e dentali avanzati offerti da {siteName}. Scopri trattamenti su misura realizzati da esperti per migliorare la tua bellezza e il tuo benessere.",
     "title": "I Nostri Servizi Estetici e Dentali Avanzati",
     "description": "Esplora lo spettro completo di trattamenti estetici e dentali specializzati offerti da {siteName}. Ogni servizio è meticolosamente progettato per aiutarti a raggiungere i tuoi distinti obiettivi di bellezza e benessere. Il nostro team medico esperto è dedicato a fornire cure avanzate e personalizzate e a fornire risultati eccezionali e duraturi.",
-    "aestheticServicesTitle": "I nostri principali servizi estetici presso {siteName}",
-    "aestheticServicesSubtitle": "Dai sottili miglioramenti alle procedure chirurgiche trasformative, scopri la nostra suite di trattamenti estetici progettati per ringiovanire il tuo aspetto e aumentare la tua fiducia.",
-    "dentalServicesTitle": "La nostra assistenza odontoiatrica completa presso {siteName}",
-    "dentalServicesSubtitle": "Ottieni un sorriso sano e bello con la nostra gamma completa di servizi dentistici, che spazia dall'odontoiatria estetica e ortodonzia alla chirurgia orale complessa."
+    "aestheticServicesTitle": "Servizi Estetici",
+    "aestheticServicesSubtitle": "Dai miglioramenti discreti alle procedure chirurgiche trasformative, scopri la nostra suite di trattamenti estetici. Il nostro team di esperti è dedicato a ringiovanire il tuo aspetto e ad aumentare la tua fiducia con cure personalizzate.",
+    "dentalServicesTitle": "Servizi Dentistici",
+    "dentalServicesSubtitle": "Ottieni un sorriso sano e bello con la nostra gamma completa di servizi dentistici. Copriamo tutto, dalla cosmetica dentale e ortodonzia alla chirurgia orale complessa, tutto eseguito con precisione e cura."
   },
   "ServiceCategoryPage": {
     "metaTitle": "{categoryName} | {siteName}",
@@ -345,7 +345,7 @@
     "title": "Termini di Servizio",
     "lastUpdated": "Ultimo aggiornamento: {date}",
     "h2_1": "1. ACCETTAZIONE DEI TERMINI",
-    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personally che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
+    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personalmente che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
     "p1_2": "Riconosci e accetti che accedendo al Sito e/o utilizzando i nostri Servizi, hai letto, compreso e accetti di essere vincolato da tutti questi Termini di servizio. Se non sei d'accordo con tutti questi Termini di servizio, ti è espressamente vietato utilizzare il Sito e i nostri Servizi e devi interromperne immediatamente l'uso.",
     "p1_3": "Termini e condizioni supplementari o documenti che possono essere pubblicati sul Sito di volta in volta sono qui espressamente incorporati per riferimento.",
     "h2_2": "2. DIRITTI DI PROPRIETÀ INTELLETTUALE",
@@ -374,3 +374,5 @@
     "p10_2": "{siteName}<br />Att.ne: Ufficio Legale<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albania<br />Email: info@{SITE_DOMAIN}"
   }
 }
+
+    
