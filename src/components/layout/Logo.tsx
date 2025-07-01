@@ -21,6 +21,7 @@ export function Logo() {
         height={23}
         priority
       />
+      <span className="font-headline text-xl font-bold">{siteTitle}</span>
     </Link>
   );
 }
