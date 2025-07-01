@@ -76,6 +76,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   const siteName = tSite('title');
   const serviceName = tServices(`items.${service.id}.name`);
+  const serviceDescription = tServices(`items.${service.id}.description`);
 
   return (
     <>
@@ -99,9 +100,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div className="prose prose-lg max-w-none text-foreground">
             <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
             <div className="mb-6">
-              {tServices.rich(`items.${service.id}.description`, {
-                p: (chunks) => <p>{chunks}</p>,
-              })}
+              <p>{serviceDescription}</p>
             </div>
             
             <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteName })}</h3>

@@ -49,11 +49,6 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
-interface TranslatedService extends Service {
-  name: string;
-  description: string;
-}
-
 export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(params.categorySlug);
   const tServices = await getTranslations('Services');
@@ -68,12 +63,6 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   const categoryName = tServices(`categories.${category.id}.name`);
   const categoryDescription = tServices(`categories.${category.id}.description`);
   
-  const translatedServices: TranslatedService[] = category.services.map(service => ({
-    ...service,
-    name: tServices(`items.${service.id}.name`),
-    description: stripHtml(tServices(`items.${service.id}.description`)),
-  }));
-  
   const isDental = dentalCategoryIds.includes(category.id);
   const learnMoreText = tNav('exploreService');
 
@@ -81,16 +70,16 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
     <>
       <PageHeader title={categoryName} description={categoryDescription} />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
-        {translatedServices.length > 0 ? (
+        {category.services.length > 0 ? (
           isDental ? (
             <DentalServiceList
-              services={translatedServices}
+              services={category.services}
               categorySlug={category.slug}
               learnMoreText={learnMoreText}
             />
           ) : (
             <AestheticServiceList
-              services={translatedServices}
+              services={category.services}
               categorySlug={category.slug}
               learnMoreText={learnMoreText}
             />

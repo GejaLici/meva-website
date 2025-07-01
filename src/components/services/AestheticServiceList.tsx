@@ -3,7 +3,7 @@ import { ServiceCard } from '@/components/shared/ServiceCard';
 import type { Service } from '@/types/services';
 
 interface AestheticServiceListProps {
-  services: (Service & { name: string; description: string; })[];
+  services: Service[];
   categorySlug: string;
   learnMoreText: string;
 }
