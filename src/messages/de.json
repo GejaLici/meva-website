@@ -304,6 +304,17 @@
     "categoryNotFoundDescription": "Die angeforderte Dienstleistungskategorie konnte bei {siteName} nicht gefunden werden.",
     "noResults": "In dieser Kategorie sind derzeit keine Dienstleistungen verfügbar. Bitte kontaktieren Sie {siteName} für weitere Details."
   },
+  "ServiceRecommender": {
+    "title": "KI-Service-Empfehler",
+    "description": "Nicht sicher, was Sie brauchen? Beschreiben Sie Ihr Anliegen, und unser KI-Assistent schlägt Ihnen die relevantesten Dienstleistungen vor.",
+    "placeholder": "z.B. \"Ich habe einen abgebrochenen Zahn und möchte ihn reparieren lassen\" oder \"Ich mache mir Sorgen um Falten um meine Augen.\"",
+    "buttonText": "Empfehlungen erhalten",
+    "buttonLoadingText": "Analysiere...",
+    "resultsTitle": "Unsere Empfehlungen für Sie",
+    "noResults": "Basierend auf Ihrer Anfrage konnten wir keinen spezifischen Service finden. Bitte durchsuchen Sie unsere vollständige Liste von Dienstleistungen oder kontaktieren Sie uns für eine persönliche Beratung.",
+    "errorTitle": "Empfehlungsfehler",
+    "error": "Entschuldigung, beim Erstellen der Empfehlungen ist ein Fehler aufgetreten. Bitte versuchen Sie es in einem Moment erneut."
+  },
   "PrivacyPolicyPage": {
     "metaTitle": "Datenschutzrichtlinie | {siteName}",
     "metaDescription": "Offizielle Datenschutzrichtlinie für {siteName}. Verstehen Sie, wie wir Ihre persönlichen Daten in Übereinstimmung mit den Datenschutzbestimmungen sammeln, verwenden und schützen.",

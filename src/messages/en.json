@@ -304,6 +304,17 @@
     "categoryNotFoundDescription": "The requested service category could not be found at {siteName}.",
     "noResults": "There are no services available in this category at the moment. Please contact {siteName} for more details."
   },
+  "ServiceRecommender": {
+    "title": "AI Service Recommender",
+    "description": "Not sure what you need? Describe your concern, and our AI assistant will suggest the most relevant services for you.",
+    "placeholder": "e.g., \"I have a chipped tooth and want to fix it\" or \"I'm concerned about wrinkles around my eyes.\"",
+    "buttonText": "Get Recommendations",
+    "buttonLoadingText": "Analyzing...",
+    "resultsTitle": "Our Recommendations For You",
+    "noResults": "Based on your query, we couldn't pinpoint a specific service. Please feel free to browse our full list of services or contact us for a personalized consultation.",
+    "errorTitle": "Recommendation Error",
+    "error": "Sorry, an error occurred while generating recommendations. Please try again in a moment."
+  },
   "PrivacyPolicyPage": {
     "metaTitle": "Privacy Policy | {siteName}",
     "metaDescription": "Official Privacy Policy for {siteName}. Understand how we collect, use, and protect your personal information in compliance with data protection regulations.",

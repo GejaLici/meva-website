@@ -304,6 +304,17 @@
     "categoryNotFoundDescription": "La categoría de servicio solicitada no se pudo encontrar en {siteName}.",
     "noResults": "No hay servicios disponibles en esta categoría en este momento. Póngase en contacto con {siteName} para obtener más detalles."
   },
+  "ServiceRecommender": {
+    "title": "Recomendador de Servicios de IA",
+    "description": "¿No está seguro de lo que necesita? Describa su inquietud y nuestro asistente de IA le sugerirá los servicios más relevantes para usted.",
+    "placeholder": "p. ej., \"Tengo un diente astillado y quiero arreglarlo\" o \"Me preocupan las arrugas alrededor de los ojos.\"",
+    "buttonText": "Obtener Recomendaciones",
+    "buttonLoadingText": "Analizando...",
+    "resultsTitle": "Nuestras Recomendaciones Para Usted",
+    "noResults": "Según su consulta, no pudimos identificar un servicio específico. No dude en explorar nuestra lista completa de servicios o contáctenos para una consulta personalizada.",
+    "errorTitle": "Error de Recomendación",
+    "error": "Lo sentimos, se produjo un error al generar recomendaciones. Vuelva a intentarlo en un momento."
+  },
   "PrivacyPolicyPage": {
     "metaTitle": "Política de Privacidad | {siteName}",
     "metaDescription": "Política de Privacidad oficial de {siteName}. Entienda cómo recopilamos, usamos y protegemos su información personal de acuerdo con las regulaciones de protección de datos.",

@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
 import { getTranslations } from 'next-intl/server';
 import { serviceCategories } from '@/lib/services';
+import { ServiceRecommender } from '@/components/services/ServiceRecommender';
+import { Separator } from '@/components/ui/separator';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'ServicesOverviewPage'});
@@ -25,6 +27,12 @@ export default async function ServicesOverviewPage() {
         description={tOverview('description')}
       />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="mb-16">
+          <ServiceRecommender />
+        </section>
+        
+        <Separator className="my-12" />
+
         <ServiceCategoryGrid categories={categories} homePageLayout={false} />
       </div>
 

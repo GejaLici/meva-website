@@ -304,6 +304,17 @@
     "categoryNotFoundDescription": "La catégorie de service demandée n'a pas pu être trouvée à la {siteName}.",
     "noResults": "Aucun service n'est disponible dans cette catégorie pour le moment. Veuillez contacter {siteName} pour plus de détails."
   },
+  "ServiceRecommender": {
+    "title": "Recommandeur de Services IA",
+    "description": "Vous n'êtes pas sûr de ce dont vous avez besoin ? Décrivez votre préoccupation, et notre assistant IA vous suggérera les services les plus pertinents.",
+    "placeholder": "par ex., « J'ai une dent ébréchée et je veux la réparer » ou « Je m'inquiète des rides autour de mes yeux. »",
+    "buttonText": "Obtenir des Recommandations",
+    "buttonLoadingText": "Analyse en cours...",
+    "resultsTitle": "Nos Recommandations Pour Vous",
+    "noResults": "Sur la base de votre demande, nous n'avons pas pu identifier un service spécifique. N'hésitez pas à parcourir notre liste complète de services ou à nous contacter pour une consultation personnalisée.",
+    "errorTitle": "Erreur de Recommandation",
+    "error": "Désolé, une erreur s'est produite lors de la génération des recommandations. Veuillez réessayer dans un instant."
+  },
   "PrivacyPolicyPage": {
     "metaTitle": "Politique de confidentialité | {siteName}",
     "metaDescription": "Politique de confidentialité officielle de {siteName}. Comprenez comment nous collectons, utilisons et protégeons vos informations personnelles conformément aux réglementations sur la protection des données.",
@@ -338,7 +349,7 @@
     "h2_7": "7. QUELS SONT VOS DROITS EN MATIÈRE DE CONFIDENTIALITÉ ?",
     "p8_1": "Dans certaines régions, telles que l'Espace économique européen (EEE) et le Royaume-Uni (RU), vous disposez de certains droits en vertu des lois applicables sur la protection des données. Ceux-ci peuvent inclure le droit (i) de demander l'accès et d'obtenir une copie de vos informations personnelles, (ii) de demander la rectification ou l'effacement de vos informations personnelles ; (iii) de restreindre le traitement de vos informations personnelles ; et (iv) le cas échéant, à la portabilité des données. Dans certaines circonstances, vous pouvez également avoir le droit de vous opposer au traitement de vos informations personnelles. Pour faire une telle demande, veuillez utiliser les coordonnées fournies ci-dessous.",
     "h2_8": "8. MISES À JOUR DE CETTE POLITIQUE",
-    "p9_1": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires. La version mise à jour sera indiquée par une date de « Révision » ou de « Dernière mise à jour » mise à jour et la version mise à jour entrera en vigueur dès qu'elle sera accessible sur le Site. Nous vous encourageons à consulter fréquemment cette politique de confidentialité pour être informé de la manière dont nous protégeons vos informations.",
+    "p9_1": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires. La version mise à jour sera indiquée par une date de « Révision » ou de « Dernière mise à jour » mise à jour et la version mise à jour entrera en vigueur dès qu'elle sera accessible sur le Site. Nous vous encourageons à consulter frequently cette politique de confidentialité pour être informé de la manière dont nous protégeons vos informations.",
     "h2_9": "9. COMMENT POUVEZ-VOUS NOUS CONTACTER AU SUJET DE CETTE POLITIQUE ?",
     "p10_1": "Si vous avez des questions, des commentaires ou des préoccupations concernant cette politique de confidentialité ou nos pratiques en matière de données, vous pouvez envoyer un e-mail à notre délégué à la protection des données à info@{SITE_DOMAIN} ou nous contacter par courrier à :",
     "p10_2": "{siteName}<br />À l'attention de : Délégué à la protection des données<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albanie"

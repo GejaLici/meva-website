@@ -304,6 +304,17 @@
     "categoryNotFoundDescription": "La categoria di servizio richiesta non è stata trovata presso {siteName}.",
     "noResults": "Al momento non sono disponibili servizi in questa categoria. Si prega di contattare {siteName} per maggiori dettagli."
   },
+  "ServiceRecommender": {
+    "title": "Consigliatore di Servizi AI",
+    "description": "Non sei sicuro di cosa hai bisogno? Descrivi la tua preoccupazione e il nostro assistente AI ti suggerirà i servizi più pertinenti.",
+    "placeholder": "es. \"Ho un dente scheggiato e voglio ripararlo\" o \"Sono preoccupato per le rughe intorno agli occhi.\"",
+    "buttonText": "Ottieni Raccomandazioni",
+    "buttonLoadingText": "Analisi in corso...",
+    "resultsTitle": "Le Nostre Raccomandazioni Per Te",
+    "noResults": "In base alla tua richiesta, non siamo riusciti a individuare un servizio specifico. Sentiti libero di sfogliare il nostro elenco completo di servizi o di contattarci per una consulenza personalizzata.",
+    "errorTitle": "Errore di Raccomandazione",
+    "error": "Spiacenti, si è verificato un errore durante la generazione delle raccomandazioni. Riprova tra un momento."
+  },
   "PrivacyPolicyPage": {
     "metaTitle": "Informativa sulla Privacy | {siteName}",
     "metaDescription": "Informativa sulla Privacy ufficiale di {siteName}. Comprendi come raccogliamo, utilizziamo e proteggiamo le tue informazioni personali in conformità con le normative sulla protezione dei dati.",

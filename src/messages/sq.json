@@ -304,6 +304,17 @@
     "categoryNotFoundDescription": "Kategoria e kërkuar e shërbimit nuk u gjet në {siteName}.",
     "noResults": "Nuk ka shërbime të disponueshme në këtë kategori për momentin. Ju lutemi kontaktoni {siteName} për më shumë detaje."
   },
+  "ServiceRecommender": {
+    "title": "Rekomanduesi i Shërbimeve me AI",
+    "description": "Nuk jeni të sigurt se çfarë ju nevojitet? Përshkruani shqetësimin tuaj dhe asistenti ynë i AI do t'ju sugjerojë shërbimet më të rëndësishme.",
+    "placeholder": "p.sh. \"Kam një dhëmb të thyer dhe dua ta rregulloj\" ose \"Jam i shqetësuar për rrudhat rreth syve.\"",
+    "buttonText": "Merrni Rekomandime",
+    "buttonLoadingText": "Duke analizuar...",
+    "resultsTitle": "Rekomandimet Tona Për Ju",
+    "noResults": "Bazuar në kërkesën tuaj, nuk mundëm të gjenim një shërbim specifik. Ju lutemi, mos ngurroni të shfletoni listën tonë të plotë të shërbimeve ose të na kontaktoni për një konsultë të personalizuar.",
+    "errorTitle": "Gabim në Rekomandim",
+    "error": "Na vjen keq, ndodhi një gabim gjatë gjenerimit të rekomandimeve. Ju lutemi provoni përsëri pas pak."
+  },
   "PrivacyPolicyPage": {
     "metaTitle": "Politika e Privatësisë | {siteName}",
     "metaDescription": "Politika zyrtare e Privatësisë për {siteName}. Kuptoni se si ne mbledhim, përdorim dhe mbrojmë informacionin tuaj personal në përputhje me rregulloret e mbrojtjes së të dhënave.",
