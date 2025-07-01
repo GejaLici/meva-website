@@ -12,7 +12,8 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contact",
-    "dentalServices": "Dental Services"
+    "dentalServices": "Dental Services",
+    "exploreService": "Learn More"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Change language",
@@ -286,15 +287,11 @@
     "metaTitle": "Our Services | {siteName}",
     "metaDescription": "Explore the comprehensive range of advanced aesthetic and dental services offered at {siteName}. Discover treatments tailored by experts to enhance your beauty and well-being.",
     "title": "Our Advanced Aesthetic & Dental Services",
-    "description": "Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at {siteName}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results."
-  },
-  "DentalServicesPage": {
-    "metaTitle": "Comprehensive Dental Services | {siteName}",
-    "metaDescription": "Explore our extensive range of expert dental services at {siteName}, from advanced aesthetic treatments and orthodontics to oral surgery and specialized pediatric care.",
-    "title": "Comprehensive Dental Services",
-    "description": "Discover our wide array of specialized dental treatments at {siteName}, designed to enhance your smile and safeguard your oral health. Our expert dental team offers everything from advanced cosmetic enhancements and orthodontics to comprehensive surgical procedures and dedicated pediatric care.",
-    "exploreButton": "Explore {categoryName}",
-    "noResults": "No dental service categories are currently available. Please contact {siteName} for the latest information."
+    "description": "Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at {siteName}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results.",
+    "aestheticServicesTitle": "Our Premier Aesthetic Services",
+    "aestheticServicesSubtitle": "From subtle enhancements to transformative surgical procedures, discover our suite of aesthetic treatments designed to rejuvenate your appearance and boost your confidence.",
+    "dentalServicesTitle": "Our Comprehensive Dental Care",
+    "dentalServicesSubtitle": "Achieve a healthy, beautiful smile with our full range of dental services, spanning from cosmetic dentistry and orthodontics to complex oral surgery."
   },
   "ServiceCategoryPage": {
     "metaTitle": "{categoryName} | {siteName}",

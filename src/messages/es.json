@@ -12,7 +12,8 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contacto",
-    "dentalServices": "Servicios Dentales"
+    "dentalServices": "Servicios Dentales",
+    "exploreService": "Aprende más"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Cambiar idioma",
@@ -286,15 +287,11 @@
     "metaTitle": "Nuestros Servicios | {siteName}",
     "metaDescription": "Explore la gama completa de servicios estéticos y dentales avanzados que se ofrecen en {siteName}. Descubra tratamientos personalizados por expertos para realzar su belleza y bienestar.",
     "title": "Nuestros Servicios Estéticos y Dentales Avanzados",
-    "description": "Explore el espectro completo de tratamientos estéticos y dentales especializados que se ofrecen en {siteName}. Cada servicio está diseñado meticulosamente para ayudarle a alcanzar sus objetivos de belleza y bienestar distintivos. Nuestro equipo médico experto está dedicado a proporcionar atención avanzada y personalizada y a ofrecer resultados excepcionales y duraderos."
-  },
-  "DentalServicesPage": {
-    "metaTitle": "Servicios Dentales Integrales | {siteName}",
-    "metaDescription": "Explore nuestra amplia gama de servicios dentales expertos en {siteName}, desde tratamientos estéticos avanzados y ortodoncia hasta cirugía oral y atención pediátrica especializada.",
-    "title": "Servicios Dentales Integrales",
-    "description": "Descubra nuestra amplia gama de tratamientos dentales especializados en {siteName}, diseñados para mejorar su sonrisa y proteger su salud bucal. Nuestro equipo dental experto ofrece todo, desde mejoras cosméticas avanzadas y ortodoncia hasta procedimientos quirúrgicos integrales y atención pediátrica dedicada.",
-    "exploreButton": "Explorar {categoryName}",
-    "noResults": "Actualmente no hay categorías de servicios dentales disponibles. Póngase en contacto con {siteName} para obtener la información más reciente."
+    "description": "Explore el espectro completo de tratamientos estéticos y dentales especializados que se ofrecen en {siteName}. Cada servicio está diseñado meticulosamente para ayudarle a alcanzar sus objetivos de belleza y bienestar distintivos. Nuestro equipo médico experto está dedicado a proporcionar atención avanzada y personalizada y a ofrecer resultados excepcionales y duraderos.",
+    "aestheticServicesTitle": "Nuestros principales servicios estéticos",
+    "aestheticServicesSubtitle": "Desde mejoras sutiles hasta procedimientos quirúrgicos transformadores, descubra nuestro conjunto de tratamientos estéticos diseñados para rejuvenecer su apariencia y aumentar su confianza.",
+    "dentalServicesTitle": "Nuestra atención dental integral",
+    "dentalServicesSubtitle": "Logre una sonrisa sana y hermosa con nuestra gama completa de servicios dentales, que abarca desde la odontología cosmética y la ortodoncia hasta la cirugía oral compleja."
   },
   "ServiceCategoryPage": {
     "metaTitle": "{categoryName} | {siteName}",

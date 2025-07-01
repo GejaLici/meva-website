@@ -12,7 +12,8 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Kontakt",
-    "dentalServices": "Zahnärztliche Leistungen"
+    "dentalServices": "Zahnärztliche Leistungen",
+    "exploreService": "Mehr Erfahren"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Sprache ändern",
@@ -119,7 +120,7 @@
       "mbj-vetullave": { "name": "Augenbrauentransplantation", "description": "<p>Ein Eingriff, bei dem Haarfollikel in die Augenbrauen transplantiert werden, um vollere, definiertere Brauen zu schaffen, oft für diejenigen mit von Natur aus dünnen Brauen oder Haarausfall.</p>" },
       "lift-vetullave": { "name": "Augenbrauenlift (Browplastik)", "description": "<p>Ein chirurgischer Eingriff, um schlaffe Augenbrauen anzuheben und das Erscheinungsbild von Falten auf der Stirn und zwischen den Augen zu verbessern, was zu einem jugendlicheren und ausgeruhteren Aussehen führt.</p>" },
       "blefaroplastika": { "name": "Augenlidchirurgie (Blepharoplastik)", "description": "<p>Eine Operation zur Verbesserung des Aussehens der Augenlider. Sie kann an den Oberlidern, den Unterlidern oder beiden durchgeführt werden, um schlaffe Haut, überschüssiges Fett oder Tränensäcke zu entfernen.</p>" },
-      "lift-fytyres": { "name": "Facelift (Rhytidektomie)", "description": "<p>Ein chirurgischer Eingriff, um die sichtbaren Zeichen des Alterns im Gesicht und am Hals, wie Erschlaffung, tiefe Falten und loose Haut, zu verbessern.</p>" },
+      "lift-fytyres": { "name": "Facelift (Rhytidektomie)", "description": "<p>Ein chirurgischer Eingriff, um die sichtbaren Zeichen des Alterns im Gesicht und am Hals, wie Erschlaffung, tiefe Falten und lose Haut, zu verbessern.</p>" },
       "rim-mjekres": { "name": "Kinnvergrößerung (Genioplastik)", "description": "<p>Ein chirurgischer Eingriff zur Umformung oder Vergrößerung des Kinns, entweder durch ein Implantat oder durch eine Umformung des Knochens, um die Proportionen des Gesichts auszugleichen.</p>" },
       "lip-reshaping": { "name": "Lippenkorrektur & -vergrößerung", "description": "<p>Ein kosmetischer Eingriff zur Verbesserung des Aussehens der Lippen durch Vergrößerung von Volumen, Form, Struktur oder Symmetrie, oft unter Verwendung von Hautfüllern.</p>" },
       "xanthelasma-plasma-arc": { "name": "Entfernung von Augenlidablagerungen (Plasma)", "description": "<p>Dies ist eine nicht-chirurgische Behandlung zur Entfernung von gelben Cholesterinflecken auf den Augenlidern. Wir verwenden ein präzises Plasmagerät, um diese Ablagerungen sanft zu entfernen, was Ihnen eine glattere Haut mit sehr geringer Erholungszeit beschert.</p>" },
@@ -286,15 +287,11 @@
     "metaTitle": "Unsere Leistungen | {siteName}",
     "metaDescription": "Entdecken Sie das umfassende Angebot an fortschrittlichen ästhetischen und zahnärztlichen Leistungen, die in der {siteName} angeboten werden. Entdecken Sie von Experten maßgeschneiderte Behandlungen zur Steigerung Ihrer Schönheit und Ihres Wohlbefindens.",
     "title": "Unsere fortschrittlichen ästhetischen & zahnärztlichen Leistungen",
-    "description": "Entdecken Sie das umfassende Spektrum spezialisierter ästhetischer und zahnärztlicher Behandlungen, die in der {siteName} angeboten werden. Jede Dienstleistung ist sorgfältig darauf ausgelegt, Ihnen zu helfen, Ihre individuellen Schönheits- und Wellnessziele zu erreichen. Unser medizinisches Expertenteam ist bestrebt, fortschrittliche, personalisierte Pflege zu bieten und außergewöhnliche, dauerhafte Ergebnisse zu liefern."
-  },
-  "DentalServicesPage": {
-    "metaTitle": "Umfassende zahnärztliche Leistungen | {siteName}",
-    "metaDescription": "Entdecken Sie unser umfangreiches Angebot an zahnärztlichen Expertenleistungen in der {siteName}, von fortschrittlichen ästhetischen Behandlungen und Kieferorthopädie bis hin zu Oralchirurgie und spezialisierter Kinderzahnheilkunde.",
-    "title": "Umfassende zahnärztliche Leistungen",
-    "description": "Entdecken Sie unser breites Spektrum an spezialisierten zahnärztlichen Behandlungen in der {siteName}, die darauf ausgelegt sind, Ihr Lächeln zu verbessern und Ihre Mundgesundheit zu schützen. Unser zahnärztliches Expertenteam bietet alles von fortschrittlichen kosmetischen Verbesserungen und Kieferorthopädie bis hin zu umfassenden chirurgischen Eingriffen und engagierter Kinderzahnheilkunde.",
-    "exploreButton": "Entdecken Sie {categoryName}",
-    "noResults": "Derzeit sind keine zahnärztlichen Leistungskategorien verfügbar. Bitte kontaktieren Sie {siteName} für die neuesten Informationen."
+    "description": "Entdecken Sie das umfassende Spektrum spezialisierter ästhetischer und zahnärztlicher Behandlungen, die in der {siteName} angeboten werden. Jede Dienstleistung ist sorgfältig darauf ausgelegt, Ihnen zu helfen, Ihre individuellen Schönheits- und Wellnessziele zu erreichen. Unser medizinisches Expertenteam ist bestrebt, fortschrittliche, personalisierte Pflege zu bieten und außergewöhnliche, dauerhafte Ergebnisse zu liefern.",
+    "aestheticServicesTitle": "Unsere erstklassigen ästhetischen Dienstleistungen",
+    "aestheticServicesSubtitle": "Von subtilen Verbesserungen bis hin zu transformativen chirurgischen Eingriffen – entdecken Sie unser Angebot an ästhetischen Behandlungen, die Ihr Aussehen verjüngen und Ihr Selbstvertrauen stärken.",
+    "dentalServicesTitle": "Unsere umfassende zahnärztliche Versorgung",
+    "dentalServicesSubtitle": "Erreichen Sie ein gesundes, schönes Lächeln mit unserem gesamten Spektrum an zahnärztlichen Leistungen, das von kosmetischer Zahnmedizin und Kieferorthopädie bis hin zu komplexer Oralchirurgie reicht."
   },
   "ServiceCategoryPage": {
     "metaTitle": "{categoryName} | {siteName}",

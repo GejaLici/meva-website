@@ -17,11 +17,12 @@ interface ServiceCardProps {
 
 export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   const tServices = useTranslations('Services');
+  const tNav = useTranslations('Navigation');
   
   const serviceName = tServices(`items.${service.id}.name`);
   const rawDescription = tServices(`items.${service.id}.description`);
   const serviceDescription = stripHtml(rawDescription);
-  const learnMoreText = "Learn More"; // Using hardcoded text as per a previous request.
+  const learnMoreText = tNav('exploreService');
   const encodedImageUrl = service.image ? encodeURI(service.image) : undefined;
 
   return (
