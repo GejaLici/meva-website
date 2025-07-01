@@ -12,9 +12,7 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Kontakt",
-    "dentalServices": "Zahnärztliche Leistungen",
-    "exploreService": "Entdecken Sie {categoryName}",
-    "learnMore": "Mehr erfahren"
+    "dentalServices": "Zahnärztliche Leistungen"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Sprache ändern",

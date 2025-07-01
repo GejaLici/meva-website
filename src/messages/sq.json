@@ -12,9 +12,7 @@
     "blog": "Blogu",
     "faq": "Pyetje të Shpeshta",
     "contact": "Kontakti",
-    "dentalServices": "Shërbimet Dentare",
-    "exploreService": "Eksploro {categoryName}",
-    "learnMore": "Mëso më shumë"
+    "dentalServices": "Shërbimet Dentare"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Ndrysho gjuhën",

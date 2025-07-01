@@ -12,9 +12,7 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contact",
-    "dentalServices": "Services Dentaires",
-    "exploreService": "Explorer {categoryName}",
-    "learnMore": "En savoir plus"
+    "dentalServices": "Services Dentaires"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Changer de langue",
@@ -207,7 +205,7 @@
     "formTitle": "Formulaire de demande sécurisé"
   },
   "FaqPage": {
-    "metaTitle": "Questions fréquemment posées | {siteName}",
+    "metaTitle": "Questions frequently posées | {siteName}",
     "metaDescription": "Trouvez des réponses complètes aux questions courantes sur les procédures esthétiques, les consultations, la récupération et les parcours de soins à {siteName}.",
     "title": "Questions fréquemment posées (FAQ)",
     "description": "Trouvez des réponses complètes aux questions fréquemment posées concernant nos services spécialisés, nos procédures avancées, la préparation préopératoire et les soins post-traitement à {siteName}.",
@@ -337,7 +335,7 @@
     "h2_6": "6. COMMENT PROTÉGEONS-NOUS VOS INFORMATIONS ?",
     "p7_1": "Nous avons mis en place des mesures de sécurité techniques et organisationnelles appropriées conçues pour protéger la sécurité de toutes les informations personnelles que nous traitons. Ces mesures visent à empêcher l'accès, la divulgation, l'altération ou la destruction non autorisés de vos données personnelles. Cependant, malgré nos garanties et nos efforts continus pour sécuriser vos informations, aucune transmission électronique sur Internet ou technologie de stockage d'informations ne peut être garantie à 100 %. Par conséquent, nous ne pouvons pas promettre ou garantir que des pirates, des cybercriminels ou d'autres tiers non autorisés ne pourront pas déjouer notre sécurité et collecter, accéder, voler ou modifier vos informations de manière inappropriée. La transmission d'informations personnelles vers et depuis notre Site se fait à vos propres risques.",
     "h2_7": "7. QUELS SONT VOS DROITS EN MATIÈRE DE CONFIDENTIALITÉ ?",
-    "p8_1": "Dans certaines régions, telles que l'Espace économique européen (EEE) et le Royaume-Uni (RU), vous disposez de certains droits en vertu des lois applicables sur la protection des données. Ceux-ci могут inclure le droit (i) de demander l'accès et d'obtenir une copie de vos informations personnelles, (ii) de demander la rectification ou l'effacement de vos informations personnelles ; (iii) de restreindre le traitement de vos informations personnelles ; et (iv) le cas échéant, à la portabilité des données. Dans certaines circonstances, vous pouvez également avoir le droit de vous opposer au traitement de vos informations personnelles. Pour faire une telle demande, veuillez utiliser les coordonnées fournies ci-dessous.",
+    "p8_1": "Dans certaines régions, telles que l'Espace économique européen (EEE) et le Royaume-Uni (RU), vous disposez de certains droits en vertu des lois applicables sur la protection des données. Ceux-ci peuvent inclure le droit (i) de demander l'accès et d'obtenir une copie de vos informations personnelles, (ii) de demander la rectification ou l'effacement de vos informations personnelles ; (iii) de restreindre le traitement de vos informations personnelles ; et (iv) le cas échéant, à la portabilité des données. Dans certaines circonstances, vous pouvez également avoir le droit de vous opposer au traitement de vos informations personnelles. Pour faire une telle demande, veuillez utiliser les coordonnées fournies ci-dessous.",
     "h2_8": "8. MISES À JOUR DE CETTE POLITIQUE",
     "p9_1": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires. La version mise à jour sera indiquée par une date de « Révision » ou de « Dernière mise à jour » mise à jour et la version mise à jour entrera en vigueur dès qu'elle sera accessible sur le Site. Nous vous encourageons à consulter fréquemment cette politique de confidentialité pour être informé de la manière dont nous protégeons vos informations.",
     "h2_9": "9. COMMENT POUVEZ-VOUS NOUS CONTACTER AU SUJET DE CETTE POLITIQUE ?",
@@ -352,7 +350,7 @@
     "h2_1": "1. ACCORD SUR LES CONDITIONS",
     "p1_1": "Ces conditions d'utilisation (« Conditions ») constituent un accord juridiquement contraignant conclu entre vous, que ce soit à titre personnel ou au nom d'une entité (« vous » ou « Utilisateur »), et {siteName} (« nous » ou « notre »), concernant votre accès et votre utilisation du site Web {SITE_DOMAIN} ainsi que toute autre forme de média, canal multimédia, site Web mobile ou application mobile connexe, lié ou autrement connecté (collectivement, le « Site » et les « Services »).",
     "p1_2": "Vous reconnaissez et acceptez qu'en accédant au Site et/ou en utilisant nos Services, vous avez lu, compris et acceptez d'être lié par toutes ces Conditions d'utilisation. Si vous n'acceptez pas toutes ces Conditions d'utilisation, il vous est expressément interdit d'utiliser le Site et nos Services, et vous devez cesser immédiatement de les utiliser.",
-    "p1_3": "Les termes et conditions supplémentaires ou les documents qui могут être publiés sur le Site de temps à autre sont expressément incorporés aux présentes par référence.",
+    "p1_3": "Les termes et conditions supplémentaires ou les documents qui peuvent être publiés sur le Site de temps à autre sont expressément incorporés aux présentes par référence.",
     "h2_2": "2. DROITS DE PROPRIÉTÉ INTELLECTUELLE",
     "p2_1": "Sauf indication contraire, le Site et les Services sont notre propriété exclusive. Tous les codes sources, bases de données, fonctionnalités, logiciels, conceptions de sites Web, fichiers audio, vidéo, textes, photographies et graphiques sur le Site (collectivement, le « Contenu ») et les marques de commerce, marques de service et logos qui y sont contenus (les « Marques ») sont détenus ou contrôlés par nous ou nous sont concédés sous licence. Ils sont protégés par les lois sur le droit d'auteur et les marques de commerce et diverses autres lois sur la propriété intellectuelle et la concurrence déloyale de l'Albanie, des juridictions étrangères et des conventions internationales. Sauf disposition expresse dans les présentes Conditions, aucune partie du Site, des Services, du Contenu ou des Marques ne peut être copiée, reproduite, agrégée, republiée, téléchargée, publiée, affichée publiquement, encodée, traduite, transmise, distribuée, vendue, concédée sous licence ou exploitée de toute autre manière à des fins commerciales, sans notre autorisation écrite préalable expresse.",
     "h2_3": "3. DÉCLARATIONS ET GARANTIES DE L'UTILISATEUR",

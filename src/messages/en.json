@@ -12,9 +12,7 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contact",
-    "dentalServices": "Dental Services",
-    "exploreService": "Explore {categoryName}",
-    "learnMore": "Learn More"
+    "dentalServices": "Dental Services"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Change language",
@@ -379,5 +377,3 @@
     "p10_2": "{siteName}<br />Attn: Legal Department<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albania<br />Email: info@{SITE_DOMAIN}"
   }
 }
-
-    
