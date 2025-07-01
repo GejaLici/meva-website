@@ -23,13 +23,12 @@ interface ServiceCategoryGridProps {
 
 export async function ServiceCategoryGrid({ categories, homePageLayout = false }: ServiceCategoryGridProps) {
   const tServices = await getTranslations('Services');
-  const tNav = await getTranslations('Navigation');
   
   const renderCard = (category: ServiceCategory, className?: string) => {
     const CategoryIcon = category.icon ? ICONS[category.icon] : null;
     const name = tServices(`categories.${category.id}.name`);
     const description = tServices(`categories.${category.id}.description`);
-    const exploreText = tNav('exploreService', { categoryName: name });
+    const exploreText = "Learn More";
 
     return (
       <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", className)}>
