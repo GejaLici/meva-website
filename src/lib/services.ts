@@ -47,13 +47,13 @@ const bodyServices: Service[] = [
   { id: 'rim-vitheve-bbl', slug: 'bbl-buttock-remodeling', image: '/images/BBL%20Buttock%20Remodeling.png', imageHint: 'buttock remodel surgery' },
   { id: 'labioplastika', slug: 'labiaplasty', image: 'https://placehold.co/600x400.png', imageHint: 'labiaplasty procedure' },
   { id: 'lift-kofsheve', slug: 'thigh-lift', image: '/images/Thigh%20Lift.png', imageHint: 'thigh lift results' },
-  { id: 'gynecomastia', slug: 'gynecomastia', image: 'https://placehold.co/600x400.png', imageHint: 'male chest surgery' },
-  { id: 'cellulite-treatment', slug: 'cellulite-treatment', image: '/images/Cellulite%20Treatment.png', imageHint: 'cellulite reduction therapy' },
-  { id: 'plasma-arc-body', slug: 'plasma-arc-body', image: '/images/Plasma%20Arc%20(Body).png', imageHint: 'skin tightening body treatment' },
-  { id: 'carboxytherapy', slug: 'carboxytherapy', image: 'https://placehold.co/600x400.png', imageHint: 'skin treatment co2' },
-  { id: 'sclerotherapy', slug: 'sclerotherapy', image: 'https://placehold.co/600x400.png', imageHint: 'vein treatment legs' },
-  { id: 'lipolysis', slug: 'lipolysis', image: 'https://placehold.co/600x400.png', imageHint: 'fat reduction procedure' },
-  { id: 'laser-hair-removal', slug: 'laser-hair-removal', image: '/images/Laser%20Hair%20Removal.png', imageHint: 'hair removal laser' },
+  { id: 'gynecomastia', slug: 'gynecomastia', image: 'https://placehold.co/600x400.png', imageHint: 'male chest' },
+  { id: 'cellulite-treatment', slug: 'cellulite-treatment', image: '/images/Cellulite%20Treatment.png', imageHint: 'cellulite reduction' },
+  { id: 'plasma-arc-body', slug: 'plasma-arc-body', image: '/images/Plasma%20Arc%20(Body).png', imageHint: 'skin tightening' },
+  { id: 'carboxytherapy', slug: 'carboxytherapy', image: 'https://placehold.co/600x400.png', imageHint: 'co2 therapy' },
+  { id: 'sclerotherapy', slug: 'sclerotherapy', image: 'https://placehold.co/600x400.png', imageHint: 'vein treatment' },
+  { id: 'lipolysis', slug: 'lipolysis', image: 'https://placehold.co/600x400.png', imageHint: 'fat reduction' },
+  { id: 'laser-hair-removal', slug: 'laser-hair-removal', image: '/images/Laser%20Hair%20Removal.png', imageHint: 'laser hair removal' },
 ];
 
 const aestheticDentistryServices: Service[] = [

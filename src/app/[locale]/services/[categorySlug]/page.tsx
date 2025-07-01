@@ -59,6 +59,7 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   const tServices = await getTranslations('Services');
   const tPage = await getTranslations('ServiceCategoryPage');
   const tNav = await getTranslations('Navigation');
+  const tSite = await getTranslations('Site');
   
   if (!category) {
     notFound();
@@ -66,15 +67,15 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   
   const categoryName = tServices(`categories.${category.id}.name`);
   const categoryDescription = tServices(`categories.${category.id}.description`);
-  const learnMoreText = tNav('exploreService');
   
   const translatedServices: TranslatedService[] = category.services.map(service => ({
     ...service,
     name: tServices(`items.${service.id}.name`),
-    description: stripHtml(tServices(`items.${service.id}.description`))
+    description: stripHtml(tServices(`items.${service.id}.description`)),
   }));
   
   const isDental = dentalCategoryIds.includes(category.id);
+  const learnMoreText = tNav('exploreService');
 
   return (
     <>
@@ -96,7 +97,7 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
           )
         ) : (
           <p className="text-center text-lg text-muted-foreground">
-            {tPage('noResults')}
+            {tPage('noResults', {siteName: tSite('title')})}
           </p>
         )}
       </div>
