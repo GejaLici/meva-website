@@ -5,20 +5,7 @@ import { serviceCategories } from '@/lib/services';
 
 export async function ServicesSection() {
   const t = await getTranslations('HomePage');
-  const tNav = await getTranslations('Navigation');
-  const tServices = await getTranslations('Services');
-
-  const categories = serviceCategories
-    .filter(cat => cat.displayOnHome)
-    .map(category => {
-      const name = tServices(`categories.${category.id}.name`);
-      return {
-        ...category,
-        name,
-        description: tServices(`categories.${category.id}.description`),
-        exploreText: tNav('exploreService', { categoryName: name }),
-      };
-    });
+  const categories = serviceCategories.filter(cat => cat.displayOnHome);
   
   return (
     <section className="py-16">

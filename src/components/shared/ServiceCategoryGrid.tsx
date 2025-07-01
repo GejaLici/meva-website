@@ -1,13 +1,12 @@
-
-'use client';
-
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Gem, Leaf, Heart, PersonStanding, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
+import type { ServiceCategory } from '@/types/services';
+import { getTranslations } from 'next-intl/server';
+import React from 'react';
 
 const ICONS: { [key: string]: React.ElementType } = {
   Gem,
@@ -17,33 +16,28 @@ const ICONS: { [key: string]: React.ElementType } = {
   Sparkles,
 };
 
-interface CategoryGridItem {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  exploreText: string;
-  image?: string;
-  imageHint?: string;
-  icon?: string;
-}
-
 interface ServiceCategoryGridProps {
-  categories: CategoryGridItem[];
+  categories: ServiceCategory[];
   homePageLayout?: boolean;
 }
 
-export function ServiceCategoryGrid({ categories, homePageLayout = false }: ServiceCategoryGridProps) {
+export async function ServiceCategoryGrid({ categories, homePageLayout = false }: ServiceCategoryGridProps) {
+  const tServices = await getTranslations('Services');
+  const tNav = await getTranslations('Navigation');
   
-  const renderCard = (category: CategoryGridItem, className?: string) => {
+  const renderCard = (category: ServiceCategory, className?: string) => {
     const CategoryIcon = category.icon ? ICONS[category.icon] : null;
+    const name = tServices(`categories.${category.id}.name`);
+    const description = tServices(`categories.${category.id}.description`);
+    const exploreText = tNav('exploreService', { categoryName: name });
+
     return (
       <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", className)}>
         {category.image && (
           <div className="relative w-full h-56 overflow-hidden">
             <Image
               src={category.image}
-              alt={category.name}
+              alt={name}
               fill
               style={{ objectFit: 'cover' }}
               data-ai-hint={category.imageHint || 'medical service collage'}
@@ -57,15 +51,15 @@ export function ServiceCategoryGrid({ categories, homePageLayout = false }: Serv
               <CategoryIcon className="h-6 w-6" />
             </div>
           )}
-          <CardTitle className="font-headline text-2xl text-primary group-hover:text-accent transition-colors duration-300">{category.name}</CardTitle>
+          <CardTitle className="font-headline text-2xl text-primary group-hover:text-accent transition-colors duration-300">{name}</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow flex flex-col">
           <CardDescription className="text-muted-foreground mb-6 flex-grow line-clamp-3 text-center">
-            {category.description}
+            {description}
           </CardDescription>
           <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
             <Link href={category.id === 'dental-summary' ? '/services/dental' : `/services/${category.slug}`}>
-              {category.exploreText} <ArrowRight className="ml-2 h-4 w-4" />
+              {exploreText} <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </CardContent>
@@ -99,4 +93,3 @@ export function ServiceCategoryGrid({ categories, homePageLayout = false }: Serv
     </>
   );
 }
-

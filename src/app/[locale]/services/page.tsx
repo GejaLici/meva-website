@@ -1,4 +1,3 @@
-
 import { PageHeader } from '@/components/shared/PageHeader';
 import type { Metadata } from 'next';
 import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
@@ -16,20 +15,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 
 export default async function ServicesOverviewPage() {
   const tOverview = await getTranslations('ServicesOverviewPage');
-  const tNav = await getTranslations('Navigation');
-  const tServices = await getTranslations('Services');
 
-  const categories = serviceCategories
-    .filter(cat => cat.id !== 'dental-summary')
-    .map(category => {
-      const name = tServices(`categories.${category.id}.name`);
-      return {
-        ...category,
-        name,
-        description: tServices(`categories.${category.id}.description`),
-        exploreText: tNav('exploreService', { categoryName: name }),
-      };
-    });
+  const categories = serviceCategories.filter(cat => cat.id !== 'dental-summary');
   
   return (
     <>
