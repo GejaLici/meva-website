@@ -56,7 +56,9 @@
     "insightsFaqDesc": "Finden Sie umfassende Antworten auf häufige Fragen zu unseren Verfahren, Genesungsprotokollen und was Sie während Ihrer Reise mit uns erwartet.",
     "insightsFaqButton": "Besuchen Sie unsere umfassenden FAQ",
     "contactTitle": "Bereit für Ihre Transformation?",
-    "contactSubtitle": "Beginnen Sie Ihre Reise zu Ihren gewünschten ästhetischen Ergebnissen. Kontaktieren Sie die Meva Klinik noch heute für eine vertrauliche Beratung. Füllen Sie das untenstehende Formular aus, und unser engagiertes Team von medizinischen Experten wird sich umgehend mit Ihnen in Verbindung setzen, um Ihre Wünsche zu besprechen und Sie durch unsere personalisierten Behandlungswege zu führen."
+    "contactSubtitle": "Beginnen Sie Ihre Reise zu Ihren gewünschten ästhetischen Ergebnissen. Kontaktieren Sie die Meva Klinik noch heute für eine vertrauliche Beratung. Füllen Sie das untenstehende Formular aus, und unser engagiertes Team von medizinischen Experten wird sich umgehend mit Ihnen in Verbindung setzen, um Ihre Wünsche zu besprechen und Sie durch unsere personalisierten Behandlungswege zu führen.",
+    "recommenderTitle": "KI-gestützte Empfehlungen",
+    "recommenderSubtitle": "Lassen Sie sich von unserem intelligenten Assistenten zum perfekten Treatment führen."
   },
   "ContactForm": {
     "nameLabel": "Vollständiger Name",

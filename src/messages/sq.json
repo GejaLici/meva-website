@@ -56,7 +56,9 @@
     "insightsFaqDesc": "Gjeni përgjigje të plota për pyetjet e zakonshme rreth procedurave tona, protokolleve të rimëkëmbjes dhe çfarë të prisni gjatë udhëtimit tuaj me ne.",
     "insightsFaqButton": "Vizitoni FAQ-in Tonë të Plotë",
     "contactTitle": "Gati për Transformimin Tuaj?",
-    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni Klinikën Meva sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar."
+    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni Klinikën Meva sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar.",
+    "recommenderTitle": "Rekomandime me AI",
+    "recommenderSubtitle": "Lejoni asistentin tonë inteligjent t'ju udhëzojë drejt trajtimit të përsosur."
   },
   "ContactForm": {
     "nameLabel": "Emri i Plotë",

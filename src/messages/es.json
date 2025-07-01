@@ -56,7 +56,9 @@
     "insightsFaqDesc": "Encuentre respuestas completas a las consultas comunes sobre nuestros procedimientos, protocolos de recuperación y qué esperar durante su viaje con nosotros.",
     "insightsFaqButton": "Visite nuestras preguntas frecuentes completas",
     "contactTitle": "¿Listo para su transformación?",
-    "contactSubtitle": "Inicie su viaje hacia los resultados estéticos deseados. Póngase en contacto con la Clínica Meva hoy mismo para una consulta confidencial. Complete el siguiente formulario y nuestro equipo dedicado de expertos médicos se pondrá en contacto con usted a la brevedad para discutir sus aspiraciones y guiarlo a través de nuestros planes de tratamiento personalizados."
+    "contactSubtitle": "Inicie su viaje hacia los resultados estéticos deseados. Póngase en contacto con la Clínica Meva hoy mismo para una consulta confidencial. Complete el siguiente formulario y nuestro equipo dedicado de expertos médicos se pondrá en contacto con usted a la brevedad para discutir sus aspiraciones y guiarlo a través de nuestros planes de tratamiento personalizados.",
+    "recommenderTitle": "Recomendaciones con IA",
+    "recommenderSubtitle": "Deje que nuestro asistente inteligente le guíe hacia el tratamiento perfecto."
   },
   "ContactForm": {
     "nameLabel": "Nombre completo",

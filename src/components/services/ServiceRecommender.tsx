@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, Sparkles, ArrowRight } from 'lucide-react';
+import { Loader2, ArrowRight } from 'lucide-react';
 import { recommendServices, type ServiceRecommenderOutput } from '@/ai/flows/service-recommender-flow';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Link } from '@/navigation';
@@ -40,11 +40,7 @@ export function ServiceRecommender() {
   return (
     <Card className="w-full max-w-3xl mx-auto shadow-xl border-accent/50">
       <CardHeader className="text-center">
-        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
-          <Sparkles className="h-6 w-6" />
-        </div>
-        <CardTitle className="font-headline text-2xl text-primary">{t('title')}</CardTitle>
-        <CardDescription>{t('description')}</CardDescription>
+        {/* The title and description are now provided by the parent page */}
       </CardHeader>
       <CardContent>
         <div className="space-y-4">

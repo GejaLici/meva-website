@@ -56,7 +56,9 @@
     "insightsFaqDesc": "Trova risposte complete alle domande comuni sulle nostre procedure, protocolli di recupero e cosa aspettarsi durante il tuo percorso con noi.",
     "insightsFaqButton": "Visita le nostre FAQ complete",
     "contactTitle": "Pronto per la tua trasformazione?",
-    "contactSubtitle": "Inizia il tuo viaggio verso i risultati estetici desiderati. Contatta oggi la Clinica Meva per una consulenza confidenziale. Compila il modulo sottostante e il nostro team dedicato di esperti medici si metterà prontamente in contatto con te per discutere le tue aspirazioni e guidarti attraverso i nostri percorsi di trattamento personalizzati."
+    "contactSubtitle": "Inizia il tuo viaggio verso i risultati estetici desiderati. Contatta oggi la Clinica Meva per una consulenza confidenziale. Compila il modulo sottostante e il nostro team dedicato di esperti medici si metterà prontamente in contatto con te per discutere le tue aspirazioni e guidarti attraverso i nostri percorsi di trattamento personalizzati.",
+    "recommenderTitle": "Raccomandazioni basate su AI",
+    "recommenderSubtitle": "Lascia che il nostro assistente intelligente ti guidi al trattamento perfetto."
   },
   "ContactForm": {
     "nameLabel": "Nome completo",
@@ -360,7 +362,7 @@
     "title": "Termini di Servizio",
     "lastUpdated": "Ultimo aggiornamento: {date}",
     "h2_1": "1. ACCETTAZIONE DEI TERMINI",
-    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personally che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
+    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personalmente che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
     "p1_2": "Riconosci e accetti che accedendo al Sito e/o utilizzando i nostri Servizi, hai letto, compreso e accetti di essere vincolato da tutti questi Termini di servizio. Se non sei d'accordo con tutti questi Termini di servizio, ti è espressamente vietato utilizzare il Sito e i nostri Servizi e devi interromperne immediatamente l'uso.",
     "p1_3": "Termini e condizioni supplementari o documenti che possono essere pubblicati sul Sito di volta in volta sono qui espressamente incorporati per riferimento.",
     "h2_2": "2. DIRITTI DI PROPRIETÀ INTELLETTUALE",

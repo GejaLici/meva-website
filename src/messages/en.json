@@ -56,7 +56,9 @@
     "insightsFaqDesc": "Find comprehensive answers to common queries about our procedures, recovery protocols, and what to expect during your journey with us.",
     "insightsFaqButton": "Visit Our Comprehensive FAQ",
     "contactTitle": "Ready for Your Transformation?",
-    "contactSubtitle": "Initiate your journey towards your desired aesthetic outcomes. Contact Meva Clinic today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways."
+    "contactSubtitle": "Initiate your journey towards your desired aesthetic outcomes. Contact Meva Clinic today for a confidential consultation. Complete the form below, and our dedicated team of medical experts will promptly connect with you to discuss your aspirations and guide you through our personalized treatment pathways.",
+    "recommenderTitle": "AI-Powered Recommendations",
+    "recommenderSubtitle": "Let our smart assistant guide you to the perfect treatment."
   },
   "ContactForm": {
     "nameLabel": "Full Name",

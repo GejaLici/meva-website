@@ -56,7 +56,9 @@
     "insightsFaqDesc": "Trouvez des réponses complètes aux questions courantes sur nos procédures, nos protocoles de récupération et ce à quoi vous pouvez vous attendre pendant votre parcours avec nous.",
     "insightsFaqButton": "Visitez notre FAQ complète",
     "contactTitle": "Prêt pour votre transformation ?",
-    "contactSubtitle": "Commencez votre voyage vers les résultats esthétiques souhaités. Contactez la Clinique Meva dès aujourd'hui pour une consultation confidentielle. Remplissez le formulaire ci-dessous et notre équipe dévouée d'experts médicaux vous contactera rapidement pour discuter de vos aspirations et vous guider à travers nos parcours de traitement personnalisés."
+    "contactSubtitle": "Commencez votre voyage vers les résultats esthétiques souhaités. Contactez la Clinique Meva dès aujourd'hui pour une consultation confidentielle. Remplissez le formulaire ci-dessous et notre équipe dévouée d'experts médicaux vous contactera rapidement pour discuter de vos aspirations et vous guider à travers nos parcours de traitement personnalisés.",
+    "recommenderTitle": "Recommandations par IA",
+    "recommenderSubtitle": "Laissez notre assistant intelligent vous guider vers le traitement parfait."
   },
   "ContactForm": {
     "nameLabel": "Nom complet",
@@ -320,7 +322,7 @@
     "metaDescription": "Politique de confidentialité officielle de {siteName}. Comprenez comment nous collectons, utilisons et protégeons vos informations personnelles conformément aux réglementations sur la protection des données.",
     "title": "Politique de confidentialité",
     "lastUpdated": "Dernière mise à jour : {date}",
-    "p1": "Bienvenue à {siteName} (ci-après dénommé « nous » ou « notre »). Nous nous engageons fermement à protéger vos informations personnelles et votre droit fondamental à la vie privée. Cette politique de confidentialité régit votre accès et votre utilisation de notre site Web, {SITE_DOMAIN}, y compris toute autre forme de média, canal multimédia, site Web mobile ou application mobile connexe ou connecté (collectivement, le « Site »). Si vous avez des questions ou des préoccupations concernant cet avis de confidentialité ou nos pratiques concernant vos informations personnelles, veuillez nous contacter à info@{SITE_DOMAIN}.",
+    "p1": "Bienvenue à {siteName} (ci-après dénommé « nous » ou « notre »). Nous nous engageons fermement à protéger vos informations personnelles et votre droit fondamental à la vie privée. Cette politique de confidentialité régit votre accès et votre utilisation de notre site Web, {SITE_DOMAIN}, y compris toute autre forme de média, canal multimédia, site Web mobile ou application mobile connexe, lié ou autrement connecté (collectivement, le « Site »). Si vous avez des questions ou des préoccupations concernant cet avis de confidentialité ou nos pratiques concernant vos informations personnelles, veuillez nous contacter à info@{SITE_DOMAIN}.",
     "h2_1": "1. INFORMATIONS QUE NOUS COLLECTONS",
     "p2_1": "Nous collectons les informations personnelles que vous nous fournissez volontairement lorsque vous vous inscrivez sur le Site, exprimez un intérêt à obtenir des informations sur nous ou nos produits et services, lorsque vous participez à des activités sur le Site, ou autrement lorsque vous nous contactez.",
     "p2_2": "Les informations personnelles que nous collectons dépendent du contexte de vos interactions avec nous et le Site, des choix que vous faites et des produits et fonctionnalités que vous utilisez. Les informations personnelles que nous pouvons collecter incluent, sans s'y limiter : les noms complets ; les numéros de téléphone ; les adresses e-mail ; les adresses postales ; les titres professionnels ; les préférences de contact ; les données d'authentification ; les adresses de facturation ; et d'autres informations similaires nécessaires à la fourniture de nos services et communications.",
