@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Gem, Leaf, Heart, PersonStanding, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
 
 const ICONS: { [key: string]: React.ElementType } = {
   Gem,
@@ -98,3 +99,4 @@ export function ServiceCategoryGrid({ categories, homePageLayout = false }: Serv
     </>
   );
 }
+
