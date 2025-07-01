@@ -289,7 +289,11 @@
     "metaTitle": "Our Services | {siteName}",
     "metaDescription": "Explore the comprehensive range of advanced aesthetic and dental services offered at {siteName}. Discover treatments tailored by experts to enhance your beauty and well-being.",
     "title": "Our Advanced Aesthetic & Dental Services",
-    "description": "Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at {siteName}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results."
+    "description": "Explore the comprehensive spectrum of specialized aesthetic and dental treatments offered at {siteName}. Each service is meticulously designed to help you achieve your distinct beauty and wellness objectives. Our expert medical team is dedicated to providing advanced, personalized care and delivering exceptional, lasting results.",
+    "aestheticTitle": "Aesthetic & Cosmetic Services",
+    "aestheticSubtitle": "From facial rejuvenation to body contouring, our aesthetic services blend artistry with medical science to enhance your natural beauty.",
+    "dentalTitle": "Comprehensive Dental Care",
+    "dentalSubtitle": "Achieve a healthy, radiant smile with our full range of dental services, from preventative care to advanced cosmetic and restorative treatments."
   },
   "DentalServicesPage": {
     "metaTitle": "Comprehensive Dental Services | {siteName}",
