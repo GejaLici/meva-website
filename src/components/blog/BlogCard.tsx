@@ -16,13 +16,14 @@ interface BlogCardProps {
 export function BlogCard({ post }: BlogCardProps) {
   const t = useTranslations('BlogPage');
   const locale = useLocale();
+  const encodedImageUrl = post.imageUrl ? encodeURI(post.imageUrl) : undefined;
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-      {post.imageUrl && (
+      {encodedImageUrl && (
         <Link href={`/blog/${post.slug}`} className="block relative w-full h-56 overflow-hidden">
           <Image
-            src={post.imageUrl}
+            src={encodedImageUrl}
             alt={post.title}
             fill
             style={{ objectFit: 'cover' }}

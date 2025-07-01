@@ -108,7 +108,7 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
           <figure key={block.id} className="my-6">
             <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md border">
               <Image
-                src={block.src}
+                src={encodeURI(block.src)}
                 alt={block.alt}
                 fill
                 style={{ objectFit: 'contain' }}
@@ -162,16 +162,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
   
   const renderedContent = await renderContentBlocks(post.content);
+  const encodedFeatureImageUrl = post.imageUrl ? encodeURI(post.imageUrl) : undefined;
 
   return (
     <>
       <PageHeader title={post.title} />
       <div className="container mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:px-8">
         <article className="text-foreground mx-auto">
-          {post.imageUrl && (
+          {encodedFeatureImageUrl && (
             <div className="relative w-full h-64 md:h-96 mb-8 rounded-lg overflow-hidden shadow-lg border">
               <Image
-                src={post.imageUrl}
+                src={encodedFeatureImageUrl}
                 alt={post.title}
                 fill
                 style={{ objectFit: 'cover' }}

@@ -5,9 +5,9 @@ import type { GalleryItem } from '@/types/gallery';
 export const galleryItems: GalleryItem[] = [
   {
     id: 'gallery-1',
-    beforeImageUrl: '/images/woman-getting-ready-nose-job-surgery (1).jpg',
+    beforeImageUrl: '/images/woman-getting-ready-nose-job-surgery%20(1).jpg',
     beforeImageHint: 'nose profile before',
-    afterImageUrl: '/images/woman-getting-ready-nose-job-surgery (e).jpg',
+    afterImageUrl: '/images/woman-getting-ready-nose-job-surgery%20(e).jpg',
     afterImageHint: 'nose profile after',
   },
   {
