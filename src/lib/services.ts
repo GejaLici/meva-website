@@ -47,12 +47,12 @@ const bodyServices: Service[] = [
   { id: 'rim-vitheve-bbl', slug: 'bbl-buttock-remodeling', image: '/images/BBL%20Buttock%20Remodeling.png', imageHint: 'buttock remodel surgery' },
   { id: 'labioplastika', slug: 'labiaplasty', image: '/images/labiaplasty.png', imageHint: 'labiaplasty procedure' },
   { id: 'lift-kofsheve', slug: 'thigh-lift', image: '/images/Thigh%20Lift.png', imageHint: 'thigh lift results' },
-  { id: 'gynecomastia', slug: 'gynecomastia', image: '/images/Gynecomastia.png', imageHint: 'male chest surgery' },
+  { id: 'gynecomastia', slug: 'gynecomastia', image: '/images/gynecomastia.png', imageHint: 'male chest surgery' },
   { id: 'cellulite-treatment', slug: 'cellulite-treatment', image: '/images/Cellulite%20Treatment.png', imageHint: 'cellulite reduction therapy' },
   { id: 'plasma-arc-body', slug: 'plasma-arc-body', image: '/images/Plasma%20Arc%20(Body).png', imageHint: 'skin tightening body treatment' },
-  { id: 'carboxytherapy', slug: 'carboxytherapy', image: '/images/Carboxytherapy.png', imageHint: 'skin treatment co2' },
-  { id: 'sclerotherapy', slug: 'sclerotherapy', image: '/images/Sclerotherapy.png', imageHint: 'vein treatment legs' },
-  { id: 'lipolysis', slug: 'lipolysis', image: '/images/Lipolysis.png', imageHint: 'fat reduction procedure' },
+  { id: 'carboxytherapy', slug: 'carboxytherapy', image: '/images/carboxytherapy.png', imageHint: 'skin treatment co2' },
+  { id: 'sclerotherapy', slug: 'sclerotherapy', image: '/images/sclerotherapy.png', imageHint: 'vein treatment legs' },
+  { id: 'lipolysis', slug: 'lipolysis', image: '/images/lipolysis.png', imageHint: 'fat reduction procedure' },
   { id: 'laser-hair-removal', slug: 'laser-hair-removal', image: '/images/Laser%20Hair%20Removal.png', imageHint: 'hair removal laser' },
 ];
 

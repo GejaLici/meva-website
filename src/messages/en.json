@@ -12,7 +12,8 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contact",
-    "dentalServices": "Dental Services"
+    "dentalServices": "Dental Services",
+    "exploreService": "Learn More"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Change language",
