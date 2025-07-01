@@ -45,7 +45,7 @@ const bodyServices: Service[] = [
   { id: 'rim-barkut', slug: 'tummy-tuck', image: '/images/Tummy%20Tuck.png', imageHint: 'tummy tuck surgery' },
   { id: 'liposculptura', slug: 'liposculpture', image: '/images/Liposculpture.png', imageHint: 'liposculpture body contouring' },
   { id: 'rim-vitheve-bbl', slug: 'bbl-buttock-remodeling', image: '/images/BBL%20Buttock%20Remodeling.png', imageHint: 'buttock remodel surgery' },
-  { id: 'labioplastika', slug: 'labiaplasty', image: '/images/Labiaplasty.png', imageHint: 'labiaplasty procedure' },
+  { id: 'labioplastika', slug: 'labiaplasty', image: '/images/labiaplasty.png', imageHint: 'labiaplasty procedure' },
   { id: 'lift-kofsheve', slug: 'thigh-lift', image: '/images/Thigh%20Lift.png', imageHint: 'thigh lift results' },
   { id: 'gynecomastia', slug: 'gynecomastia', image: '/images/Gynecomastia.png', imageHint: 'male chest surgery' },
   { id: 'cellulite-treatment', slug: 'cellulite-treatment', image: '/images/Cellulite%20Treatment.png', imageHint: 'cellulite reduction therapy' },
