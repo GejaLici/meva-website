@@ -12,7 +12,7 @@ interface ServiceCardProps {
   service: Service;
   categorySlug: string;
   serviceName: string;
-  serviceDescription: React.ReactNode;
+  serviceDescription: string;
   learnMoreText: string;
 }
 

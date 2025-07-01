@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { AestheticServiceList } from '@/components/services/AestheticServiceList';
 import { DentalServiceList } from '@/components/services/DentalServiceList';
+import { stripHtml } from '@/lib/utils';
 
 interface CategoryPageProps {
   params: {
@@ -63,15 +64,13 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   const isDental = dentalCategoryIds.includes(category.id);
   
   const serviceTranslations = category.services.reduce((acc, service) => {
+    const rawDescription = tServices(`items.${service.id}.description`);
     acc[service.id] = {
       name: tServices(`items.${service.id}.name`),
-      description: tServices.rich(`items.${service.id}.description`, {
-        p: (chunks) => <p>{chunks}</p>,
-        b: (chunks) => <strong>{chunks}</strong>
-      })
+      description: stripHtml(rawDescription)
     };
     return acc;
-  }, {} as { [id: string]: { name: string; description: React.ReactNode } });
+  }, {} as { [id: string]: { name: string; description: string } });
 
   return (
     <>

@@ -8,7 +8,7 @@ interface AestheticServiceListProps {
   serviceTranslations: {
     [id: string]: {
       name: string;
-      description: React.ReactNode;
+      description: string;
     };
   };
   learnMoreText: string;
