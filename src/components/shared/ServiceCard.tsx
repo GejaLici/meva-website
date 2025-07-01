@@ -7,23 +7,30 @@ import type { Service } from '@/types/services';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { stripHtml } from '@/lib/utils';
 
 interface ServiceCardProps {
   service: Service;
   categorySlug: string;
-  serviceName: string;
-  serviceDescription: string;
-  learnMoreText: string;
 }
 
-export function ServiceCard({ service, categorySlug, serviceName, serviceDescription, learnMoreText }: ServiceCardProps) {
+export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
+  const tServices = useTranslations('Services');
+  const tNav = useTranslations('Navigation');
+  
+  const serviceName = tServices(`items.${service.id}.name`);
+  const rawDescription = tServices(`items.${service.id}.description`);
+  const serviceDescription = stripHtml(rawDescription);
+  const learnMoreText = tNav('exploreService');
+  const encodedImageUrl = service.image ? encodeURI(service.image) : undefined;
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      {service.image && (
+      {encodedImageUrl && (
         <div className="relative w-full h-48">
           <Image
-            src={service.image}
+            src={encodedImageUrl}
             alt={serviceName}
             fill
             style={{ objectFit: 'cover' }}

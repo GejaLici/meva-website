@@ -43,8 +43,8 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const categoryDescription = tServices(`categories.${category.id}.description`);
 
   return {
-    title: tPage('metaTitle', { categoryName, siteName }),
-    description: tPage('metaDescription', { categoryName, categoryDescription, siteName }),
+    title: categoryName,
+    description: categoryDescription,
   };
 }
 
@@ -59,18 +59,8 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   
   const categoryName = tServices(`categories.${category.id}.name`);
   const categoryDescription = tServices(`categories.${category.id}.description`);
-  const learnMoreText = "Learn More";
-
-  const isDental = dentalCategoryIds.includes(category.id);
   
-  const serviceTranslations = category.services.reduce((acc, service) => {
-    const rawDescription = tServices(`items.${service.id}.description`);
-    acc[service.id] = {
-      name: tServices(`items.${service.id}.name`),
-      description: stripHtml(rawDescription)
-    };
-    return acc;
-  }, {} as { [id: string]: { name: string; description: string } });
+  const isDental = dentalCategoryIds.includes(category.id);
 
   return (
     <>
@@ -81,15 +71,11 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
             <DentalServiceList
               services={category.services}
               categorySlug={category.slug}
-              serviceTranslations={serviceTranslations}
-              learnMoreText={learnMoreText}
             />
           ) : (
             <AestheticServiceList
               services={category.services}
               categorySlug={category.slug}
-              serviceTranslations={serviceTranslations}
-              learnMoreText={learnMoreText}
             />
           )
         ) : (
