@@ -12,8 +12,7 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contact",
-    "dentalServices": "Services Dentaires",
-    "exploreService": "En savoir plus"
+    "dentalServices": "Services Dentaires"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Changer de langue",
@@ -56,9 +55,7 @@
     "insightsFaqDesc": "Trouvez des réponses complètes aux questions courantes sur nos procédures, nos protocoles de récupération et ce à quoi vous pouvez vous attendre pendant votre parcours avec nous.",
     "insightsFaqButton": "Visitez notre FAQ complète",
     "contactTitle": "Prêt pour votre transformation ?",
-    "contactSubtitle": "Commencez votre voyage vers les résultats esthétiques souhaités. Contactez la Clinique Meva dès aujourd'hui pour une consultation confidentielle. Remplissez le formulaire ci-dessous et notre équipe dévouée d'experts médicaux vous contactera rapidement pour discuter de vos aspirations et vous guider à travers nos parcours de traitement personnalisés.",
-    "recommenderTitle": "Recommandations par IA",
-    "recommenderSubtitle": "Laissez notre assistant intelligent vous guider vers le traitement parfait."
+    "contactSubtitle": "Commencez votre voyage vers les résultats esthétiques souhaités. Contactez la Clinique Meva dès aujourd'hui pour une consultation confidentielle. Remplissez le formulaire ci-dessous et notre équipe dévouée d'experts médicaux vous contactera rapidement pour discuter de vos aspirations et vous guider à travers nos parcours de traitement personnalisés."
   },
   "ContactForm": {
     "nameLabel": "Nom complet",
@@ -229,7 +226,7 @@
     },
     "faq-4": {
       "question": "Quels sont les risques potentiels associés aux procédures esthétiques ?",
-      "answer": "<p>Toutes les procédures médicales et chirurgicales comportent un certain niveau de risque inhérent, bien que les complications graves soient rares lorsque les traitements esthétiques sont effectués par des professionnels de la santé qualifiés et expérimentés dans un établissement accrédité comme la {siteName}. Les risques potentiels, qui varient selon la procédure, peuvent inclure des ecchymoses, un gonflement, une gêne, une infection, des saignements, des cicatrices ou une réaction indésirable à l'anesthésie ou aux matériaux injectés. Lors de votre consultation complète avant le traitement, nos spécialistes discuteront en détail de tous les risques et avantages potentiels spécifiques à la procédure que vous avez choisie, afin que vous ayez une compréhension complète avant de poursuivre. Nous accordons la priorité à la sécurité des patients avant tout et nous respectons les protocoles médicaux les plus stricts.</p>"
+      "answer": "<p>Toutes les procédures médicales et chirurgicales comportent un certain niveau de risque inhérent, bien que les complications graves soient rares lorsque les traitements esthétiques sont effectués par des professionnels de la santé qualifiés et expérimentés dans un établissement accrédité comme la {siteName}. Les risques potentiels, qui varient selon la procédure, peuvent inclure des ecchymoses, un gonflement, une gêne, une infection, des saignements, des cicatrices ou une réaction indésirable à l'anesthésie ou aux matériaux injectés. Lors de votre consultation complète avant le traitement, nos spécialistes discuteront en detail de tous les risques et avantages potentiels spécifiques à la procédure que vous avez choisie, afin que vous ayez une compréhension complète avant de poursuivre. Nous accordons la priorité à la sécurité des patients avant tout et nous respectons les protocoles médicaux les plus stricts.</p>"
     },
     "faq-5": {
       "question": "Comment puis-je déterminer quelle procédure esthétique me convient le mieux ?",
@@ -289,11 +286,7 @@
     "metaTitle": "Nos services | {siteName}",
     "metaDescription": "Découvrez la gamme complète de services esthétiques et dentaires avancés proposés à la {siteName}. Découvrez des traitements personnalisés par des experts pour améliorer votre beauté et votre bien-être.",
     "title": "Nos services esthétiques et dentaires avancés",
-    "description": "Découvrez la gamme complète de traitements esthétiques et dentaires spécialisés proposés à la {siteName}. Chaque service est méticuleusement conçu pour vous aider à atteindre vos objectifs de beauté et de bien-être distincts. Notre équipe médicale experte se consacre à fournir des soins avancés et personnalisés et à obtenir des résultats exceptionnels et durables.",
-    "aestheticTitle": "Services Esthétiques & Cosmétiques",
-    "aestheticSubtitle": "Du rajeunissement du visage au remodelage du corps, nos services esthétiques allient l'art à la science médicale pour sublimer votre beauté naturelle.",
-    "dentalTitle": "Soins Dentaires Complets",
-    "dentalSubtitle": "Obtenez un sourire sain et éclatant grâce à notre gamme complète de services dentaires, des soins préventifs aux traitements esthétiques et restaurateurs avancés."
+    "description": "Découvrez la gamme complète de traitements esthétiques et dentaires spécialisés proposés à la {siteName}. Chaque service est méticuleusement conçu pour vous aider à atteindre vos objectifs de beauté et de bien-être distincts. Notre équipe médicale experte se consacre à fournir des soins avancés et personnalisés et à obtenir des résultats exceptionnels et durables."
   },
   "DentalServicesPage": {
     "metaTitle": "Services dentaires complets | {siteName}",
@@ -309,17 +302,6 @@
     "categoryNotFoundTitle": "Catégorie non trouvée | {siteName}",
     "categoryNotFoundDescription": "La catégorie de service demandée n'a pas pu être trouvée à la {siteName}.",
     "noResults": "Aucun service n'est disponible dans cette catégorie pour le moment. Veuillez contacter {siteName} pour plus de détails."
-  },
-  "ServiceRecommender": {
-    "title": "Recommandeur de Services IA",
-    "description": "Vous n'êtes pas sûr de ce dont vous avez besoin ? Décrivez votre préoccupation, et notre assistant IA vous suggérera les services les plus pertinents.",
-    "placeholder": "par ex., « J'ai une dent ébréchée et je veux la réparer » ou « Je m'inquiète des rides autour de mes yeux. »",
-    "buttonText": "Obtenir des Recommandations",
-    "buttonLoadingText": "Analyse en cours...",
-    "resultsTitle": "Nos Recommandations Pour Vous",
-    "noResults": "Sur la base de votre demande, nous n'avons pas pu identifier un service spécifique. N'hésitez pas à parcourir notre liste complète de services ou à nous contacter pour une consultation personnalisée.",
-    "errorTitle": "Erreur de Recommandation",
-    "error": "Désolé, une erreur s'est produite lors de la génération des recommandations. Veuillez réessayer dans un instant."
   },
   "PrivacyPolicyPage": {
     "metaTitle": "Politique de confidentialité | {siteName}",
@@ -353,7 +335,7 @@
     "h2_6": "6. COMMENT PROTÉGEONS-NOUS VOS INFORMATIONS ?",
     "p7_1": "Nous avons mis en place des mesures de sécurité techniques et organisationnelles appropriées conçues pour protéger la sécurité de toutes les informations personnelles que nous traitons. Ces mesures visent à empêcher l'accès, la divulgation, l'altération ou la destruction non autorisés de vos données personnelles. Cependant, malgré nos garanties et nos efforts continus pour sécuriser vos informations, aucune transmission électronique sur Internet ou technologie de stockage d'informations ne peut être garantie à 100 %. Par conséquent, nous ne pouvons pas promettre ou garantir que des pirates, des cybercriminels ou d'autres tiers non autorisés ne pourront pas déjouer notre sécurité et collecter, accéder, voler ou modifier vos informations de manière inappropriée. La transmission d'informations personnelles vers et depuis notre Site se fait à vos propres risques.",
     "h2_7": "7. QUELS SONT VOS DROITS EN MATIÈRE DE CONFIDENTIALITÉ ?",
-    "p8_1": "Dans certaines régions, telles que l'Espace économique européen (EEE) et le Royaume-Uni (RU), vous disposez de certains droits en vertu des lois applicables sur la protection des données. Ceux-ci могут inclure le droit (i) de demander l'accès et d'obtenir une copie de vos informations personnelles, (ii) de demander la rectification ou l'effacement de vos informations personnelles ; (iii) de restreindre le traitement de vos informations personnelles ; et (iv) le cas échéant, à la portabilité des données. Dans certaines circonstances, vous pouvez également avoir le droit de vous opposer au traitement de vos informations personnelles. Pour faire une telle demande, veuillez utiliser les coordonnées fournies ci-dessous.",
+    "p8_1": "Dans certaines régions, telles que l'Espace économique européen (EEE) et le Royaume-Uni (RU), vous disposez de certains droits en vertu des lois applicables sur la protection des données. Ceux-ci peuvent inclure le droit (i) de demander l'accès et d'obtenir une copie de vos informations personnelles, (ii) de demander la rectification ou l'effacement de vos informations personnelles ; (iii) de restreindre le traitement de vos informations personnelles ; et (iv) le cas échéant, à la portabilité des données. Dans certaines circonstances, vous pouvez également avoir le droit de vous opposer au traitement de vos informations personnelles. Pour faire une telle demande, veuillez utiliser les coordonnées fournies ci-dessous.",
     "h2_8": "8. MISES À JOUR DE CETTE POLITIQUE",
     "p9_1": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires. La version mise à jour sera indiquée par une date de « Révision » ou de « Dernière mise à jour » mise à jour et la version mise à jour entrera en vigueur dès qu'elle sera accessible sur le Site. Nous vous encourageons à consulter frequently cette politique de confidentialité pour être informé de la manière dont nous protégeons vos informations.",
     "h2_9": "9. COMMENT POUVEZ-VOUS NOUS CONTACTER AU SUJET DE CETTE POLITIQUE ?",

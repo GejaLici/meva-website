@@ -12,8 +12,7 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contatti",
-    "dentalServices": "Servizi Dentistici",
-    "exploreService": "Scopri di più"
+    "dentalServices": "Servizi Dentistici"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Cambia lingua",
@@ -56,9 +55,7 @@
     "insightsFaqDesc": "Trova risposte complete alle domande comuni sulle nostre procedure, protocolli di recupero e cosa aspettarsi durante il tuo percorso con noi.",
     "insightsFaqButton": "Visita le nostre FAQ complete",
     "contactTitle": "Pronto per la tua trasformazione?",
-    "contactSubtitle": "Inizia il tuo viaggio verso i risultati estetici desiderati. Contatta oggi la Clinica Meva per una consulenza confidenziale. Compila il modulo sottostante e il nostro team dedicato di esperti medici si metterà prontamente in contatto con te per discutere le tue aspirazioni e guidarti attraverso i nostri percorsi di trattamento personalizzati.",
-    "recommenderTitle": "Raccomandazioni basate su AI",
-    "recommenderSubtitle": "Lascia che il nostro assistente intelligente ti guidi al trattamento perfetto."
+    "contactSubtitle": "Inizia il tuo viaggio verso i risultati estetici desiderati. Contatta oggi la Clinica Meva per una consulenza confidenziale. Compila il modulo sottostante e il nostro team dedicato di esperti medici si metterà prontamente in contatto con te per discutere le tue aspirazioni e guidarti attraverso i nostri percorsi di trattamento personalizzati."
   },
   "ContactForm": {
     "nameLabel": "Nome completo",
@@ -289,11 +286,7 @@
     "metaTitle": "I Nostri Servizi | {siteName}",
     "metaDescription": "Esplora la gamma completa di servizi estetici e dentali avanzati offerti da {siteName}. Scopri trattamenti su misura realizzati da esperti per migliorare la tua bellezza e il tuo benessere.",
     "title": "I Nostri Servizi Estetici e Dentali Avanzati",
-    "description": "Esplora lo spettro completo di trattamenti estetici e dentali specializzati offerti da {siteName}. Ogni servizio è meticolosamente progettato per aiutarti a raggiungere i tuoi distinti obiettivi di bellezza e benessere. Il nostro team medico esperto è dedicato a fornire cure avanzate e personalizzate e a fornire risultati eccezionali e duraturi.",
-    "aestheticTitle": "Servizi Estetici e Cosmetici",
-    "aestheticSubtitle": "Dal ringiovanimento del viso al contouring del corpo, i nostri servizi estetici fondono l'arte con la scienza medica per esaltare la tua bellezza naturale.",
-    "dentalTitle": "Cure Dentali Complete",
-    "dentalSubtitle": "Ottieni un sorriso sano e radioso con la nostra gamma completa di servizi dentistici, dalla prevenzione ai trattamenti estetici e restaurativi avanzati."
+    "description": "Esplora lo spettro completo di trattamenti estetici e dentali specializzati offerti da {siteName}. Ogni servizio è meticolosamente progettato per aiutarti a raggiungere i tuoi distinti obiettivi di bellezza e benessere. Il nostro team medico esperto è dedicato a fornire cure avanzate e personalizzate e a fornire risultati eccezionali e duraturi."
   },
   "DentalServicesPage": {
     "metaTitle": "Servizi Dentali Completi | {siteName}",
@@ -309,17 +302,6 @@
     "categoryNotFoundTitle": "Categoria Non Trovata | {siteName}",
     "categoryNotFoundDescription": "La categoria di servizio richiesta non è stata trovata presso {siteName}.",
     "noResults": "Al momento non sono disponibili servizi in questa categoria. Si prega di contattare {siteName} per maggiori dettagli."
-  },
-  "ServiceRecommender": {
-    "title": "Consigliatore di Servizi AI",
-    "description": "Non sei sicuro di cosa hai bisogno? Descrivi la tua preoccupazione e il nostro assistente AI ti suggerirà i servizi più pertinenti.",
-    "placeholder": "es. \"Ho un dente scheggiato e voglio ripararlo\" o \"Sono preoccupato per le rughe intorno agli occhi.\"",
-    "buttonText": "Ottieni Raccomandazioni",
-    "buttonLoadingText": "Analisi in corso...",
-    "resultsTitle": "Le Nostre Raccomandazioni Per Te",
-    "noResults": "In base alla tua richiesta, non siamo riusciti a individuare un servizio specifico. Sentiti libero di sfogliare il nostro elenco completo di servizi o di contattarci per una consulenza personalizzata.",
-    "errorTitle": "Errore di Raccomandazione",
-    "error": "Spiacenti, si è verificato un errore durante la generazione delle raccomandazioni. Riprova tra un momento."
   },
   "PrivacyPolicyPage": {
     "metaTitle": "Informativa sulla Privacy | {siteName}",
@@ -366,7 +348,7 @@
     "title": "Termini di Servizio",
     "lastUpdated": "Ultimo aggiornamento: {date}",
     "h2_1": "1. ACCETTAZIONE DEI TERMINI",
-    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personalmente che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
+    "p1_1": "I presenti Termini di servizio (\"Termini\") costituiscono un accordo legalmente vincolante stipulato tra te, sia personally che per conto di un'entità (\"tu\" o \"Utente\"), e {siteName} (\"noi\", \"ci\" o \"nostro\"), riguardo al tuo accesso e utilizzo del sito web {SITE_DOMAIN} nonché di qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata, collegata o altrimenti connessa ad esso (collettivamente, il \"Sito\" e i \"Servizi\").",
     "p1_2": "Riconosci e accetti che accedendo al Sito e/o utilizzando i nostri Servizi, hai letto, compreso e accetti di essere vincolato da tutti questi Termini di servizio. Se non sei d'accordo con tutti questi Termini di servizio, ti è espressamente vietato utilizzare il Sito e i nostri Servizi e devi interromperne immediatamente l'uso.",
     "p1_3": "Termini e condizioni supplementari o documenti che possono essere pubblicati sul Sito di volta in volta sono qui espressamente incorporati per riferimento.",
     "h2_2": "2. DIRITTI DI PROPRIETÀ INTELLETTUALE",

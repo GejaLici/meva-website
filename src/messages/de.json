@@ -12,8 +12,7 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Kontakt",
-    "dentalServices": "Zahnärztliche Leistungen",
-    "exploreService": "Mehr Erfahren"
+    "dentalServices": "Zahnärztliche Leistungen"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Sprache ändern",
@@ -56,9 +55,7 @@
     "insightsFaqDesc": "Finden Sie umfassende Antworten auf häufige Fragen zu unseren Verfahren, Genesungsprotokollen und was Sie während Ihrer Reise mit uns erwartet.",
     "insightsFaqButton": "Besuchen Sie unsere umfassenden FAQ",
     "contactTitle": "Bereit für Ihre Transformation?",
-    "contactSubtitle": "Beginnen Sie Ihre Reise zu Ihren gewünschten ästhetischen Ergebnissen. Kontaktieren Sie die Meva Klinik noch heute für eine vertrauliche Beratung. Füllen Sie das untenstehende Formular aus, und unser engagiertes Team von medizinischen Experten wird sich umgehend mit Ihnen in Verbindung setzen, um Ihre Wünsche zu besprechen und Sie durch unsere personalisierten Behandlungswege zu führen.",
-    "recommenderTitle": "KI-gestützte Empfehlungen",
-    "recommenderSubtitle": "Lassen Sie sich von unserem intelligenten Assistenten zum perfekten Treatment führen."
+    "contactSubtitle": "Beginnen Sie Ihre Reise zu Ihren gewünschten ästhetischen Ergebnissen. Kontaktieren Sie die Meva Klinik noch heute für eine vertrauliche Beratung. Füllen Sie das untenstehende Formular aus, und unser engagiertes Team von medizinischen Experten wird sich umgehend mit Ihnen in Verbindung setzen, um Ihre Wünsche zu besprechen und Sie durch unsere personalisierten Behandlungswege zu führen."
   },
   "ContactForm": {
     "nameLabel": "Vollständiger Name",
@@ -122,7 +119,7 @@
       "mbj-vetullave": { "name": "Augenbrauentransplantation", "description": "<p>Ein Eingriff, bei dem Haarfollikel in die Augenbrauen transplantiert werden, um vollere, definiertere Brauen zu schaffen, oft für diejenigen mit von Natur aus dünnen Brauen oder Haarausfall.</p>" },
       "lift-vetullave": { "name": "Augenbrauenlift (Browplastik)", "description": "<p>Ein chirurgischer Eingriff, um schlaffe Augenbrauen anzuheben und das Erscheinungsbild von Falten auf der Stirn und zwischen den Augen zu verbessern, was zu einem jugendlicheren und ausgeruhteren Aussehen führt.</p>" },
       "blefaroplastika": { "name": "Augenlidchirurgie (Blepharoplastik)", "description": "<p>Eine Operation zur Verbesserung des Aussehens der Augenlider. Sie kann an den Oberlidern, den Unterlidern oder beiden durchgeführt werden, um schlaffe Haut, überschüssiges Fett oder Tränensäcke zu entfernen.</p>" },
-      "lift-fytyres": { "name": "Facelift (Rhytidektomie)", "description": "<p>Ein chirurgischer Eingriff, um die sichtbaren Zeichen des Alterns im Gesicht und am Hals, wie Erschlaffung, tiefe Falten und lose Haut, zu verbessern.</p>" },
+      "lift-fytyres": { "name": "Facelift (Rhytidektomie)", "description": "<p>Ein chirurgischer Eingriff, um die sichtbaren Zeichen des Alterns im Gesicht und am Hals, wie Erschlaffung, tiefe Falten und loose Haut, zu verbessern.</p>" },
       "rim-mjekres": { "name": "Kinnvergrößerung (Genioplastik)", "description": "<p>Ein chirurgischer Eingriff zur Umformung oder Vergrößerung des Kinns, entweder durch ein Implantat oder durch eine Umformung des Knochens, um die Proportionen des Gesichts auszugleichen.</p>" },
       "lip-reshaping": { "name": "Lippenkorrektur & -vergrößerung", "description": "<p>Ein kosmetischer Eingriff zur Verbesserung des Aussehens der Lippen durch Vergrößerung von Volumen, Form, Struktur oder Symmetrie, oft unter Verwendung von Hautfüllern.</p>" },
       "xanthelasma-plasma-arc": { "name": "Entfernung von Augenlidablagerungen (Plasma)", "description": "<p>Dies ist eine nicht-chirurgische Behandlung zur Entfernung von gelben Cholesterinflecken auf den Augenlidern. Wir verwenden ein präzises Plasmagerät, um diese Ablagerungen sanft zu entfernen, was Ihnen eine glattere Haut mit sehr geringer Erholungszeit beschert.</p>" },
@@ -289,11 +286,7 @@
     "metaTitle": "Unsere Leistungen | {siteName}",
     "metaDescription": "Entdecken Sie das umfassende Angebot an fortschrittlichen ästhetischen und zahnärztlichen Leistungen, die in der {siteName} angeboten werden. Entdecken Sie von Experten maßgeschneiderte Behandlungen zur Steigerung Ihrer Schönheit und Ihres Wohlbefindens.",
     "title": "Unsere fortschrittlichen ästhetischen & zahnärztlichen Leistungen",
-    "description": "Entdecken Sie das umfassende Spektrum spezialisierter ästhetischer und zahnärztlicher Behandlungen, die in der {siteName} angeboten werden. Jede Dienstleistung ist sorgfältig darauf ausgelegt, Ihnen zu helfen, Ihre individuellen Schönheits- und Wellnessziele zu erreichen. Unser medizinisches Expertenteam ist bestrebt, fortschrittliche, personalisierte Pflege zu bieten und außergewöhnliche, dauerhafte Ergebnisse zu liefern.",
-    "aestheticTitle": "Ästhetische & Kosmetische Leistungen",
-    "aestheticSubtitle": "Von der Gesichtsverjüngung bis zur Körperkonturierung verbinden unsere ästhetischen Dienstleistungen Kunstfertigkeit mit medizinischer Wissenschaft, um Ihre natürliche Schönheit zu unterstreichen.",
-    "dentalTitle": "Umfassende zahnärztliche Versorgung",
-    "dentalSubtitle": "Erreichen Sie ein gesundes, strahlendes Lächeln mit unserem gesamten Spektrum an zahnärztlichen Leistungen, von der Vorsorge bis hin zu fortschrittlichen kosmetischen und restaurativen Behandlungen."
+    "description": "Entdecken Sie das umfassende Spektrum spezialisierter ästhetischer und zahnärztlicher Behandlungen, die in der {siteName} angeboten werden. Jede Dienstleistung ist sorgfältig darauf ausgelegt, Ihnen zu helfen, Ihre individuellen Schönheits- und Wellnessziele zu erreichen. Unser medizinisches Expertenteam ist bestrebt, fortschrittliche, personalisierte Pflege zu bieten und außergewöhnliche, dauerhafte Ergebnisse zu liefern."
   },
   "DentalServicesPage": {
     "metaTitle": "Umfassende zahnärztliche Leistungen | {siteName}",
@@ -309,17 +302,6 @@
     "categoryNotFoundTitle": "Kategorie nicht gefunden | {siteName}",
     "categoryNotFoundDescription": "Die angeforderte Dienstleistungskategorie konnte bei {siteName} nicht gefunden werden.",
     "noResults": "In dieser Kategorie sind derzeit keine Dienstleistungen verfügbar. Bitte kontaktieren Sie {siteName} für weitere Details."
-  },
-  "ServiceRecommender": {
-    "title": "KI-Service-Empfehler",
-    "description": "Nicht sicher, was Sie brauchen? Beschreiben Sie Ihr Anliegen, und unser KI-Assistent schlägt Ihnen die relevantesten Dienstleistungen vor.",
-    "placeholder": "z.B. \"Ich habe einen abgebrochenen Zahn und möchte ihn reparieren lassen\" oder \"Ich mache mir Sorgen um Falten um meine Augen.\"",
-    "buttonText": "Empfehlungen erhalten",
-    "buttonLoadingText": "Analysiere...",
-    "resultsTitle": "Unsere Empfehlungen für Sie",
-    "noResults": "Basierend auf Ihrer Anfrage konnten wir keinen spezifischen Service finden. Bitte durchsuchen Sie unsere vollständige Liste von Dienstleistungen oder kontaktieren Sie uns für eine persönliche Beratung.",
-    "errorTitle": "Empfehlungsfehler",
-    "error": "Entschuldigung, beim Erstellen der Empfehlungen ist ein Fehler aufgetreten. Bitte versuchen Sie es in einem Moment erneut."
   },
   "PrivacyPolicyPage": {
     "metaTitle": "Datenschutzrichtlinie | {siteName}",
@@ -345,7 +327,7 @@
     "p3_l11": "Um dem Benutzer Dienstleistungen zu liefern und deren Lieferung zu erleichtern.",
     "p3_l12": "Um auf Benutzeranfragen zu antworten und den Benutzern umfassende Unterstützung zu bieten.",
     "h2_3": "3. WERDEN IHRE INFORMATIONEN MIT JEMANDEM GETEILT?",
-    "p4_1": "Wir geben Ihre persönlichen Daten nur mit Ihrer ausdrücklichen Zustimmung weiter, um geltende Gesetze einzuhalten, Ihnen unsere Dienstleistungen bereitzustellen, Ihre Rechte zu schützen oder legitime Geschäftsverpflichtungen zu erfüllen. Wir können Daten auf der folgenden Rechtsgrundlage verarbeiten oder weitergeben: Zustimmung, berechtigte Interessen, Erfüllung eines Vertrags, gesetzliche Verpflichtungen, lebenswichtige Interessen.",
+    "p4_1": "Wir geben Ihre persönlichen Daten nur mit Ihrer ausdrücklicher Zustimmung weiter, um geltende Gesetze einzuhalten, Ihnen unsere Dienstleistungen bereitzustellen, Ihre Rechte zu schützen oder legitime Geschäftsverpflichtungen zu erfüllen. Wir können Daten auf der folgenden Rechtsgrundlage verarbeiten oder weitergeben: Zustimmung, berechtigte Interessen, Erfüllung eines Vertrags, gesetzliche Verpflichtungen, lebenswichtige Interessen.",
     "h2_4": "4. VERWENDEN WIR COOKIES UND ANDERE TRACKING-TECHNOLOGIEN?",
     "p5_1": "Wir können Cookies und ähnliche Tracking-Technologien (wie Web-Beacons und Pixel) verwenden, um auf Informationen zuzugreifen oder diese zu speichern. Spezifische Informationen darüber, wie wir solche Technologien verwenden und wie Sie bestimmte Cookies ablehnen können, sind in unserer separaten Cookie-Richtlinie (falls zutreffend) aufgeführt oder werden hier detailliert, wenn keine separate Richtlinie bereitgestellt wird.",
     "h2_5": "5. WIE LANGE BEWAHREN WIR IHRE INFORMATIONEN AUF?",

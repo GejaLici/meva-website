@@ -12,8 +12,7 @@
     "blog": "Blogu",
     "faq": "Pyetje të Shpeshta",
     "contact": "Kontakti",
-    "dentalServices": "Shërbimet Dentare",
-    "exploreService": "Mëso Më Shumë"
+    "dentalServices": "Shërbimet Dentare"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Ndrysho gjuhën",
@@ -56,9 +55,7 @@
     "insightsFaqDesc": "Gjeni përgjigje të plota për pyetjet e zakonshme rreth procedurave tona, protokolleve të rimëkëmbjes dhe çfarë të prisni gjatë udhëtimit tuaj me ne.",
     "insightsFaqButton": "Vizitoni FAQ-in Tonë të Plotë",
     "contactTitle": "Gati për Transformimin Tuaj?",
-    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni Klinikën Meva sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar.",
-    "recommenderTitle": "Rekomandime me AI",
-    "recommenderSubtitle": "Lejoni asistentin tonë inteligjent t'ju udhëzojë drejt trajtimit të përsosur."
+    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni Klinikën Meva sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar."
   },
   "ContactForm": {
     "nameLabel": "Emri i Plotë",
@@ -289,11 +286,7 @@
     "metaTitle": "Shërbimet Tona | {siteName}",
     "metaDescription": "Eksploroni gamën e gjerë të shërbimeve të avancuara estetike dhe dentare të ofruara në {siteName}. Zbuloni trajtime të përshtatura nga ekspertët për të përmirësuar bukurinë dhe mirëqenien tuaj.",
     "title": "Shërbimet Tona të Avancuara Estetike & Dentare",
-    "description": "Eksploroni spektrin e gjerë të trajtimeve të specializuara estetike dhe dentare të ofruara në {siteName}. Çdo shërbim është projektuar me përpikëri për t'ju ndihmuar të arrini objektivat tuaja të veçanta të bukurisë dhe mirëqenies. Ekipi ynë mjekësor ekspert është i përkushtuar të ofrojë kujdes të avancuar, të personalizuar dhe të japë rezultate të jashtëzakonshme dhe afatgjata.",
-    "aestheticTitle": "Shërbimet Estetike & Kozmetike",
-    "aestheticSubtitle": "Nga rinovimi i fytyrës te konturimi i trupit, shërbimet tona estetike ndërthurin artin me shkencën mjekësore për të përmirësuar bukurinë tuaj natyrore.",
-    "dentalTitle": "Kujdesi Gjithëpërfshirës Dentar",
-    "dentalSubtitle": "Arrini një buzëqeshje të shëndetshme dhe rrezatuese me gamën tonë të plotë të shërbimeve dentare, nga kujdesi parandalues te trajtimet e avancuara kozmetike dhe restauruese."
+    "description": "Eksploroni spektrin e gjerë të trajtimeve të specializuara estetike dhe dentare të ofruara në {siteName}. Çdo shërbim është projektuar me përpikëri për t'ju ndihmuar të arrini objektivat tuaja të veçanta të bukurisë dhe mirëqenies. Ekipi ynë mjekësor ekspert është i përkushtuar të ofrojë kujdes të avancuar, të personalizuar dhe të japë rezultate të jashtëzakonshme dhe afatgjata."
   },
   "DentalServicesPage": {
     "metaTitle": "Shërbime Dentare Gjithëpërfshirëse | {siteName}",
@@ -309,17 +302,6 @@
     "categoryNotFoundTitle": "Kategoria nuk u gjet | {siteName}",
     "categoryNotFoundDescription": "Kategoria e kërkuar e shërbimit nuk u gjet në {siteName}.",
     "noResults": "Nuk ka shërbime të disponueshme në këtë kategori për momentin. Ju lutemi kontaktoni {siteName} për më shumë detaje."
-  },
-  "ServiceRecommender": {
-    "title": "Rekomanduesi i Shërbimeve me AI",
-    "description": "Nuk jeni të sigurt se çfarë ju nevojitet? Përshkruani shqetësimin tuaj dhe asistenti ynë i AI do t'ju sugjerojë shërbimet më të rëndësishme.",
-    "placeholder": "p.sh. \"Kam një dhëmb të thyer dhe dua ta rregulloj\" ose \"Jam i shqetësuar për rrudhat rreth syve.\"",
-    "buttonText": "Merrni Rekomandime",
-    "buttonLoadingText": "Duke analizuar...",
-    "resultsTitle": "Rekomandimet Tona Për Ju",
-    "noResults": "Bazuar në kërkesën tuaj, nuk mundëm të gjenim një shërbim specifik. Ju lutemi, mos ngurroni të shfletoni listën tonë të plotë të shërbimeve ose të na kontaktoni për një konsultë të personalizuar.",
-    "errorTitle": "Gabim në Rekomandim",
-    "error": "Na vjen keq, ndodhi një gabim gjatë gjenerimit të rekomandimeve. Ju lutemi provoni përsëri pas pak."
   },
   "PrivacyPolicyPage": {
     "metaTitle": "Politika e Privatësisë | {siteName}",

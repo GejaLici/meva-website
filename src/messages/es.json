@@ -12,8 +12,7 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contacto",
-    "dentalServices": "Servicios Dentales",
-    "exploreService": "Aprende más"
+    "dentalServices": "Servicios Dentales"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Cambiar idioma",
@@ -56,9 +55,7 @@
     "insightsFaqDesc": "Encuentre respuestas completas a las consultas comunes sobre nuestros procedimientos, protocolos de recuperación y qué esperar durante su viaje con nosotros.",
     "insightsFaqButton": "Visite nuestras preguntas frecuentes completas",
     "contactTitle": "¿Listo para su transformación?",
-    "contactSubtitle": "Inicie su viaje hacia los resultados estéticos deseados. Póngase en contacto con la Clínica Meva hoy mismo para una consulta confidencial. Complete el siguiente formulario y nuestro equipo dedicado de expertos médicos se pondrá en contacto con usted a la brevedad para discutir sus aspiraciones y guiarlo a través de nuestros planes de tratamiento personalizados.",
-    "recommenderTitle": "Recomendaciones con IA",
-    "recommenderSubtitle": "Deje que nuestro asistente inteligente le guíe hacia el tratamiento perfecto."
+    "contactSubtitle": "Inicie su viaje hacia los resultados estéticos deseados. Póngase en contacto con la Clínica Meva hoy mismo para una consulta confidencial. Complete el siguiente formulario y nuestro equipo dedicado de expertos médicos se pondrá en contacto con usted a la brevedad para discutir sus aspiraciones y guiarlo a través de nuestros planes de tratamiento personalizados."
   },
   "ContactForm": {
     "nameLabel": "Nombre completo",
@@ -289,11 +286,7 @@
     "metaTitle": "Nuestros Servicios | {siteName}",
     "metaDescription": "Explore la gama completa de servicios estéticos y dentales avanzados que se ofrecen en {siteName}. Descubra tratamientos personalizados por expertos para realzar su belleza y bienestar.",
     "title": "Nuestros Servicios Estéticos y Dentales Avanzados",
-    "description": "Explore el espectro completo de tratamientos estéticos y dentales especializados que se ofrecen en {siteName}. Cada servicio está diseñado meticulosamente para ayudarle a alcanzar sus objetivos de belleza y bienestar distintivos. Nuestro equipo médico experto está dedicado a proporcionar atención avanzada y personalizada y a ofrecer resultados excepcionales y duraderos.",
-    "aestheticTitle": "Servicios Estéticos y Cosméticos",
-    "aestheticSubtitle": "Desde el rejuvenecimiento facial hasta el contorno corporal, nuestros servicios estéticos combinan el arte con la ciencia médica para realzar su belleza natural.",
-    "dentalTitle": "Atención Dental Integral",
-    "dentalSubtitle": "Logre una sonrisa sana y radiante con nuestra gama completa de servicios dentales, desde la atención preventiva hasta los tratamientos cosméticos y restauradores avanzados."
+    "description": "Explore el espectro completo de tratamientos estéticos y dentales especializados que se ofrecen en {siteName}. Cada servicio está diseñado meticulosamente para ayudarle a alcanzar sus objetivos de belleza y bienestar distintivos. Nuestro equipo médico experto está dedicado a proporcionar atención avanzada y personalizada y a ofrecer resultados excepcionales y duraderos."
   },
   "DentalServicesPage": {
     "metaTitle": "Servicios Dentales Integrales | {siteName}",
@@ -309,17 +302,6 @@
     "categoryNotFoundTitle": "Categoría no encontrada | {siteName}",
     "categoryNotFoundDescription": "La categoría de servicio solicitada no se pudo encontrar en {siteName}.",
     "noResults": "No hay servicios disponibles en esta categoría en este momento. Póngase en contacto con {siteName} para obtener más detalles."
-  },
-  "ServiceRecommender": {
-    "title": "Recomendador de Servicios de IA",
-    "description": "¿No está seguro de lo que necesita? Describa su inquietud y nuestro asistente de IA le sugerirá los servicios más relevantes para usted.",
-    "placeholder": "p. ej., \"Tengo un diente astillado y quiero arreglarlo\" o \"Me preocupan las arrugas alrededor de los ojos.\"",
-    "buttonText": "Obtener Recomendaciones",
-    "buttonLoadingText": "Analizando...",
-    "resultsTitle": "Nuestras Recomendaciones Para Usted",
-    "noResults": "Según su consulta, no pudimos identificar un servicio específico. No dude en explorar nuestra lista completa de servicios o contáctenos para una consulta personalizada.",
-    "errorTitle": "Error de Recomendación",
-    "error": "Lo sentimos, se produjo un error al generar recomendaciones. Vuelva a intentarlo en un momento."
   },
   "PrivacyPolicyPage": {
     "metaTitle": "Política de Privacidad | {siteName}",
@@ -386,7 +368,7 @@
     "p7_1": "Estos Términos de Servicio y su uso del Sitio y los Servicios se rigen e interpretan de acuerdo con las leyes de Albania aplicables a los acuerdos celebrados y que se ejecutarán en su totalidad dentro de Albania, sin tener en cuenta sus principios de conflicto de leyes.",
     "h2_8": "8. DESCARGO DE RESPONSABILIDAD",
     "p8_1": "EL SITIO Y LOS SERVICIOS SE PROPORCIONAN <strong>TAL CUAL</strong> Y <strong>SEGÚN DISPONIBILIDAD</strong>. USTED ACEPTA QUE SU USO DEL SITIO Y NUESTROS SERVICIOS SERÁ BAJO SU PROPIO RIESGO. EN LA MEDIDA MÁXIMA PERMITIDA POR LA LEY, RENUNCIAMOS A TODAS LAS GARANTÍAS, EXPRESAS O IMPLÍCITAS, EN RELACIÓN CON EL SITIO Y LOS SERVICIOS Y SU USO DE LOS MISMOS, INCLUIDAS, ENTRE OTRAS, LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN.",
-    "p8_2": "NO OFRECEMOS GARANTÍAS NI DECLARACIONES SOBRE LA EXACTITUD O INTEGRIDAD DEL CONTENIDO DEL SITIO O DEL CONTENIDO DE CUALQUIER SITIO WEB VINCULADO AL SITIO Y NO ASUMIREMOS NINGUNA RESPONSABILIDAD POR (1) ERRORES, EQUIVOCACIONES O INEXACTITUDES DE CONTENIDO Y MATERIALES, (2) LESIONES PERSONALES O DAÑOS A LA PROPIEDAD, DE CUALQUIER NATURALEZA, RESULTANTES DE SU ACCESO Y USO DEL SITIO O LOS SERVICIOS, (3) CUALQUIER ACCESO O USO NO AUTORIZADO DE NUESTROS SERVIDORES SEGUROS Y/O CUALQUIER Y TODA LA INFORMACIÓN PERSONAL Y/O FINANCIERA ALMACENADA EN ELLOS.",
+    "p8_2": "NO OFRECEMOS GARANTÍAS NI DECLARACIONES SOBRE LA EXACTITUD O INTEGRIDAD DEL CONTENIDO DEL SITIO O DEL CONTENIDO DE CUALQUIER SITIO WEB VINCULADO AL SITIO Y NO ASUMIREMOS NINGUNA RESPONSABILIDAD POR (1) ERRORES, EQUIVOCACIONES O INEXACTITUDES DE CONTENIDO Y MATERIALES, (2) LESIONES PERSONALES O DAÑOS A LA PROPIEDAD, DE CUALQUIER NATURALEZA, RESULTANTES DE SU ACCESO Y USO DEL SITIO O LOS SERVICIOS, (3) CUALQUIER ACCESSO O USO NO AUTORIZADO DE NUESTROS SERVIDORES SEGUROS Y/O CUALQUIER Y TODA LA INFORMACIÓN PERSONAL Y/O FINANCIERA ALMACENADA EN ELLOS.",
     "p8_3": "EN NINGÚN CASO NOSOTROS O NUESTROS DIRECTORES, EMPLEADOS O AGENTES SEREMOS RESPONSABLES ANTE USTED O CUALQUIER TERCERO POR DAÑOS DIRECTOS, INDIRECTOS, CONSECUENTES, EJEMPLARES, INCIDENTALES, ESPECIALES O PUNITIVOS, INCLUIDA LA PÉRDIDA DE BENEFICIOS, LA PÉRDIDA DE INGRESOS, LA PÉRDIDA DE DATOS U OTROS DAÑOS QUE SURJAN DE SU USO DEL SITIO O LOS SERVICIOS, INCLUSO SI HEMOS SIDO ADVERTIDOS DE LA POSIBILIDAD DE DICHOS DAÑOS.",
     "h2_9": "9. INDEMNIZACIÓN",
     "p9_1": "Usted acepta defender, indemnizar y eximirnos de toda responsabilidad, incluidas nuestras subsidiarias, afiliadas y todos nuestros respectivos funcionarios, agentes, socios y empleados, de y contra cualquier pérdida, daño, responsabilidad, reclamo o demanda, incluidos los honorarios y gastos razonables de abogados, realizados por cualquier tercero debido a o que surjan de: (1) sus Contribuciones; (2) el uso de los Servicios; (3) el incumplimiento de estos Términos de Servicio; (4) cualquier incumplimiento de sus declaraciones y garantías establecidas en estos Términos de Servicio; (5) su violación de los derechos de un tercero, incluidos, entre otros, los derechos de propiedad intelectual; o (6) cualquier acto dañino manifiesto hacia cualquier otro usuario del Sitio o los Servicios con quien se conectó a través del Sitio. No obstante lo anterior, nos reservamos el derecho, a su cargo, de asumir la defensa y el control exclusivos de cualquier asunto por el cual deba indemnizarnos, y usted acepta cooperar, a su cargo, con nuestra defensa de dichos reclamos.",
