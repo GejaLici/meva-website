@@ -23,7 +23,6 @@ export default async function DentalServicesPage() {
   const dentalCategories = serviceCategories.filter(category => dentalCategoryIds.includes(category.id));
   const tPage = await getTranslations('DentalServicesPage');
   const tSite = await getTranslations('Site');
-  const tNav = await getTranslations('Navigation');
   const tServices = await getTranslations('Services');
   const siteName = tSite('title');
 
@@ -61,7 +60,7 @@ export default async function DentalServicesPage() {
                     </CardDescription>
                     <Button asChild className="mt-auto w-full bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
                       <Link href={`/services/${category.slug}`}>
-                        {tNav('exploreService', {categoryName})} <ArrowRight className="ml-2 h-4 w-4" />
+                        Learn more <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </CardContent>
