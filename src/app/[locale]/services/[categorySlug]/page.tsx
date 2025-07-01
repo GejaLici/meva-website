@@ -7,6 +7,7 @@ import { getTranslations } from 'next-intl/server';
 import { AestheticServiceList } from '@/components/services/AestheticServiceList';
 import { DentalServiceList } from '@/components/services/DentalServiceList';
 import { stripHtml } from '@/lib/utils';
+import type { Service } from '@/types/services';
 
 interface CategoryPageProps {
   params: {
@@ -17,7 +18,7 @@ interface CategoryPageProps {
 
 export async function generateStaticParams() {
   return serviceCategories
-    .filter(cat => cat.id !== 'dental-summary') // Exclude summary card which has its own page
+    .filter(cat => cat.id !== 'dental-summary')
     .map((category) => ({
       categorySlug: category.slug,
     }));
@@ -48,10 +49,16 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   };
 }
 
+interface TranslatedService extends Service {
+  name: string;
+  description: string;
+}
+
 export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
   const category = getCategoryBySlug(params.categorySlug);
   const tServices = await getTranslations('Services');
   const tPage = await getTranslations('ServiceCategoryPage');
+  const tNav = await getTranslations('Navigation');
   
   if (!category) {
     notFound();
@@ -59,6 +66,13 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   
   const categoryName = tServices(`categories.${category.id}.name`);
   const categoryDescription = tServices(`categories.${category.id}.description`);
+  const learnMoreText = tNav('exploreService');
+  
+  const translatedServices: TranslatedService[] = category.services.map(service => ({
+    ...service,
+    name: tServices(`items.${service.id}.name`),
+    description: stripHtml(tServices(`items.${service.id}.description`))
+  }));
   
   const isDental = dentalCategoryIds.includes(category.id);
 
@@ -66,16 +80,18 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
     <>
       <PageHeader title={categoryName} description={categoryDescription} />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
-        {category.services.length > 0 ? (
+        {translatedServices.length > 0 ? (
           isDental ? (
             <DentalServiceList
-              services={category.services}
+              services={translatedServices}
               categorySlug={category.slug}
+              learnMoreText={learnMoreText}
             />
           ) : (
             <AestheticServiceList
-              services={category.services}
+              services={translatedServices}
               categorySlug={category.slug}
+              learnMoreText={learnMoreText}
             />
           )
         ) : (
