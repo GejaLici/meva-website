@@ -288,9 +288,9 @@
     "metaDescription": "Découvrez la gamme complète de services esthétiques et dentaires avancés proposés à la {siteName}. Découvrez des traitements personnalisés par des experts pour améliorer votre beauté et votre bien-être.",
     "title": "Nos services esthétiques et dentaires avancés",
     "description": "Découvrez la gamme complète de traitements esthétiques et dentaires spécialisés proposés à la {siteName}. Chaque service est méticuleusement conçu pour vous aider à atteindre vos objectifs de beauté et de bien-être distincts. Notre équipe médicale experte se consacre à fournir des soins avancés et personnalisés et à obtenir des résultats exceptionnels et durables.",
-    "aestheticServicesTitle": "Nos services esthétiques de premier ordre",
+    "aestheticServicesTitle": "Nos services esthétiques de premier ordre à {siteName}",
     "aestheticServicesSubtitle": "Des améliorations subtiles aux procédures chirurgicales transformatrices, découvrez notre suite de traitements esthétiques conçus pour rajeunir votre apparence et renforcer votre confiance.",
-    "dentalServicesTitle": "Nos soins dentaires complets",
+    "dentalServicesTitle": "Nos soins dentaires complets à {siteName}",
     "dentalServicesSubtitle": "Obtenez un sourire sain et magnifique grâce à notre gamme complète de services dentaires, allant de la dentisterie esthétique et de l'orthodontie à la chirurgie buccale complexe."
   },
   "ServiceCategoryPage": {
@@ -347,7 +347,7 @@
     "h2_1": "1. ACCORD SUR LES CONDITIONS",
     "p1_1": "Ces conditions d'utilisation (« Conditions ») constituent un accord juridiquement contraignant conclu entre vous, que ce soit à titre personnel ou au nom d'une entité (« vous » ou « Utilisateur »), et {siteName} (« nous » ou « notre »), concernant votre accès et votre utilisation du site Web {SITE_DOMAIN} ainsi que toute autre forme de média, canal multimédia, site Web mobile ou application mobile connexe, lié ou autrement connecté (collectivement, le « Site » et les « Services »).",
     "p1_2": "Vous reconnaissez et acceptez qu'en accédant au Site et/ou en utilisant nos Services, vous avez lu, compris et acceptez d'être lié par toutes ces Conditions d'utilisation. Si vous n'acceptez pas toutes ces Conditions d'utilisation, il vous est expressément interdit d'utiliser le Site et nos Services, et vous devez cesser immédiatement de les utiliser.",
-    "p1_3": "Les termes et conditions supplémentaires ou les documents qui peuvent être publiés sur le Site de temps à autre sont expressément incorporés aux présentes par référence.",
+    "p1_3": "Les termes et conditions supplémentaires ou les documents qui могут être publiés sur le Site de temps à autre sont expressément incorporés aux présentes par référence.",
     "h2_2": "2. DROITS DE PROPRIÉTÉ INTELLECTUELLE",
     "p2_1": "Sauf indication contraire, le Site et les Services sont notre propriété exclusive. Tous les codes sources, bases de données, fonctionnalités, logiciels, conceptions de sites Web, fichiers audio, vidéo, textes, photographies et graphiques sur le Site (collectivement, le « Contenu ») et les marques de commerce, marques de service et logos qui y sont contenus (les « Marques ») sont détenus ou contrôlés par nous ou nous sont concédés sous licence. Ils sont protégés par les lois sur le droit d'auteur et les marques de commerce et diverses autres lois sur la propriété intellectuelle et la concurrence déloyale de l'Albanie, des juridictions étrangères et des conventions internationales. Sauf disposition expresse dans les présentes Conditions, aucune partie du Site, des Services, du Contenu ou des Marques ne peut être copiée, reproduite, agrégée, republiée, téléchargée, publiée, affichée publiquement, encodée, traduite, transmise, distribuée, vendue, concédée sous licence ou exploitée de toute autre manière à des fins commerciales, sans notre autorisation écrite préalable expresse.",
     "h2_3": "3. DÉCLARATIONS ET GARANTIES DE L'UTILISATEUR",

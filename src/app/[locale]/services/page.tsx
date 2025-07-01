@@ -39,7 +39,7 @@ export default async function ServicesOverviewPage() {
         <section id="aesthetic-services" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              {tOverview('aestheticServicesTitle')}
+              {tOverview('aestheticServicesTitle', { siteName })}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               {tOverview('aestheticServicesSubtitle')}
@@ -54,7 +54,7 @@ export default async function ServicesOverviewPage() {
         <section id="dental-services">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-              {tOverview('dentalServicesTitle')}
+              {tOverview('dentalServicesTitle', { siteName })}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               {tOverview('dentalServicesSubtitle')}
