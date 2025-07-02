@@ -255,7 +255,7 @@
     "metaTitle": "Experten-Blog | {siteName}",
     "metaDescription": "Bleiben Sie informiert mit den neuesten Fortschritten, Expertentipps und aufschlussreichen Artikeln aus der vordersten Reihe der ästhetischen und zahnärztlichen Versorgung, kuratiert von den Fachleuten der {siteName}.",
     "title": "Unser Experten-Einblicke-Blog",
-    "description": "Bleiben Sie informiert mit den neuesten Fortschritten, Expertentipps und aufschlussreichen Artikeln aus der vordersten Reihe der ästhetischen und zahnärztlichen Versorgung, kuratiert von den Fachleuen der {siteName}.",
+    "description": "Bleiben Sie informiert mit den neuesten Fortschritten, Expertentipps und aufschlussreichen Artikeln aus der vordersten Reihe der ästhetischen und zahnärztlichen Versorgung, kuratiert von den Fachleuten der {siteName}.",
     "noPosts": "Momentan sind keine Blogbeiträge verfügbar. Bitte schauen Sie später wieder vorbei oder stellen Sie sicher, dass Ihre Firestore 'blogPosts'-Sammlung mit gültigen Einträgen gefüllt ist.",
     "readMore": "Weiterlesen"
   },
@@ -374,4 +374,3 @@
     "p10_2": "{siteName}<br />z.Hd.: Rechtsabteilung<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tirana, Albanien<br />E-Mail: info@{SITE_DOMAIN}"
   }
 }
-
