@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Link } from '@/navigation';
@@ -17,7 +16,6 @@ interface ServiceCardProps {
 export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   const tServices = useTranslations('Services');
   const tNav = useTranslations('Navigation');
-  const encodedImageUrl = service.image ? encodeURI(service.image) : undefined;
   
   const name = tServices(`items.${service.id}.name`);
   const description = tServices(`items.${service.id}.description`);
@@ -25,10 +23,10 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      {encodedImageUrl && (
+      {service.image && (
         <div className="relative w-full h-48">
           <Image
-            src={encodedImageUrl}
+            src={service.image}
             alt={name}
             fill
             style={{ objectFit: 'cover' }}
