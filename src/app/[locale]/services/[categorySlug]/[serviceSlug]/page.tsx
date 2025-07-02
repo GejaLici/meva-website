@@ -99,7 +99,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
             <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
-            <div className="mb-6" dangerouslySetInnerHTML={{ __html: serviceDescription }} />
+            <p className="mb-6">{serviceDescription}</p>
             
             <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteName })}</h3>
             <p className="mb-4">
