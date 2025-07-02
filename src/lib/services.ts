@@ -3,10 +3,10 @@ import type { ServiceCategory, Service } from '@/types/services';
 
 const facialSurgeryServices: Service[] = [
   { id: 'op-hunde', slug: 'rhinoplasty', image: '/images/woman-getting-ready-nose-job-surgery%20(1).jpg', imageHint: 'nose surgery detail' },
-  { id: 'rim-hunde', slug: 'nose-tip-reshaping', image: '/images/Nose%20Tip%20Reshaping.png', imageHint: 'nose tip surgery' },
+  { id: 'rim-hunde', slug: 'nose-tip-reshaping', image: '/images/Nose-Tip-Reshaping.png', imageHint: 'nose tip surgery' },
   { id: 'rim-vesheve', slug: 'otoplasty', image: '/images/otoplasty.png', imageHint: 'otoplasty results' },
   { id: 'mbj-flokeve', slug: 'hair-transplant', image: '/images/hair-transplant.png', imageHint: 'hair transplant before after' },
-  { id: 'mbj-mjekres', slug: 'beard-transplant', image: '/images/Beard%20Transplant.png', imageHint: 'Beard Transplant results' },
+  { id: 'mbj-mjekres', slug: 'beard-transplant', image: '/images/Beard-Transplant.png', imageHint: 'Beard Transplant results' },
   { id: 'mbj-vetullave', slug: 'eyebrow-transplant', image: '/images/Eyebrow%20Transplant.png', imageHint: 'eyebrow transplant detail' },
   { id: 'lift-vetullave', slug: 'eyebrow-lift', image: '/images/Eyebrow%20Lift%20(Browplasty).png', imageHint: 'eyebrow lift surgery' },
   { id: 'blefaroplastika', slug: 'blepharoplasty', image: '/images/Eyelid%20Surgery%20(Blepharoplasty).png', imageHint: 'eyelid surgery results' },

@@ -5,6 +5,8 @@ import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
 import { getTranslations } from 'next-intl/server';
 import { serviceCategories, dentalCategoryIds } from '@/lib/services';
 import { Separator } from '@/components/ui/separator';
+import { ServiceRecommender } from '@/components/services/ServiceRecommender';
+import { Lightbulb } from 'lucide-react';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'ServicesOverviewPage'});
@@ -39,10 +41,10 @@ export default async function ServicesOverviewPage() {
         <section id="aesthetic-services" className="mb-12 md:mb-16">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground md:text-4xl">
-              {tOverview('aestheticServicesTitle', { siteName })}
+              {tOverview('aestheticServicesTitle')}
             </h2>
             <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              {tOverview('aestheticServicesSubtitle', { siteName })}
+              {tOverview('aestheticServicesSubtitle')}
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -51,17 +53,36 @@ export default async function ServicesOverviewPage() {
 
         <Separator className="my-8 md:my-12" />
 
-        <section id="dental-services">
+        <section id="dental-services" className="mb-12 md:mb-16">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="font-headline text-3xl font-bold text-foreground md:text-4xl">
-              {tOverview('dentalServicesTitle', { siteName })}
+              {tOverview('dentalServicesTitle')}
             </h2>
             <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              {tOverview('dentalServicesSubtitle', { siteName })}
+              {tOverview('dentalServicesSubtitle')}
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
           <ServiceCategoryGrid categories={dentalCategories} homePageLayout={false} />
+        </section>
+
+        <Separator className="my-12 md:my-16" />
+        
+        <section id="service-recommender" className="py-12 md:py-16 bg-muted/50 rounded-lg">
+           <div className="container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+                <div className="inline-flex items-center justify-center p-3 rounded-full bg-accent text-accent-foreground mb-4">
+                    <Lightbulb className="h-8 w-8" />
+                </div>
+                <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+                    {tOverview('recommenderTitle')}
+                </h2>
+                <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    {tOverview('recommenderSubtitle')}
+                </p>
+            </div>
+            <ServiceRecommender />
+           </div>
         </section>
 
       </div>
