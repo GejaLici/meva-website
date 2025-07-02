@@ -34,30 +34,30 @@ export default async function ServicesOverviewPage() {
         title={tOverview('title')}
         description={tOverview('description', { siteName })}
       />
-      <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-screen-xl px-4 py-8 md:py-12 sm:px-6 lg:px-8">
         
-        <section id="aesthetic-services" className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+        <section id="aesthetic-services" className="mb-12 md:mb-16">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="font-headline text-3xl font-bold text-foreground md:text-4xl">
               {tOverview('aestheticServicesTitle', { siteName })}
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              {tOverview('aestheticServicesSubtitle')}
+            <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              {tOverview('aestheticServicesSubtitle', { siteName })}
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
           <ServiceCategoryGrid categories={aestheticCategories} homePageLayout={false} />
         </section>
 
-        <Separator className="my-12 md:my-16" />
+        <Separator className="my-8 md:my-12" />
 
         <section id="dental-services">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="font-headline text-3xl font-bold text-foreground md:text-4xl">
               {tOverview('dentalServicesTitle', { siteName })}
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              {tOverview('dentalServicesSubtitle')}
+            <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              {tOverview('dentalServicesSubtitle', { siteName })}
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>

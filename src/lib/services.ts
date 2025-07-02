@@ -50,9 +50,9 @@ const bodyServices: Service[] = [
   { id: 'gynecomastia', slug: 'gynecomastia', image: '/images/gynecomastia.png', imageHint: 'male chest' },
   { id: 'cellulite-treatment', slug: 'cellulite-treatment', image: '/images/Cellulite%20Treatment.png', imageHint: 'cellulite reduction' },
   { id: 'plasma-arc-body', slug: 'plasma-arc-body', image: '/images/plasma-arc.png', imageHint: 'skin tightening' },
-  { id: 'carboxytherapy', slug: 'carboxytherapy', image: '/images/BBL%20Buttock%20Remodeling.png', imageHint: 'co2 therapy' },
-  { id: 'sclerotherapy', slug: 'sclerotherapy', image: '/images/BBL%20Buttock%20Remodeling.png', imageHint: 'vein treatment' },
-  { id: 'lipolysis', slug: 'lipolysis', image: '/images/BBL%20Buttock%20Remodeling.png', imageHint: 'fat reduction' },
+  { id: 'carboxytherapy', slug: 'carboxytherapy', image: '/images/carboxytherapy.png', imageHint: 'co2 therapy' },
+  { id: 'sclerotherapy', slug: 'sclerotherapy', image: '/images/Sclerotherapy.png', imageHint: 'vein treatment' },
+  { id: 'lipolysis', slug: 'lipolysis', image: '/images/Lipolysis.png', imageHint: 'fat reduction' },
   { id: 'laser-hair-removal', slug: 'laser-hair-removal', image: '/images/Laser%20Hair%20Removal.png', imageHint: 'laser hair removal' },
 ];
 
