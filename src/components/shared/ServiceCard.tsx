@@ -1,4 +1,3 @@
-'use client';
 
 import { Link } from '@/navigation';
 import Image from 'next/image';
@@ -6,21 +5,18 @@ import type { Service } from '@/types/services';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
 interface ServiceCardProps {
   service: Service;
   categorySlug: string;
+  name: string;
+  description: string;
+  learnMoreText: string;
 }
 
-export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
-  const tServices = useTranslations('Services');
-  const tNav = useTranslations('Navigation');
-  
-  const name = tServices(`items.${service.id}.name`);
-  const description = tServices(`items.${service.id}.description`);
-  const learnMoreText = tNav('exploreService');
-  const imageUrl = service.image ? service.image : undefined;
+export function ServiceCard({ service, categorySlug, name, description, learnMoreText }: ServiceCardProps) {
+  // Decode the URI to prevent double-encoding by the Next.js Image component.
+  const imageUrl = service.image ? decodeURIComponent(service.image) : undefined;
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
