@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -38,11 +39,8 @@ export function ServiceRecommender() {
   };
 
   return (
-    <Card className="w-full max-w-3xl mx-auto shadow-xl border-accent/50">
-      <CardHeader className="text-center">
-        {/* The title and description are now provided by the parent page */}
-      </CardHeader>
-      <CardContent>
+    <Card className="w-full max-w-3xl mx-auto shadow-xl border-accent/50 bg-card">
+      <CardContent className="pt-6">
         <div className="space-y-4">
           <Textarea
             placeholder={t('placeholder')}

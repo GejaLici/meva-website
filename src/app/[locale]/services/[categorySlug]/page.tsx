@@ -70,15 +70,9 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         {category.services.length > 0 ? (
           isDental ? (
-            <DentalServiceList
-              services={category.services}
-              categorySlug={category.slug}
-            />
+            <DentalServiceList services={category.services} categorySlug={category.slug} />
           ) : (
-            <AestheticServiceList
-              services={category.services}
-              categorySlug={category.slug}
-            />
+            <AestheticServiceList services={category.services} categorySlug={category.slug} />
           )
         ) : (
           <p className="text-center text-lg text-muted-foreground">

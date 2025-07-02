@@ -2,7 +2,7 @@
 export interface Service {
   id: string;
   slug: string;
-  categorySlug?: string; // Make optional as it's added dynamically
+  categorySlug?: string;
   image?: string;
   imageHint?: string;
 }
@@ -13,7 +13,6 @@ export interface ServiceCategory {
   services: Service[];
   image?: string;
   imageHint?: string;
-  // New properties for homepage display
   displayOnHome?: boolean;
   icon?: string;
 }

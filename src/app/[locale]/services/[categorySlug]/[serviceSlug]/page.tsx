@@ -87,7 +87,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             {service.image && (
               <Card className="overflow-hidden shadow-xl mb-8">
                 <Image
-                  src={service.image}
+                  src={decodeURIComponent(service.image)}
                   alt={serviceName}
                   width={600}
                   height={400}
@@ -99,9 +99,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
             <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
-            <div className="mb-6">
-              <p>{serviceDescription}</p>
-            </div>
+            <div className="mb-6" dangerouslySetInnerHTML={{ __html: serviceDescription }} />
             
             <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteName })}</h3>
             <p className="mb-4">
