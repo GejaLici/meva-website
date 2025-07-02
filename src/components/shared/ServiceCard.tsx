@@ -20,13 +20,14 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   const name = tServices(`items.${service.id}.name`);
   const description = tServices(`items.${service.id}.description`);
   const learnMoreText = tNav('exploreService');
+  const imageUrl = service.image ? service.image : undefined;
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      {service.image && (
+      {imageUrl && (
         <div className="relative w-full h-48">
           <Image
-            src={service.image}
+            src={imageUrl}
             alt={name}
             fill
             style={{ objectFit: 'cover' }}
