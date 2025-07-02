@@ -6,7 +6,6 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { AestheticServiceList } from '@/components/services/AestheticServiceList';
 import { DentalServiceList } from '@/components/services/DentalServiceList';
-import { stripHtml } from '@/lib/utils';
 import type { Service } from '@/types/services';
 
 interface CategoryPageProps {
@@ -50,11 +49,11 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 }
 
 export default async function ServiceCategoryPage({ params }: CategoryPageProps) {
-  const category = getCategoryBySlug(params.categorySlug);
   const tServices = await getTranslations('Services');
   const tPage = await getTranslations('ServiceCategoryPage');
-  const tNav = await getTranslations('Navigation');
   const tSite = await getTranslations('Site');
+  
+  const category = getCategoryBySlug(params.categorySlug);
   
   if (!category) {
     notFound();
@@ -64,7 +63,6 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   const categoryDescription = tServices(`categories.${category.id}.description`);
   
   const isDental = dentalCategoryIds.includes(category.id);
-  const learnMoreText = tNav('exploreService');
 
   return (
     <>
@@ -75,13 +73,11 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
             <DentalServiceList
               services={category.services}
               categorySlug={category.slug}
-              learnMoreText={learnMoreText}
             />
           ) : (
             <AestheticServiceList
               services={category.services}
               categorySlug={category.slug}
-              learnMoreText={learnMoreText}
             />
           )
         ) : (

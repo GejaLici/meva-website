@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Link } from '@/navigation';
@@ -11,15 +12,16 @@ import { useTranslations } from 'next-intl';
 interface ServiceCardProps {
   service: Service;
   categorySlug: string;
-  learnMoreText: string;
 }
 
-export function ServiceCard({ service, categorySlug, learnMoreText }: ServiceCardProps) {
+export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   const tServices = useTranslations('Services');
+  const tNav = useTranslations('Navigation');
   const encodedImageUrl = service.image ? encodeURI(service.image) : undefined;
   
   const name = tServices(`items.${service.id}.name`);
   const description = tServices(`items.${service.id}.description`);
+  const learnMoreText = tNav('exploreService');
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">

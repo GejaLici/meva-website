@@ -5,10 +5,9 @@ import type { Service } from '@/types/services';
 interface AestheticServiceListProps {
   services: Service[];
   categorySlug: string;
-  learnMoreText: string;
 }
 
-export function AestheticServiceList({ services, categorySlug, learnMoreText }: AestheticServiceListProps) {
+export function AestheticServiceList({ services, categorySlug }: AestheticServiceListProps) {
   return (
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service) => (
@@ -16,7 +15,6 @@ export function AestheticServiceList({ services, categorySlug, learnMoreText }: 
           key={service.id}
           service={service}
           categorySlug={categorySlug}
-          learnMoreText={learnMoreText}
         />
       ))}
     </div>
