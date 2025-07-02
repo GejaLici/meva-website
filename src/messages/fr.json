@@ -13,7 +13,7 @@
     "faq": "FAQ",
     "contact": "Contact",
     "dentalServices": "Services Dentaires",
-    "exploreService": "Apprendre encore plus"
+    "exploreService": "En savoir plus"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Changer de langue",
@@ -298,7 +298,7 @@
     "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Catégorie non trouvée | {siteName}",
     "categoryNotFoundDescription": "La catégorie de service demandée n'a pas pu être trouvée à la {siteName}.",
-    "noResults": "Aucun service n'est disponible dans cette catégorie pour le moment. Veuillez contacter {siteName} pour plus de détails."
+    "noResults": "Aucun service n'est available dans cette catégorie pour le moment. Veuillez contacter {siteName} pour plus de détails."
   },
   "PrivacyPolicyPage": {
     "metaTitle": "Politique de confidentialité | {siteName}",
@@ -374,3 +374,5 @@
     "p10_2": "{siteName}<br />À l'attention de : Service juridique<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albanie<br />E-mail : info@{SITE_DOMAIN}"
   }
 }
+
+    

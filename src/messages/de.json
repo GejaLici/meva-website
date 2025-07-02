@@ -13,7 +13,7 @@
     "faq": "FAQ",
     "contact": "Kontakt",
     "dentalServices": "Zahnärztliche Leistungen",
-    "exploreService": "Mehr Erfahren"
+    "exploreService": "Mehr erfahren"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Sprache ändern",
@@ -374,3 +374,5 @@
     "p10_2": "{siteName}<br />z.Hd.: Rechtsabteilung<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tirana, Albanien<br />E-Mail: info@{SITE_DOMAIN}"
   }
 }
+
+    
