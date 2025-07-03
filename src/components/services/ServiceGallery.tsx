@@ -19,46 +19,34 @@ interface ServiceGalleryProps {
 }
 
 export function ServiceGallery({ images }: ServiceGalleryProps) {
-  const [mainApi, setMainApi] = React.useState<CarouselApi>();
-  const [thumbApi, setThumbApi] = React.useState<CarouselApi>();
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-  const onThumbClick = React.useCallback(
-    (index: number) => {
-      if (!mainApi) {
-        return;
-      }
-      mainApi.scrollTo(index);
-    },
-    [mainApi]
-  );
-
-  const onSelect = React.useCallback(() => {
-    if (!mainApi || !thumbApi) {
-      return;
-    }
-    setSelectedIndex(mainApi.selectedScrollSnap());
-    thumbApi.scrollTo(mainApi.selectedScrollSnap());
-  }, [mainApi, thumbApi]);
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
 
   React.useEffect(() => {
-    if (!mainApi) {
+    if (!api) {
       return;
     }
 
-    onSelect();
-    mainApi.on('select', onSelect);
-    mainApi.on('reInit', onSelect);
+    setCurrent(api.selectedScrollSnap());
+
+    const onSelect = (api: CarouselApi) => {
+      setCurrent(api.selectedScrollSnap());
+    };
+
+    api.on('select', onSelect);
 
     return () => {
-      mainApi.off('select', onSelect);
-      mainApi.off('reInit', onSelect);
+      api.off('select', onSelect);
     };
-  }, [mainApi, onSelect]);
+  }, [api]);
+
+  const handleDotClick = (index: number) => {
+    api?.scrollTo(index);
+  }
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <Carousel setApi={setMainApi} className="w-full relative">
+      <Carousel setApi={setApi} className="w-full relative">
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
@@ -80,53 +68,19 @@ export function ServiceGallery({ images }: ServiceGalleryProps) {
         <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10" />
         <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10" />
       </Carousel>
-
-      <div className="py-2">
-        <Carousel
-          setApi={setThumbApi}
-          opts={{
-            align: 'start',
-            containScroll: 'keepSnaps',
-            dragFree: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-2">
-            {images.map((image, index) => (
-              <CarouselItem
-                key={index}
-                onClick={() => onThumbClick(index)}
-                className="basis-1/4 md:basis-1/5 pl-2 cursor-pointer"
-              >
-                <div className="p-1">
-                  <Card
-                    className={cn(
-                      'overflow-hidden transition-all border-2',
-                      selectedIndex === index
-                        ? 'border-primary'
-                        : 'border-transparent'
-                    )}
-                  >
-                    <CardContent className="relative flex aspect-square items-center justify-center p-0">
-                      <Image
-                        src={image.url}
-                        alt={`Thumbnail ${image.hint}`}
-                        fill
-                        sizes="10vw"
-                        style={{ objectFit: 'cover' }}
-                        data-ai-hint={image.hint}
-                        className={cn(
-                          'transition-opacity',
-                          selectedIndex !== index && 'opacity-60'
-                        )}
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+      
+      <div className="flex justify-center items-center gap-2 mt-4">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => handleDotClick(index)}
+            className={cn(
+              "h-2 rounded-full transition-all duration-300",
+              current === index ? "w-6 bg-primary" : "w-2 bg-primary/50"
+            )}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </div>
   );
