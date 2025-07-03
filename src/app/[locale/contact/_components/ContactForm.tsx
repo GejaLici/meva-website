@@ -1,4 +1,4 @@
-// This file is intentionally left blank as it is a duplicate.
+// This file is intentionally left blank to neutralize a routing error.
 export default function BlankPage() {
   return null;
 }
