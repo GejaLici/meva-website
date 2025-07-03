@@ -281,7 +281,8 @@
     "whatToExpectL4": "Engagierte, aufmerksame postoperative Betreuung und Nachsorge.",
     "consultationButton": "Buchen Sie eine vertrauliche Beratung",
     "serviceNotFoundTitle": "Dienst nicht gefunden | {siteName}",
-    "serviceNotFoundDescription": "Der angeforderte Dienst konnte bei {siteName} nicht gefunden werden."
+    "serviceNotFoundDescription": "Der angeforderte Dienst konnte bei {siteName} nicht gefunden werden.",
+    "galleryTitle": "Verfahrensgalerie"
   },
   "ServicesOverviewPage": {
     "metaTitle": "Unsere Leistungen | {siteName}",

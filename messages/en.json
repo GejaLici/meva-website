@@ -281,7 +281,8 @@
     "whatToExpectL4": "Dedicated, attentive post-operative care and follow-up.",
     "consultationButton": "Book a Confidential Consultation",
     "serviceNotFoundTitle": "Service Not Found | {siteName}",
-    "serviceNotFoundDescription": "The requested service could not be found at {siteName}."
+    "serviceNotFoundDescription": "The requested service could not be found at {siteName}.",
+    "galleryTitle": "Procedure Gallery"
   },
   "ServicesOverviewPage": {
     "metaTitle": "Our Services | {siteName}",

@@ -1,10 +1,16 @@
 
+export interface ServiceImage {
+  url: string;
+  hint: string;
+}
+
 export interface Service {
   id: string;
   slug: string;
   categorySlug?: string;
   image?: string;
   imageHint?: string;
+  gallery?: ServiceImage[];
 }
 
 export interface ServiceCategory {

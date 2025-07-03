@@ -281,7 +281,8 @@
     "whatToExpectL4": "Kujdes dhe ndjekje e dedikuar dhe e vëmendshme pas operacionit.",
     "consultationButton": "Rezervoni një Konsultë Konfidenciale",
     "serviceNotFoundTitle": "Shërbimi nuk u gjet | {siteName}",
-    "serviceNotFoundDescription": "Shërbimi i kërkuar nuk u gjet në {siteName}."
+    "serviceNotFoundDescription": "Shërbimi i kërkuar nuk u gjet në {siteName}.",
+    "galleryTitle": "Galeria e Procedurës"
   },
   "ServicesOverviewPage": {
     "metaTitle": "Shërbimet Tona | {siteName}",

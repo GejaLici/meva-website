@@ -10,6 +10,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { stripHtml } from '@/lib/utils';
 import { serviceCategories } from '@/lib/services';
+import { ServiceGallery } from '@/components/services/ServiceGallery';
 
 interface ServicePageProps {
   params: {
@@ -117,6 +118,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </Button>
           </div>
         </div>
+        
+        {service.gallery && service.gallery.length > 0 && (
+          <section className="mt-16 pt-12 border-t">
+            <h2 className="text-3xl font-headline font-bold text-center mb-8 text-primary">
+              {tDetails('galleryTitle')}
+            </h2>
+            <ServiceGallery images={service.gallery} />
+          </section>
+        )}
       </div>
     </>
   );

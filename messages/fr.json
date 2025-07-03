@@ -281,7 +281,8 @@
     "whatToExpectL4": "Soins postopératoires et suivi dévoués et attentifs.",
     "consultationButton": "Réserver une consultation confidentielle",
     "serviceNotFoundTitle": "Service non trouvé | {siteName}",
-    "serviceNotFoundDescription": "Le service demandé n'a pas pu être trouvé à la {siteName}."
+    "serviceNotFoundDescription": "Le service demandé n'a pas pu être trouvé à la {siteName}.",
+    "galleryTitle": "Galerie de la procédure"
   },
   "ServicesOverviewPage": {
     "metaTitle": "Nos services | {siteName}",
