@@ -1,9 +1,8 @@
 
-import { PageHeader } from '@/components/shared/PageHeader';
+import { LastUpdatedHeader } from '@/components/shared/LastUpdatedHeader';
 import { SITE_DOMAIN } from '@/lib/constants';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { formatDate } from '@/lib/utils';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'TermsOfServicePage'});
@@ -18,13 +17,13 @@ export default async function TermsOfServicePage({params: {locale}}: {params: {l
   const t = await getTranslations('TermsOfServicePage');
   const tSite = await getTranslations('Site');
   const siteName = tSite('title');
-  const today = formatDate(new Date().toISOString(), locale);
 
   return (
     <>
-      <PageHeader
-        title={t('title')}
-        description={t('lastUpdated', { date: today })}
+      <LastUpdatedHeader
+        titleKey="title"
+        descriptionKey="lastUpdated"
+        namespace="TermsOfServicePage"
       />
       <div className="container mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:px-8 prose prose-lg text-foreground">
         <h2>{t('h2_1')}</h2>

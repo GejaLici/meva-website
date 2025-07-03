@@ -34,48 +34,48 @@
     "termsOfService": "Kushtet e Shërbimit"
   },
   "HomePage": {
-    "heroTitle": "Zbuloni Rrezatimin Tuaj. Ripërcaktoni sot Bukurinë Tuaj.",
-    "heroSubtitle": "Përjetoni shkencën dhe artin e transformimit estetik në Klinikën Meva. Profesionistët tanë mjekësorë të kualifikuar kombinojnë teknologjinë më të fundit me kujdesin e personalizuar për t'ju ndihmuar të arrini qëllimet tuaja përfundimtare estetike dhe të mirëqenies.",
-    "heroButton": "Eksploroni Trajtimet Tona Eksperte",
-    "servicesTitle": "Shërbimet Tona Kryesore Estetike & Dentare",
+    "heroTitle": "Zbuloni rrezatimin tuaj. Ripërcaktoni bukurinë.",
+    "heroSubtitle": "Përjetoni shkencën dhe artin e transformimit estetik në klinikën Meva. Profesionistët tanë mjekësorë të kualifikuar kombinojnë teknologjinë më të fundit me kujdesin e personalizuar për t'ju ndihmuar të arrini qëllimet tuaja përfundimtare estetike dhe të mirëqenies.",
+    "heroButton": "Eksploroni trajtimet tona eksperte",
+    "servicesTitle": "Shërbimet tona kryesore Estetike & Dentare",
     "servicesSubtitle": "Në Klinikën Meva, ne ofrojmë një suitë të plotë të procedurave të avancuara estetike dhe dentare, të përshtatura me përpikëri nga specialistët tanë për të përmirësuar bukurinë tuaj natyrore dhe për të ngritur vetëbesimin tuaj.",
-    "testimonialsTitle": "Çfarë Thonë Pacientët Tanë",
-    "testimonialsSubtitle": "Dëgjoni nga ata që kanë përjetuar ndryshimin në Klinikën Meva dhe na kanë besuar kujdesin e tyre.",
-    "galleryTitle": "Transformimet për të Cilat Jemi Krenarë",
+    "testimonialsTitle": "Çfarë thonë pacientët tanë",
+    "testimonialsSubtitle": "Dëgjoni nga ata që kanë përjetuar ndryshimin në klinikën Meva dhe na kanë besuar kujdesin e tyre.",
+    "galleryTitle": "Transformimet për të cilat jemi krenarë",
     "gallerySubtitle": "Dëshmoni aftësinë dhe artin e përpiktë të specialistëve tanë përmes këtyre rezultateve reale të pacientëve. Hidhni një vështrim në rezultatet mahnitëse që pacientët tanë kanë arritur në Klinikën Meva.",
-    "galleryButton": "Shikoni Galerinë e Plotë të Rezultateve",
-    "insightsTitle": "Informacione të Mëtejshme & Mbështetje Eksperte",
+    "galleryButton": "Shikoni galerinë e plotë të rezultateve",
+    "insightsTitle": "Informacione të mëtejshme & mbështetje ekspertesh",
     "insightsSubtitle": "Eksploroni informacion të thelluar rreth trajtimeve tona të specializuara, qëndroni të informuar me përparimet më të fundit në kujdesin estetik dhe gjeni përgjigje të plota për pyetjet tuaja nga ekipi ynë ekspert në Klinikën Meva.",
-    "insightsGalleryTitle": "Shikoni Transformimet Tona",
-    "insightsGalleryDesc": "Shikoni transformimet mahnitëse dhe rezultatet reale të pacientëve që ekipi ynë mjekësor ekspert ka arritur.",
-    "insightsGalleryButton": "Vizitoni Galerinë e Pacientëve",
-    "insightsBlogTitle": "Eksploroni Informacionet Tona Eksperte",
+    "insightsGalleryTitle": "Shikoni transformimet tona",
+    "insightsGalleryDesc": "Shikoni transformimet mahnitëse dhe rezultatet reale të pacientëve që ekipi ynë mjekësor ka arritur.",
+    "insightsGalleryButton": "Vizitoni galerinë e pacientëve",
+    "insightsBlogTitle": "Eksploroni informacionet tona eksperte",
     "insightsBlogDesc": "Zhytuni në blogun tonë për tendencat më të fundit, informacionet procedurale dhe këshillat e ekspertëve në kujdesin e avancuar estetik dhe dentar.",
-    "insightsBlogButton": "Lexoni Blogun Tonë Ekspert",
-    "insightsFaqTitle": "Pyetje të Shpeshta",
+    "insightsBlogButton": "Lexoni blogun tonë ekspert",
+    "insightsFaqTitle": "Pyetje të shpeshta",
     "insightsFaqDesc": "Gjeni përgjigje të plota për pyetjet e zakonshme rreth procedurave tona, protokolleve të rimëkëmbjes dhe çfarë të prisni gjatë udhëtimit tuaj me ne.",
-    "insightsFaqButton": "Vizitoni FAQ-in Tonë të Plotë",
+    "insightsFaqButton": "Vizitoni FAQ-in",
     "contactTitle": "Gati për Transformimin Tuaj?",
-    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni Klinikën Meva sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar."
+    "contactSubtitle": "Filloni udhëtimin tuaj drejt rezultateve estetike të dëshiruara. Kontaktoni klinikën Meva sot për një konsultë konfidenciale. Plotësoni formularin më poshtë, dhe ekipi ynë i përkushtuar i ekspertëve mjekësorë do të lidhet menjëherë me ju për të diskutuar aspiratat tuaja dhe për t'ju udhëhequr nëpër rrugët tona të trajtimit të personalizuar."
   },
   "ContactForm": {
-    "nameLabel": "Emri i Plotë",
+    "nameLabel": "Emri i plotë",
     "namePlaceholder": "Shkruani emrin tuaj të plotë",
-    "emailLabel": "Adresa Email",
+    "emailLabel": "Adresa email",
     "emailPlaceholder": "Shkruani adresën tuaj email",
     "subjectLabel": "Subjekti",
     "subjectPlaceholder": "Cili është subjekti i mesazhit tuaj?",
     "messageLabel": "Mesazhi",
     "messagePlaceholder": "Ju lutemi përshkruani kërkesën tuaj në detaje.",
-    "submitButton": "Dërgo Mesazhin",
+    "submitButton": "Dërgo mesazhin",
     "submittingButton": "Duke dërguar...",
-    "successTitle": "Mesazhi u Dërgua",
+    "successTitle": "Mesazhi u dërgua",
     "successDescription": "Faleminderit që na kontaktuat. Ne do t'ju kthejmë përgjigje së shpejti.",
-    "errorTitle": "Gabim në Dërgimin e Mesazhit",
+    "errorTitle": "Gabim në dërgimin e mesazhit",
     "genericError": "Ndodhi një gabim i papritur. Ju lutemi provoni përsëri."
   },
   "NotFound": {
-    "title": "404 - Faqja Nuk u Gjet",
+    "title": "404 - Faqja nuk u gjet",
     "description": "Na vjen keq, faqja që po kërkoni nuk ekziston ose është zhvendosur.",
     "suggestion": "Mund të ktheheni në faqen kryesore ose të kontrolloni URL-në për gabime.",
     "homeButton": "Kthehu në Faqen Kryesore"
@@ -84,22 +84,22 @@
     "testimonial-1": {
       "name": "Sara L.",
       "quote": "Klinika Meva me të vërtetë transformoi vetëbesimin tim! Rezultatet e rimodelimit të hundës sime janë fantastike, duke i tejkaluar të gjitha pritshmëritë e mia. I gjithë ekipi ishte jashtëzakonisht profesional dhe mbështetës gjatë gjithë procesit. Nuk mund të isha më e lumtur.",
-      "treatment": "Rimodelimi i Hundës (Rinoplastika)"
+      "treatment": "Rimodelimi i hundës (Rinoplastika)"
     },
     "testimonial-2": {
       "name": "Mikeli B.",
-      "quote": "Fillimisht hezitoja t'i nënshtrohesha një transplanti flokësh, por specialistët në Klinikën Meva ishin të jashtëzakonshëm. Ata shpjeguan gjithçka qartë dhe më bënë të ndihesha plotësisht rehat. Procedura ishte e lehtë dhe rezultatet janë jashtëzakonisht natyrale. Rekomandoj fuqimisht ekspertizën e tyre!",
-      "treatment": "Transplant Flokësh (FUE)"
+      "quote": "Fillimisht hezitoja t'i nënshtrohesha një transplanti flokësh, por specialistët në klinikën Meva ishin të jashtëzakonshëm. Ata shpjeguan gjithçka qartë dhe më bënë të ndihesha plotësisht rehat. Procedura ishte e lehtë dhe rezultatet janë jashtëzakonisht natyrale. Rekomandoj fuqimisht ekspertizën e tyre!",
+      "treatment": "Transplant flokësh (FUE)"
     },
     "testimonial-3": {
       "name": "Emilia R.",
-      "quote": "Përvoja ime e zmadhimit të gjoksit në Klinikën Meva ishte e jashtëzakonshme. Kirurgët dëgjuan me vëmendje qëllimet e mia estetike dhe ofruan rezultate të bukura dhe me pamje natyrale që i përshtaten në mënyrë perfekte trupit tim. Kujdesi pas operacionit dhe vëmendja ndaj detajeve ishin të jashtëzakonshme.",
-      "treatment": "Zmadhimi i Gjoksit"
+      "quote": "Përvoja ime e zmadhimit të gjoksit në klinikën Meva ishte e jashtëzakonshme. Kirurgët dëgjuan me vëmendje qëllimet e mia estetike dhe ofruan rezultate të bukura dhe me pamje natyrale që i përshtaten në mënyrë perfekte trupit tim. Kujdesi pas operacionit dhe vëmendja ndaj detajeve ishin të jashtëzakonshme.",
+      "treatment": "Zmadhimi i gjoksit"
     }
   },
   "Services": {
     "categories": {
-      "facial-surgery": { "name": "Kirurgjia e Fytyrës", "description": "Procedura kirurgjikale gjithëpërfshirëse për të përmirësuar dhe rinovuar tiparet e fytyrës." },
+      "facial-surgery": { "name": "Kirurgjia e Fytyrës", "description": "Procedura kirurgjikale për të përmirësuar dhe rinovuar tiparet e fytyrës." },
       "facial-treatments": { "name": "Trajtimet e Fytyrës", "description": "Trajtime jo-kirurgjikale për të rinovuar dhe përmirësuar tiparet tuaja të fytyrës." },
       "breasts": { "name": "Kirurgjia e Gjoksit", "description": "Procedura kirurgjikale për të përmirësuar formën, madhësinë dhe pamjen e gjinjve." },
       "body": { "name": "Kirurgjia e Trupit", "description": "Formësoni dhe konturoni trupin tuaj me procedurat tona të avancuara kirurgjikale." },
