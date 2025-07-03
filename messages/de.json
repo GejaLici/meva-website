@@ -383,5 +383,11 @@
     "error": "Leider konnten wir im Moment keine Empfehlungen generieren. Bitte versuchen Sie es später erneut.",
     "resultsTitle": "Unsere Empfehlungen für Sie",
     "noResults": "Aufgrund Ihrer Anfrage konnten wir keine direkte Übereinstimmung finden. Bitte versuchen Sie es mit einer anderen Formulierung oder kontaktieren Sie uns für eine persönliche Beratung."
+  },
+  "DentalServicesPage": {
+    "metaTitle": "Umfassende Zahnärztliche Leistungen | {siteName}",
+    "title": "Umfassende Zahnärztliche Leistungen",
+    "description": "Von ästhetischen Verbesserungen bis hin zu komplexen chirurgischen Eingriffen bieten unsere zahnärztlichen Experten eine umfassende Versorgung, um Ihre Mundgesundheit zu gewährleisten und Ihr Lächeln zu perfektionieren. Entdecken Sie unser breites Angebot an zahnärztlichen Fachgebieten bei {siteName}.",
+    "noResults": "Derzeit sind keine zahnärztlichen Leistungskategorien verfügbar. Bitte kontaktieren Sie {siteName} für weitere Details."
   }
 }

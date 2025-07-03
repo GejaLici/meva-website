@@ -383,5 +383,11 @@
     "error": "Na vjen keq, nuk mundëm të gjeneronim rekomandime në këtë moment. Ju lutemi provoni përsëri më vonë.",
     "resultsTitle": "Rekomandimet Tona për Ju",
     "noResults": "Bazuar në kërkesën tuaj, nuk mundëm të gjenim një përputhje të drejtpërdrejtë. Ju lutemi provoni të riformuloni ose na kontaktoni për një konsultë personale."
+  },
+  "DentalServicesPage": {
+    "metaTitle": "Shërbime Dentare Gjithëpërfshirëse | {siteName}",
+    "title": "Shërbime Dentare Gjithëpërfshirëse",
+    "description": "Nga përmirësimet estetike te procedurat komplekse kirurgjikale, ekspertët tanë dentarë ofrojnë një spektër të plotë kujdesi për të siguruar shëndetin tuaj oral dhe për të përsosur buzëqeshjen tuaj. Eksploroni gamën tonë të gjerë të specialiteteve dentare në {siteName}.",
+    "noResults": "Nuk ka kategori shërbimesh dentare të disponueshme për momentin. Ju lutemi kontaktoni {siteName} për më shumë detaje."
   }
 }

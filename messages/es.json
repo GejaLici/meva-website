@@ -383,5 +383,11 @@
     "error": "Lo sentimos, no pudimos generar recomendaciones en este momento. Por favor, inténtelo de nuevo más tarde.",
     "resultsTitle": "Nuestras recomendaciones para usted",
     "noResults": "Según su consulta, no pudimos encontrar una coincidencia directa. Intente reformular o contáctenos para una consulta personal."
+  },
+  "DentalServicesPage": {
+    "metaTitle": "Servicios Dentales Integrales | {siteName}",
+    "title": "Servicios Dentales Integrales",
+    "description": "Desde mejoras estéticas hasta procedimientos quirúrgicos complejos, nuestros expertos dentales brindan un espectro completo de atención para garantizar su salud bucal y perfeccionar su sonrisa. Explore nuestra amplia gama de especialidades dentales en {siteName}.",
+    "noResults": "No hay categorías de servicios dentales disponibles en este momento. Póngase en contacto con {siteName} para obtener más detalles."
   }
 }
