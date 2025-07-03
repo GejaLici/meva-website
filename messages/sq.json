@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Klinika Meva"
+    "title": "Klinika Meva",
+    "description": "Klinika Meva: Shërbime estetike dhe dentare të nivelit të lartë. Specialistët tanë të certifikuar ofrojnë trajtime të avancuara për rezultate transformuese me kujdesin dhe ekspertizën më të madhe."
   },
   "Navigation": {
     "home": "Kreu",
@@ -33,7 +34,7 @@
     "termsOfService": "Kushtet e Shërbimit"
   },
   "HomePage": {
-    "heroTitle": "Zbuloni tani rrezatimin Tuaj. Ripërcaktoni Bukurinë Tuaj.",
+    "heroTitle": "Zbuloni Rrezatimin Tuaj. Ripërcaktoni sot Bukurinë Tuaj.",
     "heroSubtitle": "Përjetoni shkencën dhe artin e transformimit estetik në Klinikën Meva. Profesionistët tanë mjekësorë të kualifikuar kombinojnë teknologjinë më të fundit me kujdesin e personalizuar për t'ju ndihmuar të arrini qëllimet tuaja përfundimtare estetike dhe të mirëqenies.",
     "heroButton": "Eksploroni Trajtimet Tona Eksperte",
     "servicesTitle": "Shërbimet Tona Kryesore Estetike & Dentare",
@@ -269,6 +270,8 @@
     "backButton": "Kthehu te të gjithë Artikujt e Blogut"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Eksploroni {serviceName} në {siteName}. {excerpt}",
     "aboutTitle": "Rreth {serviceName}",
     "whatToExpectTitle": "Çfarë të Presësh në {siteName}",
     "whatToExpectP1": "Në {siteName}, udhëtimi juaj fillon me një konsultë gjithëpërfshirëse ku specialistët tanë zhvillojnë një plan trajtimi të personalizuar të përshtatur për nevojat tuaja specifike dhe rezultatet e dëshiruara për {serviceName}. Ne përdorim teknika moderne, të bazuara në prova dhe teknologji të fundit. Angazhimi ynë shtrihet në kujdesin e përpiktë pas operacionit dhe ndjekjen, duke siguruar rezultate optimale, komoditetin tuaj dhe një proces të qetë rikuperimi.",
@@ -292,15 +295,9 @@
     "recommenderTitle": "Keni nevojë për ndihmë në zgjedhje?",
     "recommenderSubtitle": "Përshkruani shqetësimet ose qëllimet tuaja, dhe asistenti ynë i AI do t'ju sugjerojë shërbimet më të përshtatshme për ju."
   },
-  "DentalServicesPage": {
-    "metaTitle": "Shërbime Dentare Gjithëpërfshirëse | {siteName}",
-    "metaDescription": "Eksploroni gamën tonë të gjerë të shërbimeve dentare eksperte në {siteName}, nga trajtimet e avancuara estetike dhe ortodoncia te kirurgjia orale dhe kujdesi i specializuar pediatrik.",
-    "title": "Shërbime Dentare Gjithëpërfshirëse",
-    "description": "Zbuloni gamën tonë të gjerë të trajtimeve të specializuara dentare në {siteName}, të dizajnuara për të përmirësuar buzëqeshjen tuaj dhe për të mbrojtur shëndetin tuaj oral. Ekipi ynë ekspert dentar ofron gjithçka, nga përmirësimet e avancuara kozmetike dhe ortodoncia te procedurat gjithëpërfshirëse kirurgjikale dhe kujdesi i dedikuar pediatrik.",
-    "exploreButton": "Eksploroni {categoryName}",
-    "noResults": "Nuk ka kategori shërbimesh dentare të disponueshme për momentin. Ju lutemi kontaktoni {siteName} për informacionet më të fundit."
-  },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Kategoria nuk u gjet | {siteName}",
     "categoryNotFoundDescription": "Kategoria e kërkuar e shërbimit nuk u gjet në {siteName}.",
     "noResults": "Nuk ka shërbime të disponueshme në këtë kategori për momentin. Ju lutemi kontaktoni {siteName} për më shumë detaje."
@@ -377,5 +374,14 @@
     "h2_10": "10. NA KONTAKTONI",
     "p10_1": "Për të zgjidhur një ankesë në lidhje me Sajtin ose Shërbimet ose për të marrë informacion të mëtejshëm në lidhje me përdorimin e Sajtit ose Shërbimeve, ju lutemi na kontaktoni në:",
     "p10_2": "{siteName}<br />Për vëmendje: Departamenti Ligjor<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tiranë, Shqipëri<br />Email: info@{SITE_DOMAIN}"
+  },
+  "ServiceRecommender": {
+    "placeholder": "p.sh. 'Dua të zvogëloj rrudhat rreth syve' ose 'Kërkoj një buzëqeshje më të ndritshme dhe më të bardhë'",
+    "buttonText": "Merr Rekomandime",
+    "buttonLoadingText": "Duke analizuar...",
+    "errorTitle": "Rekomandimi Dështoi",
+    "error": "Na vjen keq, nuk mundëm të gjeneronim rekomandime në këtë moment. Ju lutemi provoni përsëri më vonë.",
+    "resultsTitle": "Rekomandimet Tona për Ju",
+    "noResults": "Bazuar në kërkesën tuaj, nuk mundëm të gjenim një përputhje të drejtpërdrejtë. Ju lutemi provoni të riformuloni ose na kontaktoni për një konsultë personale."
   }
 }

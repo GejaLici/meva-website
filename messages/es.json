@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Clínica Meva"
+    "title": "Clínica Meva",
+    "description": "Clínica Meva: Servicios estéticos y dentales de primer nivel. Nuestros especialistas certificados ofrecen tratamientos avanzados para resultados transformadores con el máximo cuidado y experiencia."
   },
   "Navigation": {
     "home": "Inicio",
@@ -269,6 +270,8 @@
     "backButton": "Volver a todos los artículos del blog"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Explore {serviceName} en {siteName}. {excerpt}",
     "aboutTitle": "Sobre {serviceName}",
     "whatToExpectTitle": "Qué esperar en {siteName}",
     "whatToExpectP1": "En {siteName}, su viaje comienza con una consulta integral donde nuestros especialistas desarrollan un plan de tratamiento personalizado adaptado a sus necesidades específicas y resultados deseados para {serviceName}. Utilizamos técnicas modernas basadas en evidencia y tecnología de punta. Nuestro compromiso se extiende a un cuidado postoperatorio meticuloso y seguimiento, asegurando resultados óptimos, su comodidad y un proceso de recuperación sin problemas.",
@@ -292,15 +295,9 @@
     "recommenderTitle": "¿Necesita ayuda para elegir?",
     "recommenderSubtitle": "Describa sus preocupaciones u objetivos, y nuestro asistente de IA le sugerirá los servicios más adecuados para usted."
   },
-  "DentalServicesPage": {
-    "metaTitle": "Servicios Dentales Integrales | {siteName}",
-    "metaDescription": "Explore nuestra amplia gama de servicios dentales expertos en {siteName}, desde tratamientos estéticos avanzados y ortodoncia hasta cirugía oral y atención pediátrica especializada.",
-    "title": "Servicios Dentales Integrales",
-    "description": "Descubra nuestra amplia gama de tratamientos dentales especializados en {siteName}, diseñados para mejorar su sonrisa y proteger su salud bucal. Nuestro equipo dental experto ofrece todo, desde mejoras cosméticas avanzadas y ortodoncia hasta procedimientos quirúrgicos integrales y atención pediátrica dedicada.",
-    "exploreButton": "Explorar {categoryName}",
-    "noResults": "Actualmente no hay categorías de servicios dentales disponibles. Póngase en contacto con {siteName} para obtener la información más reciente."
-  },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Categoría no encontrada | {siteName}",
     "categoryNotFoundDescription": "La categoría de servicio solicitada no se pudo encontrar en {siteName}.",
     "noResults": "No hay servicios disponibles en esta categoría en este momento. Póngase en contacto con {siteName} para obtener más detalles."
@@ -377,5 +374,14 @@
     "h2_10": "10. CONTÁCTENOS",
     "p10_1": "Para resolver una queja sobre el Sitio o los Servicios o para recibir más información sobre el uso del Sitio o los Servicios, contáctenos en:",
     "p10_2": "{siteName}<br />Atención: Departamento Legal<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albania<br />Correo electrónico: info@{SITE_DOMAIN}"
+  },
+  "ServiceRecommender": {
+    "placeholder": "ej., 'Quiero reducir las arrugas alrededor de mis ojos' o 'Busco una sonrisa más brillante y blanca'",
+    "buttonText": "Obtener recomendaciones",
+    "buttonLoadingText": "Analizando...",
+    "errorTitle": "Fallo en la recomendación",
+    "error": "Lo sentimos, no pudimos generar recomendaciones en este momento. Por favor, inténtelo de nuevo más tarde.",
+    "resultsTitle": "Nuestras recomendaciones para usted",
+    "noResults": "Según su consulta, no pudimos encontrar una coincidencia directa. Intente reformular o contáctenos para una consulta personal."
   }
 }

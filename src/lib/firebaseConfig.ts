@@ -26,8 +26,8 @@ const firebaseConfig: FirebaseOptions = {
 };
 
 
-// Check if the config is using placeholder values.
-const isConfigured = firebaseConfig.apiKey && !firebaseConfig.apiKey.startsWith("AIza");
+// Check if the config seems to be properly configured.
+const isConfigured = !!(firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId && !firebaseConfig.apiKey.includes("REPLACE_WITH_YOUR"));
 
 let app;
 let db;

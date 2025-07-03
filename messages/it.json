@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Clinica Meva"
+    "title": "Clinica Meva",
+    "description": "Clinica Meva: Servizi estetici e dentistici di prim'ordine. I nostri specialisti certificati offrono trattamenti avanzati per risultati trasformativi con la massima cura e competenza."
   },
   "Navigation": {
     "home": "Home",
@@ -269,6 +270,8 @@
     "backButton": "Torna a Tutti gli Articoli del Blog"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Esplora {serviceName} presso {siteName}. {excerpt}",
     "aboutTitle": "Informazioni su {serviceName}",
     "whatToExpectTitle": "Cosa Aspettarsi da {siteName}",
     "whatToExpectP1": "Presso {siteName}, il tuo percorso inizia con una consulenza completa in cui i nostri specialisti sviluppano un piano di trattamento personalizzato su misura per le tue esigenze specifiche e i risultati desiderati per {serviceName}. Utilizziamo tecniche moderne basate sull'evidenza e tecnologie all'avanguardia. Il nostro impegno si estende a una meticolosa assistenza post-operatoria e a un follow-up, garantendo risultati ottimali, il tuo comfort e un processo di recupero senza intoppi.",
@@ -292,15 +295,9 @@
     "recommenderTitle": "Hai bisogno di aiuto per scegliere?",
     "recommenderSubtitle": "Descrivi le tue preoccupazioni o i tuoi obiettivi e il nostro assistente AI ti suggerirà i servizi più adatti a te."
   },
-  "DentalServicesPage": {
-    "metaTitle": "Servizi Dentali Completi | {siteName}",
-    "metaDescription": "Esplora la nostra vasta gamma di servizi dentistici esperti presso {siteName}, dai trattamenti estetici avanzati e ortodonzia alla chirurgia orale e cure pediatriche specializzate.",
-    "title": "Servizi Dentali Completi",
-    "description": "Scopri la nostra vasta gamma di trattamenti dentistici specializzati presso {siteName}, progettati per migliorare il tuo sorriso e salvaguardare la tua salute orale. Il nostro team di esperti dentali offre tutto, dai miglioramenti estetici avanzati e ortodonzia a procedure chirurgiche complete e cure pediatriche dedicate.",
-    "exploreButton": "Esplora {categoryName}",
-    "noResults": "Al momento non sono disponibili categorie di servizi dentistici. Si prega di contattare {siteName} per le informazioni più recenti."
-  },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Categoria Non Trovata | {siteName}",
     "categoryNotFoundDescription": "La categoria di servizio richiesta non è stata trovata presso {siteName}.",
     "noResults": "Al momento non sono disponibili servizi in questa categoria. Si prega di contattare {siteName} per maggiori dettagli."
@@ -377,5 +374,14 @@
     "h2_10": "10. CONTATTACI",
     "p10_1": "Per risolvere un reclamo riguardante il Sito o i Servizi o per ricevere ulteriori informazioni sull'uso del Sito o dei Servizi, ti preghiamo di contattarci a:",
     "p10_2": "{siteName}<br />Att.ne: Ufficio Legale<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albania<br />Email: info@{SITE_DOMAIN}"
+  },
+  "ServiceRecommender": {
+    "placeholder": "es. 'Voglio ridurre le rughe intorno agli occhi' o 'Cerco un sorriso più luminoso e bianco'",
+    "buttonText": "Ottieni Raccomandazioni",
+    "buttonLoadingText": "Analisi in corso...",
+    "errorTitle": "Raccomandazione Fallita",
+    "error": "Spiacenti, non è stato possibile generare raccomandazioni in questo momento. Riprova più tardi.",
+    "resultsTitle": "Le Nostre Raccomandazioni per Te",
+    "noResults": "In base alla tua richiesta, non siamo riusciti a trovare una corrispondenza diretta. Prova a riformulare o contattaci per una consulenza personale."
   }
 }

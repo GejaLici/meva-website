@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Meva Klinik"
+    "title": "Meva Klinik",
+    "description": "Meva Klinik: Erstklassige ästhetische und zahnärztliche Dienstleistungen. Unsere zertifizierten Spezialisten bieten fortschrittliche Behandlungen für transformative Ergebnisse mit höchster Sorgfalt und Expertise."
   },
   "Navigation": {
     "home": "Startseite",
@@ -269,6 +270,8 @@
     "backButton": "Zurück zu allen Blog-Artikeln"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Erkunden Sie {serviceName} bei {siteName}. {excerpt}",
     "aboutTitle": "Über {serviceName}",
     "whatToExpectTitle": "Was Sie in der {siteName} erwartet",
     "whatToExpectP1": "In der {siteName} beginnt Ihre Reise mit einer umfassenden Beratung, bei der unsere Spezialisten einen personalisierten Behandlungsplan entwickeln, der auf Ihre spezifischen Bedürfnisse und gewünschten Ergebnisse für {serviceName} zugeschnitten ist. Wir verwenden moderne, evidenzbasierte Techniken und modernste Technologie. Unser Engagement erstreckt sich auf eine sorgfältige postoperative Betreuung und Nachsorge, um optimale Ergebnisse, Ihren Komfort und einen reibungslosen Genesungsprozess zu gewährleisten.",
@@ -292,15 +295,9 @@
     "recommenderTitle": "Benötigen Sie Hilfe bei der Auswahl?",
     "recommenderSubtitle": "Beschreiben Sie Ihre Bedenken oder Ziele, und unser KI-Assistent wird Ihnen die am besten geeigneten Dienstleistungen vorschlagen."
   },
-  "DentalServicesPage": {
-    "metaTitle": "Umfassende zahnärztliche Leistungen | {siteName}",
-    "metaDescription": "Entdecken Sie unser umfangreiches Angebot an zahnärztlichen Expertenleistungen in der {siteName}, von fortschrittlichen ästhetischen Behandlungen und Kieferorthopädie bis hin zu Oralchirurgie und spezialisierter Kinderzahnheilkunde.",
-    "title": "Umfassende zahnärztliche Leistungen",
-    "description": "Entdecken Sie unser breites Spektrum an spezialisierten zahnärztlichen Behandlungen in der {siteName}, die darauf ausgelegt sind, Ihr Lächeln zu verbessern und Ihre Mundgesundheit zu schützen. Unser zahnärztliches Expertenteam bietet alles von fortschrittlichen kosmetischen Verbesserungen und Kieferorthopädie bis hin zu umfassenden chirurgischen Eingriffen und engagierter Kinderzahnheilkunde.",
-    "exploreButton": "Entdecken Sie {categoryName}",
-    "noResults": "Derzeit sind keine zahnärztlichen Leistungskategorien verfügbar. Bitte kontaktieren Sie {siteName} für die neuesten Informationen."
-  },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Kategorie nicht gefunden | {siteName}",
     "categoryNotFoundDescription": "Die angeforderte Dienstleistungskategorie konnte bei {siteName} nicht gefunden werden.",
     "noResults": "In dieser Kategorie sind derzeit keine Dienstleistungen verfügbar. Bitte kontaktieren Sie {siteName} für weitere Details."
@@ -377,5 +374,14 @@
     "h2_10": "10. KONTAKTIEREN SIE UNS",
     "p10_1": "Um eine Beschwerde bezüglich der Website oder der Dienste zu lösen oder weitere Informationen zur Nutzung der Website oder der Dienste zu erhalten, kontaktieren Sie uns bitte unter:",
     "p10_2": "{siteName}<br />z.Hd.: Rechtsabteilung<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tirana, Albanien<br />E-Mail: info@{SITE_DOMAIN}"
+  },
+  "ServiceRecommender": {
+    "placeholder": "z.B. 'Ich möchte Falten um meine Augen reduzieren' oder 'Ich suche ein helleres, weißeres Lächeln'",
+    "buttonText": "Empfehlungen erhalten",
+    "buttonLoadingText": "Analysiere...",
+    "errorTitle": "Empfehlung fehlgeschlagen",
+    "error": "Leider konnten wir im Moment keine Empfehlungen generieren. Bitte versuchen Sie es später erneut.",
+    "resultsTitle": "Unsere Empfehlungen für Sie",
+    "noResults": "Aufgrund Ihrer Anfrage konnten wir keine direkte Übereinstimmung finden. Bitte versuchen Sie es mit einer anderen Formulierung oder kontaktieren Sie uns für eine persönliche Beratung."
   }
 }

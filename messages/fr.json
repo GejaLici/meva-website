@@ -1,7 +1,8 @@
 
 {
   "Site": {
-    "title": "Clinique Meva"
+    "title": "Clinique Meva",
+    "description": "Clinique Meva : Services esthétiques et dentaires de premier ordre. Nos spécialistes certifiés proposent des traitements avancés pour des résultats transformateurs avec le plus grand soin et expertise."
   },
   "Navigation": {
     "home": "Accueil",
@@ -218,7 +219,7 @@
     },
     "faq-2": {
       "question": "Quelle est la durée de récupération typique pour les procédures esthétiques ?",
-      "answer": "<p>Les périodes de récupération varient considérablement en fonction du type et de l'invasivité de la procédure effectuée. Les traitements non invasifs, tels que certains soins du visage ou des peelings chimiques légers, peuvent n'entraîner que peu ou pas de temps d'arrêt, permettant un retour immédiat aux activités quotidiennes. Les procédures minimalement invasives comme les produits de comblement injectables peuvent entraîner un léger gonflement ou des ecchymoses pendant quelques jours. Les procédures chirurgicales, telles qu'un lifting du visage ou une abdominoplastie, nécessiteront une période de récupération plus longue, potentiellement de plusieurs semaines, pour une guérison complète. À la {siteName}, nous fournissons des instructions post-opératoires détaillées et personnalisées et un soutien dévoué pour assurer un processus de récupération fluide, confortable et efficace.</p>"
+      "answer": "<p>Les périodes de récupération varient considérablement en fonction du type et de l'invasivité de la procédure effectuée. Les traitements non invasifs, tels que certains soins du visage ou des peelings chimiques légers, peuvent n'entraîner que peu ou pas de temps d'arrêt, permettant un retour immédiat aux activités quotidiennes. Les procédures minimalement invasives comme les produits de comblement injectables peuvent entraîner un léger gonflement ou des ecchymoses pendant quelques jours. Les procédures chirurgicales, telles qu'un lifting du visage ou une abdominoplastie, nécessiteront une période de récupération plus longue, potentiellement de several semaines, pour une guérison complète. À la {siteName}, nous fournissons des instructions post-opératoires détaillées et personnalisées et un soutien dévoué pour assurer un processus de récupération fluide, confortable et efficace.</p>"
     },
     "faq-3": {
       "question": "Les résultats des traitements esthétiques sont-ils permanents ?",
@@ -269,6 +270,8 @@
     "backButton": "Retour à tous les articles du blog"
   },
   "ServiceDetailsPage": {
+    "metaTitle": "{serviceName} | {siteName}",
+    "metaDescription": "Découvrez {serviceName} à {siteName}. {excerpt}",
     "aboutTitle": "À propos de {serviceName}",
     "whatToExpectTitle": "À quoi s'attendre à la {siteName}",
     "whatToExpectP1": "À la {siteName}, votre parcours commence par une consultation complète au cours de laquelle nos spécialistes élaborent un plan de traitement personnalisé adapté à vos besoins spécifiques et aux résultats souhaités pour {serviceName}. Nous utilisons des techniques modernes fondées sur des données probantes et une technologie de pointe. Notre engagement s'étend à des soins postopératoires méticuleux et à un suivi, garantissant des résultats optimaux, votre confort et un processus de récupération en douceur.",
@@ -292,18 +295,12 @@
     "recommenderTitle": "Besoin d'aide pour choisir ?",
     "recommenderSubtitle": "Décrivez vos préoccupations ou vos objectifs, et notre assistant IA vous suggérera les services les plus adaptés."
   },
-  "DentalServicesPage": {
-    "metaTitle": "Services dentaires complets | {siteName}",
-    "metaDescription": "Découvrez notre vaste gamme de services dentaires experts à la {siteName}, des traitements esthétiques avancés et de l'orthodontie à la chirurgie buccale et aux soins pédiatriques spécialisés.",
-    "title": "Services dentaires complets",
-    "description": "Découvrez notre large gamme de traitements dentaires spécialisés à la {siteName}, conçus pour améliorer votre sourire et préserver votre santé bucco-dentaire. Notre équipe d'experts dentaires propose tout, des améliorations cosmétiques avancées et de l'orthodontie aux procédures chirurgicales complètes et aux soins pédiatriques dédiés.",
-    "exploreButton": "Explorer {categoryName}",
-    "noResults": "Aucune catégorie de service dentaire n'est actuellement disponible. Veuillez contacter {siteName} pour les dernières informations."
-  },
   "ServiceCategoryPage": {
+    "metaTitle": "{categoryName} | {siteName}",
+    "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Catégorie non trouvée | {siteName}",
     "categoryNotFoundDescription": "La catégorie de service demandée n'a pas pu être trouvée à la {siteName}.",
-    "noResults": "Aucun service n'est disponible dans cette catégorie pour le moment. Veuillez contacter {siteName} pour plus de détails."
+    "noResults": "Aucun service n'est available dans cette catégorie pour le moment. Veuillez contacter {siteName} pour plus de détails."
   },
   "PrivacyPolicyPage": {
     "metaTitle": "Politique de confidentialité | {siteName}",
@@ -377,5 +374,14 @@
     "h2_10": "10. CONTACTEZ-NOUS",
     "p10_1": "Afin de résoudre une plainte concernant le Site ou les Services ou de recevoir de plus amples informations concernant l'utilisation du Site ou des Services, veuillez nous contacter à :",
     "p10_2": "{siteName}<br />À l'attention de : Service juridique<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albanie<br />E-mail : info@{SITE_DOMAIN}"
+  },
+  "ServiceRecommender": {
+    "placeholder": "ex : 'Je veux réduire les rides autour de mes yeux' ou 'Je recherche un sourire plus éclatant et plus blanc'",
+    "buttonText": "Obtenir des recommandations",
+    "buttonLoadingText": "Analyse en cours...",
+    "errorTitle": "Échec de la recommandation",
+    "error": "Désolé, nous n'avons pas pu générer de recommandations pour le moment. Veuillez réessayer plus tard.",
+    "resultsTitle": "Nos recommandations pour vous",
+    "noResults": "Sur la base de votre requête, nous n'avons pas pu trouver de correspondance directe. Veuillez essayer de reformuler ou contactez-nous pour une consultation personnelle."
   }
 }
