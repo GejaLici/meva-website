@@ -66,9 +66,6 @@ export function Footer() {
             <Link href="/privacy-policy" className="hover:text-primary transition-colors">{t('privacyPolicy')}</Link> | 
             <Link href="/terms-of-service" className="hover:text-primary transition-colors ml-1">{t('termsOfService')}</Link>
           </p>
-          <p className="mt-2">
-            {t('designedBy')}
-          </p>
         </div>
       </div>
     </footer>
