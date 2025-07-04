@@ -1,15 +1,20 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { SITE_DOMAIN } from '@/lib/constants';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
   const t = useTranslations('Footer');
   const tNav = useTranslations('Navigation');
   const tSite = useTranslations('Site');
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="border-t bg-card text-card-foreground">
