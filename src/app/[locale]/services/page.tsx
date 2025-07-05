@@ -5,8 +5,10 @@ import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
 import { getTranslations } from 'next-intl/server';
 import { serviceCategories, dentalCategoryIds } from '@/lib/services';
 import { Separator } from '@/components/ui/separator';
-import { ServiceRecommender } from '@/components/services/ServiceRecommender';
 import { Lightbulb } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import { Card, CardContent } from '@/components/ui/card';
+import { Skeleton } from '@/components/ui/skeleton';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'ServicesOverviewPage'});
@@ -16,6 +18,24 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
     description: t('metaDescription', {siteName: tSite('title')}),
   };
 }
+
+const ServiceRecommender = dynamic(
+  () => import('@/components/services/ServiceRecommender').then((mod) => mod.ServiceRecommender),
+  {
+    ssr: false,
+    loading: () => (
+      <Card className="w-full max-w-3xl mx-auto shadow-xl border-accent/50 bg-card">
+        <CardContent className="pt-6">
+          <div className="space-y-4">
+            <Skeleton className="h-[100px] w-full" />
+            <Skeleton className="h-10 w-full" />
+          </div>
+        </CardContent>
+      </Card>
+    ),
+  }
+);
+
 
 export default async function ServicesOverviewPage() {
   const tOverview = await getTranslations('ServicesOverviewPage');

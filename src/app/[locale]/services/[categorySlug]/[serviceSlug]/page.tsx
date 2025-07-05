@@ -10,7 +10,26 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { stripHtml } from '@/lib/utils';
 import { serviceCategories } from '@/lib/services';
-import { ServiceGallery } from '@/components/services/ServiceGallery';
+import dynamic from 'next/dynamic';
+import { Skeleton } from '@/components/ui/skeleton';
+
+const ServiceGallery = dynamic(
+  () => import('@/components/services/ServiceGallery').then((mod) => mod.ServiceGallery),
+  {
+    ssr: false, // Carousel is interactive
+    loading: () => (
+      <div className="w-full max-w-2xl mx-auto">
+        <Skeleton className="aspect-video w-full" />
+        <div className="flex justify-center items-center gap-2 mt-4">
+          <Skeleton className="h-2 w-6 rounded-full" />
+          <Skeleton className="h-2 w-2 rounded-full" />
+          <Skeleton className="h-2 w-2 rounded-full" />
+        </div>
+      </div>
+    ),
+  }
+);
+
 
 interface ServicePageProps {
   params: {
