@@ -101,7 +101,7 @@
       "facial-surgery": { "name": "Chirurgie du Visage", "description": "Procédures chirurgicales complètes pour améliorer et rajeunir les traits du visage." },
       "facial-treatments": { "name": "Traitements du Visage", "description": "Traitements non chirurgicaux pour rajeunir et mejorar les traits de votre visage." },
       "breasts": { "name": "Chirurgie Mammaire", "description": "Procédures chirurgicales pour améliorer la forme, la taille et l'apparence des seins." },
-      "body-surgical": { "name": "Contour du corps", "description": "Procédures chirurgicales transformatrices pour façonner et sculpter votre corps." },
+      "body-surgical": { "name": "Contour du corps chirurgical", "description": "Procédures chirurgicales transformatrices pour façonner et sculpter votre corps." },
       "body-non-surgical": { "name": "Traitements corporels non chirurgicaux", "description": "Traitements minimalement invasifs pour affiner la forme de votre corps et améliorer la texture de la peau." },
       "aesthetic-dentistry": { "name": "Dentisterie Esthétique", "description": "Améliorez votre sourire avec nos traitements dentaires cosmétiques." },
       "prosthetics": { "name": "Prothèses", "description": "Restaurez la fonction et l'esthétique avec des prothèses dentaires de haute qualité." },
@@ -113,7 +113,7 @@
     },
     "items": {
       "op-hunde": { "name": "Rhinoplastie", "description": "Une procédure chirurgicale pour remodeler le nez afin d'améliorer l'apparence et/ou la fonction. Elle peut modifier la taille ou la forme du nez, ajuster l'angle entre le nez et la lèvre supérieure, ou corriger des problèmes respiratoires." },
-      "rim-hunde": { "name": "Remodelage de la Pointe du Nez", "description": "Une procédure ciblée qui affine spécifiquement la forme, la taille ou la projection de la pointe nasale, souvent avec moins de temps d'arrêt qu'une rhinoplastie complète." },
+      "rim-hunde": { "name": "Remodelage de la Pointe du Nez", "description": "Une procédure ciblée qui affine spécifiquement la forme, la taille ou la projection de la pointe nasale, often avec moins de temps d'arrêt qu'une rhinoplastie complète." },
       "rim-vesheve": { "name": "Otoplastie", "description": "Une procédure chirurgicale pour modifier la taille, la forme ou la position des oreilles. Elle est couramment pratiquée pour corriger les oreilles décollées ou pour traiter des oreilles déformées par une blessure." },
       "mbj-flokeve": { "name": "Greffe de Cheveux", "description": "Une technique chirurgicale qui déplace les follicules pileux d'une partie du corps (le site donneur) vers une partie chauve ou dégarnie du corps (le site receveur). Elle est principalement utilisée pour traiter la calvitie masculine." },
       "mbj-mjekres": { "name": "Greffe de Barbe", "description": "Similaire à une greffe de cheveux, cette procédure consiste à transplanter des follicules pileux dans la zone de la barbe pour augmenter la densité, combler les zones clairsemées ou remodeler la barbe." },
@@ -392,5 +392,3 @@
     "noResults": "Il n'y a pas de catégories de services dentaires disponibles pour le moment. Veuillez contacter {siteName} pour plus de détails."
   }
 }
-
-    

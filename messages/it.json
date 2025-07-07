@@ -101,7 +101,7 @@
       "facial-surgery": { "name": "Chirurgia Facciale", "description": "Procedure chirurgiche complete per migliorare e ringiovanire i tratti del viso." },
       "facial-treatments": { "name": "Trattamenti Facciali", "description": "Trattamenti non chirurgici per ringiovanire e migliorare i tratti del viso." },
       "breasts": { "name": "Chirurgia del Seno", "description": "Procedure chirurgiche per migliorare la forma, le dimensioni e l'aspetto del seno." },
-      "body-surgical": { "name": "Contorno Corpo", "description": "Procedure chirurgiche trasformative per modellare e contornare il tuo corpo." },
+      "body-surgical": { "name": "Contorno Corpo Chirurgico", "description": "Procedure chirurgiche trasformative per modellare e contornare il tuo corpo." },
       "body-non-surgical": { "name": "Trattamenti Corpo Non Chirurgici", "description": "Trattamenti minimamente invasivi per affinare la forma del corpo e migliorare la texture della pelle." },
       "aesthetic-dentistry": { "name": "Odontoiatria Estetica", "description": "Migliora il tuo sorriso con i nostri trattamenti odontoiatrici estetici." },
       "prosthetics": { "name": "Protesi", "description": "Ripristina la funzione e l'estetica con protesi dentali di alta qualità." },
@@ -392,5 +392,3 @@
     "noResults": "Al momento non sono disponibili categorie di servizi dentistici. Si prega di contattare {siteName} per maggiori dettagli."
   }
 }
-
-    
