@@ -40,7 +40,7 @@ const breastServices: Service[] = [
   { id: 'rikonst-gjoksit', slug: 'breast-reconstruction', image: '/images/Breast-reconstruction.png', imageHint: 'breast reconstruction process', gallery: [{url: "/images/galleries/breast-reconstruction-1.png", hint: "post mastectomy"}, {url: "/images/galleries/breast-reconstruction-2.png", hint: "reconstructed breast"}, {url: "/images/galleries/breast-reconstruction-3.png", hint: "tissue expander"}] },
 ];
 
-const bodyServices: Service[] = [
+const bodySurgicalServices: Service[] = [
   { id: 'lift-kraheve', slug: 'arm-lift', image: '/images/Arm%20Lift.png', imageHint: 'arm lift results', gallery: [{url: "/images/galleries/arm-lift-1.png", hint: "loose arm skin"}, {url: "/images/galleries/arm-lift-2.png", hint: "toned arms"}, {url: "/images/galleries/arm-lift-3.png", hint: "surgical markings"}] },
   { id: 'rim-barkut', slug: 'tummy-tuck', image: '/images/Tummy%20Tuck.png', imageHint: 'tummy tuck surgery', gallery: [{url: "/images/galleries/tummy-tuck-1.png", hint: "excess belly skin"}, {url: "/images/galleries/tummy-tuck-2.png", hint: "flat abdomen"}, {url: "/images/galleries/tummy-tuck-3.png", hint: "muscle repair"}] },
   { id: 'liposculptura', slug: 'liposculpture', image: '/images/Liposculpture.png', imageHint: 'liposculpture body contouring', gallery: [{url: "/images/galleries/liposculpture-1.png", hint: "body before"}, {url: "/images/galleries/liposculpture-2.png", hint: "contoured body"}, {url: "/images/galleries/liposculpture-3.png", hint: "liposuction cannula"}] },
@@ -48,6 +48,9 @@ const bodyServices: Service[] = [
   { id: 'labioplastika', slug: 'labiaplasty', image: '/images/labiaplasty.png', imageHint: 'labiaplasty procedure', gallery: [{url: "/images/galleries/labiaplasty-1.png", hint: "procedure illustration"}, {url: "/images/galleries/labiaplasty-2.png", hint: "aesthetic results"}, {url: "/images/galleries/labiaplasty-3.png", hint: "comfort and confidence"}] },
   { id: 'lift-kofsheve', slug: 'thigh-lift', image: '/images/Thigh%20Lift.png', imageHint: 'thigh lift results', gallery: [{url: "/images/galleries/thigh-lift-1.png", hint: "loose thigh skin"}, {url: "/images/galleries/thigh-lift-2.png", hint: "toned thighs"}, {url: "/images/galleries/thigh-lift-3.png", hint: "inner thigh lift"}] },
   { id: 'gynecomastia', slug: 'gynecomastia', image: '/images/gynecomastia.png', imageHint: 'male chest', gallery: [{url: "/images/galleries/gynecomastia-1.png", hint: "male chest before"}, {url: "/images/galleries/gynecomastia-2.png", hint: "male chest after"}, {url: "/images/galleries/gynecomastia-3.png", hint: "surgical treatment"}] },
+];
+
+const bodyNonSurgicalServices: Service[] = [
   { id: 'cellulite-treatment', slug: 'cellulite-treatment', image: '/images/Cellulite%20Treatment.png', imageHint: 'cellulite reduction', gallery: [{url: "/images/galleries/cellulite-treatment-1.png", hint: "cellulite on thighs"}, {url: "/images/galleries/cellulite-treatment-2.png", hint: "smoother skin"}, {url: "/images/galleries/cellulite-treatment-3.png", hint: "treatment device"}] },
   { id: 'plasma-arc-body', slug: 'plasma-arc-body', image: '/images/plasma-arc-body.png', imageHint: 'skin tightening', gallery: [{url: "/images/galleries/plasma-arc-body-1.png", hint: "loose stomach skin"}, {url: "/images/galleries/plasma-arc-body-2.png", hint: "tighter stomach skin"}, {url: "/images/galleries/plasma-arc-body-3.png", hint: "plasma pen on body"}] },
   { id: 'carboxytherapy', slug: 'carboxytherapy', image: '/images/carboxytherapy.png', imageHint: 'co2 therapy', gallery: [{url: "/images/galleries/carboxytherapy-1.png", hint: "stretch marks"}, {url: "/images/galleries/carboxytherapy-2.png", hint: "reduced stretch marks"}, {url: "/images/galleries/carboxytherapy-3.png", hint: "co2 injection"}] },
@@ -130,13 +133,22 @@ export const serviceCategories: ServiceCategory[] = [
     icon: 'Heart'
   },
   {
-    id: 'body',
-    slug: 'body',
-    services: bodyServices,
+    id: 'body-surgical',
+    slug: 'body-surgical',
+    services: bodySurgicalServices,
     image: '/images/slim-young-woman-measuring-her-thin-waist-with-tape-measure-fitness-diet-concept.jpg',
     imageHint: 'body contouring technology',
     displayOnHome: true,
     icon: 'PersonStanding'
+  },
+  {
+    id: 'body-non-surgical',
+    slug: 'body-non-surgical',
+    services: bodyNonSurgicalServices,
+    image: '/images/cellulite-treatment.png',
+    imageHint: 'non-surgical body treatment device',
+    displayOnHome: false,
+    icon: 'Sparkles'
   },
   {
     id: 'aesthetic-dentistry',

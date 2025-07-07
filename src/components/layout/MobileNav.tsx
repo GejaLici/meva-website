@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -15,7 +16,7 @@ export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('Navigation');
   const tServices = useTranslations('Services');
-  const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
+  const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body-surgical', 'body-non-surgical'].includes(cat.id));
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { usePathname } from 'next/navigation';
@@ -49,7 +50,7 @@ export function Header() {
   const pathnameWithoutLocale = currentPathname.replace(/^\/(en|it|sq|de|fr|es)/, '') || '/';
   const isServicesActive = pathnameWithoutLocale.startsWith('/services');
 
-  const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body'].includes(cat.id));
+  const aestheticCategories = serviceCategories.filter(cat => ['facial-surgery', 'facial-treatments', 'breasts', 'body-surgical', 'body-non-surgical'].includes(cat.id));
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
