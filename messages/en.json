@@ -377,15 +377,20 @@
     "p10_2": "{siteName}<br />Attn: Legal Department<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albania<br />Email: info@{SITE_DOMAIN}"
   },
   "ServiceRecommender": {
-    "placeholder": "e.g., 'I want to reduce wrinkles around my eyes' or 'I'm looking for a brighter, whiter smile'",
-    "buttonText": "Get Recommendations",
-    "buttonLoadingText": "Analyzing...",
-    "errorTitle": "Recommendation Failed",
-    "error": "Sorry, we couldn't generate recommendations at this time. Please try again later.",
-    "resultsTitle": "Our Recommendations For You",
-    "noResults": "Based on your query, we couldn't find a direct match. Please try rephrasing or contact us for a personal consultation."
+    "placeholder": "ej., 'Quiero reducir las arrugas alrededor de mis ojos' o 'Busco una sonrisa más brillante y blanca'",
+    "buttonText": "Obtener recomendaciones",
+    "buttonLoadingText": "Analizando...",
+    "errorTitle": "Fallo en la recomendación",
+    "error": "Lo sentimos, no pudimos generar recomendaciones en este momento. Por favor, inténtelo de nuevo más tarde.",
+    "resultsTitle": "Nuestras recomendaciones para usted",
+    "noResults": "Según su consulta, no pudimos encontrar una coincidencia directa. Intente reformular o contáctenos para una consulta personal."
   },
   "DentalServicesPage": {
-    "metaTitle": "Comprehensive Dental Services | {siteName}",
-    "title": "Comprehensive Dental Services",
-    "description": "From aesthetic enhancements to complex surgical procedures, our dental experts provide a full spectrum of care to ensure your oral health and perfect your smile. Explore our wide
+    "metaTitle": "Servicios Dentales Integrales | {siteName}",
+    "title": "Servicios Dentales Integrales",
+    "description": "Desde mejoras estéticas hasta procedimientos quirúrgicos complejos, nuestros expertos dentales brindan un espectro completo de atención para garantizar su salud bucal y perfeccionar su sonrisa. Explore nuestra amplia gama de especialidades dentales en {siteName}.",
+    "noResults": "No hay categorías de servicios dentales disponibles en este momento. Póngase en contacto con {siteName} para obtener más detalles."
+  }
+}
+
+    

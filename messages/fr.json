@@ -113,11 +113,11 @@
     },
     "items": {
       "op-hunde": { "name": "Rhinoplastie", "description": "Une procédure chirurgicale pour remodeler le nez afin d'améliorer l'apparence et/ou la fonction. Elle peut modifier la taille ou la forme du nez, ajuster l'angle entre le nez et la lèvre supérieure, ou corriger des problèmes respiratoires." },
-      "rim-hunde": { "name": "Remodelage de la Pointe du Nez", "description": "Une procédure ciblée qui affine spécifiquement la forme, la taille ou la projection de la pointe nasale, often avec moins de temps d'arrêt qu'une rhinoplastie complète." },
+      "rim-hunde": { "name": "Remodelage de la Pointe du Nez", "description": "Une procédure ciblée qui affine spécifiquement la forme, la taille ou la projection de la pointe nasale, souvent avec moins de temps d'arrêt qu'une rhinoplastie complète." },
       "rim-vesheve": { "name": "Otoplastie", "description": "Une procédure chirurgicale pour modifier la taille, la forme ou la position des oreilles. Elle est couramment pratiquée pour corriger les oreilles décollées ou pour traiter des oreilles déformées par une blessure." },
       "mbj-flokeve": { "name": "Greffe de Cheveux", "description": "Une technique chirurgicale qui déplace les follicules pileux d'une partie du corps (le site donneur) vers une partie chauve ou dégarnie du corps (le site receveur). Elle est principalement utilisée pour traiter la calvitie masculine." },
       "mbj-mjekres": { "name": "Greffe de Barbe", "description": "Similaire à une greffe de cheveux, cette procédure consiste à transplanter des follicules pileux dans la zone de la barbe pour augmenter la densité, combler les zones clairsemées ou remodeler la barbe." },
-      "mbj-vetullave": { "name": "Greffe de Sourcils", "description": "Une procédure où des follicules pileux sont transplantés sur les sourcils pour créer des sourcils plus fournis et plus définis, souvent pour ceux qui ont des sourcils naturally fins ou une perte de cheveux." },
+      "mbj-vetullave": { "name": "Greffe de Sourcils", "description": "Une procédure où des follicules pileux sont transplantés sur les sourcils pour créer des sourcils plus fournis et plus définis, souvent pour ceux qui ont des sourcils naturellement fins ou une perte de cheveux." },
       "lift-vetullave": { "name": "Lifting des Sourcils", "description": "Une procédure chirurgicale pour remonter les sourcils affaissés et améliorer l'apparence des rides sur le front et entre les yeux, résultant en un aspect plus jeune et reposé." },
       "blefaroplastika": { "name": "Blépharoplastie", "description": "Chirurgie pour améliorer l'apparence des paupières. Elle peut être pratiquée sur les paupières supérieures, inférieures ou les deux pour enlever la peau affaissée, l'excès de graisse ou les poches." },
       "lift-fytyres": { "name": "Lifting du Visage", "description": "Une procédure chirurgicale pour améliorer les signes visibles du vieillissement du visage et du cou, tels que l'affaissement, les plis profonds et la peau lâche." },
@@ -349,7 +349,7 @@
     "lastUpdated": "Dernière mise à jour : {date}",
     "h2_1": "1. ACCORD SUR LES CONDITIONS",
     "p1_1": "Ces conditions d'utilisation (« Conditions ») constituent un accord juridiquement contraignant conclu entre vous, que ce soit à titre personnel ou au nom d'une entité (« vous » ou « Utilisateur »), et {siteName} (« nous » ou « notre »), concernant votre accès et votre utilisation du site Web {SITE_DOMAIN} ainsi que toute autre forme de média, canal multimédia, site Web mobile ou application mobile connexe, lié ou autrement connecté (collectivement, le « Site » et les « Services »).",
-    "p1_2": "Vous reconnaissez et acceptez qu'en accédant au Site et/ou en utilisant nos Services, vous avez lu, compris et acceptez d'être lié par toutes ces Conditions d'utilisation. Si vous n'acceptez pas toutes ces Conditions d'utilisation, il vous est expressément interdit d'utiliser le Site et nos Services, et vous devez cesser immédiatement de les utiliser.",
+    "p1_2": "Vous reconnaissez et acceptez qu'en accédant au Site et/ou en utilisant nos Services, vous avez lu, compris et acceptez d'être lié par toutes ces Conditions d'utilisation. Si vous n'acceptez pas all de ces Conditions d'utilisation, il vous est expressément interdit d'utiliser le Site et nos Services, et vous devez cesser immédiatement de les utiliser.",
     "p1_3": "Les termes et conditions supplémentaires ou les documents qui peuvent être publiés sur le Site de temps à autre sont expressément incorporés aux présentes par référence.",
     "h2_2": "2. DROITS DE PROPRIÉTÉ INTELLECTUELLE",
     "p2_1": "Sauf indication contraire, le Site et les Services sont notre propriété exclusive. Tous les codes sources, bases de données, fonctionnalités, logiciels, conceptions de sites Web, fichiers audio, vidéo, textes, photographies et graphiques sur le Site (collectivement, le « Contenu ») et les marques de commerce, marques de service et logos qui y sont contenus (les « Marques ») sont détenus ou contrôlés par nous ou nous sont concédés sous licence. Ils sont protégés par les lois sur le droit d'auteur et les marques de commerce et diverses autres lois sur la propriété intellectuelle et la concurrence déloyale de l'Albanie, des juridictions étrangères et des conventions internationales. Sauf disposition expresse dans les présentes Conditions, aucune partie du Site, des Services, du Contenu ou des Marques ne peut être copiée, reproduite, agrégée, republiée, téléchargée, publiée, affichée publiquement, encodée, traduite, transmise, distribuée, vendue, concédée sous licence ou exploitée de toute autre manière à des fins commerciales, sans notre autorisation écrite préalable expresse.",
@@ -389,4 +389,8 @@
     "metaTitle": "Services Dentaires Complets | {siteName}",
     "title": "Services Dentaires Complets",
     "description": "Des améliorations esthétiques aux procédures chirurgicales complexes, nos experts dentaires fournissent une gamme complète de soins pour assurer votre santé bucco-dentaire et parfaire votre sourire. Explorez notre large éventail de spécialités dentaires à {siteName}.",
-    "
+    "noResults": "Il n'y a pas de catégories de services dentaires disponibles pour le moment. Veuillez contacter {siteName} pour plus de détails."
+  }
+}
+
+    
