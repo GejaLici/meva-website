@@ -133,7 +133,7 @@ export const serviceCategories: ServiceCategory[] = [
     id: 'body-non-surgical',
     slug: 'body-non-surgical',
     services: bodyNonSurgicalServices,
-    image: '/images/cellulite-treatment.png',
+    image: '/images/sm.jpg',
     imageHint: 'non-surgical body treatment device',
     displayOnHome: true,
     icon: 'Sparkles'

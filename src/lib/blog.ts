@@ -1,71 +1,21 @@
 
-import { db } from './firebaseConfig';
-import { collection, getDocs, query, where, Timestamp } from 'firebase/firestore';
-import type { BlogPost, ContentBlock } from '@/types/blog'; // Import ContentBlock
+import { allPosts } from './blog/posts';
+import type { BlogPost } from '@/types/blog';
 
-// Helper function to convert Firestore Timestamp to ISO string if necessary
-function mapFirestoreDocToBlogPost(doc: any): BlogPost {
-  const data = doc.data();
-  // Ensure date is an ISO string; Firestore Timestamps need to be converted
-  let dateString = data.date;
-  if (data.date && typeof data.date.toDate === 'function') { // Check if it's a Firestore Timestamp
-    dateString = (data.date as Timestamp).toDate().toISOString();
-  } else if (typeof data.date === 'number') { // Handle if date is stored as milliseconds
-    dateString = new Date(data.date).toISOString();
-  }
-  // If date is already a string, assume it's ISO format
-
-  // Ensure content is an array, default to empty array if not provided or not an array
-  const content: ContentBlock[] = Array.isArray(data.content) ? data.content : [];
-
-  return {
-    id: doc.id,
-    slug: data.slug,
-    title: data.title,
-    date: dateString,
-    author: data.author,
-    excerpt: data.excerpt,
-    content: content, // Use the processed content
-    imageUrl: data.imageUrl,
-    imageHint: data.imageHint,
-    category: data.category,
-  } as BlogPost; // Cast as BlogPost, trusting content matches ContentBlock[]
-}
-
+/**
+ * Retrieves all blog posts from the static file system.
+ * @returns A promise that resolves to an array of all blog posts, sorted by date.
+ */
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  if (!db) {
-    console.error("Firebase is not configured. Blog posts cannot be fetched.");
-    return [];
-  }
-  try {
-    const postsCol = collection(db, 'blogPosts');
-    const postSnapshot = await getDocs(postsCol);
-    const postsList = postSnapshot.docs
-      .map(mapFirestoreDocToBlogPost)
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    return postsList;
-  } catch (error) {
-    console.error("Error fetching blog posts from Firestore:", error);
-    return []; // Return empty array on error
-  }
+  const sortedPosts = [...allPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return sortedPosts;
 }
 
+/**
+ * Retrieves a single blog post by its slug.
+ * @param slug - The slug of the blog post to retrieve.
+ * @returns A promise that resolves to the blog post, or undefined if not found.
+ */
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
-  if (!db) {
-    console.error("Firebase is not configured. Blog posts cannot be fetched.");
-    return undefined;
-  }
-  try {
-    const postsCol = collection(db, 'blogPosts');
-    const q = query(postsCol, where('slug', '==', slug));
-    const querySnapshot = await getDocs(q);
-    if (querySnapshot.empty) {
-      return undefined;
-    }
-    const postDoc = querySnapshot.docs[0];
-    return mapFirestoreDocToBlogPost(postDoc);
-  } catch (error) {
-    console.error(`Error fetching blog post with slug ${slug} from Firestore:`, error);
-    return undefined; // Return undefined on error
-  }
+  return allPosts.find(post => post.slug === slug);
 }
