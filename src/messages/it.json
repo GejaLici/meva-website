@@ -101,8 +101,8 @@
       "facial-surgery": { "name": "Chirurgia Facciale", "description": "Procedure chirurgiche complete per migliorare e ringiovanire i tratti del viso." },
       "facial-treatments": { "name": "Trattamenti Facciali", "description": "Trattamenti non chirurgici per ringiovanire e migliorare i tratti del viso." },
       "breasts": { "name": "Chirurgia del Seno", "description": "Procedure chirurgiche per migliorare la forma, le dimensioni e l'aspetto del seno." },
-      "body-surgical": { "name": "Contorno Corpo", "description": "Procedure chirurgiche trasformative per modellare e contornare il tuo corpo." },
-      "body-non-surgical": { "name": "Trattamenti Corpo Non Chirurgici", "description": "Trattamenti minimamente invasivi per affinare la forma del corpo e migliorare la texture della pelle." },
+      "body-surgical": { "name": "Contorno Corpo Chirurgico", "description": "Procedure chirurgiche trasformative per modellare e contornare il tuo corpo." },
+      "body-non-surgical": { "name": "Contorno Corpo Non Chirurgico", "description": "Trattamenti minimamente invasivi per affinare la forma del corpo e migliorare la texture della pelle." },
       "aesthetic-dentistry": { "name": "Odontoiatria Estetica", "description": "Migliora il tuo sorriso con i nostri trattamenti odontoiatrici estetici." },
       "prosthetics": { "name": "Protesi", "description": "Ripristina la funzione e l'estetica con protesi dentali di alta qualità." },
       "orthodontics": { "name": "Ortodonzia", "description": "Ottieni un sorriso più dritto e una migliore salute orale con le nostre soluzioni ortodontiche." },
@@ -223,7 +223,7 @@
     },
     "faq-3": {
       "question": "I risultati dei trattamenti estetici sono permanenti?",
-      "answer": "<p>La longevità dei risultati dei trattamenti estetici dipende in gran parte dalla procedura specifica intrapresa, da fattori individuali del paziente come la genetica e lo stile di vita, e dalla manutenzione continua. Le alterazioni chirurgiche, come la rinoplastica o l'aumento del seno con impianti, offrono generalmente cambiamenti strutturali duraturi, spesso considerati permanenti, sebbene l'invecchiamento naturale continuerà. I trattamenti non chirurgici come i filler dermici o le iniezioni di tossina botulininica sono temporanei e richiedono tipicamente trattamenti di follow-up a intervalli regolari (ad es. ogni 6-18 mesi per i filler, 3-4 mesi per il Botox) per mantenere l'effetto desiderato. Anche i fattori dello stile di vita, tra cui la dieta, l'esposizione al sole, il regime di cura della pelle e il fumo, influenzano in modo significativo la durata dei risultati. I nostri specialisti presso {siteName} forniranno un'aspettativa realistica della longevità dei risultati durante la tua consulenza.</p>"
+      "answer": "<p>La longevità dei risultati dei trattamenti estetici dipende in gran parte dalla procedura specifica intrapresa, da fattori individuali del paziente come la genetica e lo stile di vita, e dalla manutenzione continua. Le alterazioni chirurgiche, come la rinoplastica o l'aumento del seno con impianti, offrono generalmente cambiamenti strutturali duraturi, spesso considerati permanenti, sebbene l'invecchiamento naturale continuerà. I trattamenti non chirurgici come i filler dermici o le iniezioni di tossina botulinica sono temporanei e richiedono tipicamente trattamenti di follow-up a intervalli regolari (ad es. ogni 6-18 mesi per i filler, 3-4 mesi per il Botox) per mantenere l'effetto desiderato. Anche i fattori dello stile di vita, tra cui la dieta, l'esposizione al sole, il regime di cura della pelle e il fumo, influenzano in modo significativo la durata dei risultati. I nostri specialisti presso {siteName} forniranno un'aspettativa realistica della longevità dei risultati durante la tua consulenza.</p>"
     },
     "faq-4": {
       "question": "Quali sono i rischi potenziali associati alle procedure estetiche?",
