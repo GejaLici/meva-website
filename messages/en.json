@@ -101,7 +101,7 @@
       "facial-surgery": { "name": "Facial Surgery", "description": "Comprehensive surgical procedures to enhance and rejuvenate facial features." },
       "facial-treatments": { "name": "Facial Treatments", "description": "Non-surgical treatments to rejuvenate and enhance your facial features." },
       "breasts": { "name": "Breast Surgery", "description": "Surgical procedures to enhance the shape, size, and appearance of the breasts." },
-      "body-surgical": { "name": "Surgical Body Contouring", "description": "Transformative surgical procedures to shape and contour your body." },
+      "body-surgical": { "name": "Body Contouring", "description": "Transformative surgical procedures to shape and contour your body." },
       "body-non-surgical": { "name": "Non-Surgical Body Treatments", "description": "Minimally invasive treatments to refine your body shape and improve skin texture." },
       "aesthetic-dentistry": { "name": "Aesthetic Dentistry", "description": "Enhance your smile with our cosmetic dental treatments." },
       "prosthetics": { "name": "Prosthetics", "description": "Restore function and aesthetics with high-quality dental prosthetics." },
@@ -388,7 +388,4 @@
   "DentalServicesPage": {
     "metaTitle": "Comprehensive Dental Services | {siteName}",
     "title": "Comprehensive Dental Services",
-    "description": "From aesthetic enhancements to complex surgical procedures, our dental experts provide a full spectrum of care to ensure your oral health and perfect your smile. Explore our wide range of dental specialties at {siteName}.",
-    "noResults": "No dental service categories are available at the moment. Please contact {siteName} for more details."
-  }
-}
+    "description": "From aesthetic enhancements to complex surgical procedures, our dental experts provide a full spectrum of care to ensure your oral health and perfect your smile. Explore our wide

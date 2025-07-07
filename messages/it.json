@@ -101,7 +101,7 @@
       "facial-surgery": { "name": "Chirurgia Facciale", "description": "Procedure chirurgiche complete per migliorare e ringiovanire i tratti del viso." },
       "facial-treatments": { "name": "Trattamenti Facciali", "description": "Trattamenti non chirurgici per ringiovanire e migliorare i tratti del viso." },
       "breasts": { "name": "Chirurgia del Seno", "description": "Procedure chirurgiche per migliorare la forma, le dimensioni e l'aspetto del seno." },
-      "body-surgical": { "name": "Contour Corpo Chirurgico", "description": "Procedure chirurgiche trasformative per modellare e contornare il tuo corpo." },
+      "body-surgical": { "name": "Contorno Corpo", "description": "Procedure chirurgiche trasformative per modellare e contornare il tuo corpo." },
       "body-non-surgical": { "name": "Trattamenti Corpo Non Chirurgici", "description": "Trattamenti minimamente invasivi per affinare la forma del corpo e migliorare la texture della pelle." },
       "aesthetic-dentistry": { "name": "Odontoiatria Estetica", "description": "Migliora il tuo sorriso con i nostri trattamenti odontoiatrici estetici." },
       "prosthetics": { "name": "Protesi", "description": "Ripristina la funzione e l'estetica con protesi dentali di alta qualità." },
@@ -300,7 +300,7 @@
     "metaTitle": "{categoryName} | {siteName}",
     "metaDescription": "{categoryDescription}",
     "categoryNotFoundTitle": "Categoria Non Trovata | {siteName}",
-    "categoryNotFoundDescription": "La categoria di servizio richiesta non è stata trovata presso {siteName}.",
+    "categoryNotFoundDescription": "La categoria di servizio richiesta non è stato trovato presso {siteName}.",
     "noResults": "Al momento non sono disponibili servizi in questa categoria. Si prega di contattare {siteName} per maggiori dettagli."
   },
   "PrivacyPolicyPage": {
@@ -389,6 +389,4 @@
     "metaTitle": "Servizi Dentistici Completi | {siteName}",
     "title": "Servizi Dentistici Completi",
     "description": "Dai miglioramenti estetici alle complesse procedure chirurgiche, i nostri esperti dentali forniscono una gamma completa di cure per garantire la tua salute orale e perfezionare il tuo sorriso. Esplora la nostra vasta gamma di specialità dentali presso {siteName}.",
-    "noResults": "Al momento non sono disponibili categorie di servizi dentistici. Si prega di contattare {siteName} per maggiori dettagli."
-  }
-}
+    "
