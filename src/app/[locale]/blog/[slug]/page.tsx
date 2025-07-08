@@ -175,8 +175,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 src={encodedFeatureImageUrl}
                 alt={post.title}
                 fill
+                priority
                 style={{ objectFit: 'cover' }}
-                quality={100}
                 data-ai-hint={post.imageHint || 'blog post feature image'}
               />
             </div>

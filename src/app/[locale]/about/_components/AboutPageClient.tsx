@@ -43,6 +43,7 @@ export default function AboutPageClient() {
                 height={450}
                 className="rounded-lg shadow-xl"
                 data-ai-hint="modern clinic interior"
+                priority
               />
             </div>
           </div>

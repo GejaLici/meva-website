@@ -111,6 +111,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   alt={serviceName}
                   width={600}
                   height={400}
+                  priority
                   className="w-full h-auto object-cover"
                   data-ai-hint={service.imageHint || 'medical procedure detail'}
                 />

@@ -1,4 +1,3 @@
-
 {
   "Site": {
     "title": "Klinika Meva",
@@ -6,13 +5,13 @@
   },
   "Navigation": {
     "home": "Kreu",
-    "about": "Rreth Nesh",
+    "about": "Rreth nesh",
     "services": "Shërbimet",
     "gallery": "Galeria",
     "blog": "Blogu",
-    "faq": "Pyetje të Shpeshta",
+    "faq": "Pyetje të shpeshta",
     "contact": "Kontakti",
-    "dentalServices": "Shërbimet Dentare",
+    "dentalServices": "Shërbimet dentare",
     "exploreService": "Mëso më shumë"
   },
   "LanguageSwitcher": {
@@ -97,81 +96,300 @@
   },
   "Services": {
     "categories": {
-      "facial-surgery": { "name": "Kirurgjia e Fytyrës", "description": "Procedura kirurgjikale për të përmirësuar dhe rinovuar tiparet e fytyrës." },
-      "facial-treatments": { "name": "Trajtimet e Fytyrës", "description": "Trajtime jo-kirurgjikale për të rinovuar dhe përmirësuar tiparet tuaja të fytyrës." },
-      "breasts": { "name": "Kirurgjia e Gjoksit", "description": "Procedura kirurgjikale për të përmirësuar formën, madhësinë dhe pamjen e gjinjve." },
-      "body-surgical": { "name": "Konturimi Kirurgjikal i Trupit", "description": "Procedura kirurgjikale transformuese për të formuar dhe konturuar trupin tuaj." },
-      "body-non-surgical": { "name": "Trajtimet Jo-kirurgjikale të Trupit", "description": "Trajtime minimalisht invazive për të përmirësuar formën e trupit dhe teksturën e lëkurës." },
-      "aesthetic-dentistry": { "name": "Stomatologji Estetike", "description": "Përmirësoni buzëqeshjen tuaj me trajtimet tona dentare kozmetike." },
-      "prosthetics": { "name": "Protetikë", "description": "Riktheni funksionin dhe estetikën me proteza dentare të cilësisë së lartë." },
-      "orthodontics": { "name": "Ortodonci", "description": "Arrini një buzëqeshje më të drejtë dhe shëndet më të mirë oral me zgjidhjet tona ortodontike." },
-      "restorative-dentistry": { "name": "Stomatologji Restauruese", "description": "Riktheni shëndetin dhe funksionin e dhëmbëve tuaj me trajtimet tona restauruese." },
-      "oral-surgery": { "name": "Kirurgji Orale", "description": "Kujdes kirurgjikal ekspert për çështje komplekse dentare." },
-      "pediatric-dentistry": { "name": "Stomatologji Pediatrike", "description": "Kujdes dentar i butë dhe i specializuar për pacientët tanë më të vegjël." },
-      "dental-summary": { "name": "Shërbime Dentare Gjithëpërfshirëse", "description": "Nga përmirësimet estetike te procedurat komplekse kirurgjikale, ekspertët tanë dentarë ofrojnë një spektër të plotë kujdesi për të siguruar shëndetin tuaj oral dhe për të përsosur buzëqeshjen tuaj. Eksploroni gamën tonë të gjerë të specialiteteve dentare." }
+      "facial-surgery": {
+        "name": "Kirurgjia e Fytyrës",
+        "description": "Procedura kirurgjikale për të përmirësuar dhe rinovuar tiparet e fytyrës."
+      },
+      "facial-treatments": {
+        "name": "Trajtimet e Fytyrës",
+        "description": "Trajtime jo-kirurgjikale për të rinovuar dhe përmirësuar tiparet tuaja të fytyrës."
+      },
+      "breasts": {
+        "name": "Kirurgjia e Gjoksit",
+        "description": "Procedura kirurgjikale për të përmirësuar formën, madhësinë dhe pamjen e gjinjve."
+      },
+      "body-surgical": {
+        "name": "Konturimi Kirurgjikal i Trupit",
+        "description": "Procedura kirurgjikale transformuese për të formuar dhe konturuar trupin tuaj."
+      },
+      "body-non-surgical": {
+        "name": "Trajtimet Jo-kirurgjikale të Trupit",
+        "description": "Trajtime minimalisht invazive për të përmirësuar formën e trupit dhe teksturën e lëkurës."
+      },
+      "aesthetic-dentistry": {
+        "name": "Stomatologji Estetike",
+        "description": "Përmirësoni buzëqeshjen tuaj me trajtimet tona dentare kozmetike."
+      },
+      "prosthetics": {
+        "name": "Protetikë",
+        "description": "Riktheni funksionin dhe estetikën me proteza dentare të cilësisë së lartë."
+      },
+      "orthodontics": {
+        "name": "Ortodonci",
+        "description": "Arrini një buzëqeshje më të drejtë dhe shëndet më të mirë oral me zgjidhjet tona ortodontike."
+      },
+      "restorative-dentistry": {
+        "name": "Stomatologji Restauruese",
+        "description": "Riktheni shëndetin dhe funksionin e dhëmbëve tuaj me trajtimet tona restauruese."
+      },
+      "oral-surgery": {
+        "name": "Kirurgji Orale",
+        "description": "Kujdes kirurgjikal ekspert për çështje komplekse dentare."
+      },
+      "pediatric-dentistry": {
+        "name": "Stomatologji Pediatrike",
+        "description": "Kujdes dentar i butë dhe i specializuar për pacientët tanë më të vegjël."
+      },
+      "dental-summary": {
+        "name": "Shërbime Dentare Gjithëpërfshirëse",
+        "description": "Nga përmirësimet estetike te procedurat komplekse kirurgjikale, ekspertët tanë dentarë ofrojnë një spektër të plotë kujdesi për të siguruar shëndetin tuaj oral dhe për të përsosur buzëqeshjen tuaj. Eksploroni gamën tonë të gjerë të specialiteteve dentare."
+      }
     },
     "items": {
-      "op-hunde": { "name": "Rinoplastika", "description": "Një procedurë kirurgjikale për të rimodeluar hundën për përmirësimin e pamjes dhe/ose funksionit. Mund të ndryshojë madhësinë ose formën e hundës, të rregullojë këndin midis hundës dhe buzës së sipërme, ose të korrigjojë problemet e frymëmarrjes." },
-      "rim-hunde": { "name": "Rimodelimi i Majës së Hundës", "description": "Një procedurë e fokusuar që përsos specifikisht formën, madhësinë ose projeksionin e majës së hundës, shpesh me më pak kohë rikuperimi se një rinoplastikë e plotë." },
-      "rim-vesheve": { "name": "Otoplastika", "description": "Një procedurë kirurgjikale për të ndryshuar madhësinë, formën ose pozicionin e veshëve. Zakonisht kryhet për të korrigjuar veshët e dalë ose për të trajtuar veshët që janë deformuar nga lëndimi." },
-      "mbj-flokeve": { "name": "Transplantimi i Flokëve", "description": "Një teknikë kirurgjikale që lëviz folikulat e flokëve nga një pjesë e trupit (zona dhuruese) në një pjesë tullace ose me rënie flokësh të trupit (zona marrëse). Përdoret kryesisht për të trajtuar rënien e flokëve te meshkujt." },
-      "mbj-mjekres": { "name": "Transplantimi i Mjekrës", "description": "Ngjashëm me një transplant flokësh, kjo procedurë përfshin transplantimin e folikulave të flokëve në zonën e mjekrës për të rritur dendësinë, për të mbushur zonat e rralla ose për të rimodeluar mjekrën." },
-      "mbj-vetullave": { "name": "Transplantimi i Vetullave", "description": "Një procedurë ku folikulat e flokëve transplantohen në vetulla për të krijuar vetulla më të plota dhe më të definuara, shpesh për ata me vetulla natyrale të holla ose me rënie flokësh." },
-      "lift-vetullave": { "name": "Ngritja e Vetullave", "description": "Një procedurë kirurgjikale për të ngritur vetullat e rëna dhe për të përmirësuar pamjen e rrudhave në ballë dhe midis syve, duke rezultuar në një pamje më rinore dhe të pushuar." },
-      "blefaroplastika": { "name": "Blefaroplastika", "description": "Kirurgji për të përmirësuar pamjen e qepallave. Mund të kryhet në qepallat e sipërme, të poshtme ose të dyja për të hequr lëkurën e varur, yndyrën e tepërt ose qeset." },
-      "lift-fytyres": { "name": "Lifting i Fytyrës", "description": "Një procedurë kirurgjikale për të përmirësuar shenjat e dukshme të plakjes në fytyrë dhe qafë, si lëshimi i lëkurës, rrudhat e thella dhe lëkura e lirshme." },
-      "rim-mjekres": { "name": "Genioplastika", "description": "Një procedurë kirurgjikale për të rimodeluar ose përmirësuar mjekrën, qoftë me një implant ose duke rimodeluar kockën, për të përmirësuar ekuilibrin e përmasave të fytyrës." },
-      "lip-reshaping": { "name": "Rimodelimi dhe Zmadhimi i Buzëve", "description": "Një procedurë kozmetike për të përmirësuar pamjen e buzëve duke rritur plotësinë, formën, strukturën ose simetrinë e tyre, shpesh duke përdorur mbushës dermalë." },
-      "xanthelasma-plasma-arc": { "name": "Heqja e Depozitave në Qepalla (Plazma)", "description": "Ky është një trajtim jo-kirurgjikal për të hequr njollat e verdha të kolesterolit që gjenden në qepalla. Ne përdorim një pajisje plazme të saktë për të pastruar butësisht këto depozita, duke ju dhënë një lëkurë më të lëmuar me shumë pak kohë rikuperimi." },
-      "multivitamin-treatment": { "name": "Trajtim Fytyre me Infuzion Multivitaminash", "description": "Një trajtim fytyre që injekton një përzierje vitaminash, mineralesh dhe antioksidantësh direkt në lëkurë për ta ushqyer, hidratuar dhe rigjallëruar atë, duke rezultuar në një çehre më rrezatuese." },
-      "eyelids-plasma-arc": { "name": "Lifting jo-kirurgjikal i Qepallave (Hark Plazma)", "description": "Një trajtim jo-invaziv që përdor energjinë e plazmës për të ngritur dhe shtrënguar lëkurën në qepalla, duke reduktuar pamjen e lëkurës së varur dhe rrudhave pa kirurgji." },
-      "cheekbone-reshaping": { "name": "Konturimi i Mollëzave (Mbushës)", "description": "Një procedurë jo-kirurgjikale që përdor mbushës dermalë për të përmirësuar dhe definuar mollëzat, duke rikthyer volumin dhe duke krijuar një strukturë fytyre më të konturuar." },
-      "microdermabrasion": { "name": "Mikrodermabrazioni", "description": "Një procedurë minimalisht invazive që rinovon lëkurën duke lëmuar butësisht shtresën e jashtme të trashë, duke trajtuar dëmtimet nga dielli, rrudhat dhe probleme të tjera të lëkurës." },
-      "jawline-contouring": { "name": "Konturimi i Nofullës (Filler/Fije)", "description": "Një teknikë jo-kirurgjikale për të përcaktuar dhe skulpturuar vijën e nofullës duke përdorur mbushës dermalë ose fije PDO, duke krijuar një profil më të mprehtë dhe më rinor." },
-      "wrinkle-fillers": { "name": "Mbushës Dermalë për Rrudhat", "description": "Injektimet e acidit hialuronik ose mbushësve të tjerë për të mbushur rrudhat dhe linjat e holla, duke rivendosur volumin dhe duke lëmuar teksturën e lëkurës për një pamje të rinovuar." },
-      "prp-face": { "name": "Rinovimi i Fytyrës me PRP", "description": "Një procedurë që përdor plazmën e pasur me trombocite (PRP) nga gjaku juaj, e cila injektohet në lëkurë për të stimuluar prodhimin e kolagjenit dhe për të përmirësuar teksturën dhe elasticitetin e lëkurës." },
-      "dark-circles-treatment": { "name": "Trajtimi i Rrathëve të Zinj Poshtë Syve", "description": "Një sërë trajtimesh që synojnë të zvogëlojnë pamjen e rrathëve të zinj poshtë syve, duke përfshirë mbushësit, terapinë me lazer ose trajtimet topike, në varësi të shkakut themelor." },
-      "prp-hair": { "name": "Restaurimi i Flokëve me PRP", "description": "Një trajtim jo-kirurgjikal për rënien e flokëve ku plazma e pasur me trombocite nga gjaku i pacientit injektohet në lëkurën e kokës për të stimuluar rritjen e flokëve." },
-      "white-peeling": { "name": "Peeling Kimik", "description": "Një trajtim për rinovimin e lëkurës që aplikon një solucion kimik në lëkurë për ta eksfoliuar dhe përfundimisht për ta hequr atë, duke zbuluar lëkurë më të lëmuar dhe më pak të rrudhur." },
-      "microneedling": { "name": "Microneedling", "description": "Një procedurë që përdor gjilpëra të holla për të krijuar shpime të vogla në lëkurë, duke stimuluar prodhimin e kolagjenit dhe elastinës për të përmirësuar teksturën e lëkurës dhe për të zvogëluar pamjen e shenjave dhe rrudhave." },
-      "radiofrequency-face": { "name": "Radiofrekuenca e Fytyrës", "description": "Një metodë jo-kirurgjikale e shtrëngimit të lëkurës që përdor energji për të ngrohur shtresat më të thella të lëkurës, duke stimuluar prodhimin e kolagjenit dhe duke përmirësuar qëndrueshmërinë dhe teksturën e lëkurës." },
-      "sulcus-filling": { "name": "Mbushës për Rrudhat Nazolabiale", "description": "Një procedurë jo-kirurgjikale ku mbushësit dermalë injektohen në rrudhat që shkojnë nga anët e hundës në cepat e gojës, duke zbutur pamjen e tyre." },
-      "chin-reshaping": { "name": "Rimodelimi jo-kirurgjikal i Mjekrës (Mbushës)", "description": "Një procedurë që përdor mbushës të injektueshëm për të rimodeluar dhe zmadhuar mjekrën, duke përmirësuar ekuilibrin e fytyrës dhe duke krijuar një profil më të fortë të mjekrës pa kirurgji." },
-      "zmadh-gjoksit": { "name": "Zmadhimi i Gjoksit", "description": "Një procedurë kirurgjikale për të rritur madhësinë e gjirit përmes vendosjes së implanteve të gjirit nën indin e gjirit ose muskujt." },
-      "lift-gjoksit": { "name": "Ngritja e Gjoksit", "description": "Një procedurë kirurgjikale për të ngritur dhe rimodeluar gjinjtë duke hequr lëkurën e tepërt dhe duke shtrënguar indin përreth për të rivendosur një profil më rinor të gjirit." },
-      "zvog-gjoksit": { "name": "Zvogëlimi i Gjoksit", "description": "Një procedurë kirurgjikale për të hequr yndyrën e tepërt të gjirit, indin gjëndror dhe lëkurën për të arritur një madhësi gjiri në përpjesëtim me trupin dhe për të lehtësuar shqetësimin e lidhur me gjinjtë tepër të mëdhenj." },
-      "rikonst-gjoksit": { "name": "Rindërtimi i Gjoksit", "description": "Një procedurë kirurgjikale për të rivendosur formën, pamjen dhe madhësinë e gjirit pas një mastektomie ose lumpektomie." },
-      "lift-kraheve": { "name": "Ngritja e Krahëve", "description": "Një procedurë kirurgjikale për të rimodeluar pjesën e poshtme të krahut të sipërm, nga zona e sqetullës deri në bërryl, duke hequr lëkurën dhe yndyrën e tepërt." },
-      "rim-barkut": { "name": "Abdominoplastika", "description": "Një procedurë kirurgjikale për të hequr lëkurën dhe yndyrën e tepërt nga barku, duke krijuar një profil barku më të lëmuar dhe më të fortë." },
-      "liposculptura": { "name": "Liposkulptura", "description": "Një formë e liposucionit që heq yndyrën e tepërt dhe konturon trupin për të krijuar një formë më të definuar dhe të skalitur." },
-      "rim-vitheve-bbl": { "name": "BBL (Rimodelimi i Vitheve)", "description": "Një procedurë kirurgjikale që transferon yndyrë nga pjesë të tjera të trupit në vithe për të përmirësuar madhësinë, formën dhe konturin e tyre." },
-      "labioplastika": { "name": "Labiaplastika", "description": "Një procedurë kirurgjikale për të rimodeluar ose zvogëluar madhësinë e labiave për rehati më të madhe ose për arsye estetike." },
-      "lift-kofsheve": { "name": "Ngritja e Kofshëve", "description": "Një procedurë kirurgjikale për të rimodeluar kofshët duke zvogëluar lëkurën dhe yndyrën e tepërt, duke rezultuar në lëkurë më të lëmuar dhe konture më të proporcionuara." },
-      "gynecomastia": { "name": "Gjinekomastia", "description": "Një procedurë kirurgjikale për të zvogëluar indin e gjirit të zmadhuar te meshkujt, e kryer përmes liposucionit dhe/ose heqjes së indit të tepërt gjëndror." },
-      "cellulite-treatment": { "name": "Trajtimi i Celulitit", "description": "Një sërë procedurash që synojnë të zvogëlojnë pamjen e celulitit, duke përfshirë trajtimet me lazer, radiofrekuencën dhe injeksionet." },
-      "plasma-arc-body": { "name": "Harku Plazma (Trup)", "description": "Një trajtim jo-invaziv që përdor energjinë e plazmës për të shtrënguar lëkurën e lirshme në pjesë të ndryshme të trupit, duke përmirësuar pamjen e rrudhave dhe lëshimit." },
-      "carboxytherapy": { "name": "Karboksiterapia", "description": "Përdorimi terapeutik i gazit të dioksidit të karbonit për të përmirësuar elasticitetin e lëkurës, për të zvogëluar celulitin dhe strijat, dhe për të përmirësuar qarkullimin." },
-      "sclerotherapy": { "name": "Skleroterapia", "description": "Një procedurë minimalisht invazive për të trajtuar venat me variçe dhe venat merimangë, ku një solucion injektohet direkt në venë, duke bërë që ajo të mblidhet, të ridrejtojë gjakun dhe të zbehet." },
-      "lipolysis": { "name": "Lipoliza", "description": "Një procedurë jo-kirurgjikale që përdor injeksione, lazer ose ultratinguj për të shpërbërë dhe hequr qelizat yndyrore në zona të caktuara." },
-      "laser-hair-removal": { "name": "Heqja e Qimeve me Lazer", "description": "Një procedurë kozmetike që përdor një rreze të përqendruar drite për të hequr qimet e padëshiruara nga pjesë të ndryshme të trupit." },
-      "teeth-whitening": { "name": "Zbardhimi i Dhëmbëve", "description": "Një procedurë dentare kozmetike që zbardh dhëmbët dhe ndihmon në heqjen e njollave dhe çngjyrosjeve, duke krijuar një buzëqeshje më të ndritshme dhe më të bardhë." },
-      "composite-veneers": { "name": "Fasetat Kompozite", "description": "Mbulesa të holla prej materiali kompozit me ngjyrën e dhëmbit që aplikohen në sipërfaqen e përparme të dhëmbëve për të përmirësuar pamjen e tyre." },
-      "emax-veneers": { "name": "Fasetat E-Max", "description": "Fasetat qeramike të cilësisë së lartë dhe të qëndrueshme, të njohura për forcën dhe pamjen e tyre natyrale, të përdorura për të transformuar buzëqeshjet." },
-      "dental-crowns": { "name": "Kurorat Dentare", "description": "Kapele të vendosura mbi një dhëmb për të rivendosur formën, madhësinë, forcën dhe pamjen e tij." },
-      "dental-bridges": { "name": "Urat Dentare", "description": "Restaurime dentare fikse që mbulojnë hapësirën e krijuar nga një ose më shumë dhëmbë që mungojnë." },
-      "dentures": { "name": "Protezat Dentare", "description": "Zëvendësime të lëvizshme për dhëmbët që mungojnë dhe indet përreth." },
-      "invisalign": { "name": "Invisalign", "description": "Një seri alignerësh transparentë dhe të personalizuar që drejtojnë gradualisht dhëmbët me kalimin e kohës, duke shërbyer si një alternativë ndaj telave tradicionale." },
-      "fixed-braces": { "name": "Telat Fikse", "description": "Pajisje ortodontike tradicionale të përdorura për të korrigjuar dhëmbët dhe nofullat e shtrembëruara." },
-      "removable-appliances": { "name": "Aparatet e Lëvizshme", "description": "Pajisje ortodontike që mund të vendosen dhe hiqen nga pacienti për të korrigjuar problemet dentare." },
-      "teeth-cleaning": { "name": "Pastrimi i Dhëmbëve (Pastrimi i Gurëzave)", "description": "Pastrim profesional për të hequr pllakën dhe gurëzat nga dhëmbët për të parandaluar kariesin dhe sëmundjet e mishrave të dhëmbëve." },
-      "dental-fillings": { "name": "Mbushjet Dentare", "description": "Materiale të përdorura për të mbushur dhe restauruar dhëmbët e dëmtuar nga kariesi, duke parandaluar dëmtimin e mëtejshëm." },
-      "root-canal-treatment": { "name": "Trajtimi i Kanalit të Rrënjës", "description": "Një procedurë dentare për të hequr pulpën e infektuar nga brenda një dhëmbi për ta shpëtuar atë dhe për të lehtësuar dhimbjen." },
-      "tooth-extraction": { "name": "Heqja e Dhëmbit", "description": "Heqja e një dhëmbi nga foleja e tij alveolare në kockën e nofullës." },
-      "dental-implants": { "name": "Implantet Dentare", "description": "Pajisje kirurgjikale të vendosura në kockën e nofullës për të zëvendësuar dhëmbët që mungojnë dhe për të siguruar një bazë për zëvendësime fikse ose të lëvizshme." },
-      "apical-resection": { "name": "Kirurgjia e Majës së Rrënjës (Apikotomi)", "description": "Një procedurë kirurgjikale për të hequr majën e rrënjës së një dhëmbi dhe indin e infektuar përreth." },
-      "primary-teeth-care": { "name": "Kujdesi për Dhëmbët e Qumështit", "description": "Kujdes i specializuar dentar për fëmijët, i fokusuar në ruajtjen e shëndetit të dhëmbëve të qumështit për të siguruar zhvillimin e duhur të dhëmbëve të përhershëm." },
-      "teeth-fluoridation": { "name": "Fluorizimi i Dhëmbëve", "description": "Aplikimi i fluorit në dhëmbë për të forcuar smaltin dhe për të parandaluar prishjen e dhëmbëve." },
-      "dental-sealants": { "name": "Sigilantët Dentarë", "description": "Shtresa të holla mbrojtëse të aplikuara në sipërfaqet përtypëse të dhëmbëve të pasmë për të parandaluar kariesin." }
+      "op-hunde": {
+        "name": "Rinoplastika",
+        "description": "Një procedurë kirurgjikale për të rimodeluar hundën për përmirësimin e pamjes dhe/ose funksionit. Mund të ndryshojë madhësinë ose formën e hundës, të rregullojë këndin midis hundës dhe buzës së sipërme, ose të korrigjojë problemet e frymëmarrjes."
+      },
+      "rim-hunde": {
+        "name": "Rimodelimi i Majës së Hundës",
+        "description": "Një procedurë e fokusuar që përsos specifikisht formën, madhësinë ose projeksionin e majës së hundës, shpesh me më pak kohë rikuperimi se një rinoplastikë e plotë."
+      },
+      "rim-vesheve": {
+        "name": "Otoplastika",
+        "description": "Një procedurë kirurgjikale për të ndryshuar madhësinë, formën ose pozicionin e veshëve. Zakonisht kryhet për të korrigjuar veshët e dalë ose për të trajtuar veshët që janë deformuar nga lëndimi."
+      },
+      "mbj-flokeve": {
+        "name": "Transplantimi i Flokëve",
+        "description": "Një teknikë kirurgjikale që lëviz folikulat e flokëve nga një pjesë e trupit (zona dhuruese) në një pjesë tullace ose me rënie flokësh të trupit (zona marrëse). Përdoret kryesisht për të trajtuar rënien e flokëve te meshkujt."
+      },
+      "mbj-mjekres": {
+        "name": "Transplantimi i Mjekrës",
+        "description": "Ngjashëm me një transplant flokësh, kjo procedurë përfshin transplantimin e folikulave të flokëve në zonën e mjekrës për të rritur dendësinë, për të mbushur zonat e rralla ose për të rimodeluar mjekrën."
+      },
+      "mbj-vetullave": {
+        "name": "Transplantimi i Vetullave",
+        "description": "Një procedurë ku folikulat e flokëve transplantohen në vetulla për të krijuar vetulla më të plota dhe më të definuara, shpesh për ata me vetulla natyrale të holla ose me rënie flokësh."
+      },
+      "lift-vetullave": {
+        "name": "Ngritja e Vetullave",
+        "description": "Një procedurë kirurgjikale për të ngritur vetullat e rëna dhe për të përmirësuar pamjen e rrudhave në ballë dhe midis syve, duke rezultuar në një pamje më rinore dhe të pushuar."
+      },
+      "blefaroplastika": {
+        "name": "Blefaroplastika",
+        "description": "Kirurgji për të përmirësuar pamjen e qepallave. Mund të kryhet në qepallat e sipërme, të poshtme ose të dyja për të hequr lëkurën e varur, yndyrën e tepërt ose qeset."
+      },
+      "lift-fytyres": {
+        "name": "Lifting i Fytyrës",
+        "description": "Një procedurë kirurgjikale për të përmirësuar shenjat e dukshme të plakjes në fytyrë dhe qafë, si lëshimi i lëkurës, rrudhat e thella dhe lëkura e lirshme."
+      },
+      "rim-mjekres": {
+        "name": "Genioplastika",
+        "description": "Një procedurë kirurgjikale për të rimodeluar ose përmirësuar mjekrën, qoftë me një implant ose duke rimodeluar kockën, për të përmirësuar ekuilibrin e përmasave të fytyrës."
+      },
+      "lip-reshaping": {
+        "name": "Rimodelimi dhe Zmadhimi i Buzëve",
+        "description": "Një procedurë kozmetike për të përmirësuar pamjen e buzëve duke rritur plotësinë, formën, strukturën ose simetrinë e tyre, shpesh duke përdorur mbushës dermalë."
+      },
+      "xanthelasma-plasma-arc": {
+        "name": "Heqja e Depozitave në Qepalla (Plazma)",
+        "description": "Ky është një trajtim jo-kirurgjikal për të hequr njollat e verdha të kolesterolit që gjenden në qepalla. Ne përdorim një pajisje plazme të saktë për të pastruar butësisht këto depozita, duke ju dhënë një lëkurë më të lëmuar me shumë pak kohë rikuperimi."
+      },
+      "multivitamin-treatment": {
+        "name": "Trajtim Fytyre me Infuzion Multivitaminash",
+        "description": "Një trajtim fytyre që injekton një përzierje vitaminash, mineralesh dhe antioksidantësh direkt në lëkurë për ta ushqyer, hidratuar dhe rigjallëruar atë, duke rezultuar në një çehre më rrezatuese."
+      },
+      "eyelids-plasma-arc": {
+        "name": "Lifting jo-kirurgjikal i Qepallave (Hark Plazma)",
+        "description": "Një trajtim jo-invaziv që përdor energjinë e plazmës për të ngritur dhe shtrënguar lëkurën në qepalla, duke reduktuar pamjen e lëkurës së varur dhe rrudhave pa kirurgji."
+      },
+      "cheekbone-reshaping": {
+        "name": "Konturimi i Mollëzave (Mbushës)",
+        "description": "Një procedurë jo-kirurgjikale që përdor mbushës dermalë për të përmirësuar dhe definuar mollëzat, duke rikthyer volumin dhe duke krijuar një strukturë fytyre më të konturuar."
+      },
+      "microdermabrasion": {
+        "name": "Mikrodermabrazioni",
+        "description": "Një procedurë minimalisht invazive që rinovon lëkurën duke lëmuar butësisht shtresën e jashtme të trashë, duke trajtuar dëmtimet nga dielli, rrudhat dhe probleme të tjera të lëkurës."
+      },
+      "jawline-contouring": {
+        "name": "Konturimi i Nofullës (Filler/Fije)",
+        "description": "Një teknikë jo-kirurgjikale për të përcaktuar dhe skulpturuar vijën e nofullës duke përdorur mbushës dermalë ose fije PDO, duke krijuar një profil më të mprehtë dhe më rinor."
+      },
+      "wrinkle-fillers": {
+        "name": "Mbushës Dermalë për Rrudhat",
+        "description": "Injektimet e acidit hialuronik ose mbushësve të tjerë për të mbushur rrudhat dhe linjat e holla, duke rivendosur volumin dhe duke lëmuar teksturën e lëkurës për një pamje të rinovuar."
+      },
+      "prp-face": {
+        "name": "Rinovimi i Fytyrës me PRP",
+        "description": "Një procedurë që përdor plazmën e pasur me trombocite (PRP) nga gjaku juaj, e cila injektohet në lëkurë për të stimuluar prodhimin e kolagjenit dhe për të përmirësuar teksturën dhe elasticitetin e lëkurës."
+      },
+      "dark-circles-treatment": {
+        "name": "Trajtimi i Rrathëve të Zinj Poshtë Syve",
+        "description": "Një sërë trajtimesh që synojnë të zvogëlojnë pamjen e rrathëve të zinj poshtë syve, duke përfshirë mbushësit, terapinë me lazer ose trajtimet topike, në varësi të shkakut themelor."
+      },
+      "prp-hair": {
+        "name": "Restaurimi i Flokëve me PRP",
+        "description": "Një trajtim jo-kirurgjikal për rënien e flokëve ku plazma e pasur me trombocite nga gjaku i pacientit injektohet në lëkurën e kokës për të stimuluar rritjen e flokëve."
+      },
+      "white-peeling": {
+        "name": "Peeling Kimik",
+        "description": "Një trajtim për rinovimin e lëkurës që aplikon një solucion kimik në lëkurë për ta eksfoliuar dhe përfundimisht për ta hequr atë, duke zbuluar lëkurë më të lëmuar dhe më pak të rrudhur."
+      },
+      "microneedling": {
+        "name": "Microneedling",
+        "description": "Një procedurë që përdor gjilpëra të holla për të krijuar shpime të vogla në lëkurë, duke stimuluar prodhimin e kolagjenit dhe elastinës për të përmirësuar teksturën e lëkurës dhe për të zvogëluar pamjen e shenjave dhe rrudhave."
+      },
+      "radiofrequency-face": {
+        "name": "Radiofrekuenca e Fytyrës",
+        "description": "Një metodë jo-kirurgjikale e shtrëngimit të lëkurës që përdor energji për të ngrohur shtresat më të thella të lëkurës, duke stimuluar prodhimin e kolagjenit dhe duke përmirësuar qëndrueshmërinë dhe teksturën e lëkurës."
+      },
+      "sulcus-filling": {
+        "name": "Mbushës për Rrudhat Nazolabiale",
+        "description": "Një procedurë jo-kirurgjikale ku mbushësit dermalë injektohen në rrudhat që shkojnë nga anët e hundës në cepat e gojës, duke zbutur pamjen e tyre."
+      },
+      "chin-reshaping": {
+        "name": "Rimodelimi jo-kirurgjikal i Mjekrës (Mbushës)",
+        "description": "Një procedurë që përdor mbushës të injektueshëm për të rimodeluar dhe zmadhuar mjekrën, duke përmirësuar ekuilibrin e fytyrës dhe duke krijuar një profil më të fortë të mjekrës pa kirurgji."
+      },
+      "zmadh-gjoksit": {
+        "name": "Zmadhimi i Gjoksit",
+        "description": "Një procedurë kirurgjikale për të rritur madhësinë e gjirit përmes vendosjes së implanteve të gjirit nën indin e gjirit ose muskujt."
+      },
+      "lift-gjoksit": {
+        "name": "Ngritja e Gjoksit",
+        "description": "Një procedurë kirurgjikale për të ngritur dhe rimodeluar gjinjtë duke hequr lëkurën e tepërt dhe duke shtrënguar indin përreth për të rivendosur një profil më rinor të gjirit."
+      },
+      "zvog-gjoksit": {
+        "name": "Zvogëlimi i Gjoksit",
+        "description": "Një procedurë kirurgjikale për të hequr yndyrën e tepërt të gjirit, indin gjëndror dhe lëkurën për të arritur një madhësi gjiri në përpjesëtim me trupin dhe për të lehtësuar shqetësimin e lidhur me gjinjtë tepër të mëdhenj."
+      },
+      "rikonst-gjoksit": {
+        "name": "Rindërtimi i Gjoksit",
+        "description": "Një procedurë kirurgjikale për të rivendosur formën, pamjen dhe madhësinë e gjirit pas një mastektomie ose lumpektomie."
+      },
+      "lift-kraheve": {
+        "name": "Ngritja e Krahëve",
+        "description": "Një procedurë kirurgjikale për të rimodeluar pjesën e poshtme të krahut të sipërm, nga zona e sqetullës deri në bërryl, duke hequr lëkurën dhe yndyrën e tepërt."
+      },
+      "rim-barkut": {
+        "name": "Abdominoplastika",
+        "description": "Një procedurë kirurgjikale për të hequr lëkurën dhe yndyrën e tepërt nga barku, duke krijuar një profil barku më të lëmuar dhe më të fortë."
+      },
+      "liposculptura": {
+        "name": "Liposkulptura",
+        "description": "Një formë e liposucionit që heq yndyrën e tepërt dhe konturon trupin për të krijuar një formë më të definuar dhe të skalitur."
+      },
+      "rim-vitheve-bbl": {
+        "name": "BBL (Rimodelimi i Vitheve)",
+        "description": "Një procedurë kirurgjikale që transferon yndyrë nga pjesë të tjera të trupit në vithe për të përmirësuar madhësinë, formën dhe konturin e tyre."
+      },
+      "labioplastika": {
+        "name": "Labiaplastika",
+        "description": "Një procedurë kirurgjikale për të rimodeluar ose zvogëluar madhësinë e labiave për rehati më të madhe ose për arsye estetike."
+      },
+      "lift-kofsheve": {
+        "name": "Ngritja e Kofshëve",
+        "description": "Një procedurë kirurgjikale për të rimodeluar kofshët duke zvogëluar lëkurën dhe yndyrën e tepërt, duke rezultuar në lëkurë më të lëmuar dhe konture më të proporcionuara."
+      },
+      "gynecomastia": {
+        "name": "Gjinekomastia",
+        "description": "Një procedurë kirurgjikale për të zvogëluar indin e gjirit të zmadhuar te meshkujt, e kryer përmes liposucionit dhe/ose heqjes së indit të tepërt gjëndror."
+      },
+      "cellulite-treatment": {
+        "name": "Trajtimi i Celulitit",
+        "description": "Një sërë procedurash që synojnë të zvogëlojnë pamjen e celulitit, duke përfshirë trajtimet me lazer, radiofrekuencën dhe injeksionet."
+      },
+      "plasma-arc-body": {
+        "name": "Harku Plazma (Trup)",
+        "description": "Një trajtim jo-invaziv që përdor energjinë e plazmës për të shtrënguar lëkurën e lirshme në pjesë të ndryshme të trupit, duke përmirësuar pamjen e rrudhave dhe lëshimit."
+      },
+      "carboxytherapy": {
+        "name": "Karboksiterapia",
+        "description": "Përdorimi terapeutik i gazit të dioksidit të karbonit për të përmirësuar elasticitetin e lëkurës, për të zvogëluar celulitin dhe strijat, dhe për të përmirësuar qarkullimin."
+      },
+      "sclerotherapy": {
+        "name": "Skleroterapia",
+        "description": "Një procedurë minimalisht invazive për të trajtuar venat me variçe dhe venat merimangë, ku një solucion injektohet direkt në venë, duke bërë që ajo të mblidhet, të ridrejtojë gjakun dhe të zbehet."
+      },
+      "lipolysis": {
+        "name": "Lipoliza",
+        "description": "Një procedurë jo-kirurgjikale që përdor injeksione, lazer ose ultratinguj për të shpërbërë dhe hequr qelizat yndyrore në zona të caktuara."
+      },
+      "laser-hair-removal": {
+        "name": "Heqja e Qimeve me Lazer",
+        "description": "Një procedurë kozmetike që përdor një rreze të përqendruar drite për të hequr qimet e padëshiruara nga pjesë të ndryshme të trupit."
+      },
+      "teeth-whitening": {
+        "name": "Zbardhimi i Dhëmbëve",
+        "description": "Një procedurë dentare kozmetike që zbardh dhëmbët dhe ndihmon në heqjen e njollave dhe çngjyrosjeve, duke krijuar një buzëqeshje më të ndritshme dhe më të bardhë."
+      },
+      "composite-veneers": {
+        "name": "Fasetat Kompozite",
+        "description": "Mbulesa të holla prej materiali kompozit me ngjyrën e dhëmbit që aplikohen në sipërfaqen e përparme të dhëmbëve për të përmirësuar pamjen e tyre."
+      },
+      "emax-veneers": {
+        "name": "Fasetat E-Max",
+        "description": "Fasetat qeramike të cilësisë së lartë dhe të qëndrueshme, të njohura për forcën dhe pamjen e tyre natyrale, të përdorura për të transformuar buzëqeshjet."
+      },
+      "dental-crowns": {
+        "name": "Kurorat Dentare",
+        "description": "Kapele të vendosura mbi një dhëmb për të rivendosur formën, madhësinë, forcën dhe pamjen e tij."
+      },
+      "dental-bridges": {
+        "name": "Urat Dentare",
+        "description": "Restaurime dentare fikse që mbulojnë hapësirën e krijuar nga një ose më shumë dhëmbë që mungojnë."
+      },
+      "dentures": {
+        "name": "Protezat Dentare",
+        "description": "Zëvendësime të lëvizshme për dhëmbët që mungojnë dhe indet përreth."
+      },
+      "invisalign": {
+        "name": "Invisalign",
+        "description": "Një seri alignerësh transparentë dhe të personalizuar që drejtojnë gradualisht dhëmbët me kalimin e kohës, duke shërbyer si një alternativë ndaj telave tradicionale."
+      },
+      "fixed-braces": {
+        "name": "Telat Fikse",
+        "description": "Pajisje ortodontike tradicionale të përdorura për të korrigjuar dhëmbët dhe nofullat e shtrembëruara."
+      },
+      "removable-appliances": {
+        "name": "Aparatet e Lëvizshme",
+        "description": "Pajisje ortodontike që mund të vendosen dhe hiqen nga pacienti për të korrigjuar problemet dentare."
+      },
+      "teeth-cleaning": {
+        "name": "Pastrimi i Dhëmbëve (Pastrimi i Gurëzave)",
+        "description": "Pastrim profesional për të hequr pllakën dhe gurëzat nga dhëmbët për të parandaluar kariesin dhe sëmundjet e mishrave të dhëmbëve."
+      },
+      "dental-fillings": {
+        "name": "Mbushjet Dentare",
+        "description": "Materiale të përdorura për të mbushur dhe restauruar dhëmbët e dëmtuar nga kariesi, duke parandaluar dëmtimin e mëtejshëm."
+      },
+      "root-canal-treatment": {
+        "name": "Trajtimi i Kanalit të Rrënjës",
+        "description": "Një procedurë dentare për të hequr pulpën e infektuar nga brenda një dhëmbi për ta shpëtuar atë dhe për të lehtësuar dhimbjen."
+      },
+      "tooth-extraction": {
+        "name": "Heqja e Dhëmbit",
+        "description": "Heqja e një dhëmbi nga foleja e tij alveolare në kockën e nofullës."
+      },
+      "dental-implants": {
+        "name": "Implantet Dentare",
+        "description": "Pajisje kirurgjikale të vendosura në kockën e nofullës për të zëvendësuar dhëmbët që mungojnë dhe për të siguruar një bazë për zëvendësime fikse ose të lëvizshme."
+      },
+      "apical-resection": {
+        "name": "Kirurgjia e Majës së Rrënjës (Apikotomi)",
+        "description": "Një procedurë kirurgjikale për të hequr majën e rrënjës së një dhëmbi dhe indin e infektuar përreth."
+      },
+      "primary-teeth-care": {
+        "name": "Kujdesi për Dhëmbët e Qumështit",
+        "description": "Kujdes i specializuar dentar për fëmijët, i fokusuar në ruajtjen e shëndetit të dhëmbëve të qumështit për të siguruar zhvillimin e duhur të dhëmbëve të përhershëm."
+      },
+      "teeth-fluoridation": {
+        "name": "Fluorizimi i Dhëmbëve",
+        "description": "Aplikimi i fluorit në dhëmbë për të forcuar smaltin dhe për të parandaluar prishjen e dhëmbëve."
+      },
+      "dental-sealants": {
+        "name": "Sigilantët Dentarë",
+        "description": "Shtresa të holla mbrojtëse të aplikuara në sipërfaqet përtypëse të dhëmbëve të pasmë për të parandaluar kariesin."
+      }
     }
   },
   "AboutPage": {
@@ -243,12 +461,30 @@
     "after": "PAS"
   },
   "Gallery": {
-    "gallery-1": { "procedureName": "Rinoplastika (Operacioni i Hundës)", "description": "Përmirësim i ndjeshëm në urën e hundës dhe definimin e majës." },
-    "gallery-2": { "procedureName": "Zmadhimi i Gjoksit", "description": "Vëllim i shtuar dhe formë e përmirësuar e gjoksit, duke arritur një pamje natyrale." },
-    "gallery-3": { "procedureName": "Fasetat E-Max", "description": "Transformim i plotë i buzëqeshjes me ngjyrë, formë dhe rreshtim të përmirësuar." },
-    "gallery-4": { "procedureName": "Lifting i Fytyrës (Rhytidectomy)", "description": "Pamje e rinovuar e fytyrës me lëkurë të varur dhe rrudha të reduktuara." },
-    "gallery-5": { "procedureName": "Zmadhimi i Buzëve", "description": "Buzë më të plota dhe të definuara mirë të arritura me mbushës dermalë." },
-    "gallery-6": { "procedureName": "Transplantimi i Flokëve", "description": "Restaurim i ndjeshëm i dendësisë së flokëve në zonat e trajtuara." }
+    "gallery-1": {
+      "procedureName": "Rinoplastika (Operacioni i Hundës)",
+      "description": "Përmirësim i ndjeshëm në urën e hundës dhe definimin e majës."
+    },
+    "gallery-2": {
+      "procedureName": "Zmadhimi i Gjoksit",
+      "description": "Vëllim i shtuar dhe formë e përmirësuar e gjoksit, duke arritur një pamje natyrale."
+    },
+    "gallery-3": {
+      "procedureName": "Fasetat E-Max",
+      "description": "Transformim i plotë i buzëqeshjes me ngjyrë, formë dhe rreshtim të përmirësuar."
+    },
+    "gallery-4": {
+      "procedureName": "Lifting i Fytyrës (Rhytidectomy)",
+      "description": "Pamje e rinovuar e fytyrës me lëkurë të varur dhe rrudha të reduktuara."
+    },
+    "gallery-5": {
+      "procedureName": "Zmadhimi i Buzëve",
+      "description": "Buzë më të plota dhe të definuara mirë të arritura me mbushës dermalë."
+    },
+    "gallery-6": {
+      "procedureName": "Transplantimi i Flokëve",
+      "description": "Restaurim i ndjeshëm i dendësisë së flokëve në zonat e trajtuara."
+    }
   },
   "BlogPage": {
     "metaTitle": "Blogu i Ekspertëve | {siteName}",
