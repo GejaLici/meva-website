@@ -21,29 +21,22 @@ const content: ContentBlock[] = [
     "id": "p-intro-2",
     "type": "paragraph",
     "children": [
-      { "type": "text", "text": "INDEX: Tummy tuck cost: How much is a tummy tuck in the UK? What is really included in the price of a tummy tuck? What are the additional costs of a tummy tuck that you need to consider? Factors that influence the price of a tummy tuck Tummy tuck techniques and their respective costs How much does a tummy tuck cost in Turkey? What is the cost of a tummy tuck in Albania?" }
+      { "type": "text", "text": "A tummy tuck, or abdominoplasty, is a surgical procedure designed to flatten the abdomen by removing excess skin and fat and tightening muscles in the abdominal wall. It is particularly effective for individuals who have loose or sagging skin and weakened abdominal muscles, often as a result of significant weight loss, pregnancy, or aging. This effective solution aims to create a smoother, firmer abdominal contour, significantly improving body shape and self-confidence for individuals seeking to achieve a more toned midsection." }
     ]
   },
   {
     "id": "p-intro-3",
     "type": "paragraph",
     "children": [
-      { "type": "text", "text": "A tummy tuck, or abdominoplasty, is a surgical procedure designed to flatten the abdomen by removing excess skin and fat and tightening muscles in the abdominal wall. It is particularly effective for individuals who have loose or sagging skin and weakened abdominal muscles, often as a result of significant weight loss, pregnancy, or aging. This effective solution aims to create a smoother, firmer abdominal contour, significantly improving body shape and self-confidence for individuals seeking to achieve a more toned midsection." }
-    ]
-  },
-  {
-    "id": "p-intro-4",
-    "type": "paragraph",
-    "children": [
       { "type": "text", "text": "In this comprehensive guide, we'll break down the cost of a tummy tuck, explaining exactly what's really included in the price and pointing out any additional costs you need to consider. We'll also break down the main factors that influence the price of a tummy tuck, helping you understand why quotes vary. For those considering international options, we'll also give you a clear comparison, looking at how much a tummy tuck costs in Turkey and what the cost of a tummy tuck is in Albania. Our goal is to give you all the straightforward information you need to make a truly confident decision." }
     ]
   },
-  {
-    "id": "p-lead-magnet-1",
-    "type": "paragraph",
-    "children": [
-      { "type": "text", "text": "👉 Download your free guide to Tummy Tuck Costs", "bold": true }
-    ]
+   {
+    "id": "cta-guide",
+    "type": "cta",
+    "text": "Get all the details you need to make an informed decision.",
+    "buttonText": "Download Your Free Guide",
+    "buttonLink": "#"
   },
   {
     "id": "h2-uk-cost",
@@ -71,51 +64,6 @@ const content: ContentBlock[] = [
     "id": "code-table-1",
     "type": "code",
     "code": "Procedure Type             London (est.)       Birmingham (est.)   Manchester (est.)\n-------------------------- ------------------- ------------------- -------------------\nMini Tummy Tuck            £4,500 - £6,500     £4,000 - £6,000     £4,000 - £6,200\nFull Tummy Tuck            £7,000 - £10,000    £6,000 - £9,000     £6,000 - £9,500\nExtended Tummy Tuck        £9,000 - £13,000+   £8,000 - £12,000+   £8,000 - £12,500+\nTummy Tuck with Lipo       £9,500 - £15,000+   £8,500 - £14,000+   £8,500 - £14,500+\nFleur-de-Lis Tummy Tuck    £10,000 - £16,000+  £9,000 - £15,000+   £9,000 - £15,500+"
-  },
-  {
-    "id": "h3-mini-cost",
-    "type": "heading",
-    "level": 3,
-    "children": [
-      { "type": "text", "text": "Cost of Mini Tummy Tuck" }
-    ]
-  },
-  {
-    "id": "p-mini-cost-1",
-    "type": "paragraph",
-    "children": [
-      { "type": "text", "text": "A mini tummy tuck is designed for individuals with minimal excess skin and fat below the navel, and usually no muscle laxity above it. It involves a shorter incision, typically above the pubic area, and does not require repositioning of the belly button. In the UK, mini tummy tuck costs generally range from £4,500 to £6,500. This procedure is less invasive than a full tummy tuck, resulting in a quicker recovery and often lower cost." }
-    ]
-  },
-  {
-    "id": "h3-full-cost",
-    "type": "heading",
-    "level": 3,
-    "children": [
-      { "type": "text", "text": "Cost of Full Tummy Tuck" }
-    ]
-  },
-  {
-    "id": "p-full-cost-1",
-    "type": "paragraph",
-    "children": [
-      { "type": "text", "text": "A full tummy tuck (standard abdominoplasty) addresses excess skin and fat from below the rib cage to the pubic area, and significantly tightens stretched abdominal muscles (diastasis recti). It involves a horizontal incision above the pubic area and an incision around the navel, which is repositioned. In the UK, a full tummy tuck typically costs between £7,000 and £10,000. This is the most common type of tummy tuck for comprehensive abdominal reshaping." }
-    ]
-  },
-  {
-    "id": "h3-extended-cost",
-    "type": "heading",
-    "level": 3,
-    "children": [
-      { "type": "text", "text": "Cost of Extended Tummy Tuck" }
-    ]
-  },
-  {
-    "id": "p-extended-cost-1",
-    "type": "paragraph",
-    "children": [
-      { "type": "text", "text": "An extended tummy tuck is a more comprehensive procedure than a full tummy tuck, designed for individuals with significant skin laxity extending to the flanks (sides of the torso) and lower back. The incision is longer, extending around the hips, to address these additional areas. In the UK, extended tummy tuck costs generally range from £9,000 to £13,000+. This procedure is often recommended after massive weight loss, providing a more dramatic and circumferential contouring result." }
-    ]
   },
   {
     "id": "p-table2-intro",
@@ -159,11 +107,11 @@ const content: ContentBlock[] = [
     ]
   },
    {
-    "id": "p-lead-magnet-2",
-    "type": "paragraph",
-    "children": [
-      { "type": "text", "text": "👉 Request your free cost estimate", "bold": true }
-    ]
+    "id": "cta-cost-estimate",
+    "type": "cta",
+    "text": "Get a personalized and transparent price for your procedure.",
+    "buttonText": "Request Your Free Cost Estimate",
+    "buttonLink": "/contact"
   },
   {
     "id": "h2-additional-costs",
@@ -227,11 +175,11 @@ const content: ContentBlock[] = [
     ]
   },
   {
-    "id": "p-cta-1",
-    "type": "paragraph",
-    "children": [
-      { "type": "text", "text": "👉 Book a free online consultation now", "bold": true }
-    ]
+    "id": "cta-consultation",
+    "type": "cta",
+    "text": "Speak with an expert to discuss your options.",
+    "buttonText": "Book a Free Online Consultation",
+    "buttonLink": "/contact"
   },
   {
     "id": "h2-techniques",
@@ -464,12 +412,12 @@ const content: ContentBlock[] = [
       { "type": "text", "text": "Many patients across Europe are drawn to Albania's excellent facilities for aesthetic procedures. KEIT Clinic stands out as a benchmark in the region for abdominoplasty services and provides all-inclusive tummy tuck packages designed for maximum peace of mind. Procedures are executed by highly specialized surgeons with extensive experience (with over 22,000 procedures successfully completed in other areas of expertise) and their reliability is evidenced by over 11,000 positive reviews and the choice of a wide patient base. The experience is further enhanced by the hotel, a 2-minute walk, trilingual assistance, and a certificate of guarantee. Furthermore, installment payment options are available for every need." }
     ]
   },
-  {
-    "id": "p-cta-2",
-    "type": "paragraph",
-    "children": [
-      { "type": "text", "text": "Connect with a KEIT coordinator", "bold": true }
-    ]
+   {
+    "id": "cta-keit-coordinator",
+    "type": "cta",
+    "text": "Connect with an expert to get started.",
+    "buttonText": "Contact a KEIT Coordinator",
+    "buttonLink": "/contact"
   },
   {
     "id": "h2-faq",

@@ -100,7 +100,6 @@
     "categories": {
       "facial-surgery": { "name": "Facial Surgery", "description": "Comprehensive surgical procedures to enhance and rejuvenate facial features." },
       "facial-treatments": { "name": "Facial Treatments", "description": "Non-surgical treatments to rejuvenate and enhance your facial features." },
-      "breasts": { "name": "Breast Surgery", "description": "Surgical procedures to enhance the shape, size, and appearance of the breasts." },
       "body-surgical": { "name": "Surgical Body Contouring", "description": "Transformative surgical procedures to shape and contour your body." },
       "body-non-surgical": { "name": "Non-Surgical Body Contouring", "description": "Minimally invasive treatments to refine your body shape and improve skin texture." },
       "aesthetic-dentistry": { "name": "Aesthetic Dentistry", "description": "Enhance your smile with our cosmetic dental treatments." },
@@ -267,7 +266,15 @@
     "publishedOn": "Published on {date}",
     "by": "By {author}",
     "noContent": "This post has no content yet. Please check back later for updates.",
-    "backButton": "Back to All Blog Articles"
+    "backButton": "Back to All Blog Articles",
+    "tableOfContents": "On this page",
+    "sharePost": "Share this article",
+    "shareOnFacebook": "Share on Facebook",
+    "shareOnTwitter": "Share on Twitter",
+    "shareOnLinkedIn": "Share on LinkedIn",
+    "ctaTitle": "Ready for your transformation?",
+    "ctaDescription": "Contact us today for a confidential consultation.",
+    "ctaButton": "Book Consultation"
   },
   "ServiceDetailsPage": {
     "metaTitle": "{serviceName} | {siteName}",

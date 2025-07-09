@@ -1,16 +1,14 @@
 
 import React from 'react';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/blog';
-import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
-import { Link } from '@/navigation';
+import { Card, CardContent } from '@/components/ui/card';
 import type { Metadata } from 'next';
-import { CalendarDays, UserCircle, Tag } from 'lucide-react';
-import { formatDate, cn } from '@/lib/utils';
-import type { ContentBlock, ContentLeaf } from '@/types/blog';
 import { getTranslations } from 'next-intl/server';
+import { cn } from '@/lib/utils';
+import type { ContentBlock, ContentLeaf, HeadingBlock } from '@/types/blog';
+import BlogPostLayout from './_components/BlogPostClient';
 
 interface BlogPostPageProps {
   params: {
@@ -87,46 +85,24 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
       case 'heading':
         const Tag = `h${block.level}` as keyof JSX.IntrinsicElements;
         return (
-          <Tag key={block.id} className={cn(
-            "font-headline text-primary mb-4",
-            {
-              'text-4xl mt-8': block.level === 1,
-              'text-3xl mt-6': block.level === 2,
-              'text-2xl mt-5': block.level === 3,
-              'text-xl mt-4': block.level === 4,
-              'text-lg mt-3': block.level === 5, 
-              'text-base mt-2 font-semibold': block.level === 6, 
-            }
-          )}>
+          <Tag key={block.id} id={block.id} className={cn({
+            'text-4xl mt-8': block.level === 1,
+            'text-3xl mt-6': block.level === 2,
+            'text-2xl mt-5': block.level === 3,
+            'text-xl mt-4': block.level === 4,
+          })}>
             {renderRichText(block.children)}
           </Tag>
         );
       case 'paragraph':
-        return <p key={block.id} className="mb-4 text-foreground leading-relaxed">{renderRichText(block.children)}</p>;
+        return <p key={block.id}>{renderRichText(block.children)}</p>;
       case 'image':
-        return (
-          <figure key={block.id} className="my-6">
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md border">
-              <Image
-                src={encodeURI(block.src)}
-                alt={block.alt}
-                fill
-                style={{ objectFit: 'contain' }}
-                data-ai-hint={block.imageHint}
-                className="bg-muted"
-              />
-            </div>
-            {block.caption && block.caption.length > 0 && (
-              <figcaption className="mt-2 text-sm text-center text-muted-foreground">
-                {renderRichText(block.caption)}
-              </figcaption>
-            )}
-          </figure>
-        );
+        // Images are handled by the prose plugin, this is a fallback.
+        return null; 
       case 'list':
         const ListTag = block.ordered ? 'ol' : 'ul';
         return (
-          <ListTag key={block.id} className={cn("mb-4 pl-6 space-y-2 text-foreground", block.ordered ? 'list-decimal' : 'list-disc')}>
+          <ListTag key={block.id}>
             {block.items.map((item, index) => (
               <li key={index}>{renderRichText(item)}</li>
             ))}
@@ -134,18 +110,29 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
         );
       case 'code':
         return (
-          <pre key={block.id} className="bg-muted p-4 rounded-md overflow-x-auto my-6 text-sm">
-            <code className={`language-${block.language || 'plaintext'} text-foreground/90`}>
+          <pre key={block.id} className="bg-muted text-muted-foreground p-4 rounded-md overflow-x-auto my-6 text-xs font-mono leading-relaxed border">
+            <code>
               {block.code}
             </code>
           </pre>
         );
       case 'blockquote':
         return (
-          <blockquote key={block.id} className="my-6 border-l-4 border-accent pl-4 italic text-muted-foreground">
-            <p>{renderRichText(block.children)}</p>
+          <blockquote key={block.id}>
+            {renderRichText(block.children)}
           </blockquote>
         )
+      case 'cta':
+        return (
+          <Card key={block.id} className="not-prose my-8 bg-accent/20 border-accent/50 shadow-lg">
+            <CardContent className="p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+              <p className="text-lg font-semibold text-foreground text-center md:text-left">{block.text}</p>
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 flex-shrink-0 w-full md:w-auto">
+                <a href={block.buttonLink} target="_blank" rel="noopener noreferrer">{block.buttonText}</a>
+              </Button>
+            </CardContent>
+          </Card>
+        );
       default:
         return null;
     }
@@ -155,63 +142,23 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getBlogPostBySlug(params.slug);
-  const t = await getTranslations('BlogPostPage');
 
   if (!post) {
     notFound();
   }
+
+  const headings = post.content
+    .filter((block): block is HeadingBlock => block.type === 'heading' && block.level === 2)
+    .map(block => ({
+      id: block.id,
+      text: block.children.map(child => child.text).join('')
+    }));
   
   const renderedContent = await renderContentBlocks(post.content);
-  const encodedFeatureImageUrl = post.imageUrl ? encodeURI(post.imageUrl) : undefined;
 
   return (
-    <>
-      <PageHeader title={post.title} />
-      <div className="container mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:px-8">
-        <article className="text-foreground mx-auto">
-          {encodedFeatureImageUrl && (
-            <div className="relative w-full h-64 md:h-96 mb-8 rounded-lg overflow-hidden shadow-lg border">
-              <Image
-                src={encodedFeatureImageUrl}
-                alt={post.title}
-                fill
-                priority
-                style={{ objectFit: 'cover' }}
-                data-ai-hint={post.imageHint || 'blog post feature image'}
-              />
-            </div>
-          )}
-
-          <div className="mb-6 text-sm text-muted-foreground flex flex-wrap items-center gap-x-6 gap-y-2">
-            <div className="flex items-center">
-              <CalendarDays className="mr-2 h-4 w-4" />
-              <span>{t('publishedOn', { date: formatDate(post.date, params.locale) })}</span>
-            </div>
-            {post.author && (
-              <div className="flex items-center">
-                <UserCircle className="mr-2 h-4 w-4" />
-                <span>{t('by', { author: post.author })}</span>
-              </div>
-            )}
-            {post.category && (
-              <div className="flex items-center">
-                <Tag className="mr-2 h-4 w-4" />
-                <span>{post.category}</span>
-              </div>
-            )}
-          </div>
-          
-          <div className="mt-8 space-y-6">
-            {renderedContent}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="/blog">{t('backButton')}</Link>
-            </Button>
-          </div>
-        </article>
-      </div>
-    </>
+    <BlogPostLayout post={post} headings={headings} locale={params.locale}>
+      {renderedContent}
+    </BlogPostLayout>
   );
 }

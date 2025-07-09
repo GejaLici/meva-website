@@ -99,7 +99,6 @@
     "categories": {
       "facial-surgery": { "name": "Kirurgjia e Fytyrës", "description": "Procedura kirurgjikale për të përmirësuar dhe rinovuar tiparet e fytyrës." },
       "facial-treatments": { "name": "Trajtimet e Fytyrës", "description": "Trajtime jo-kirurgjikale për të rinovuar dhe përmirësuar tiparet tuaja të fytyrës." },
-      "breasts": { "name": "Kirurgjia e Gjoksit", "description": "Procedura kirurgjikale për të përmirësuar formën, madhësinë dhe pamjen e gjinjve." },
       "body-surgical": { "name": "Konturimi Kirurgjikal i Trupit", "description": "Procedura kirurgjikale transformuese për të formuar dhe konturuar trupin tuaj." },
       "body-non-surgical": { "name": "Konturimi Jo-kirurgjikal i Trupit", "description": "Trajtime minimalisht invazive për të përmirësuar formën e trupit dhe teksturën e lëkurës." },
       "aesthetic-dentistry": { "name": "Stomatologji Estetike", "description": "Përmirësoni buzëqeshjen tuaj me trajtimet tona dentare kozmetike." },
@@ -266,7 +265,15 @@
     "publishedOn": "Publikuar më {date}",
     "by": "Nga {author}",
     "noContent": "Ky postim nuk ka ende përmbajtje. Ju lutemi kthehuni më vonë për përditësime.",
-    "backButton": "Kthehu te të gjithë Artikujt e Blogut"
+    "backButton": "Kthehu te të gjithë Artikujt e Blogut",
+    "tableOfContents": "Në këtë faqe",
+    "sharePost": "Ndajeni këtë artikull",
+    "shareOnFacebook": "Ndajeni në Facebook",
+    "shareOnTwitter": "Ndajeni në Twitter",
+    "shareOnLinkedIn": "Ndajeni në LinkedIn",
+    "ctaTitle": "Gati për transformimin tuaj?",
+    "ctaDescription": "Na kontaktoni sot për një konsultë konfidenciale.",
+    "ctaButton": "Rezervoni Konsultën"
   },
   "ServiceDetailsPage": {
     "metaTitle": "{serviceName} | {siteName}",

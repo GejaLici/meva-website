@@ -100,7 +100,6 @@
     "categories": {
       "facial-surgery": { "name": "Chirurgia Facciale", "description": "Procedure chirurgiche complete per migliorare e ringiovanire i tratti del viso." },
       "facial-treatments": { "name": "Trattamenti Facciali", "description": "Trattamenti non chirurgici per ringiovanire e migliorare i tratti del viso." },
-      "breasts": { "name": "Chirurgia del Seno", "description": "Procedure chirurgiche per migliorare la forma, le dimensioni e l'aspetto del seno." },
       "body-surgical": { "name": "Contorno Corpo Chirurgico", "description": "Procedure chirurgiche trasformative per modellare e contornare il tuo corpo." },
       "body-non-surgical": { "name": "Contorno Corpo Non Chirurgico", "description": "Trattamenti minimamente invasivi per affinare la forma del corpo e migliorare la texture della pelle." },
       "aesthetic-dentistry": { "name": "Odontoiatria Estetica", "description": "Migliora il tuo sorriso con i nostri trattamenti odontoiatrici estetici." },
@@ -267,7 +266,15 @@
     "publishedOn": "Pubblicato il {date}",
     "by": "Di {author}",
     "noContent": "Questo articolo non ha ancora contenuti. Si prega di tornare più tardi per gli aggiornamenti.",
-    "backButton": "Torna a Tutti gli Articoli del Blog"
+    "backButton": "Torna a Tutti gli Articoli del Blog",
+    "tableOfContents": "In questa pagina",
+    "sharePost": "Condividi questo articolo",
+    "shareOnFacebook": "Condividi su Facebook",
+    "shareOnTwitter": "Condividi su Twitter",
+    "shareOnLinkedIn": "Condividi su LinkedIn",
+    "ctaTitle": "Pronto per la tua trasformazione?",
+    "ctaDescription": "Contattaci oggi per una consulenza riservata.",
+    "ctaButton": "Prenota una consulenza"
   },
   "ServiceDetailsPage": {
     "metaTitle": "{serviceName} | {siteName}",

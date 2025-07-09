@@ -52,7 +52,14 @@ export interface BlockquoteBlock extends ContentBlockBase {
   children: ContentLeaf[];
 }
 
-export type ContentBlock = HeadingBlock | ParagraphBlock | ImageBlock | ListBlock | CodeBlock | BlockquoteBlock;
+export interface CtaBlock extends ContentBlockBase {
+  type: 'cta';
+  text: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+export type ContentBlock = HeadingBlock | ParagraphBlock | ImageBlock | ListBlock | CodeBlock | BlockquoteBlock | CtaBlock;
 
 // Update BlogPost
 export interface BlogPost {

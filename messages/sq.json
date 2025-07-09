@@ -24,21 +24,21 @@
     "es": "Spanjisht"
   },
   "Footer": {
-    "quickLinks": "Linqe të Shpejta",
-    "connectWithUs": "Lidhuni me Ne",
+    "quickLinks": "Linqe të shpejta",
+    "connectWithUs": "Lidhuni me ne",
     "stayUpdated": "Qëndroni të informuar me lajmet dhe ofertat tona më të fundit.",
     "allRightsReserved": "Të gjitha të drejtat e rezervuara.",
-    "privacyPolicy": "Politika e Privatësisë",
-    "termsOfService": "Kushtet e Shërbimit"
+    "privacyPolicy": "Politika e privatësisë",
+    "termsOfService": "Kushtet e shërbimit"
   },
   "HomePage": {
     "heroTitle": "Zbuloni rrezatimin tuaj. Ripërcaktoni bukurinë.",
     "heroSubtitle": "Përjetoni shkencën dhe artin e transformimit estetik në klinikën Meva. Profesionistët tanë mjekësorë të kualifikuar kombinojnë teknologjinë më të fundit me kujdesin e personalizuar për t'ju ndihmuar të arrini qëllimet tuaja përfundimtare estetike dhe të mirëqenies.",
     "heroButton": "Eksploroni trajtimet tona eksperte",
-    "servicesTitle": "Shërbimet tona kryesore Estetike & Dentare",
+    "servicesTitle": "Shërbimet tona kryesore estetike & dentare",
     "servicesSubtitle": "Në Klinikën Meva, ne ofrojmë një suitë të plotë të procedurave të avancuara estetike dhe dentare, të përshtatura me përpikëri nga specialistët tanë për të përmirësuar bukurinë tuaj natyrore dhe për të ngritur vetëbesimin tuaj.",
     "testimonialsTitle": "Çfarë thonë pacientët tanë",
-    "testimonialsSubtitle": "Dëgjoni nga ata që kanë përjetuar ndryshimin në klinikën Meva dhe na kanë besuar kujdesin e tyre.",
+    "testimonialsSubtitle": "Dëgjoni nga ata që kanë përjetuar ndryshimin në klinikën Meva dhe na kanë besuar ne kujdesin e tyre.",
     "galleryTitle": "Transformimet për të cilat jemi krenarë",
     "gallerySubtitle": "Dëshmoni aftësinë dhe artin e përpiktë të specialistëve tanë përmes këtyre rezultateve reale të pacientëve. Hidhni një vështrim në rezultatet mahnitëse që pacientët tanë kanë arritur në Klinikën Meva.",
     "galleryButton": "Shikoni galerinë e plotë të rezultateve",
@@ -58,10 +58,10 @@
   "ContactForm": {
     "nameLabel": "Emri i plotë",
     "namePlaceholder": "Shkruani emrin tuaj të plotë",
-    "emailLabel": "Adresa email",
-    "emailPlaceholder": "Shkruani adresën tuaj email",
+    "emailLabel": "Adresa e email",
+    "emailPlaceholder": "Shkruani email tuaj",
     "subjectLabel": "Subjekti",
-    "subjectPlaceholder": "Cili është subjekti i mesazhit tuaj?",
+    "subjectPlaceholder": "Cili është mesazhi juaj?",
     "messageLabel": "Mesazhi",
     "messagePlaceholder": "Ju lutemi përshkruani kërkesën tuaj në detaje.",
     "submitButton": "Dërgo mesazhin",
@@ -90,34 +90,34 @@
     },
     "testimonial-3": {
       "name": "Emilia R.",
-      "quote": "Përvoja ime e zmadhimit të gjoksit në klinikën Meva ishte e jashtëzakonshme. Kirurgët dëgjuan me vëmendje qëllimet e mia estetike dhe ofruan rezultate të bukura dhe me pamje natyrale që i përshtaten në mënyrë perfekte trupit tim. Kujdesi pas operacionit dhe vëmendja ndaj detajeve ishin të jashtëzakonshme.",
+      "quote": "Përvoja ime e zmadhimit të gjoksit në klinikën Meva ishte e jashtëzakonshme. Kirurgët dëgjuan qëllimet e mia estetike dhe ofruan rezultate të bukura dhe me pamje natyrale që i përshtaten në mënyrë perfekte trupit tim. Kujdesi pas operacionit dhe vëmendja ndaj detajeve ishin të jashtëzakonshme.",
       "treatment": "Zmadhimi i gjoksit"
     }
   },
   "Services": {
     "categories": {
       "facial-surgery": {
-        "name": "Kirurgjia e Fytyrës",
+        "name": "Kirurgjia e fytyrës",
         "description": "Procedura kirurgjikale për të përmirësuar dhe rinovuar tiparet e fytyrës."
       },
       "facial-treatments": {
-        "name": "Trajtimet e Fytyrës",
+        "name": "Trajtimet e fytyrës",
         "description": "Trajtime jo-kirurgjikale për të rinovuar dhe përmirësuar tiparet tuaja të fytyrës."
       },
       "breasts": {
-        "name": "Kirurgjia e Gjoksit",
+        "name": "Kirurgjia e gjoksit",
         "description": "Procedura kirurgjikale për të përmirësuar formën, madhësinë dhe pamjen e gjinjve."
       },
       "body-surgical": {
-        "name": "Konturimi Kirurgjikal i Trupit",
+        "name": "Konturimi kirurgjikal i trupit",
         "description": "Procedura kirurgjikale transformuese për të formuar dhe konturuar trupin tuaj."
       },
       "body-non-surgical": {
-        "name": "Trajtimet Jo-kirurgjikale të Trupit",
+        "name": "Trajtimet jo-kirurgjikale të trupit",
         "description": "Trajtime minimalisht invazive për të përmirësuar formën e trupit dhe teksturën e lëkurës."
       },
       "aesthetic-dentistry": {
-        "name": "Stomatologji Estetike",
+        "name": "Stomatologji estetike",
         "description": "Përmirësoni buzëqeshjen tuaj me trajtimet tona dentare kozmetike."
       },
       "prosthetics": {
@@ -129,19 +129,19 @@
         "description": "Arrini një buzëqeshje më të drejtë dhe shëndet më të mirë oral me zgjidhjet tona ortodontike."
       },
       "restorative-dentistry": {
-        "name": "Stomatologji Restauruese",
+        "name": "Stomatologji restauruese",
         "description": "Riktheni shëndetin dhe funksionin e dhëmbëve tuaj me trajtimet tona restauruese."
       },
       "oral-surgery": {
-        "name": "Kirurgji Orale",
+        "name": "Kirurgji orale",
         "description": "Kujdes kirurgjikal ekspert për çështje komplekse dentare."
       },
       "pediatric-dentistry": {
-        "name": "Stomatologji Pediatrike",
+        "name": "Stomatologji pediatrike",
         "description": "Kujdes dentar i butë dhe i specializuar për pacientët tanë më të vegjël."
       },
       "dental-summary": {
-        "name": "Shërbime Dentare Gjithëpërfshirëse",
+        "name": "Shërbime dentare gjithëpërfshirëse",
         "description": "Nga përmirësimet estetike te procedurat komplekse kirurgjikale, ekspertët tanë dentarë ofrojnë një spektër të plotë kujdesi për të siguruar shëndetin tuaj oral dhe për të përsosur buzëqeshjen tuaj. Eksploroni gamën tonë të gjerë të specialiteteve dentare."
       }
     },
@@ -151,7 +151,7 @@
         "description": "Një procedurë kirurgjikale për të rimodeluar hundën për përmirësimin e pamjes dhe/ose funksionit. Mund të ndryshojë madhësinë ose formën e hundës, të rregullojë këndin midis hundës dhe buzës së sipërme, ose të korrigjojë problemet e frymëmarrjes."
       },
       "rim-hunde": {
-        "name": "Rimodelimi i Majës së Hundës",
+        "name": "Rimodelimi i majës së hundës",
         "description": "Një procedurë e fokusuar që përsos specifikisht formën, madhësinë ose projeksionin e majës së hundës, shpesh me më pak kohë rikuperimi se një rinoplastikë e plotë."
       },
       "rim-vesheve": {
@@ -159,19 +159,19 @@
         "description": "Një procedurë kirurgjikale për të ndryshuar madhësinë, formën ose pozicionin e veshëve. Zakonisht kryhet për të korrigjuar veshët e dalë ose për të trajtuar veshët që janë deformuar nga lëndimi."
       },
       "mbj-flokeve": {
-        "name": "Transplantimi i Flokëve",
+        "name": "Transplantimi i flokëve",
         "description": "Një teknikë kirurgjikale që lëviz folikulat e flokëve nga një pjesë e trupit (zona dhuruese) në një pjesë tullace ose me rënie flokësh të trupit (zona marrëse). Përdoret kryesisht për të trajtuar rënien e flokëve te meshkujt."
       },
       "mbj-mjekres": {
-        "name": "Transplantimi i Mjekrës",
+        "name": "Transplantimi i mjekrës",
         "description": "Ngjashëm me një transplant flokësh, kjo procedurë përfshin transplantimin e folikulave të flokëve në zonën e mjekrës për të rritur dendësinë, për të mbushur zonat e rralla ose për të rimodeluar mjekrën."
       },
       "mbj-vetullave": {
-        "name": "Transplantimi i Vetullave",
+        "name": "Transplantimi i vetullave",
         "description": "Një procedurë ku folikulat e flokëve transplantohen në vetulla për të krijuar vetulla më të plota dhe më të definuara, shpesh për ata me vetulla natyrale të holla ose me rënie flokësh."
       },
       "lift-vetullave": {
-        "name": "Ngritja e Vetullave",
+        "name": "Ngritja e vetullave",
         "description": "Një procedurë kirurgjikale për të ngritur vetullat e rëna dhe për të përmirësuar pamjen e rrudhave në ballë dhe midis syve, duke rezultuar në një pamje më rinore dhe të pushuar."
       },
       "blefaroplastika": {
@@ -179,7 +179,7 @@
         "description": "Kirurgji për të përmirësuar pamjen e qepallave. Mund të kryhet në qepallat e sipërme, të poshtme ose të dyja për të hequr lëkurën e varur, yndyrën e tepërt ose qeset."
       },
       "lift-fytyres": {
-        "name": "Lifting i Fytyrës",
+        "name": "Lifting i fytyrës",
         "description": "Një procedurë kirurgjikale për të përmirësuar shenjat e dukshme të plakjes në fytyrë dhe qafë, si lëshimi i lëkurës, rrudhat e thella dhe lëkura e lirshme."
       },
       "rim-mjekres": {
@@ -187,23 +187,23 @@
         "description": "Një procedurë kirurgjikale për të rimodeluar ose përmirësuar mjekrën, qoftë me një implant ose duke rimodeluar kockën, për të përmirësuar ekuilibrin e përmasave të fytyrës."
       },
       "lip-reshaping": {
-        "name": "Rimodelimi dhe Zmadhimi i Buzëve",
+        "name": "Rimodelimi dhe zmadhimi i buzëve",
         "description": "Një procedurë kozmetike për të përmirësuar pamjen e buzëve duke rritur plotësinë, formën, strukturën ose simetrinë e tyre, shpesh duke përdorur mbushës dermalë."
       },
       "xanthelasma-plasma-arc": {
-        "name": "Heqja e Depozitave në Qepalla (Plazma)",
+        "name": "Heqja e depozitave në qepalla (Plazma)",
         "description": "Ky është një trajtim jo-kirurgjikal për të hequr njollat e verdha të kolesterolit që gjenden në qepalla. Ne përdorim një pajisje plazme të saktë për të pastruar butësisht këto depozita, duke ju dhënë një lëkurë më të lëmuar me shumë pak kohë rikuperimi."
       },
       "multivitamin-treatment": {
-        "name": "Trajtim Fytyre me Infuzion Multivitaminash",
+        "name": "Trajtim fytyre me infuzion multivitaminash",
         "description": "Një trajtim fytyre që injekton një përzierje vitaminash, mineralesh dhe antioksidantësh direkt në lëkurë për ta ushqyer, hidratuar dhe rigjallëruar atë, duke rezultuar në një çehre më rrezatuese."
       },
       "eyelids-plasma-arc": {
-        "name": "Lifting jo-kirurgjikal i Qepallave (Hark Plazma)",
+        "name": "Lifting jo-kirurgjikal i qepallave (Hark Plazma)",
         "description": "Një trajtim jo-invaziv që përdor energjinë e plazmës për të ngritur dhe shtrënguar lëkurën në qepalla, duke reduktuar pamjen e lëkurës së varur dhe rrudhave pa kirurgji."
       },
       "cheekbone-reshaping": {
-        "name": "Konturimi i Mollëzave (Mbushës)",
+        "name": "Konturimi i mollëzave (Mbushës)",
         "description": "Një procedurë jo-kirurgjikale që përdor mbushës dermalë për të përmirësuar dhe definuar mollëzat, duke rikthyer volumin dhe duke krijuar një strukturë fytyre më të konturuar."
       },
       "microdermabrasion": {
@@ -211,27 +211,27 @@
         "description": "Një procedurë minimalisht invazive që rinovon lëkurën duke lëmuar butësisht shtresën e jashtme të trashë, duke trajtuar dëmtimet nga dielli, rrudhat dhe probleme të tjera të lëkurës."
       },
       "jawline-contouring": {
-        "name": "Konturimi i Nofullës (Filler/Fije)",
+        "name": "Konturimi i nofullës (Filler/Fije)",
         "description": "Një teknikë jo-kirurgjikale për të përcaktuar dhe skulpturuar vijën e nofullës duke përdorur mbushës dermalë ose fije PDO, duke krijuar një profil më të mprehtë dhe më rinor."
       },
       "wrinkle-fillers": {
-        "name": "Mbushës Dermalë për Rrudhat",
+        "name": "Mbushës dermalë për rrudhat",
         "description": "Injektimet e acidit hialuronik ose mbushësve të tjerë për të mbushur rrudhat dhe linjat e holla, duke rivendosur volumin dhe duke lëmuar teksturën e lëkurës për një pamje të rinovuar."
       },
       "prp-face": {
-        "name": "Rinovimi i Fytyrës me PRP",
+        "name": "Rinovimi i fytyrës me PRP",
         "description": "Një procedurë që përdor plazmën e pasur me trombocite (PRP) nga gjaku juaj, e cila injektohet në lëkurë për të stimuluar prodhimin e kolagjenit dhe për të përmirësuar teksturën dhe elasticitetin e lëkurës."
       },
       "dark-circles-treatment": {
-        "name": "Trajtimi i Rrathëve të Zinj Poshtë Syve",
+        "name": "Trajtimi i rrathëve të zinj poshtë syve",
         "description": "Një sërë trajtimesh që synojnë të zvogëlojnë pamjen e rrathëve të zinj poshtë syve, duke përfshirë mbushësit, terapinë me lazer ose trajtimet topike, në varësi të shkakut themelor."
       },
       "prp-hair": {
-        "name": "Restaurimi i Flokëve me PRP",
+        "name": "Restaurimi i flokëve me PRP",
         "description": "Një trajtim jo-kirurgjikal për rënien e flokëve ku plazma e pasur me trombocite nga gjaku i pacientit injektohet në lëkurën e kokës për të stimuluar rritjen e flokëve."
       },
       "white-peeling": {
-        "name": "Peeling Kimik",
+        "name": "Peeling kimik",
         "description": "Një trajtim për rinovimin e lëkurës që aplikon një solucion kimik në lëkurë për ta eksfoliuar dhe përfundimisht për ta hequr atë, duke zbuluar lëkurë më të lëmuar dhe më pak të rrudhur."
       },
       "microneedling": {
@@ -239,35 +239,35 @@
         "description": "Një procedurë që përdor gjilpëra të holla për të krijuar shpime të vogla në lëkurë, duke stimuluar prodhimin e kolagjenit dhe elastinës për të përmirësuar teksturën e lëkurës dhe për të zvogëluar pamjen e shenjave dhe rrudhave."
       },
       "radiofrequency-face": {
-        "name": "Radiofrekuenca e Fytyrës",
+        "name": "Radiofrekuenca e fytyrës",
         "description": "Një metodë jo-kirurgjikale e shtrëngimit të lëkurës që përdor energji për të ngrohur shtresat më të thella të lëkurës, duke stimuluar prodhimin e kolagjenit dhe duke përmirësuar qëndrueshmërinë dhe teksturën e lëkurës."
       },
       "sulcus-filling": {
-        "name": "Mbushës për Rrudhat Nazolabiale",
+        "name": "Mbushës për rrudhat nazolabiale",
         "description": "Një procedurë jo-kirurgjikale ku mbushësit dermalë injektohen në rrudhat që shkojnë nga anët e hundës në cepat e gojës, duke zbutur pamjen e tyre."
       },
       "chin-reshaping": {
-        "name": "Rimodelimi jo-kirurgjikal i Mjekrës (Mbushës)",
+        "name": "Rimodelimi jo-kirurgjikal i mjekrës (Mbushës)",
         "description": "Një procedurë që përdor mbushës të injektueshëm për të rimodeluar dhe zmadhuar mjekrën, duke përmirësuar ekuilibrin e fytyrës dhe duke krijuar një profil më të fortë të mjekrës pa kirurgji."
       },
       "zmadh-gjoksit": {
-        "name": "Zmadhimi i Gjoksit",
+        "name": "Zmadhimi i gjoksit",
         "description": "Një procedurë kirurgjikale për të rritur madhësinë e gjirit përmes vendosjes së implanteve të gjirit nën indin e gjirit ose muskujt."
       },
       "lift-gjoksit": {
-        "name": "Ngritja e Gjoksit",
+        "name": "Ngritja e gjoksit",
         "description": "Një procedurë kirurgjikale për të ngritur dhe rimodeluar gjinjtë duke hequr lëkurën e tepërt dhe duke shtrënguar indin përreth për të rivendosur një profil më rinor të gjirit."
       },
       "zvog-gjoksit": {
-        "name": "Zvogëlimi i Gjoksit",
+        "name": "Zvogëlimi i gjoksit",
         "description": "Një procedurë kirurgjikale për të hequr yndyrën e tepërt të gjirit, indin gjëndror dhe lëkurën për të arritur një madhësi gjiri në përpjesëtim me trupin dhe për të lehtësuar shqetësimin e lidhur me gjinjtë tepër të mëdhenj."
       },
       "rikonst-gjoksit": {
-        "name": "Rindërtimi i Gjoksit",
+        "name": "Rindërtimi i gjoksit",
         "description": "Një procedurë kirurgjikale për të rivendosur formën, pamjen dhe madhësinë e gjirit pas një mastektomie ose lumpektomie."
       },
       "lift-kraheve": {
-        "name": "Ngritja e Krahëve",
+        "name": "Ngritja e krahëve",
         "description": "Një procedurë kirurgjikale për të rimodeluar pjesën e poshtme të krahut të sipërm, nga zona e sqetullës deri në bërryl, duke hequr lëkurën dhe yndyrën e tepërt."
       },
       "rim-barkut": {
@@ -279,7 +279,7 @@
         "description": "Një formë e liposucionit që heq yndyrën e tepërt dhe konturon trupin për të krijuar një formë më të definuar dhe të skalitur."
       },
       "rim-vitheve-bbl": {
-        "name": "BBL (Rimodelimi i Vitheve)",
+        "name": "BBL (Rimodelimi i vitheve)",
         "description": "Një procedurë kirurgjikale që transferon yndyrë nga pjesë të tjera të trupit në vithe për të përmirësuar madhësinë, formën dhe konturin e tyre."
       },
       "labioplastika": {
@@ -287,7 +287,7 @@
         "description": "Një procedurë kirurgjikale për të rimodeluar ose zvogëluar madhësinë e labiave për rehati më të madhe ose për arsye estetike."
       },
       "lift-kofsheve": {
-        "name": "Ngritja e Kofshëve",
+        "name": "Ngritja e kofshëve",
         "description": "Një procedurë kirurgjikale për të rimodeluar kofshët duke zvogëluar lëkurën dhe yndyrën e tepërt, duke rezultuar në lëkurë më të lëmuar dhe konture më të proporcionuara."
       },
       "gynecomastia": {
@@ -295,11 +295,11 @@
         "description": "Një procedurë kirurgjikale për të zvogëluar indin e gjirit të zmadhuar te meshkujt, e kryer përmes liposucionit dhe/ose heqjes së indit të tepërt gjëndror."
       },
       "cellulite-treatment": {
-        "name": "Trajtimi i Celulitit",
+        "name": "Trajtimi i celulitit",
         "description": "Një sërë procedurash që synojnë të zvogëlojnë pamjen e celulitit, duke përfshirë trajtimet me lazer, radiofrekuencën dhe injeksionet."
       },
       "plasma-arc-body": {
-        "name": "Harku Plazma (Trup)",
+        "name": "Harku plazma (Trup)",
         "description": "Një trajtim jo-invaziv që përdor energjinë e plazmës për të shtrënguar lëkurën e lirshme në pjesë të ndryshme të trupit, duke përmirësuar pamjen e rrudhave dhe lëshimit."
       },
       "carboxytherapy": {
@@ -315,15 +315,15 @@
         "description": "Një procedurë jo-kirurgjikale që përdor injeksione, lazer ose ultratinguj për të shpërbërë dhe hequr qelizat yndyrore në zona të caktuara."
       },
       "laser-hair-removal": {
-        "name": "Heqja e Qimeve me Lazer",
+        "name": "Heqja e qimeve me lazer",
         "description": "Një procedurë kozmetike që përdor një rreze të përqendruar drite për të hequr qimet e padëshiruara nga pjesë të ndryshme të trupit."
       },
       "teeth-whitening": {
-        "name": "Zbardhimi i Dhëmbëve",
+        "name": "Zbardhimi i dhëmbëve",
         "description": "Një procedurë dentare kozmetike që zbardh dhëmbët dhe ndihmon në heqjen e njollave dhe çngjyrosjeve, duke krijuar një buzëqeshje më të ndritshme dhe më të bardhë."
       },
       "composite-veneers": {
-        "name": "Fasetat Kompozite",
+        "name": "Fasetat kompozite",
         "description": "Mbulesa të holla prej materiali kompozit me ngjyrën e dhëmbit që aplikohen në sipërfaqen e përparme të dhëmbëve për të përmirësuar pamjen e tyre."
       },
       "emax-veneers": {
@@ -331,15 +331,15 @@
         "description": "Fasetat qeramike të cilësisë së lartë dhe të qëndrueshme, të njohura për forcën dhe pamjen e tyre natyrale, të përdorura për të transformuar buzëqeshjet."
       },
       "dental-crowns": {
-        "name": "Kurorat Dentare",
+        "name": "Kurorat dentare",
         "description": "Kapele të vendosura mbi një dhëmb për të rivendosur formën, madhësinë, forcën dhe pamjen e tij."
       },
       "dental-bridges": {
-        "name": "Urat Dentare",
+        "name": "Urat dentare",
         "description": "Restaurime dentare fikse që mbulojnë hapësirën e krijuar nga një ose më shumë dhëmbë që mungojnë."
       },
       "dentures": {
-        "name": "Protezat Dentare",
+        "name": "Protezat dentare",
         "description": "Zëvendësime të lëvizshme për dhëmbët që mungojnë dhe indet përreth."
       },
       "invisalign": {
@@ -347,43 +347,43 @@
         "description": "Një seri alignerësh transparentë dhe të personalizuar që drejtojnë gradualisht dhëmbët me kalimin e kohës, duke shërbyer si një alternativë ndaj telave tradicionale."
       },
       "fixed-braces": {
-        "name": "Telat Fikse",
+        "name": "Telat fikse",
         "description": "Pajisje ortodontike tradicionale të përdorura për të korrigjuar dhëmbët dhe nofullat e shtrembëruara."
       },
       "removable-appliances": {
-        "name": "Aparatet e Lëvizshme",
+        "name": "Aparatet e lëvizshme",
         "description": "Pajisje ortodontike që mund të vendosen dhe hiqen nga pacienti për të korrigjuar problemet dentare."
       },
       "teeth-cleaning": {
-        "name": "Pastrimi i Dhëmbëve (Pastrimi i Gurëzave)",
+        "name": "Pastrimi i dhëmbëve (pastrimi i gurëzave)",
         "description": "Pastrim profesional për të hequr pllakën dhe gurëzat nga dhëmbët për të parandaluar kariesin dhe sëmundjet e mishrave të dhëmbëve."
       },
       "dental-fillings": {
-        "name": "Mbushjet Dentare",
+        "name": "Mbushjet dentare",
         "description": "Materiale të përdorura për të mbushur dhe restauruar dhëmbët e dëmtuar nga kariesi, duke parandaluar dëmtimin e mëtejshëm."
       },
       "root-canal-treatment": {
-        "name": "Trajtimi i Kanalit të Rrënjës",
+        "name": "Trajtimi i kanalit të rrënjës",
         "description": "Një procedurë dentare për të hequr pulpën e infektuar nga brenda një dhëmbi për ta shpëtuar atë dhe për të lehtësuar dhimbjen."
       },
       "tooth-extraction": {
-        "name": "Heqja e Dhëmbit",
+        "name": "Heqja e dhëmbit",
         "description": "Heqja e një dhëmbi nga foleja e tij alveolare në kockën e nofullës."
       },
       "dental-implants": {
-        "name": "Implantet Dentare",
+        "name": "Implantet dentare",
         "description": "Pajisje kirurgjikale të vendosura në kockën e nofullës për të zëvendësuar dhëmbët që mungojnë dhe për të siguruar një bazë për zëvendësime fikse ose të lëvizshme."
       },
       "apical-resection": {
-        "name": "Kirurgjia e Majës së Rrënjës (Apikotomi)",
+        "name": "Kirurgjia e majës së rrënjës (Apikotomi)",
         "description": "Një procedurë kirurgjikale për të hequr majën e rrënjës së një dhëmbi dhe indin e infektuar përreth."
       },
       "primary-teeth-care": {
-        "name": "Kujdesi për Dhëmbët e Qumështit",
+        "name": "Kujdesi për dhëmbët e qumështit",
         "description": "Kujdes i specializuar dentar për fëmijët, i fokusuar në ruajtjen e shëndetit të dhëmbëve të qumështit për të siguruar zhvillimin e duhur të dhëmbëve të përhershëm."
       },
       "teeth-fluoridation": {
-        "name": "Fluorizimi i Dhëmbëve",
+        "name": "Fluorizimi i dhëmbëve",
         "description": "Aplikimi i fluorit në dhëmbë për të forcuar smaltin dhe për të parandaluar prishjen e dhëmbëve."
       },
       "dental-sealants": {
@@ -393,46 +393,46 @@
     }
   },
   "AboutPage": {
-    "metaTitle": "Rreth Klinikës Meva",
-    "metaDescription": "Zbuloni misionin, vlerat dhe ekipin e shquar të profesionistëve mjekësorë të certifikuar në {siteName}. Mësoni rreth angazhimit tonë për përsosmëri në kujdesin estetik dhe dentar.",
-    "headerTitle": "Rreth {siteName}",
+    "metaTitle": "Rreth klinikës Meva",
+    "metaDescription": "Zbuloni misionin, vlerat dhe ekipin e shquar të profesionistëve mjekësorë të certifikuar në Meva. Mësoni rreth angazhimit tonë për përsosmëri në kujdesin estetik dhe dentar.",
+    "headerTitle": "Rreth klinkes Meva",
     "headerDescription": "Transformimi i bukurisë përmes ekspertizës mjekësore, inovacionit teknologjik dhe kujdesit të dhembshur dhe të përqendruar te pacienti.",
     "philosophyTitle": "Filozofia jonë: Bukuria juaj, Prioriteti ynë, e Udhëhequr nga Përsosmëria Mjekësore",
-    "philosophyP1": "Në {siteName}, ne besojmë se përmirësimi estetik është një udhëtim thellësisht personal drejt vetëbesimit dhe mirëqenies më të madhe, i bazuar në shkencën dhe sigurinë mjekësore. Filozofia jonë kryesore sillet rreth ofrimit të kujdesit shumë të personalizuar, duke përdorur përparimet e bazuara në prova në mjekësinë estetike dhe duke mbajtur standardet më të larta mjekësore dhe etike.",
+    "philosophyP1": "Në Meva, ne besojmë se përmirësimi estetik është një udhëtim thellësisht personal drejt vetëbesimit dhe mirëqenies më të madhe, i bazuar në shkencën dhe sigurinë mjekësore. Filozofia jonë kryesore sillet rreth ofrimit të kujdesit shumë të personalizuar, duke përdorur përparimet e bazuara në prova në mjekësinë estetike dhe duke mbajtur standardet më të larta mjekësore dhe etike.",
     "philosophyP2": "Ne jemi të përkushtuar të kuptojmë tërësisht aspiratat tuaja unike dhe konsideratat anatomike. Ekipi ynë ekspert përshtat trajtimet për të arritur rezultate harmonike me pamje natyrale që rrisin bukurinë tuaj individuale duke i dhënë përparësi shëndetit dhe sigurisë suaj. Ne nxisim një mjedis mbështetës, profesional dhe të rehatshëm ku ju ndiheni të dëgjuar, të respektuar dhe të fuqizuar gjatë përvojës suaj transformuese.",
     "philosophyButton": "Eksploroni Shërbimet Tona të Avancuara",
-    "imageAlt": "Brendësia e klinikës moderne të {siteName}",
-    "journeyTitle": "Filloni Udhëtimin Tuaj të Transformimit",
+    "imageAlt": "Brendësia e klinikës moderne të Meva",
+    "journeyTitle": "Filloni udhëtimin tuaj të transformimit",
     "journeyP1": "Ju ftojmë të caktoni një konsultë gjithëpërfshirëse me ekspertët tanë mjekësorë sot. Hidhni hapin e parë vendimtar drejt arritjes së aspiratave tuaja estetike në një mjedis të sigurt, mbështetës dhe profesional.",
-    "journeyButton": "Rezervoni Konsultën Tuaj Konfidenciale"
+    "journeyButton": "Rezervoni konsultën tuaj konfidenciale"
   },
   "ContactPage": {
-    "metaTitle": "Kontaktoni {siteName} | Kërkesa & Konsulta",
-    "metaDescription": "Kontaktoni {siteName} për kërkesa nga ekspertë, konsultime konfidenciale, ose për të rezervuar një takim. Ekipi ynë profesional është i gatshëm t'ju ndihmojë me nevojat tuaja estetike dhe dentare.",
-    "title": "Na Kontaktoni",
+    "metaTitle": "Kontaktoni klinikën Meva | Kërkesa & Konsulta",
+    "metaDescription": "Kontaktoni klinikën Meva për kërkesa nga ekspertë, konsultime konfidenciale, ose për të rezervuar një takim. Ekipi ynë profesional është i gatshëm t'ju ndihmojë me nevojat tuaja estetike dhe dentare.",
+    "title": "Na kontaktoni",
     "description": "Ne jemi të përkushtuar të ofrojmë informacion dhe mbështetje gjithëpërfshirëse. Nëse keni ndonjë pyetje ose dëshironi të diskutoni qëllimet tuaja estetike, ju lutemi plotësoni formularin e sigurt më poshtë, ose kontaktoni direkt ekipin tonë profesional. Ne jemi këtu për t'ju ndihmuar.",
-    "detailsTitle": "Detajet e Klinikës Sonë & Kontakti Direkt",
+    "detailsTitle": "Detajet e klinikës sonë & Kontakti direkt",
     "addressLabel": "Adresa:",
     "addressValue": "Rruga \"Sami Frashëri\", Nr. 123, Tiranë, Shqipëri",
     "phoneLabel": "Telefoni:",
     "emailLabel": "Email:",
-    "hoursTitle": "Orari i Punës së Klinikës",
+    "hoursTitle": "Orari i punës së klinikës",
     "hoursWeekdays": "E hënë - E premte: 09:00 - 18:00",
     "hoursSaturday": "E shtunë: 09:00 - 14:00",
     "hoursSunday": "E diel: Mbyllur",
-    "formTitle": "Formular i Sigurt për Kërkesa"
+    "formTitle": "Formular për kërkesa"
   },
   "FaqPage": {
-    "metaTitle": "Pyetje të Shpeshta | {siteName}",
+    "metaTitle": "Pyetje të shpeshta | Klinika Meva",
     "metaDescription": "Gjeni përgjigje të plota për pyetjet e zakonshme rreth procedurave estetike, konsultimeve, rikuperimit dhe rrugëve të kujdesit në {siteName}.",
-    "title": "Pyetje të Shpeshta (FAQ)",
+    "title": "Pyetje të shpeshta (FAQ)",
     "description": "Gjeni përgjigje të plota për pyetjet e shpeshta lidhur me shërbimet tona të specializuara, procedurat e avancuara, përgatitjen para-operative dhe kujdesin pas trajtimit në {siteName}.",
     "noResults": "Për momentin nuk ka pyetje të shpeshta. Ju lutemi kontaktoni direkt klinikën tonë nëse keni pyetje specifike."
   },
   "FAQ": {
     "faq-1": {
-      "question": "Çfarë duhet të pres gjatë konsultës sime të parë në {siteName}?",
-      "answer": "<p>Konsulta juaj fillestare në {siteName} është një takim konfidencial dhe gjithëpërfshirës me një nga specialistët tanë mjekësorë ekspertë. Gjatë kësaj seance, ne do të diskutojmë tërësisht objektivat tuaja estetike, do të kryejmë një vlerësim të kujdesshëm të historisë suaj mjekësore përkatëse dhe do të shpjegojmë qartë opsionet më të përshtatshme të trajtimit në dispozicion. Kjo kohë e dedikuar ju lejon të bëni çdo pyetje dhe të fitoni një kuptim të plotë të rezultateve të mundshme, përfitimeve, rreziqeve specifike dhe procesit të parashikuar të rimëkëmbjes për procedurën tuaj të propozuar. Qëllimi ynë është t'ju fuqizojmë me të gjithë informacionin e nevojshëm për të marrë një vendim të mirë-informuar për kujdesin tuaj.</p>"
+      "question": "Çfarë duhet të pres gjatë konsultës sime të parë në klinikën Meva?",
+      "answer": "<p>Konsulta juaj fillestare në klinikën Meva është një takim konfidencial dhe gjithëpërfshirës me një nga specialistët tanë mjekësorë ekspertë. Gjatë kësaj seance, ne do të diskutojmë tërësisht objektivat tuaja estetike, do të kryejmë një vlerësim të kujdesshëm të historisë suaj mjekësore përkatëse dhe do të shpjegojmë qartë opsionet më të përshtatshme të trajtimit në dispozicion. Kjo kohë e dedikuar ju lejon të bëni çdo pyetje dhe të fitoni një kuptim të plotë të rezultateve të mundshme, përfitimeve, rreziqeve specifike dhe procesit të parashikuar të rimëkëmbjes për procedurën tuaj të propozuar. Qëllimi ynë është t'ju fuqizojmë me të gjithë informacionin e nevojshëm për të marrë një vendim të mirë-informuar për kujdesin tuaj.</p>"
     },
     "faq-2": {
       "question": "Sa zgjat periudha tipike e rimëkëmbjes për procedurat estetike?",
@@ -452,7 +452,7 @@
     }
   },
   "GalleryPage": {
-    "metaTitle": "Galeria e Pacientëve Para & Pas | {siteName}",
+    "metaTitle": "Galeria e pacientëve para & pas | {siteName}",
     "metaDescription": "Shikoni transformimet e jashtëzakonshme të arritura nga ekipi ynë mjekësor ekspert në {siteName}. Eksploroni rezultatet reale të pacientëve nga procedurat tona të avancuara estetike dhe dentare.",
     "title": "Galeria e Pacientëve Para & Pas",
     "description": "Dëshmoni fuqinë transformuese të ekspertizës sonë të avancuar estetike dhe dentare. Eksploroni rezultatet reale të pacientëve të arritura në {siteName}.",
@@ -489,16 +489,16 @@
   "BlogPage": {
     "metaTitle": "Blogu i Ekspertëve | {siteName}",
     "metaDescription": "Qëndroni të informuar me përparimet më të fundit, këshillat e ekspertëve dhe artikujt insightful nga fronti i kujdesit estetik dhe dentar, të kuruar nga profesionistët në {siteName}.",
-    "title": "Blogu ynë i Vështrimeve të Ekspertëve",
+    "title": "Blogu ynë i vështrimeve të ekspertëve",
     "description": "Qëndroni të informuar me përparimet më të fundit, këshillat e ekspertëve dhe artikujt insightful nga fronti i kujdesit estetik dhe dentar, të kuruar nga profesionistët në {siteName}.",
     "noPosts": "Nuk ka postime në blog për momentin. Ju lutemi kthehuni më vonë, ose sigurohuni që koleksioni juaj 'blogPosts' në Firestore të jetë i populluar me të dhëna të vlefshme.",
     "readMore": "Lexo më shumë"
   },
   "BlogPostPage": {
-    "metaTitle": "{postTitle} | Blogu i {siteName}",
+    "metaTitle": "{postTitle} | Blogu i Meva",
     "metaDescription": "{postExcerpt}",
     "postNotFoundTitle": "Postimi nuk u gjet | {siteName}",
-    "postNotFoundDescription": "Postimi i kërkuar në blog nuk u gjet në {siteName}.",
+    "postNotFoundDescription": "Postimi i kërkuar në blog nuk u gjet në klinikën Meva.",
     "publishedOn": "Publikuar më {date}",
     "by": "Nga {author}",
     "noContent": "Ky postim nuk ka ende përmbajtje. Ju lutemi kthehuni më vonë për përditësime.",
@@ -509,24 +509,24 @@
     "metaDescription": "Eksploroni {serviceName} në {siteName}. {excerpt}",
     "aboutTitle": "Rreth {serviceName}",
     "whatToExpectTitle": "Çfarë të Presësh në {siteName}",
-    "whatToExpectP1": "Në {siteName}, udhëtimi juaj fillon me një konsultë gjithëpërfshirëse ku specialistët tanë zhvillojnë një plan trajtimi të personalizuar të përshtatur për nevojat tuaja specifike dhe rezultatet e dëshiruara për {serviceName}. Ne përdorim teknika moderne, të bazuara në prova dhe teknologji të fundit. Angazhimi ynë shtrihet në kujdesin e përpiktë pas operacionit dhe ndjekjen, duke siguruar rezultate optimale, komoditetin tuaj dhe një proces të qetë rikuperimi.",
+    "whatToExpectP1": "Në klinikën Meva, udhëtimi juaj fillon me një konsultë gjithëpërfshirëse ku specialistët tanë zhvillojnë një plan trajtimi të personalizuar të përshtatur për nevojat tuaja specifike dhe rezultatet e dëshiruara për {serviceName}. Ne përdorim teknika moderne, të bazuara në prova dhe teknologji të fundit. Angazhimi ynë shtrihet në kujdesin e përpiktë pas operacionit dhe ndjekjen, duke siguruar rezultate optimale, komoditetin tuaj dhe një proces të qetë rikuperimi.",
     "whatToExpectL1": "Konsultë fillestare e plotë, konfidenciale me një specialist.",
     "whatToExpectL2": "Plan trajtimi i zhvilluar posaçërisht bazuar në vlerësimin gjithëpërfshirës.",
     "whatToExpectL3": "Zbatimi i teknologjisë së avancuar mjekësore dhe metodave të provuara procedurale.",
     "whatToExpectL4": "Kujdes dhe ndjekje e dedikuar dhe e vëmendshme pas operacionit.",
     "consultationButton": "Rezervoni një Konsultë Konfidenciale",
     "serviceNotFoundTitle": "Shërbimi nuk u gjet | {siteName}",
-    "serviceNotFoundDescription": "Shërbimi i kërkuar nuk u gjet në {siteName}.",
+    "serviceNotFoundDescription": "Shërbimi i kërkuar nuk u gjet në klinikën Meva.",
     "galleryTitle": "Galeria e Procedurës"
   },
   "ServicesOverviewPage": {
-    "metaTitle": "Shërbimet Tona | {siteName}",
+    "metaTitle": "Shërbimet tona | {siteName}",
     "metaDescription": "Eksploroni gamën e gjerë të shërbimeve të avancuara estetike dhe dentare të ofruara në {siteName}. Zbuloni trajtime të përshtatura nga ekspertët për të përmirësuar bukurinë dhe mirëqenien tuaj.",
-    "title": "Shërbimet Tona të Avancuara Estetike & Dentare",
+    "title": "Shërbimet tona të avancuara estetike & dentare",
     "description": "Eksploroni spektrin e gjerë të trajtimeve të specializuara estetike dhe dentare të ofruara në {siteName}. Çdo shërbim është projektuar me përpikëri për t'ju ndihmuar të arrini objektivat tuaja të veçanta të bukurisë dhe mirëqenies. Ekipi ynë mjekësor ekspert është i përkushtuar të ofrojë kujdes të avancuar, të personalizuar dhe të japë rezultate të jashtëzakonshme dhe afatgjata.",
-    "aestheticServicesTitle": "Shërbimet Estetike",
+    "aestheticServicesTitle": "Shërbimet estetike",
     "aestheticServicesSubtitle": "Nga përmirësimet delikate te procedurat kirurgjikale transformuese, zbuloni paketën tonë të trajtimeve estetike. Ekipi ynë ekspert është i përkushtuar të rinovojë pamjen tuaj dhe të rrisë besimin tuaj me kujdes të personalizuar.",
-    "dentalServicesTitle": "Shërbimet Dentare",
+    "dentalServicesTitle": "Shërbimet dentare",
     "dentalServicesSubtitle": "Arrini një buzëqeshje të shëndetshme dhe të bukur me gamën tonë të plotë të shërbimeve dentare. Ne mbulojmë gjithçka, nga stomatologjia kozmetike dhe ortodoncia deri te kirurgjia orale komplekse, të gjitha të kryera me saktësi dhe kujdes.",
     "recommenderTitle": "Keni nevojë për ndihmë në zgjedhje?",
     "recommenderSubtitle": "Përshkruani shqetësimet ose qëllimet tuaja, dhe asistenti ynë i AI do t'ju sugjerojë shërbimet më të përshtatshme për ju."
@@ -540,7 +540,7 @@
   },
   "PrivacyPolicyPage": {
     "metaTitle": "Politika e Privatësisë | {siteName}",
-    "metaDescription": "Politika zyrtare e Privatësisë për {siteName}. Kuptoni se si ne mbledhim, përdorim dhe mbrojmë informacionin tuaj personal në përputhje me rregulloret e mbrojtjes së të dhënave.",
+    "metaDescription": "Politika zyrtare e Privatësisë për klinikën Meva. Kuptoni se si ne mbledhim, përdorim dhe mbrojmë informacionin tuaj personal në përputhje me rregulloret e mbrojtjes së të dhënave.",
     "title": "Politika e Privatësisë",
     "lastUpdated": "Përditësuar së fundi: {date}",
     "p1": "Mirë se vini në {siteName} (në tekstin e mëtejmë i referuar si \"ne\", \"neve\", ose \"tonë\"). Ne jemi të përkushtuar me vendosmëri për të mbrojtur informacionin tuaj personal dhe të drejtën tuaj themelore për privatësi. Kjo Politikë e Privatësisë rregullon aksesin dhe përdorimin tuaj të uebsajtit tonë, {SITE_DOMAIN}, duke përfshirë çdo formë tjetër mediash, kanalesh mediatike, uebsajtesh mobile, ose aplikacionesh mobile të lidhura me të (kolektivisht, \"Sajti\"). Nëse keni ndonjë pyetje ose shqetësim në lidhje me këtë njoftim privatësie, ose praktikat tona në lidhje me informacionin tuaj personal, ju lutemi na kontaktoni në info@{SITE_DOMAIN}.",
@@ -578,7 +578,7 @@
     "p10_2": "{siteName}<br />Për vëmendje: Oficeri i Mbrojtjes së të Dhënave<br />Rruga \"Sami Frashëri\", Nr. 123<br />Tiranë, Shqipëri"
   },
   "TermsOfServicePage": {
-    "metaTitle": "Kushtet e Shërbimit | {siteName}",
+    "metaTitle": "Kushtet e shërbimit | {siteName}",
     "metaDescription": "Kushtet zyrtare të Shërbimit për {siteName}. Kuptoni rregullat dhe udhëzimet për përdorimin e uebsajtit dhe shërbimeve tona.",
     "title": "Kushtet e Shërbimit",
     "lastUpdated": "Përditësuar së fundi: {date}",

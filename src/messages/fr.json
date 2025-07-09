@@ -100,7 +100,6 @@
     "categories": {
       "facial-surgery": { "name": "Chirurgie du Visage", "description": "Procédures chirurgicales complètes pour améliorer et rajeunir les traits du visage." },
       "facial-treatments": { "name": "Traitements du Visage", "description": "Traitements non chirurgicaux pour rajeunir et mejorar les traits de votre visage." },
-      "breasts": { "name": "Chirurgie Mammaire", "description": "Procédures chirurgicales pour améliorer la forme, la taille et l'apparence des seins." },
       "body-surgical": { "name": "Contour du corps chirurgical", "description": "Procédures chirurgicales transformatrices pour façonner et sculpter votre corps." },
       "body-non-surgical": { "name": "Contour corporel non chirurgical", "description": "Traitements minimalement invasifs pour affiner la forme de votre corps et améliorer la texture de la peau." },
       "aesthetic-dentistry": { "name": "Dentisterie Esthétique", "description": "Améliorez votre sourire avec nos traitements dentaires cosmétiques." },
@@ -267,7 +266,15 @@
     "publishedOn": "Publié le {date}",
     "by": "Par {author}",
     "noContent": "Cet article n'a pas encore de contenu. Veuillez revenir plus tard pour les mises à jour.",
-    "backButton": "Retour à tous les articles du blog"
+    "backButton": "Retour à tous les articles du blog",
+    "tableOfContents": "Sur cette page",
+    "sharePost": "Partager cet article",
+    "shareOnFacebook": "Partager sur Facebook",
+    "shareOnTwitter": "Partager sur Twitter",
+    "shareOnLinkedIn": "Partager sur LinkedIn",
+    "ctaTitle": "Prêt pour votre transformation ?",
+    "ctaDescription": "Contactez-nous dès aujourd'hui pour une consultation confidentielle.",
+    "ctaButton": "Réserver une consultation"
   },
   "ServiceDetailsPage": {
     "metaTitle": "{serviceName} | {siteName}",

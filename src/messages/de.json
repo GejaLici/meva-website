@@ -100,7 +100,6 @@
     "categories": {
       "facial-surgery": { "name": "Gesichtschirurgie", "description": "Umfassende chirurgische Eingriffe zur Verbesserung und Verjüngung der Gesichtszüge." },
       "facial-treatments": { "name": "Gesichtsbehandlungen", "description": "Nicht-chirurgische Behandlungen zur Verjüngung und Verbesserung Ihrer Gesichtszüge." },
-      "breasts": { "name": "Brustchirurgie", "description": "Chirurgische Eingriffe zur Verbesserung der Form, Größe und des Aussehens der Brüste." },
       "body-surgical": { "name": "Chirurgische Körperkonturierung", "description": "Transformative chirurgische Eingriffe zur Formung und Konturierung Ihres Körpers." },
       "body-non-surgical": { "name": "Nicht-chirurgische Körperkonturierung", "description": "Minimalinvasive Behandlungen zur Verfeinerung Ihrer Körperform und Verbesserung der Hauttextur." },
       "aesthetic-dentistry": { "name": "Ästhetische Zahnmedizin", "description": "Verbessern Sie Ihr Lächeln mit unseren kosmetischen Zahnbehandlungen." },
@@ -267,7 +266,15 @@
     "publishedOn": "Veröffentlicht am {date}",
     "by": "Von {author}",
     "noContent": "Dieser Beitrag hat noch keinen Inhalt. Bitte schauen Sie später für Updates wieder vorbei.",
-    "backButton": "Zurück zu allen Blog-Artikeln"
+    "backButton": "Zurück zu allen Blog-Artikeln",
+    "tableOfContents": "Auf dieser Seite",
+    "sharePost": "Diesen Artikel teilen",
+    "shareOnFacebook": "Auf Facebook teilen",
+    "shareOnTwitter": "Auf Twitter teilen",
+    "shareOnLinkedIn": "Auf LinkedIn teilen",
+    "ctaTitle": "Bereit für Ihre Transformation?",
+    "ctaDescription": "Kontaktieren Sie uns noch heute für eine vertrauliche Beratung.",
+    "ctaButton": "Beratung buchen"
   },
   "ServiceDetailsPage": {
     "metaTitle": "{serviceName} | {siteName}",
