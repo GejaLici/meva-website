@@ -23,9 +23,9 @@ export function Footer() {
           <div>
             <h3 className="font-headline text-lg font-semibold text-primary mb-3">{tSite('title')}</h3>
             <p className="text-sm text-muted-foreground">
-              Rruga "Sami Frashëri", No. 123<br />
+            {/*  Rruga "Sami Frashëri", No. 123<br />
               Tirana, Albania<br />
-              Phone: +355 69 123 4567<br />
+              Phone: +355 69 123 4567<br />*/}
               Email: info@{SITE_DOMAIN}
             </p>
           </div>

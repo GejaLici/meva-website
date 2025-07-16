@@ -117,7 +117,7 @@ const HomeContactSection = dynamic(
 );
 
 
-export default async function HomePage() {
+export default function HomePage() {
   return (
     <>
       <HeroSection />
