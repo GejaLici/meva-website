@@ -47,6 +47,7 @@ export default async function GalleryPage() {
                         alt={`${tPage('before')} - ${tGallery(`${item.id}.procedureName`)}`}
                         fill
                         style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         data-ai-hint={item.beforeImageHint}
                       />
                     </div>
@@ -59,6 +60,7 @@ export default async function GalleryPage() {
                           alt={`${tPage('after')} - ${tGallery(`${item.id}.procedureName`)}`}
                           fill
                           style={{ objectFit: 'cover' }}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           data-ai-hint={item.afterImageHint}
                         />
                     </div>

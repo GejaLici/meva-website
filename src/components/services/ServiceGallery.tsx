@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -56,7 +57,7 @@ export function ServiceGallery({ images }: ServiceGalleryProps) {
                     src={image.url}
                     alt={image.hint}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     style={{ objectFit: 'cover' }}
                     data-ai-hint={image.hint}
                   />

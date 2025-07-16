@@ -6,9 +6,44 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { cn } from '@/lib/utils';
+import { cn, formatDate } from '@/lib/utils';
 import type { ContentBlock, ContentLeaf, HeadingBlock } from '@/types/blog';
-import BlogPostLayout from './_components/BlogPostClient';
+import Image from 'next/image';
+import { Link } from '@/navigation';
+import { CalendarDays, UserCircle } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import { Skeleton } from '@/components/ui/skeleton';
+
+const BlogPostClient = dynamic(
+  () => import('./_components/BlogPostClient'),
+  {
+    ssr: false,
+    loading: () => (
+      <aside className="hidden lg:block lg:col-span-4">
+        <div className="sticky top-24 space-y-8">
+          <div className="space-y-4">
+            <Skeleton className="h-6 w-32" />
+            <div className="space-y-2.5">
+              <Skeleton className="h-4 w-full" />
+              <Skeleton className="h-4 w-3/4" />
+              <Skeleton className="h-4 w-5/6" />
+            </div>
+          </div>
+          <div className="space-y-4">
+            <Skeleton className="h-6 w-24" />
+            <div className="flex space-x-2">
+              <Skeleton className="h-10 w-10" />
+              <Skeleton className="h-10 w-10" />
+              <Skeleton className="h-10 w-10" />
+            </div>
+          </div>
+          <Skeleton className="h-48 w-full" />
+        </div>
+      </aside>
+    ),
+  }
+);
+
 
 interface BlogPostPageProps {
   params: {
@@ -141,6 +176,7 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
 
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const t = await getTranslations('BlogPostPage');
   const post = await getBlogPostBySlug(params.slug);
 
   if (!post) {
@@ -155,10 +191,63 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     }));
   
   const renderedContent = await renderContentBlocks(post.content);
+  const encodedFeatureImageUrl = post.imageUrl ? encodeURI(post.imageUrl) : undefined;
 
   return (
-    <BlogPostLayout post={post} headings={headings} locale={params.locale}>
-      {renderedContent}
-    </BlogPostLayout>
+     <div className="container mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:py-12">
+      <div className="lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-16">
+        
+        <main className="lg:col-span-8">
+          <article>
+            <header className="mb-8">
+              {post.category && (
+                <p className="text-base font-semibold text-accent mb-2">{post.category}</p>
+              )}
+              <h1 className="font-headline text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                {post.title}
+              </h1>
+              <div className="mb-6 text-sm text-muted-foreground flex flex-wrap items-center gap-x-6 gap-y-2">
+                <div className="flex items-center">
+                  <CalendarDays className="mr-2 h-4 w-4" />
+                  <span>{t('publishedOn', { date: formatDate(post.date, params.locale) })}</span>
+                </div>
+                {post.author && (
+                  <div className="flex items-center">
+                    <UserCircle className="mr-2 h-4 w-4" />
+                    <span>{t('by', { author: post.author })}</span>
+                  </div>
+                )}
+              </div>
+              {encodedFeatureImageUrl && (
+                <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden shadow-lg border">
+                  <Image
+                    src={encodedFeatureImageUrl}
+                    alt={post.title}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 67vw, 850px"
+                    style={{ objectFit: 'cover' }}
+                    data-ai-hint={post.imageHint || 'blog post feature image'}
+                  />
+                </div>
+              )}
+            </header>
+
+            <div className="prose prose-lg max-w-none text-foreground prose-headings:scroll-mt-24 prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground prose-blockquote:border-accent">
+              {renderedContent}
+            </div>
+
+            <div className="mt-12 text-center">
+              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Link href="/blog">{t('backButton')}</Link>
+              </Button>
+            </div>
+          </article>
+        </main>
+        
+        <BlogPostClient post={post} headings={headings} locale={params.locale} />
+
+      </div>
+    </div>
   );
 }
