@@ -1,3 +1,4 @@
+
 import { Link } from '@/navigation';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -25,7 +26,7 @@ interface ServiceCategoryGridProps {
 
 export async function ServiceCategoryGrid({ aestheticCategories, dentalCategory, homePageLayout = false }: ServiceCategoryGridProps) {
   const tServices = await getTranslations('Services');
-  const tNav = useTranslations('Navigation');
+  const tNav = await getTranslations('Navigation');
   
   const renderCard = (category: ServiceCategory, className?: string) => {
     const CategoryIcon = category.icon ? ICONS[category.icon] : null;
