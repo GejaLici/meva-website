@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para eliminar el exceso de grasa mamaria, tejido glandular y piel para lograr un tamaño de seno en proporción con el cuerpo y para aliviar las molestias asociadas con los senos demasiado grandes.

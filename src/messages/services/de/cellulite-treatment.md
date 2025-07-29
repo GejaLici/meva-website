@@ -1,0 +1,1 @@
+Eine Vielzahl von Verfahren, die darauf abzielen, das Erscheinungsbild von Cellulite zu reduzieren, einschließlich Laserbehandlungen, Radiofrequenz und injizierbaren Mitteln.

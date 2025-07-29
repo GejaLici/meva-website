@@ -1,0 +1,1 @@
+Un procedimiento no quirúrgico que utiliza rellenos dérmicos para realzar y definir los pómulos, restaurando el volumen y creando una estructura facial más contorneada.

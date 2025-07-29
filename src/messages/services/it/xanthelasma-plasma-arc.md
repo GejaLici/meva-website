@@ -1,0 +1,1 @@
+Questo è un trattamento non chirurgico per rimuovere le macchie gialle di colesterolo che si trovano sulle palpebre. Utilizziamo un preciso dispositivo al plasma per eliminare delicatamente questi depositi, donandoti una pelle più liscia con tempi di recupero molto brevi.

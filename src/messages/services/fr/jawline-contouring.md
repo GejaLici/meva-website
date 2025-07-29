@@ -1,0 +1,1 @@
+Une technique non chirurgicale pour définir et sculpter la ligne de la mâchoire à l'aide de produits de comblement dermique ou de fils PDO, créant un profil plus net et plus jeune.

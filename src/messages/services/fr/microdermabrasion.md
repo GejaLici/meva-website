@@ -1,0 +1,1 @@
+Une procédure minimalement invasive qui renouvelle la peau en ponçant doucement la couche externe épaisse, traitant les dommages causés par le soleil, les rides et autres problèmes de peau.

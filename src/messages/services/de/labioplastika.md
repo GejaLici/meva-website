@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Umformung oder Verkleinerung der Schamlippen für mehr Komfort oder aus ästhetischen Gründen.

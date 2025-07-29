@@ -1,0 +1,1 @@
+The removal of a tooth from its alveolar socket in the jawbone.

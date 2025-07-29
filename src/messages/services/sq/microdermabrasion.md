@@ -1,0 +1,1 @@
+Një procedurë minimalisht invazive që rinovon lëkurën duke lëmuar butësisht shtresën e jashtme të trashë, duke trajtuar dëmtimet nga dielli, rrudhat dhe probleme të tjera të lëkurës.

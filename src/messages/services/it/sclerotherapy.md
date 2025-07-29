@@ -1,0 +1,1 @@
+Una procedura minimamente invasiva per trattare vene varicose e capillari, in cui una soluzione viene iniettata direttamente nella vena, facendola cicatrizzare, deviare il sangue e sbiadire.

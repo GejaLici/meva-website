@@ -1,0 +1,1 @@
+Sottili gusci di materiale composito del colore dei denti applicati sulla superficie anteriore dei denti per migliorarne l'aspetto.

@@ -1,0 +1,1 @@
+Pajisje ortodontike tradicionale të përdorura për të korrigjuar dhëmbët dhe nofullat e shtrembëruara.

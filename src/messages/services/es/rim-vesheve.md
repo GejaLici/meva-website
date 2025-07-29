@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para cambiar el tamaño, la forma o la posición de las orejas. Se realiza comúnmente para corregir orejas prominentes o para tratar orejas que han sido deformadas por una lesión.

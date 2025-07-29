@@ -1,0 +1,1 @@
+Une procédure non chirurgicale qui utilise des produits de comblement dermique pour améliorer et définir les pommettes, restaurer le volume et créer une structure faciale plus profilée.

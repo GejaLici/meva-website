@@ -1,0 +1,1 @@
+Dünne Schalen aus zahnfarbenem Kompositmaterial, die auf die Vorderseite der Zähne aufgetragen werden, um deren Aussehen zu verbessern.

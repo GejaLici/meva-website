@@ -1,0 +1,1 @@
+Injections d'acide hyaluronique ou d'autres produits de comblement pour combler les rides et ridules, restaurer le volume et lisser la texture de la peau pour une apparence rajeunie.

@@ -1,0 +1,1 @@
+Une procédure chirurgicale qui transfère la graisse d'autres parties du corps vers les fesses pour en améliorer la taille, la forme et le contour.

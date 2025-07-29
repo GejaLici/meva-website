@@ -1,0 +1,1 @@
+Un tratamiento no quirúrgico para la caída del cabello en el que se inyecta plasma rico en plaquetas de la sangre del paciente en el cuero cabelludo para estimular el crecimiento del cabello.

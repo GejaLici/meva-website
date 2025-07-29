@@ -1,0 +1,1 @@
+Una forma de liposucción que elimina el exceso de grasa y contornea el cuerpo para crear una forma más definida y esculpida.

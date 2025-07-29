@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour modifier la taille, la forme ou la position des oreilles. Elle est couramment pratiquée pour corriger les oreilles décollées ou pour traiter des oreilles déformées par une blessure.

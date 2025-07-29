@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të rimodeluar pjesën e poshtme të krahut të sipërm, nga zona e sqetullës deri në bërryl, duke hequr lëkurën dhe yndyrën e tepërt.

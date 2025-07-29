@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Reduzierung von vergrößertem Brustgewebe bei Männern durch Fettabsaugung und/oder Entfernung von überschüssigem Drüsengewebe.

@@ -1,0 +1,1 @@
+Nettoyage professionnel pour enlever la plaque et le tartre des dents afin de prévenir les caries et les maladies des gencives.

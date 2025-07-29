@@ -1,0 +1,1 @@
+Un traitement du visage qui infuse un mélange de vitamines, de minéraux et d'antioxydants directement dans la peau pour la nourrir, l'hydrater et la revitaliser, résultant en un teint plus éclatant.

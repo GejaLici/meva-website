@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të ndryshuar madhësinë, formën ose pozicionin e veshëve. Zakonisht kryhet për të korrigjuar veshët e dalë ose për të trajtuar veshët që janë deformuar nga lëndimi.

@@ -1,0 +1,1 @@
+Matériaux utilisés pour obturer et restaurer les dents endommagées par la carie, prévenant ainsi d'autres dommages.

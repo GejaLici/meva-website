@@ -1,0 +1,1 @@
+Un procedimiento mínimamente invasivo que renueva la piel lijando suavemente la capa externa gruesa, tratando el daño solar, las arrugas y otros problemas de la piel.

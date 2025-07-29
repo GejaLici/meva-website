@@ -1,0 +1,1 @@
+Similar to a hair transplant, this procedure involves transplanting hair follicles to the beard area to increase density, fill in patchy areas, or reshape the beard.

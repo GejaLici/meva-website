@@ -1,0 +1,1 @@
+Una serie de alineadores transparentes y hechos a medida que enderezan gradualmente los dientes con el tiempo, sirviendo como una alternativa a los brackets tradicionales.

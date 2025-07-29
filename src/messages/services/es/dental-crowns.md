@@ -1,0 +1,1 @@
+Fundas que se colocan sobre un diente para restaurar su forma, tamaño, resistencia y apariencia.

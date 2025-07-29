@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para remodelar o reducir el tamaño de los labios vaginales para mayor comodidad o por razones estéticas.

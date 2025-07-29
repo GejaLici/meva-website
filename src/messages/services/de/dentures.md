@@ -1,0 +1,1 @@
+Herausnehmbarer Zahnersatz für fehlende Zähne und umliegendes Gewebe.

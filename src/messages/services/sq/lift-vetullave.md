@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të ngritur vetullat e rëna dhe për të përmirësuar pamjen e rrudhave në ballë dhe midis syve, duke rezultuar në një pamje më rinore dhe të pushuar.

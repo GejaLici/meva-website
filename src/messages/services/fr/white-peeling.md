@@ -1,0 +1,1 @@
+Un traitement de resurfaçage de la peau qui applique une solution chimique sur la peau pour l'exfolier et éventuellement la faire peler, révélant une peau plus lisse et moins ridée.

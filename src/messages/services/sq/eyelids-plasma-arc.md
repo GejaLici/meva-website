@@ -1,0 +1,1 @@
+Një trajtim jo-invaziv që përdor energjinë e plazmës për të ngritur dhe shtrënguar lëkurën në qepalla, duke reduktuar pamjen e lëkurës së varur dhe rrudhave pa kirurgji.

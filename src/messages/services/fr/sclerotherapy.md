@@ -1,0 +1,1 @@
+Une procédure minimalement invasive pour traiter les varices et les varicosités, où une solution est injectée directement dans la veine, la faisant cicatriser, dérouter le sang et s'estomper.

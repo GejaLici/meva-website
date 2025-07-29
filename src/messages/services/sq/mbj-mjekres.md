@@ -1,0 +1,1 @@
+Ngjashëm me një transplant flokësh, kjo procedurë përfshin transplantimin e folikulave të flokëve në zonën e mjekrës për të rritur dendësinë, për të mbushur zonat e rralla ose për të rimodeluar mjekrën.

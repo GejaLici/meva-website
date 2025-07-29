@@ -1,0 +1,1 @@
+A surgical procedure that transfers fat from other parts of the body to the buttocks to enhance their size, shape, and contour.

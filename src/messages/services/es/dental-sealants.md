@@ -1,0 +1,1 @@
+Finas capas protectoras que se aplican a las superficies de masticación de los dientes posteriores para prevenir las caries.

@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour remonter et remodeler les seins en retirant l'excès de peau et en resserrant les tissus environnants pour restaurer un profil mammaire plus jeune.

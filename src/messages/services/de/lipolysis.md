@@ -1,0 +1,1 @@
+Ein nicht-chirurgisches Verfahren, das Injektionen, Laser oder Ultraschall verwendet, um Fettzellen in gezielten Bereichen aufzulösen und zu entfernen.

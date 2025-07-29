@@ -1,0 +1,1 @@
+Una variedad de procedimientos destinados a reducir la apariencia de la celulitis, incluyendo tratamientos con láser, radiofrecuencia e inyectables.

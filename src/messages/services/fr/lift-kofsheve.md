@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour remodeler les cuisses en réduisant l'excès de peau et de graisse, résultant en une peau plus lisse et des contours mieux proportionnés.

@@ -1,0 +1,1 @@
+Una procedura che utilizza filler iniettabili per rimodellare e aumentare il mento, migliorando l'equilibrio del viso e creando un profilo del mento più forte senza intervento chirurgico.

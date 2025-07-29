@@ -1,0 +1,1 @@
+Un trattamento non invasivo che utilizza l'energia del plasma per sollevare e rassodare la pelle delle palpebre, riducendo l'aspetto della pelle cadente e delle rughe senza intervento chirurgico.

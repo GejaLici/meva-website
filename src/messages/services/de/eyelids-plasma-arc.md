@@ -1,0 +1,1 @@
+Eine nicht-invasive Behandlung, die Plasmaenergie verwendet, um die Haut an den Augenlidern zu straffen und anzuheben, wodurch das Erscheinungsbild von schlaffer Haut und Falten ohne Operation reduziert wird.

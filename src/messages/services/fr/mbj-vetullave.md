@@ -1,0 +1,1 @@
+Une procédure où des follicules pileux sont transplantés sur les sourcils pour créer des sourcils plus fournis et plus définis, souvent pour ceux qui ont des sourcils naturellement fins ou une perte de cheveux.

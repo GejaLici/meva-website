@@ -1,0 +1,1 @@
+Una forma di liposuzione che rimuove il grasso in eccesso e modella il corpo per creare una forma più definita e scolpita.

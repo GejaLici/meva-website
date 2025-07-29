@@ -1,0 +1,1 @@
+Një seri alignerësh transparentë dhe të personalizuar që drejtojnë gradualisht dhëmbët me kalimin e kohës, duke shërbyer si një alternativë ndaj telave tradicionale.

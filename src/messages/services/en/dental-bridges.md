@@ -1,0 +1,1 @@
+Fixed dental restorations that bridge the gap created by one or more missing teeth.

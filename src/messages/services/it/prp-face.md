@@ -1,0 +1,1 @@
+Una procedura che utilizza il plasma ricco di piastrine (PRP) del tuo stesso sangue, che viene iniettato nella pelle per stimolare la produzione di collagene e migliorare la texture e l'elasticità della pelle.

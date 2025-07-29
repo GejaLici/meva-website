@@ -1,0 +1,1 @@
+Pastrim profesional për të hequr pllakën dhe gurëzat nga dhëmbët për të parandaluar kariesin dhe sëmundjet e mishrave të dhëmbëve.

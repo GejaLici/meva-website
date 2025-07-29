@@ -1,0 +1,1 @@
+Una procedura che utilizza aghi sottili per creare piccole punture nella pelle, stimolando la produzione di collagene ed elastina per migliorare la texture della pelle e ridurre l'aspetto di cicatrici e rughe.

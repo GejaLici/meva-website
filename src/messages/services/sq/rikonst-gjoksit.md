@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të rivendosur formën, pamjen dhe madhësinë e gjirit pas një mastektomie ose lumpektomie.

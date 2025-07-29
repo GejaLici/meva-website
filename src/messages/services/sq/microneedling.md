@@ -1,0 +1,1 @@
+Një procedurë që përdor gjilpëra të holla për të krijuar shpime të vogla në lëkurë, duke stimuluar prodhimin e kolagjenit dhe elastinës për të përmirësuar teksturën e lëkurës dhe për të zvogëluar pamjen e shenjave dhe rrudhave.

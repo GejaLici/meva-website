@@ -1,0 +1,1 @@
+Eine nicht-chirurgische Technik zur Definition und Formung der Kieferlinie unter Verwendung von Hautfüllern oder PDO-Fäden, um ein schärferes, jugendlicheres Profil zu schaffen.

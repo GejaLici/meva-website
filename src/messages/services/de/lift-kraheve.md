@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Umformung der Unterarme, von der Achselhöhle bis zum Ellbogen, durch Entfernung von überschüssiger Haut und Fett.

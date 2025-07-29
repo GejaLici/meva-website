@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Umformung der Oberschenkel durch Reduzierung von überschüssiger Haut und Fett, was zu glatterer Haut und besser proportionierten Konturen führt.

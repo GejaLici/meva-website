@@ -1,0 +1,1 @@
+A surgical procedure to reduce enlarged breast tissue in men, performed through liposuction and/or excision of excess glandular tissue.

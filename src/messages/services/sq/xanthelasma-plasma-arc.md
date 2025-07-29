@@ -1,0 +1,1 @@
+Ky është një trajtim jo-kirurgjikal për të hequr njollat e verdha të kolesterolit që gjenden në qepalla. Ne përdorim një pajisje plazme të saktë për të pastruar butësisht këto depozita, duke ju dhënë një lëkurë më të lëmuar me shumë pak kohë rikuperimi.

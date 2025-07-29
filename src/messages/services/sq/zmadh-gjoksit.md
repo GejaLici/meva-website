@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të rritur madhësinë e gjirit përmes vendosjes së implanteve të gjirit nën indin e gjirit ose muskujt.

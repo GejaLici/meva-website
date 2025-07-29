@@ -1,0 +1,1 @@
+Eine nicht-chirurgische Behandlung von Haarausfall, bei der plättchenreiches Plasma aus dem Blut des Patienten in die Kopfhaut injiziert wird, um das Haarwachstum anzuregen.

@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të zvogëluar indin e gjirit të zmadhuar te meshkujt, e kryer përmes liposucionit dhe/ose heqjes së indit të tepërt gjëndror.

@@ -1,0 +1,1 @@
+Un procedimiento cosmético que utiliza un haz de luz concentrado para eliminar el vello no deseado de varias partes del cuerpo.

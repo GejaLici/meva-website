@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para mejorar los signos visibles del envejecimiento en la cara y el cuello, como la flacidez, los pliegues profundos y la piel suelta.

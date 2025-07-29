@@ -1,0 +1,1 @@
+Ein kosmetisches Zahnverfahren, das die Zähne aufhellt und Verfärbungen und Flecken entfernt, um ein helleres, weißeres Lächeln zu erzielen.

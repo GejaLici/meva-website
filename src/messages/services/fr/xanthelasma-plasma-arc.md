@@ -1,0 +1,1 @@
+Ceci est un traitement non chirurgical pour enlever les taches de cholestérol jaunes trouvées sur les paupières. Nous utilisons un appareil à plasma précis pour éliminer en douceur ces dépôts, vous donnant une peau plus lisse avec très peu de temps de récupération.

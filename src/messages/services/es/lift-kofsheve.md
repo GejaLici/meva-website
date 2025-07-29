@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para remodelar los muslos reduciendo el exceso de piel y grasa, lo que resulta en una piel más suave y contornos mejor proporcionados.

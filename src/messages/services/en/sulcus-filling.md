@@ -1,0 +1,1 @@
+A non-surgical procedure where dermal fillers are injected into the creases that run from the sides of the nose to the corners of the mouth, softening their appearance.

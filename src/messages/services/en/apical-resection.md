@@ -1,0 +1,1 @@
+A surgical procedure to remove the tip of a tooth's root and the surrounding infected tissue.

@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të hequr lëkurën dhe yndyrën e tepërt nga barku, duke krijuar një profil barku më të lëmuar dhe më të fortë.

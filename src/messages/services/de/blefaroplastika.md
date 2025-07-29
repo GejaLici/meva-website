@@ -1,0 +1,1 @@
+Eine Operation zur Verbesserung des Aussehens der Augenlider. Sie kann an den Oberlidern, den Unterlidern oder beiden durchgeführt werden, um schlaffe Haut, überschüssiges Fett oder Tränensäcke zu entfernen.

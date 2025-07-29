@@ -1,0 +1,1 @@
+Një teknikë kirurgjikale që lëviz folikulat e flokëve nga një pjesë e trupit (zona dhuruese) në një pjesë tullace ose me rënie flokësh të trupit (zona marrëse). Përdoret kryesisht për të trajtuar rënien e flokëve te meshkujt.

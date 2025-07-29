@@ -1,0 +1,1 @@
+Un tratamiento no invasivo que utiliza energía de plasma para levantar y tensar la piel de los párpados, reduciendo la apariencia de piel flácida y arrugas sin cirugía.

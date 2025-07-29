@@ -1,0 +1,1 @@
+Die Entfernung eines Zahnes aus seinem Alveolarknochen im Kieferknochen.

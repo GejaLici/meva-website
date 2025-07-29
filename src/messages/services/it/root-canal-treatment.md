@@ -1,0 +1,1 @@
+Una procedura odontoiatrica per rimuovere la polpa infetta dall'interno di un dente per salvarlo e alleviare il dolore.

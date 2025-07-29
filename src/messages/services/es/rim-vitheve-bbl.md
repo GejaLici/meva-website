@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico que transfiere grasa de otras partes del cuerpo a los glúteos para mejorar su tamaño, forma y contorno.

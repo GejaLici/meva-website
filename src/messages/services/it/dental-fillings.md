@@ -1,0 +1,1 @@
+Materiali utilizzati per riempire e ripristinare i denti danneggiati dalla carie, prevenendo ulteriori danni.

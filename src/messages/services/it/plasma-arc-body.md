@@ -1,0 +1,1 @@
+Un trattamento non invasivo che utilizza l'energia del plasma per rassodare la pelle lassa su varie parti del corpo, migliorando l'aspetto di rughe e rilassamento cutaneo.

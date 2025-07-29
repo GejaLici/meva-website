@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të hequr majën e rrënjës së një dhëmbi dhe indin e infektuar përreth.

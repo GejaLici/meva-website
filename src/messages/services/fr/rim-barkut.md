@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour enlever l'excès de peau et de graisse de l'abdomen, créant un profil abdominal plus lisse et plus ferme.

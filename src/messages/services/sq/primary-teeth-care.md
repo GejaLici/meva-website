@@ -1,0 +1,1 @@
+Kujdes i specializuar dentar për fëmijët, i fokusuar në ruajtjen e shëndetit të dhëmbëve të qumështit për të siguruar zhvillimin e duhur të dhëmbëve të përhershëm.

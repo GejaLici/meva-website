@@ -1,0 +1,1 @@
+Eine Gesichtsbehandlung, bei der eine Mischung aus Vitaminen, Mineralien und Antioxidantien direkt in die Haut infundiert wird, um sie zu nähren, mit Feuchtigkeit zu versorgen und zu revitalisieren, was zu einem strahlenderen Teint führt.

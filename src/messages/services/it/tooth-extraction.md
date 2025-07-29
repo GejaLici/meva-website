@@ -1,0 +1,1 @@
+La rimozione di un dente dal suo alveolo nell'osso mascellare.

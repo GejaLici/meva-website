@@ -1,0 +1,1 @@
+Një procedurë jo-kirurgjikale që përdor mbushës dermalë për të përmirësuar dhe definuar mollëzat, duke rikthyer volumin dhe duke krijuar një strukturë fytyre më të konturuar.

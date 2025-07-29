@@ -1,0 +1,1 @@
+Une procédure cosmétique pour améliorer l'apparence des lèvres en augmentant leur volume, leur forme, leur structure ou leur symétrie, souvent à l'aide de produits de comblement dermique.

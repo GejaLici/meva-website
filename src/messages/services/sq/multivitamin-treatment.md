@@ -1,0 +1,1 @@
+Një trajtim fytyre që injekton një përzierje vitaminash, mineralesh dhe antioksidantësh direkt në lëkurë për ta ushqyer, hidratuar dhe rigjallëruar atë, duke rezultuar në një çehre më rrezatuese.

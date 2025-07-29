@@ -1,0 +1,1 @@
+A non-surgical method of skin tightening that uses energy to heat the deeper layers of skin, stimulating collagen production and improving skin firmness and texture.

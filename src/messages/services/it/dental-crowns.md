@@ -1,0 +1,1 @@
+Capsule posizionate su un dente per ripristinarne forma, dimensioni, resistenza e aspetto.

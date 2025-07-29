@@ -1,0 +1,1 @@
+A cosmetic procedure to improve the appearance of the lips by increasing their fullness, shape, structure, or symmetry, often using dermal fillers.

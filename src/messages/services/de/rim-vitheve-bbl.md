@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff, der Fett von anderen Körperteilen auf das Gesäß überträgt, um dessen Größe, Form und Kontur zu verbessern.

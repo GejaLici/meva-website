@@ -1,0 +1,1 @@
+Hochwertige, langlebige Keramikverblendungen, die für ihre Stärke und ihr natürliches Aussehen bekannt sind und das Lächeln verändern.

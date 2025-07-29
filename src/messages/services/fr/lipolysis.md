@@ -1,0 +1,1 @@
+Une procédure non chirurgicale qui utilise des injections, des lasers ou des ultrasons pour décomposer et éliminer les cellules graisseuses dans des zones ciblées.

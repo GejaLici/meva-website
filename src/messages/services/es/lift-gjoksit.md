@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para levantar y remodelar los senos eliminando el exceso de piel y tensando el tejido circundante para restaurar un perfil mamario más juvenil.

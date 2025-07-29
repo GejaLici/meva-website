@@ -1,0 +1,1 @@
+Una tecnica chirurgica che sposta i follicoli piliferi da una parte del corpo (il sito donatore) a una parte calva o diradata del corpo (il sito ricevente). Viene utilizzata principalmente per trattare la calvizie maschile.

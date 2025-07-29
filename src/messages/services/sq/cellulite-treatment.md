@@ -1,0 +1,1 @@
+Një sërë procedurash që synojnë të zvogëlojnë pamjen e celulitit, duke përfshirë trajtimet me lazer, radiofrekuencën dhe injeksionet.

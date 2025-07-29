@@ -1,0 +1,1 @@
+Una procedura minimamente invasiva che rinnova la pelle levigando delicatamente lo strato esterno spesso, trattando i danni del sole, le rughe e altri problemi della pelle.

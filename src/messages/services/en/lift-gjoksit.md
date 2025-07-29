@@ -1,0 +1,1 @@
+A surgical procedure to raise and reshape the breasts by removing excess skin and tightening the surrounding tissue to restore a more youthful breast profile.

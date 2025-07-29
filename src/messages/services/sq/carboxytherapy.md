@@ -1,0 +1,1 @@
+Përdorimi terapeutik i gazit të dioksidit të karbonit për të përmirësuar elasticitetin e lëkurës, për të zvogëluar celulitin dhe strijat, dhe për të përmirësuar qarkullimin.

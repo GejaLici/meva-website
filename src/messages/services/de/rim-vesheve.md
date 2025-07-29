@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Veränderung der Größe, Form oder Position der Ohren. Er wird häufig durchgeführt, um abstehende Ohren zu korrigieren oder um Ohren zu behandeln, die durch eine Verletzung deformiert wurden.

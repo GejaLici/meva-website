@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para eliminar la punta de la raíz de un diente y el tejido infectado circundante.

@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Entfernung von überschüssiger Haut und Fett vom Bauch, um einen glatteren, strafferen Bauchbereich zu schaffen.

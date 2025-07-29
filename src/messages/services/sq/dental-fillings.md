@@ -1,0 +1,1 @@
+Materiale të përdorura për të mbushur dhe restauruar dhëmbët e dëmtuar nga kariesi, duke parandaluar dëmtimin e mëtejshëm.

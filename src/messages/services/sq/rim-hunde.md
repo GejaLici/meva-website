@@ -1,0 +1,1 @@
+Një procedurë e fokusuar që përsos specifikisht formën, madhësinë ose projeksionin e majës së hundës, shpesh me më pak kohë rikuperimi se një rinoplastikë e plotë.

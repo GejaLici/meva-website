@@ -1,0 +1,1 @@
+Una procedura chirurgica per rimodellare la parte inferiore del braccio, dalla regione ascellare al gomito, rimuovendo la pelle e il grasso in eccesso.

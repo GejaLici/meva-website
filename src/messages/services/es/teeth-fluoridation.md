@@ -1,0 +1,1 @@
+La aplicación de flúor a los dientes para fortalecer el esmalte y prevenir la caries dental.

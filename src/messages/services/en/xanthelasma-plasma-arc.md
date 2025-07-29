@@ -1,0 +1,1 @@
+This is a non-surgical treatment to remove yellow cholesterol spots found on the eyelids. We use a precise plasma device to gently clear these deposits, giving you smoother skin with very little recovery time.

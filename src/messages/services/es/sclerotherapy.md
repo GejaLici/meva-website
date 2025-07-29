@@ -1,0 +1,1 @@
+Un procedimiento mínimamente invasivo para tratar las venas varicosas y arañas vasculares, donde se inyecta una solución directamente en la vena, lo que hace que cicatrice, desvíe la sangre y se desvanezca.

@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të rimodeluar hundën për përmirësimin e pamjes dhe/ose funksionit. Mund të ndryshojë madhësinë ose formën e hundës, të rregullojë këndin midis hundës dhe buzës së sipërme, ose të korrigjojë problemet e frymëmarrjes.

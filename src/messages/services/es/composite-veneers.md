@@ -1,0 +1,1 @@
+Finas láminas de material compuesto del color del diente que se aplican a la superficie frontal de los dientes para mejorar su apariencia.

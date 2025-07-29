@@ -1,0 +1,1 @@
+Një procedurë jo-kirurgjikale ku mbushësit dermalë injektohen në rrudhat që shkojnë nga anët e hundës në cepat e gojës, duke zbutur pamjen e tyre.

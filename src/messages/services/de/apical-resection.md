@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Entfernung der Spitze der Zahnwurzel und des umgebenden infizierten Gewebes.

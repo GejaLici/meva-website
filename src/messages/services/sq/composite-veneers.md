@@ -1,0 +1,1 @@
+Mbulesa të holla prej materiali kompozit me ngjyrën e dhëmbit që aplikohen në sipërfaqen e përparme të dhëmbëve për të përmirësuar pamjen e tyre.

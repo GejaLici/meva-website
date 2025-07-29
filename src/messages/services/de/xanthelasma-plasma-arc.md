@@ -1,0 +1,1 @@
+Dies ist eine nicht-chirurgische Behandlung zur Entfernung von gelben Cholesterinflecken auf den Augenlidern. Wir verwenden ein präzises Plasmagerät, um diese Ablagerungen sanft zu entfernen, was Ihnen eine glattere Haut mit sehr geringer Erholungszeit beschert.

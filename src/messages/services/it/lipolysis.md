@@ -1,0 +1,1 @@
+Una procedura non chirurgica che utilizza iniezioni, laser o ultrasuoni per rompere e rimuovere le cellule di grasso in aree mirate.

@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Anhebung und Umformung der Brüste durch Entfernung überschüssiger Haut und Straffung des umgebenden Gewebes, um ein jugendlicheres Brustprofil wiederherzustellen.

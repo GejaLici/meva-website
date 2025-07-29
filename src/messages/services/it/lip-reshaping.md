@@ -1,0 +1,1 @@
+Una procedura estetica per migliorare l'aspetto delle labbra aumentandone la pienezza, la forma, la struttura o la simmetria, spesso utilizzando filler dermici.

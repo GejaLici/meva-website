@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të hequr yndyrën e tepërt të gjirit, indin gjëndror dhe lëkurën për të arritur një madhësi gjiri në përpjesëtim me trupin dhe për të lehtësuar shqetësimin e lidhur me gjinjtë tepër të mëdhenj.

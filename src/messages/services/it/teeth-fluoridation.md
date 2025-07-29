@@ -1,0 +1,1 @@
+L'applicazione di fluoro sui denti per rafforzare lo smalto e prevenire la carie.

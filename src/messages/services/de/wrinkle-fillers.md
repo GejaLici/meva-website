@@ -1,0 +1,1 @@
+Injektionen von Hyaluronsäure oder anderen Füllstoffen zur Auffüllung von Falten und Fältchen, zur Wiederherstellung von Volumen und zur Glättung des Hautbildes für ein verjüngtes Aussehen.

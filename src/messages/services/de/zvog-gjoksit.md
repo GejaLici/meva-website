@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff zur Entfernung von überschüssigem Brustfett, Drüsengewebe und Haut, um eine Brustgröße zu erreichen, die proportional zum Körper ist, und um die mit übermäßig großen Brüsten verbundenen Beschwerden zu lindern.

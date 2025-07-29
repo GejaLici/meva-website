@@ -1,0 +1,1 @@
+Facettes en céramique de haute qualité et durables, connues pour leur résistance et leur aspect naturel, utilisées pour transformer les sourires.

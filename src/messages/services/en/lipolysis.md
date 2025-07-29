@@ -1,0 +1,1 @@
+A non-surgical procedure that uses injections, lasers, or ultrasound to break down and remove fat cells in targeted areas.

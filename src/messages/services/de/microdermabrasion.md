@@ -1,0 +1,1 @@
+Ein minimal-invasives Verfahren, das die Haut durch sanftes Abschleifen der dicken äußeren Schicht erneuert, um Sonnenschäden, Falten und andere Hautprobleme zu behandeln.

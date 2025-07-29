@@ -1,0 +1,1 @@
+Eine nicht-invasive Behandlung, die Plasmaenergie verwendet, um lose Haut an verschiedenen Körperteilen zu straffen und das Erscheinungsbild von Falten und schlaffer Haut zu verbessern.

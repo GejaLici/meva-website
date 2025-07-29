@@ -1,0 +1,1 @@
+Ähnlich wie eine Haartransplantation, beinhaltet dieser Eingriff die Transplantation von Haarfollikeln in den Bartbereich, um die Dichte zu erhöhen, kahle Stellen aufzufüllen oder den Bart neu zu formen.

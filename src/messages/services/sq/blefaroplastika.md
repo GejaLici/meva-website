@@ -1,0 +1,1 @@
+Kirurgji për të përmirësuar pamjen e qepallave. Mund të kryhet në qepallat e sipërme, të poshtme ose të dyja për të hequr lëkurën e varur, yndyrën e tepërt ose qeset.

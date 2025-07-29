@@ -1,0 +1,1 @@
+Una varietà di procedure volte a ridurre l'aspetto della cellulite, inclusi trattamenti laser, radiofrequenza e iniettabili.

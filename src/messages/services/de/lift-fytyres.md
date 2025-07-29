@@ -1,0 +1,1 @@
+Ein chirurgischer Eingriff, um die sichtbaren Zeichen des Alterns im Gesicht und am Hals, wie Erschlaffung, tiefe Falten und lose Haut, zu verbessern.

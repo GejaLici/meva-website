@@ -1,0 +1,1 @@
+Une procédure qui utilise des produits de comblement injectables pour remodeler et augmenter le menton, améliorant l'équilibre du visage et créant un profil de menton plus fort sans chirurgie.

@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale që transferon yndyrë nga pjesë të tjera të trupit në vithe për të përmirësuar madhësinë, formën dhe konturin e tyre.

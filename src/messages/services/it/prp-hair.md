@@ -1,0 +1,1 @@
+Un trattamento non chirurgico per la caduta dei capelli in cui il plasma ricco di piastrine del sangue del paziente viene iniettato nel cuoio capelluto per stimolare la crescita dei capelli.

@@ -1,0 +1,1 @@
+Kieferorthopädische Geräte, die der Patient zur Korrektur von Zahnproblemen einsetzen und herausnehmen kann.

@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të rimodeluar ose zvogëluar madhësinë e labiave për rehati më të madhe ose për arsye estetike.

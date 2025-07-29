@@ -1,0 +1,1 @@
+Appareils orthodontiques traditionnels utilisés pour corriger les dents et les mâchoires mal alignées.

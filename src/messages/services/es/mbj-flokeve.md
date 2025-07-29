@@ -1,0 +1,1 @@
+Una técnica quirúrgica que mueve los folículos pilosos de una parte del cuerpo (el sitio donante) a una parte calva o con calvicie del cuerpo (el sitio receptor). Se utiliza principalmente para tratar la calvicie de patrón masculino.

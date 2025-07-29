@@ -1,0 +1,1 @@
+A non-surgical treatment for hair loss where platelet-rich plasma from the patient's blood is injected into the scalp to stimulate hair growth.

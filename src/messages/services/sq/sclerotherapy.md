@@ -1,0 +1,1 @@
+Një procedurë minimalisht invazive për të trajtuar venat me variçe dhe venat merimangë, ku një solucion injektohet direkt në venë, duke bërë që ajo të mblidhet, të ridrejtojë gjakun dhe të zbehet.

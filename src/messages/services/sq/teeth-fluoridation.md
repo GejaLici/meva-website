@@ -1,0 +1,1 @@
+Aplikimi i fluorit në dhëmbë për të forcuar smaltin dhe për të parandaluar prishjen e dhëmbëve.

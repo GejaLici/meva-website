@@ -1,0 +1,1 @@
+A non-surgical procedure that uses dermal fillers to enhance and define the cheekbones, restoring volume and creating a more contoured facial structure.

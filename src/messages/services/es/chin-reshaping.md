@@ -1,0 +1,1 @@
+Un procedimiento que utiliza rellenos inyectables para remodelar y aumentar el mentón, mejorando el equilibrio facial y creando un perfil de mentón más fuerte sin cirugía.

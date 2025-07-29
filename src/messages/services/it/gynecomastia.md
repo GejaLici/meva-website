@@ -1,0 +1,1 @@
+Una procedura chirurgica per ridurre il tessuto mammario ingrossato negli uomini, eseguita tramite liposuzione e/o escissione del tessuto ghiandolare in eccesso.

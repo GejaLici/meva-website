@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour remodeler la partie inférieure du bras, de la région des aisselles au coude, en retirant l'excès de peau et de graisse.

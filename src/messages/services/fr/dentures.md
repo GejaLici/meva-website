@@ -1,0 +1,1 @@
+Remplacements amovibles pour les dents manquantes et les tissus environnants.

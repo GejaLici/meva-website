@@ -1,0 +1,1 @@
+Un procedimiento en el que se trasplantan folículos pilosos a las cejas para crear cejas más llenas y definidas, a menudo para aquellos con cejas naturalmente delgadas o pérdida de cabello.

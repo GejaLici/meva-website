@@ -1,0 +1,1 @@
+Festsitzender Zahnersatz, der eine Lücke von einem oder mehreren fehlenden Zähnen schließt.
