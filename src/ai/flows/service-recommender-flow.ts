@@ -12,7 +12,7 @@ import { ai } from '@/ai/genkit';
 import { z } from 'zod';
 import { serviceCategories } from '@/lib/services';
 import { stripHtml } from '@/lib/utils';
-import enMessages from '../../../messages/en.json';
+import enMessages from '@/messages/en.json';
 
 // --- Data Preparation ---
 // Create a detailed list of all services with English names and descriptions for the AI prompt.
@@ -27,7 +27,7 @@ const allServicesWithDetails = serviceCategories.flatMap(category =>
       categoryId: category.id,
       categorySlug: category.slug,
       name: serviceTranslations?.name || service.id,
-      description: stripHtml(serviceTranslations?.description || '')
+      description: stripHtml(tServices(`items.${service.id}.description`) || '')
     };
   })
 );
