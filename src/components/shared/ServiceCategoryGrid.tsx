@@ -71,20 +71,18 @@ export async function ServiceCategoryGrid({ aestheticCategories, dentalCategory,
   };
   
   if (homePageLayout) {
+    const topRowCategories = aestheticCategories.slice(0, 3);
+    const bottomRowCategories = [aestheticCategories[3], dentalCategory].filter(Boolean) as ServiceCategory[];
+    
     return (
-      <div className="space-y-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-4xl lg:mx-auto">
-          {aestheticCategories.map((category) => renderCard(category))}
+      <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {topRowCategories.map((category) => renderCard(category))}
         </div>
-        {dentalCategory && (
-          <>
-            <Separator className="my-8" />
-            <div className="flex justify-center">
-              <div className="w-full md:w-2/3 lg:w-1/2">
-                {renderCard(dentalCategory)}
-              </div>
-            </div>
-          </>
+        {bottomRowCategories.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-4xl lg:mx-auto">
+             {bottomRowCategories.map((category) => renderCard(category))}
+          </div>
         )}
       </div>
     );
