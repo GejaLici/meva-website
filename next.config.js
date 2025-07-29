@@ -13,15 +13,20 @@ const nextConfig = {
       },
     ],
   },
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.md$/,
       use: 'raw-loader',
     });
+
+    // Add watchOptions to ignore the .genkit directory
+    if (!isServer) {
+        config.watchOptions = {
+            ignored: ['**/.genkit/**'],
+        };
+    }
+
     return config;
-  },
-  watchOptions: {
-    ignored: ['**/.genkit/**'],
   },
 };
 
