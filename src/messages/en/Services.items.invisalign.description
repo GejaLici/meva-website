@@ -1,0 +1,1 @@
+A series of clear, custom-made aligners that gradually straighten teeth over time, serving as an alternative to traditional braces.

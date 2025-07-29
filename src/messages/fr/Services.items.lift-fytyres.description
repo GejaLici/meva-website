@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour améliorer les signes visibles du vieillissement du visage et du cou, tels que l'affaissement, les plis profonds et la peau lâche.

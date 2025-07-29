@@ -1,0 +1,1 @@
+Limpieza profesional para eliminar la placa y el sarro de los dientes para prevenir caries y enfermedades de las encías.

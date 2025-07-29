@@ -1,0 +1,1 @@
+Una procedura estetica che utilizza un raggio di luce concentrato per rimuovere i peli superflui da varie parti del corpo.

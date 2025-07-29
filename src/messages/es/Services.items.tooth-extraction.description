@@ -1,0 +1,1 @@
+La extracción de un diente de su alvéolo en el hueso maxilar.

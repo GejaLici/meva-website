@@ -1,0 +1,1 @@
+Kapele të vendosura mbi një dhëmb për të rivendosur formën, madhësinë, forcën dhe pamjen e tij.

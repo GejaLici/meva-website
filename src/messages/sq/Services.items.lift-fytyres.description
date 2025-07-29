@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të përmirësuar shenjat e dukshme të plakjes në fytyrë dhe qafë, si lëshimi i lëkurës, rrudhat e thella dhe lëkura e lirshme.

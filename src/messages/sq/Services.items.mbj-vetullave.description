@@ -1,0 +1,1 @@
+Një procedurë ku folikulat e flokëve transplantohen në vetulla për të krijuar vetulla më të plota dhe më të definuara, shpesh për ata me vetulla natyrale të holla ose me rënie flokësh.

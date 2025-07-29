@@ -1,0 +1,1 @@
+Një procedurë që përdor mbushës të injektueshëm për të rimodeluar dhe zmadhuar mjekrën, duke përmirësuar ekuilibrin e fytyrës dhe duke krijuar një profil më të fortë të mjekrës pa kirurgji.

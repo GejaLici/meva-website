@@ -1,0 +1,1 @@
+Similar a un trasplante de cabello, este procedimiento implica el trasplante de folículos pilosos a la zona de la barba para aumentar la densidad, rellenar zonas despobladas o remodelar la barba.

@@ -1,0 +1,1 @@
+A dental procedure to remove the infected pulp from inside a tooth to save it and relieve pain.

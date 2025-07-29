@@ -1,0 +1,1 @@
+Une procédure non chirurgicale où des produits de comblement dermique sont injectés dans les plis qui vont des côtés du nez aux coins de la bouche, adoucissant leur apparence.

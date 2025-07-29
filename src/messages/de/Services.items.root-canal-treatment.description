@@ -1,0 +1,1 @@
+Ein zahnärztlicher Eingriff zur Entfernung der infizierten Pulpa aus dem Inneren eines Zahns, um ihn zu retten und Schmerzen zu lindern.

@@ -1,0 +1,1 @@
+Professionelle Reinigung zur Entfernung von Plaque und Zahnstein von den Zähnen, um Karies und Zahnfleischerkrankungen vorzubeugen.

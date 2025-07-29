@@ -1,0 +1,1 @@
+Caps placed over a tooth to restore its shape, size, strength, and appearance.

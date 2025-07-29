@@ -1,0 +1,1 @@
+Dünne Schutzschichten, die auf die Kauflächen der Backenzähne aufgetragen werden, um Karies zu verhindern.

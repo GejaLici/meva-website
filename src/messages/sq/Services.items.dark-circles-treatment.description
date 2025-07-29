@@ -1,0 +1,1 @@
+Një sërë trajtimesh që synojnë të zvogëlojnë pamjen e rrathëve të zinj poshtë syve, duke përfshirë mbushësit, terapinë me lazer ose trajtimet topike, në varësi të shkakut themelor.

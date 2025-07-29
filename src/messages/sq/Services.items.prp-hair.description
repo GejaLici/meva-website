@@ -1,0 +1,1 @@
+Një trajtim jo-kirurgjikal për rënien e flokëve ku plazma e pasur me trombocite nga gjaku i pacientit injektohet në lëkurën e kokës për të stimuluar rritjen e flokëve.

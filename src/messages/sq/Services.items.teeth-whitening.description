@@ -1,0 +1,1 @@
+Një procedurë dentare kozmetike që zbardh dhëmbët dhe ndihmon në heqjen e njollave dhe çngjyrosjeve, duke krijuar një buzëqeshje më të ndritshme dhe më të bardhë.

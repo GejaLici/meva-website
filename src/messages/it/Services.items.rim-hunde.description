@@ -1,0 +1,1 @@
+Una procedura mirata che affina specificamente la forma, le dimensioni o la proiezione della punta nasale, spesso con tempi di recupero inferiori rispetto a una rinoplastica completa.

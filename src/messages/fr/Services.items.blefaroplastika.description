@@ -1,0 +1,1 @@
+Chirurgie pour améliorer l'apparence des paupières. Elle peut être pratiquée sur les paupières supérieures, inférieures ou les deux pour enlever la peau affaissée, l'excès de graisse ou les poches.

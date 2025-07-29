@@ -1,0 +1,1 @@
+The application of fluoride to teeth to strengthen enamel and prevent tooth decay.

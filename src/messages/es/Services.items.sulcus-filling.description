@@ -1,0 +1,1 @@
+Un procedimiento no quirúrgico en el que se inyectan rellenos dérmicos en los pliegues que van desde los lados de la nariz hasta las comisuras de la boca, suavizando su apariencia.

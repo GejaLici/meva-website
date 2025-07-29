@@ -1,0 +1,1 @@
+Inyecciones de ácido hialurónico u otros rellenos para rellenar arrugas y líneas finas, restaurando el volumen y suavizando la textura de la piel para una apariencia rejuvenecida.

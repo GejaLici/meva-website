@@ -1,0 +1,1 @@
+Una técnica no quirúrgica para definir y esculpir la línea de la mandíbula utilizando rellenos dérmicos o hilos PDO, creando un perfil más nítido y juvenil.

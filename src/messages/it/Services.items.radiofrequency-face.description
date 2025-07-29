@@ -1,0 +1,1 @@
+Un metodo non chirurgico di rassodamento della pelle che utilizza l'energia per riscaldare gli strati più profondi della pelle, stimolando la produzione di collagene e migliorando la compattezza e la texture della pelle.

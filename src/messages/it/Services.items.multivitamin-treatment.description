@@ -1,0 +1,1 @@
+Un trattamento viso che infonde una miscela di vitamine, minerali e antiossidanti direttamente nella pelle per nutrirla, idratarla e rivitalizzarla, risultando in un colorito più radioso.

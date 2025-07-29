@@ -1,3 +1,4 @@
+
 'use server';
 /**
  * @fileOverview An AI-powered service recommender for the clinic.
@@ -60,7 +61,7 @@ const recommendServicePrompt = ai.definePrompt(
     name: 'serviceRecommenderPrompt',
     input: { schema: z.object({ query: z.string(), services: z.any() }) },
     output: { schema: ServiceRecommenderOutputSchema },
-    prompt: `You are an expert, friendly, and helpful medical assistant for a premier cosmetic and dental clinic called Meva Clinic.
+    prompt: `You are an expert, friendly, and helpful medical assistant for a premier cosmetic and dental clinic called NovaSculpt Clinic.
 
 A user will describe their concern or desired outcome. Your task is to analyze their query and recommend the most relevant services from the list provided below.
 

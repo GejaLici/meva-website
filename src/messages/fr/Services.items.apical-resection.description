@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour enlever l'extrémité de la racine d'une dent et les tissus infectés environnants.

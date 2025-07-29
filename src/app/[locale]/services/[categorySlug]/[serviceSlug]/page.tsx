@@ -1,5 +1,6 @@
+
 import { notFound } from 'next/navigation';
-import { getServiceBySlugs, serviceCategories } from '@/lib/services';
+import { getServiceWithContent, serviceCategories } from '@/lib/services';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { stripHtml } from '@/lib/utils';
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   const tDetails = await getTranslations({ locale, namespace: 'ServiceDetailsPage' });
   const tServices = await getTranslations({ locale, namespace: 'Services' });
 
-  const service = getServiceBySlugs(categorySlug, serviceSlug);
+  const service = await getServiceWithContent(locale, categorySlug, serviceSlug);
   const siteName = tSite('title');
 
   if (!service) {
@@ -44,8 +45,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
 
   const serviceName = tServices(`items.${service.id}.name`);
-  const serviceDescriptionRaw = tServices(`items.${service.id}.description`);
-  const serviceDescription = stripHtml(serviceDescriptionRaw);
+  const serviceDescription = stripHtml(service.description);
 
   const metaDescription = serviceDescription.length > 155
     ? `${serviceDescription.substring(0, 152)}...`
@@ -58,8 +58,8 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
-  const { categorySlug, serviceSlug } = params;
-  const service = getServiceBySlugs(categorySlug, serviceSlug);
+  const { locale, categorySlug, serviceSlug } = params;
+  const service = await getServiceWithContent(locale, categorySlug, serviceSlug);
 
   if (!service) {
     notFound();

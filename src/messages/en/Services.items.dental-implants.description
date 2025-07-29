@@ -1,0 +1,1 @@
+Surgical fixtures placed into the jawbone to replace missing teeth and provide a base for fixed or removable replacements.

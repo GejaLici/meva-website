@@ -1,0 +1,1 @@
+Un procedimiento cosmético para mejorar la apariencia de los labios aumentando su volumen, forma, estructura o simetría, a menudo utilizando rellenos dérmicos.

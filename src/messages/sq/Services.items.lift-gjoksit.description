@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të ngritur dhe rimodeluar gjinjtë duke hequr lëkurën e tepërt dhe duke shtrënguar indin përreth për të rivendosur një profil më rinor të gjirit.

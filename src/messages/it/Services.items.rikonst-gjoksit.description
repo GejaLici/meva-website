@@ -1,0 +1,1 @@
+Una procedura chirurgica per ripristinare la forma, l'aspetto e le dimensioni del seno a seguito di una mastectomia o lumpectomia.

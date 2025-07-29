@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour réduire le tissu mammaire hypertrophié chez les hommes, réalisée par liposuccion et/ou excision de l'excès de tissu glandulaire.

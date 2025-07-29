@@ -1,0 +1,1 @@
+A procedure that uses your own blood's platelet-rich plasma (PRP), which is injected into the skin to stimulate collagen production and improve skin texture and elasticity.

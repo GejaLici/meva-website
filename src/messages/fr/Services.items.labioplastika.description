@@ -1,0 +1,1 @@
+Une procédure chirurgicale pour remodeler ou réduire la taille des lèvres pour un confort accru ou pour des raisons esthétiques.

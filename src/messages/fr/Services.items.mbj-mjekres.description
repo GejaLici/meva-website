@@ -1,0 +1,1 @@
+Similaire à une greffe de cheveux, cette procédure consiste à transplanter des follicules pileux dans la zone de la barbe pour augmenter la densité, combler les zones clairsemées ou remodeler la barbe.

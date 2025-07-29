@@ -1,0 +1,1 @@
+Injections of hyaluronic acid or other fillers to plump up wrinkles and fine lines, restoring volume and smoothing the skin's texture for a rejuvenated appearance.

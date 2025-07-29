@@ -1,0 +1,1 @@
+Cirugía para mejorar la apariencia de los párpados. Se puede realizar en los párpados superiores, inferiores o en ambos para eliminar la piel flácida, el exceso de grasa o las bolsas.

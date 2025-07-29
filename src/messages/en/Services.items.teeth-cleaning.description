@@ -1,0 +1,1 @@
+Professional cleaning to remove plaque and tartar from teeth to prevent cavities and gum disease.

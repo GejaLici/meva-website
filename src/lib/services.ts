@@ -1,4 +1,5 @@
-import type { ServiceCategory, Service } from '@/types/services';
+
+import type { ServiceCategory, Service, ServiceWithContent } from '@/types/services';
 
 const facialSurgeryServices: Service[] = [
   { id: 'op-hunde', slug: 'rhinoplasty', image: '/images/woman-getting-ready-nose-job-surgery%20(e).jpg', imageHint: 'nose surgery detail', gallery: [{url: "/images/galleries/rhinoplasty-1.png", hint: "rhinoplasty consultation"}, {url: "/images/galleries/rhinoplasty-2.png", hint: "surgical markup"}, {url: "/images/galleries/rhinoplasty-3.png", hint: "post-op checkup"}] },
@@ -32,11 +33,14 @@ const facialTreatmentsServices: Service[] = [
   { id: 'chin-reshaping', slug: 'non-surgical-chin-reshaping', image: '/images/Non-Surgical%20Chin%20Reshaping%20(Fillers).png', imageHint: 'chin fillers procedure', gallery: [{url: "/images/galleries/non-surgical-chin-reshaping-1.png", hint: "recessed chin"}, {url: "/images/galleries/non-surgical-chin-reshaping-2.png", hint: "enhanced chin"}, {url: "/images/galleries/non-surgical-chin-reshaping-3.png", hint: "side profile"}] },
 ];
 
-const bodySurgicalServices: Service[] = [
+const breastSurgeryServices: Service[] = [
   { id: 'zmadh-gjoksit', slug: 'breast-augmentation', image: '/images/Breast%20Augmentation.png', imageHint: 'breast augmentation results', gallery: [{url: "/images/galleries/breast-augmentation-1.png", hint: "before augmentation"}, {url: "/images/galleries/breast-augmentation-2.png", hint: "after augmentation"}, {url: "/images/galleries/breast-augmentation-3.png", hint: "implant options"}] },
   { id: 'lift-gjoksit', slug: 'breast-lift', image: '/images/Breast%20Lift.png', imageHint: 'breast lift surgery', gallery: [{url: "/images/galleries/breast-lift-1.png", hint: "sagging breasts"}, {url: "/images/galleries/breast-lift-2.png", hint: "lifted breasts"}, {url: "/images/galleries/breast-lift-3.png", hint: "incision planning"}] },
   { id: 'zvog-gjoksit', slug: 'breast-reduction', image: '/images/Breast%20Reduction.png', imageHint: 'breast reduction procedure', gallery: [{url: "/images/galleries/breast-reduction-1.png", hint: "large breasts"}, {url: "/images/galleries/breast-reduction-2.png", hint: "reduced breasts"}, {url: "/images/galleries/breast-reduction-3.png", hint: "post-op comfort"}] },
   { id: 'rikonst-gjoksit', slug: 'breast-reconstruction', image: '/images/Breast-reconstruction.png', imageHint: 'breast reconstruction process', gallery: [{url: "/images/galleries/breast-reconstruction-1.png", hint: "post mastectomy"}, {url: "/images/galleries/breast-reconstruction-2.png", hint: "reconstructed breast"}, {url: "/images/galleries/breast-reconstruction-3.png", hint: "tissue expander"}] },
+];
+
+const bodySurgicalServices: Service[] = [
   { id: 'lift-kraheve', slug: 'arm-lift', image: '/images/Arm%20Lift.png', imageHint: 'arm lift results', gallery: [{url: "/images/galleries/arm-lift-1.png", hint: "loose arm skin"}, {url: "/images/galleries/arm-lift-2.png", hint: "toned arms"}, {url: "/images/galleries/arm-lift-3.png", hint: "surgical markings"}] },
   { id: 'rim-barkut', slug: 'tummy-tuck', image: '/images/Tummy%20Tuck.png', imageHint: 'tummy tuck surgery', gallery: [{url: "/images/galleries/tummy-tuck-1.png", hint: "excess belly skin"}, {url: "/images/galleries/tummy-tuck-2.png", hint: "flat abdomen"}, {url: "/images/galleries/tummy-tuck-3.png", hint: "muscle repair"}] },
   { id: 'liposculptura', slug: 'liposculpture', image: '/images/Liposculpture.png', imageHint: 'liposculpture body contouring', gallery: [{url: "/images/galleries/liposculpture-1.png", hint: "body before"}, {url: "/images/galleries/liposculpture-2.png", hint: "contoured body"}, {url: "/images/galleries/liposculpture-3.png", hint: "liposuction cannula"}] },
@@ -119,6 +123,15 @@ export const serviceCategories: ServiceCategory[] = [
     displayOnHome: true,
     icon: 'Leaf'
   },
+    {
+    id: 'breasts',
+    slug: 'breasts',
+    services: breastSurgeryServices,
+    image: '/images/slim-young-woman-measuring-her-thin-waist-with-tape-measure-fitness-diet-concept.jpg',
+    imageHint: 'body contouring technology',
+    displayOnHome: true,
+    icon: 'Heart'
+  },
   {
     id: 'body-surgical',
     slug: 'body-surgical',
@@ -200,4 +213,39 @@ export const getCategoryBySlug = (slug: string): ServiceCategory | undefined =>
 export const getServiceBySlugs = (categorySlug: string, serviceSlug: string): Service | undefined => {
   const category = getCategoryBySlug(categorySlug);
   return category?.services.find(service => service.slug === serviceSlug);
+};
+
+export const getServiceWithContent = async (
+  locale: string,
+  categorySlug: string,
+  serviceSlug: string
+): Promise<ServiceWithContent | undefined> => {
+  const service = getServiceBySlugs(categorySlug, serviceSlug);
+  if (!service) {
+    return undefined;
+  }
+
+  try {
+    const markdown = await import(`../../messages/services/${locale}/${service.id}.md`);
+    return {
+      ...service,
+      description: markdown.default as string,
+    };
+  } catch (error) {
+    console.error(`Could not load service description for ${service.id} in locale ${locale}`, error);
+    // Fallback to English if the locale-specific file is not found
+    try {
+      const markdown = await import(`../../messages/services/en/${service.id}.md`);
+      return {
+        ...service,
+        description: markdown.default as string,
+      };
+    } catch (fallbackError) {
+       console.error(`Could not load fallback English description for ${service.id}`, fallbackError);
+       return {
+        ...service,
+        description: "Description not available.",
+      };
+    }
+  }
 };

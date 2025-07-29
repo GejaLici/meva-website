@@ -1,0 +1,1 @@
+Una procedura chirurgica che trasferisce il grasso da altre parti del corpo ai glutei per migliorarne le dimensioni, la forma e il contorno.

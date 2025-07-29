@@ -1,0 +1,1 @@
+A surgical procedure to reshape the thighs by reducing excess skin and fat, resulting in smoother skin and better-proportioned contours.

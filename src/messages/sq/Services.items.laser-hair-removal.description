@@ -1,0 +1,1 @@
+Një procedurë kozmetike që përdor një rreze të përqendruar drite për të hequr qimet e padëshiruara nga pjesë të ndryshme të trupit.

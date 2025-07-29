@@ -1,0 +1,1 @@
+Dispositifs chirurgicaux placés dans l'os de la mâchoire pour remplacer les dents manquantes et fournir une base pour des prothèses fixes ou amovibles.

@@ -1,0 +1,1 @@
+A skin-resurfacing treatment that applies a chemical solution to the skin to exfoliate it and eventually peel it off, revealing smoother, less-wrinkled skin.

@@ -1,0 +1,1 @@
+Eine nicht-chirurgische Methode zur Hautstraffung, bei der Energie verwendet wird, um die tieferen Hautschichten zu erwärmen, die Kollagenproduktion anzuregen und die Hautstraffheit und -struktur zu verbessern.

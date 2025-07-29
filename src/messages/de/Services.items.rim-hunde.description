@@ -1,0 +1,1 @@
+Ein fokussierter Eingriff, der speziell die Form, Größe oder Projektion der Nasenspitze verfeinert, oft mit weniger Ausfallzeit als eine vollständige Nasenkorrektur.

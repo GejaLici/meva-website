@@ -1,0 +1,1 @@
+Une procédure qui utilise le plasma riche en plaquettes (PRP) de votre propre sang, qui est injecté dans la peau pour stimuler la production de collagène et améliorer la texture et l'élasticité de la peau.

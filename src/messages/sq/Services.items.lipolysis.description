@@ -1,0 +1,1 @@
+Një procedurë jo-kirurgjikale që përdor injeksione, lazer ose ultratinguj për të shpërbërë dhe hequr qelizat yndyrore në zona të caktuara.

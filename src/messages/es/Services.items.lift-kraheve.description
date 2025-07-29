@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para remodelar la parte inferior del brazo superior, desde la región de la axila hasta el codo, eliminando el exceso de piel y grasa.

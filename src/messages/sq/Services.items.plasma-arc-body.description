@@ -1,0 +1,1 @@
+Një trajtim jo-invaziv që përdor energjinë e plazmës për të shtrënguar lëkurën e lirshme në pjesë të ndryshme të trupit, duke përmirësuar pamjen e rrudhave dhe lëshimit.

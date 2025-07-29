@@ -1,0 +1,1 @@
+A minimally invasive procedure to treat varicose and spider veins, where a solution is injected directly into the vein, causing it to scar, re-route blood, and fade.

@@ -1,0 +1,1 @@
+A surgical technique that moves hair follicles from a part of the body (the donor site) to a bald or balding part of the body (the recipient site). It is primarily used to treat male pattern baldness.

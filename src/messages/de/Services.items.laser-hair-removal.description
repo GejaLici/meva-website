@@ -1,0 +1,1 @@
+Ein kosmetisches Verfahren, das einen konzentrierten Lichtstrahl verwendet, um unerwünschte Haare von verschiedenen Körperteilen zu entfernen.

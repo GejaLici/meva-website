@@ -1,0 +1,1 @@
+Una procedura in cui i follicoli piliferi vengono trapiantati nelle sopracciglia per creare sopracciglia più piene e definite, spesso per chi ha sopracciglia naturalmente sottili o perdita di capelli.

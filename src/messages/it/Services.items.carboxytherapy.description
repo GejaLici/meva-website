@@ -1,0 +1,1 @@
+L'uso terapeutico di anidride carbonica per migliorare l'elasticità della pelle, ridurre cellulite e smagliature e migliorare la circolazione.

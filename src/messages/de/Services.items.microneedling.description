@@ -1,0 +1,1 @@
+Ein Verfahren, bei dem feine Nadeln verwendet werden, um winzige Einstiche in der Haut zu erzeugen, die die Kollagen- und Elastinproduktion anregen, um die Hautstruktur zu verbessern und das Erscheinungsbild von Narben und Falten zu reduzieren.

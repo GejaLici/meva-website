@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para levantar las cejas caídas y mejorar la apariencia de las arrugas en la frente y entre los ojos, lo que resulta en un aspecto más juvenil y descansado.

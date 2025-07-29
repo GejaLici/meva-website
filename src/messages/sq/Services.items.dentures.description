@@ -1,0 +1,1 @@
+Zëvendësime të lëvizshme për dhëmbët që mungojnë dhe indet përreth.

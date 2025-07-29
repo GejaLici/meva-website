@@ -1,0 +1,1 @@
+Una tecnica non chirurgica per definire e scolpire la linea mascellare utilizzando filler dermici o fili in PDO, creando un profilo più nitido e giovanile.

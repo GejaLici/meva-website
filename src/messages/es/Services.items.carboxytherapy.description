@@ -1,0 +1,1 @@
+El uso terapéutico de gas de dióxido de carbono para mejorar la elasticidad de la piel, reducir la celulitis y las estrías, y mejorar la circulación.

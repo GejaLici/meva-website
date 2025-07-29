@@ -1,0 +1,1 @@
+Un procedimiento dental para eliminar la pulpa infectada del interior de un diente para salvarlo y aliviar el dolor.

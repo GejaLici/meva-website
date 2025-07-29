@@ -1,0 +1,1 @@
+Una procedura non chirurgica in cui i filler dermici vengono iniettati nelle pieghe che vanno dai lati del naso agli angoli della bocca, attenuandone l'aspetto.

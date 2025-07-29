@@ -1,0 +1,1 @@
+Ein kosmetischer Eingriff zur Verbesserung des Aussehens der Lippen durch Vergrößerung von Volumen, Form, Struktur oder Symmetrie, oft unter Verwendung von Hautfüllern.

@@ -1,0 +1,1 @@
+Un procedimiento quirúrgico para reducir el tejido mamario agrandado en los hombres, realizado mediante liposucción y/o escisión del exceso de tejido glandular.

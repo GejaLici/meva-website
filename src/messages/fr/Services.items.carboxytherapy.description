@@ -1,0 +1,1 @@
+L'utilisation thérapeutique du dioxyde de carbone pour améliorer l'élasticité de la peau, réduire la cellulite et les vergetures, et améliorer la circulation.

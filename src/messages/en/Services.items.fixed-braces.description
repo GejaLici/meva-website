@@ -1,0 +1,1 @@
+Traditional orthodontic devices used to correct misaligned teeth and jaws.

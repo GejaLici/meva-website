@@ -1,0 +1,1 @@
+Heqja e një dhëmbi nga foleja e tij alveolare në kockën e nofullës.

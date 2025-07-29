@@ -1,0 +1,1 @@
+Un traitement non chirurgical de la perte de cheveux où le plasma riche en plaquettes du sang du patient est injecté dans le cuir chevelu pour stimuler la croissance des cheveux.

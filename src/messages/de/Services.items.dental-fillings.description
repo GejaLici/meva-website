@@ -1,0 +1,1 @@
+Materialien, die verwendet werden, um durch Karies beschädigte Zähne zu füllen und wiederherzustellen und weitere Schäden zu verhindern.

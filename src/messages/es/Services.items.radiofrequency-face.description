@@ -1,0 +1,1 @@
+Un método no quirúrgico de estiramiento de la piel que utiliza energía para calentar las capas más profundas de la piel, estimulando la producción de colágeno y mejorando la firmeza y textura de la piel.

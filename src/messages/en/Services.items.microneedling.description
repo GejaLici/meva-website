@@ -1,0 +1,1 @@
+A procedure that uses fine needles to create tiny punctures in the skin, stimulating collagen and elastin production to improve skin texture and reduce the appearance of scars and wrinkles.

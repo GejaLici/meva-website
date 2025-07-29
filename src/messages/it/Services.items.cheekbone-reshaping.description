@@ -1,0 +1,1 @@
+Una procedura non chirurgica che utilizza filler dermici per migliorare e definire gli zigomi, ripristinando il volume e creando una struttura facciale più modellata.

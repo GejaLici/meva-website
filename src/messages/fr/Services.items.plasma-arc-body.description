@@ -1,0 +1,1 @@
+Un traitement non invasif utilisant l'énergie plasma pour resserrer la peau lâche sur diverses parties du corps, améliorant l'apparence des rides et du relâchement.

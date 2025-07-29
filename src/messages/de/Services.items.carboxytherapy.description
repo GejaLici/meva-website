@@ -1,0 +1,1 @@
+Die therapeutische Anwendung von Kohlendioxidgas zur Verbesserung der Hautelastizität, zur Reduzierung von Cellulite und Dehnungsstreifen sowie zur Verbesserung der Durchblutung.

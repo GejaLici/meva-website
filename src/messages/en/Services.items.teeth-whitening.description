@@ -1,0 +1,1 @@
+A cosmetic dental procedure that lightens teeth and helps to remove stains and discoloration, creating a brighter, whiter smile.

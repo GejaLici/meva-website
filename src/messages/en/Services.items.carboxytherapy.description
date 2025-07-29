@@ -1,0 +1,1 @@
+The therapeutic use of carbon dioxide gas to improve skin elasticity, reduce cellulite and stretch marks, and enhance circulation.

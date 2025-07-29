@@ -1,0 +1,1 @@
+Fasetat qeramike të cilësisë së lartë dhe të qëndrueshme, të njohura për forcën dhe pamjen e tyre natyrale, të përdorura për të transformuar buzëqeshjet.

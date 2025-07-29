@@ -1,0 +1,1 @@
+Una procedura chirurgica per sollevare e rimodellare il seno rimuovendo la pelle in eccesso e rassodando il tessuto circostante per ripristinare un profilo del seno più giovane.

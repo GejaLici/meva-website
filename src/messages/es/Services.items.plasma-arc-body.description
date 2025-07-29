@@ -1,0 +1,1 @@
+Un tratamiento no invasivo que utiliza energía de plasma para tensar la piel suelta en varias partes del cuerpo, mejorando la apariencia de arrugas y flacidez.

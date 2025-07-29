@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -8,7 +9,8 @@ import { Link } from '@/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
-import type { Service } from '@/types/services';
+import type { ServiceWithContent } from '@/types/services';
+import ReactMarkdown from 'react-markdown';
 
 const ServiceGallery = dynamic(
   () => import('@/components/services/ServiceGallery').then((mod) => mod.ServiceGallery),
@@ -28,7 +30,7 @@ const ServiceGallery = dynamic(
 );
 
 interface ServicePageClientProps {
-    service: Service;
+    service: ServiceWithContent;
 }
 
 export default function ServicePageClient({ service }: ServicePageClientProps) {
@@ -39,7 +41,6 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
 
   const siteName = tSite('title');
   const serviceName = tServices(`items.${service.id}.name`);
-  const serviceDescription = tServices.rich(`items.${service.id}.description`);
   
   return (
     <>
@@ -63,7 +64,18 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
           </div>
           <div className="prose prose-lg max-w-none text-foreground">
             <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
-            <div className="mb-6">{serviceDescription}</div>
+            <div className="mb-6">
+                <ReactMarkdown
+                    components={{
+                        p: ({node, ...props}) => <p className="mb-4" {...props} />,
+                        ul: ({node, ...props}) => <ul className="list-disc pl-5 space-y-2 mb-4" {...props} />,
+                        ol: ({node, ...props}) => <ol className="list-decimal pl-5 space-y-2 mb-4" {...props} />,
+                        strong: ({node, ...props}) => <strong className="font-semibold" {...props} />,
+                    }}
+                >
+                    {service.description}
+                </ReactMarkdown>
+            </div>
             
             <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteName })}</h3>
             <p className="mb-4">

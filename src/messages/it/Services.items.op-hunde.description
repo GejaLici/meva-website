@@ -1,0 +1,1 @@
+Una procedura chirurgica per rimodellare il naso per migliorare l'aspetto e/o la funzione. Può cambiare le dimensioni o la forma del naso, regolare l'angolo tra il naso e il labbro superiore o correggere problemi di respirazione.

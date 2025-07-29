@@ -1,0 +1,1 @@
+Një formë e liposucionit që heq yndyrën e tepërt dhe konturon trupin për të krijuar një formë më të definuar dhe të skalitur.

@@ -1,0 +1,1 @@
+Ein Verfahren, bei dem das plättchenreiche Plasma (PRP) aus Ihrem eigenen Blut verwendet und in die Haut injiziert wird, um die Kollagenproduktion anzuregen und die Hautstruktur und -elastizität zu verbessern.

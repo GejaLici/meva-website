@@ -1,0 +1,1 @@
+Die Anwendung von Fluorid auf die Zähne, um den Zahnschmelz zu stärken und Karies vorzubeugen.

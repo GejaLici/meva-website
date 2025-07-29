@@ -1,0 +1,1 @@
+Un procedimiento enfocado que refina específicamente la forma, el tamaño o la proyección de la punta nasal, a menudo con menos tiempo de inactividad que una rinoplastia completa.

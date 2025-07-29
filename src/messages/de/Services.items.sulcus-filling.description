@@ -1,0 +1,1 @@
+Ein nicht-chirurgischer Eingriff, bei dem Hautfüller in die Falten injiziert werden, die von den Seiten der Nase zu den Mundwinkeln verlaufen, um deren Erscheinungsbild zu mildern.

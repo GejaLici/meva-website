@@ -1,0 +1,1 @@
+Un tratamiento facial que infunde una mezcla de vitaminas, minerales y antioxidantes directamente en la piel para nutrirla, hidratarla y revitalizarla, lo que resulta en una tez más radiante.

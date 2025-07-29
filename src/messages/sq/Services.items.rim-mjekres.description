@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të rimodeluar ose përmirësuar mjekrën, qoftë me një implant ose duke rimodeluar kockën, për të përmirësuar ekuilibrin e përmasave të fytyrës.

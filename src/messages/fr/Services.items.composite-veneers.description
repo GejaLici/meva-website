@@ -1,0 +1,1 @@
+Fines coquilles de matériau composite de la couleur des dents appliquées sur la surface avant des dents pour améliorer leur apparence.

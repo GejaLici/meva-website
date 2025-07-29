@@ -1,0 +1,1 @@
+Eine Reihe von durchsichtigen, individuell angefertigten Alignern, die die Zähne im Laufe der Zeit allmählich begradigen, als Alternative zu herkömmlichen Zahnspangen.

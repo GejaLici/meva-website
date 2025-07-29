@@ -1,0 +1,1 @@
+Fines couches protectrices appliquées sur les surfaces de mastication des dents postérieures pour prévenir les caries.

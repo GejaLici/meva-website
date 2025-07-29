@@ -1,0 +1,1 @@
+L'enlèvement d'une dent de son alvéole dans l'os de la mâchoire.

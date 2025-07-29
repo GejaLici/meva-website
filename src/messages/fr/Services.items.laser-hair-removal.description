@@ -1,0 +1,1 @@
+Une procédure cosmétique qui utilise un faisceau de lumière concentré pour éliminer les poils indésirables de diverses parties du corps.

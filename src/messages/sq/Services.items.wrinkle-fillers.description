@@ -1,0 +1,1 @@
+Injektimet e acidit hialuronik ose mbushësve të tjerë për të mbushur rrudhat dhe linjat e holla, duke rivendosur volumin dhe duke lëmuar teksturën e lëkurës për një pamje të rinovuar.

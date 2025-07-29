@@ -1,0 +1,1 @@
+A facial treatment that infuses a blend of vitamins, minerals, and antioxidants directly into the skin to nourish, hydrate, and revitalize it, resulting in a more radiant complexion.

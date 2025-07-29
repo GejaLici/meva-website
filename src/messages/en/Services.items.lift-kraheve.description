@@ -1,0 +1,1 @@
+A surgical procedure to reshape the under portion of the upper arm, from the underarm region to the elbow, by removing excess skin and fat.

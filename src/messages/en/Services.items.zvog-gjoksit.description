@@ -1,0 +1,1 @@
+A surgical procedure to remove excess breast fat, glandular tissue, and skin to achieve a breast size in proportion with the body and to alleviate the discomfort associated with overly large breasts.

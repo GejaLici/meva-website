@@ -1,0 +1,1 @@
+Ein Verfahren, bei dem injizierbare Füllstoffe verwendet werden, um das Kinn neu zu formen und zu vergrößern, das Gleichgewicht im Gesicht zu verbessern und ein stärkeres Kinnprofil ohne Operation zu schaffen.

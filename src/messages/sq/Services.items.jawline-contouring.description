@@ -1,0 +1,1 @@
+Një teknikë jo-kirurgjikale për të përcaktuar dhe skulpturuar vijën e nofullës duke përdorur mbushës dermalë ose fije PDO, duke krijuar një profil më të mprehtë dhe më rinor.

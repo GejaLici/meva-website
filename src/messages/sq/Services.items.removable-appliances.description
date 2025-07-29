@@ -1,0 +1,1 @@
+Pajisje ortodontike që mund të vendosen dhe hiqen nga pacienti për të korrigjuar problemet dentare.

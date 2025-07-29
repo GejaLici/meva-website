@@ -1,0 +1,1 @@
+Chirurgische Vorrichtungen, die in den Kieferknochen eingesetzt werden, um fehlende Zähne zu ersetzen und eine Basis für festsitzenden oder herausnehmbaren Zahnersatz zu bilden.

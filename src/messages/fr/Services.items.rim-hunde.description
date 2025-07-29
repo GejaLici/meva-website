@@ -1,0 +1,1 @@
+Une procédure ciblée qui affine spécifiquement la forme, la taille ou la projection de la pointe nasale, often avec moins de temps d'arrêt qu'une rhinoplastie complète.

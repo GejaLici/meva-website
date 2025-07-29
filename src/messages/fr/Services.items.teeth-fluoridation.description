@@ -1,0 +1,1 @@
+L'application de fluorure sur les dents pour renforcer l'émail et prévenir la carie dentaire.

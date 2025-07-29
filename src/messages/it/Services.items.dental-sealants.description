@@ -1,0 +1,1 @@
+Sottili rivestimenti protettivi applicati sulle superfici masticatorie dei denti posteriori per prevenire le carie.

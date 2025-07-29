@@ -1,0 +1,1 @@
+Chirurgia per migliorare l'aspetto delle palpebre. Può essere eseguita sulle palpebre superiori, inferiori o entrambe per rimuovere la pelle cadente, il grasso in eccesso o le borse.

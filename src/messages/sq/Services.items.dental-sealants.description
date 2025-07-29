@@ -1,0 +1,1 @@
+Shtresa të holla mbrojtëse të aplikuara në sipërfaqet përtypëse të dhëmbëve të pasmë për të parandaluar kariesin.

@@ -1,0 +1,1 @@
+Ein minimal-invasives Verfahren zur Behandlung von Krampfadern und Besenreisern, bei dem eine Lösung direkt in die Vene injiziert wird, wodurch diese vernarbt, das Blut umgeleitet und die Vene verblasst.

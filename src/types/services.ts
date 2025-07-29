@@ -1,4 +1,5 @@
 
+
 export interface ServiceImage {
   url: string;
   hint: string;
@@ -12,6 +13,11 @@ export interface Service {
   imageHint?: string;
   gallery?: ServiceImage[];
 }
+
+export interface ServiceWithContent extends Service {
+  description: string;
+}
+
 
 export interface ServiceCategory {
   id: string;

@@ -1,0 +1,1 @@
+Eine Form der Fettabsaugung, die überschüssiges Fett entfernt und den Körper konturiert, um eine definiertere, geformtere Form zu schaffen.

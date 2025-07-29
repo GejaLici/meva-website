@@ -1,0 +1,1 @@
+Una procedura chirurgica per rimuovere la punta della radice di un dente e il tessuto infetto circostante.

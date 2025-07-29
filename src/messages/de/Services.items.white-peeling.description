@@ -1,0 +1,1 @@
+Eine Hauterneuerungsbehandlung, bei der eine chemische Lösung auf die Haut aufgetragen wird, um sie zu peelen und schließlich abzulösen, wodurch eine glattere, weniger faltige Haut zum Vorschein kommt.

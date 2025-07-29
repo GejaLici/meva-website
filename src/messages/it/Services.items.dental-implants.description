@@ -1,0 +1,1 @@
+Dispositivi chirurgici inseriti nell'osso mascellare per sostituire i denti mancanti e fornire una base per sostituzioni fisse o rimovibili.

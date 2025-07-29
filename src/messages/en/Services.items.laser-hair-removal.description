@@ -1,0 +1,1 @@
+A cosmetic procedure that uses a concentrated beam of light to remove unwanted hair from various parts of the body.

@@ -1,0 +1,1 @@
+Iniezioni di acido ialuronico o altri filler per riempire rughe e linee sottili, ripristinando il volume e levigando la texture della pelle per un aspetto ringiovanito.

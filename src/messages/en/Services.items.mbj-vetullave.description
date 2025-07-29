@@ -1,0 +1,1 @@
+A procedure where hair follicles are transplanted to the eyebrows to create fuller, more defined brows, often for those with naturally thin brows or hair loss.

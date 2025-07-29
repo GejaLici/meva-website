@@ -1,0 +1,1 @@
+Thin protective coatings applied to the chewing surfaces of back teeth to prevent cavities.

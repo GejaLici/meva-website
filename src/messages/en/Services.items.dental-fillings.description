@@ -1,0 +1,1 @@
+Materials used to fill and restore teeth damaged by decay, preventing further damage.

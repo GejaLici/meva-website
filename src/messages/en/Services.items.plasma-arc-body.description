@@ -1,0 +1,1 @@
+A non-invasive treatment using plasma energy to tighten loose skin on various parts of the body, improving the appearance of wrinkles and sagging.

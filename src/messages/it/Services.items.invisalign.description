@@ -1,0 +1,1 @@
+Una serie di allineatori trasparenti e su misura che raddrizzano gradualmente i denti nel tempo, fungendo da alternativa agli apparecchi tradizionali.

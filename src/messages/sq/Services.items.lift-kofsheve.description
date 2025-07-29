@@ -1,0 +1,1 @@
+Një procedurë kirurgjikale për të rimodeluar kofshët duke zvogëluar lëkurën dhe yndyrën e tepërt, duke rezultuar në lëkurë më të lëmuar dhe konture më të proporcionuara.

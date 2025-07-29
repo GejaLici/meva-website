@@ -1,0 +1,1 @@
+Një procedurë kozmetike për të përmirësuar pamjen e buzëve duke rritur plotësinë, formën, strukturën ose simetrinë e tyre, shpesh duke përdorur mbushës dermalë.

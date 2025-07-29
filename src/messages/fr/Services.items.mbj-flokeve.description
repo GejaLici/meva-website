@@ -1,0 +1,1 @@
+Une technique chirurgicale qui déplace les follicules pileux d'une partie du corps (le site donneur) vers une partie chauve ou dégarnie du corps (le site receveur). Elle est principalement utilisée pour traiter la calvitie masculine.

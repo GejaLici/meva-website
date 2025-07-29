@@ -1,0 +1,1 @@
+A form of liposuction that removes excess fat and contours the body to create a more defined, sculpted shape.

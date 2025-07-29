@@ -1,0 +1,1 @@
+Restaurime dentare fikse që mbulojnë hapësirën e krijuar nga një ose më shumë dhëmbë që mungojnë.
