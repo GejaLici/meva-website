@@ -1,12 +1,17 @@
 
 import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
 import { getTranslations } from 'next-intl/server';
-import { serviceCategories } from '@/lib/services';
+import { serviceCategories, dentalCategoryIds } from '@/lib/services';
 
 export async function ServicesSection() {
   const t = await getTranslations('HomePage');
-  const categories = serviceCategories.filter(cat => cat.displayOnHome);
   
+  const aestheticCategories = serviceCategories.filter(
+    cat => cat.displayOnHome && !dentalCategoryIds.includes(cat.id) && cat.id !== 'dental-summary'
+  );
+  
+  const dentalCategory = serviceCategories.find(cat => cat.id === 'dental-summary');
+
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -19,7 +24,11 @@ export async function ServicesSection() {
           </p>
           <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
         </div>
-        <ServiceCategoryGrid categories={categories} homePageLayout={true} />
+        <ServiceCategoryGrid 
+          aestheticCategories={aestheticCategories} 
+          dentalCategory={dentalCategory}
+          homePageLayout={true} 
+        />
       </div>
     </section>
   );

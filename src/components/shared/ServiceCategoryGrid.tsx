@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import type { ServiceCategory } from '@/types/services';
 import { getTranslations } from 'next-intl/server';
 import React from 'react';
+import { Separator } from '../ui/separator';
 
 const ICONS: { [key: string]: React.ElementType } = {
   Gem,
@@ -17,18 +18,20 @@ const ICONS: { [key: string]: React.ElementType } = {
 };
 
 interface ServiceCategoryGridProps {
-  categories: ServiceCategory[];
+  aestheticCategories: ServiceCategory[];
+  dentalCategory?: ServiceCategory;
   homePageLayout?: boolean;
 }
 
-export async function ServiceCategoryGrid({ categories, homePageLayout = false }: ServiceCategoryGridProps) {
+export async function ServiceCategoryGrid({ aestheticCategories, dentalCategory, homePageLayout = false }: ServiceCategoryGridProps) {
   const tServices = await getTranslations('Services');
+  const tNav = useTranslations('Navigation');
   
   const renderCard = (category: ServiceCategory, className?: string) => {
     const CategoryIcon = category.icon ? ICONS[category.icon] : null;
     const name = tServices(`categories.${category.id}.name`);
     const description = tServices(`categories.${category.id}.description`);
-    const exploreText = "Learn More";
+    const exploreText = tNav('exploreService');
 
     return (
       <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", className)}>
@@ -67,22 +70,34 @@ export async function ServiceCategoryGrid({ categories, homePageLayout = false }
   };
   
   if (homePageLayout) {
-    const topRow = categories.slice(0, 3);
-    const bottomRow = categories.slice(3, 5);
-
     return (
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
-        {topRow.map((category) => renderCard(category, 'md:col-span-2'))}
-        {bottomRow.map((category) => renderCard(category, 'md:col-span-3'))}
+      <div className="space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {aestheticCategories.map((category) => renderCard(category))}
+        </div>
+        {dentalCategory && (
+          <>
+            <Separator className="my-8" />
+            <div className="flex justify-center">
+              <div className="w-full md:w-2/3 lg:w-1/2">
+                {renderCard(dentalCategory)}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     );
   }
 
+  // Fallback for non-homepage layouts
+  const allCategories = [...aestheticCategories];
+  if (dentalCategory) allCategories.push(dentalCategory);
+
   return (
     <>
-      {categories.length > 0 ? (
+      {allCategories.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category) => renderCard(category))}
+          {allCategories.map((category) => renderCard(category))}
         </div>
       ) : (
         <p className="text-center text-lg text-muted-foreground">
