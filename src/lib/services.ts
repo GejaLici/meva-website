@@ -1,4 +1,3 @@
-
 import type { ServiceCategory, Service } from '@/types/services';
 
 const facialSurgeryServices: Service[] = [
@@ -200,7 +199,5 @@ export const getCategoryBySlug = (slug: string): ServiceCategory | undefined =>
 
 export const getServiceBySlugs = (categorySlug: string, serviceSlug: string): Service | undefined => {
   const category = getCategoryBySlug(categorySlug);
-  const service = category?.services.find(service => service.slug === serviceSlug);
-  if (!service) return undefined;
-  return { ...service, categorySlug };
+  return category?.services.find(service => service.slug === serviceSlug);
 };

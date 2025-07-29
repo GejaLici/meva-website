@@ -1,4 +1,3 @@
-
 import {createLocalizedPathnamesNavigation} from 'next-intl/navigation';
 
 export const locales = ['en', 'it', 'sq', 'de', 'fr', 'es'] as const;
@@ -79,6 +78,14 @@ export const pathnames = {
     de: '/leistungen/zahnmedizin',
     fr: '/services/dentaires',
     es: '/servicios/dentales'
+  },
+  '/services/[categorySlug]/[serviceSlug]': {
+    en: '/services/[categorySlug]/[serviceSlug]',
+    it: '/servizi/[categorySlug]/[serviceSlug]',
+    sq: '/sherbimet/[categorySlug]/[serviceSlug]',
+    de: '/leistungen/[categorySlug]/[serviceSlug]',
+    fr: '/services/[categorySlug]/[serviceSlug]',
+    es: '/servicios/[categorySlug]/[serviceSlug]'
   }
 };
 
