@@ -19,12 +19,10 @@ const nextConfig = {
       use: 'raw-loader',
     });
 
-    // Add watchOptions to ignore the .genkit directory
-    if (!isServer) {
-        config.watchOptions = {
-            ignored: ['**/.genkit/**'],
-        };
-    }
+    // Add watchOptions to ignore the .genkit directory for all builds
+    config.watchOptions = {
+        ignored: ['**/.genkit/**'],
+    };
 
     return config;
   },
