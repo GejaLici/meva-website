@@ -1,4 +1,3 @@
-
 'use client';
 
 import type { ServiceWithContent } from '@/types/services';
@@ -6,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 // This component is now customized for Rhinoplasty
-export default function OpHundePage({ service }: { service: ServiceWithContent }) {
+export default function RhinoplastyPage({ service }: { service: ServiceWithContent }) {
     const t = useTranslations('Services.items.op-hunde');
     const tDetails = useTranslations('ServiceDetailsPage');
     const serviceName = t('name');
