@@ -27,7 +27,7 @@ export async function ServiceCategoryGrid({ aestheticCategories, dentalCategory,
   const tServices = await getTranslations('Services');
   const tNav = await getTranslations('Navigation');
   
-  const renderCard = (category: ServiceCategory, className?: string) => {
+  const renderCard = (category: ServiceCategory, className?: string, isSecondRow?: boolean) => {
     const CategoryIcon = category.icon ? ICONS[category.icon] : null;
     const name = tServices(`categories.${category.id}.name`);
     const description = tServices(`categories.${category.id}.description`);
@@ -36,7 +36,7 @@ export async function ServiceCategoryGrid({ aestheticCategories, dentalCategory,
     return (
       <Card key={category.id} className={cn("group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300", className)}>
         {category.image && (
-          <div className="relative w-full h-56 overflow-hidden">
+          <div className={cn("relative w-full overflow-hidden", isSecondRow ? "h-52" : "h-56")}>
             <Image
               src={category.image}
               alt={name}
@@ -76,11 +76,11 @@ export async function ServiceCategoryGrid({ aestheticCategories, dentalCategory,
     return (
       <div className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {topRowCategories.map((category) => renderCard(category))}
+          {topRowCategories.map((category) => renderCard(category, undefined, false))}
         </div>
         {bottomRowCategories.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-             {bottomRowCategories.map((category) => renderCard(category))}
+             {bottomRowCategories.map((category) => renderCard(category, undefined, true))}
           </div>
         )}
       </div>
