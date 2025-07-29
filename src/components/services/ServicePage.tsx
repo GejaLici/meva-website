@@ -6,7 +6,7 @@ import { PageHeader } from '@/components/shared/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from '@/navigation';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 import type { ServiceWithContent } from '@/types/services';
@@ -37,7 +37,6 @@ export default function ServicePageClient({ service }: ServicePageClientProps) {
   const tSite = useTranslations('Site');
   const tDetails = useTranslations('ServiceDetailsPage');
   const tServices = useTranslations('Services');
-  const locale = useLocale();
 
   const siteName = tSite('title');
   const serviceName = tServices(`items.${service.id}.name`);
