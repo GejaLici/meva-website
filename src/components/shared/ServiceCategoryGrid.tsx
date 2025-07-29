@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils';
 import type { ServiceCategory } from '@/types/services';
 import { getTranslations } from 'next-intl/server';
 import React from 'react';
-import { Separator } from '../ui/separator';
 
 const ICONS: { [key: string]: React.ElementType } = {
   Gem,
@@ -80,7 +79,7 @@ export async function ServiceCategoryGrid({ aestheticCategories, dentalCategory,
           {topRowCategories.map((category) => renderCard(category))}
         </div>
         {bottomRowCategories.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:max-w-4xl lg:mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
              {bottomRowCategories.map((category) => renderCard(category))}
           </div>
         )}
