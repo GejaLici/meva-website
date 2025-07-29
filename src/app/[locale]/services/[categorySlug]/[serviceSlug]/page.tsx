@@ -4,7 +4,7 @@ import { getServiceWithContent, serviceCategories } from '@/lib/services';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { stripHtml } from '@/lib/utils';
-import ServicePageClient from '@/components/services/ServicePage';
+import { ServicePageDispatcher } from '@/components/services/ServicePageDispatcher';
 
 interface ServicePageProps {
   params: {
@@ -65,5 +65,5 @@ export default async function ServicePage({ params }: ServicePageProps) {
     notFound();
   }
   
-  return <ServicePageClient service={service} />;
+  return <ServicePageDispatcher service={service} />;
 }

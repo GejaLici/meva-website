@@ -8,14 +8,14 @@ import { Card } from '@/components/ui/card';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
-import { Skeleton } from '@/components/ui/skeleton';
 import type { ServiceWithContent } from '@/types/services';
 import ReactMarkdown from 'react-markdown';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const ServiceGallery = dynamic(
   () => import('@/components/services/ServiceGallery').then((mod) => mod.ServiceGallery),
   {
-    ssr: false, // Carousel is interactive
+    ssr: false,
     loading: () => (
       <div className="w-full max-w-2xl mx-auto">
         <Skeleton className="aspect-video w-full" />
@@ -29,11 +29,11 @@ const ServiceGallery = dynamic(
   }
 );
 
-interface ServicePageClientProps {
+interface ServicePageProps {
     service: ServiceWithContent;
 }
 
-export default function ServicePageClient({ service }: ServicePageClientProps) {
+export default function GenericServicePage({ service }: ServicePageProps) {
   const tSite = useTranslations('Site');
   const tDetails = useTranslations('ServiceDetailsPage');
   const tServices = useTranslations('Services');
