@@ -10,29 +10,9 @@
 
 import { ai } from '@/ai/genkit';
 import { z } from 'zod';
-import { serviceCategories } from '@/lib/services';
-import { stripHtml } from '@/lib/utils';
+import { serviceCategories, getServiceWithContent } from '@/lib/services';
 import enMessages from '@/messages/en.json';
 
-// --- Data Preparation ---
-// Create a detailed list of all services with English names and descriptions for the AI prompt.
-const allServicesWithDetails = serviceCategories.flatMap(category =>
-  // Exclude the summary card for dental services from the recommender's knowledge base.
-  category.id === 'dental-summary' ? [] : 
-  category.services.map(service => {
-    const serviceTranslations = enMessages.Services.items[service.id as keyof typeof enMessages.Services.items];
-    return {
-      id: service.id,
-      slug: service.slug,
-      categoryId: category.id,
-      categorySlug: category.slug,
-      name: serviceTranslations?.name || service.id,
-      description: stripHtml(tServices(`items.${service.id}.description`) || '')
-    };
-  })
-);
-
-// --- Zod Schemas ---
 const ServiceRecommenderInputSchema = z.object({
   query: z.string().describe("The user's concern or desired cosmetic/dental outcome."),
 });
@@ -50,18 +30,41 @@ const ServiceRecommenderOutputSchema = z.object({
 });
 export type ServiceRecommenderOutput = z.infer<typeof ServiceRecommenderOutputSchema>;
 
-// --- Exported Function ---
 export async function recommendServices(input: ServiceRecommenderInput): Promise<ServiceRecommenderOutput> {
   return serviceRecommenderFlow(input);
 }
 
-// --- Genkit Prompt ---
-const recommendServicePrompt = ai.definePrompt(
+const serviceRecommenderFlow = ai.defineFlow(
   {
-    name: 'serviceRecommenderPrompt',
-    input: { schema: z.object({ query: z.string(), services: z.any() }) },
-    output: { schema: ServiceRecommenderOutputSchema },
-    prompt: `You are an expert, friendly, and helpful medical assistant for a premier cosmetic and dental clinic called NovaSculpt Clinic.
+    name: 'serviceRecommenderFlow',
+    inputSchema: ServiceRecommenderInputSchema,
+    outputSchema: ServiceRecommenderOutputSchema,
+  },
+  async ({ query }) => {
+    // Dynamically prepare service details with English descriptions for the prompt
+    const allServicesForPrompt = await Promise.all(
+        serviceCategories.flatMap(category =>
+            category.id === 'dental-summary' ? [] :
+            category.services.map(async (service) => {
+                const serviceContent = await getServiceWithContent('en', category.slug, service.slug);
+                return {
+                    id: service.id,
+                    slug: service.slug,
+                    categoryId: category.id,
+                    categorySlug: category.slug,
+                    name: enMessages.Services.items[service.id as keyof typeof enMessages.Services.items]?.name || service.id,
+                    description: serviceContent?.description || '',
+                };
+            })
+        )
+    );
+
+    const recommendServicePrompt = ai.definePrompt(
+      {
+        name: 'serviceRecommenderPrompt',
+        input: { schema: z.object({ query: z.string(), services: z.any() }) },
+        output: { schema: ServiceRecommenderOutputSchema },
+        prompt: `You are an expert, friendly, and helpful medical assistant for a premier cosmetic and dental clinic called Meva Clinic.
 
 A user will describe their concern or desired outcome. Your task is to analyze their query and recommend the most relevant services from the list provided below.
 
@@ -77,36 +80,26 @@ USER QUERY:
 ---
 
 ---
-AVAILABLE SERVICES (Format: [serviceId] [name] - [description] (slug: [categorySlug]/[serviceSlug])):
+AVAILABLE SERVICES (Format: [serviceId] [name] - [description]):
 {{#each services}}
-- [{{this.id}}] {{this.name}} - {{this.description}} (slug: {{this.categorySlug}}/{{this.slug}})
+- [{{this.id}}] {{this.name}} - {{this.description}}
 {{/each}}
 ---
 `,
-  }
-);
+      }
+    );
 
-
-// --- Genkit Flow ---
-const serviceRecommenderFlow = ai.defineFlow(
-  {
-    name: 'serviceRecommenderFlow',
-    inputSchema: ServiceRecommenderInputSchema,
-    outputSchema: ServiceRecommenderOutputSchema,
-  },
-  async (input) => {
     const { output } = await recommendServicePrompt({
-      query: input.query,
-      services: allServicesWithDetails
+      query: query,
+      services: allServicesForPrompt
     });
 
     if (!output) {
       return { recommendations: [] };
     }
     
-    // Additional validation to ensure the AI didn't hallucinate services
     const validatedRecommendations = output.recommendations.filter(rec => 
-      allServicesWithDetails.some(s => s.id === rec.serviceId)
+        allServicesForPrompt.some(s => s.id === rec.serviceId)
     );
     
     return { recommendations: validatedRecommendations };
