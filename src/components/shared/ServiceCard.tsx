@@ -4,14 +4,14 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/navigation';
 import Image from 'next/image';
-import type { Service } from '@/types/services';
+import type { ServiceWithContent } from '@/types/services';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { stripHtml } from '@/lib/utils';
 
 interface ServiceCardProps {
-  service: Service;
+  service: ServiceWithContent;
   categorySlug: string;
 }
 
@@ -19,8 +19,8 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   const tServices = useTranslations('Services');
   const tNav = useTranslations('Navigation');
   const name = tServices(`items.${service.id}.name`);
-  // For the card, we fetch the short description from the main JSON file
-  const shortDescription = stripHtml(tServices(`items.${service.id}.description`));
+  // Use the description from the service object, which is from the markdown file.
+  const shortDescription = stripHtml(service.description);
   const learnMoreText = tNav('exploreService');
 
   const imageUrl = service.image ? decodeURIComponent(service.image) : undefined;

@@ -1,9 +1,9 @@
 
 import { ServiceCard } from '@/components/shared/ServiceCard';
-import type { Service } from '@/types/services';
+import type { ServiceWithContent } from '@/types/services';
 
 interface DentalServiceListProps {
-  services: Service[];
+  services: ServiceWithContent[];
   categorySlug: string;
 }
 

@@ -1,12 +1,12 @@
 
 import { notFound } from 'next/navigation';
-import { serviceCategories, getCategoryBySlug, dentalCategoryIds } from '@/lib/services';
+import { serviceCategories, getCategoryBySlug, getServiceWithContent, dentalCategoryIds } from '@/lib/services';
 import { PageHeader } from '@/components/shared/PageHeader';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { AestheticServiceList } from '@/components/services/AestheticServiceList';
 import { DentalServiceList } from '@/components/services/DentalServiceList';
-import type { Service } from '@/types/services';
+import type { ServiceWithContent } from '@/types/services';
 
 interface CategoryPageProps {
   params: {
@@ -58,7 +58,13 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
   if (!category) {
     notFound();
   }
-  
+
+  const servicesWithContent: ServiceWithContent[] = await Promise.all(
+    category.services.map(service => 
+      getServiceWithContent(params.locale, category.slug, service.slug)
+    )
+  ).then(results => results.filter((s): s is ServiceWithContent => s !== undefined));
+
   const categoryName = tServices(`categories.${category.id}.name`);
   const categoryDescription = tServices(`categories.${category.id}.description`);
   
@@ -68,11 +74,11 @@ export default async function ServiceCategoryPage({ params }: CategoryPageProps)
     <>
       <PageHeader title={categoryName} description={categoryDescription} />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
-        {category.services.length > 0 ? (
+        {servicesWithContent.length > 0 ? (
           isDental ? (
-            <DentalServiceList services={category.services} categorySlug={category.slug} />
+            <DentalServiceList services={servicesWithContent} categorySlug={category.slug} />
           ) : (
-            <AestheticServiceList services={category.services} categorySlug={category.slug} />
+            <AestheticServiceList services={servicesWithContent} categorySlug={category.slug} />
           )
         ) : (
           <p className="text-center text-lg text-muted-foreground">
