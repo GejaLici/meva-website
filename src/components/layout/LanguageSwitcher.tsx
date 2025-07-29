@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Button } from '../ui/button';
 import { Languages } from 'lucide-react';
+import { useParams } from 'next/navigation';
 import { useTransition } from 'react';
 
 export default function LanguageSwitcher() {
@@ -17,6 +18,7 @@ export default function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
   const [isPending, startTransition] = useTransition();
 
   const locales = supportedLocales.map((code) => ({
@@ -26,7 +28,14 @@ export default function LanguageSwitcher() {
 
   const handleLocaleChange = (nextLocale: string) => {
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      // The params object can be deeply nested and may contain non-serializable values
+      // in some Next.js versions. We ensure it's a flat, clean object.
+      const sanitizedParams = JSON.parse(JSON.stringify(params));
+      router.replace(
+        // @ts-expect-error -- The type of `pathname` is too broad for the compiler to match.
+        { pathname, params: sanitizedParams },
+        { locale: nextLocale }
+      );
     });
   };
 
