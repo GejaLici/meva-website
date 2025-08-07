@@ -72,6 +72,14 @@ export function MobileNav() {
                 >
                   {t('dentalServices')}
                 </Link>
+                 <Separator className="my-2" />
+                <Link
+                  href="/services"
+                  className="block px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t('services')}
+                </Link>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -98,6 +106,14 @@ export function MobileNav() {
             onClick={() => setIsOpen(false)}
           >
             {t('faq')}
+          </Link>
+
+          <Link
+            href="/ai-advisor"
+            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
+            onClick={() => setIsOpen(false)}
+          >
+            {t('aiAdvisor')}
           </Link>
 
           <Link

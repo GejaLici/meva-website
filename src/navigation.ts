@@ -79,6 +79,14 @@ export const pathnames = {
     fr: '/services/dentaires',
     es: '/servicios/dentales'
   },
+  '/ai-advisor': {
+    en: '/ai-advisor',
+    it: '/consulente-ai',
+    sq: '/keshilluesi-ai',
+    de: '/ki-berater',
+    fr: '/conseiller-ia',
+    es: '/asesor-ia'
+  },
   '/services/[categorySlug]/[serviceSlug]': {
     en: '/services/[categorySlug]/[serviceSlug]',
     it: '/servizi/[categorySlug]/[serviceSlug]',

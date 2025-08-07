@@ -13,7 +13,8 @@
     "faq": "FAQ",
     "contact": "Contact",
     "dentalServices": "Dental Services",
-    "exploreService": "Learn more"
+    "exploreService": "Learn more",
+    "aiAdvisor": "AI Advisor"
   },
   "LanguageSwitcher": {
     "changeLanguage": "Change language",
@@ -98,17 +99,17 @@
   },
   "Services": {
     "categories": {
-      "facial-surgery": { "name": "Facial Surgery", "description": "Comprehensive surgical procedures to enhance and rejuvenate facial features." },
-      "facial-treatments": { "name": "Facial Treatments", "description": "Non-surgical treatments to rejuvenate and enhance your facial features." },
-      "body-surgical": { "name": "Surgical Body Contouring", "description": "Transformative surgical procedures to shape and contour your body." },
-      "body-non-surgical": { "name": "Non-Surgical Body Treatments", "description": "Minimally invasive treatments to refine your body shape and improve skin texture." },
-      "aesthetic-dentistry": { "name": "Aesthetic Dentistry", "description": "Enhance your smile with our cosmetic dental treatments." },
-      "prosthetics": { "name": "Prosthetics", "description": "Restore function and aesthetics with high-quality dental prosthetics." },
-      "orthodontics": { "name": "Orthodontics", "description": "Achieve a straighter smile and better oral health with our orthodontic solutions." },
-      "restorative-dentistry": { "name": "Restorative Dentistry", "description": "Restore the health and function of your teeth with our restorative treatments." },
-      "oral-surgery": { "name": "Oral Surgery", "description": "Expert surgical care for complex dental issues." },
-      "pediatric-dentistry": { "name": "Pediatric Dentistry", "description": "Gentle and specialized dental care for our youngest patients." },
-      "dental-summary": { "name": "Comprehensive Dental Services", "description": "From aesthetic enhancements to complex surgical procedures, our dental experts provide a full spectrum of care to ensure your oral health and perfect your smile. Explore our wide range of dental specialties." }
+      "facial-surgery": { "name": "Facial Surgery" },
+      "facial-treatments": { "name": "Facial Treatments" },
+      "body-surgical": { "name": "Surgical Body Contouring" },
+      "body-non-surgical": { "name": "Non-Surgical Body Treatments" },
+      "aesthetic-dentistry": { "name": "Aesthetic Dentistry" },
+      "prosthetics": { "name": "Prosthetics" },
+      "orthodontics": { "name": "Orthodontics" },
+      "restorative-dentistry": { "name": "Restorative Dentistry" },
+      "oral-surgery": { "name": "Oral Surgery" },
+      "pediatric-dentistry": { "name": "Pediatric Dentistry" },
+      "dental-summary": { "name": "Comprehensive Dental Services" }
     },
     "items": {
       "op-hunde": { "name": "Nose Reshaping (Rhinoplasty)" },
@@ -397,5 +398,31 @@
     "title": "Comprehensive Dental Services",
     "description": "From aesthetic enhancements to complex surgical procedures, our dental experts provide a full spectrum of care to ensure your oral health and perfect your smile. Explore our wide range of dental specialties at {siteName}.",
     "noResults": "There are no dental service categories available at the moment. Please contact {siteName} for more details."
+  },
+  "AiAdvisorPage": {
+    "metaTitle": "AI Virtual Advisor | {siteName}",
+    "metaDescription": "Get a personalized aesthetic recommendation from our AI Advisor. Upload a photo and describe your concern to see potential results with {siteName}.",
+    "title": "AI Virtual Advisor",
+    "description": "Curious about what's possible? Use our AI-powered tool for a preliminary virtual consultation. Take or upload a photo, describe your aesthetic goals, and our AI will suggest a potential treatment and generate a simulated 'after' image. This is for informational purposes only and does not replace a professional medical consultation.",
+    "cameraErrorTitle": "Camera Access Denied",
+    "cameraErrorDescription": "Please enable camera permissions in your browser to use this feature.",
+    "photoTakenAlt": "Your captured photo",
+    "cameraPermissionNeeded": "Camera permission is required to take a photo.",
+    "captureButton": "Capture Photo",
+    "uploadButton": "Upload Photo",
+    "problemLabel": "Describe your primary concern",
+    "problemPlaceholder": "e.g., 'I'm unhappy with the bump on my nose,' 'My chin looks weak from the side,' or 'My eyelids look tired and droopy.'",
+    "submitButton": "Get AI Recommendation",
+    "submissionErrorTitle": "Incomplete Information",
+    "submissionErrorDescription": "Please provide both a photo and a description of your concern.",
+    "genericError": "An unexpected error occurred. The AI model may be overloaded. Please try again in a few moments.",
+    "resultTitle": "Your AI-Powered Recommendation",
+    "resultSubtitle": "This is a simulation and not a medical diagnosis. Please consult with our specialists for an accurate assessment.",
+    "recommendedProcedure": "Recommended Procedure",
+    "ourReasoning": "Our Reasoning",
+    "potentialResult": "Simulated Potential Result",
+    "generatedImageAlt": "AI-generated image showing a potential 'after' result",
+    "errorTitle": "Analysis Failed",
+    "tryAgainButton": "Start Over"
   }
 }
