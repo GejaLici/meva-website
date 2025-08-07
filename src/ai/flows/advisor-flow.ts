@@ -36,7 +36,7 @@ const RecommendedServiceSchema = z.object({
 
 const AdvisorOutputSchema = z.object({
   recommendation: RecommendedServiceSchema.describe("The single most relevant service recommendation based on the user's query."),
-  generatedImageUrl: z.string().url().describe("The data URI of the generated 'after' image, showing the potential result of the procedure. It must be a 'data:image/png;base64,...' string.")
+  generatedImageUrl: z.string().describe("The data URI of the generated 'after' image, showing the potential result of the procedure. It must be a 'data:image/png;base64,...' string.")
 });
 export type AdvisorOutput = z.infer<typeof AdvisorOutputSchema>;
 
@@ -56,18 +56,26 @@ const advisorFlow = ai.defineFlow(
   },
   async (input) => {
     // A. First, get the service recommendation.
-    const recommendationResponse = await getRecommendation(input);
-    if (!recommendationResponse.recommendation) {
+    const { output: recommendationOutput } = await getRecommendation(input);
+    if (!recommendationOutput?.recommendation) {
         throw new Error("Could not determine a recommendation.");
     }
     
     // B. Then, generate the "after" image based on the recommendation.
-    const imageResponse = await generateAfterImage(input.photoDataUri, recommendationResponse.recommendation.procedureName, input.problemDescription);
+    const { output: imageResponse } = await generateAfterImage({
+        photoDataUri: input.photoDataUri,
+        procedureName: recommendationOutput.recommendation.procedureName,
+        problemDescription: input.problemDescription
+    });
+
+    if (!imageResponse?.media?.url) {
+        throw new Error("Image generation failed to produce an image.");
+    }
 
     // C. Combine and return the final output.
     return {
-        recommendation: recommendationResponse.recommendation,
-        generatedImageUrl: imageResponse.media!.url,
+        recommendation: recommendationOutput.recommendation,
+        generatedImageUrl: imageResponse.media.url,
     };
   }
 );
@@ -99,7 +107,7 @@ const getRecommendation = ai.defineFlow(
 
         const recommendationPrompt = ai.definePrompt({
             name: 'recommendationPrompt',
-            input: { schema: z.object({ services: z.any(), problem: z.string() }) },
+            input: { schema: z.object({ services: z.any(), problem: z.string(), photoDataUri: z.string() }) },
             output: { schema: z.object({ recommendation: RecommendedServiceSchema.nullable() }) },
             prompt: `You are an expert, friendly, and helpful medical assistant for Meva Clinic.
             
