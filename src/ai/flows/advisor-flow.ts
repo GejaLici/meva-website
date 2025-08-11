@@ -8,6 +8,7 @@
  * - AdvisorOutput - The return type for the virtualAdvisor function.
  */
 
+import { ai } from '@/ai/genkit';
 import { z } from 'zod';
 import { serviceCategories } from '@/lib/services';
 import enMessages from '@/messages/en.json';
@@ -35,14 +36,14 @@ const RecommendedServiceSchema = z.object({
 
 const AdvisorOutputSchema = z.object({
   recommendation: RecommendedServiceSchema.describe("The single most relevant service recommendation based on the user's query."),
-  generatedImageUrl: z.string().describe("The data URI of the 'after' image, showing the potential result of the procedure. This is a static placeholder image.")
+  generatedImageUrl: z.string().describe("The data URI of the 'after' image, showing the potential result of the procedure. This is a dynamically generated image.")
 });
 export type AdvisorOutput = z.infer<typeof AdvisorOutputSchema>;
 
 
-// 2. Create an exported wrapper function with simplified logic
+// 2. Create an exported wrapper function
 export async function virtualAdvisor(input: AdvisorInput): Promise<AdvisorOutput> {
-    const { problemDescription } = input;
+    const { problemDescription, photoDataUri } = input;
     const lowerCaseDescription = problemDescription.toLowerCase();
 
     // Define keywords for each of the three main procedures
@@ -53,15 +54,19 @@ export async function virtualAdvisor(input: AdvisorInput): Promise<AdvisorOutput
     };
 
     let recommendedServiceId: string;
+    let imageGenPrompt: string;
 
-    // Simple keyword matching logic
+    // Simple keyword matching logic to determine recommendation and image generation prompt
     if (keywords.blepharoplasty.some(keyword => lowerCaseDescription.includes(keyword))) {
         recommendedServiceId = 'blefaroplastika';
+        imageGenPrompt = 'Perform a blepharoplasty to remove excess skin from the eyelids for a more youthful and awake appearance. The change should be subtle and natural-looking.';
     } else if (keywords.genioplasty.some(keyword => lowerCaseDescription.includes(keyword))) {
         recommendedServiceId = 'rim-mjekres';
+        imageGenPrompt = 'Perform a genioplasty to augment the chin, creating a more defined and balanced facial profile. The result should look natural and proportional.';
     } else {
         // Default to rhinoplasty if no other keywords match or if nose keywords are present
         recommendedServiceId = 'op-hunde';
+        imageGenPrompt = 'Perform a rhinoplasty to smooth out any bumps on the bridge of the nose and refine the tip. The result should be a natural-looking, harmonious nose that fits the face.';
     }
 
     // Find the full service object based on the determined ID
@@ -89,17 +94,23 @@ export async function virtualAdvisor(input: AdvisorInput): Promise<AdvisorOutput
         reasoning: `Based on your concern regarding "${problemDescription.substring(0, 30)}...", ${procedureName} is often a suitable procedure to address such issues. We recommend a full consultation with our specialists to confirm.`,
     };
 
-    // Return a static "after" image based on the recommendation
-    const afterImages: Record<string, string> = {
-        'op-hunde': '/images/gallery-after-1.jpg', // Replace with a relevant 'after' image for rhinoplasty
-        'rim-mjekres': '/images/gallery-after-2.jpg', // Replace with a relevant 'after' image for genioplasty
-        'blefaroplastika': '/images/gallery-after-3.jpg', // Replace with a relevant 'after' image for blepharoplasty
-    };
-    
-    const generatedImageUrl = afterImages[service.id] || service.image || '/images/aigen.jpeg';
+    // Generate the "after" image
+    const { media } = await ai.generate({
+        model: 'googleai/gemini-2.0-flash-preview-image-generation',
+        prompt: [
+            { media: { url: photoDataUri } },
+            { text: `Generate a realistic 'after' photo. ${imageGenPrompt}` },
+        ],
+        config: {
+            responseModalities: ['TEXT', 'IMAGE'],
+        },
+    });
 
-    // Simulate a delay to mimic processing time
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const generatedImageUrl = media?.url;
+
+    if (!generatedImageUrl) {
+      throw new Error("Could not generate an image. The model may be unavailable or overloaded.");
+    }
 
     return {
         recommendation,
