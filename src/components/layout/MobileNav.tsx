@@ -109,14 +109,6 @@ export function MobileNav() {
           </Link>
 
           <Link
-            href="/ai-advisor"
-            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
-            onClick={() => setIsOpen(false)}
-          >
-            {t('aiAdvisor')}
-          </Link>
-
-          <Link
             href="/contact"
             className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
             onClick={() => setIsOpen(false)}

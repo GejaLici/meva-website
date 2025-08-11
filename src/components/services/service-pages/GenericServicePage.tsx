@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import Image from 'next/image';
@@ -46,7 +47,22 @@ export default function GenericServicePage({ service }: ServicePageProps) {
       <PageHeader title={serviceName} />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          <div>
+          <div className="prose prose-lg max-w-none text-foreground">
+             <ReactMarkdown
+                    components={{
+                        p: ({node, ...props}) => <p className="mb-4" {...props} />,
+                        ul: ({node, ...props}) => <ul className="list-disc pl-5 space-y-2 mb-4" {...props} />,
+                        ol: ({node, ...props}) => <ol className="list-decimal pl-5 space-y-2 mb-4" {...props} />,
+                        h1: ({node, ...props}) => <h1 className="font-headline text-2xl font-semibold mb-4 text-primary" {...props} />,
+                        h2: ({node, ...props}) => <h2 className="font-headline text-xl font-semibold mb-3 text-primary" {...props} />,
+                        h3: ({node, ...props}) => <h3 className="font-headline text-lg font-semibold mb-2 text-primary" {...props} />,
+                        strong: ({node, ...props}) => <strong className="font-semibold" {...props} />,
+                    }}
+                >
+                    {service.description}
+                </ReactMarkdown>
+          </div>
+           <div>
             {service.image && (
               <Card className="overflow-hidden shadow-xl mb-8">
                 <Image
@@ -60,36 +76,23 @@ export default function GenericServicePage({ service }: ServicePageProps) {
                 />
               </Card>
             )}
-          </div>
-          <div className="prose prose-lg max-w-none text-foreground">
-            <h2 className="font-headline text-2xl font-semibold mb-4 text-primary">{tDetails('aboutTitle', { serviceName })}</h2>
-            <div className="mb-6">
-                <ReactMarkdown
-                    components={{
-                        p: ({node, ...props}) => <p className="mb-4" {...props} />,
-                        ul: ({node, ...props}) => <ul className="list-disc pl-5 space-y-2 mb-4" {...props} />,
-                        ol: ({node, ...props}) => <ol className="list-decimal pl-5 space-y-2 mb-4" {...props} />,
-                        strong: ({node, ...props}) => <strong className="font-semibold" {...props} />,
-                    }}
-                >
-                    {service.description}
-                </ReactMarkdown>
+
+             <div className="p-6 rounded-lg bg-muted/50">
+                 <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteName })}</h3>
+                <p className="mb-4 text-sm">
+                  {tDetails('whatToExpectP1', { siteName, serviceName: serviceName.toLowerCase() })}
+                </p>
+                <ul className="list-disc pl-5 mb-6 space-y-1 text-sm">
+                  <li>{tDetails('whatToExpectL1')}</li>
+                  <li>{tDetails('whatToExpectL2')}</li>
+                  <li>{tDetails('whatToExpectL3')}</li>
+                  <li>{tDetails('whatToExpectL4')}</li>
+                </ul>
+                
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
+                  <Link href="/contact">{tDetails('consultationButton')}</Link>
+                </Button>
             </div>
-            
-            <h3 className="font-headline text-xl font-semibold mb-2 text-primary">{tDetails('whatToExpectTitle', { siteName })}</h3>
-            <p className="mb-4">
-              {tDetails('whatToExpectP1', { siteName, serviceName: serviceName.toLowerCase() })}
-            </p>
-            <ul className="list-disc pl-5 mb-6 space-y-1">
-              <li>{tDetails('whatToExpectL1')}</li>
-              <li>{tDetails('whatToExpectL2')}</li>
-              <li>{tDetails('whatToExpectL3')}</li>
-              <li>{tDetails('whatToExpectL4')}</li>
-            </ul>
-            
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">{tDetails('consultationButton')}</Link>
-            </Button>
           </div>
         </div>
         

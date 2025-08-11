@@ -92,7 +92,6 @@ export function Header() {
           <NavLink href="/gallery">{t('gallery')}</NavLink>
           <NavLink href="/blog">{t('blog')}</NavLink>
           <NavLink href="/faq">{t('faq')}</NavLink>
-          <NavLink href="/ai-advisor">{t('aiAdvisor')}</NavLink>
           <NavLink href="/contact">{t('contact')}</NavLink>
         </nav>
         <div className="flex items-center gap-2">

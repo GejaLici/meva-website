@@ -5,10 +5,6 @@ import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
 import { getTranslations } from 'next-intl/server';
 import { serviceCategories, dentalCategoryIds } from '@/lib/services';
 import { Separator } from '@/components/ui/separator';
-import { Lightbulb } from 'lucide-react';
-import dynamic from 'next/dynamic';
-import { Card, CardContent } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'ServicesOverviewPage'});
@@ -18,24 +14,6 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
     description: t('metaDescription', {siteName: tSite('title')}),
   };
 }
-
-const ServiceRecommender = dynamic(
-  () => import('@/components/services/ServiceRecommender').then((mod) => mod.ServiceRecommender),
-  {
-    ssr: false,
-    loading: () => (
-      <Card className="w-full max-w-3xl mx-auto shadow-xl border-accent/50 bg-card">
-        <CardContent className="pt-6">
-          <div className="space-y-4">
-            <Skeleton className="h-[100px] w-full" />
-            <Skeleton className="h-10 w-full" />
-          </div>
-        </CardContent>
-      </Card>
-    ),
-  }
-);
-
 
 export default async function ServicesOverviewPage() {
   const tOverview = await getTranslations('ServicesOverviewPage');
@@ -85,26 +63,6 @@ export default async function ServicesOverviewPage() {
           </div>
           <ServiceCategoryGrid categories={dentalCategories} homePageLayout={false} />
         </section>
-
-        <Separator className="my-12 md:my-16" />
-        
-        <section id="service-recommender" className="py-12 md:py-16 bg-muted/50 rounded-lg">
-           <div className="container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-                <div className="inline-flex items-center justify-center p-3 rounded-full bg-accent text-accent-foreground mb-4">
-                    <Lightbulb className="h-8 w-8" />
-                </div>
-                <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
-                    {tOverview('recommenderTitle')}
-                </h2>
-                <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                    {tOverview('recommenderSubtitle')}
-                </p>
-            </div>
-            <ServiceRecommender />
-           </div>
-        </section>
-
       </div>
     </>
   );
