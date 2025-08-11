@@ -3,12 +3,11 @@
 /**
  * @fileOverview An AI-powered virtual consultation agent.
  *
- * - virtualAdvisor - A function that takes a user's photo and concern, and returns a recommended procedure and a generated "after" image.
+ * - virtualAdvisor - A function that takes a user's photo and concern, and returns a recommended procedure and a "after" image.
  * - AdvisorInput - The input type for the virtualAdvisor function.
  * - AdvisorOutput - The return type for the virtualAdvisor function.
  */
 
-import { ai } from '@/ai/genkit';
 import { z } from 'zod';
 import { serviceCategories } from '@/lib/services';
 import enMessages from '@/messages/en.json';
@@ -36,138 +35,74 @@ const RecommendedServiceSchema = z.object({
 
 const AdvisorOutputSchema = z.object({
   recommendation: RecommendedServiceSchema.describe("The single most relevant service recommendation based on the user's query."),
-  generatedImageUrl: z.string().describe("The data URI of the generated 'after' image, showing the potential result of the procedure. It must be a 'data:image/png;base64,...' string.")
+  generatedImageUrl: z.string().describe("The data URI of the 'after' image, showing the potential result of the procedure. This is a static placeholder image.")
 });
 export type AdvisorOutput = z.infer<typeof AdvisorOutputSchema>;
 
 
-// 2. Create an exported wrapper function
+// 2. Create an exported wrapper function with simplified logic
 export async function virtualAdvisor(input: AdvisorInput): Promise<AdvisorOutput> {
-  return advisorFlow(input);
-}
+    const { problemDescription } = input;
+    const lowerCaseDescription = problemDescription.toLowerCase();
 
+    // Define keywords for each of the three main procedures
+    const keywords = {
+        rhinoplasty: ['nose', 'bump', 'bridge', 'nostril', 'crooked'],
+        genioplasty: ['chin', 'jaw', 'profile', 'weak', 'recessed'],
+        blepharoplasty: ['eyelid', 'eye lid', 'puffy', 'droopy', 'tired eyes', 'bags under eyes'],
+    };
 
-// 3. Define the main Genkit Flow
-const advisorFlow = ai.defineFlow(
-  {
-    name: 'advisorFlow',
-    inputSchema: AdvisorInputSchema,
-    outputSchema: AdvisorOutputSchema,
-  },
-  async (input) => {
-    // A. First, get the service recommendation.
-    const { output: recommendationOutput } = await getRecommendation(input);
-    if (!recommendationOutput?.recommendation) {
-        throw new Error("Could not determine a recommendation.");
+    let recommendedServiceId: string;
+
+    // Simple keyword matching logic
+    if (keywords.blepharoplasty.some(keyword => lowerCaseDescription.includes(keyword))) {
+        recommendedServiceId = 'blefaroplastika';
+    } else if (keywords.genioplasty.some(keyword => lowerCaseDescription.includes(keyword))) {
+        recommendedServiceId = 'rim-mjekres';
+    } else {
+        // Default to rhinoplasty if no other keywords match or if nose keywords are present
+        recommendedServiceId = 'op-hunde';
+    }
+
+    // Find the full service object based on the determined ID
+    const relevantServices = serviceCategories.flatMap(cat =>
+        cat.services.map(svc => ({
+            ...svc,
+            categorySlug: cat.slug
+        }))
+    );
+    const service = relevantServices.find(s => s.id === recommendedServiceId);
+    
+    if (!service) {
+        throw new Error("Could not find a suitable service recommendation.");
     }
     
-    // B. Then, generate the "after" image based on the recommendation.
-    const { output: imageResponse } = await generateAfterImage({
-        photoDataUri: input.photoDataUri,
-        procedureName: recommendationOutput.recommendation.procedureName,
-        problemDescription: input.problemDescription
-    });
+    // Get the English name for the procedure
+    const procedureName = enMessages.Services.items[service.id as keyof typeof enMessages.Services.items]?.name || service.id;
 
-    if (!imageResponse?.media?.url) {
-        throw new Error("Image generation failed to produce an image.");
-    }
-
-    // C. Combine and return the final output.
-    return {
-        recommendation: recommendationOutput.recommendation,
-        generatedImageUrl: imageResponse.media.url,
+    // Create a static recommendation object
+    const recommendation: z.infer<typeof RecommendedServiceSchema> = {
+        serviceId: service.id,
+        serviceSlug: service.slug,
+        categorySlug: service.categorySlug!,
+        procedureName: procedureName,
+        reasoning: `Based on your concern regarding "${problemDescription.substring(0, 30)}...", ${procedureName} is often a suitable procedure to address such issues. We recommend a full consultation with our specialists to confirm.`,
     };
-  }
-);
 
+    // Return a static "after" image based on the recommendation
+    const afterImages: Record<string, string> = {
+        'op-hunde': '/images/gallery-after-1.jpg', // Replace with a relevant 'after' image for rhinoplasty
+        'rim-mjekres': '/images/gallery-after-2.jpg', // Replace with a relevant 'after' image for genioplasty
+        'blefaroplastika': '/images/gallery-after-3.jpg', // Replace with a relevant 'after' image for blepharoplasty
+    };
+    
+    const generatedImageUrl = afterImages[service.id] || service.image || '/images/aigen.jpeg';
 
-// Helper flow for getting the recommendation
-const getRecommendation = ai.defineFlow(
-    {
-        name: 'getRecommendationFlow',
-        inputSchema: AdvisorInputSchema,
-        outputSchema: z.object({ recommendation: RecommendedServiceSchema.nullable() }),
-    },
-    async ({ photoDataUri, problemDescription }) => {
-        const relevantServices = [
-            'op-hunde', // Rhinoplasty
-            'rim-mjekres', // Genioplasty (Chin Augmentation)
-            'blefaroplastika' // Blepharoplasty (Eyelid Surgery)
-        ];
+    // Simulate a delay to mimic processing time
+    await new Promise(resolve => setTimeout(resolve, 1500));
 
-        const servicesForPrompt = serviceCategories
-            .flatMap(cat => cat.services.map(svc => ({...svc, categorySlug: cat.slug})))
-            .filter(svc => relevantServices.includes(svc.id))
-            .map(svc => ({
-                id: svc.id,
-                slug: svc.slug,
-                categorySlug: svc.categorySlug,
-                name: enMessages.Services.items[svc.id as keyof typeof enMessages.Services.items]?.name || svc.id,
-            }));
-
-        const recommendationPrompt = ai.definePrompt({
-            name: 'recommendationPrompt',
-            input: { schema: z.object({ services: z.any(), problem: z.string(), photoDataUri: z.string() }) },
-            output: { schema: z.object({ recommendation: RecommendedServiceSchema.nullable() }) },
-            prompt: `You are an expert, friendly, and helpful medical assistant for Meva Clinic.
-            
-            A user will provide a photo and describe their concern. Your task is to analyze their query and recommend the single most relevant service from the provided list. The focus is on rhinoplasty, chin reshaping, and eyelid surgery.
-            
-            IMPORTANT RULES:
-            1. You MUST recommend exactly ONE service from the list.
-            2. You MUST provide the exact 'serviceId', 'serviceSlug', 'categorySlug', 'procedureName', and a brief, helpful 'reasoning' (1-2 sentences).
-            3. If the query is vague or unrelated, select the most likely service based on the image.
-            
-            USER'S CONCERN:
-            "{{{problem}}}"
-            
-            AVAILABLE SERVICES:
-            {{#each services}}
-            - [{{this.id}}] {{this.name}}
-            {{/each}}
-            
-            PHOTO OF THE USER:
-            {{media url=photoDataUri}}`
-        });
-
-        const { output } = await recommendationPrompt({
-            services: servicesForPrompt,
-            problem: problemDescription,
-            photoDataUri: photoDataUri,
-        });
-
-        return output || { recommendation: null };
-    }
-);
-
-
-// Helper flow for generating the "after" image
-const generateAfterImage = ai.defineFlow(
-    {
-        name: 'generateAfterImageFlow',
-        inputSchema: z.object({
-            photoDataUri: z.string(),
-            procedureName: z.string(),
-            problemDescription: z.string(),
-        }),
-        outputSchema: z.any(), // Output from generate is complex
-    },
-    async ({ photoDataUri, procedureName, problemDescription }) => {
-        const { media } = await ai.generate({
-            model: 'googleai/gemini-2.0-flash-preview-image-generation',
-            prompt: [
-                { media: { url: photoDataUri } },
-                { text: `Based on the user's concern ("${problemDescription}"), generate a realistic 'after' image showing the subtle and aesthetically pleasing result of a ${procedureName}. The result should look natural, professional, and enhance the person's features positively. Do not make exaggerated changes.` },
-            ],
-            config: {
-                responseModalities: ['TEXT', 'IMAGE'],
-            },
-        });
-        
-        if (!media) {
-            throw new Error('Image generation failed to produce an image.');
-        }
-
-        return { media };
-    }
-);
+    return {
+        recommendation,
+        generatedImageUrl
+    };
+}
