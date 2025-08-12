@@ -5,76 +5,19 @@
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 import type { ServiceWithContent } from '@/types/services';
+import GenericServicePage from './service-pages/GenericServicePage';
 
+// All pages use the generic template.
 const componentMap: { [key: string]: React.ComponentType<{ service: ServiceWithContent }> } = {
-  'op-hunde': dynamic(() => import('./service-pages/RhinoplastyPage'), { loading: () => <ServicePageSkeleton /> }),
-  'rim-hunde': dynamic(() => import('./service-pages/NoseTipReshapingPage'), { loading: () => <ServicePageSkeleton /> }),
-  'rim-vesheve': dynamic(() => import('./service-pages/OtoplastyPage'), { loading: () => <ServicePageSkeleton /> }),
-  'mbj-flokeve': dynamic(() => import('./service-pages/HairTransplantPage'), { loading: () => <ServicePageSkeleton /> }),
-  'mbj-mjekres': dynamic(() => import('./service-pages/BeardTransplantPage'), { loading: () => <ServicePageSkeleton /> }),
-  'mbj-vetullave': dynamic(() => import('./service-pages/EyebrowTransplantPage'), { loading: () => <ServicePageSkeleton /> }),
-  'lift-vetullave': dynamic(() => import('./service-pages/EyebrowLiftPage'), { loading: () => <ServicePageSkeleton /> }),
-  'blefaroplastika': dynamic(() => import('./service-pages/BlepharoplastyPage'), { loading: () => <ServicePageSkeleton /> }),
-  'lift-fytyres': dynamic(() => import('./service-pages/FaceLiftPage'), { loading: () => <ServicePageSkeleton /> }),
-  'rim-mjekres': dynamic(() => import('./service-pages/GenioplastyPage'), { loading: () => <ServicePageSkeleton /> }),
-  'lip-reshaping': dynamic(() => import('./service-pages/LipReshapingPage'), { loading: () => <ServicePageSkeleton /> }),
-  'xanthelasma-plasma-arc': dynamic(() => import('./service-pages/XanthelasmaPlasmaArcPage'), { loading: () => <ServicePageSkeleton /> }),
-  'multivitamin-treatment': dynamic(() => import('./service-pages/MultivitaminTreatmentPage'), { loading: () => <ServicePageSkeleton /> }),
-  'eyelids-plasma-arc': dynamic(() => import('./service-pages/EyelidsPlasmaArcPage'), { loading: () => <ServicePageSkeleton /> }),
-  'cheekbone-reshaping': dynamic(() => import('./service-pages/CheekboneReshapingPage'), { loading: () => <ServicePageSkeleton /> }),
-  'microdermabrasion': dynamic(() => import('./service-pages/MicrodermabrasionPage'), { loading: () => <ServicePageSkeleton /> }),
-  'jawline-contouring': dynamic(() => import('./service-pages/JawlineContouringPage'), { loading: () => <ServicePageSkeleton /> }),
-  'wrinkle-fillers': dynamic(() => import('./service-pages/WrinkleFillersPage'), { loading: () => <ServicePageSkeleton /> }),
-  'prp-face': dynamic(() => import('./service-pages/PrpFacePage'), { loading: () => <ServicePageSkeleton /> }),
-  'dark-circles-treatment': dynamic(() => import('./service-pages/DarkCirclesTreatmentPage'), { loading: () => <ServicePageSkeleton /> }),
-  'prp-hair': dynamic(() => import('./service-pages/PrpHairPage'), { loading: () => <ServicePageSkeleton /> }),
-  'white-peeling': dynamic(() => import('./service-pages/WhitePeelingPage'), { loading: () => <ServicePageSkeleton /> }),
-  'microneedling': dynamic(() => import('./service-pages/MicroneedlingPage'), { loading: () => <ServicePageSkeleton /> }),
-  'radiofrequency-face': dynamic(() => import('./service-pages/RadiofrequencyFacePage'), { loading: () => <ServicePageSkeleton /> }),
-  'sulcus-filling': dynamic(() => import('./service-pages/SulcusFillingPage'), { loading: () => <ServicePageSkeleton /> }),
-  'chin-reshaping': dynamic(() => import('./service-pages/ChinReshapingPage'), { loading: () => <ServicePageSkeleton /> }),
-  'zmadh-gjoksit': dynamic(() => import('./service-pages/BreastAugmentationPage'), { loading: () => <ServicePageSkeleton /> }),
-  'lift-gjoksit': dynamic(() => import('./service-pages/BreastLiftPage'), { loading: () => <ServicePageSkeleton /> }),
-  'zvog-gjoksit': dynamic(() => import('./service-pages/BreastReductionPage'), { loading: () => <ServicePageSkeleton /> }),
-  'rikonst-gjoksit': dynamic(() => import('./service-pages/BreastReconstructionPage'), { loading: () => <ServicePageSkeleton /> }),
-  'lift-kraheve': dynamic(() => import('./service-pages/ArmLiftPage'), { loading: () => <ServicePageSkeleton /> }),
-  'rim-barkut': dynamic(() => import('./service-pages/TummyTuckPage'), { loading: () => <ServicePageSkeleton /> }),
-  'liposculptura': dynamic(() => import('./service-pages/LiposculpturePage'), { loading: () => <ServicePageSkeleton /> }),
-  'rim-vitheve-bbl': dynamic(() => import('./service-pages/BblButtockRemodelingPage'), { loading: () => <ServicePageSkeleton /> }),
-  'labioplastika': dynamic(() => import('./service-pages/LabiaplastyPage'), { loading: () => <ServicePageSkeleton /> }),
-  'lift-kofsheve': dynamic(() => import('./service-pages/ThighLiftPage'), { loading: () => <ServicePageSkeleton /> }),
-  'gynecomastia': dynamic(() => import('./service-pages/GynecomastiaPage'), { loading: () => <ServicePageSkeleton /> }),
-  'cellulite-treatment': dynamic(() => import('./service-pages/CelluliteTreatmentPage'), { loading: () => <ServicePageSkeleton /> }),
-  'plasma-arc-body': dynamic(() => import('./service-pages/PlasmaArcBodyPage'), { loading: () => <ServicePageSkeleton /> }),
-  'carboxytherapy': dynamic(() => import('./service-pages/CarboxytherapyPage'), { loading: () => <ServicePageSkeleton /> }),
-  'sclerotherapy': dynamic(() => import('./service-pages/SclerotherapyPage'), { loading: () => <ServicePageSkeleton /> }),
-  'lipolysis': dynamic(() => import('./service-pages/LipolysisPage'), { loading: () => <ServicePageSkeleton /> }),
-  'laser-hair-removal': dynamic(() => import('./service-pages/LaserHairRemovalPage'), { loading: () => <ServicePageSkeleton /> }),
-  'teeth-whitening': dynamic(() => import('./service-pages/TeethWhiteningPage'), { loading: () => <ServicePageSkeleton /> }),
-  'composite-veneers': dynamic(() => import('./service-pages/CompositeVeneersPage'), { loading: () => <ServicePageSkeleton /> }),
-  'emax-veneers': dynamic(() => import('./service-pages/EmaxVeneersPage'), { loading: () => <ServicePageSkeleton /> }),
-  'dental-crowns': dynamic(() => import('./service-pages/DentalCrownsPage'), { loading: () => <ServicePageSkeleton /> }),
-  'dental-bridges': dynamic(() => import('./service-pages/DentalBridgesPage'), { loading: () => <ServicePageSkeleton /> }),
-  'dentures': dynamic(() => import('./service-pages/DenturesPage'), { loading: () => <ServicePageSkeleton /> }),
-  'invisalign': dynamic(() => import('./service-pages/InvisalignPage'), { loading: () => <ServicePageSkeleton /> }),
-  'fixed-braces': dynamic(() => import('./service-pages/FixedBracesPage'), { loading: () => <ServicePageSkeleton /> }),
-  'removable-appliances': dynamic(() => import('./service-pages/RemovableAppliancesPage'), { loading: () => <ServicePageSkeleton /> }),
-  'teeth-cleaning': dynamic(() => import('./service-pages/TeethCleaningPage'), { loading: () => <ServicePageSkeleton /> }),
-  'dental-fillings': dynamic(() => import('./service-pages/DentalFillingsPage'), { loading: () => <ServicePageSkeleton /> }),
-  'root-canal-treatment': dynamic(() => import('./service-pages/RootCanalTreatmentPage'), { loading: () => <ServicePageSkeleton /> }),
-  'tooth-extraction': dynamic(() => import('./service-pages/ToothExtractionPage'), { loading: () => <ServicePageSkeleton /> }),
-  'dental-implants': dynamic(() => import('./service-pages/DentalImplantsPage'), { loading: () => <ServicePageSkeleton /> }),
-  'apical-resection': dynamic(() => import('./service-pages/ApicalResectionPage'), { loading: () => <ServicePageSkeleton /> }),
-  'primary-teeth-care': dynamic(() => import('./service-pages/PrimaryTeethCarePage'), { loading: () => <ServicePageSkeleton /> }),
-  'teeth-fluoridation': dynamic(() => import('./service-pages/TeethFluoridationPage'), { loading: () => <ServicePageSkeleton /> }),
-  'dental-sealants': dynamic(() => import('./service-pages/DentalSealantsPage'), { loading: () => <ServicePageSkeleton /> }),
+  'default': dynamic(() => import('./service-pages/GenericServicePage'), { loading: () => <ServicePageSkeleton /> }),
 };
 
 export function ServicePageDispatcher({ service }: { service: ServiceWithContent }) {
-  const ServiceComponent = componentMap[service.id];
+  // Use the GenericServicePage for all services.
+  const ServiceComponent = componentMap['default'];
 
   if (!ServiceComponent) {
-    // Fallback for any service that might not have a custom component yet
+     // This fallback will likely not be reached as we have a default.
     return <div>Service page for {service.id} not found.</div>;
   }
 
