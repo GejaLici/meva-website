@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import type { ServiceWithContent } from '@/types/services';
 import { Skeleton } from '@/components/ui/skeleton';
+import '@/messages/services/style.css';
 
 const ServiceGallery = dynamic(
   () => import('@/components/services/ServiceGallery').then((mod) => mod.ServiceGallery),
