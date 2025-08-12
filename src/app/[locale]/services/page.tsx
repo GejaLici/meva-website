@@ -46,7 +46,7 @@ export default async function ServicesOverviewPage() {
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
-          <ServiceCategoryGrid categories={aestheticCategories} homePageLayout={false} />
+          <ServiceCategoryGrid categories={aestheticCategories} />
         </section>
 
         <Separator className="my-8 md:my-12" />
@@ -61,7 +61,7 @@ export default async function ServicesOverviewPage() {
             </p>
             <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
           </div>
-          <ServiceCategoryGrid categories={dentalCategories} homePageLayout={false} />
+          <ServiceCategoryGrid categories={dentalCategories} />
         </section>
       </div>
     </>
