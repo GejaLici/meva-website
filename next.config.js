@@ -15,7 +15,7 @@ const nextConfig = {
   },
   webpack: (config, { isServer }) => {
     config.module.rules.push({
-      test: /\.md$/,
+      test: /\.html$/,
       use: 'raw-loader',
     });
 

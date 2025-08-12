@@ -10,7 +10,6 @@ import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import type { ServiceWithContent } from '@/types/services';
-import ReactMarkdown from 'react-markdown';
 import { Skeleton } from '@/components/ui/skeleton';
 
 const ServiceGallery = dynamic(
@@ -47,21 +46,10 @@ export default function GenericServicePage({ service }: ServicePageProps) {
       <PageHeader title={serviceName} />
       <div className="container mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          <div className="prose prose-lg max-w-none text-foreground">
-             <ReactMarkdown
-                    components={{
-                        p: ({node, ...props}) => <p className="mb-4" {...props} />,
-                        ul: ({node, ...props}) => <ul className="list-disc pl-5 space-y-2 mb-4" {...props} />,
-                        ol: ({node, ...props}) => <ol className="list-decimal pl-5 space-y-2 mb-4" {...props} />,
-                        h1: ({node, ...props}) => <h1 className="font-headline text-2xl font-semibold mb-4 text-primary" {...props} />,
-                        h2: ({node, ...props}) => <h2 className="font-headline text-xl font-semibold mb-3 text-primary" {...props} />,
-                        h3: ({node, ...props}) => <h3 className="font-headline text-lg font-semibold mb-2 text-primary" {...props} />,
-                        strong: ({node, ...props}) => <strong className="font-semibold" {...props} />,
-                    }}
-                >
-                    {service.description}
-                </ReactMarkdown>
-          </div>
+          <div 
+            className="prose prose-lg max-w-none text-foreground prose-h1:font-headline prose-h1:text-2xl prose-h1:font-semibold prose-h1:mb-4 prose-h1:text-primary prose-h2:font-headline prose-h2:text-xl prose-h2:font-semibold prose-h2:mb-3 prose-h2:text-primary prose-h3:font-headline prose-h3:text-lg prose-h3:font-semibold prose-h3:mb-2 prose-h3:text-primary prose-p:mb-4 prose-ul:list-disc prose-ul:pl-5 prose-ul:space-y-2 prose-ul:mb-4 prose-ol:list-decimal prose-ol:pl-5 prose-ol:space-y-2 prose-ol:mb-4 prose-strong:font-semibold"
+            dangerouslySetInnerHTML={{ __html: service.description }} 
+          />
            <div>
             {service.image && (
               <Card className="overflow-hidden shadow-xl mb-8">

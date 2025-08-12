@@ -83,10 +83,6 @@ export function Header() {
               <DropdownMenuItem asChild>
                 <Link href="/services/dental">{t('dentalServices')}</Link>
               </DropdownMenuItem>
-               <DropdownMenuSeparator />
-               <DropdownMenuItem asChild>
-                  <Link href="/services">{t('services')}</Link>
-                </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <NavLink href="/gallery">{t('gallery')}</NavLink>
