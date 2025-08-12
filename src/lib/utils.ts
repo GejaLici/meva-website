@@ -1,3 +1,4 @@
+
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -21,5 +22,9 @@ export function formatDate(dateString: string, locale: string, options?: Intl.Da
 
 export function stripHtml(html: string): string {
   if (!html) return '';
-  return html.replace(/<[^>]*>?/gm, '');
+  // First, remove script tags and their content
+  let clean = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gm, '');
+  // Then, remove all other HTML tags
+  clean = clean.replace(/<[^>]*>?/gm, '');
+  return clean;
 }
