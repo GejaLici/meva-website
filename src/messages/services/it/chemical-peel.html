@@ -1,0 +1,1 @@
+Un trattamento di resurfacing della pelle che applica una soluzione chimica sulla pelle per esfoliarla e alla fine farla desquamare, rivelando una pelle più liscia e meno rugosa.

@@ -1,0 +1,1 @@
+Un tratamiento de rejuvenecimiento de la piel que aplica una solución química a la piel para exfoliarla y eventualmente desprenderla, revelando una piel más suave y con menos arrugas.

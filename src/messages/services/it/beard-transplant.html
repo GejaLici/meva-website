@@ -1,0 +1,1 @@
+Simile a un trapianto di capelli, questa procedura comporta il trapianto di follicoli piliferi nella zona della barba per aumentare la densità, riempire le aree diradate o rimodellare la barba.
