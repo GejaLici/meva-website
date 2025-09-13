@@ -16,13 +16,13 @@ import { getFirestore } from 'firebase/firestore';
 // Using these placeholder values WILL cause your application to fail.
 // =================================================================
 const firebaseConfig: FirebaseOptions = {
-  apiKey: "AIzaSyDiQNKo2ypylk2ERrsTJhpMb0M2ts-HKRc",
+  apiKey: "AIzaSyC8e5a-CC9183BTV-hDk3fCprp12345",
   authDomain: "mevaclinic.firebaseapp.com",
   projectId: "mevaclinic",
   storageBucket: "mevaclinic.appspot.com",
   messagingSenderId: "1080954631981",
   appId: "1:1080954631981:web:1deb8a110d6bb81e8f05a4",
-  // measurementId: "REPLACE_WITH_YOUR_MEASUREMENT_ID" // Optional: if you use Google Analytics
+  measurementId: "G-12345678"
 };
 
 
