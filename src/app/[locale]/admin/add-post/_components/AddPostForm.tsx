@@ -50,11 +50,8 @@ export function AddPostForm() {
   async function onSubmit(values: AddPostFormValues) {
     setIsSubmitting(true);
     try {
-      // The content field needs to be a JSON string, so we ensure it's wrapped correctly if it's not already.
-      // For this simple form, we assume the user is writing raw text and we construct a minimal valid structure.
-      const formattedContent = `[{"id":"p1","type":"paragraph","children":[{"type":"text","text":"${values.content.replace(/"/g, '\\"')}"}]}]`;
-
-      const postData = { ...values, content: formattedContent };
+      // The `content` field should be a valid JSON string from the form.
+      const postData = { ...values, content: values.content };
       
       const result = await addBlogPost(postData);
       if (result.success) {
