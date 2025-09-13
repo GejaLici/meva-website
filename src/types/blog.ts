@@ -1,4 +1,7 @@
 
+
+import { Timestamp } from 'firebase/firestore';
+
 // More flexible child type for text content
 export interface RichTextSpan {
   type: 'text';
@@ -66,7 +69,7 @@ export interface BlogPost {
   id: string; // Firestore document ID
   slug: string;
   title: string;
-  date: string; // ISO string
+  date: string | Timestamp; // Can be ISO string or Firestore Timestamp
   author?: string;
   excerpt: string;
   content: ContentBlock[]; // Changed from string

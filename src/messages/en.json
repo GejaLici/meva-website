@@ -392,5 +392,31 @@
     "metaDescription": "Get a personalized aesthetic recommendation from our AI Advisor. Describe your concern to see potential recommendations from {siteName}.",
     "title": "AI Service Recommender",
     "description": "Curious about what's possible? Use our AI-powered tool for a preliminary recommendation. Describe your aesthetic goals, and our AI will suggest potential treatments. This is for informational purposes only and does not replace a professional medical consultation."
+  },
+  "Admin": {
+    "addPostTitle": "Add New Blog Post",
+    "addPostDescription": "Use this form to add a new article to the company blog.",
+    "fieldTitle": "Post Title",
+    "fieldTitlePlaceholder": "e.g., The Benefits of Microneedling",
+    "fieldSlug": "Post Slug",
+    "fieldSlugPlaceholder": "e.g., benefits-of-microneedling",
+    "fieldAuthor": "Author (Optional)",
+    "fieldAuthorPlaceholder": "e.g., Dr. Jane Doe",
+    "fieldCategory": "Category (Optional)",
+    "fieldCategoryPlaceholder": "e.g., Skincare",
+    "fieldImageUrl": "Feature Image URL (Optional)",
+    "fieldImageUrlPlaceholder": "https://...",
+    "fieldImageHint": "Image AI Hint (Optional)",
+    "fieldImageHintPlaceholder": "e.g., person smiling",
+    "fieldExcerpt": "Excerpt",
+    "fieldExcerptPlaceholder": "A short, compelling summary of the article...",
+    "fieldContent": "Content",
+    "fieldContentPlaceholder": "Start writing the main content of the post here. This field only supports plain text for now.",
+    "fieldContentHint": "For now, please provide the content as a single block of plain text. It will be rendered as one paragraph.",
+    "submitPostButton": "Submit Post",
+    "submittingButton": "Submitting...",
+    "postSuccessTitle": "Blog Post Added Successfully",
+    "postSuccessDescription": "Your new post (ID: {postId}) has been added to the database.",
+    "postErrorTitle": "Error Adding Post"
   }
 }
