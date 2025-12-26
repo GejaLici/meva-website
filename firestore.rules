@@ -16,13 +16,11 @@ service cloud.firestore {
       allow read, update, delete: if false; // No one can read/update/delete from client
     }
 
-    // Example for blogPosts: Allow public read, but restrict writes.
-    // You might want to adjust this based on how you manage blog content.
-    // If content is managed via Firebase console or a secure admin panel,
-    // client-side writes could be `if false;` or `if request.auth.uid != null && isAdmin;`
+    // Allow public read for blog posts.
+    // Writes are handled by server-side logic (Server Actions), so client-side writes can be disabled.
     match /blogPosts/{postId} {
       allow read: if true;
-      allow write: if false; // Or more restrictive rules, e.g., for authenticated admins
+      allow write: if false; // Disallow client-side writes for security
     }
   }
 }
