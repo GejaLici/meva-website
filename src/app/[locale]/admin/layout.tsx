@@ -45,7 +45,7 @@ function AdminSidebar() {
                 href={item.href}
                 className={cn(
                   'flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary',
-                  pathname === item.href && 'bg-muted text-primary'
+                  pathname.endsWith(item.href) && 'bg-muted text-primary'
                 )}
               >
                 <item.icon className="h-4 w-4" />
@@ -70,30 +70,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const { user, loading } = useUser();
   const router = useRouter();
   const pathname = usePathname();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient || loading) return;
-
-    const onLoginPage = pathname === '/admin';
-
-    if (!user && !onLoginPage) {
-      // If the user is not logged in and not on the login page,
-      // redirect them to the login page.
-      router.replace('/admin');
-    } else if (user && onLoginPage) {
-      // If the user is logged in and on the login page,
-      // redirect them to the dashboard.
-      router.replace('/admin/dashboard');
-    }
-  }, [user, loading, router, pathname, isClient]);
-
-  // While checking auth state or redirecting, show a loader.
-  if (loading || !isClient) {
+  const isLoginPage = pathname.endsWith('/admin');
+  
+  if (loading) {
     return (
       <div className="flex min-h-screen w-full items-center justify-center">
         <Loader2 className="h-8 w-8 animate-spin" />
@@ -101,7 +80,25 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     );
   }
 
-  // If the user is not authenticated, only render the children (the login page)
+  if (user && isLoginPage) {
+    router.replace('/admin/dashboard');
+    return (
+       <div className="flex min-h-screen w-full items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
+  }
+
+  if (!user && !isLoginPage) {
+    router.replace('/admin');
+    return (
+       <div className="flex min-h-screen w-full items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
+  }
+  
+  // If user is not authenticated, only render the children (the login page)
   if (!user) {
     return <>{children}</>;
   }
@@ -118,4 +115,3 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     </div>
   );
 }
-
