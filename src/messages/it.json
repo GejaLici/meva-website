@@ -316,7 +316,7 @@
     "p1": "Benvenuti a {siteName} (di seguito denominato \"noi\", \"ci\" o \"nostro\"). Siamo fermamente impegnati a proteggere le tue informazioni personali e il tuo diritto fondamentale alla privacy. La presente Informativa sulla Privacy regola il tuo accesso e utilizzo del nostro sito web, {SITE_DOMAIN}, inclusa qualsiasi altra forma di media, canale multimediale, sito web mobile o applicazione mobile correlata o connessa ad esso (collettivamente, il \"Sito\"). Se hai domande o dubbi su questo avviso sulla privacy, o sulle nostre pratiche relative alle tue informazioni personali, ti preghiamo di contattarci all'indirizzo info@{SITE_DOMAIN}.",
     "h2_1": "1. INFORMAZIONI CHE RACCOGLIAMO",
     "p2_1": "Raccogliamo informazioni personali che ci fornisci volontariamente quando ti registri sul Sito, esprimi interesse a ottenere informazioni su di noi o sui nostri prodotti e servizi, quando partecipi ad attività sul Sito o altrimenti quando ci contatti.",
-    "p2_2": "Le informazioni personali che raccogliamo dipendono dal contesto delle tue interazioni con noi e con il Sito, dalle scelte che fai e dai prodotti и funzionalità che utilizzi. Le informazioni personali che possiamo raccogliere includono, ma non si limitano a: nomi completi; numeri di telefono; indirizzi email; indirizzi postali; titoli professionali; preferenze di contatto; dati di autenticazione; indirizzi di fatturazione; e altre informazioni simili necessarie per fornire i nostri servizi e le nostre comunicazioni.",
+    "p2_2": "Le informazioni personali che raccogliamo dipendono dal contesto delle tue interazioni con noi e con il Sito, dalle scelte che fai e dai prodotti e funzionalità che utilizzi. Le informazioni personali che possiamo raccogliere includono, ma non si limitano a: nomi completi; numeri di telefono; indirizzi email; indirizzi postali; titoli professionali; preferenze di contatto; dati di autenticazione; indirizzi di fatturazione; e altre informazioni simili necessarie per fornire i nostri servizi e le nostre comunicazioni.",
     "h2_2": "2. COME UTILIZZIAMO LE TUE INFORMAZIONI",
     "p3_1": "Utilizziamo le informazioni personali raccolte tramite il nostro Sito per una serie di scopi commerciali legittimi come descritto di seguito. Trattiamo le tue informazioni personali per questi scopi facendo affidamento sui nostri legittimi interessi commerciali, al fine di stipulare o eseguire un contratto con te, con il tuo esplicito consenso e/o per la conformità ai nostri obblighi legali.",
     "p3_l1": "Per facilitare la creazione dell'account e il processo di accesso.",
@@ -386,5 +386,14 @@
     "title": "Servizi Dentistici Completi",
     "description": "Dai miglioramenti estetici alle complesse procedure chirurgiche, i nostri esperti dentali forniscono una gamma completa di cure per garantire la tua salute orale e perfezionare il tuo sorriso. Esplora la nostra vasta gamma di specialità dentali presso {siteName}.",
     "noResults": "Al momento non sono disponibili categorie di servizi dentistici. Si prega di contattare {siteName} per maggiori dettagli."
+  },
+  "AdminLogin": {
+    "title": "Accedi al tuo account",
+    "emailLabel": "Email",
+    "emailPlaceholder": "nome@esempio.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Password",
+    "submitButton": "Accedi",
+    "submittingButton": "Accesso in corso..."
   }
 }

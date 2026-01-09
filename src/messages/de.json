@@ -386,5 +386,14 @@
     "title": "Umfassende zahnärztliche Leistungen",
     "description": "Von der ästhetischen Verbesserung bis hin zu komplexen chirurgischen Eingriffen bieten unsere zahnärztlichen Experten eine umfassende Versorgung, um Ihre Mundgesundheit zu gewährleisten und Ihr Lächeln zu perfektionieren. Entdecken Sie unser breites Angebot an zahnärztlichen Fachgebieten in {siteName}.",
     "noResults": "Derzeit sind keine zahnärztlichen Leistungskategorien verfügbar. Bitte kontaktieren Sie {siteName} für weitere Details."
+  },
+  "AdminLogin": {
+    "title": "Melden Sie sich bei Ihrem Konto an",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "name@beispiel.com",
+    "passwordLabel": "Passwort",
+    "passwordPlaceholder": "Passwort",
+    "submitButton": "Anmelden",
+    "submittingButton": "Anmeldung..."
   }
 }

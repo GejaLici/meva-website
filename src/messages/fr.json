@@ -222,7 +222,7 @@
     },
     "faq-3": {
       "question": "Les résultats des traitements esthétiques sont-ils permanents ?",
-      "answer": "<p>La longévité des résultats des traitements esthétiques dépend grandement de la procédure spécifique entreprise, des facteurs individuels du patient comme la génétique et le mode de vie, et de l'entretien continu. Les modifications chirurgicales, telles que la rhinoplastie ou l'augmentation mammaire avec implants, offrent généralement des changements structurels durables, souvent considérés comme permanents, bien que le vieillissement naturel se poursuive. Les traitements non chirurgicaux comme les produits de comblement dermique ou les injections de toxine botulique sont temporaires et nécessitent généralement des traitements de suivi à intervalles réguliers (par exemple, tous les 6 à 18 mois pour les produits de comblement, 3 à 4 mois pour le Botox) pour maintenir l'effet désiré. Les facteurs de style de vie, notamment l'alimentation, l'exposition au soleil, le régime de soins de la peau et le tabagisme, influencent également de manière significative la durabilité des résultats. Nos spécialistes de la {siteName} vous fourniront des attentes réalistes quant à la longévité des résultats lors de votre consultation.</p>"
+      "answer": "<p>La longévité des résultats des traitements esthétiques dépend grandement de la procédure spécifique entreprise, des facteurs individuels du patient comme la génétique et le mode de vie, et de l'entretien continu. Les modifications chirurgicales, telles que la rhinoplastie ou l'augmentation mammaire avec implants, offrent généralement des changements structurels durables, often considérés comme permanents, bien que le vieillissement naturel se poursuive. Les traitements non chirurgicaux comme les produits de comblement dermique ou les injections de toxine botulique sont temporaires et nécessitent généralement des traitements de suivi à intervalles réguliers (par exemple, tous les 6 à 18 mois pour les produits de comblement, 3 à 4 mois pour le Botox) pour maintenir l'effet désiré. Les facteurs de style de vie, notamment l'alimentation, l'exposition au soleil, le régime de soins de la peau et le tabagisme, influencent également de manière significative la durabilité des résultats. Nos spécialistes de la {siteName} vous fourniront des attentes réalistes quant à la longévité des résultats lors de votre consultation.</p>"
     },
     "faq-4": {
       "question": "Quels sont les risques potentiels associés aux procédures esthétiques ?",
@@ -386,5 +386,14 @@
     "title": "Services Dentaires Complets",
     "description": "Des améliorations esthétiques aux procédures chirurgicales complexes, nos experts dentaires fournissent une gamme complète de soins pour assurer votre santé bucco-dentaire et parfaire votre sourire. Explorez notre large éventail de spécialités dentaires à {siteName}.",
     "noResults": "Il n'y a pas de catégories de services dentaires disponibles pour le moment. Veuillez contacter {siteName} pour plus de détails."
+  },
+  "AdminLogin": {
+    "title": "Connectez-vous à votre compte",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "nom@exemple.com",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "Mot de passe",
+    "submitButton": "Se connecter",
+    "submittingButton": "Connexion..."
   }
 }

@@ -386,5 +386,14 @@
     "title": "Servicios Dentales Integrales",
     "description": "Desde mejoras estéticas hasta procedimientos quirúrgicos complejos, nuestros expertos dentales brindan un espectro completo de atención para garantizar su salud bucal y perfeccionar su sonrisa. Explore nuestra amplia gama de especialidades dentales en {siteName}.",
     "noResults": "No hay categorías de servicios dentales disponibles en este momento. Póngase en contacto con {siteName} para obtener más detalles."
+  },
+  "AdminLogin": {
+    "title": "Inicia sesión en tu cuenta",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "nombre@ejemplo.com",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Contraseña",
+    "submitButton": "Iniciar sesión",
+    "submittingButton": "Iniciando sesión..."
   }
 }

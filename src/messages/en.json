@@ -466,5 +466,14 @@
     "deleteErrorTitle": "Error Deleting Post",
     "editAriaLabel": "Edit post",
     "deleteAriaLabel": "Delete post"
+  },
+  "AdminLogin": {
+    "title": "Sign in to your account",
+    "emailLabel": "Email",
+    "emailPlaceholder": "name@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Password",
+    "submitButton": "Sign In",
+    "submittingButton": "Signing in..."
   }
 }
