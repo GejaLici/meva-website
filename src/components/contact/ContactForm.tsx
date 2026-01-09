@@ -1,3 +1,4 @@
+
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -19,11 +20,13 @@ import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { formSchema, type ContactFormValues } from './schema';
+import { usePathname } from 'next/navigation';
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const t = useTranslations('ContactForm');
+  const pathname = usePathname();
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
@@ -38,7 +41,8 @@ export function ContactForm() {
   async function onSubmit(values: ContactFormValues) {
     setIsSubmitting(true);
     try {
-      const result = await submitContactForm(values);
+      const submissionData = { ...values, source: pathname };
+      const result = await submitContactForm(submissionData);
       if (result.success) {
         toast({
           title: t('successTitle'),

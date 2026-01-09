@@ -1,3 +1,4 @@
+
 'use server';
 
 import { db } from '@/lib/firebaseConfig';
@@ -9,7 +10,7 @@ interface SubmitResult {
     error?: string;
 }
 
-export async function submitContactForm(values: ContactFormValues): Promise<SubmitResult> {
+export async function submitContactForm(values: ContactFormValues & { source: string }): Promise<SubmitResult> {
   if (!db) {
     const errorMessage = "Firebase is not configured on the server. The contact form is disabled.";
     console.error(errorMessage);

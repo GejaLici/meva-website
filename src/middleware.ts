@@ -1,3 +1,4 @@
+
 import createMiddleware from 'next-intl/middleware';
 import {locales, pathnames, localePrefix} from './navigation';
 
@@ -22,6 +23,6 @@ export const config = {
 
     // Enable redirects that add a locale prefix
     // (e.g. `/pathnames` -> `/en/pathnames`)
-    '/((?!_next|_vercel|.*\\..*).*)'
+    '/((?!_next|_vercel|api|.*\\..*).*)'
   ]
 };

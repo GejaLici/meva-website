@@ -418,5 +418,53 @@
     "postSuccessTitle": "Blog Post Added Successfully",
     "postSuccessDescription": "Your new post (ID: {postId}) has been added to the database.",
     "postErrorTitle": "Error Adding Post"
+  },
+  "AdminNav": {
+    "dashboard": "Dashboard",
+    "contacts": "Contacts",
+    "blog": "Blog",
+    "signOut": "Sign Out"
+  },
+  "AdminDashboard": {
+    "title": "Dashboard",
+    "welcomeTitle": "Welcome to your Admin Panel",
+    "welcomeDescription": "Use the navigation on the left to manage contact submissions and blog posts."
+  },
+  "AdminContacts": {
+    "title": "Contact Form Submissions",
+    "description": "View and manage all messages submitted through the website's contact forms.",
+    "tableTitle": "Submissions",
+    "tableDescription": "A list of all contact form submissions received.",
+    "headerName": "Name",
+    "headerEmail": "Email",
+    "headerSubject": "Subject",
+    "headerSource": "Source",
+    "headerDate": "Date",
+    "headerActions": "Actions",
+    "noSubmissions": "No contact submissions have been received yet.",
+    "deleteConfirmation": "Are you sure you want to delete this submission? This action cannot be undone.",
+    "deleteSuccessTitle": "Submission Deleted",
+    "deleteSuccessDescription": "The contact submission (ID: {submissionId}) has been permanently deleted.",
+    "deleteErrorTitle": "Error Deleting Submission",
+    "deleteAriaLabel": "Delete submission"
+  },
+  "AdminBlog": {
+    "title": "Blog Management",
+    "description": "Add, edit, or delete blog posts.",
+    "addPost": "Add New Post",
+    "tableTitle": "Blog Posts",
+    "tableDescription": "A list of all articles published on the blog.",
+    "headerTitle": "Title",
+    "headerSlug": "Slug",
+    "headerCategory": "Category",
+    "headerDate": "Date",
+    "headerActions": "Actions",
+    "noPosts": "No blog posts found. Click 'Add New Post' to get started.",
+    "deleteConfirmation": "Are you sure you want to delete this blog post? This action cannot be undone.",
+    "deleteSuccessTitle": "Post Deleted",
+    "deleteSuccessDescription": "The blog post (ID: {postId}) has been permanently deleted.",
+    "deleteErrorTitle": "Error Deleting Post",
+    "editAriaLabel": "Edit post",
+    "deleteAriaLabel": "Delete post"
   }
 }
