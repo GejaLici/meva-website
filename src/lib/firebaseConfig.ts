@@ -2,32 +2,19 @@
 import { initializeApp, getApps, getApp, type FirebaseOptions } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
-// =================================================================
-// IMPORTANT! - TODO: CONFIGURE FIREBASE
-// =================================================================
-// You must replace the following placeholder values with your actual
-// Firebase project's configuration. You can find this in your
-// Firebase project console:
-//
-// Project settings > General > Your apps > Web app > SDK setup and configuration
-//
-// Select "Config" to see these values.
-//
-// Using these placeholder values WILL cause your application to fail.
-// =================================================================
 const firebaseConfig: FirebaseOptions = {
-  apiKey: "AIzaSyC8e5a-CC9183BTV-hDk3fCprp12345",
-  authDomain: "mevaclinic.firebaseapp.com",
-  projectId: "mevaclinic",
-  storageBucket: "mevaclinic.appspot.com",
-  messagingSenderId: "1080954631981",
-  appId: "1:1080954631981:web:1deb8a110d6bb81e8f05a4",
-  measurementId: "G-12345678"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+  measurementId: "YOUR_MEASUREMENT_ID"
 };
 
 
 // Check if the config seems to be properly configured.
-const isConfigured = !!(firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId && !firebaseConfig.apiKey.includes("REPLACE_WITH_YOUR"));
+const isConfigured = !!(firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId && !firebaseConfig.apiKey.includes("YOUR_"));
 
 let app;
 let db;

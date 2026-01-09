@@ -4,13 +4,13 @@ import { getAuth, connectAuthEmulator } from 'firebase/auth';
 import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
 
 const firebaseConfig: FirebaseOptions = {
-  apiKey: "AIzaSyC8e5a-CC9183BTV-hDk3fCprp12345",
-  authDomain: "mevaclinic.firebaseapp.com",
-  projectId: "mevaclinic",
-  storageBucket: "mevaclinic.appspot.com",
-  messagingSenderId: "1080954631981",
-  appId: "1:1080954631981:web:1deb8a110d6bb81e8f05a4",
-  measurementId: "G-12345678"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+  measurementId: "YOUR_MEASUREMENT_ID"
 };
 
 function initialize() {
