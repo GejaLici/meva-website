@@ -9,6 +9,7 @@ import { Link, usePathname } from '@/navigation';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Logo } from '@/components/layout/Logo';
+import { useTranslations } from 'next-intl';
 
 
 function AdminSidebar() {
@@ -66,7 +67,7 @@ function AdminSidebar() {
 
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  const { user, loading, error } = useUser();
+  const { user, loading } = useUser();
   const router = useRouter();
   const pathname = usePathname();
   const [isClient, setIsClient] = useState(false);
@@ -88,16 +89,32 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       </div>
     );
   }
-
-  if (!user && pathname !== '/admin') {
-     return null;
-  }
   
-  if (!user && pathname === '/admin') {
-    return <>{children}</>;
+  if (!user) {
+    if (pathname === '/admin') {
+        return <>{children}</>;
+    }
+    // This case should be handled by the useEffect above, but as a fallback,
+    // we prevent rendering anything until the redirect happens.
+    return null; 
   }
 
+  // If user is authenticated
+  if (pathname === '/admin') {
+    // If they are on the login page, redirect them to the dashboard.
+    // This needs to be in a useEffect to prevent server-side rendering issues.
+    useEffect(() => {
+        router.replace('/admin/dashboard');
+    }, [router]);
+    // Return a loader while redirecting
+    return (
+        <div className="flex min-h-screen w-full items-center justify-center">
+            <Loader2 className="h-8 w-8 animate-spin" />
+        </div>
+    );
+  }
 
+  // If user is logged in and not on the login page, show the admin layout
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <AdminSidebar />
