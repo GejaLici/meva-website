@@ -1,16 +1,26 @@
 
 'use client';
 
-import { getApp, getApps, initializeApp } from 'firebase/app';
-import { getAuth, connectAuthEmulator } from 'firebase/auth';
-import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
+import { getApp, getApps, initializeApp, type FirebaseApp } from 'firebase/app';
+import { getAuth, connectAuthEmulator, type Auth } from 'firebase/auth';
+import { getFirestore, connectFirestoreEmulator, type Firestore } from 'firebase/firestore';
 import { firebaseConfig } from './config';
 
-function initializeFirebase() {
-  const isConfigured = !!(firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId);
+interface FirebaseInstances {
+  app: FirebaseApp | null;
+  auth: Auth | null;
+  db: Firestore | null;
+}
+
+function initializeFirebase(): FirebaseInstances {
+  const isConfigured = !!(
+    firebaseConfig.apiKey &&
+    firebaseConfig.projectId &&
+    firebaseConfig.appId
+  );
 
   if (!isConfigured) {
-    console.warn('Firebase is not configured. Please check your firebaseConfig.');
+    console.warn('Firebase is not configured. Please add your Firebase credentials to the .env file.');
     // Return null or dummy objects if not configured
     return { app: null, auth: null, db: null };
   }

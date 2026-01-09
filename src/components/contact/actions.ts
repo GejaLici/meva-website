@@ -2,7 +2,6 @@
 'use server';
 
 import { getFirestore, serverTimestamp } from 'firebase-admin/firestore';
-import { collection, addDoc } from 'firebase/firestore';
 import { adminAuth } from '@/lib/firebase-admin-config';
 import { formSchema, type ContactFormValues } from './schema';
 
@@ -22,7 +21,7 @@ export async function submitContactForm(values: ContactFormValues & { source: st
   }
 
   try {
-    const docRef = await addDoc(collection(db, "contactSubmissions"), {
+    const docRef = await db.collection("contactSubmissions").add({
       ...values,
       submittedAt: serverTimestamp(),
     });
