@@ -1,7 +1,8 @@
 
 'use server';
 
-import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase-admin/firestore';
+import { getFirestore, serverTimestamp } from 'firebase-admin/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 import { adminAuth } from '@/lib/firebase-admin-config';
 import { formSchema, type ContactFormValues } from './schema';
 
