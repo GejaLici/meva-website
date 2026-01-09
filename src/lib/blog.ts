@@ -1,9 +1,12 @@
 
 'use server';
 
-import { db } from '@/lib/firebaseConfig';
-import { collection, getDocs, query, where, limit, orderBy, addDoc, serverTimestamp } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, query, where, limit, orderBy, addDoc, serverTimestamp } from 'firebase-admin/firestore';
+import { adminAuth, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 import type { BlogPost, ContentBlock } from '@/types/blog';
+
+// Get the Firestore instance from the admin app
+const db = getFirestore(adminAuth.app);
 
 // Helper to convert Firestore timestamp to ISO string
 function toISOString(timestamp: any): string {
@@ -21,10 +24,6 @@ function toISOString(timestamp: any): string {
  * @returns A promise that resolves to an array of all blog posts, sorted by date.
  */
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  if (!db) {
-    console.warn("Firebase is not configured. Returning empty array for blog posts.");
-    return [];
-  }
   try {
     const postsCollection = collection(db, "blogPosts");
     const postsQuery = query(postsCollection, orderBy('date', 'desc'));
@@ -58,10 +57,6 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
  * @returns A promise that resolves to the blog post, or undefined if not found.
  */
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
-   if (!db) {
-    console.warn("Firebase is not configured. Cannot fetch blog post by slug.");
-    return undefined;
-  }
   try {
     const postsCollection = collection(db, "blogPosts");
     const q = query(postsCollection, where("slug", "==", slug), limit(1));
@@ -98,8 +93,10 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefi
  * @returns A promise that resolves to the result of the operation.
  */
 export async function addBlogPost(postData: Omit<BlogPost, 'id' | 'date' | 'content'> & { content: string }) {
-  if (!db) {
-    throw new Error("Firebase is not configured. Cannot add blog post.");
+   // Ensure the user is authenticated before allowing a post to be added.
+  const { currentUser } = await getAuthenticatedAppForUser();
+  if (!currentUser) {
+    throw new Error("Authentication required to add a blog post.");
   }
   
   // Basic validation to ensure content is valid JSON

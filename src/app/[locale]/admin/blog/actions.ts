@@ -1,9 +1,10 @@
 
 'use server';
 
-import { db } from '@/lib/firebaseConfig';
-import { doc, deleteDoc } from 'firebase/firestore';
-import { getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
+import { getFirestore, doc, deleteDoc } from 'firebase-admin/firestore';
+import { adminAuth, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
+
+const db = getFirestore(adminAuth.app);
 
 // This action can only be successfully called by an authenticated user
 export async function deleteBlogPost(postId: string) {
@@ -13,10 +14,6 @@ export async function deleteBlogPost(postId: string) {
 
   if (!currentUser) {
      return { success: false, error: 'Authentication required.' };
-  }
-
-  if (!db) {
-    return { success: false, error: "Firebase is not configured on the server." };
   }
   
   if (!postId) {

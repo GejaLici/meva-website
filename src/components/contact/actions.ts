@@ -1,9 +1,11 @@
 
 'use server';
 
-import { db } from '@/lib/firebaseConfig';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase-admin/firestore';
+import { adminAuth } from '@/lib/firebase-admin-config';
 import { formSchema, type ContactFormValues } from './schema';
+
+const db = getFirestore(adminAuth.app);
 
 interface SubmitResult {
     success: boolean;
@@ -11,12 +13,6 @@ interface SubmitResult {
 }
 
 export async function submitContactForm(values: ContactFormValues & { source: string }): Promise<SubmitResult> {
-  if (!db) {
-    const errorMessage = "Firebase is not configured on the server. The contact form is disabled.";
-    console.error(errorMessage);
-    return { success: false, error: errorMessage };
-  }
-
   const validationResult = formSchema.safeParse(values);
 
   if (!validationResult.success) {
@@ -36,7 +32,7 @@ export async function submitContactForm(values: ContactFormValues & { source: st
     let errorMessage = "Failed to send message due to a server error.";
     if (error instanceof Error && error.message.includes('PERMISSION_DENIED')) {
         errorMessage = "Failed to send message. Please ensure Firebase configuration is correct and permissions are set.";
-        console.error("Firebase permission denied. Check Firestore rules and firebaseConfig.ts credentials.");
+        console.error("Firebase permission denied. Check Firestore rules and configuration.");
     }
     return { success: false, error: errorMessage };
   }
