@@ -56,7 +56,7 @@ export default function GenericServicePage({ service }: ServicePageProps) {
                             <CardTitle className="font-headline text-xl">{tDetails('whatToExpectTitle', {siteName})}</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
-                            <p className="text-sm text-muted-foreground">{tDetails('whatToExpectP1', {serviceName})}</p>
+                            <p className="text-sm text-muted-foreground">{tDetails('whatToExpectP1', {siteName, serviceName})}</p>
                              <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
                                 <li>{tDetails('whatToExpectL1')}</li>
                                 <li>{tDetails('whatToExpectL2')}</li>
