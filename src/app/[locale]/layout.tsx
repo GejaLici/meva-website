@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
 import {getTranslations} from 'next-intl/server';
 import { locales } from '@/navigation';
+import { FirebaseProvider } from '@/firebase/provider';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -53,12 +54,14 @@ export default function RootLayout({
     <html lang={locale} className={`${inter.variable} ${poppins.variable}`}>
       <body className="font-body antialiased flex flex-col min-h-screen bg-background">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-          <Toaster />
+          <FirebaseProvider>
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+            <Toaster />
+          </FirebaseProvider>
         </NextIntlClientProvider>
       </body>
     </html>
