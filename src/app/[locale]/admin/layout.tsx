@@ -1,15 +1,16 @@
 
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { useUser, useAuth } from '@/firebase';
-import { useRouter } from '@/navigation';
+import React, { useEffect } from 'react';
+import { useUser } from '@/firebase';
+import { useRouter, usePathname } from '@/navigation';
 import { Loader2, Newspaper, Mail, LogOut, LayoutDashboard } from 'lucide-react';
-import { Link, usePathname } from '@/navigation';
+import { Link } from '@/navigation';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Logo } from '@/components/layout/Logo';
 import { useTranslations } from 'next-intl';
+import { useAuth } from '@/firebase';
 
 
 function AdminSidebar() {
@@ -71,7 +72,22 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const router = useRouter();
   const pathname = usePathname();
   const isLoginPage = pathname.endsWith('/admin');
-  
+
+  useEffect(() => {
+    if (loading) return; // Wait for user status to be determined
+
+    // If user is not logged in and not on the login page, redirect to login
+    if (!user && !isLoginPage) {
+      router.replace('/admin');
+    }
+
+    // If user is logged in and on the login page, redirect to dashboard
+    if (user && isLoginPage) {
+      router.replace('/admin/dashboard');
+    }
+  }, [user, loading, isLoginPage, router, pathname]);
+
+  // While loading authentication status, show a spinner to prevent flashes of content
   if (loading) {
     return (
       <div className="flex min-h-screen w-full items-center justify-center">
@@ -80,38 +96,42 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     );
   }
 
-  if (user && isLoginPage) {
-    router.replace('/admin/dashboard');
-    return (
-       <div className="flex min-h-screen w-full items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin" />
-      </div>
-    );
-  }
-
+  // If there's no user and we are not on the login page, the useEffect will redirect.
+  // In the meantime, show a loader to prevent rendering the protected layout.
   if (!user && !isLoginPage) {
-    router.replace('/admin');
-    return (
-       <div className="flex min-h-screen w-full items-center justify-center">
+     return (
+      <div className="flex min-h-screen w-full items-center justify-center">
         <Loader2 className="h-8 w-8 animate-spin" />
       </div>
     );
   }
   
-  // If user is not authenticated, only render the children (the login page)
-  if (!user) {
-    return <>{children}</>;
+  // If user is logged in OR we are on the login page (and there's no user yet), render the layout.
+  // The login page itself will be rendered via the {children} prop.
+  if (user || isLoginPage) {
+      // If user is authenticated, render the full admin layout with sidebar
+      if(user && !isLoginPage){
+         return (
+            <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+            <AdminSidebar />
+            <div className="flex flex-col">
+                <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
+                {children}
+                </main>
+            </div>
+            </div>
+        );
+      }
+      
+      // If user is not authenticated, but we are on the login page, just render children
+      return <>{children}</>
   }
-
-  // If user is authenticated, render the full admin layout with sidebar
+  
+  // Fallback loader
   return (
-    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-      <AdminSidebar />
-      <div className="flex flex-col">
-        <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-          {children}
-        </main>
+      <div className="flex min-h-screen w-full items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin" />
       </div>
-    </div>
-  );
+    );
 }
+
