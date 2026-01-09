@@ -77,11 +77,22 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   }, []);
 
   useEffect(() => {
-    if (isClient && !loading && !user && pathname !== '/admin') {
+    if (!isClient || loading) return;
+
+    const onLoginPage = pathname === '/admin';
+
+    if (!user && !onLoginPage) {
+      // If the user is not logged in and not on the login page,
+      // redirect them to the login page.
       router.replace('/admin');
+    } else if (user && onLoginPage) {
+      // If the user is logged in and on the login page,
+      // redirect them to the dashboard.
+      router.replace('/admin/dashboard');
     }
   }, [user, loading, router, pathname, isClient]);
 
+  // While checking auth state or redirecting, show a loader.
   if (loading || !isClient) {
     return (
       <div className="flex min-h-screen w-full items-center justify-center">
@@ -89,37 +100,17 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       </div>
     );
   }
-  
+
+  // If the user is not authenticated, only render the children (the login page)
   if (!user) {
-    if (pathname === '/admin') {
-        return <>{children}</>;
-    }
-    // This case should be handled by the useEffect above, but as a fallback,
-    // we prevent rendering anything until the redirect happens.
-    return null; 
+    return <>{children}</>;
   }
 
-  // If user is authenticated
-  if (pathname === '/admin') {
-    // If they are on the login page, redirect them to the dashboard.
-    // This needs to be in a useEffect to prevent server-side rendering issues.
-    useEffect(() => {
-        router.replace('/admin/dashboard');
-    }, [router]);
-    // Return a loader while redirecting
-    return (
-        <div className="flex min-h-screen w-full items-center justify-center">
-            <Loader2 className="h-8 w-8 animate-spin" />
-        </div>
-    );
-  }
-
-  // If user is logged in and not on the login page, show the admin layout
+  // If user is authenticated, render the full admin layout with sidebar
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <AdminSidebar />
       <div className="flex flex-col">
-         {/* Mobile Nav would go here if needed */}
         <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
           {children}
         </main>
@@ -127,3 +118,4 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     </div>
   );
 }
+
