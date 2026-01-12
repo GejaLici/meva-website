@@ -1,5 +1,5 @@
 
-import { getApps, initializeApp, cert, getApp } from 'firebase-admin/app';
+import { getApps, initializeApp, cert, getApp, App } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { headers } from 'next/headers';
 import { DecodedIdToken } from 'firebase-admin/auth';
@@ -8,21 +8,28 @@ const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_KEY
   ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY)
   : null;
 
-const app =
-  getApps().length > 0
-    ? getApp('firebase-admin-app')
-    : initializeApp(
-        {
-          credential: serviceAccount ? cert(serviceAccount) : undefined,
-        },
-        'firebase-admin-app'
-      );
+let app: App | null = null;
+if (getApps().length > 0) {
+  app = getApp('firebase-admin-app');
+} else if (serviceAccount) {
+  app = initializeApp(
+    {
+      credential: cert(serviceAccount),
+    },
+    'firebase-admin-app'
+  );
+}
 
-const auth = getAuth(app);
+const auth = app ? getAuth(app) : null;
 
 export { auth as adminAuth };
 
 export async function getAuthenticatedAppForUser() {
+  if (!auth) {
+    console.warn("Firebase Admin SDK not initialized. Cannot authenticate user.");
+    return { app: null, currentUser: null };
+  }
+  
   const idToken = headers().get('Authorization')?.split('Bearer ')[1];
 
   if (!idToken) {
