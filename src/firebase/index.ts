@@ -13,6 +13,11 @@ interface FirebaseInstances {
 }
 
 function initializeFirebase(): FirebaseInstances {
+  if (!firebaseConfig) {
+    console.warn('Firebase is not configured. Please add your Firebase credentials to the .env file.');
+    return { app: null, auth: null, db: null };
+  }
+
   const isConfigured = !!(
     firebaseConfig.apiKey &&
     firebaseConfig.projectId &&
