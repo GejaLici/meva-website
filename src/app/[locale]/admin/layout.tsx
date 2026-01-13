@@ -74,21 +74,25 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const isLoginPage = pathname.endsWith('/admin');
 
   useEffect(() => {
-    if (loading) return; // Wait for user status to be determined
+    // Don't do anything while loading
+    if (loading) return;
 
-    // If user is not logged in and not on the login page, redirect to login
+    // If the user is not logged in and is not on the login page,
+    // redirect them to the login page.
     if (!user && !isLoginPage) {
       router.replace('/admin');
     }
 
-    // If user is logged in and on the login page, redirect to dashboard
+    // If the user is logged in and is on the login page,
+    // redirect them to the dashboard.
     if (user && isLoginPage) {
       router.replace('/admin/dashboard');
     }
-  }, [user, loading, isLoginPage, router, pathname]);
+  }, [user, loading, isLoginPage, pathname, router]);
 
-  // While loading authentication status, show a spinner to prevent flashes of content
-  if (loading) {
+
+  // While loading, or if a redirect is in progress, show a loader.
+  if (loading || (!user && !isLoginPage) || (user && isLoginPage)) {
     return (
       <div className="flex min-h-screen w-full items-center justify-center">
         <Loader2 className="h-8 w-8 animate-spin" />
@@ -96,42 +100,29 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     );
   }
 
-  // If there's no user and we are not on the login page, the useEffect will redirect.
-  // In the meantime, show a loader to prevent rendering the protected layout.
-  if (!user && !isLoginPage) {
-     return (
-      <div className="flex min-h-screen w-full items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin" />
+  // If the user is logged in and not on the login page, show the admin layout
+  if (user && !isLoginPage) {
+    return (
+      <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+        <AdminSidebar />
+        <div className="flex flex-col">
+          <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
+            {children}
+          </main>
+        </div>
       </div>
     );
   }
-  
-  // If user is logged in OR we are on the login page (and there's no user yet), render the layout.
-  // The login page itself will be rendered via the {children} prop.
-  if (user || isLoginPage) {
-      // If user is authenticated, render the full admin layout with sidebar
-      if(user && !isLoginPage){
-         return (
-            <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-            <AdminSidebar />
-            <div className="flex flex-col">
-                <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-                {children}
-                </main>
-            </div>
-            </div>
-        );
-      }
-      
-      // If user is not authenticated, but we are on the login page, just render children
-      return <>{children}</>
-  }
-  
-  // Fallback loader
-  return (
-      <div className="flex min-h-screen w-full items-center justify-center">
-        <Loader2 className="h-8 w-8 animate-spin" />
-      </div>
-    );
-}
 
+  // If there's no user and we are on the login page, render the login page itself.
+  if (!user && isLoginPage) {
+    return <>{children}</>;
+  }
+
+  // As a fallback, show a loader
+  return (
+    <div className="flex min-h-screen w-full items-center justify-center">
+      <Loader2 className="h-8 w-8 animate-spin" />
+    </div>
+  );
+}
