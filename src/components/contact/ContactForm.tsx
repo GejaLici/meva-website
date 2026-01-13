@@ -33,6 +33,7 @@ export function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
+      phone: '',
       subject: '',
       message: '',
     },
@@ -91,6 +92,19 @@ export function ContactForm() {
               <FormLabel>{t('emailLabel')}</FormLabel>
               <FormControl>
                 <Input placeholder={t('emailPlaceholder')} {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('phoneLabel')}</FormLabel>
+              <FormControl>
+                <Input placeholder={t('phonePlaceholder')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

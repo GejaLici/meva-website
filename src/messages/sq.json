@@ -61,6 +61,8 @@
     "namePlaceholder": "Shkruani emrin tuaj të plotë",
     "emailLabel": "Adresa Email",
     "emailPlaceholder": "Shkruani adresën tuaj email",
+    "phoneLabel": "Numri i telefonit",
+    "phonePlaceholder": "Shkruani numrin tuaj të telefonit",
     "subjectLabel": "Subjekti",
     "subjectPlaceholder": "Cili është subjekti i mesazhit tuaj?",
     "messageLabel": "Mesazhi",

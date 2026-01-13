@@ -62,6 +62,8 @@
     "namePlaceholder": "Enter your full name",
     "emailLabel": "Email Address",
     "emailPlaceholder": "Enter your email address",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
     "subjectLabel": "Subject",
     "subjectPlaceholder": "What is the subject of your message?",
     "messageLabel": "Message",

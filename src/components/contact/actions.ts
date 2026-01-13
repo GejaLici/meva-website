@@ -3,7 +3,8 @@
 
 import { getFirestore, serverTimestamp } from 'firebase-admin/firestore';
 import { adminAuth } from '@/lib/firebase-admin-config';
-import { formSchema, type ContactFormValues } from './schema';
+import { formSchema } from './schema';
+import type { ContactFormValues } from './schema';
 
 const db = getFirestore(adminAuth.app);
 

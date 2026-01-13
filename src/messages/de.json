@@ -62,6 +62,8 @@
     "namePlaceholder": "Geben Sie Ihren vollständigen Namen ein",
     "emailLabel": "E-Mail-Adresse",
     "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "phoneLabel": "Telefonnummer",
+    "phonePlaceholder": "Geben Sie Ihre Telefonnummer ein",
     "subjectLabel": "Betreff",
     "subjectPlaceholder": "Was ist der Betreff Ihrer Nachricht?",
     "messageLabel": "Nachricht",
