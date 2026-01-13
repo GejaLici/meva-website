@@ -40,6 +40,14 @@ export const pathnames = {
     fr: '/blog',
     es: '/blog'
   },
+  '/blog/[slug]': {
+    en: '/blog/[slug]',
+    it: '/blog/[slug]',
+    sq: '/blog/[slug]',
+    de: '/blog/[slug]',
+    fr: '/blog/[slug]',
+    es: '/blog/[slug]'
+  },
    '/faq': {
     en: '/faq',
     it: '/faq',
@@ -119,6 +127,14 @@ export const pathnames = {
     de: '/leistungen/zahnmedizin',
     fr: '/services/dentaires',
     es: '/servicios/dentales'
+  },
+  '/services/[categorySlug]': {
+    en: '/services/[categorySlug]',
+    it: '/servizi/[categorySlug]',
+    sq: '/sherbimet/[categorySlug]',
+    de: '/leistungen/[categorySlug]',
+    fr: '/services/[categorySlug]',
+    es: '/servicios/[categorySlug]'
   },
   '/services/[categorySlug]/[serviceSlug]': {
     en: '/services/[categorySlug]/[serviceSlug]',
