@@ -3,7 +3,6 @@ import type { ServiceCategory, Service, ServiceWithContent } from '@/types/servi
 
 const facialSurgeryServices: Service[] = [
   { id: 'rhinoplasty', slug: 'rhinoplasty', image: '/images/woman-getting-ready-nose-job-surgery%20(e).jpg', imageHint: 'nose surgery detail', gallery: [{url: "/images/galleries/rhinoplasty-1.png", hint: "rhinoplasty consultation"}, {url: "/images/galleries/rhinoplasty-2.png", hint: "surgical markup"}, {url: "/images/galleries/rhinoplasty-3.png", hint: "post-op checkup"}] },
-  { id: 'nose-tip-reshaping', slug: 'nose-tip-reshaping', image: '/images/Nose-Tip-Reshaping.png', imageHint: 'nose tip surgery', gallery: [{url: "/images/galleries/nose-tip-reshaping-1.png", hint: "nose tip detail"}, {url: "/images/galleries/nose-tip-reshaping-2.png", hint: "suture placement"}, {url: "/images/galleries/nose-tip-reshaping-3.png", hint: "healing process"}] },
   { id: 'otoplasty', slug: 'otoplasty', image: '/images/otoplasty.png', imageHint: 'otoplasty results', gallery: [{url: "/images/galleries/otoplasty-1.png", hint: "ear before surgery"}, {url: "/images/galleries/otoplasty-2.png", hint: "ear after surgery"}, {url: "/images/galleries/otoplasty-3.png", hint: "otoplasty technique"}] },
   { id: 'hair-transplant', slug: 'hair-transplant', image: '/images/hair-transplant.png', imageHint: 'hair transplant before after', gallery: [{url: "/images/galleries/hair-transplant-1.png", hint: "donor area"}, {url: "/images/galleries/hair-transplant-2.png", hint: "follicle extraction"}, {url: "/images/galleries/hair-transplant-3.png", hint: "recipient area"}] },
   { id: 'beard-transplant', slug: 'beard-transplant', image: '/images/Beard-Transplant.png', imageHint: 'Beard Transplant results', gallery: [{url: "/images/galleries/beard-transplant-1.png", hint: "patchy beard before"}, {url: "/images/galleries/beard-transplant-2.png", hint: "full beard after"}, {url: "/images/galleries/beard-transplant-3.png", hint: "beard design"}] },
@@ -246,7 +245,6 @@ const importServiceHtml = (locale: string, serviceId: string) => {
         case 'de/microdermabrasion': return import('@/messages/services/de/microdermabrasion.html');
         case 'de/microneedling': return import('@/messages/services/de/microneedling.html');
         case 'de/multivitamin-treatment': return import('@/messages/services/de/multivitamin-treatment.html');
-        case 'de/nose-tip-reshaping': return import('@/messages/services/de/nose-tip-reshaping.html');
         case 'de/otoplasty': return import('@/messages/services/de/otoplasty.html');
         case 'de/plasma-arc-body': return import('@/messages/services/de/plasma-arc-body.html');
         case 'de/primary-teeth-care': return import('@/messages/services/de/primary-teeth-care.html');
@@ -307,7 +305,6 @@ const importServiceHtml = (locale: string, serviceId: string) => {
         case 'en/microdermabrasion': return import('@/messages/services/en/microdermabrasion.html');
         case 'en/microneedling': return import('@/messages/services/en/microneedling.html');
         case 'en/multivitamin-treatment': return import('@/messages/services/en/multivitamin-treatment.html');
-        case 'en/nose-tip-reshaping': return import('@/messages/services/en/nose-tip-reshaping.html');
         case 'en/otoplasty': return import('@/messages/services/en/otoplasty.html');
         case 'en/plasma-arc-body': return import('@/messages/services/en/plasma-arc-body.html');
         case 'en/primary-teeth-care': return import('@/messages/services/en/primary-teeth-care.html');
@@ -368,7 +365,6 @@ const importServiceHtml = (locale: string, serviceId: string) => {
         case 'es/microdermabrasion': return import('@/messages/services/es/microdermabrasion.html');
         case 'es/microneedling': return import('@/messages/services/es/microneedling.html');
         case 'es/multivitamin-treatment': return import('@/messages/services/es/multivitamin-treatment.html');
-        case 'es/nose-tip-reshaping': return import('@/messages/services/es/nose-tip-reshaping.html');
         case 'es/otoplasty': return import('@/messages/services/es/otoplasty.html');
         case 'es/plasma-arc-body': return import('@/messages/services/es/plasma-arc-body.html');
         case 'es/primary-teeth-care': return import('@/messages/services/es/primary-teeth-care.html');
@@ -429,7 +425,6 @@ const importServiceHtml = (locale: string, serviceId: string) => {
         case 'fr/microdermabrasion': return import('@/messages/services/fr/microdermabrasion.html');
         case 'fr/microneedling': return import('@/messages/services/fr/microneedling.html');
         case 'fr/multivitamin-treatment': return import('@/messages/services/fr/multivitamin-treatment.html');
-        case 'fr/nose-tip-reshaping': return import('@/messages/services/fr/nose-tip-reshaping.html');
         case 'fr/otoplasty': return import('@/messages/services/fr/otoplasty.html');
         case 'fr/plasma-arc-body': return import('@/messages/services/fr/plasma-arc-body.html');
         case 'fr/primary-teeth-care': return import('@/messages/services/fr/primary-teeth-care.html');
@@ -490,7 +485,6 @@ const importServiceHtml = (locale: string, serviceId: string) => {
         case 'it/microdermabrasion': return import('@/messages/services/it/microdermabrasion.html');
         case 'it/microneedling': return import('@/messages/services/it/microneedling.html');
         case 'it/multivitamin-treatment': return import('@/messages/services/it/multivitamin-treatment.html');
-        case 'it/nose-tip-reshaping': return import('@/messages/services/it/nose-tip-reshaping.html');
         case 'it/otoplasty': return import('@/messages/services/it/otoplasty.html');
         case 'it/plasma-arc-body': return import('@/messages/services/it/plasma-arc-body.html');
         case 'it/primary-teeth-care': return import('@/messages/services/it/primary-teeth-care.html');
@@ -551,7 +545,6 @@ const importServiceHtml = (locale: string, serviceId: string) => {
         case 'sq/microdermabrasion': return import('@/messages/services/sq/microdermabrasion.html');
         case 'sq/microneedling': return import('@/messages/services/sq/microneedling.html');
         case 'sq/multivitamin-treatment': return import('@/messages/services/sq/multivitamin-treatment.html');
-        case 'sq/nose-tip-reshaping': return import('@/messages/services/sq/nose-tip-reshaping.html');
         case 'sq/otoplasty': return import('@/messages/services/sq/otoplasty.html');
         case 'sq/plasma-arc-body': return import('@/messages/services/sq/plasma-arc-body.html');
         case 'sq/primary-teeth-care': return import('@/messages/services/sq/primary-teeth-care.html');
@@ -608,5 +601,7 @@ export const getServiceWithContent = async (
     }
   }
 };
+
+    
 
     

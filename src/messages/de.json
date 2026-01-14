@@ -114,7 +114,6 @@
     },
     "items": {
       "rhinoplasty": { "name": "Nasenkorrektur (Rhinoplastik)" },
-      "nose-tip-reshaping": { "name": "Nasenspitzenkorrektur" },
       "otoplasty": { "name": "Ohrenkorrektur (Otoplastik)" },
       "hair-transplant": { "name": "Haartransplantation" },
       "beard-transplant": { "name": "Barttransplantation" },
@@ -399,3 +398,5 @@
     "submittingButton": "Anmeldung..."
   }
 }
+
+    

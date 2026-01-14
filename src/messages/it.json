@@ -114,7 +114,6 @@
     },
     "items": {
       "rhinoplasty": { "name": "Rinoplastica" },
-      "nose-tip-reshaping": { "name": "Rimodellamento della Punta del Naso" },
       "otoplasty": { "name": "Otoplastica" },
       "hair-transplant": { "name": "Trapianto di Capelli" },
       "beard-transplant": { "name": "Trapianto di Barba" },
@@ -399,3 +398,5 @@
     "submittingButton": "Accesso in corso..."
   }
 }
+
+    

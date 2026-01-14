@@ -114,7 +114,6 @@
     },
     "items": {
       "rhinoplasty": { "name": "Nose Reshaping (Rhinoplasty)" },
-      "nose-tip-reshaping": { "name": "Nose Tip Reshaping" },
       "otoplasty": { "name": "Ear Reshaping (Otoplasty)" },
       "hair-transplant": { "name": "Hair Transplant" },
       "beard-transplant": { "name": "Beard Transplant" },
@@ -414,7 +413,7 @@
     "fieldExcerptPlaceholder": "A short, compelling summary of the article...",
     "fieldContent": "Content (JSON Format)",
     "fieldContentPlaceholder": "Enter the content as a valid JSON string...",
-    "fieldContentHint": "Content must be a valid JSON string representing a ContentBlock[]. Example: [{\"id\":\"p1\",\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"text\":\"This is the first paragraph.\"}]}]",
+    "fieldContentHint": "Content must be a valid JSON string representing a ContentBlock[]. Example: [{\\\"id\\\":\\\"p1\\\",\\\"type\\\":\\\"paragraph\\\",\\\"children\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"This is the first paragraph.\\\"}]}]",
     "submitPostButton": "Submit Post",
     "submittingButton": "Submitting...",
     "postSuccessTitle": "Blog Post Added Successfully",
@@ -479,3 +478,5 @@
     "submittingButton": "Signing in..."
   }
 }
+
+    

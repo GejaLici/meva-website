@@ -113,7 +113,6 @@
     },
     "items": {
       "rhinoplasty": { "name": "Rinoplastika" },
-      "nose-tip-reshaping": { "name": "Rimodelimi i majës së hundës" },
       "otoplasty": { "name": "Otoplastika" },
       "hair-transplant": { "name": "Mbjellja e flokëve" },
       "beard-transplant": { "name": "Mbjellja mjekrës" },
@@ -319,3 +318,5 @@
     "submittingButton": "Duke hyrë..."
   }
 }
+
+    
