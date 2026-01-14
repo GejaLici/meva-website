@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -40,7 +41,7 @@ export default function GenericServicePage({ service }: ServicePageProps) {
       <PageHeader title={serviceName} description={serviceExcerpt} />
       
       {encodedFeatureImageUrl && (
-        <div className="relative w-full h-64 md:h-80 lg:h-96 -mt-6">
+        <div className="relative w-full h-80 md:h-96 lg:h-[500px] -mt-6">
           <Image
             src={encodedFeatureImageUrl}
             alt={serviceName}
@@ -50,7 +51,7 @@ export default function GenericServicePage({ service }: ServicePageProps) {
             className="filter brightness-90"
             data-ai-hint={service.imageHint || 'medical procedure'}
           />
-           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         </div>
       )}
 
