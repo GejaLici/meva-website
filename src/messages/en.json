@@ -290,7 +290,12 @@
     "consultationButton": "Book a Confidential Consultation",
     "serviceNotFoundTitle": "Service Not Found | {siteName}",
     "serviceNotFoundDescription": "The requested service could not be found at {siteName}.",
-    "galleryTitle": "Procedure Gallery"
+    "galleryTitle": "Procedure Gallery",
+    "gallerySubtitle": "Real results for {serviceName}",
+    "faqTitle": "Quick Questions",
+    "quickDetailsTitle": "Quick Details",
+    "contactTitle": "Ready to Learn More?",
+    "contactSubtitle": "Schedule your confidential consultation today to discuss {serviceName} with our experts."
   },
   "ServicesOverviewPage": {
     "metaTitle": "Our Services | {siteName}",
@@ -476,7 +481,111 @@
     "passwordPlaceholder": "Password",
     "submitButton": "Sign In",
     "submittingButton": "Signing in..."
+  },
+   "ServiceFaqs": {
+    "details": {
+      "procedureTime": "Procedure Time",
+      "anesthesia": "Anesthesia",
+      "recoveryTime": "Recovery Time",
+      "results": "Final Results"
+    },
+    "rhinoplasty": {
+      "rhinoplasty-1": {
+        "question": "Is rhinoplasty painful?",
+        "answer": "<p>The surgery itself is painless due to anesthesia. Post-operative discomfort, swelling, and bruising are expected but are well-managed with prescribed pain medication and cold compresses.</p>"
+      },
+      "rhinoplasty-2": {
+        "question": "Will I have visible scars?",
+        "answer": "<p>In a closed rhinoplasty, all incisions are hidden inside the nose. In an open rhinoplasty, there is a small incision on the columella (the tissue between the nostrils) which typically heals into a very fine, inconspicuous line.</p>"
+      },
+      "rhinoplasty-3": {
+        "question": "When can I see the final results?",
+        "answer": "<p>While you'll see a significant change after the first month, it takes a full 12 to 18 months for all residual swelling, especially at the tip, to resolve and for the final, refined shape to emerge.</p>"
+      }
+    },
+    "lip-reshaping": {
+      "lip-reshaping-1": {
+        "question": "Is getting lip fillers painful?",
+        "answer": "<p>Discomfort is minimal. A topical numbing cream is applied beforehand, and most modern fillers contain lidocaine, a local anesthetic, making the procedure very comfortable.</p>"
+      },
+      "lip-reshaping-2": {
+        "question": "How long do lip fillers last?",
+        "answer": "<p>Hyaluronic acid lip fillers typically last between 6 and 12 months, depending on the specific product used and your individual metabolism.</p>"
+      },
+      "lip-reshaping-3": {
+        "question": "Will my lips look 'ducky' or unnatural?",
+        "answer": "<p>This is a result of overfilling or improper technique. A skilled injector aims to enhance your natural shape and maintain facial harmony, not just maximize size. A conservative approach yields the most beautiful, natural results.</p>"
+      }
+    },
+    "blepharoplasty": {
+      "blepharoplasty-1": {
+        "question": "Is eyelid surgery painful?",
+        "answer": "<p>The procedure is not painful due to anesthesia. Post-operative discomfort is usually mild, often described as a feeling of tightness or soreness, which is easily managed with over-the-counter pain medication.</p>"
+      },
+      "blepharoplasty-2": {
+        "question": "Will my scars be visible?",
+        "answer": "<p>Surgeons are experts at hiding incisions. For an upper blepharoplasty, the scar is in the eyelid crease and virtually invisible when the eye is open. For a lower blepharoplasty, it is just below the lashes or entirely hidden inside the eyelid.</p>"
+      },
+      "blepharoplasty-3": {
+        "question": "How long do the results last?",
+        "answer": "<p>The results are very long-lasting. Upper eyelid surgery can last for many years, while lower eyelid surgery rarely needs to be repeated. The natural aging process will continue, but from a much more youthful starting point.</p>"
+      }
+    },
+     "facelift": {
+      "facelift-1": {
+        "question": "What is the best age for a facelift?",
+        "answer": "<p>There is no 'best' age. The decision should be based on visible signs of aging like skin laxity and jowling, not a number. Most candidates are between their late 40s and 70s.</p>"
+      },
+      "facelift-2": {
+        "question": "How long do facelift results last?",
+        "answer": "<p>Results are very long-lasting, effectively 'turning back the clock' by 10-15 years. However, the surgery does not stop the aging process. You will continue to age naturally from your new, refreshed starting point.</p>"
+      },
+      "facelift-3": {
+        "question": "Will I look 'done' or unnatural?",
+        "answer": "<p>The goal of a modern facelift is to make you look like a rested, younger version of yourself, not a different person. By repositioning the deep facial tissues (SMAS) rather than just pulling the skin, a skilled surgeon restores your natural contours.</p>"
+      }
+    },
+    "breast-augmentation": {
+      "breast-augmentation-1": {
+        "question": "How long do breast implants last?",
+        "answer": "<p>Breast implants are not considered lifetime devices. While they can last for many years, it's likely you will need a revision or replacement surgery at some point, typically within 10 to 20 years.</p>"
+      },
+      "breast-augmentation-2": {
+        "question": "Can I still breastfeed with implants?",
+        "answer": "<p>For many women, yes. The ability to breastfeed can be affected by the incision type and implant placement, but it is often still possible. This is an important topic to discuss with your surgeon.</p>"
+      },
+      "breast-augmentation-3": {
+        "question": "What is the 'drop and fluff' process?",
+        "answer": "<p>Immediately after surgery, implants sit high and tight. 'Drop and fluff' is the process over several months where the muscle relaxes, allowing the implant to settle down (drop) into a more natural position, and the tissues expand (fluff) around it.</p>"
+      }
+    },
+    "tummy-tuck": {
+      "tummy-tuck-1": {
+        "question": "Is a tummy tuck a weight loss procedure?",
+        "answer": "<p>No. A tummy tuck is a body contouring procedure for people who are already at a stable, healthy weight but are left with loose skin and weakened muscles that cannot be fixed with diet or exercise.</p>"
+      },
+      "tummy-tuck-2": {
+        "question": "What is diastasis recti?",
+        "answer": "<p>Diastasis recti is the separation of the 'six-pack' abdominal muscles, which commonly occurs during pregnancy. It causes a persistent 'pooch' that exercise cannot fix. A tummy tuck is the definitive surgical correction for this condition.</p>"
+      },
+      "tummy-tuck-3": {
+        "question": "Will I have a large scar?",
+        "answer": "<p>Yes, a tummy tuck results in a long, permanent scar that runs from hip to hip. Surgeons place the incision very low so it can be hidden by most underwear and bikini bottoms, but the scar is a necessary trade-off for a flat abdomen.</p>"
+      }
+    },
+    "teeth-whitening": {
+        "teeth-whitening-1": {
+            "question": "How white will my teeth get?",
+            "answer": "<p>Results vary, but professional whitening can lighten teeth by several shades, achieving a noticeably brighter yet natural look.</p>"
+        },
+        "teeth-whitening-2": {
+            "question": "Is teeth whitening painful?",
+            "answer": "<p>The most common side effect is temporary tooth sensitivity to hot or cold, which usually subsides within 24-48 hours. Using a desensitizing toothpaste can help.</p>"
+        },
+        "teeth-whitening-3": {
+            "question": "Does whitening work on crowns or fillings?",
+            "answer": "<p>No. Whitening agents only work on natural tooth enamel. If you have restorations on your front teeth, they will not change color and may need to be replaced to match your newly whitened smile.</p>"
+        }
+    }
   }
 }
-
-    
