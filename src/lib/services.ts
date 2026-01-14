@@ -2,7 +2,7 @@
 import type { ServiceCategory, Service, ServiceWithContent } from '@/types/services';
 
 const facialSurgeryServices: Service[] = [
-  { id: 'rhinoplasty', slug: 'rhinoplasty', image: '/images/woman-getting-ready-nose-job-surgery%20(e).jpg', imageHint: 'nose surgery detail', gallery: [{url: "/images/galleries/rhinoplasty-1.png", hint: "rhinoplasty consultation"}, {url: "/images/galleries/rhinoplasty-2.png", hint: "surgical markup"}, {url: "/images/galleries/rhinoplasty-3.png", hint: "post-op checkup"}] },
+  { id: 'rhinoplasty', slug: 'rhinoplasty', image: '/images/woman-getting-ready-nose-job-surgery (e).jpg', imageHint: 'nose surgery detail', gallery: [{url: "/images/galleries/rhinoplasty-1.png", hint: "rhinoplasty consultation"}, {url: "/images/galleries/rhinoplasty-2.png", hint: "surgical markup"}, {url: "/images/galleries/rhinoplasty-3.png", hint: "post-op checkup"}] },
   { id: 'otoplasty', slug: 'otoplasty', image: '/images/otoplasty.png', imageHint: 'otoplasty results', gallery: [{url: "/images/galleries/otoplasty-1.png", hint: "ear before surgery"}, {url: "/images/galleries/otoplasty-2.png", hint: "ear after surgery"}, {url: "/images/galleries/otoplasty-3.png", hint: "otoplasty technique"}] },
   { id: 'hair-transplant', slug: 'hair-transplant', image: '/images/hair-transplant.png', imageHint: 'hair transplant before after', gallery: [{url: "/images/galleries/hair-transplant-1.png", hint: "donor area"}, {url: "/images/galleries/hair-transplant-2.png", hint: "follicle extraction"}, {url: "/images/galleries/hair-transplant-3.png", hint: "recipient area"}] },
   { id: 'beard-transplant', slug: 'beard-transplant', image: '/images/Beard-Transplant.png', imageHint: 'Beard Transplant results', gallery: [{url: "/images/galleries/beard-transplant-1.png", hint: "patchy beard before"}, {url: "/images/galleries/beard-transplant-2.png", hint: "full beard after"}, {url: "/images/galleries/beard-transplant-3.png", hint: "beard design"}] },
@@ -601,6 +601,8 @@ export const getServiceWithContent = async (
     }
   }
 };
+
+    
 
     
 
