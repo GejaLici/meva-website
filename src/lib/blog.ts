@@ -1,7 +1,7 @@
 
 'use server';
 
-import { getFirestore, collection, getDocs, query, where, limit, orderBy, addDoc, serverTimestamp } from 'firebase-admin/firestore';
+import { getFirestore, collection, getDocs, query, where, limit, orderBy, addDoc, serverTimestamp, Timestamp } from 'firebase-admin/firestore';
 import { adminAuth, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 import type { BlogPost, ContentBlock } from '@/types/blog';
 
@@ -9,15 +9,13 @@ import type { BlogPost, ContentBlock } from '@/types/blog';
 const db = adminAuth ? getFirestore(adminAuth.app) : null;
 
 // Helper to convert Firestore timestamp to ISO string
-function toISOString(timestamp: any): string {
-  if (!timestamp) return new Date().toISOString();
-  // Firestore Timestamps have toDate() method
-  if (timestamp.toDate) {
+function toISOString(timestamp: Timestamp | Date | string): string {
+  if (timestamp instanceof Timestamp) {
     return timestamp.toDate().toISOString();
   }
-  // Fallback for string or other date formats
   return new Date(timestamp).toISOString();
 }
+
 
 /**
  * Retrieves all blog posts from Firestore.
@@ -39,7 +37,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
         id: doc.id,
         slug: data.slug,
         title: data.title,
-        date: toISOString(data.date),
+        date: data.date ? toISOString(data.date) : new Date().toISOString(),
         author: data.author || 'Meva Clinic Staff',
         excerpt: data.excerpt,
         content: JSON.parse(data.content) as ContentBlock[],
@@ -81,7 +79,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefi
       id: doc.id,
       slug: data.slug,
       title: data.title,
-      date: toISOString(data.date),
+      date: data.date ? toISOString(data.date) : new Date().toISOString(),
       author: data.author || 'Meva Clinic Staff',
       excerpt: data.excerpt,
       content: JSON.parse(data.content) as ContentBlock[],
