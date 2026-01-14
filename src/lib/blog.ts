@@ -6,7 +6,7 @@ import { adminAuth, getAuthenticatedAppForUser } from '@/lib/firebase-admin-conf
 import type { BlogPost, ContentBlock } from '@/types/blog';
 
 // Get the Firestore instance from the admin app
-const db = getFirestore(adminAuth.app);
+const db = adminAuth ? getFirestore(adminAuth.app) : null;
 
 // Helper to convert Firestore timestamp to ISO string
 function toISOString(timestamp: any): string {
@@ -24,6 +24,10 @@ function toISOString(timestamp: any): string {
  * @returns A promise that resolves to an array of all blog posts, sorted by date.
  */
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
+  if (!db) {
+    console.warn("Firestore is not initialized. Cannot fetch blog posts.");
+    return [];
+  }
   try {
     const postsCollection = collection(db, "blogPosts");
     const postsQuery = query(postsCollection, orderBy('date', 'desc'));
@@ -57,6 +61,10 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
  * @returns A promise that resolves to the blog post, or undefined if not found.
  */
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+  if (!db) {
+    console.warn("Firestore is not initialized. Cannot fetch blog post.");
+    return undefined;
+  }
   try {
     const postsCollection = collection(db, "blogPosts");
     const q = query(postsCollection, where("slug", "==", slug), limit(1));
@@ -93,6 +101,9 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefi
  * @returns A promise that resolves to the result of the operation.
  */
 export async function addBlogPost(postData: Omit<BlogPost, 'id' | 'date' | 'content'> & { content: string }) {
+  if (!db) {
+    throw new Error("Firestore is not initialized. Cannot add blog post.");
+  }
    // Ensure the user is authenticated before allowing a post to be added.
   const { currentUser } = await getAuthenticatedAppForUser();
   if (!currentUser) {

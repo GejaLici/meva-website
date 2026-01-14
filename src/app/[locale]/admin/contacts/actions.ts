@@ -4,10 +4,14 @@
 import { getFirestore, doc, deleteDoc } from 'firebase-admin/firestore';
 import { adminAuth, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 
-const db = getFirestore(adminAuth.app);
+const db = adminAuth ? getFirestore(adminAuth.app) : null;
 
 // This action can only be successfully called by an authenticated user
 export async function deleteContactSubmission(submissionId: string) {
+  if (!db) {
+    return { success: false, error: 'Firestore is not initialized.' };
+  }
+
   // We don't need the user object here, but this call ensures the user is authenticated.
   // If not, it will throw an error.
   const { currentUser } = await getAuthenticatedAppForUser();
