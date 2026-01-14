@@ -289,7 +289,12 @@
     "consultationButton": "Rezervoni një Konsultë Konfidenciale",
     "serviceNotFoundTitle": "Shërbimi nuk u gjet | {siteName}",
     "serviceNotFoundDescription": "Shërbimi i kërkuar nuk u gjet në {siteName}.",
-    "galleryTitle": "Galeria e procedurës"
+    "galleryTitle": "Galeria e procedurës",
+    "gallerySubtitle": "Rezultate reale për {serviceName}",
+    "faqTitle": "Pyetje të Shpejta",
+    "quickDetailsTitle": "Detaje të Shpejta",
+    "contactTitle": "Gati të mësoni më shumë?",
+    "contactSubtitle": "Caktoni konsultën tuaj konfidenciale sot për të diskutuar {serviceName} me ekspertët tanë."
   },
   "ServicesOverviewPage": {
     "metaTitle": "Shërbimet tona | {siteName}",
@@ -316,6 +321,112 @@
     "passwordPlaceholder": "Fjalëkalimi",
     "submitButton": "Hyni",
     "submittingButton": "Duke hyrë..."
+  },
+  "ServiceFaqs": {
+    "details": {
+      "procedureTime": "Koha e procedurës",
+      "anesthesia": "Anestezia",
+      "recoveryTime": "Koha e rikuperimit",
+      "results": "Rezultatet përfundimtare"
+    },
+    "rhinoplasty": {
+      "rhinoplasty-1": {
+        "question": "A është e dhimbshme rinoplastika?",
+        "answer": "<p>Vetë operacioni është pa dhimbje për shkak të anestezisë. Siklet, ënjtje dhe mavijosje pas operacionit janë të pritshme, por menaxhohen mirë me ilaçet kundër dhimbjeve dhe kompresat e ftohta.</p>"
+      },
+      "rhinoplasty-2": {
+        "question": "A do të kem shenja të dukshme?",
+        "answer": "<p>Në një rinoplastikë të mbyllur, të gjitha prerjet fshihen brenda hundës. Në një rinoplastikë të hapur, ka një prerje të vogël në kolumelë (indi midis vrimave të hundës) që zakonisht shërohet në një vijë shumë të hollë dhe të padukshme.</p>"
+      },
+      "rhinoplasty-3": {
+        "question": "Kur mund t'i shoh rezultatet përfundimtare?",
+        "answer": "<p>Ndërsa do të shihni një ndryshim të rëndësishëm pas muajit të parë, duhen plot 12 deri në 18 muaj që të gjitha ënjtjet e mbetura, veçanërisht në majë, të zhduken dhe të shfaqet forma përfundimtare e rafinuar.</p>"
+      }
+    },
+    "lip-reshaping": {
+      "lip-reshaping-1": {
+        "question": "A është e dhimbshme mbushja e buzëve?",
+        "answer": "<p>Sikleti është minimal. Një krem mpirës topik aplikohet paraprakisht, dhe shumica e mbushësve modernë përmbajnë lidokainë, një anestetik lokal, duke e bërë procedurën shumë të rehatshme.</p>"
+      },
+      "lip-reshaping-2": {
+        "question": "Sa zgjasin mbushësit e buzëve?",
+        "answer": "<p>Mbushësit e buzëve me acid hialuronik zakonisht zgjasin midis 6 dhe 12 muajsh, në varësi të produktit specifik të përdorur dhe metabolizmit tuaj individual.</p>"
+      },
+      "lip-reshaping-3": {
+        "question": "A do të duken buzët e mia 'si të rosës' apo të panatyrshme?",
+        "answer": "<p>Ky është rezultat i mbushjes së tepërt ose teknikës së papërshtatshme. Një injektues i aftë synon të përmirësojë formën tuaj natyrale dhe të ruajë harmoninë e fytyrës, jo vetëm të maksimizojë madhësinë. Një qasje konservatore jep rezultatet më të bukura dhe natyrale.</p>"
+      }
+    },
+    "blepharoplasty": {
+      "blepharoplasty-1": {
+        "question": "A është e dhimbshme kirurgjia e qepallave?",
+        "answer": "<p>Procedura nuk është e dhimbshme për shkak të anestezisë. Sikleti pas operacionit është zakonisht i lehtë, shpesh i përshkruar si një ndjenjë shtrëngimi ose dhimbjeje, e cila menaxhohet lehtësisht me ilaçe kundër dhimbjeve pa recetë.</p>"
+      },
+      "blepharoplasty-2": {
+        "question": "A do të jenë të dukshme shenjat e mia?",
+        "answer": "<p>Për një blefaroplastikë të sipërme, shenja është në palosjen e qepallës dhe praktikisht e padukshme kur syri është i hapur. Për një blefaroplastikë të poshtme, ajo është pikërisht poshtë qerpikëve ose plotësisht e fshehur brenda qepallës.</p>"
+      },
+      "blepharoplasty-3": {
+        "question": "Sa zgjasin rezultatet?",
+        "answer": "<p>Rezultatet janë shumë afatgjata. Kirurgjia e qepallave të sipërme mund të zgjasë për shumë vite, ndërsa kirurgjia e qepallave të poshtme rrallëherë ka nevojë të përsëritet.</p>"
+      }
+    },
+    "facelift": {
+      "facelift-1": {
+        "question": "Cila është mosha më e mirë për një lifting të fytyrës?",
+        "answer": "<p>Nuk ka një moshë 'më të mirë'. Vendimi duhet të bazohet në shenjat e dukshme të plakjes si lëshimi i lëkurës dhe faqet e varura, jo në një numër. Shumica e kandidatëve janë midis fundit të të 40-ave dhe të 70-ave.</p>"
+      },
+      "facelift-2": {
+        "question": "Sa zgjasin rezultatet e një liftingu të fytyrës?",
+        "answer": "<p>Rezultatet janë shumë afatgjata, duke e 'kthyer orën pas' efektivisht me 10-15 vjet. Megjithatë, operacioni nuk e ndalon procesin e plakjes. Ju do të vazhdoni të plakeni natyrshëm nga pika juaj e re, e freskuar e fillimit.</p>"
+      },
+      "facelift-3": {
+        "question": "A do të dukem 'i operuar' apo i panatyrshëm?",
+        "answer": "<p>Qëllimi i një liftingu modern të fytyrës është t'ju bëjë të dukeni si një version i pushuar dhe më i ri i vetes, jo si një person tjetër. Duke ripozicionuar indet e thella të fytyrës (SMAS) në vend që të tërhiqni vetëm lëkurën, një kirurg i aftë rivendos konturet tuaja natyrale.</p>"
+      }
+    },
+    "breast-augmentation": {
+      "breast-augmentation-1": {
+        "question": "Sa zgjasin implantet e gjirit?",
+        "answer": "<p>Implantet e gjirit nuk konsiderohen pajisje të përjetshme. Edhe pse mund të zgjasin për shumë vite, ka gjasa që do të keni nevojë për një operacion rishikimi ose zëvendësimi në një moment, zakonisht brenda 10 deri në 20 vjet.</p>"
+      },
+      "breast-augmentation-2": {
+        "question": "A mund të ushqej me gji me implante?",
+        "answer": "<p>Për shumë gra po. Aftësia për të ushqyer me gji mund të ndikohet nga lloji i prerjes dhe vendosja e implantit, por shpesh është ende e mundur. Kjo është një temë e rëndësishme për t'u diskutuar me kirurgun tuaj.</p>"
+      },
+      "breast-augmentation-3": {
+        "question": "Çfarë është procesi 'drop and fluff'?",
+        "answer": "<p>Menjëherë pas operacionit, implantet qëndrojnë lart dhe të shtrënguara. 'Drop and fluff' është procesi gjatë disa muajve ku muskuli relaksohet, duke lejuar implantin të vendoset në një pozicion më natyral (drop), dhe indet të zgjerohen rreth tij (fluff).</p>"
+      }
+    },
+    "tummy-tuck": {
+      "tummy-tuck-1": {
+        "question": "A është abdominoplastika një procedurë për humbje peshe?",
+        "answer": "<p>Jo. Një abdominoplastikë është një procedurë për konturimin e trupit për njerëzit që janë tashmë në një peshë të qëndrueshme dhe të shëndetshme, por u ka mbetur lëkurë e lirshme dhe muskuj të dobësuar që nuk mund të rregullohen me dietë apo ushtrime.</p>"
+      },
+      "tummy-tuck-2": {
+        "question": "Çfarë është diastasis recti?",
+        "answer": "<p>Diastasis recti është ndarja e muskujve 'gjashtë-paketë' të barkut, e cila zakonisht ndodh gjatë shtatzënisë. Ajo shkakton një 'fryrje' të vazhdueshme që ushtrimet nuk mund ta rregullojnë. Një abdominoplastikë është korrigjimi kirurgjik definitiv për këtë gjendje.</p>"
+      },
+      "tummy-tuck-3": {
+        "question": "A do të kem një shenjë të madhe?",
+        "answer": "<p>Po, një abdominoplastikë lë një shenjë të gjatë dhe të përhershme që shkon nga njëra ijë në tjetrën. Kirurgët e vendosin prerjen shumë poshtë në mënyrë që të mund të fshihet nga shumica e të brendshmeve dhe bikini, por shenja është një kompromis i domosdoshëm për një bark të sheshtë.</p>"
+      }
+    },
+    "teeth-whitening": {
+      "teeth-whitening-1": {
+        "question": "Sa të bardhë do të bëhen dhëmbët e mi?",
+        "answer": "<p>Rezultatet ndryshojnë, por një zbardhim profesional mund t'i zbardhë dhëmbët me disa nuanca, duke arritur një pamje dukshëm më të ndritshme por natyrale.</p>"
+      },
+      "teeth-whitening-2": {
+        "question": "A është e dhimbshme zbardhja e dhëmbëve?",
+        "answer": "<p>Efekti anësor më i zakonshëm është ndjeshmëria e përkohshme e dhëmbëve ndaj të nxehtit ose të ftohtit, e cila zakonisht largohet brenda 24-48 orëve. Përdorimi i një paste dhëmbësh desensibilizuese mund të ndihmojë.</p>"
+      },
+      "teeth-whitening-3": {
+        "question": "A funksionon zbardhja në kurora ose mbushje?",
+        "answer": "<p>Jo. Agjentët zbardhues funksionojnë vetëm në smaltin natyral të dhëmbëve. Nëse keni restaurime në dhëmbët tuaj të përparmë, ato nuk do të ndryshojnë ngjyrë dhe mund të duhet t'i zëvendësoni për t'iu përshtatur buzëqeshjes suaj të re të zbardhur.</p>"
+      }
+    }
   }
 }
 

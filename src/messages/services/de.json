@@ -1,0 +1,111 @@
+
+{
+    "ServiceFaqs": {
+        "details": {
+            "procedureTime": "Dauer des Eingriffs",
+            "anesthesia": "Anästhesie",
+            "recoveryTime": "Erholungszeit",
+            "results": "Endgültige Ergebnisse"
+        },
+        "rhinoplasty": {
+            "rhinoplasty-1": {
+                "question": "Ist eine Nasenkorrektur schmerzhaft?",
+                "answer": "<p>Die Operation selbst ist dank der Anästhesie schmerzfrei. Postoperative Beschwerden, Schwellungen und Blutergüsse sind zu erwarten, werden aber gut mit den verschriebenen Schmerzmitteln und kalten Kompressen behandelt.</p>"
+            },
+            "rhinoplasty-2": {
+                "question": "Werde ich sichtbare Narben haben?",
+                "answer": "<p>Bei einer geschlossenen Nasenkorrektur sind alle Schnitte im Inneren der Nase verborgen. Bei einer offenen Nasenkorrektur gibt es einen kleinen Schnitt an der Columella (dem Gewebestreifen zwischen den Nasenlöchern), der typischerweise zu einer sehr feinen, unauffälligen Linie verheilt.</p>"
+            },
+            "rhinoplasty-3": {
+                "question": "Wann kann ich die endgültigen Ergebnisse sehen?",
+                "answer": "<p>Obwohl Sie nach dem ersten Monat eine deutliche Veränderung sehen werden, dauert es volle 12 bis 18 Monate, bis alle restlichen Schwellungen, insbesondere an der Spitze, abgeklungen sind und die endgültige, verfeinerte Form zum Vorschein kommt.</p>"
+            }
+        },
+        "lip-reshaping": {
+            "lip-reshaping-1": {
+                "question": "Ist das Auffüllen der Lippen schmerzhaft?",
+                "answer": "<p>Der Schmerz ist minimal. Vorher wird eine betäubende Creme aufgetragen, und die meisten modernen Füllstoffe enthalten Lidocain, ein lokales Anästhetikum, was den Eingriff sehr angenehm macht.</p>"
+            },
+            "lip-reshaping-2": {
+                "question": "Wie lange halten Lippenfüller?",
+                "answer": "<p>Lippenfüller mit Hyaluronsäure halten in der Regel zwischen 6 und 12 Monaten, abhängig vom verwendeten Produkt und Ihrem individuellen Stoffwechsel.</p>"
+            },
+            "lip-reshaping-3": {
+                "question": "Werden meine Lippen 'entenartig' oder unnatürlich aussehen?",
+                "answer": "<p>Dies ist ein Ergebnis von Überfüllung oder falscher Technik. Ein erfahrener Behandler zielt darauf ab, Ihre natürliche Form zu verbessern und die Gesichtsharmonie zu wahren, nicht nur die Größe zu maximieren. Ein konservativer Ansatz liefert die schönsten, natürlichsten Ergebnisse.</p>"
+            }
+        },
+        "blepharoplasty": {
+            "blepharoplasty-1": {
+                "question": "Ist eine Augenlidoperation schmerzhaft?",
+                "answer": "<p>Der Eingriff ist dank Anästhesie nicht schmerzhaft. Postoperative Beschwerden sind in der Regel mild und werden oft als Gefühl der Enge oder Schmerzen beschrieben, die leicht mit rezeptfreien Schmerzmitteln zu bewältigen sind.</p>"
+            },
+            "blepharoplasty-2": {
+                "question": "Werden meine Narben sichtbar sein?",
+                "answer": "<p>Chirurgen sind Experten darin, Schnitte zu verbergen. Bei einer oberen Blepharoplastik befindet sich die Narbe in der Lidfalte und ist bei geöffnetem Auge praktisch unsichtbar. Bei einer unteren Blepharoplastik befindet sie sich direkt unter den Wimpern oder ist vollständig im Inneren des Augenlids verborgen.</p>"
+            },
+            "blepharoplasty-3": {
+                "question": "Wie lange halten die Ergebnisse?",
+                "answer": "<p>Die Ergebnisse sind sehr langanhaltend. Eine Operation am oberen Augenlid kann viele Jahre halten, während eine Operation am unteren Augenlid selten wiederholt werden muss. Der natürliche Alterungsprozess wird fortgesetzt, aber von einem viel jugendlicheren Ausgangspunkt aus.</p>"
+            }
+        },
+        "facelift": {
+            "facelift-1": {
+                "question": "Was ist das beste Alter für ein Facelifting?",
+                "answer": "<p>Es gibt kein 'bestes' Alter. Die Entscheidung sollte auf sichtbaren Zeichen des Alterns wie Hautschlaffheit und Hängebacken basieren, nicht auf einer Zahl.</p>"
+            },
+            "facelift-2": {
+                "question": "Wie lange halten die Ergebnisse eines Faceliftings?",
+                "answer": "<p>Die Ergebnisse sind sehr langanhaltend und 'drehen die Uhr' effektiv um 10-15 Jahre zurück. Die Operation stoppt jedoch nicht den Alterungsprozess. Sie werden von Ihrem neuen, erfrischten Ausgangspunkt aus weiter altern.</p>"
+            },
+            "facelift-3": {
+                "question": "Werde ich 'operiert' oder unnatürlich aussehen?",
+                "answer": "<p>Das Ziel eines modernen Faceliftings ist es, Sie wie eine ausgeruhte, jüngere Version Ihrer selbst aussehen zu lassen, nicht wie eine andere Person. Durch das Repositionieren der tiefen Gesichtsgewebe (SMAS) anstatt nur die Haut zu ziehen, stellt ein erfahrener Chirurg Ihre natürlichen Konturen wieder her.</p>"
+            }
+        },
+        "breast-augmentation": {
+            "breast-augmentation-1": {
+                "question": "Wie lange halten Brustimplantate?",
+                "answer": "<p>Brustimplantate gelten nicht als lebenslange Geräte. Obwohl sie viele Jahre halten können, ist es wahrscheinlich, dass Sie irgendwann eine Revisions- oder Austauschoperation benötigen, typischerweise innerhalb von 10 bis 20 Jahren.</p>"
+            },
+            "breast-augmentation-2": {
+                "question": "Kann ich mit Implantaten noch stillen?",
+                "answer": "<p>Für viele Frauen ja. Die Fähigkeit zu stillen kann durch den Schnitttyp und die Platzierung des Implantats beeinträchtigt werden, ist aber oft noch möglich. Dies ist ein wichtiges Thema, das Sie mit Ihrem Chirurgen besprechen sollten.</p>"
+            },
+            "breast-augmentation-3": {
+                "question": "Was ist der 'Drop and Fluff'-Prozess?",
+                "answer": "<p>Unmittelbar nach der Operation sitzen die Implantate hoch und straff. 'Drop and Fluff' ist der Prozess über mehrere Monate, bei dem sich der Muskel entspannt, sodass das Implantat in eine natürlichere Position absinkt (drop) und sich die Gewebe darum ausdehnen (fluff).</p>"
+            }
+        },
+        "tummy-tuck": {
+            "tummy-tuck-1": {
+                "question": "Ist eine Bauchdeckenstraffung eine Gewichtsabnahme-Prozedur?",
+                "answer": "<p>Nein. Eine Bauchdeckenstraffung ist eine Körperkonturierungsprozedur für Personen, die bereits ein stabiles, gesundes Gewicht haben, aber mit schlaffer Haut und geschwächten Muskeln zurückbleiben, die durch Diät oder Sport nicht behoben werden können.</p>"
+            },
+            "tummy-tuck-2": {
+                "question": "Was ist Diastasis recti?",
+                "answer": "<p>Diastasis recti ist die Trennung der 'Six-Pack'-Bauchmuskeln, die häufig während der Schwangerschaft auftritt. Sie verursacht eine hartnäckige 'Ausbuchtung', die durch Sport nicht behoben werden kann. Eine Bauchdeckenstraffung ist die definitive chirurgische Korrektur für diesen Zustand.</p>"
+            },
+            "tummy-tuck-3": {
+                "question": "Werde ich eine große Narbe haben?",
+                "answer": "<p>Ja, eine Bauchdeckenstraffung hinterlässt eine lange, dauerhafte Narbe, die von Hüfte zu Hüfte verläuft. Chirurgen platzieren den Schnitt sehr tief, sodass er von den meisten Unterwäschen und Bikinislips verdeckt werden kann, aber die Narbe ist ein notwendiger Kompromiss für einen flachen Bauch.</p>"
+            }
+        },
+        "teeth-whitening": {
+            "teeth-whitening-1": {
+                "question": "Wie weiß werden meine Zähne?",
+                "answer": "<p>Die Ergebnisse variieren, aber eine professionelle Aufhellung kann die Zähne um mehrere Farbtöne aufhellen und ein merklich helleres, aber natürliches Aussehen erzielen.</p>"
+            },
+            "teeth-whitening-2": {
+                "question": "Ist das Zähnebleichen schmerzhaft?",
+                "answer": "<p>Der häufigste Nebeneffekt ist eine vorübergehende Empfindlichkeit der Zähne gegenüber Hitze oder Kälte, die normalerweise innerhalb von 24-48 Stunden nachlässt. Die Verwendung einer desensibilisierenden Zahnpasta kann helfen.</p>"
+            },
+            "teeth-whitening-3": {
+                "question": "Wirkt das Bleichen bei Kronen oder Füllungen?",
+                "answer": "<p>Nein. Bleichmittel wirken nur auf den natürlichen Zahnschmelz. Wenn Sie Restaurationen an Ihren Vorderzähnen haben, werden diese ihre Farbe nicht ändern und müssen möglicherweise ersetzt werden, um zu Ihrem neu aufgehellten Lächeln zu passen.</p>"
+            }
+        }
+    }
+}
+
+    

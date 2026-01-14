@@ -290,7 +290,12 @@
     "consultationButton": "Reservar una consulta confidencial",
     "serviceNotFoundTitle": "Servicio no encontrado | {siteName}",
     "serviceNotFoundDescription": "El servicio solicitado no se pudo encontrar en {siteName}.",
-    "galleryTitle": "Galería del Procedimiento"
+    "galleryTitle": "Galería del Procedimiento",
+    "gallerySubtitle": "Resultados reales para {serviceName}",
+    "faqTitle": "Preguntas Rápidas",
+    "quickDetailsTitle": "Detalles Rápidos",
+    "contactTitle": "¿Listo para saber más?",
+    "contactSubtitle": "Programe su consulta confidencial hoy para discutir {serviceName} con nuestros expertos."
   },
   "ServicesOverviewPage": {
     "metaTitle": "Nuestros Servicios | {siteName}",
@@ -338,7 +343,7 @@
     "p5_1": "Podemos utilizar cookies y tecnologías de seguimiento similares (como balizas web y píxeles) para acceder o almacenar información. La información específica sobre cómo utilizamos dichas tecnologías y cómo puede rechazar ciertas cookies se establece en nuestro Aviso de Cookies por separado (si corresponde) o se detallará aquí si no se proporciona un aviso por separado.",
     "h2_5": "5. ¿CUÁNTO TIEMPO CONSERVAMOS SU INFORMACIÓN?",
     "p6_1": "Solo conservaremos su información personal durante el tiempo que sea necesario para los fines establecidos en esta política de privacidad, a menos que la ley exija o permita un período de retención más largo (como impuestos, contabilidad u otros requisitos legales o reglamentarios). Ningún propósito en esta política requerirá que conservemos su información personal por más tiempo que el período en que los usuarios tienen una cuenta con nosotros más un período razonable para fines de archivo o legales.",
-    "h2_6": "6. ¿CÓMO MANTENEMOS SEGURA SU INFORMACIÓN?",
+    "h2_6": "6. ¿CÓMO MANTENIAMOS SEGURA SU INFORMACIÓN?",
     "p7_1": "Hemos implementado medidas de seguridad técnicas y organizativas apropiadas diseñadas para proteger la seguridad de cualquier información personal que procesemos. Estas medidas tienen como objetivo evitar el acceso no autorizado, la divulgación, la alteración o la destrucción de sus datos personales. Sin embargo, a pesar de nuestras salvaguardas y esfuerzos continuos para proteger su información, ninguna transmisión electrónica por Internet o tecnología de almacenamiento de información puede garantizarse como 100% segura. Por lo tanto, no podemos prometer ni garantizar que los piratas informáticos, ciberdelincuentes u otros terceros no autorizados no puedan burlar nuestra seguridad y recopilar, acceder, robar o modificar su información de manera incorrecta. La transmisión de información personal hacia y desde nuestro Sitio es bajo su propio riesgo.",
     "h2_7": "7. ¿CUÁLES SON SUS DERECHOS DE PRIVACIDAD?",
     "p8_1": "En algunas regiones, como el Espacio Económico Europeo (EEE) y el Reino Unido (RU), usted tiene ciertos derechos en virtud de las leyes de protección de datos aplicables. Estos pueden incluir el derecho (i) a solicitar acceso y obtener una copia de su información personal, (ii) a solicitar la rectificación o eliminación de su información personal; (iii) a restringir el procesamiento de su información personal; y (iv) si corresponde, a la portabilidad de los datos. En ciertas circunstancias, también puede tener derecho a oponerse al procesamiento de su información personal. Para realizar dicha solicitud, utilice los datos de contacto que se proporcionan a continuación.",
@@ -396,6 +401,112 @@
     "passwordPlaceholder": "Contraseña",
     "submitButton": "Iniciar sesión",
     "submittingButton": "Iniciando sesión..."
+  },
+  "ServiceFaqs": {
+    "details": {
+      "procedureTime": "Duración",
+      "anesthesia": "Anestesia",
+      "recoveryTime": "Recuperación",
+      "results": "Resultados Finales"
+    },
+    "rhinoplasty": {
+      "rhinoplasty-1": {
+        "question": "¿La rinoplastia es dolorosa?",
+        "answer": "<p>La cirugía en sí no es dolorosa gracias a la anestesia. Las molestias postoperatorias, la hinchazón y los hematomas son esperables, pero se controlan bien con la medicación prescrita y compresas frías.</p>"
+      },
+      "rhinoplasty-2": {
+        "question": "¿Tendré cicatrices visibles?",
+        "answer": "<p>En una rinoplastia cerrada, todas las incisiones se ocultan dentro de la nariz. En una rinoplastia abierta, hay una pequeña incisión en la columela que generalmente cicatriza como una línea muy fina y discreta.</p>"
+      },
+      "rhinoplasty-3": {
+        "question": "¿Cuándo veré los resultados finales?",
+        "answer": "<p>Aunque notarás un cambio significativo después del primer mes, se necesitan de 12 a 18 meses para que toda la hinchazón residual se resuelva y emerja la forma final y refinada.</p>"
+      }
+    },
+    "lip-reshaping": {
+      "lip-reshaping-1": {
+        "question": "¿Es doloroso ponerse rellenos de labios?",
+        "answer": "<p>El malestar es mínimo. Se aplica una crema anestésica tópica de antemano, y la mayoría de los rellenos modernos contienen lidocaína, lo que hace que el procedimiento sea muy cómodo.</p>"
+      },
+      "lip-reshaping-2": {
+        "question": "¿Cuánto duran los rellenos de labios?",
+        "answer": "<p>Los rellenos de labios de ácido hialurónico suelen durar entre 6 y 12 meses, dependiendo del producto y del metabolismo individual.</p>"
+      },
+      "lip-reshaping-3": {
+        "question": "¿Mis labios se verán 'de pato' o artificiales?",
+        "answer": "<p>Eso es el resultado de un relleno excesivo o una técnica incorrecta. Un inyector experto busca realzar la forma natural y mantener la armonía facial. Un enfoque conservador produce los resultados más bellos y naturales.</p>"
+      }
+    },
+    "blepharoplasty": {
+      "blepharoplasty-1": {
+        "question": "¿La cirugía de párpados es dolorosa?",
+        "answer": "<p>El procedimiento no es doloroso gracias a la anestesia. Las molestias postoperatorias suelen ser leves, a menudo descritas como una sensación de tirantez, y se manejan fácilmente con analgésicos de venta libre.</p>"
+      },
+      "blepharoplasty-2": {
+        "question": "¿Mis cicatrices serán visibles?",
+        "answer": "<p>Para una blefaroplastia superior, la cicatriz se oculta en el pliegue del párpado. Para una blefaroplastia inferior, se encuentra justo debajo de las pestañas o completamente oculta dentro del párpado.</p>"
+      },
+      "blepharoplasty-3": {
+        "question": "¿Cuánto duran los resultados?",
+        "answer": "<p>Los resultados son muy duraderos. La cirugía de párpado superior puede durar muchos años, mientras que la cirugía de párpado inferior rara vez necesita repetirse.</p>"
+      }
+    },
+    "facelift": {
+      "facelift-1": {
+        "question": "¿Cuál es la mejor edad para un lifting facial?",
+        "answer": "<p>No hay una 'mejor' edad. La decisión debe basarse en los signos visibles del envejecimiento, no en un número. La mayoría de los candidatos tienen entre 40 y 70 años.</p>"
+      },
+      "facelift-2": {
+        "question": "¿Cuánto duran los resultados de un lifting facial?",
+        "answer": "<p>Los resultados son muy duraderos, retrocediendo el reloj unos 10-15 años. Sin embargo, la cirugía no detiene el proceso de envejecimiento.</p>"
+      },
+      "facelift-3": {
+        "question": "¿Me veré 'operado' o antinatural?",
+        "answer": "<p>El objetivo de un lifting facial moderno es hacer que parezcas una versión más joven y descansada de ti mismo. Al reposicionar los tejidos faciales profundos (SMAS) en lugar de solo estirar la piel, se restauran tus contornos naturales.</p>"
+      }
+    },
+    "breast-augmentation": {
+      "breast-augmentation-1": {
+        "question": "¿Cuánto duran los implantes mamarios?",
+        "answer": "<p>Los implantes mamarios no se consideran dispositivos de por vida. Aunque pueden durar muchos años, es probable que necesites una cirugía de revisión o reemplazo en algún momento, generalmente dentro de 10 a 20 años.</p>"
+      },
+      "breast-augmentation-2": {
+        "question": "¿Puedo amamantar con implantes?",
+        "answer": "<p>Para muchas mujeres, sí. La capacidad de amamantar puede verse afectada por el tipo de incisión y la colocación del implante, pero a menudo sigue siendo posible. Es un tema importante a discutir con tu cirujano.</p>"
+      },
+      "breast-augmentation-3": {
+        "question": "¿Qué es el proceso 'drop and fluff'?",
+        "answer": "<p>Inmediatamente después de la cirugía, los implantes se asientan altos y apretados. 'Drop and fluff' es el proceso durante varios meses en el que el músculo se relaja, permitiendo que el implante se asiente en una posición más natural (drop) y los tejidos se expandan a su alrededor (fluff).</p>"
+      }
+    },
+    "tummy-tuck": {
+      "tummy-tuck-1": {
+        "question": "¿Una abdominoplastia es un procedimiento para perder peso?",
+        "answer": "<p>No. Una abdominoplastia es un procedimiento de contorno corporal para personas que ya tienen un peso estable y saludable pero que les queda piel suelta y músculos debilitados que no se pueden arreglar con dieta o ejercicio.</p>"
+      },
+      "tummy-tuck-2": {
+        "question": "¿Qué es la diástasis de rectos?",
+        "answer": "<p>La diástasis de rectos es la separación de los músculos abdominales 'six-pack', que ocurre comúnmente durante el embarazo. Causa una 'barriga' persistente que el ejercicio no puede arreglar. Una abdominoplastia es la corrección quirúrgica definitiva para esta condición.</p>"
+      },
+      "tummy-tuck-3": {
+        "question": "¿Tendré una cicatriz grande?",
+        "answer": "<p>Sí, una abdominoplastia deja una cicatriz larga y permanente que va de cadera a cadera. Los cirujanos colocan la incisión muy baja para que pueda ocultarse con la mayoría de la ropa interior, pero la cicatriz es un compromiso necesario para un abdomen plano.</p>"
+      }
+    },
+    "teeth-whitening": {
+      "teeth-whitening-1": {
+        "question": "¿Qué tan blancos se pondrán mis dientes?",
+        "answer": "<p>Los resultados varían, pero el blanqueamiento profesional puede aclarar los dientes varios tonos, logrando un aspecto notablemente más brillante pero natural.</p>"
+      },
+      "teeth-whitening-2": {
+        "question": "¿El blanqueamiento dental es doloroso?",
+        "answer": "<p>El efecto secundario más común es una sensibilidad dental temporal al calor o al frío, que generalmente desaparece en 24-48 horas.</p>"
+      },
+      "teeth-whitening-3": {
+        "question": "¿El blanqueamiento funciona en coronas o empastes?",
+        "answer": "<p>No. Los agentes blanqueadores solo funcionan en el esmalte dental natural. Si tienes restauraciones en los dientes frontales, es posible que deban ser reemplazadas para que coincidan con tu nueva sonrisa blanqueada.</p>"
+      }
+    }
   }
 }
 

@@ -290,7 +290,12 @@
     "consultationButton": "Prenota una Consulenza Riservata",
     "serviceNotFoundTitle": "Servizio Non Trovato | {siteName}",
     "serviceNotFoundDescription": "Il servizio richiesto non è stato trovato presso {siteName}.",
-    "galleryTitle": "Galleria della Procedura"
+    "galleryTitle": "Galleria della Procedura",
+    "gallerySubtitle": "Risultati reali per {serviceName}",
+    "faqTitle": "Domande Rapide",
+    "quickDetailsTitle": "Dettagli Rapidi",
+    "contactTitle": "Pronto a saperne di più?",
+    "contactSubtitle": "Pianifica oggi la tua consulenza confidenziale per discutere di {serviceName} con i nostri esperti."
   },
   "ServicesOverviewPage": {
     "metaTitle": "I Nostri Servizi | {siteName}",
@@ -396,6 +401,112 @@
     "passwordPlaceholder": "Password",
     "submitButton": "Accedi",
     "submittingButton": "Accesso in corso..."
+  },
+  "ServiceFaqs": {
+    "details": {
+      "procedureTime": "Durata Intervento",
+      "anesthesia": "Anestesia",
+      "recoveryTime": "Tempo di Recupero",
+      "results": "Risultati Finali"
+    },
+    "rhinoplasty": {
+      "rhinoplasty-1": {
+        "question": "La rinoplastica è dolorosa?",
+        "answer": "<p>L'intervento in sé non è doloroso grazie all'anestesia. Il fastidio post-operatorio, il gonfiore e i lividi sono normali, ma vengono gestiti bene con gli antidolorifici prescritti e impacchi freddi.</p>"
+      },
+      "rhinoplasty-2": {
+        "question": "Avrò cicatrici visibili?",
+        "answer": "<p>In una rinoplastica chiusa, tutte le incisioni sono nascoste all'interno del naso. In una rinoplastica aperta, c'è una piccola incisione sulla columella (la striscia di tessuto tra le narici) che di solito guarisce diventando una linea molto sottile e poco visibile.</p>"
+      },
+      "rhinoplasty-3": {
+        "question": "Quando potrò vedere i risultati finali?",
+        "answer": "<p>Anche se noterai un cambiamento significativo dopo il primo mese, ci vogliono dai 12 ai 18 mesi perché tutto il gonfiore residuo, specialmente sulla punta, si risolva e si manifesti la forma finale e definitiva.</p>"
+      }
+    },
+    "lip-reshaping": {
+      "lip-reshaping-1": {
+        "question": "Il filler alle labbra è doloroso?",
+        "answer": "<p>Il fastidio è minimo. Viene applicata una crema anestetica topica in anticipo e la maggior parte dei filler moderni contiene lidocaina, un anestetico locale, rendendo la procedura molto confortevole.</p>"
+      },
+      "lip-reshaping-2": {
+        "question": "Quanto durano i filler per le labbra?",
+        "answer": "<p>I filler a base di acido ialuronico durano tipicamente tra i 6 e i 12 mesi, a seconda del prodotto specifico utilizzato e del metabolismo individuale.</p>"
+      },
+      "lip-reshaping-3": {
+        "question": "Le mie labbra sembreranno 'a papera' o innaturali?",
+        "answer": "<p>Questo è il risultato di un riempimento eccessivo o di una tecnica impropria. Un medico esperto mira a migliorare la tua forma naturale e a mantenere l'armonia del viso, non solo a massimizzare le dimensioni. Un approccio conservativo produce i risultati più belli e naturali.</p>"
+      }
+    },
+    "blepharoplasty": {
+      "blepharoplasty-1": {
+        "question": "La chirurgia delle palpebre è dolorosa?",
+        "answer": "<p>La procedura non è dolorosa grazie all'anestesia. Il disagio post-operatorio è solitamente lieve, spesso descritto come una sensazione di tensione, facilmente gestibile con antidolorifici da banco.</p>"
+      },
+      "blepharoplasty-2": {
+        "question": "Le mie cicatrici saranno visibili?",
+        "answer": "<p>Per una blefaroplastica superiore, la cicatrice è nella piega della palpebra e praticamente invisibile quando l'occhio è aperto. Per una blefaroplastica inferiore, si trova appena sotto le ciglia o completamente nascosta all'interno della palpebra.</p>"
+      },
+      "blepharoplasty-3": {
+        "question": "Quanto durano i risultati?",
+        "answer": "<p>I risultati sono molto duraturi. La chirurgia della palpebra superiore può durare molti anni, mentre quella della palpebra inferiore raramente necessita di essere ripetuta.</p>"
+      }
+    },
+    "facelift": {
+      "facelift-1": {
+        "question": "Qual è l'età migliore per un lifting?",
+        "answer": "<p>Non esiste un'età 'migliore'. La decisione dovrebbe basarsi sui segni visibili dell'invecchiamento come la lassità cutanea e i cedimenti, non su un numero.</p>"
+      },
+      "facelift-2": {
+        "question": "Quanto durano i risultati di un lifting?",
+        "answer": "<p>I risultati sono molto duraturi, 'riportando indietro l'orologio' di circa 10-15 anni. Tuttavia, l'intervento non ferma il processo di invecchiamento.</p>"
+      },
+      "facelift-3": {
+        "question": "Sembrerò 'rifatto' o innaturale?",
+        "answer": "<p>L'obiettivo di un lifting moderno è farti apparire come una versione più giovane e riposata di te stesso. Riposizionando i tessuti facciali profondi (SMAS), un chirurgo esperto ripristina i tuoi contorni naturali.</p>"
+      }
+    },
+    "breast-augmentation": {
+      "breast-augmentation-1": {
+        "question": "Quanto durano le protesi mammarie?",
+        "answer": "<p>Le protesi mammarie non sono considerate dispositivi a vita. Anche se possono durare molti anni, è probabile che avrai bisogno di un intervento di revisione o sostituzione, tipicamente entro 10-20 anni.</p>"
+      },
+      "breast-augmentation-2": {
+        "question": "Posso ancora allattare con le protesi?",
+        "answer": "<p>Per molte donne sì. La capacità di allattare può essere influenzata dal tipo di incisione e dal posizionamento della protesi, ma spesso è ancora possibile.</p>"
+      },
+      "breast-augmentation-3": {
+        "question": "Cos'è il processo di 'assestamento'?",
+        "answer": "<p>Subito dopo l'intervento, le protesi appaiono alte e tese. L'assestamento è il processo di diversi mesi in cui il muscolo si rilassa, permettendo alla protesi di scendere in una posizione più naturale e ai tessuti di espandersi attorno ad essa.</p>"
+      }
+    },
+    "tummy-tuck": {
+      "tummy-tuck-1": {
+        "question": "L'addominoplastica è una procedura per perdere peso?",
+        "answer": "<p>No. È una procedura di rimodellamento del corpo per persone che sono già a un peso stabile ma con pelle lassa e muscoli indeboliti che non possono essere corretti con dieta o esercizio fisico.</p>"
+      },
+      "tummy-tuck-2": {
+        "question": "Cos'è la diastasi dei retti?",
+        "answer": "<p>La diastasi dei retti è la separazione dei muscoli addominali ('six-pack'), che si verifica comunemente durante la gravidanza. Causa un rigonfiamento persistente. L'addominoplastica è la correzione chirurgica definitiva per questa condizione.</p>"
+      },
+      "tummy-tuck-3": {
+        "question": "Avrò una cicatrice grande?",
+        "answer": "<p>Sì, un'addominoplastica lascia una cicatrice lunga e permanente da fianco a fianco. I chirurghi la posizionano molto in basso in modo che possa essere nascosta dalla maggior parte della biancheria intima, ma la cicatrice è un compromesso necessario per un addome piatto.</p>"
+      }
+    },
+    "teeth-whitening": {
+      "teeth-whitening-1": {
+        "question": "Quanto diventeranno bianchi i miei denti?",
+        "answer": "<p>I risultati variano, ma uno sbiancamento professionale può schiarire i denti di diverse tonalità, ottenendo un aspetto notevolmente più luminoso ma naturale.</p>"
+      },
+      "teeth-whitening-2": {
+        "question": "Lo sbiancamento dei denti è doloroso?",
+        "answer": "<p>L'effetto collaterale più comune è una temporanea sensibilità al caldo o al freddo, che di solito scompare entro 24-48 ore.</p>"
+      },
+      "teeth-whitening-3": {
+        "question": "Lo sbiancamento funziona su corone o otturazioni?",
+        "answer": "<p>No. Gli agenti sbiancanti funzionano solo sullo smalto naturale dei denti. Se hai restauri sui denti anteriori, potrebbe essere necessario sostituirli per abbinarli al tuo nuovo sorriso sbiancato.</p>"
+      }
+    }
   }
 }
 

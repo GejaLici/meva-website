@@ -208,13 +208,13 @@
     "metaTitle": "Questions frequently posées | {siteName}",
     "metaDescription": "Trouvez des réponses complètes aux questions courantes sur les procédures esthétiques, les consultations, la récupération et les parcours de soins à {siteName}.",
     "title": "Questions fréquemment posées (FAQ)",
-    "description": "Trouvez des réponses complètes aux questions fréquemment posées concernant nos services spécialisés, nos procédures avancées, la préparation préopératoire et les soins post-traitement à {siteName}.",
-    "noResults": "Aucune FAQ n'est disponible pour le moment. Veuillez contacter directement notre clinique si vous avez des questions spécifiques."
+    "description": "Trouvez des réponses complètes aux questions frequently posées concernant nos services spécialisés, nos procédures avancées, la préparation préopératoire et les soins post-traitement à {siteName}.",
+    "noResults": "Aucune FAQ n'est available pour le moment. Veuillez contacter directement notre clinique si vous avez des questions spécifiques."
   },
   "FAQ": {
     "faq-1": {
       "question": "À quoi dois-je m'attendre lors de ma première consultation à la {siteName} ?",
-      "answer": "<p>Votre première consultation à la {siteName} est une rencontre confidentielle et complète avec l'un de nos spécialistes médicaux experts. Au cours de cette session, nous discuterons en profondeur de vos objectifs esthétiques, procéderons à une évaluation minutieuse de vos antécédents médicaux pertinents et vous expliquerons clairement les options de traitement les plus appropriées disponibles. Ce temps dédié vous permet de poser toutes vos questions et d'obtenir une compréhension complète des résultats potentiels, des avantages, des risques spécifiques et du processus de récupération prévu for your proposed procedure. Our goal is to empower you with all necessary information to make a well-informed decision about your care.</p>"
+      "answer": "<p>Votre première consultation à la {siteName} est une rencontre confidentielle et complète avec l'un de nos spécialistes médicaux experts. Au cours de cette session, nous discuterons en profondeur de vos objectifs esthétiques, procéderons à une évaluation minutieuse de vos antécédents médicaux pertinents et vous expliquerons clairement les options de traitement les plus appropriées disponibles. Ce temps dédié vous permet de poser toutes vos questions et d'obtenir une compréhension complète des résultats potentiels, des avantages, des risques spécifiques et du processus de récupération previsto for your proposed procedure. Our goal is to empower you with all necessary information to make a well-informed decision about your care.</p>"
     },
     "faq-2": {
       "question": "Quelle est la durée de récupération typique pour les procédures esthétiques ?",
@@ -255,7 +255,7 @@
     "metaDescription": "Restez informé des dernières avancées, des conseils d'experts et des articles pertinents de la pointe des soins esthétiques et dentaires, sélectionnés par les professionnels de {siteName}.",
     "title": "Notre blog d'experts",
     "description": "Restez informé des dernières avancées, des conseils d'experts et des articles pertinents de la pointe des soins esthétiques et dentaires, sélectionnés par les professionnels de {siteName}.",
-    "noPosts": "Aucun article de blog n'est disponible pour le moment. Veuillez revenir plus tard ou vous assurer que votre collection Firestore 'blogPosts' est remplie d'entrées valides.",
+    "noPosts": "Aucun article de blog n'est available pour le moment. Veuillez revenir plus tard ou vous assurer que votre collection Firestore 'blogPosts' est remplie d'entrées valides.",
     "readMore": "Lire la suite"
   },
   "BlogPostPage": {
@@ -289,7 +289,12 @@
     "consultationButton": "Réserver une consultation confidentielle",
     "serviceNotFoundTitle": "Service non trouvé | {siteName}",
     "serviceNotFoundDescription": "Le service demandé n'a pas pu être trouvé à la {siteName}.",
-    "galleryTitle": "Galerie de la procédure"
+    "galleryTitle": "Galerie de la procédure",
+    "gallerySubtitle": "Résultats réels pour {serviceName}",
+    "faqTitle": "Questions Rapides",
+    "quickDetailsTitle": "Détails Rapides",
+    "contactTitle": "Prêt à en savoir plus ?",
+    "contactSubtitle": "Planifiez votre consultation confidentielle dès aujourd'hui pour discuter de {serviceName} avec nos experts."
   },
   "ServicesOverviewPage": {
     "metaTitle": "Nos services | {siteName}",
@@ -354,7 +359,7 @@
     "lastUpdated": "Dernière mise à jour : {date}",
     "h2_1": "1. ACCORD SUR LES CONDITIONS",
     "p1_1": "Ces conditions d'utilisation (« Conditions ») constituent un accord juridiquement contraignant conclu entre vous, que ce soit à titre personnel ou au nom d'une entité (« vous » ou « Utilisateur »), et {siteName} (« nous » ou « notre »), concernant votre accès et votre utilisation du site Web {SITE_DOMAIN} ainsi que toute autre forme de média, canal multimédia, site Web mobile ou application mobile connexe, lié ou autrement connecté (collectivement, le « Site » et les « Services »).",
-    "p1_2": "Vous reconnaissez et acceptez qu'en accédant au Site et/ou en utilisant nos Services, vous avez lu, compris et acceptez d'être lié par toutes ces Conditions d'utilisation. Si vous n'acceptez pas all de ces Conditions d'utilisation, il vous est expressément interdit d'utiliser le Site et nos Services, et vous devez cesser immédiatement de les utiliser.",
+    "p1_2": "Vous reconnaissez et acceptez qu'en accédant au Site et/ou en utilisant nos Services, vous avez lu, compris et acceptez d'être lié par all de ces Conditions d'utilisation. Si vous n'acceptez pas all de ces Conditions d'utilisation, il vous est expressément interdit d'utiliser le Site et nos Services, et vous devez cesser immédiatement de les utiliser.",
     "p1_3": "Les termes et conditions supplémentaires ou les documents qui peuvent être publiés sur le Site de temps à autre sont expressément incorporés aux présentes par référence.",
     "h2_2": "2. DROITS DE PROPRIÉTÉ INTELLECTUELLE",
     "p2_1": "Sauf indication contraire, le Site et les Services sont notre propriété exclusive. Tous les codes sources, bases de données, fonctionnalités, logiciels, conceptions de sites Web, fichiers audio, vidéo, textes, photographies et graphiques sur le Site (collectivement, le « Contenu ») et les marques de commerce, marques de service et logos qui y sont contenus (les « Marques ») sont détenus ou contrôlés par nous ou nous sont concédés sous licence. Ils sont protégés par les lois sur le droit d'auteur et les marques de commerce et diverses autres lois sur la propriété intellectuelle et la concurrence déloyale de l'Albanie, des juridictions étrangères et des conventions internationales. Sauf disposition expresse dans les présentes Conditions, aucune partie du Site, des Services, du Contenu ou des Marques ne peut être copiée, reproduite, agrégée, republiée, téléchargée, publiée, affichée publiquement, encodée, traduite, transmise, distribuée, vendue, concédée sous licence ou exploitée de toute autre manière à des fins commerciales, sans notre autorisation écrite préalable expresse.",
@@ -395,6 +400,112 @@
     "passwordPlaceholder": "Mot de passe",
     "submitButton": "Se connecter",
     "submittingButton": "Connexion..."
+  },
+  "ServiceFaqs": {
+    "details": {
+      "procedureTime": "Durée de l'intervention",
+      "anesthesia": "Anesthésie",
+      "recoveryTime": "Temps de récupération",
+      "results": "Résultats finaux"
+    },
+    "rhinoplasty": {
+      "rhinoplasty-1": {
+        "question": "La rhinoplastie est-elle douloureuse ?",
+        "answer": "<p>L'opération elle-même est indolore grâce à l'anesthésie. L'inconfort postopératoire, l'enflure et les ecchymoses sont attendus, mais sont bien gérés avec les analgésiques prescrits et des compresses froides.</p>"
+      },
+      "rhinoplasty-2": {
+        "question": "Aurai-je des cicatrices visibles ?",
+        "answer": "<p>Dans une rhinoplastie fermée, toutes les incisions sont cachées à l'intérieur du nez. Dans une rhinoplastie ouverte, il y a une petite incision sur la columelle (la bande de tissu entre les narines) qui guérit généralement en une ligne très fine et discrète.</p>"
+      },
+      "rhinoplasty-3": {
+        "question": "Quand puis-je voir les résultats finaux ?",
+        "answer": "<p>Bien que vous verrez un changement significatif après le premier mois, il faut de 12 à 18 mois pour que tout le gonflement résiduel, en particulier à la pointe, disparaisse et que la forme finale et affinée apparaisse.</p>"
+      }
+    },
+    "lip-reshaping": {
+      "lip-reshaping-1": {
+        "question": "L'obtention de produits de comblement des lèvres est-elle douloureuse ?",
+        "answer": "<p>L'inconfort est minime. Une crème anesthésiante topique est appliquée au préalable, et la plupart des produits de comblement modernes contiennent de la lidocaïne, un anesthésique local, ce qui rend la procédure très confortable.</p>"
+      },
+      "lip-reshaping-2": {
+        "question": "Combien de temps durent les produits de comblement des lèvres ?",
+        "answer": "<p>Les produits de comblement des lèvres à l'acide hyaluronique durent généralement entre 6 et 12 mois, en fonction du produit spécifique utilisé et de votre métabolisme individuel.</p>"
+      },
+      "lip-reshaping-3": {
+        "question": "Mes lèvres auront-elles l'air 'de canard' ou artificielles ?",
+        "answer": "<p>Ceci est le résultat d'un remplissage excessif ou d'une technique inappropriée. Un injecteur qualifié vise à améliorer votre forme naturelle et à maintenir l'harmonie du visage, pas seulement à maximiser la taille. Une approche conservatrice donne les résultats les plus beaux et les plus naturels.</p>"
+      }
+    },
+    "blepharoplasty": {
+      "blepharoplasty-1": {
+        "question": "La chirurgie des paupières est-elle douloureuse ?",
+        "answer": "<p>La procédure n'est pas douloureuse en raison de l'anesthésie. L'inconfort postopératoire est généralement léger, souvent décrit comme une sensation de tiraillement ou de douleur, qui est facilement gérée avec des analgésiques en vente libre.</p>"
+      },
+      "blepharoplasty-2": {
+        "question": "Mes cicatrices seront-elles visibles ?",
+        "answer": "<p>Pour une blépharoplastie supérieure, la cicatrice se trouve dans le pli de la paupière et est pratiquement invisible lorsque l'œil est ouvert. Pour une blépharoplastie inférieure, elle se trouve juste en dessous des cils ou complètement cachée à l'intérieur de la paupière.</p>"
+      },
+      "blepharoplasty-3": {
+        "question": "Combien de temps durent les résultats ?",
+        "answer": "<p>Les résultats sont très durables. La chirurgie des paupières supérieures peut durer de nombreuses années, tandis que la chirurgie des paupières inférieures a rarement besoin d'être répétée.</p>"
+      }
+    },
+    "facelift": {
+      "facelift-1": {
+        "question": "Quel est le meilleur âge pour un lifting du visage ?",
+        "answer": "<p>Il n'y a pas de 'meilleur' âge. La décision doit être basée sur les signes visibles du vieillissement comme le relâchement de la peau et les bajoues, pas sur un chiffre. La plupart des candidats ont entre la fin de la quarantaine et la soixantaine.</p>"
+      },
+      "facelift-2": {
+        "question": "Combien de temps durent les résultats d'un lifting du visage ?",
+        "answer": "<p>Les résultats sont très durables, 'remontant le temps' d'environ 10 à 15 ans. Cependant, la chirurgie n'arrête pas le processus de vieillissement. Vous continuerez à vieillir naturellement à partir de votre nouveau point de départ rajeuni.</p>"
+      },
+      "facelift-3": {
+        "question": "Vais-je avoir l'air 'refait' ou artificiel ?",
+        "answer": "<p>L'objectif d'un lifting moderne est de vous donner l'air d'une version plus jeune et reposée de vous-même, pas d'une personne différente. En repositionnant les tissus faciaux profonds (SMAS) plutôt qu'en tirant simplement sur la peau, un chirurgien qualifié restaure vos contours naturels.</p>"
+      }
+    },
+    "breast-augmentation": {
+      "breast-augmentation-1": {
+        "question": "Combien de temps durent les implants mammaires ?",
+        "answer": "<p>Les implants mammaires ne sont pas considérés comme des dispositifs à vie. Bien qu'ils puissent durer de nombreuses années, il est probable que vous ayez besoin d'une chirurgie de révision ou de remplacement à un moment donné, généralement dans les 10 à 20 ans.</p>"
+      },
+      "breast-augmentation-2": {
+        "question": "Puis-je encore allaiter avec des implants ?",
+        "answer": "<p>Pour de nombreuses femmes, oui. La capacité d'allaiter peut être affectée par le type d'incision et le placement de l'implant, mais c'est souvent encore possible. C'est un sujet important à discuter avec votre chirurgien.</p>"
+      },
+      "breast-augmentation-3": {
+        "question": "Qu'est-ce que le processus 'drop and fluff' ?",
+        "answer": "<p>Immédiatement après la chirurgie, les implants sont hauts et tendus. Le 'drop and fluff' est le processus sur plusieurs mois où le muscle se détend, permettant à l'implant de descendre dans une position plus naturelle (drop), et les tissus se dilatent autour de lui (fluff).</p>"
+      }
+    },
+    "tummy-tuck": {
+      "tummy-tuck-1": {
+        "question": "Une plastie abdominale est-elle une procédure de perte de poids ?",
+        "answer": "<p>Non. Une plastie abdominale est une procédure de remodelage du corps pour les personnes qui sont déjà à un poids stable et sain mais qui ont une peau lâche et des muscles affaiblis qui ne peuvent pas être corrigés par un régime ou de l'exercice.</p>"
+      },
+      "tummy-tuck-2": {
+        "question": "Qu'est-ce que le diastasis recti ?",
+        "answer": "<p>Le diastasis recti est la séparation des muscles abdominaux 'six-pack', qui se produit couramment pendant la grossesse. Il provoque un 'ventre' persistant que l'exercice ne peut pas corriger. Une plastie abdominale est la correction chirurgicale définitive pour cette condition.</p>"
+      },
+      "tummy-tuck-3": {
+        "question": "Aurai-je une grande cicatrice ?",
+        "answer": "<p>Oui, une plastie abdominale laisse une cicatrice longue et permanente qui va d'une hanche à l'autre. Les chirurgiens placent l'incision très bas pour qu'elle puisse être cachée par la plupart des sous-vêtements, mais la cicatrice est un compromis nécessaire pour un abdomen plat.</p>"
+      }
+    },
+    "teeth-whitening": {
+      "teeth-whitening-1": {
+        "question": "À quel point mes dents deviendront-elles blanches ?",
+        "answer": "<p>Les résultats varient, mais un blanchiment professionnel peut éclaircir les dents de plusieurs teintes, obtenant un aspect nettement plus brillant mais naturel.</p>"
+      },
+      "teeth-whitening-2": {
+        "question": "Le blanchiment des dents est-il douloureux ?",
+        "answer": "<p>L'effet secondaire le plus courant est une sensibilité dentaire temporaire au chaud ou au froid, qui disparaît généralement en 24 à 48 heures.</p>"
+      },
+      "teeth-whitening-3": {
+        "question": "Le blanchiment fonctionne-t-il sur les couronnes ou les plombages ?",
+        "answer": "<p>Non. Les agents de blanchiment ne fonctionnent que sur l'émail naturel des dents. Si vous avez des restaurations sur vos dents de devant, il se peut qu'elles doivent être remplacées pour correspondre à votre nouveau sourire blanchi.</p>"
+      }
+    }
   }
 }
 
