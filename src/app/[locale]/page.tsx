@@ -2,31 +2,10 @@
 import { HeroSection } from '@/components/home/HeroSection';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
-
-const ServicesSection = dynamic(
-  () => import('@/components/home/ServicesSection').then((mod) => mod.ServicesSection),
-  {
-    ssr: false,
-    loading: () => (
-      <section className="py-16">
-        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Skeleton className="h-10 w-1/2 mx-auto" />
-            <Skeleton className="h-6 w-3/4 mx-auto mt-4" />
-            <Skeleton className="h-1 w-24 mx-auto mt-6" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
-            <Skeleton className="h-[450px] md:col-span-2" />
-            <Skeleton className="h-[450px] md:col-span-2" />
-            <Skeleton className="h-[450px] md:col-span-2" />
-            <Skeleton className="h-[450px] md:col-span-3" />
-            <Skeleton className="h-[450px] md:col-span-3" />
-          </div>
-        </div>
-      </section>
-    ),
-  }
-);
+import { ServiceCategoryGrid } from '@/components/shared/ServiceCategoryGrid';
+import { getTranslations } from 'next-intl/server';
+import { serviceCategories } from '@/lib/services';
+import type { ServiceCategory } from '@/types/services';
 
 const TestimonialsSection = dynamic(
   () => import('@/components/home/TestimonialsSection').then((mod) => mod.TestimonialsSection),
@@ -115,6 +94,34 @@ const HomeContactSection = dynamic(
     )
   }
 );
+
+async function ServicesSection() {
+  const t = await getTranslations('HomePage');
+  
+  const homePageCategories: ServiceCategory[] = serviceCategories.filter(
+    cat => cat.displayOnHome
+  );
+
+  return (
+    <section className="py-16">
+      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="font-headline text-3xl font-bold text-foreground sm:text-4xl">
+            {t('servicesTitle')}
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            {t('servicesSubtitle')}
+          </p>
+          <div className="mt-6 h-1 w-24 bg-primary mx-auto rounded-full"></div>
+        </div>
+        <ServiceCategoryGrid 
+          categories={homePageCategories}
+          homePageLayout={true} 
+        />
+      </div>
+    </section>
+  );
+}
 
 
 export default function HomePage() {
