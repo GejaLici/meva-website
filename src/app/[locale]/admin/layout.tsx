@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect } from 'react';
@@ -68,14 +69,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const pathname = usePathname();
 
   useEffect(() => {
-    // If we're done loading and there's no user,
-    // and we are NOT on the login page, redirect to the login page.
+    // If loading has finished and there is no user,
+    // and we are NOT on the /admin login page itself,
+    // then redirect to the login page.
     if (!loading && !user && pathname !== '/admin') {
       router.replace('/admin');
     }
   }, [user, loading, pathname, router]);
 
-  // While loading, show a full-screen spinner.
+  // While checking user auth, show a full-screen spinner.
   if (loading) {
     return (
       <div className="flex min-h-screen w-full items-center justify-center">
@@ -84,21 +86,28 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     );
   }
 
-  // If there's no user, we let the `/admin` page (the login form) render its children.
-  // The useEffect above will handle redirecting from any other protected admin pages.
-  if (!user) {
+  // If there's no user and we are on the login page, render the login form.
+  if (!user && pathname === '/admin') {
     return <>{children}</>;
   }
 
-  // If we have a user, render the main admin layout with sidebar.
-  return (
-    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-      <AdminSidebar />
-      <div className="flex flex-col">
-        <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-          {children}
-        </main>
+  // If there is a user, render the protected admin layout with sidebar.
+  // This will also apply if a user is trying to access `/admin` directly;
+  // the page.tsx for `/admin` will then handle redirecting them to `/admin/dashboard`.
+  if (user) {
+    return (
+      <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+        <AdminSidebar />
+        <div className="flex flex-col">
+          <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
+            {children}
+          </main>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  
+  // This is a fallback case, e.g., if a non-admin page somehow gets wrapped
+  // in this layout without a user. It prevents rendering a blank page.
+  return null;
 }
