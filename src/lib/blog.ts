@@ -7,6 +7,9 @@ import type { BlogPost, ContentBlock } from '@/types/blog';
 
 async function getDb() {
   const { adminDb } = await getFirebaseAdmin();
+  if (!adminDb) {
+      throw new Error("Firebase Admin is not configured correctly on the server.");
+  }
   return adminDb;
 }
 

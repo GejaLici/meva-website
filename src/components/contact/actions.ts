@@ -13,6 +13,13 @@ interface SubmitResult {
 
 export async function submitContactForm(values: ContactFormValues & { source: string }): Promise<SubmitResult> {
   const { adminDb } = await getFirebaseAdmin();
+  
+  if (!adminDb) {
+      const errorMessage = "Firebase Admin is not configured correctly on the server.";
+      console.error(errorMessage);
+      return { success: false, error: errorMessage };
+  }
+
   const validationResult = formSchema.safeParse(values);
 
   if (!validationResult.success) {
