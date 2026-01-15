@@ -9,6 +9,7 @@ export default getRequestConfig(async ({locale}) => {
 
   return {
     locale, // This line is added
-    messages: (await import(`./messages/${locale}.json`)).default
+    messages: (await import(`./messages/${locale}.json`)).default,
+    timeZone: 'Europe/Tirane' // Set a default time zone
   };
 });

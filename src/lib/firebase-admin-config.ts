@@ -26,22 +26,13 @@ function getAdminApp(): App {
     return adminApp;
   }
 
-  try {
-    const credential = cert(serviceAccount);
-    
-    adminApp = initializeApp({
-      credential,
-    }, 'firebase-admin-app');
+  const credential = cert(serviceAccount as any);
+  
+  adminApp = initializeApp({
+    credential,
+  }, 'firebase-admin-app');
 
-    return adminApp;
-  } catch (error: any) {
-    // Check for a specific error code that indicates the object is empty/invalid
-    if (error.code === 'app/invalid-credential' && (!serviceAccount || !serviceAccount.project_id)) {
-        throw new Error("Firebase Admin SDK service account file is not configured correctly or is empty. Please add your credentials to 'src/firebase-service-account.json'.");
-    }
-    console.error('Firebase Admin Init Error:', error.message);
-    throw new Error(`Failed to initialize Firebase Admin SDK: ${error.message}`);
-  }
+  return adminApp;
 }
 
 /**
@@ -49,16 +40,10 @@ function getAdminApp(): App {
  * This is the primary function to be used by other server-side modules.
  */
 export async function getFirebaseAdmin() {
-  try {
     const app = getAdminApp();
     const adminAuth = getAuth(app);
     const adminDb = getFirestore(app);
     return { adminApp: app, adminAuth, adminDb };
-  } catch (error) {
-     console.error("Failed to get Firebase Admin instances:", error);
-     // Return null instances if initialization fails to prevent crashes downstream.
-     return { adminApp: null, adminAuth: null, adminDb: null };
-  }
 }
 
 /**
