@@ -37,10 +37,7 @@ export async function submitContactForm(values: ContactFormValues & { source: st
   } catch (error) {
     console.error('Error submitting form to Firestore:', error);
     let errorMessage = "Failed to send message due to a server error.";
-    if (error instanceof Error && error.message.includes('PERMISSION_DENIED')) {
-        errorMessage = "Failed to send message. Please ensure Firebase configuration is correct and permissions are set.";
-        console.error("Firebase permission denied. Check Firestore rules and configuration.");
-    } else if (error instanceof Error) {
+    if (error instanceof Error) {
         errorMessage = error.message;
     }
     return { success: false, error: errorMessage };

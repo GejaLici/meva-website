@@ -6,13 +6,14 @@ import { getAuth } from 'firebase-admin/auth';
 import { getFirestore } from 'firebase-admin/firestore';
 import { headers } from 'next/headers';
 import 'server-only';
+import serviceAccount from '@/firebase-service-account.json';
 
 // Memoization for the admin app instance
 let adminApp: App | null = null;
 
 /**
  * Initializes and returns the Firebase Admin App instance.
- * It uses environment variables to construct the service account credentials object.
+ * It uses a service account JSON file for credentials.
  */
 function getAdminApp(): App {
   if (adminApp) {
@@ -25,30 +26,8 @@ function getAdminApp(): App {
     return adminApp;
   }
 
-  const serviceAccount = {
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    privateKey: process.env.FIREBASE_PRIVATE_KEY 
-        // This is the crucial step to fix formatting issues from .env files
-        ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n') 
-        : undefined,
-  };
-
-  // Check if the service account has the required properties
-  if (
-    !serviceAccount.projectId ||
-    !serviceAccount.clientEmail ||
-    !serviceAccount.privateKey
-  ) {
-    throw new Error('Firebase Admin SDK credentials are not set in .env file. Please check your environment variables.');
-  }
-
   try {
-    const credential = cert({
-        projectId: serviceAccount.projectId,
-        clientEmail: serviceAccount.clientEmail,
-        privateKey: serviceAccount.privateKey,
-    });
+    const credential = cert(serviceAccount);
     
     adminApp = initializeApp({
       credential,
@@ -56,6 +35,10 @@ function getAdminApp(): App {
 
     return adminApp;
   } catch (error: any) {
+    // Check for a specific error code that indicates the object is empty/invalid
+    if (error.code === 'app/invalid-credential' && (!serviceAccount || !serviceAccount.project_id)) {
+        throw new Error("Firebase Admin SDK service account file is not configured correctly or is empty. Please add your credentials to 'src/firebase-service-account.json'.");
+    }
     console.error('Firebase Admin Init Error:', error.message);
     throw new Error(`Failed to initialize Firebase Admin SDK: ${error.message}`);
   }
