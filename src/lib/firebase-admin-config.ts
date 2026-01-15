@@ -12,8 +12,7 @@ let adminApp: App | null = null;
 
 /**
  * Initializes and returns the Firebase Admin App instance.
- * It uses a single environment variable `FIREBASE_ADMIN_SDK_JSON`
- * which should contain the entire service account JSON as a string.
+ * It uses environment variables to construct the service account credentials object.
  */
 function getAdminApp(): App {
   if (adminApp) {
@@ -26,15 +25,30 @@ function getAdminApp(): App {
     return adminApp;
   }
 
-  const serviceAccountJson = process.env.FIREBASE_ADMIN_SDK_JSON;
+  const serviceAccount = {
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    privateKey: process.env.FIREBASE_PRIVATE_KEY 
+        // This is the crucial step to fix formatting issues from .env files
+        ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n') 
+        : undefined,
+  };
 
-  if (!serviceAccountJson) {
-    throw new Error('Firebase Admin SDK credentials are not set. Please set the FIREBASE_ADMIN_SDK_JSON environment variable.');
+  // Check if the service account has the required properties
+  if (
+    !serviceAccount.projectId ||
+    !serviceAccount.clientEmail ||
+    !serviceAccount.privateKey
+  ) {
+    throw new Error('Firebase Admin SDK credentials are not set in .env file. Please check your environment variables.');
   }
 
   try {
-    const serviceAccount = JSON.parse(serviceAccountJson);
-    const credential = cert(serviceAccount);
+    const credential = cert({
+        projectId: serviceAccount.projectId,
+        clientEmail: serviceAccount.clientEmail,
+        privateKey: serviceAccount.privateKey,
+    });
     
     adminApp = initializeApp({
       credential,
