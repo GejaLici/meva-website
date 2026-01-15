@@ -1,10 +1,13 @@
 
 'use server';
 
-import { getFirestore, doc, deleteDoc } from 'firebase-admin/firestore';
-import { adminApp, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
+import { doc, deleteDoc } from 'firebase/firestore';
+import { getFirebaseAdmin, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 
-const db = getFirestore(adminApp);
+async function getDb() {
+  const { adminDb } = getFirebaseAdmin();
+  return adminDb;
+}
 
 // This action can only be successfully called by an authenticated user
 export async function deleteBlogPost(postId: string) {
@@ -21,6 +24,7 @@ export async function deleteBlogPost(postId: string) {
   }
 
   try {
+    const db = await getDb();
     const postRef = doc(db, 'blogPosts', postId);
     await deleteDoc(postRef);
     return { success: true };

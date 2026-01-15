@@ -1,12 +1,10 @@
 
 'use server';
 
-import { getFirestore, serverTimestamp } from 'firebase-admin/firestore';
-import { adminApp } from '@/lib/firebase-admin-config';
+import { serverTimestamp } from 'firebase/firestore';
+import { getFirebaseAdmin } from '@/lib/firebase-admin-config';
 import { formSchema } from './schema';
 import type { ContactFormValues } from './schema';
-
-const db = getFirestore(adminApp);
 
 interface SubmitResult {
     success: boolean;
@@ -14,6 +12,7 @@ interface SubmitResult {
 }
 
 export async function submitContactForm(values: ContactFormValues & { source: string }): Promise<SubmitResult> {
+  const { adminDb } = await getFirebaseAdmin();
   const validationResult = formSchema.safeParse(values);
 
   if (!validationResult.success) {
@@ -22,7 +21,7 @@ export async function submitContactForm(values: ContactFormValues & { source: st
   }
 
   try {
-    const docRef = await db.collection("contactSubmissions").add({
+    const docRef = await adminDb.collection("contactSubmissions").add({
       ...values,
       submittedAt: serverTimestamp(),
     });

@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 
 # testing
 /coverage
@@ -34,8 +33,10 @@ yarn-error.log*
 # vercel
 .vercel
 
-# genkit
-.genkit
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
-# firebase
+# genkit
+.genkit/
 firebase.json

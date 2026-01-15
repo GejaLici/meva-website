@@ -3,60 +3,71 @@
 
 import { getApps, initializeApp, cert, getApp, App } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
+import { getFirestore } from 'firebase-admin/firestore';
 import { headers } from 'next/headers';
-import * as serviceAccount from '../../../firebase.json';
+import 'server-only';
 
-// This function now initializes the app using credentials from the firebase.json file.
+let adminApp: App;
+
+// This function now initializes the app using environment variables.
+// It includes a crucial fix for the private_key formatting.
 function getAdminApp(): App {
-  if (getApps().length > 0) {
-    return getApp('firebase-admin-app');
+  if (getApps().some(app => app.name === 'firebase-admin-app')) {
+    adminApp = getApp('firebase-admin-app');
+  } else {
+    // Read credentials from environment variables
+    const serviceAccount = {
+      type: "service_account",
+      project_id: process.env.FIREBASE_PROJECT_ID,
+      private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
+      private_key: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'), // <--- THE CRUCIAL FIX
+      client_email: process.env.FIREBASE_CLIENT_EMAIL,
+      client_id: process.env.FIREBASE_CLIENT_ID,
+      auth_uri: "https://accounts.google.com/o/oauth2/auth",
+      token_uri: "https://oauth2.googleapis.com/token",
+      auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+      client_x509_cert_url: process.env.FIREBASE_CLIENT_X509_CERT_URL
+    };
+    
+    // Check if the service account has the required properties
+    if (
+      !serviceAccount.project_id ||
+      !serviceAccount.client_email ||
+      !serviceAccount.private_key
+    ) {
+      throw new Error('Firebase Admin SDK credentials are not set in .env file. Please check your environment variables.');
+    }
+
+    try {
+        const credential = cert(serviceAccount);
+        adminApp = initializeApp({ credential }, 'firebase-admin-app');
+    } catch (error: any) {
+        console.error('Firebase Admin Init Error:', error);
+        throw new Error(`Failed to parse Firebase Admin SDK credentials: ${error.message}`);
+    }
   }
 
-  // Check if the service account has the required properties
-  if (
-    !serviceAccount ||
-    !serviceAccount.project_id ||
-    !serviceAccount.client_email ||
-    !serviceAccount.private_key
-  ) {
-    throw new Error(
-      'Firebase Admin SDK credentials are not set correctly in firebase.json file. Please download it from your Firebase project settings.'
-    );
-  }
-
-  try {
-    return initializeApp(
-      {
-        credential: cert(serviceAccount),
-      },
-      'firebase-admin-app'
-    );
-  } catch (error: any) {
-    console.error('Firebase Admin Init Error:', error.message);
-    throw new Error(`Failed to initialize Firebase Admin SDK: ${error.message}`);
-  }
+  return adminApp;
 }
 
-const adminApp = getAdminApp();
-const adminAuth = getAuth(adminApp);
-
-export { adminApp, adminAuth };
-
-export async function getAuthenticatedAppForUser() {
+export async function getFirebaseAdmin() {
   const app = getAdminApp();
-  if (!app) {
-     return { app: null, currentUser: null };
-  }
-  const auth = getAuth(app);
-  const idToken = headers().get('Authorization')?.split('Bearer ')[1];
+  const adminAuth = getAuth(app);
+  const adminDb = getFirestore(app);
+  return { adminApp: app, adminAuth, adminDb };
+}
 
-  if (!idToken) {
-    return { app: null, currentUser: null };
-  }
-
+export async function getAuthenticatedAppForUser(): Promise<{ app: App | null; currentUser: any | null; }> {
   try {
-    const decodedToken = await auth.verifyIdToken(idToken);
-    return { app, currentUser: decodedToken };
+    const { adminAuth } = await getFirebaseAdmin();
+    const idToken = headers().get('Authorization')?.split('Bearer ')[1];
+
+    if (!idToken) {
+      return { app: null, currentUser: null };
+    }
+
+    const decodedToken = await adminAuth.verifyIdToken(idToken);
+    return { app: adminApp, currentUser: decodedToken };
   } catch (error) {
     console.error('Error verifying auth token:', error);
     return { app: null, currentUser: null };
