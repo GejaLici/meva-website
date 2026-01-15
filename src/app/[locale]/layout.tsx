@@ -9,6 +9,7 @@ import {NextIntlClientProvider, useMessages} from 'next-intl';
 import {getTranslations} from 'next-intl/server';
 import { locales } from '@/navigation';
 import { FirebaseProvider } from '@/firebase/provider';
+import { seedExampleBlogPost } from '@/lib/seed';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,7 +37,7 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: {locale}
 }: {
@@ -48,6 +49,10 @@ export default function RootLayout({
     return null;
   }
   
+  // NOTE: This is a temporary function to seed the database with an example post.
+  // You can safely remove this line after the post has been created.
+  await seedExampleBlogPost();
+
   const messages = useMessages();
 
   return (

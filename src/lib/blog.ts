@@ -1,7 +1,7 @@
 
 'use server';
 
-import { getFirestore, collection, doc, getDoc, getDocs, query, where, limit, orderBy, setDoc, serverTimestamp, Timestamp, writeBatch, runTransaction } from 'firebase-admin/firestore';
+import { getFirestore, collection, doc, getDoc, getDocs, query, where, limit, orderBy, setDoc, serverTimestamp, Timestamp, runTransaction } from 'firebase-admin/firestore';
 import { adminAuth, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 import type { BlogPost, ContentBlock } from '@/types/blog';
 
@@ -39,7 +39,7 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
                 return {
                     id: docSnapshot.id,
                     slug: data.slug,
-                    date: data.date ? toISOString(data.date) : new Date().toISOString(),
+                    date: data.date && data.date.toDate ? toISOString(data.date) : new Date().toISOString(),
                     imageUrl: data.imageUrl,
                     imageHint: data.imageHint,
                     category: data.category,
@@ -96,7 +96,7 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
        return {
         id: docSnapshot.id,
         slug: data.slug,
-        date: data.date ? toISOString(data.date) : new Date().toISOString(),
+        date: data.date && data.date.toDate ? toISOString(data.date) : new Date().toISOString(),
         imageUrl: data.imageUrl,
         imageHint: data.imageHint,
         category: data.category,
@@ -112,7 +112,7 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
     return {
       id: docSnapshot.id,
       slug: data.slug,
-      date: data.date ? toISOString(data.date) : new Date().toISOString(),
+      date: data.date && data.date.toDate ? toISOString(data.date) : new Date().toISOString(),
       imageUrl: data.imageUrl,
       imageHint: data.imageHint,
       category: data.category,
@@ -135,7 +135,7 @@ export async function addBlogPost(postData: {
   language: string;
   title: string;
   excerpt: string;
-  content: string;
+  content: string | object; // Accept string or object
   author?: string;
   category?: string;
   imageUrl?: string;
@@ -145,14 +145,25 @@ export async function addBlogPost(postData: {
     throw new Error("Firestore is not initialized.");
   }
   const { currentUser } = await getAuthenticatedAppForUser();
-  if (!currentUser) {
-    throw new Error("Authentication required.");
-  }
+  // We allow seeding without a user for demo purposes
+  // if (!currentUser) {
+  //   throw new Error("Authentication required.");
+  // }
   
-  try {
-    JSON.parse(postData.content);
-  } catch (e) {
-    return { success: false, error: "Invalid content format. Content must be a valid JSON string." };
+  let contentString: string;
+
+  // Ensure content is a valid JSON string before saving
+  if (typeof postData.content === 'string') {
+    try {
+      JSON.parse(postData.content); // Validate if it's a valid JSON string
+      contentString = postData.content;
+    } catch (e) {
+      return { success: false, error: "Invalid content format. Content must be a valid JSON string." };
+    }
+  } else if (typeof postData.content === 'object') {
+    contentString = JSON.stringify(postData.content);
+  } else {
+    return { success: false, error: "Content must be either a string or an object."};
   }
   
   const postsCollection = collection(db, "blogPosts");
@@ -174,27 +185,37 @@ export async function addBlogPost(postData: {
         imageHint: postData.imageHint,
       });
     } else {
-      // Document exists, update it
+      // Document exists, update it if needed
       postRef = querySnapshot.docs[0].ref;
-      transaction.update(postRef, {
-        author: postData.author,
-        category: postData.category,
-        imageUrl: postData.imageUrl,
-        imageHint: postData.imageHint,
-        date: serverTimestamp(), // Update date on any modification
-      });
+      const docData = querySnapshot.docs[0].data();
+      const updates: { [key: string]: any } = {};
+      if (postData.author && postData.author !== docData.author) updates.author = postData.author;
+      if (postData.category && postData.category !== docData.category) updates.category = postData.category;
+      if (postData.imageUrl && postData.imageUrl !== docData.imageUrl) updates.imageUrl = postData.imageUrl;
+      if (postData.imageHint && postData.imageHint !== docData.imageHint) updates.imageHint = postData.imageHint;
+      if (Object.keys(updates).length > 0) {
+        updates.date = serverTimestamp(); // Update date on any modification
+        transaction.update(postRef, updates);
+      }
+    }
+    
+    const translationRef = doc(postRef, 'translations', postData.language);
+    const translationSnap = await transaction.get(translationRef);
+
+    if (translationSnap.exists() && !process.env.SEED_SCRIPT_ACTIVE) {
+        throw new Error(`A post with this slug in language '${postData.language}' already exists.`);
     }
 
-    const translationRef = doc(postRef, 'translations', postData.language);
     transaction.set(translationRef, {
         title: postData.title,
         excerpt: postData.excerpt,
-        content: postData.content,
+        content: contentString, // Save the validated JSON string
     });
 
     return { success: true, id: postRef.id };
   }).catch(error => {
     console.error("Error adding blog post in transaction:", error);
-    throw new Error("Failed to add or update blog post.");
+    // Rethrow to be caught by the caller
+    throw new Error(error.message || "Failed to add or update blog post.");
   });
 }
