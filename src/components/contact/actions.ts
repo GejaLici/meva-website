@@ -1,7 +1,7 @@
 
 'use server';
 
-import { serverTimestamp } from 'firebase/firestore';
+import { FieldValue } from 'firebase-admin/firestore';
 import { getFirebaseAdmin } from '@/lib/firebase-admin-config';
 import { formSchema } from './schema';
 import type { ContactFormValues } from './schema';
@@ -30,7 +30,7 @@ export async function submitContactForm(values: ContactFormValues & { source: st
 
     const docRef = await adminDb.collection("contactSubmissions").add({
       ...values,
-      submittedAt: serverTimestamp(),
+      submittedAt: FieldValue.serverTimestamp(),
     });
     console.log("Contact form data saved to Firestore with ID: ", docRef.id);
     return { success: true };
