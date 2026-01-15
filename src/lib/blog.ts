@@ -137,13 +137,14 @@ export async function addBlogPost(postData: {
   category?: string;
   imageUrl?: string;
   imageHint?: string;
-}) {
+}, idToken?: string | null) {
   // Only check for authentication if the seed script is NOT active.
   // This allows the initial database seed to run without a user session.
   if (process.env.SEED_SCRIPT_ACTIVE !== 'true') {
-    const { currentUser } = await getAuthenticatedAppForUser();
+    const { currentUser } = await getAuthenticatedAppForUser(idToken);
     if (!currentUser) {
-      throw new Error('User must be authenticated to add a blog post.');
+      // Use a more specific error that can be caught and displayed to the user
+      return { success: false, error: 'User must be authenticated to add a blog post.' };
     }
   }
 

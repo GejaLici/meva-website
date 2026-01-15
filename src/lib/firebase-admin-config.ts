@@ -57,16 +57,18 @@ export async function getFirebaseAdmin() {
   return { adminApp: app, adminAuth, adminDb };
 }
 
-export async function getAuthenticatedAppForUser(): Promise<{ app: App | null; currentUser: any | null; }> {
+export async function getAuthenticatedAppForUser(idToken?: string | null): Promise<{ app: App | null; currentUser: any | null; }> {
+  // If an ID token is explicitly passed (from the client), use it.
+  // Otherwise, fall back to reading from headers.
+  const token = idToken || headers().get('Authorization')?.split('Bearer ')[1];
+  
+  if (!token) {
+    return { app: null, currentUser: null };
+  }
+  
   try {
     const { adminAuth } = await getFirebaseAdmin();
-    const idToken = headers().get('Authorization')?.split('Bearer ')[1];
-
-    if (!idToken) {
-      return { app: null, currentUser: null };
-    }
-
-    const decodedToken = await adminAuth.verifyIdToken(idToken);
+    const decodedToken = await adminAuth.verifyIdToken(token);
     return { app: adminApp, currentUser: decodedToken };
   } catch (error) {
     console.error('Error verifying auth token:', error);

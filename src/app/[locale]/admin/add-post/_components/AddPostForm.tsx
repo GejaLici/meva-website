@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -16,6 +16,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { addBlogPost } from '@/lib/blog';
 import { locales } from '@/navigation';
+import { useUser } from '@/firebase';
 
 const formSchema = z.object({
   title: z.string().min(5, 'Title must be at least 5 characters long.'),
@@ -33,8 +34,16 @@ type AddPostFormValues = z.infer<typeof formSchema>;
 
 export function AddPostForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [idToken, setIdToken] = useState<string | null>(null);
   const { toast } = useToast();
   const t = useTranslations('Admin');
+  const { user, loading: userLoading } = useUser();
+
+  useEffect(() => {
+    if (user) {
+      user.getIdToken().then(setIdToken);
+    }
+  }, [user]);
 
   const form = useForm<AddPostFormValues>({
     resolver: zodResolver(formSchema),
@@ -52,9 +61,17 @@ export function AddPostForm() {
   });
 
   async function onSubmit(values: AddPostFormValues) {
+    if (!idToken) {
+      toast({
+        variant: 'destructive',
+        title: t('postErrorTitle'),
+        description: 'Authentication token not available. Please sign in again.',
+      });
+      return;
+    }
     setIsSubmitting(true);
     try {
-      const result = await addBlogPost(values);
+      const result = await addBlogPost(values, idToken);
       if (result.success) {
         toast({
           title: t('postSuccessTitle'),
@@ -78,6 +95,8 @@ export function AddPostForm() {
       setIsSubmitting(false);
     }
   }
+
+  const isButtonDisabled = isSubmitting || userLoading || !idToken;
 
   return (
     <Form {...form}>
@@ -217,7 +236,7 @@ export function AddPostForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={isSubmitting} className="w-full">
+        <Button type="submit" disabled={isButtonDisabled} className="w-full">
           {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {isSubmitting ? t('submittingButton') : t('submitPostButton')}
         </Button>
