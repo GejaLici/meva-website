@@ -11,9 +11,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { addBlogPost } from '@/lib/blog';
+import { locales } from '@/navigation';
 
 const formSchema = z.object({
   title: z.string().min(5, 'Title must be at least 5 characters long.'),
@@ -24,6 +26,7 @@ const formSchema = z.object({
   imageHint: z.string().optional(),
   excerpt: z.string().min(20, 'Excerpt must be at least 20 characters long.'),
   content: z.string().min(50, 'Content must be at least 50 characters long.'),
+  language: z.enum(locales),
 });
 
 type AddPostFormValues = z.infer<typeof formSchema>;
@@ -44,16 +47,14 @@ export function AddPostForm() {
       imageHint: '',
       excerpt: '',
       content: '',
+      language: 'en',
     },
   });
 
   async function onSubmit(values: AddPostFormValues) {
     setIsSubmitting(true);
     try {
-      // The `content` field should be a valid JSON string from the form.
-      const postData = { ...values, content: values.content };
-      
-      const result = await addBlogPost(postData);
+      const result = await addBlogPost(values);
       if (result.success) {
         toast({
           title: t('postSuccessTitle'),
@@ -64,7 +65,7 @@ export function AddPostForm() {
          toast({
           variant: 'destructive',
           title: t('postErrorTitle'),
-          description: "An unknown error occurred.",
+          description: result.error || "An unknown error occurred.",
         });
       }
     } catch (error) {
@@ -108,6 +109,30 @@ export function AddPostForm() {
               </FormItem>
             )}
           />
+        </div>
+        <FormField
+            control={form.control}
+            name="language"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t('fieldLanguage')}</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                        <SelectTrigger>
+                            <SelectValue placeholder={t('fieldLanguagePlaceholder')} />
+                        </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                        {locales.map(locale => (
+                            <SelectItem key={locale} value={locale}>{locale.toUpperCase()}</SelectItem>
+                        ))}
+                    </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <FormField
             control={form.control}
             name="author"

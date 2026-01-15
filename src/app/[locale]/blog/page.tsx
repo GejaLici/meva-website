@@ -5,6 +5,12 @@ import { getAllBlogPosts } from '@/lib/blog';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
+type BlogPageProps = {
+  params: {
+    locale: string;
+  }
+}
+
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}): Promise<Metadata> {
   const t = await getTranslations({locale, namespace: 'BlogPage'});
   const tSite = await getTranslations({locale, namespace: 'Site'});
@@ -14,8 +20,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   };
 }
 
-export default async function BlogPage() {
-  const posts = await getAllBlogPosts();
+export default async function BlogPage({ params: { locale } }: BlogPageProps) {
+  const posts = await getAllBlogPosts(locale);
   const t = await getTranslations('BlogPage');
   const tSite = await getTranslations('Site');
   const siteName = tSite('title');

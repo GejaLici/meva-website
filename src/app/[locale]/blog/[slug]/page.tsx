@@ -52,8 +52,8 @@ interface BlogPostPageProps {
   };
 }
 
-export async function generateStaticParams() {
-  const posts = await getAllBlogPosts();
+export async function generateStaticParams({ params: { locale } }: { params: { locale: string } }) {
+  const posts = await getAllBlogPosts(locale);
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const t = await getTranslations({locale: params.locale, namespace: 'BlogPostPage'});
   const tSite = await getTranslations({locale: params.locale, namespace: 'Site'});
   const siteName = tSite('title');
-  const post = await getBlogPostBySlug(params.slug);
+  const post = await getBlogPostBySlug(params.slug, params.locale);
 
   if (!post) {
     return { 
@@ -177,7 +177,7 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const t = await getTranslations('BlogPostPage');
-  const post = await getBlogPostBySlug(params.slug);
+  const post = await getBlogPostBySlug(params.slug, params.locale);
 
   if (!post) {
     notFound();

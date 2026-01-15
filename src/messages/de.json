@@ -507,5 +507,33 @@
         "answer": "<p>Nein. Bleichmittel wirken nur auf den natürlichen Zahnschmelz. Wenn Sie Restaurationen an Ihren Vorderzähnen haben, werden diese ihre Farbe nicht ändern und müssen möglicherweise ersetzt werden, um zu Ihrem neu aufgehellten Lächeln zu passen.</p>"
       }
     }
+  },
+  "Admin": {
+    "addPostTitle": "Neuen Blogbeitrag hinzufügen",
+    "addPostDescription": "Verwenden Sie dieses Formular, um einen neuen Artikel zum Firmenblog hinzuzufügen.",
+    "fieldTitle": "Beitragstitel",
+    "fieldTitlePlaceholder": "z.B. Die Vorteile des Microneedlings",
+    "fieldSlug": "Beitrags-Slug",
+    "fieldSlugPlaceholder": "z.B. vorteile-des-microneedlings",
+    "fieldAuthor": "Autor (Optional)",
+    "fieldAuthorPlaceholder": "z.B. Dr. Jane Doe",
+    "fieldCategory": "Kategorie (Optional)",
+    "fieldCategoryPlaceholder": "z.B. Hautpflege",
+    "fieldImageUrl": "Feature-Bild-URL (Optional)",
+    "fieldImageUrlPlaceholder": "https://...",
+    "fieldImageHint": "Bild-KI-Hinweis (Optional)",
+    "fieldImageHintPlaceholder": "z.B. Person lächelnd",
+    "fieldExcerpt": "Auszug",
+    "fieldExcerptPlaceholder": "Eine kurze, überzeugende Zusammenfassung des Artikels...",
+    "fieldContent": "Inhalt (JSON-Format)",
+    "fieldContentPlaceholder": "Geben Sie den Inhalt als gültige JSON-Zeichenfolge ein...",
+    "fieldContentHint": "Der Inhalt muss eine gültige JSON-Zeichenfolge sein, die ein ContentBlock[] darstellt. Beispiel: [{\\\"id\\\":\\\"p1\\\",\\\"type\\\":\\\"paragraph\\\",\\\"children\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"Dies ist der erste Absatz.\\\"}]}]",
+    "submitPostButton": "Beitrag einreichen",
+    "submittingButton": "Wird eingereicht...",
+    "postSuccessTitle": "Blogbeitrag erfolgreich hinzugefügt",
+    "postSuccessDescription": "Ihr neuer Beitrag (ID: {postId}) wurde zur Datenbank hinzugefügt.",
+    "postErrorTitle": "Fehler beim Hinzufügen des Beitrags",
+    "fieldLanguage": "Beitragssprache",
+    "fieldLanguagePlaceholder": "Sprache auswählen"
   }
 }

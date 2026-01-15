@@ -423,7 +423,9 @@
     "submittingButton": "Submitting...",
     "postSuccessTitle": "Blog Post Added Successfully",
     "postSuccessDescription": "Your new post (ID: {postId}) has been added to the database.",
-    "postErrorTitle": "Error Adding Post"
+    "postErrorTitle": "Error Adding Post",
+    "fieldLanguage": "Post Language",
+    "fieldLanguagePlaceholder": "Select a language"
   },
   "AdminNav": {
     "dashboard": "Dashboard",
@@ -556,7 +558,7 @@
       },
       "breast-augmentation-3": {
         "question": "What is the 'drop and fluff' process?",
-        "answer": "<p>Immediately after surgery, implants sit high and tight. 'Drop and fluff' is the process over several months where the muscle relaxes, allowing the implant to settle down (drop) into a more natural position, and the tissues expand (fluff) around it.</p>"
+        "answer": "<p>Immediately after surgery, implants sit high and tight on the chest. 'Drop and fluff' is the process over several months where the muscle relaxes, allowing the implant to settle down (drop) into a more natural position, and the tissues expand (fluff) around it.</p>"
       }
     },
     "tummy-tuck": {
