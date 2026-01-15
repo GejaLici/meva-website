@@ -8,28 +8,34 @@ function getAdminApp(): App {
     return getApp('firebase-admin-app');
   }
 
-  // Instead of parsing a single JSON string, we build the credential object
-  // from individual environment variables.
+  // Construct the service account object from individual environment variables.
+  // This is a more robust method than parsing a JSON string.
   const serviceAccount = {
     projectId: process.env.FIREBASE_PROJECT_ID,
     clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    // The private key from the .env file has its newlines escaped as `\\n`.
-    // We need to replace them back to actual newline characters `\n`.
-    privateKey: process.env.FIREBASE_PRIVATE_KEY
-      ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n')
-      : undefined,
+    // The private key must be correctly formatted in the .env file.
+    // The replace() call is crucial to handle the newlines correctly.
+    privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
   };
 
   if (!serviceAccount.projectId || !serviceAccount.clientEmail || !serviceAccount.privateKey) {
-    throw new Error('Firebase Admin SDK service account credentials are not set in .env file.');
+    // This error will be thrown if the environment variables are not set.
+    // It's a clear indicator that the .env file needs to be checked.
+    throw new Error('Firebase Admin SDK service account credentials are not set correctly in the environment.');
   }
 
-  return initializeApp(
-    {
-      credential: cert(serviceAccount),
-    },
-    'firebase-admin-app'
-  );
+  try {
+    return initializeApp(
+      {
+        credential: cert(serviceAccount),
+      },
+      'firebase-admin-app'
+    );
+  } catch (error: any) {
+    // This will catch errors from `cert()` if the key format is still wrong.
+    console.error('Firebase Admin Init Error:', error.message);
+    throw new Error(`Failed to parse private key: ${error.message}. Please ensure FIREBASE_PRIVATE_KEY in your .env file is correctly formatted.`);
+  }
 }
 
 // Initialize the app and auth instances
