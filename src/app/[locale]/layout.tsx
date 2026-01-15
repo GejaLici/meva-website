@@ -5,11 +5,10 @@ import '@/app/globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import {NextIntlClientProvider, useMessages} from 'next-intl';
-import {getTranslations} from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { locales } from '@/navigation';
-import { FirebaseProvider } from '@/firebase/provider';
 import { seedExampleBlogPost } from '@/lib/seed';
+import { Providers } from './providers';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -51,23 +50,30 @@ export default async function RootLayout({
   
   // NOTE: This is a temporary function to seed the database with an example post.
   // You can safely remove this line after the post has been created.
-  await seedExampleBlogPost();
+  try {
+    await seedExampleBlogPost();
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('already exists')) {
+      // This is expected, do nothing.
+    } else {
+      console.error("Error seeding blog post:", error);
+    }
+  }
 
-  const messages = useMessages();
+
+  const messages = await getMessages();
 
   return (
     <html lang={locale} className={`${inter.variable} ${poppins.variable}`}>
       <body className="font-body antialiased flex flex-col min-h-screen bg-background">
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <FirebaseProvider>
-            <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-            <Toaster />
-          </FirebaseProvider>
-        </NextIntlClientProvider>
+        <Providers locale={locale} messages={messages}>
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

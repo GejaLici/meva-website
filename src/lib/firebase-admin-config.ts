@@ -4,9 +4,18 @@ import { getAuth } from 'firebase-admin/auth';
 import { headers } from 'next/headers';
 import { DecodedIdToken } from 'firebase-admin/auth';
 
-const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_KEY
-  ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY)
-  : null;
+const serviceAccountKey = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
+
+// Safely parse the service account key
+let serviceAccount: any = null;
+if (serviceAccountKey) {
+    try {
+        serviceAccount = JSON.parse(serviceAccountKey);
+    } catch (e) {
+        console.error('Error parsing FIREBASE_SERVICE_ACCOUNT_KEY. Ensure it is a valid JSON string.', e);
+    }
+}
+
 
 let app: App | null = null;
 if (getApps().length > 0) {
