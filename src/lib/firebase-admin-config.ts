@@ -3,24 +3,25 @@ import { getApps, initializeApp, cert, getApp, App } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { headers } from 'next/headers';
 
-const serviceAccountKey = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
-
 function getAdminApp(): App {
   if (getApps().length > 0) {
     return getApp('firebase-admin-app');
   }
 
-  if (!serviceAccountKey) {
-    throw new Error('FIREBASE_SERVICE_ACCOUNT_KEY environment variable is not set.');
-  }
+  // Instead of parsing a single JSON string, we build the credential object
+  // from individual environment variables.
+  const serviceAccount = {
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    // The private key from the .env file has its newlines escaped as `\\n`.
+    // We need to replace them back to actual newline characters `\n`.
+    privateKey: process.env.FIREBASE_PRIVATE_KEY
+      ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n')
+      : undefined,
+  };
 
-  let serviceAccount;
-  try {
-    // This will handle the JSON string, including newline characters
-    serviceAccount = JSON.parse(serviceAccountKey);
-  } catch (e: any) {
-    console.error('Error parsing FIREBASE_SERVICE_ACCOUNT_KEY:', e.message);
-    throw new Error('Could not parse FIREBASE_SERVICE_ACCOUNT_KEY. Make sure it is a valid JSON string.');
+  if (!serviceAccount.projectId || !serviceAccount.clientEmail || !serviceAccount.privateKey) {
+    throw new Error('Firebase Admin SDK service account credentials are not set in .env file.');
   }
 
   return initializeApp(
