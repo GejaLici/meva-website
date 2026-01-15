@@ -2,10 +2,10 @@
 'use server';
 
 import { getFirestore, collection, doc, getDoc, getDocs, query, where, limit, orderBy, setDoc, serverTimestamp, Timestamp, runTransaction } from 'firebase-admin/firestore';
-import { adminAuth, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
+import { adminApp, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 import type { BlogPost, ContentBlock } from '@/types/blog';
 
-const db = adminAuth ? getFirestore(adminAuth.app) : null;
+const db = getFirestore(adminApp);
 
 function toISOString(timestamp: Timestamp | Date | string): string {
   if (timestamp instanceof Timestamp) {
@@ -19,10 +19,6 @@ function toISOString(timestamp: Timestamp | Date | string): string {
  * @returns A promise that resolves to an array of all blog posts, sorted by date.
  */
 export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
-  if (!db) {
-    console.warn("Firestore is not initialized. Cannot fetch blog posts.");
-    return [];
-  }
   try {
     const postsCollection = collection(db, "blogPosts");
     const postsQuery = query(postsCollection, orderBy('date', 'desc'));
@@ -67,10 +63,6 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
  * @returns A promise that resolves to the blog post, or undefined if not found.
  */
 export async function getBlogPostBySlug(slug: string, locale: string): Promise<BlogPost | undefined> {
-  if (!db) {
-    console.warn("Firestore is not initialized. Cannot fetch blog post.");
-    return undefined;
-  }
   try {
     const postsCollection = collection(db, "blogPosts");
     const q = query(postsCollection, where("slug", "==", slug), limit(1));
@@ -141,15 +133,6 @@ export async function addBlogPost(postData: {
   imageUrl?: string;
   imageHint?: string;
 }) {
-  if (!db) {
-    throw new Error("Firestore is not initialized.");
-  }
-  const { currentUser } = await getAuthenticatedAppForUser();
-  // We allow seeding without a user for demo purposes
-  // if (!currentUser) {
-  //   throw new Error("Authentication required.");
-  // }
-  
   let contentString: string;
 
   // Ensure content is a valid JSON string before saving

@@ -1,27 +1,27 @@
 
+'use server';
+
 import { getApps, initializeApp, cert, getApp, App } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { headers } from 'next/headers';
+import * as serviceAccount from '../../../firebase.json';
 
+// This function now initializes the app using credentials from the firebase.json file.
 function getAdminApp(): App {
   if (getApps().length > 0) {
     return getApp('firebase-admin-app');
   }
 
-  // Construct the service account object from individual environment variables.
-  // This is a more robust method than parsing a JSON string.
-  const serviceAccount = {
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    // The private key must be correctly formatted in the .env file.
-    // The replace() call is crucial to handle the newlines correctly.
-    privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
-  };
-
-  if (!serviceAccount.projectId || !serviceAccount.clientEmail || !serviceAccount.privateKey) {
-    // This error will be thrown if the environment variables are not set.
-    // It's a clear indicator that the .env file needs to be checked.
-    throw new Error('Firebase Admin SDK service account credentials are not set correctly in the environment.');
+  // Check if the service account has the required properties
+  if (
+    !serviceAccount ||
+    !serviceAccount.project_id ||
+    !serviceAccount.client_email ||
+    !serviceAccount.private_key
+  ) {
+    throw new Error(
+      'Firebase Admin SDK credentials are not set correctly in firebase.json file. Please download it from your Firebase project settings.'
+    );
   }
 
   try {
@@ -32,16 +32,15 @@ function getAdminApp(): App {
       'firebase-admin-app'
     );
   } catch (error: any) {
-    // This will catch errors from `cert()` if the key format is still wrong.
     console.error('Firebase Admin Init Error:', error.message);
-    throw new Error(`Failed to parse private key: ${error.message}. Please ensure FIREBASE_PRIVATE_KEY in your .env file is correctly formatted.`);
+    throw new Error(`Failed to initialize Firebase Admin SDK: ${error.message}`);
   }
 }
 
-// Initialize the app and auth instances
-const adminAuth = getAdminApp() ? getAuth(getAdminApp()) : null;
+const adminApp = getAdminApp();
+const adminAuth = getAuth(adminApp);
 
-export { adminAuth };
+export { adminApp, adminAuth };
 
 export async function getAuthenticatedAppForUser() {
   const app = getAdminApp();

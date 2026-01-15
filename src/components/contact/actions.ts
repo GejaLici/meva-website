@@ -2,11 +2,11 @@
 'use server';
 
 import { getFirestore, serverTimestamp } from 'firebase-admin/firestore';
-import { adminAuth } from '@/lib/firebase-admin-config';
+import { adminApp } from '@/lib/firebase-admin-config';
 import { formSchema } from './schema';
 import type { ContactFormValues } from './schema';
 
-const db = adminAuth ? getFirestore(adminAuth.app) : null;
+const db = getFirestore(adminApp);
 
 interface SubmitResult {
     success: boolean;
@@ -14,11 +14,6 @@ interface SubmitResult {
 }
 
 export async function submitContactForm(values: ContactFormValues & { source: string }): Promise<SubmitResult> {
-  if (!db) {
-    console.error('Firestore is not initialized. Cannot submit contact form.');
-    return { success: false, error: "The server is not configured to receive messages." };
-  }
-
   const validationResult = formSchema.safeParse(values);
 
   if (!validationResult.success) {
