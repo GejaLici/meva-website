@@ -2,26 +2,28 @@
 import { getApps, initializeApp, cert, getApp, App } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { headers } from 'next/headers';
-import { DecodedIdToken } from 'firebase-admin/auth';
 
 const serviceAccountKey = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
 
-// Safely parse the service account key
-let serviceAccount: any = null;
-if (serviceAccountKey) {
-    try {
-        serviceAccount = JSON.parse(serviceAccountKey);
-    } catch (e) {
-        console.error('Error parsing FIREBASE_SERVICE_ACCOUNT_KEY. Ensure it is a valid JSON string.', e);
-    }
-}
+function getAdminApp(): App {
+  if (getApps().length > 0) {
+    return getApp('firebase-admin-app');
+  }
 
+  if (!serviceAccountKey) {
+    throw new Error('FIREBASE_SERVICE_ACCOUNT_KEY environment variable is not set.');
+  }
 
-let app: App | null = null;
-if (getApps().length > 0) {
-  app = getApp('firebase-admin-app');
-} else if (serviceAccount) {
-  app = initializeApp(
+  let serviceAccount;
+  try {
+    // This will handle the JSON string, including newline characters
+    serviceAccount = JSON.parse(serviceAccountKey);
+  } catch (e: any) {
+    console.error('Error parsing FIREBASE_SERVICE_ACCOUNT_KEY:', e.message);
+    throw new Error('Could not parse FIREBASE_SERVICE_ACCOUNT_KEY. Make sure it is a valid JSON string.');
+  }
+
+  return initializeApp(
     {
       credential: cert(serviceAccount),
     },
@@ -29,16 +31,17 @@ if (getApps().length > 0) {
   );
 }
 
-const auth = app ? getAuth(app) : null;
+// Initialize the app and auth instances
+const adminAuth = getAdminApp() ? getAuth(getAdminApp()) : null;
 
-export { auth as adminAuth };
+export { adminAuth };
 
 export async function getAuthenticatedAppForUser() {
-  if (!auth) {
-    console.warn("Firebase Admin SDK not initialized. Cannot authenticate user.");
-    return { app: null, currentUser: null };
+  const app = getAdminApp();
+  if (!app) {
+     return { app: null, currentUser: null };
   }
-  
+  const auth = getAuth(app);
   const idToken = headers().get('Authorization')?.split('Bearer ')[1];
 
   if (!idToken) {
