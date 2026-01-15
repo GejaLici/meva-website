@@ -138,10 +138,15 @@ export async function addBlogPost(postData: {
   imageUrl?: string;
   imageHint?: string;
 }) {
-  const { currentUser } = await getAuthenticatedAppForUser();
-  if (!currentUser) {
-    throw new Error('User must be authenticated to add a blog post.');
+  // Only check for authentication if the seed script is NOT active.
+  // This allows the initial database seed to run without a user session.
+  if (process.env.SEED_SCRIPT_ACTIVE !== 'true') {
+    const { currentUser } = await getAuthenticatedAppForUser();
+    if (!currentUser) {
+      throw new Error('User must be authenticated to add a blog post.');
+    }
   }
+
   const db = await getDb();
 
   let contentString: string;
@@ -197,7 +202,7 @@ export async function addBlogPost(postData: {
       const translationRef = doc(postRef, 'translations', postData.language);
       const translationSnap = await transaction.get(translationRef);
 
-      if (translationSnap.exists() && !process.env.SEED_SCRIPT_ACTIVE) {
+      if (translationSnap.exists() && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
           throw new Error(`A post with this slug in language '${postData.language}' already exists.`);
       }
 
