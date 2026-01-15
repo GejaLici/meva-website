@@ -1,27 +1,33 @@
 
 'use client';
-import { useEffect } from 'react';
-import { useRouter } from '@/navigation';
 import { useUser } from '@/firebase';
 import AdminPageClient from './_components/AdminPageClient';
+import { Loader2 } from 'lucide-react';
 
 export default function AdminPage() {
   const { user, loading } = useUser();
-  const router = useRouter();
 
-  useEffect(() => {
-    // If loading is finished and we have a user, redirect to the dashboard.
-    if (!loading && user) {
-      router.replace('/admin/dashboard');
-    }
-  }, [user, loading, router]);
-
-  // While loading or if user is found (and redirect is imminent),
-  // we can show nothing or a loader to prevent the login form from flashing.
-  if (loading || user) {
-    return null; // Or a loader component
+  // While loading, show a spinner to avoid flashing the login page
+  // before the redirect for an authenticated user happens in the layout.
+  if (loading) {
+    return (
+      <div className="flex min-h-screen w-full items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
   }
 
-  // Only show the login page if loading is done and there's no user.
-  return <AdminPageClient />;
+  // If loading is done and there's no user, show the login form.
+  // The redirect for authenticated users is now handled by the layout.
+  if (!user) {
+    return <AdminPageClient />;
+  }
+
+  // If loading is done and there IS a user, the layout will redirect.
+  // Return a loader to prevent any flash of content during the redirect.
+  return (
+    <div className="flex min-h-screen w-full items-center justify-center">
+      <Loader2 className="h-8 w-8 animate-spin" />
+    </div>
+  );
 }

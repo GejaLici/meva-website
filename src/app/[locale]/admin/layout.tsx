@@ -43,7 +43,7 @@ function AdminSidebar() {
                 href={item.href}
                 className={cn(
                   'flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary',
-                  pathname === item.href && 'bg-muted text-primary'
+                  pathname.endsWith(item.href) ? 'bg-muted text-primary' : ''
                 )}
               >
                 <item.icon className="h-4 w-4" />
@@ -69,11 +69,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const pathname = usePathname();
 
   useEffect(() => {
-    // If loading has finished and there is no user,
-    // and we are NOT on the /admin login page itself,
-    // then redirect to the login page.
+    // If auth has finished loading and there's no user,
+    // and we are NOT on the /admin login page, redirect there.
     if (!loading && !user && pathname !== '/admin') {
       router.replace('/admin');
+    }
+    // If auth has finished loading and there IS a user,
+    // and we ARE on the /admin login page, redirect to the dashboard.
+    if (!loading && user && pathname === '/admin') {
+      router.replace('/admin/dashboard');
     }
   }, [user, loading, pathname, router]);
 
@@ -86,14 +90,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     );
   }
 
-  // If there's no user and we are on the login page, render the login form.
-  if (!user && pathname === '/admin') {
-    return <>{children}</>;
-  }
-
-  // If there is a user, render the protected admin layout with sidebar.
-  // This will also apply if a user is trying to access `/admin` directly;
-  // the page.tsx for `/admin` will then handle redirecting them to `/admin/dashboard`.
+  // If there's a user, render the protected admin layout.
   if (user) {
     return (
       <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
@@ -106,8 +103,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       </div>
     );
   }
+
+  // If there's no user and we are on the login page, render the login form.
+  // This now handles the case where loading is finished.
+  if (!user && pathname === '/admin') {
+    return <>{children}</>;
+  }
   
-  // This is a fallback case, e.g., if a non-admin page somehow gets wrapped
-  // in this layout without a user. It prevents rendering a blank page.
+  // This is a fallback case for when a redirect is about to happen,
+  // preventing a flash of incorrect content.
   return null;
 }
