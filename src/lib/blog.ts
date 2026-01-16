@@ -21,33 +21,40 @@ function toISOString(timestamp: Timestamp | Date | string): string {
 }
 
 /**
- * Safely parses the blog content, handling cases where it might be missing or double-stringified.
- * @param content - The content to parse, expected to be a JSON string.
- * @returns An array of ContentBlock, or an empty array if parsing fails.
+ * Safely parses the blog content. If it's a JSON string, it's parsed.
+ * If it's not valid JSON, it's wrapped in a paragraph block.
+ * @param content - The content to parse.
+ * @returns An array of ContentBlock, or an empty array if content is empty.
  */
 function parseContent(content: any): ContentBlock[] {
+  if (!content) return [];
   if (Array.isArray(content)) {
     return content; // Already parsed
   }
-  if (!content || typeof content !== 'string') {
-    return [];
-  }
-  try {
-    let parsed = JSON.parse(content);
-    // Handle cases where the content might have been stringified twice
-    if (typeof parsed === 'string') {
-      parsed = JSON.parse(parsed);
+  
+  if (typeof content === 'string') {
+    try {
+      // Try to parse it as JSON first
+      const parsed = JSON.parse(content);
+      if (Array.isArray(parsed)) {
+        return parsed as ContentBlock[];
+      }
+    } catch (e) {
+      // Not a valid JSON string, fall through to treat as plain text
     }
-    if (Array.isArray(parsed)) {
-      return parsed as ContentBlock[];
-    }
-    // If it's not an array after parsing, return empty to prevent errors
-    return [];
-  } catch (error) {
-    console.error("Error parsing blog content:", error);
-    return [];
+    
+    // If it's a string (either non-JSON or JSON that's not an array), wrap it
+    return [{
+        id: 'p1',
+        type: 'paragraph',
+        children: [{ type: 'text', text: content }]
+    }];
   }
+
+  // If not a string or array, we can't handle it
+  return [];
 }
+
 
 /**
  * Retrieves all blog posts for a specific locale.
@@ -116,40 +123,25 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
     const translationRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc(locale);
     const translationSnap = await translationRef.get();
 
-    if (translationSnap.exists) {
-        const translationData = translationSnap.data()!;
-        return {
-            id: docSnapshot.id,
-            slug: data.slug,
-            date: data.date && data.date.toDate ? toISOString(data.date) : new Date().toISOString(),
-            imageUrl: data.imageUrl,
-            imageHint: data.imageHint,
-            category: data.category,
-            author: data.author,
-            title: translationData.title,
-            excerpt: translationData.excerpt,
-            content: parseContent(translationData.content),
-        };
-    } else {
-        // Try to fallback to English if the requested locale doesn't exist
-        const fallbackRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc('en');
-        const fallbackSnap = await fallbackRef.get();
-        if(!fallbackSnap.exists) return undefined;
-
-        const fallbackData = fallbackSnap.data()!;
-        return {
-            id: docSnapshot.id,
-            slug: data.slug,
-            date: data.date && data.date.toDate ? toISOString(data.date) : new Date().toISOString(),
-            imageUrl: data.imageUrl,
-            imageHint: data.imageHint,
-            category: data.category,
-            author: data.author,
-            title: fallbackData.title,
-            excerpt: fallbackData.excerpt,
-            content: parseContent(fallbackData.content),
-        };
+    if (!translationSnap.exists) {
+        return undefined; // No translation found for this locale
     }
+    
+    const translationData = translationSnap.data()!;
+    
+    return {
+        id: docSnapshot.id,
+        slug: data.slug,
+        date: data.date && data.date.toDate ? toISOString(data.date) : new Date().toISOString(),
+        imageUrl: data.imageUrl,
+        imageHint: data.imageHint,
+        category: data.category,
+        author: data.author,
+        title: translationData.title,
+        excerpt: translationData.excerpt,
+        content: parseContent(translationData.content),
+    };
+
   } catch (error) {
     console.error(`Error fetching blog post with slug "${slug}" from Firestore:`, error);
     return undefined;
@@ -181,18 +173,11 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
   const db = await getDb();
   let contentString: string;
 
-  // Ensure content is a valid JSON string before saving
-  if (typeof postData.content === 'string') {
-    try {
-      JSON.parse(postData.content); // Validate if it's a valid JSON string
-      contentString = postData.content;
-    } catch (e) {
-      return { success: false, error: "Invalid content format. Content must be a valid JSON string." };
-    }
-  } else if (typeof postData.content === 'object') {
+  // If content is an object (from seeder), stringify it. Otherwise, save the string from the form.
+  if (typeof postData.content === 'object') {
     contentString = JSON.stringify(postData.content);
   } else {
-    return { success: false, error: "Content must be either a string or an object."};
+    contentString = postData.content;
   }
   
   const postsCollection = db.collection("blogPosts");
@@ -224,16 +209,18 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
             imageHint: postData.imageHint,
         });
       } else {
-         const docData = querySnapshot.docs[0].data();
-         const updates: { [key: string]: any } = {};
-        if (postData.author && postData.author !== docData.author) updates.author = postData.author;
-        if (postData.category && postData.category !== docData.category) updates.category = postData.category;
-        if (postData.imageUrl && postData.imageUrl !== docData.imageUrl) updates.imageUrl = postData.imageUrl;
-        if (postData.imageHint && postData.imageHint !== docData.imageHint) updates.imageHint = postData.imageHint;
-        if (Object.keys(updates).length > 0) {
-          updates.date = FieldValue.serverTimestamp(); // Update date on any modification
-          transaction.update(postRef, updates);
-        }
+         const docData = (await transaction.get(postRef)).data();
+         if (docData) {
+             const updates: { [key: string]: any } = {};
+            if (postData.author && postData.author !== docData.author) updates.author = postData.author;
+            if (postData.category && postData.category !== docData.category) updates.category = postData.category;
+            if (postData.imageUrl && postData.imageUrl !== docData.imageUrl) updates.imageUrl = postData.imageUrl;
+            if (postData.imageHint && postData.imageHint !== docData.imageHint) updates.imageHint = postData.imageHint;
+            if (Object.keys(updates).length > 0) {
+              updates.date = FieldValue.serverTimestamp(); // Update date on any modification
+              transaction.update(postRef, updates);
+            }
+         }
       }
 
       transaction.set(translationRef, {
