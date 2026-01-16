@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { deleteBlogPost } from '../actions';
 import { useToast } from '@/hooks/use-toast';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 
 interface Post {
   id: string;
@@ -120,8 +121,10 @@ export function BlogPostsTable() {
                 <TableCell>{post.category || 'N/A'}</TableCell>
                 <TableCell>{post.date.toDate().toLocaleDateString()}</TableCell>
                 <TableCell className="text-right space-x-2">
-                    <Button variant="outline" size="icon" aria-label={t('editAriaLabel')}>
-                        <Pencil className="h-4 w-4" />
+                    <Button asChild variant="outline" size="icon" aria-label={t('editAriaLabel')}>
+                        <Link href={`/admin/edit-post/${post.id}`}>
+                            <Pencil className="h-4 w-4" />
+                        </Link>
                     </Button>
                     <Button 
                         variant="destructive" 

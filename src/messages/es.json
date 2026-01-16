@@ -223,7 +223,7 @@
     },
     "faq-3": {
       "question": "¿Son permanentes los resultados de los tratamientos estéticos?",
-      "answer": "<p>La longevidad de los resultados de los tratamientos estéticos depende en gran medida del procedimiento específico realizado, de factores individuales del paciente como la genética y el estilo de vida, y del mantenimiento continuo. Las alteraciones quirúrgicas, como la rinoplastia o el aumento de senos con implantes, generalmente ofrecen cambios estructurales duraderos, a menudo considerados permanentes, aunque el envejecimiento natural continuará. Los tratamientos no quirúrgicos como los rellenos dérmicos o las inyecciones de toxina botulínica son temporales y generalmente requieren tratamientos de seguimiento a intervalos regulares (por ejemplo, cada 6-18 meses para los rellenos, 3-4 meses para el Botox) para mantener el efecto deseado. Factores de estilo de vida como la dieta, la exposición al sol, el régimen de cuidado de la piel y el tabaquismo también influyen significativamente en la durabilidad de los resultados. Nuestros especialistas en {siteName} le proporcionarán una expectativa realista de la longevidad de los resultados durante su consulta.</p>"
+      "answer": "<p>La longevidad de los resultados de los tratamientos estéticos depende en gran medida del procedimiento específico realizado, de factores individuales del paciente como la genetica y el estilo de vida, y del mantenimiento continuo. Las alteraciones quirúrgicas, como la rinoplastia o el aumento de senos con implantes, generalmente ofrecen cambios estructurales duraderos, a menudo considerados permanentes, aunque el envejecimiento natural continuará. Los tratamientos no quirúrgicos como los rellenos dérmicos o las inyecciones de toxina botulínica son temporales y generalmente requieren tratamientos de seguimiento a intervalos regulares (por ejemplo, cada 6-18 meses para los rellenos, 3-4 meses para el Botox) para mantener el efecto deseado. Factores de estilo de vida como la dieta, la exposición al sol, el régimen de cuidado de la piel y el tabaquismo también influyen significativamente en la durabilidad de los resultados. Nuestros especialistas en {siteName} le proporcionarán una expectativa realista de la longevidad de los resultados durante su consulta.</p>"
     },
     "faq-4": {
       "question": "¿Cuáles son los riesgos potenciales asociados con los procedimientos estéticos?",
@@ -393,6 +393,43 @@
     "description": "Desde mejoras estéticas hasta procedimientos quirúrgicos complejos, nuestros expertos dentales brindan un espectro completo de atención para garantizar su salud bucal y perfeccionar su sonrisa. Explore nuestra amplia gama de especialidades dentales en {siteName}.",
     "noResults": "No hay categorías de servicios dentales disponibles en este momento. Póngase en contacto con {siteName} para obtener más detalles."
   },
+  "Admin": {
+    "addPostTitle": "Agregar Nueva Entrada de Blog",
+    "addPostDescription": "Utilice este formulario para agregar un nuevo artículo al blog de la empresa.",
+    "editPostTitle": "Editar Entrada de Blog",
+    "editPostDescription": "Utilice este formulario para modificar el contenido de la publicación para diferentes idiomas.",
+    "fieldTitle": "Título de la Publicación",
+    "fieldTitlePlaceholder": "p. ej., Los Beneficios del Microneedling",
+    "fieldSlug": "Slug de la Publicación",
+    "fieldSlugPlaceholder": "p. ej., beneficios-del-microneedling",
+    "fieldAuthor": "Autor (Opcional)",
+    "fieldAuthorPlaceholder": "p. ej., Dra. Jane Doe",
+    "fieldCategory": "Categoría (Opcional)",
+    "fieldCategoryPlaceholder": "p. ej., Cuidado de la Piel",
+    "fieldImageUrl": "URL de la Imagen Destacada (Opcional)",
+    "fieldImageUrlPlaceholder": "https://...",
+    "fieldImageHint": "Pista de IA de la Imagen (Opcional)",
+    "fieldImageHintPlaceholder": "p. ej., persona sonriendo",
+    "fieldExcerpt": "Extracto",
+    "fieldExcerptPlaceholder": "Un resumen breve y convincente del artículo...",
+    "fieldContent": "Contenido",
+    "fieldContentPlaceholder": "Ingrese el contenido del artículo aquí. Puede usar Markdown para formatear.",
+    "fieldContentHint": "El contenido debe ser una cadena JSON válida que represente un ContentBlock[]. Ejemplo: [{\\\"id\\\":\\\"p1\\\",\\\"type\\\":\\\"paragraph\\\",\\\"children\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"Este es el primer párrafo.\\\"}]}]",
+    "submitPostButton": "Enviar Publicación",
+    "submittingButton": "Enviando...",
+    "postSuccessTitle": "Entrada de Blog Agregada con Éxito",
+    "postSuccessDescription": "Su nueva publicación (ID: {postId}) se ha agregado a la base de datos.",
+    "postErrorTitle": "Error al Agregar la Publicación",
+    "fieldLanguage": "Idioma de la Publicación",
+    "fieldLanguagePlaceholder": "Seleccione un idioma",
+    "fetchErrorTitle": "Error al obtener la traducción a {lng}",
+    "updateErrorTitle": "Error al Actualizar la Publicación",
+    "updateSuccessTitle": "Publicación Actualizada con Éxito",
+    "updateSuccessDescription": "La versión en {lng} de la publicación ID {postId} ha sido actualizada.",
+    "languageSelectDescription": "Seleccione el idioma que desea editar. Los campos comunes como el slug y las imágenes se aplicarán a todos los idiomas.",
+    "translationSectionTitle": "Contenido de la Traducción a {lng}",
+    "submitUpdateButton": "Actualizar Publicación"
+  },
   "AdminLogin": {
     "title": "Inicia sesión en tu cuenta",
     "emailLabel": "Correo electrónico",
@@ -509,5 +546,3 @@
     }
   }
 }
-
-    

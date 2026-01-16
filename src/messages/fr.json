@@ -387,10 +387,47 @@
     "p10_2": "{siteName}<br />Att.ne: Ufficio Legale<br />Rruga \"Sami Frashëri\", No. 123<br />Tirana, Albania<br />Email: info@{SITE_DOMAIN}"
   },
   "DentalServicesPage": {
-    "metaTitle": "Servizi Dentistici Completi | {siteName}",
-    "title": "Servizi Dentistici Completi",
-    "description": "Dai miglioramenti estetici alle complesse procedure chirurgiche, i nostri esperti dentali forniscono una gamma completa di cure per garantire la tua salute orale e perfezionare il tuo sorriso. Esplora la nostra vasta gamma di specialità dentali presso {siteName}.",
-    "noResults": "Al momento non sono disponibili categorie di servizi dentistici. Si prega di contattare {siteName} per maggiori dettagli."
+    "metaTitle": "Services Dentaires Complets | {siteName}",
+    "title": "Services Dentaires Complets",
+    "description": "Des améliorations esthétiques aux procédures chirurgicales complexes, nos experts dentaires fournissent une gamme complète de soins pour assurer votre santé bucco-dentaire et parfaire votre sourire. Explorez notre large éventail de spécialités dentaires à {siteName}.",
+    "noResults": "Aucune catégorie de service dentaire n'est available pour le moment. Veuillez contacter {siteName} pour plus de détails."
+  },
+  "Admin": {
+    "addPostTitle": "Ajouter un nouvel article de blog",
+    "addPostDescription": "Utilisez ce formulaire pour ajouter un nouvel article au blog de l'entreprise.",
+    "editPostTitle": "Modifier l'article de blog",
+    "editPostDescription": "Utilisez ce formulaire pour modifier le contenu de l'article pour différentes langues.",
+    "fieldTitle": "Titre de l'article",
+    "fieldTitlePlaceholder": "Ex. : Les avantages du microneedling",
+    "fieldSlug": "Slug de l'article",
+    "fieldSlugPlaceholder": "Ex. : avantages-du-microneedling",
+    "fieldAuthor": "Auteur (facultatif)",
+    "fieldAuthorPlaceholder": "Ex. : Dr. Jane Doe",
+    "fieldCategory": "Catégorie (facultatif)",
+    "fieldCategoryPlaceholder": "Ex. : Soins de la peau",
+    "fieldImageUrl": "URL de l'image principale (facultatif)",
+    "fieldImageUrlPlaceholder": "https://...",
+    "fieldImageHint": "Indice IA de l'image (facultatif)",
+    "fieldImageHintPlaceholder": "Ex. : personne souriante",
+    "fieldExcerpt": "Extrait",
+    "fieldExcerptPlaceholder": "Un résumé court et convaincant de l'article...",
+    "fieldContent": "Contenu",
+    "fieldContentPlaceholder": "Entrez le contenu de l'article ici. Vous pouvez utiliser Markdown pour la mise en forme.",
+    "fieldContentHint": "Le contenu doit être une chaîne JSON valide représentant un ContentBlock[]. Exemple : [{\\\"id\\\":\\\"p1\\\",\\\"type\\\":\\\"paragraph\\\",\\\"children\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"Ceci est le premier paragraphe.\\\"}]}]",
+    "submitPostButton": "Soumettre l'article",
+    "submittingButton": "Soumission en cours...",
+    "postSuccessTitle": "Article de blog ajouté avec succès",
+    "postSuccessDescription": "Votre nouvel article (ID : {postId}) a été ajouté à la base de données.",
+    "postErrorTitle": "Erreur lors de l'ajout de l'article",
+    "fieldLanguage": "Langue de l'article",
+    "fieldLanguagePlaceholder": "Sélectionnez une langue",
+    "fetchErrorTitle": "Erreur lors de la récupération de la traduction {lng}",
+    "updateErrorTitle": "Erreur lors de la mise à jour de l'article",
+    "updateSuccessTitle": "Article mis à jour avec succès",
+    "updateSuccessDescription": "La version {lng} de l'article ID {postId} a été mise à jour.",
+    "languageSelectDescription": "Sélectionnez la langue que vous souhaitez modifier. Les champs communs comme le slug et les images s'appliqueront à toutes les langues.",
+    "translationSectionTitle": "Contenu de la traduction {lng}",
+    "submitUpdateButton": "Mettre à jour l'article"
   },
   "AdminLogin": {
     "title": "Connectez-vous à votre compte",
@@ -443,7 +480,7 @@
       },
       "blepharoplasty-2": {
         "question": "Mes cicatrices seront-elles visibles ?",
-        "answer": "<p>Pour une blépharoplastie supérieure, la cicatrice se trouve dans le pli de la paupière et est pratiquement invisible lorsque l'œil est ouvert. Pour une blépharoplastie inférieure, elle se trouve juste en dessous des cils ou complètement cachée à l'intérieur de la paupière.</p>"
+        "answer": "<p>Pour une blépharoplastie supérieure, la cicatrice se trouve dans le pli de la paupière et est pratiquement invisible lorsque l'œil est ouvert. Pour une blépharoplastie inferiore, elle se trouve juste en dessous des cils ou complètement cachée à l'intérieur de la paupière.</p>"
       },
       "blepharoplasty-3": {
         "question": "Combien de temps durent les résultats ?",
@@ -508,5 +545,3 @@
     }
   }
 }
-
-    

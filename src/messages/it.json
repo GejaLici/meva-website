@@ -393,6 +393,43 @@
     "description": "Dai miglioramenti estetici alle complesse procedure chirurgiche, i nostri esperti dentali forniscono una gamma completa di cure per garantire la tua salute orale e perfezionare il tuo sorriso. Esplora la nostra vasta gamma di specialità dentali presso {siteName}.",
     "noResults": "Al momento non sono disponibili categorie di servizi dentistici. Si prega di contattare {siteName} per maggiori dettagli."
   },
+  "Admin": {
+    "addPostTitle": "Aggiungi Nuovo Articolo Blog",
+    "addPostDescription": "Usa questo modulo per aggiungere un nuovo articolo al blog aziendale.",
+    "editPostTitle": "Modifica Articolo Blog",
+    "editPostDescription": "Usa questo modulo per modificare il contenuto del post in diverse lingue.",
+    "fieldTitle": "Titolo Articolo",
+    "fieldTitlePlaceholder": "Es. I Benefici del Microneedling",
+    "fieldSlug": "Slug Articolo",
+    "fieldSlugPlaceholder": "Es. benefici-del-microneedling",
+    "fieldAuthor": "Autore (Opzionale)",
+    "fieldAuthorPlaceholder": "Es. Dr. Jane Doe",
+    "fieldCategory": "Categoria (Opzionale)",
+    "fieldCategoryPlaceholder": "Es. Cura della pelle",
+    "fieldImageUrl": "URL Immagine di Copertina (Opzionale)",
+    "fieldImageUrlPlaceholder": "https://...",
+    "fieldImageHint": "Suggerimento AI per Immagine (Opzionale)",
+    "fieldImageHintPlaceholder": "Es. persona sorridente",
+    "fieldExcerpt": "Estratto",
+    "fieldExcerptPlaceholder": "Un breve e accattivante riassunto dell'articolo...",
+    "fieldContent": "Contenuto",
+    "fieldContentPlaceholder": "Inserisci qui il contenuto dell'articolo. Puoi usare Markdown per la formattazione.",
+    "fieldContentHint": "Il contenuto deve essere una stringa JSON valida che rappresenta un ContentBlock[]. Esempio: [{\\\"id\\\":\\\"p1\\\",\\\"type\\\":\\\"paragraph\\\",\\\"children\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"Questo è il primo paragrafo.\\\"}]}]",
+    "submitPostButton": "Invia Articolo",
+    "submittingButton": "Invio in corso...",
+    "postSuccessTitle": "Articolo Blog Aggiunto con Successo",
+    "postSuccessDescription": "Il tuo nuovo articolo (ID: {postId}) è stato aggiunto al database.",
+    "postErrorTitle": "Errore nell'Aggiunta dell'Articolo",
+    "fieldLanguage": "Lingua Articolo",
+    "fieldLanguagePlaceholder": "Seleziona una lingua",
+    "fetchErrorTitle": "Errore nel recupero della traduzione {lng}",
+    "updateErrorTitle": "Errore durante l'aggiornamento dell'articolo",
+    "updateSuccessTitle": "Articolo Aggiornato con Successo",
+    "updateSuccessDescription": "La versione {lng} dell'articolo ID {postId} è stata aggiornata.",
+    "languageSelectDescription": "Seleziona la lingua che vuoi modificare. I campi comuni come slug e immagini si applicheranno a tutte le lingue.",
+    "translationSectionTitle": "Contenuto Traduzione {lng}",
+    "submitUpdateButton": "Aggiorna Articolo"
+  },
   "AdminLogin": {
     "title": "Accedi al tuo account",
     "emailLabel": "Email",
@@ -509,5 +546,3 @@
     }
   }
 }
-
-    

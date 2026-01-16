@@ -402,6 +402,8 @@
   "Admin": {
     "addPostTitle": "Add New Blog Post",
     "addPostDescription": "Use this form to add a new article to the company blog.",
+    "editPostTitle": "Edit Blog Post",
+    "editPostDescription": "Use this form to modify the post's content for different languages.",
     "fieldTitle": "Post Title",
     "fieldTitlePlaceholder": "e.g., The Benefits of Microneedling",
     "fieldSlug": "Post Slug",
@@ -416,8 +418,8 @@
     "fieldImageHintPlaceholder": "e.g., person smiling",
     "fieldExcerpt": "Excerpt",
     "fieldExcerptPlaceholder": "A short, compelling summary of the article...",
-    "fieldContent": "Content (JSON Format)",
-    "fieldContentPlaceholder": "Enter the content as a valid JSON string...",
+    "fieldContent": "Content",
+    "fieldContentPlaceholder": "Enter the article content here. You can use Markdown for formatting.",
     "fieldContentHint": "Content must be a valid JSON string representing a ContentBlock[]. Example: [{\\\"id\\\":\\\"p1\\\",\\\"type\\\":\\\"paragraph\\\",\\\"children\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"This is the first paragraph.\\\"}]}]",
     "submitPostButton": "Submit Post",
     "submittingButton": "Submitting...",
@@ -425,7 +427,14 @@
     "postSuccessDescription": "Your new post (ID: {postId}) has been added to the database.",
     "postErrorTitle": "Error Adding Post",
     "fieldLanguage": "Post Language",
-    "fieldLanguagePlaceholder": "Select a language"
+    "fieldLanguagePlaceholder": "Select a language",
+    "fetchErrorTitle": "Error fetching {lng} translation",
+    "updateErrorTitle": "Error Updating Post",
+    "updateSuccessTitle": "Post Updated Successfully",
+    "updateSuccessDescription": "The {lng} version of post ID {postId} has been updated.",
+    "languageSelectDescription": "Select the language you want to edit. Common fields like slug and images will apply to all languages.",
+    "translationSectionTitle": "{lng} Translation Content",
+    "submitUpdateButton": "Update Post"
   },
   "AdminNav": {
     "dashboard": "Dashboard",

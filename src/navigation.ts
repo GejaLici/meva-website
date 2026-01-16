@@ -109,8 +109,8 @@ export const pathnames = {
     it: '/admin/blog',
     sq: '/admin/blog',
     de: '/admin/blog',
-    fr: '/admin/blog',
-    es: '/admin/blog'
+    fr: '/blog/blog',
+    es: '/blog/blog'
   },
   '/admin/add-post': {
     en: '/admin/add-post',
@@ -119,6 +119,14 @@ export const pathnames = {
     de: '/admin/add-post',
     fr: '/admin/add-post',
     es: '/admin/add-post'
+  },
+   '/admin/edit-post/[postId]': {
+    en: '/admin/edit-post/[postId]',
+    it: '/admin/edit-post/[postId]',
+    sq: '/admin/edit-post/[postId]',
+    de: '/admin/edit-post/[postId]',
+    fr: '/admin/edit-post/[postId]',
+    es: '/admin/edit-post/[postId]'
   },
   '/services/dental': {
     en: '/services/dental',

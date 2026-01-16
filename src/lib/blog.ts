@@ -34,7 +34,6 @@ function parseContent(content: any): ContentBlock[] {
   
   if (typeof content === 'string') {
     try {
-      // Try to parse it as JSON first
       const parsed = JSON.parse(content);
       if (Array.isArray(parsed)) {
         return parsed as ContentBlock[];
@@ -209,8 +208,9 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
             imageHint: postData.imageHint,
         });
       } else {
-         const docData = (await transaction.get(postRef)).data();
-         if (docData) {
+         const doc = await transaction.get(postRef);
+         if (doc.exists) {
+            const docData = doc.data()!;
              const updates: { [key: string]: any } = {};
             if (postData.author && postData.author !== docData.author) updates.author = postData.author;
             if (postData.category && postData.category !== docData.category) updates.category = postData.category;
@@ -237,5 +237,102 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
   } catch (error: any) {
     console.error("Error adding blog post in transaction:", error);
     return { success: false, error: error.message || "Failed to add or update blog post." };
+  }
+}
+
+// Types for Editing
+interface PostTranslation {
+    title: string;
+    excerpt: string;
+    content: string;
+}
+interface PostBaseData {
+    slug: string;
+    author?: string;
+    category?: string;
+    imageUrl?: string;
+    imageHint?: string;
+}
+interface UpdatePostData {
+  postId: string;
+  language: string;
+  idToken: string;
+  postData: {
+    slug: string;
+    title: string;
+    excerpt: string;
+    content: string;
+    author?: string;
+    category?: string;
+    imageUrl?: string;
+    imageHint?: string;
+  };
+}
+
+export async function getPostForEditing({ postId, language }: { postId: string; language: string; }) {
+    try {
+        const db = await getDb();
+        const postRef = db.collection('blogPosts').doc(postId);
+        const postSnap = await postRef.get();
+
+        if (!postSnap.exists) {
+            return { success: false, error: 'Post not found.' };
+        }
+
+        const baseData = postSnap.data() as PostBaseData;
+
+        const translationRef = postRef.collection('translations').doc(language);
+        const translationSnap = await translationRef.get();
+
+        let translationData: PostTranslation | null = null;
+        if (translationSnap.exists) {
+            translationData = translationSnap.data() as PostTranslation;
+        }
+
+        return { success: true, baseData, translationData };
+
+    } catch (error: any) {
+        console.error('Error fetching post for editing:', error);
+        return { success: false, error: error.message || 'Failed to fetch post data.' };
+    }
+}
+
+export async function updateBlogPost({ postId, language, idToken, postData }: UpdatePostData) {
+  const { currentUser } = await getAuthenticatedAppForUser(idToken);
+  
+  if (!currentUser) {
+    return { success: false, error: 'User must be authenticated to update a blog post.' };
+  }
+
+  const db = await getDb();
+
+  try {
+     await db.runTransaction(async (transaction) => {
+        const postRef = db.collection('blogPosts').doc(postId);
+
+        // Update the base document
+        transaction.update(postRef, {
+            slug: postData.slug,
+            author: postData.author || FieldValue.delete(),
+            category: postData.category || FieldValue.delete(),
+            imageUrl: postData.imageUrl || FieldValue.delete(),
+            imageHint: postData.imageHint || FieldValue.delete(),
+            date: FieldValue.serverTimestamp(), // Update date on any modification
+        });
+
+        // Set/Update the specific translation document
+        const translationRef = postRef.collection('translations').doc(language);
+        transaction.set(translationRef, {
+            title: postData.title,
+            excerpt: postData.excerpt,
+            content: postData.content,
+        });
+     });
+    
+    return { success: true, postId };
+
+  } catch (error: any) {
+    console.error("Error updating blog post in transaction:", error);
+    return { success: false, error: error.message || "Failed to update blog post." };
   }
 }
