@@ -1,4 +1,5 @@
 
+
 'use server';
 
 import { Timestamp, FieldValue } from 'firebase-admin/firestore';
@@ -34,15 +35,18 @@ function parseContent(content: any): ContentBlock[] {
   
   if (typeof content === 'string') {
     try {
+      // First, try to parse it as JSON
       const parsed = JSON.parse(content);
+      // Ensure the parsed content is an array, which is what ContentBlock[] expects.
       if (Array.isArray(parsed)) {
         return parsed as ContentBlock[];
       }
     } catch (e) {
-      // Not a valid JSON string, fall through to treat as plain text
+      // If it's not a valid JSON string, it's just plain text.
+      // Fall through to the next step.
     }
     
-    // If it's a string (either non-JSON or JSON that's not an array), wrap it
+    // If it's a plain string (or non-array JSON), wrap it in a paragraph block.
     return [{
         id: 'p1',
         type: 'paragraph',
@@ -50,7 +54,7 @@ function parseContent(content: any): ContentBlock[] {
     }];
   }
 
-  // If not a string or array, we can't handle it
+  // If it's not a string or array, we can't handle it, return empty.
   return [];
 }
 
@@ -119,11 +123,15 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
     const docSnapshot = querySnapshot.docs[0];
     const data = docSnapshot.data();
 
-    const translationRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc(locale);
-    const translationSnap = await translationRef.get();
-
+    // Fallback to English if the requested locale doesn't exist
+    let finalLocale = locale;
+    let translationSnap = await db.collection(`blogPosts/${docSnapshot.id}/translations`).doc(locale).get();
     if (!translationSnap.exists) {
-        return undefined; // No translation found for this locale
+        translationSnap = await db.collection(`blogPosts/${docSnapshot.id}/translations`).doc('en').get();
+        if (!translationSnap.exists) {
+            return undefined; // No English fallback either
+        }
+        finalLocale = 'en';
     }
     
     const translationData = translationSnap.data()!;
@@ -153,7 +161,7 @@ interface AddPostData {
     language: string;
     title: string;
     excerpt: string;
-    content: string | object;
+    content: string;
     author?: string;
     category?: string;
     imageUrl?: string;
@@ -170,14 +178,6 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
   }
 
   const db = await getDb();
-  let contentString: string;
-
-  // If content is an object (from seeder), stringify it. Otherwise, save the string from the form.
-  if (typeof postData.content === 'object') {
-    contentString = JSON.stringify(postData.content);
-  } else {
-    contentString = postData.content;
-  }
   
   const postsCollection = db.collection("blogPosts");
   
@@ -226,7 +226,7 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
       transaction.set(translationRef, {
           title: postData.title,
           excerpt: postData.excerpt,
-          content: contentString,
+          content: postData.content,
       });
 
       return postRef.id;
@@ -310,15 +310,17 @@ export async function updateBlogPost({ postId, language, idToken, postData }: Up
      await db.runTransaction(async (transaction) => {
         const postRef = db.collection('blogPosts').doc(postId);
 
-        // Update the base document
-        transaction.update(postRef, {
+        const updates: { [key: string]: any } = {
             slug: postData.slug,
-            author: postData.author || FieldValue.delete(),
-            category: postData.category || FieldValue.delete(),
-            imageUrl: postData.imageUrl || FieldValue.delete(),
-            imageHint: postData.imageHint || FieldValue.delete(),
-            date: FieldValue.serverTimestamp(), // Update date on any modification
-        });
+            date: FieldValue.serverTimestamp(),
+            author: postData.author || "",
+            category: postData.category || "",
+            imageUrl: postData.imageUrl || "",
+            imageHint: postData.imageHint || "",
+        };
+
+        // Update the base document
+        transaction.update(postRef, updates);
 
         // Set/Update the specific translation document
         const translationRef = postRef.collection('translations').doc(language);
@@ -336,3 +338,4 @@ export async function updateBlogPost({ postId, language, idToken, postData }: Up
     return { success: false, error: error.message || "Failed to update blog post." };
   }
 }
+

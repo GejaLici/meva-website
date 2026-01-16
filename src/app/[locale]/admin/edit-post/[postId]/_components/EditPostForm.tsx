@@ -74,7 +74,7 @@ export function EditPostForm({ postId }: EditPostFormProps) {
 
         if (result.success) {
             const { baseData, translationData } = result;
-            const contentString = Array.isArray(translationData?.content) ? JSON.stringify(translationData.content, null, 2) : translationData?.content || '';
+            const contentString = translationData?.content || '';
             form.reset({
                 slug: baseData?.slug || '',
                 author: baseData?.author || '',
@@ -106,7 +106,8 @@ export function EditPostForm({ postId }: EditPostFormProps) {
         setIsLoadingData(false);
     }
     fetchPostData();
-  }, [postId, selectedLanguage, form, toast, t]);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [postId, selectedLanguage]);
 
   async function onSubmit(values: EditPostFormValues) {
     if (!idToken) {
@@ -208,3 +209,4 @@ export function EditPostForm({ postId }: EditPostFormProps) {
     </Form>
   );
 }
+
