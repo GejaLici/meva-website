@@ -23,34 +23,39 @@ const exampleContentIt = [
 
 
 export async function seedExampleBlogPost() {
-  // Set a flag to bypass unique constraint errors during seeding
   process.env.SEED_SCRIPT_ACTIVE = 'true';
 
   try {
     // English version
     await addBlogPost({
-      slug: 'the-art-of-a-perfect-smile',
-      language: 'en',
-      title: 'The Art and Science of a Perfect Smile',
-      excerpt: 'Discover the key elements that make a smile truly beautiful and healthy, from color and alignment to how it complements your facial features.',
-      content: exampleContentEn,
-      author: 'Dr. Anna Petrova',
-      category: 'Cosmetic Dentistry',
-      imageUrl: '/images/emax-after.png',
-      imageHint: 'perfect white smile'
+      postData: {
+        slug: 'the-art-of-a-perfect-smile',
+        language: 'en',
+        title: 'The Art and Science of a Perfect Smile',
+        excerpt: 'Discover the key elements that make a smile truly beautiful and healthy, from color and alignment to how it complements your facial features.',
+        content: exampleContentEn,
+        author: 'Dr. Anna Petrova',
+        category: 'Cosmetic Dentistry',
+        imageUrl: '/images/emax-after.png',
+        imageHint: 'perfect white smile'
+      },
+      idToken: 'seeder-script-token',
     });
 
     // Italian version
     await addBlogPost({
-      slug: 'the-art-of-a-perfect-smile',
-      language: 'it',
-      title: 'L\'Arte e la Scienza di un Sorriso Perfetto',
-      excerpt: 'Scopri gli elementi chiave che rendono un sorriso veramente bello e sano, dal colore e allineamento a come si abbina alle tue caratteristiche facciali.',
-      content: exampleContentIt,
-      author: 'Dr. Anna Petrova',
-      category: 'Odontoiatria Estetica',
-      imageUrl: '/images/emax-after.png',
-      imageHint: 'perfect white smile'
+      postData: {
+        slug: 'the-art-of-a-perfect-smile',
+        language: 'it',
+        title: 'L\'Arte e la Scienza di un Sorriso Perfetto',
+        excerpt: 'Scopri gli elementi chiave che rendono un sorriso veramente bello e sano, dal colore e allineamento a come si abbina alle tue caratteristiche facciali.',
+        content: exampleContentIt,
+        author: 'Dr. Anna Petrova',
+        category: 'Odontoiatria Estetica',
+        imageUrl: '/images/emax-after.png',
+        imageHint: 'perfect white smile'
+      },
+      idToken: 'seeder-script-token',
     });
 
   } catch (error) {
