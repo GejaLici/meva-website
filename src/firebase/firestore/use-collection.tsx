@@ -1,22 +1,13 @@
-
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import {
   onSnapshot,
-  collection,
   query,
-  where,
-  limit,
-  orderBy,
-  startAfter,
-  getDocs,
-  type Query,
   type DocumentData,
   type QueryConstraint,
   type CollectionReference,
 } from 'firebase/firestore';
-import { useFirestore } from '../provider';
 
 type DocumentType<T> = T & { id: string };
 
@@ -24,21 +15,22 @@ export function useCollection<T>(
   collectionRef: CollectionReference<DocumentData> | null,
   ...constraints: QueryConstraint[]
 ) {
-  const { db } = useFirestore();
   const [data, setData] = useState<DocumentType<T>[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
-  const queryRef = useRef(collectionRef && query(collectionRef, ...constraints));
-
   useEffect(() => {
-    if (!db || !queryRef.current) {
+    if (!collectionRef) {
       setLoading(false);
+      setData(null);
       return;
     }
 
+    setLoading(true);
+
+    const q = query(collectionRef, ...constraints);
     const unsubscribe = onSnapshot(
-      queryRef.current,
+      q,
       (snapshot) => {
         const docs = snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -46,6 +38,7 @@ export function useCollection<T>(
         })) as DocumentType<T>[];
         setData(docs);
         setLoading(false);
+        setError(null);
       },
       (err) => {
         console.error('Error fetching collection:', err);
@@ -55,7 +48,7 @@ export function useCollection<T>(
     );
 
     return () => unsubscribe();
-  }, [db]); // Re-run effect if db instance changes
+  }, [collectionRef]); // collectionRef is now a dependency
 
   return { data, loading, error };
 }

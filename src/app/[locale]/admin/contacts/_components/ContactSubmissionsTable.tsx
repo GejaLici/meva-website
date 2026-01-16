@@ -1,6 +1,6 @@
 
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { useCollection, useUser } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import { useFirestore } from '@/firebase';
@@ -27,11 +27,18 @@ interface Submission {
 export function ContactSubmissionsTable() {
   const { db } = useFirestore();
   const { user, loading: userLoading } = useUser();
-  const collectionRef = user && db ? collection(db, 'contactSubmissions') : null;
-  const { data: submissions, loading, error } = useCollection<Submission>(collectionRef);
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
   const { toast } = useToast();
   const t = useTranslations('AdminContacts');
+
+  const collectionRef = useMemo(() => {
+    if (user && db) {
+      return collection(db, 'contactSubmissions');
+    }
+    return null;
+  }, [user, db]);
+  
+  const { data: submissions, loading, error } = useCollection<Submission>(collectionRef);
 
 
   const handleDelete = async (id: string) => {
