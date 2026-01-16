@@ -37,7 +37,7 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
             const translationRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc(locale);
             const translationSnap = await translationRef.get();
 
-            if (translationSnap.exists()) {
+            if (translationSnap.exists) {
                 const translationData = translationSnap.data()!;
                 return {
                     id: docSnapshot.id,
@@ -86,11 +86,11 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
     const translationRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc(locale);
     const translationSnap = await translationRef.get();
 
-    if (!translationSnap.exists()) {
+    if (!translationSnap.exists) {
       // Try to fallback to English if the requested locale doesn't exist
       const fallbackRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc('en');
       const fallbackSnap = await fallbackRef.get();
-      if(!fallbackSnap.exists()) return undefined;
+      if(!fallbackSnap.exists) return undefined;
 
       const fallbackData = fallbackSnap.data()!;
        return {
@@ -191,7 +191,7 @@ export async function addBlogPost(postData: {
       const translationSnap = await transaction.get(translationRef);
 
       // --- LOGIC AND WRITES SECOND ---
-      if (translationSnap.exists() && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
+      if (translationSnap.exists && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
           throw new Error(`A post with this slug in language '${postData.language}' already exists.`);
       }
       

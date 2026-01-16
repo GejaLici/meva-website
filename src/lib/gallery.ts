@@ -4,11 +4,11 @@ import type { GalleryItem } from '@/types/gallery';
 // This file now only contains the structural data (IDs, image paths, and hints).
 export const galleryItems: GalleryItem[] = [
   {
-    id: 'gallery-1',
-    beforeImageUrl: '/images/woman-getting-ready-nose-job-surgery%20(1).jpg',
-    beforeImageHint: 'nose profile before',
-    afterImageUrl: '/images/woman-getting-ready-nose-job-surgery%20(e).jpg',
-    afterImageHint: 'nose profile after',
+        id: 'gallery-1',
+            beforeImageUrl: '/images/woman-getting-ready-nose-job-surgery%20(1).jpg',
+                beforeImageHint: 'nose profile before',
+                    afterImageUrl: '/images/woman-getting-ready-nose-job-surgery%20(e).jpg',
+                        afterImageHint: 'nose profile',
   },
   {
     id: 'gallery-2',
