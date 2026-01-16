@@ -39,6 +39,21 @@ export function AddPostForm() {
   const t = useTranslations('Admin');
   const { user, loading: userLoading } = useUser();
 
+  const form = useForm<AddPostFormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      title: '',
+      slug: '',
+      author: '',
+      category: '',
+      imageUrl: '',
+      imageHint: '',
+      excerpt: '',
+      content: '',
+      language: 'en',
+    },
+  });
+
   useEffect(() => {
     if (user) {
       user.getIdToken().then(setIdToken);
