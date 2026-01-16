@@ -170,31 +170,30 @@ export async function addBlogPost(postData: {
   }
   
   const postsCollection = db.collection("blogPosts");
-  const q = postsCollection.where("slug", "==", postData.slug).limit(1);
   
   try {
-    const querySnapshot = await q.get();
-    let postRef;
-
-    if (querySnapshot.empty) {
-      // Document doesn't exist, create a new one
-      postRef = postsCollection.doc(); // New document with a random ID
-    } else {
-      // Document exists, get its reference
-      postRef = querySnapshot.docs[0].ref;
-    }
-
     await db.runTransaction(async (transaction) => {
-      // --- ALL READS FIRST ---
-      const postDoc = await transaction.get(postRef);
+      const q = postsCollection.where("slug", "==", postData.slug).limit(1);
+      const querySnapshot = await transaction.get(q);
+      
+      let postRef;
+
+      if (querySnapshot.empty) {
+        postRef = postsCollection.doc(); // New document with a random ID
+      } else {
+        postRef = querySnapshot.docs[0].ref;
+      }
+      
       const translationRef = postRef.collection('translations').doc(postData.language);
       const translationSnap = await transaction.get(translationRef);
-
-      // --- LOGIC AND WRITES SECOND ---
+      
+      // --- LOGIC AND WRITES ---
       if (translationSnap.exists && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
           throw new Error(`A post with this slug in language '${postData.language}' already exists.`);
       }
       
+      const postDoc = await transaction.get(postRef);
+
       if (!postDoc.exists) {
         transaction.set(postRef, {
           slug: postData.slug,
@@ -224,7 +223,13 @@ export async function addBlogPost(postData: {
       });
     });
 
-    return { success: true, id: postRef.id };
+    // We don't have postRef outside the transaction, so we need to query again if we want the ID.
+    // For now, returning success is sufficient for the app's needs.
+    const finalQuery = await postsCollection.where("slug", "==", postData.slug).limit(1).get();
+    const postId = finalQuery.docs[0].id;
+
+
+    return { success: true, id: postId };
 
   } catch (error: any) {
     console.error("Error adding blog post in transaction:", error);
