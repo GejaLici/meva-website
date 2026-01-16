@@ -156,11 +156,9 @@ export function EditPostForm({ postId }: EditPostFormProps) {
             <FormItem>
                 <FormLabel>{t('fieldLanguage')}</FormLabel>
                 <Select onValueChange={setSelectedLanguage} defaultValue={selectedLanguage} disabled={isLoadingData}>
-                    <FormControl>
-                        <SelectTrigger>
-                            <SelectValue placeholder={t('fieldLanguagePlaceholder')} />
-                        </SelectTrigger>
-                    </FormControl>
+                    <SelectTrigger>
+                        <SelectValue placeholder={t('fieldLanguagePlaceholder')} />
+                    </SelectTrigger>
                     <SelectContent>
                         {locales.map(locale => (
                             <SelectItem key={locale} value={locale}>{locale.toUpperCase()}</SelectItem>
