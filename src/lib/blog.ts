@@ -2,7 +2,7 @@
 'use server';
 
 import { Timestamp, FieldValue } from 'firebase-admin/firestore';
-import { getFirebaseAdmin } from '@/lib/firebase-admin-config';
+import { getFirebaseAdmin, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 import type { BlogPost, ContentBlock } from '@/types/blog';
 
 async function getDb() {
@@ -18,6 +18,32 @@ function toISOString(timestamp: Timestamp | Date | string): string {
     return timestamp.toDate().toISOString();
   }
   return new Date(timestamp).toISOString();
+}
+
+/**
+ * Safely parses the blog content, handling cases where it might be missing or double-stringified.
+ * @param content - The content to parse, expected to be a JSON string.
+ * @returns An array of ContentBlock, or an empty array if parsing fails.
+ */
+function parseContent(content: any): ContentBlock[] {
+  if (!content || typeof content !== 'string') {
+    return [];
+  }
+  try {
+    let parsed = JSON.parse(content);
+    // Handle cases where the content might have been stringified twice
+    if (typeof parsed === 'string') {
+      parsed = JSON.parse(parsed);
+    }
+    if (Array.isArray(parsed)) {
+      return parsed as ContentBlock[];
+    }
+    // If it's not an array after parsing, return empty to prevent errors
+    return [];
+  } catch (error) {
+    console.error("Error parsing blog content:", error);
+    return [];
+  }
 }
 
 /**
@@ -49,7 +75,7 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
                     author: data.author,
                     title: translationData.title,
                     excerpt: translationData.excerpt,
-                    content: JSON.parse(translationData.content || '[]') as ContentBlock[],
+                    content: parseContent(translationData.content),
                 };
             } else {
                 // Fallback to English if the requested locale is not found
@@ -67,7 +93,7 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
                         author: data.author,
                         title: fallbackData.title,
                         excerpt: fallbackData.excerpt,
-                        content: JSON.parse(fallbackData.content || '[]') as ContentBlock[],
+                        content: parseContent(fallbackData.content),
                     };
                 }
             }
@@ -116,7 +142,7 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
             author: data.author,
             title: translationData.title,
             excerpt: translationData.excerpt,
-            content: JSON.parse(translationData.content || '[]') as ContentBlock[],
+            content: parseContent(translationData.content),
         };
     } else {
         // Try to fallback to English if the requested locale doesn't exist
@@ -135,7 +161,7 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
             author: data.author,
             title: fallbackData.title,
             excerpt: fallbackData.excerpt,
-            content: JSON.parse(fallbackData.content || '[]') as ContentBlock[],
+            content: parseContent(fallbackData.content),
         };
     }
   } catch (error) {
