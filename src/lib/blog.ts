@@ -185,8 +185,16 @@ export async function addBlogPost(postData: {
     }
 
     await db.runTransaction(async (transaction) => {
+      // --- ALL READS FIRST ---
       const postDoc = await transaction.get(postRef);
+      const translationRef = postRef.collection('translations').doc(postData.language);
+      const translationSnap = await transaction.get(translationRef);
 
+      // --- LOGIC AND WRITES SECOND ---
+      if (translationSnap.exists() && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
+          throw new Error(`A post with this slug in language '${postData.language}' already exists.`);
+      }
+      
       if (!postDoc.exists) {
         transaction.set(postRef, {
           slug: postData.slug,
@@ -209,13 +217,6 @@ export async function addBlogPost(postData: {
         }
       }
       
-      const translationRef = postRef.collection('translations').doc(postData.language);
-      const translationSnap = await transaction.get(translationRef);
-
-      if (translationSnap.exists() && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
-          throw new Error(`A post with this slug in language '${postData.language}' already exists.`);
-      }
-
       transaction.set(translationRef, {
           title: postData.title,
           excerpt: postData.excerpt,
