@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
@@ -73,6 +74,7 @@ export function EditPostForm({ postId }: EditPostFormProps) {
 
         if (result.success) {
             const { baseData, translationData } = result;
+            const contentString = Array.isArray(translationData?.content) ? JSON.stringify(translationData.content, null, 2) : translationData?.content || '';
             form.reset({
                 slug: baseData?.slug || '',
                 author: baseData?.author || '',
@@ -81,7 +83,7 @@ export function EditPostForm({ postId }: EditPostFormProps) {
                 imageHint: baseData?.imageHint || '',
                 title: translationData?.title || '',
                 excerpt: translationData?.excerpt || '',
-                content: translationData?.content || '',
+                content: contentString,
             });
         } else {
             toast({
@@ -152,21 +154,19 @@ export function EditPostForm({ postId }: EditPostFormProps) {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className="bg-muted/50 p-4 rounded-lg">
-            <FormItem>
-                <FormLabel>{t('fieldLanguage')}</FormLabel>
-                <Select onValueChange={setSelectedLanguage} defaultValue={selectedLanguage} disabled={isLoadingData}>
-                    <SelectTrigger>
-                        <SelectValue placeholder={t('fieldLanguagePlaceholder')} />
-                    </SelectTrigger>
-                    <SelectContent>
-                        {locales.map(locale => (
-                            <SelectItem key={locale} value={locale}>{locale.toUpperCase()}</SelectItem>
-                        ))}
-                    </SelectContent>
-                </Select>
-                <p className="text-sm text-muted-foreground">{t('languageSelectDescription')}</p>
-            </FormItem>
+        <div className="bg-muted/50 p-4 rounded-lg space-y-2">
+            <Label>{t('fieldLanguage')}</Label>
+            <Select onValueChange={setSelectedLanguage} defaultValue={selectedLanguage} disabled={isLoadingData}>
+                <SelectTrigger>
+                    <SelectValue placeholder={t('fieldLanguagePlaceholder')} />
+                </SelectTrigger>
+                <SelectContent>
+                    {locales.map(locale => (
+                        <SelectItem key={locale} value={locale}>{locale.toUpperCase()}</SelectItem>
+                    ))}
+                </SelectContent>
+            </Select>
+            <p className="text-sm text-muted-foreground">{t('languageSelectDescription')}</p>
         </div>
         
         {isLoadingData && <div className="flex justify-center p-8"><Loader2 className="h-8 w-8 animate-spin" /></div>}
