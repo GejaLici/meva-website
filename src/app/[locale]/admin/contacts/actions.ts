@@ -4,7 +4,7 @@
 import { getFirebaseAdmin, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 
 async function getDb() {
-  const { adminDb } = getFirebaseAdmin();
+  const { adminDb } = await getFirebaseAdmin();
   return adminDb;
 }
 
