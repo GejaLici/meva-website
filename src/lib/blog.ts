@@ -80,26 +80,9 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
                     excerpt: translationData.excerpt,
                     content: parseContent(translationData.content),
                 };
-            } else {
-                // Fallback to English if the requested locale is not found
-                const fallbackRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc('en');
-                const fallbackSnap = await fallbackRef.get();
-                if (fallbackSnap.exists) {
-                    const fallbackData = fallbackSnap.data()!;
-                    return {
-                        id: docSnapshot.id,
-                        slug: data.slug,
-                        date: data.date && data.date.toDate ? toISOString(data.date) : new Date().toISOString(),
-                        imageUrl: data.imageUrl,
-                        imageHint: data.imageHint,
-                        category: data.category,
-                        author: data.author,
-                        title: fallbackData.title,
-                        excerpt: fallbackData.excerpt,
-                        content: parseContent(fallbackData.content),
-                    };
-                }
             }
+            
+            // If a translation for the requested locale does not exist, do not show it on the list page.
             return null;
         })
     );
@@ -188,8 +171,7 @@ interface AddPostData {
   idToken: string;
 }
 
-export async function addBlogPost(data: AddPostData) {
-  const { postData, idToken } = data;
+export async function addBlogPost({ postData, idToken }: AddPostData) {
   const { currentUser } = await getAuthenticatedAppForUser(idToken);
   
   if (!currentUser && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
@@ -221,21 +203,29 @@ export async function addBlogPost(data: AddPostData) {
       const querySnapshot = await transaction.get(q);
       
       let postRef;
+      let isNewPost = false;
 
       if (querySnapshot.empty) {
         postRef = postsCollection.doc(); // New document with a random ID
-        transaction.set(postRef, {
-          slug: postData.slug,
-          date: FieldValue.serverTimestamp(),
-          author: postData.author,
-          category: postData.category,
-          imageUrl: postData.imageUrl,
-          imageHint: postData.imageHint,
-        });
+        isNewPost = true;
       } else {
         postRef = querySnapshot.docs[0].ref;
-        const docData = querySnapshot.docs[0].data();
-        const updates: { [key: string]: any } = {};
+      }
+      
+      const translationRef = postRef.collection('translations').doc(postData.language);
+      
+      if (isNewPost) {
+          transaction.set(postRef, {
+            slug: postData.slug,
+            date: FieldValue.serverTimestamp(),
+            author: postData.author,
+            category: postData.category,
+            imageUrl: postData.imageUrl,
+            imageHint: postData.imageHint,
+        });
+      } else {
+         const docData = querySnapshot.docs[0].data();
+         const updates: { [key: string]: any } = {};
         if (postData.author && postData.author !== docData.author) updates.author = postData.author;
         if (postData.category && postData.category !== docData.category) updates.category = postData.category;
         if (postData.imageUrl && postData.imageUrl !== docData.imageUrl) updates.imageUrl = postData.imageUrl;
@@ -245,9 +235,7 @@ export async function addBlogPost(data: AddPostData) {
           transaction.update(postRef, updates);
         }
       }
-      
-      const translationRef = postRef.collection('translations').doc(postData.language);
-      
+
       transaction.set(translationRef, {
           title: postData.title,
           excerpt: postData.excerpt,
