@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { PageHeader } from '@/components/shared/PageHeader';
 import type { ServiceWithContent } from '@/types/services';
 import { useTranslations } from 'next-intl';
-import '@/messages/services/style.css';
 import { ServiceGallery } from '../ServiceGallery';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
