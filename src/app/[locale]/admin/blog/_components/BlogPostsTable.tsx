@@ -1,4 +1,3 @@
-
 'use client';
 import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser, useFirestore } from '@/firebase';
@@ -41,7 +40,7 @@ export function BlogPostsTable() {
       return null;
     }
     return query(collection(db, 'blogPosts'), orderBy('date', 'desc'));
-  }, [user, db]);
+  }, [user?.uid, db]);
 
   const { data: posts, loading, error } = useCollection<Post>(postsQuery);
 

@@ -1,4 +1,3 @@
-
 'use client';
 import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser, useFirestore } from '@/firebase';
@@ -42,7 +41,7 @@ export function ContactSubmissionsTable() {
       return null;
     }
     return query(collection(db, 'contactSubmissions'), orderBy('submittedAt', 'desc'));
-  }, [user, db]);
+  }, [user?.uid, db]);
   
   const { data: submissions, loading, error } = useCollection<Submission>(submissionsQuery);
 
