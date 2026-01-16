@@ -1,9 +1,8 @@
 
 'use client';
 import { useState, useMemo, useEffect } from 'react';
-import { useCollection, useUser } from '@/firebase';
-import { collection } from 'firebase/firestore';
-import { useFirestore } from '@/firebase';
+import { useCollection, useUser, useFirestore } from '@/firebase';
+import { collection, query, orderBy } from 'firebase/firestore';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Trash2, Pencil } from 'lucide-react';
@@ -37,14 +36,14 @@ export function BlogPostsTable() {
     }
   }, [user]);
 
-  const collectionRef = useMemo(() => {
-    if (user && db) {
-      return collection(db, 'blogPosts');
+  const postsQuery = useMemo(() => {
+    if (!user || !db) {
+      return null;
     }
-    return null;
+    return query(collection(db, 'blogPosts'), orderBy('date', 'desc'));
   }, [user, db]);
 
-  const { data: posts, loading, error } = useCollection<Post>(collectionRef);
+  const { data: posts, loading, error } = useCollection<Post>(postsQuery);
 
   const handleDelete = async (id: string) => {
     if (!confirm(t('deleteConfirmation'))) return;

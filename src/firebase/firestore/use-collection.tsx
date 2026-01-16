@@ -1,26 +1,24 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
 import {
   onSnapshot,
-  query,
   type DocumentData,
-  type QueryConstraint,
-  type CollectionReference,
+  type Query,
 } from 'firebase/firestore';
 
 type DocumentType<T> = T & { id: string };
 
 export function useCollection<T>(
-  collectionRef: CollectionReference<DocumentData> | null,
-  ...constraints: QueryConstraint[]
+  q: Query<DocumentData> | null
 ) {
   const [data, setData] = useState<DocumentType<T>[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    if (!collectionRef) {
+    if (!q) {
       setLoading(false);
       setData(null);
       return;
@@ -28,7 +26,6 @@ export function useCollection<T>(
 
     setLoading(true);
 
-    const q = query(collectionRef, ...constraints);
     const unsubscribe = onSnapshot(
       q,
       (snapshot) => {
@@ -48,7 +45,7 @@ export function useCollection<T>(
     );
 
     return () => unsubscribe();
-  }, [collectionRef]); // collectionRef is now a dependency
+  }, [q]);
 
   return { data, loading, error };
 }
