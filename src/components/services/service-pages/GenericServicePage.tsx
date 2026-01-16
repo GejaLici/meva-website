@@ -31,7 +31,7 @@ export default function GenericServicePage({ service }: ServicePageProps) {
 
   const serviceName = tServices(`items.${service.id}.name`);
   const serviceExcerpt = extractMetaDescription(service.description);
-  const encodedFeatureImageUrl = service.image ? encodeURI(service.image) : undefined;
+  const imageUrl = service.image;
   
   const serviceDetails = getServiceDetails(service.id);
 
@@ -39,10 +39,10 @@ export default function GenericServicePage({ service }: ServicePageProps) {
     <>
       <PageHeader title={serviceName} description={serviceExcerpt} />
       
-      {encodedFeatureImageUrl && (
+      {imageUrl && (
         <div className="relative w-full h-80 md:h-96 lg:h-[500px] -mt-6">
           <Image
-            src={encodedFeatureImageUrl}
+            src={imageUrl}
             alt={serviceName}
             fill
             priority

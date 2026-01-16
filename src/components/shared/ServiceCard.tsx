@@ -32,7 +32,7 @@ export function ServiceCard({ service, categorySlug }: ServiceCardProps) {
   
   const learnMoreText = tNav('exploreService');
 
-  const imageUrl = service.image ? decodeURIComponent(service.image) : undefined;
+  const imageUrl = service.image;
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
