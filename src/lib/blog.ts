@@ -1,7 +1,7 @@
 
 'use server';
 
-import { collection, doc, getDoc, getDocs, query, where, limit, orderBy, setDoc, serverTimestamp, Timestamp, runTransaction } from 'firebase/firestore';
+import { Timestamp, FieldValue } from 'firebase-admin/firestore';
 import { getFirebaseAdmin, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 import type { BlogPost, ContentBlock } from '@/types/blog';
 
@@ -27,18 +27,18 @@ function toISOString(timestamp: Timestamp | Date | string): string {
 export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
   try {
     const db = await getDb();
-    const postsCollection = collection(db, "blogPosts");
-    const postsQuery = query(postsCollection, orderBy('date', 'desc'));
-    const querySnapshot = await getDocs(postsQuery);
+    const postsCollection = db.collection("blogPosts");
+    const postsQuery = postsCollection.orderBy('date', 'desc');
+    const querySnapshot = await postsQuery.get();
     
     const posts: BlogPost[] = await Promise.all(
         querySnapshot.docs.map(async (docSnapshot) => {
             const data = docSnapshot.data();
-            const translationRef = doc(db, `blogPosts/${docSnapshot.id}/translations/${locale}`);
-            const translationSnap = await getDoc(translationRef);
+            const translationRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc(locale);
+            const translationSnap = await translationRef.get();
 
             if (translationSnap.exists()) {
-                const translationData = translationSnap.data();
+                const translationData = translationSnap.data()!;
                 return {
                     id: docSnapshot.id,
                     slug: data.slug,
@@ -72,9 +72,9 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
 export async function getBlogPostBySlug(slug: string, locale: string): Promise<BlogPost | undefined> {
   try {
     const db = await getDb();
-    const postsCollection = collection(db, "blogPosts");
-    const q = query(postsCollection, where("slug", "==", slug), limit(1));
-    const querySnapshot = await getDocs(q);
+    const postsCollection = db.collection("blogPosts");
+    const q = postsCollection.where("slug", "==", slug).limit(1);
+    const querySnapshot = await q.get();
 
     if (querySnapshot.empty) {
       return undefined;
@@ -83,16 +83,16 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
     const docSnapshot = querySnapshot.docs[0];
     const data = docSnapshot.data();
 
-    const translationRef = doc(db, `blogPosts/${docSnapshot.id}/translations/${locale}`);
-    const translationSnap = await getDoc(translationRef);
+    const translationRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc(locale);
+    const translationSnap = await translationRef.get();
 
     if (!translationSnap.exists()) {
       // Try to fallback to English if the requested locale doesn't exist
-      const fallbackRef = doc(db, `blogPosts/${docSnapshot.id}/translations/en`);
-      const fallbackSnap = await getDoc(fallbackRef);
+      const fallbackRef = db.collection(`blogPosts/${docSnapshot.id}/translations`).doc('en');
+      const fallbackSnap = await fallbackRef.get();
       if(!fallbackSnap.exists()) return undefined;
 
-      const fallbackData = fallbackSnap.data();
+      const fallbackData = fallbackSnap.data()!;
        return {
         id: docSnapshot.id,
         slug: data.slug,
@@ -107,7 +107,7 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
       };
     }
     
-    const translationData = translationSnap.data();
+    const translationData = translationSnap.data()!;
 
     return {
       id: docSnapshot.id,
@@ -169,41 +169,47 @@ export async function addBlogPost(postData: {
     return { success: false, error: "Content must be either a string or an object."};
   }
   
-  const postsCollection = collection(db, "blogPosts");
-  const q = query(postsCollection, where("slug", "==", postData.slug), limit(1));
+  const postsCollection = db.collection("blogPosts");
+  const q = postsCollection.where("slug", "==", postData.slug).limit(1);
   
   try {
-    const postTransaction = await runTransaction(db, async (transaction) => {
-      const querySnapshot = await transaction.get(q);
-      let postRef;
+    const querySnapshot = await q.get();
+    let postRef;
 
-      if (querySnapshot.empty) {
-        // Document doesn't exist, create a new one
-        postRef = doc(postsCollection); // New document with a random ID
+    if (querySnapshot.empty) {
+      // Document doesn't exist, create a new one
+      postRef = postsCollection.doc(); // New document with a random ID
+    } else {
+      // Document exists, get its reference
+      postRef = querySnapshot.docs[0].ref;
+    }
+
+    await db.runTransaction(async (transaction) => {
+      const postDoc = await transaction.get(postRef);
+
+      if (!postDoc.exists) {
         transaction.set(postRef, {
           slug: postData.slug,
-          date: serverTimestamp(),
+          date: FieldValue.serverTimestamp(),
           author: postData.author,
           category: postData.category,
           imageUrl: postData.imageUrl,
           imageHint: postData.imageHint,
         });
       } else {
-        // Document exists, update it if needed
-        postRef = querySnapshot.docs[0].ref;
-        const docData = querySnapshot.docs[0].data();
+        const docData = postDoc.data()!;
         const updates: { [key: string]: any } = {};
         if (postData.author && postData.author !== docData.author) updates.author = postData.author;
         if (postData.category && postData.category !== docData.category) updates.category = postData.category;
         if (postData.imageUrl && postData.imageUrl !== docData.imageUrl) updates.imageUrl = postData.imageUrl;
         if (postData.imageHint && postData.imageHint !== docData.imageHint) updates.imageHint = postData.imageHint;
         if (Object.keys(updates).length > 0) {
-          updates.date = serverTimestamp(); // Update date on any modification
+          updates.date = FieldValue.serverTimestamp(); // Update date on any modification
           transaction.update(postRef, updates);
         }
       }
       
-      const translationRef = doc(postRef, 'translations', postData.language);
+      const translationRef = postRef.collection('translations').doc(postData.language);
       const translationSnap = await transaction.get(translationRef);
 
       if (translationSnap.exists() && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
@@ -215,10 +221,10 @@ export async function addBlogPost(postData: {
           excerpt: postData.excerpt,
           content: contentString, // Save the validated JSON string
       });
-
-      return { success: true, id: postRef.id };
     });
-    return postTransaction;
+
+    return { success: true, id: postRef.id };
+
   } catch (error: any) {
     console.error("Error adding blog post in transaction:", error);
     return { success: false, error: error.message || "Failed to add or update blog post." };
