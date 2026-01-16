@@ -1,7 +1,6 @@
 
 'use server';
 
-import { doc, deleteDoc } from 'firebase/firestore';
 import { getFirebaseAdmin, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 
 async function getDb() {
@@ -25,8 +24,11 @@ export async function deleteContactSubmission(submissionId: string) {
 
   try {
     const db = await getDb();
-    const submissionRef = doc(db, 'contactSubmissions', submissionId);
-    await deleteDoc(submissionRef);
+    if (!db) {
+        throw new Error('Firebase Admin DB is not initialized.');
+    }
+    const submissionRef = db.collection('contactSubmissions').doc(submissionId);
+    await submissionRef.delete();
     return { success: true };
   } catch (error: any) {
     console.error('Error deleting contact submission:', error);

@@ -1,7 +1,7 @@
 
 'use client';
 import { useState, useEffect } from 'react';
-import { useCollection } from '@/firebase';
+import { useCollection, useUser } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import { useFirestore } from '@/firebase';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -24,7 +24,9 @@ interface Post {
 
 export function BlogPostsTable() {
   const { db } = useFirestore();
-  const { data: posts, loading, error } = useCollection<Post>(db ? collection(db, 'blogPosts') : null);
+  const { user, loading: userLoading } = useUser();
+  const collectionRef = user && db ? collection(db, 'blogPosts') : null;
+  const { data: posts, loading, error } = useCollection<Post>(collectionRef);
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
   const { toast } = useToast();
   const t = useTranslations('AdminBlog');
@@ -58,7 +60,7 @@ export function BlogPostsTable() {
     }
   };
 
-  if (loading) {
+  if (loading || userLoading) {
     return <div className="flex justify-center items-center py-10"><Loader2 className="h-8 w-8 animate-spin" /></div>;
   }
 

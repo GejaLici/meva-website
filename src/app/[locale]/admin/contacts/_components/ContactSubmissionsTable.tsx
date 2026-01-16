@@ -1,7 +1,7 @@
 
 'use client';
 import { useState, useEffect } from 'react';
-import { useCollection } from '@/firebase';
+import { useCollection, useUser } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import { useFirestore } from '@/firebase';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -26,7 +26,9 @@ interface Submission {
 
 export function ContactSubmissionsTable() {
   const { db } = useFirestore();
-  const { data: submissions, loading, error } = useCollection<Submission>(db ? collection(db, 'contactSubmissions') : null);
+  const { user, loading: userLoading } = useUser();
+  const collectionRef = user && db ? collection(db, 'contactSubmissions') : null;
+  const { data: submissions, loading, error } = useCollection<Submission>(collectionRef);
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
   const { toast } = useToast();
   const t = useTranslations('AdminContacts');
@@ -61,7 +63,7 @@ export function ContactSubmissionsTable() {
     }
   };
 
-  if (loading) {
+  if (loading || userLoading) {
     return <div className="flex justify-center items-center py-10"><Loader2 className="h-8 w-8 animate-spin" /></div>;
   }
 

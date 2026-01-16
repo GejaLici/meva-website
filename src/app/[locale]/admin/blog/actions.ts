@@ -1,7 +1,6 @@
 
 'use server';
 
-import { doc, deleteDoc } from 'firebase/firestore';
 import { getFirebaseAdmin, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
 
 async function getDb() {
@@ -25,8 +24,11 @@ export async function deleteBlogPost(postId: string) {
 
   try {
     const db = await getDb();
-    const postRef = doc(db, 'blogPosts', postId);
-    await deleteDoc(postRef);
+     if (!db) {
+        throw new Error('Firebase Admin DB is not initialized.');
+    }
+    const postRef = db.collection('blogPosts').doc(postId);
+    await postRef.delete();
     return { success: true };
   } catch (error: any) {
     console.error('Error deleting blog post:', error);
