@@ -1,6 +1,6 @@
 
 'use client';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import { useFirestore } from '@/firebase';
@@ -30,6 +30,13 @@ export function ContactSubmissionsTable() {
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
   const { toast } = useToast();
   const t = useTranslations('AdminContacts');
+  const [idToken, setIdToken] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (user) {
+      user.getIdToken().then(setIdToken);
+    }
+  }, [user]);
 
   const collectionRef = useMemo(() => {
     if (user && db) {
@@ -44,9 +51,18 @@ export function ContactSubmissionsTable() {
   const handleDelete = async (id: string) => {
     if (!confirm(t('deleteConfirmation'))) return;
 
+    if (!idToken) {
+      toast({
+        variant: 'destructive',
+        title: t('deleteErrorTitle'),
+        description: 'Authentication required. Please refresh and try again.',
+      });
+      return;
+    }
+
     setIsDeleting(id);
     try {
-      const result = await deleteContactSubmission(id);
+      const result = await deleteContactSubmission({ submissionId: id, idToken });
       if (result.success) {
         toast({
           title: t('deleteSuccessTitle'),
@@ -113,7 +129,7 @@ export function ContactSubmissionsTable() {
                         variant="destructive" 
                         size="icon" 
                         onClick={() => handleDelete(submission.id)}
-                        disabled={isDeleting === submission.id}
+                        disabled={isDeleting === submission.id || !idToken}
                         aria-label={t('deleteAriaLabel')}
                     >
                         {isDeleting === submission.id ? <Loader2 className="h-4 w-4 animate-spin" /> : <Trash2 className="h-4 w-4" />}

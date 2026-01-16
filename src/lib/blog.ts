@@ -26,6 +26,9 @@ function toISOString(timestamp: Timestamp | Date | string): string {
  * @returns An array of ContentBlock, or an empty array if parsing fails.
  */
 function parseContent(content: any): ContentBlock[] {
+  if (Array.isArray(content)) {
+    return content; // Already parsed
+  }
   if (!content || typeof content !== 'string') {
     return [];
   }
@@ -170,29 +173,30 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
   }
 }
 
-/**
- * Adds or updates a blog post and its language-specific translation.
- */
-export async function addBlogPost(postData: {
-  slug: string;
-  language: string;
-  title: string;
-  excerpt: string;
-  content: string | object; // Accept string or object
-  author?: string;
-  category?: string;
-  imageUrl?: string;
-  imageHint?: string;
-}) {
+interface AddPostData {
+  postData: {
+    slug: string;
+    language: string;
+    title: string;
+    excerpt: string;
+    content: string | object;
+    author?: string;
+    category?: string;
+    imageUrl?: string;
+    imageHint?: string;
+  };
+  idToken: string;
+}
 
-  const { currentUser } = await getAuthenticatedAppForUser();
+export async function addBlogPost(data: AddPostData) {
+  const { postData, idToken } = data;
+  const { currentUser } = await getAuthenticatedAppForUser(idToken);
+  
   if (!currentUser && process.env.SEED_SCRIPT_ACTIVE !== 'true') {
     return { success: false, error: 'User must be authenticated to add a blog post.' };
   }
-  
 
   const db = await getDb();
-
   let contentString: string;
 
   // Ensure content is a valid JSON string before saving

@@ -45,21 +45,6 @@ export function AddPostForm() {
     }
   }, [user]);
 
-  const form = useForm<AddPostFormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: '',
-      slug: '',
-      author: '',
-      category: '',
-      imageUrl: '',
-      imageHint: '',
-      excerpt: '',
-      content: '',
-      language: 'en',
-    },
-  });
-
   async function onSubmit(values: AddPostFormValues) {
     if (!idToken) {
       toast({
@@ -71,7 +56,7 @@ export function AddPostForm() {
     }
     setIsSubmitting(true);
     try {
-      const result = await addBlogPost(values, idToken);
+      const result = await addBlogPost({ postData: values, idToken });
       if (result.success) {
         toast({
           title: t('postSuccessTitle'),

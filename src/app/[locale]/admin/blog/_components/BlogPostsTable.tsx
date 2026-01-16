@@ -1,6 +1,6 @@
 
 'use client';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser } from '@/firebase';
 import { collection } from 'firebase/firestore';
 import { useFirestore } from '@/firebase';
@@ -28,6 +28,13 @@ export function BlogPostsTable() {
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
   const { toast } = useToast();
   const t = useTranslations('AdminBlog');
+  const [idToken, setIdToken] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (user) {
+      user.getIdToken().then(setIdToken);
+    }
+  }, [user]);
 
   const collectionRef = useMemo(() => {
     if (user && db) {
@@ -41,9 +48,18 @@ export function BlogPostsTable() {
   const handleDelete = async (id: string) => {
     if (!confirm(t('deleteConfirmation'))) return;
 
+    if (!idToken) {
+      toast({
+        variant: 'destructive',
+        title: t('deleteErrorTitle'),
+        description: 'Authentication required. Please refresh and try again.',
+      });
+      return;
+    }
+
     setIsDeleting(id);
     try {
-      const result = await deleteBlogPost(id);
+      const result = await deleteBlogPost({ postId: id, idToken });
       if (result.success) {
         toast({
           title: t('deleteSuccessTitle'),
@@ -111,7 +127,7 @@ export function BlogPostsTable() {
                         variant="destructive" 
                         size="icon" 
                         onClick={() => handleDelete(post.id)}
-                        disabled={isDeleting === post.id}
+                        disabled={isDeleting === post.id || !idToken}
                         aria-label={t('deleteAriaLabel')}
                     >
                         {isDeleting === post.id ? <Loader2 className="h-4 w-4 animate-spin" /> : <Trash2 className="h-4 w-4" />}
