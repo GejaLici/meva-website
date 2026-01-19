@@ -4,7 +4,7 @@
 
 import { Timestamp, FieldValue } from 'firebase-admin/firestore';
 import { getFirebaseAdmin, getAuthenticatedAppForUser } from '@/lib/firebase-admin-config';
-import type { BlogPost, ContentBlock } from '@/types/blog';
+import type { BlogPost, ContentBlock, BlogImage } from '@/types/blog';
 
 async function getDb() {
   const { adminDb } = await getFirebaseAdmin();
@@ -89,6 +89,7 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPost[]> {
                     title: translationData.title,
                     excerpt: translationData.excerpt,
                     content: parseContent(translationData.content),
+                    gallery: data.gallery || [],
                 };
             }
             
@@ -147,6 +148,7 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
         title: translationData.title,
         excerpt: translationData.excerpt,
         content: parseContent(translationData.content),
+        gallery: data.gallery || [],
     };
 
   } catch (error) {
@@ -166,6 +168,7 @@ interface AddPostData {
     category?: string;
     imageUrl?: string;
     imageHint?: string;
+    gallery?: BlogImage[];
   };
   idToken: string;
 }
@@ -206,6 +209,7 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
             category: postData.category,
             imageUrl: postData.imageUrl,
             imageHint: postData.imageHint,
+            gallery: postData.gallery || [],
         });
       } else {
          const doc = await transaction.get(postRef);
@@ -216,6 +220,7 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
             if (postData.category && postData.category !== docData.category) updates.category = postData.category;
             if (postData.imageUrl && postData.imageUrl !== docData.imageUrl) updates.imageUrl = postData.imageUrl;
             if (postData.imageHint && postData.imageHint !== docData.imageHint) updates.imageHint = postData.imageHint;
+            if (postData.gallery) updates.gallery = postData.gallery;
             if (Object.keys(updates).length > 0) {
               updates.date = FieldValue.serverTimestamp(); // Update date on any modification
               transaction.update(postRef, updates);

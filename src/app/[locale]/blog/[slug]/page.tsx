@@ -13,6 +13,7 @@ import { Link } from '@/navigation';
 import { CalendarDays, UserCircle } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
+import { ServiceGallery } from '@/components/services/ServiceGallery';
 
 const BlogPostClient = dynamic(
   () => import('./_components/BlogPostClient'),
@@ -106,10 +107,14 @@ function renderRichText(spans: ContentLeaf[] | undefined): JSX.Element | null {
 }
 
 // Main content rendering function
-async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<(JSX.Element | null)[] | null> {
-  if (!blocks || blocks.length === 0) {
+async function renderContentBlocks(blocks: ContentBlock[] | string | undefined): Promise<(JSX.Element | null)[] | null> {
+  if (!blocks || (Array.isArray(blocks) && blocks.length === 0)) {
     const t = await getTranslations('BlogPostPage');
     return [<p key="no-content" className="text-muted-foreground">{t('noContent')}</p>];
+  }
+  
+  if (typeof blocks === 'string') {
+    return [<div key="rawHtml" dangerouslySetInnerHTML={{ __html: blocks }} />];
   }
 
   return blocks.map((block) => {
@@ -189,18 +194,19 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const t = await getTranslations('BlogPostPage');
+  const tDetails = await getTranslations('ServiceDetailsPage');
   const post = await getBlogPostBySlug(params.slug, params.locale);
 
   if (!post) {
     notFound();
   }
 
-  const headings = post.content
+  const headings = Array.isArray(post.content) ? post.content
     .filter((block): block is HeadingBlock => block.type === 'heading' && block.level === 2)
     .map(block => ({
       id: block.id,
       text: block.children.map(child => child.text).join('')
-    }));
+    })) : [];
   
   const renderedContent = await renderContentBlocks(post.content);
   const encodedFeatureImageUrl = post.imageUrl ? encodeURI(post.imageUrl) : undefined;
@@ -248,6 +254,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="prose prose-lg max-w-none text-foreground prose-headings:scroll-mt-24 prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground prose-blockquote:border-accent">
               {renderedContent}
             </div>
+
+             {post.gallery && post.gallery.length > 0 && (
+                <section className="my-12 md:my-16 not-prose">
+                    <div className="text-center mb-8 md:mb-12">
+                        <h2 className="font-headline text-2xl md:text-3xl font-semibold text-primary">{tDetails('galleryTitle')}</h2>
+                        <p className="mt-2 text-muted-foreground">{tDetails('gallerySubtitle', { serviceName: post.title })}</p>
+                    </div>
+                    <ServiceGallery images={post.gallery} />
+                </section>
+            )}
 
             <div className="mt-12 text-center">
               <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">

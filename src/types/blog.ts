@@ -1,5 +1,4 @@
 
-
 import { Timestamp } from 'firebase/firestore';
 
 // More flexible child type for text content
@@ -69,6 +68,11 @@ export interface RawHtmlBlock extends ContentBlockBase {
 
 export type ContentBlock = HeadingBlock | ParagraphBlock | ImageBlock | ListBlock | CodeBlock | BlockquoteBlock | CtaBlock | RawHtmlBlock;
 
+export interface BlogImage {
+  url: string;
+  hint: string;
+}
+
 // Update BlogPost
 export interface BlogPost {
   id: string; // Firestore document ID
@@ -77,8 +81,9 @@ export interface BlogPost {
   date: string | Timestamp; // Can be ISO string or Firestore Timestamp
   author?: string;
   excerpt: string;
-  content: ContentBlock[]; // Changed from string
+  content: ContentBlock[] | string;
   imageUrl?: string; // Main feature image for the post
   imageHint?: string; // Hint for main feature image
   category?: string;
+  gallery?: BlogImage[];
 }
