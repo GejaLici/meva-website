@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -68,25 +69,19 @@
 
 @layer components {
   .cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    border-radius: 0.5rem; /* --radius */
-    font-size: 0.875rem; /* text-sm */
-    line-height: 1.25rem;
-    font-weight: 500; /* font-medium */
-    text-decoration: none !important;
-    transition: background-color 0.2s ease-in-out;
-    height: 2.75rem; /* h-11 */
-    padding-left: 2rem; /* px-8 */
-    padding-right: 2rem; /* px-8 */
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8;
     background-color: hsl(var(--accent));
     color: hsl(var(--accent-foreground));
   }
   .cta-button:hover {
     background-color: hsl(var(--accent) / 0.9);
-    text-decoration: none !important;
+  }
+
+  .html-cta-card {
+    @apply my-8 rounded-lg shadow-lg border border-accent/50 bg-accent/20 p-6 flex flex-col md:flex-row items-center justify-between gap-6 not-prose;
+  }
+  .html-cta-card p {
+    @apply text-lg font-semibold text-foreground text-center md:text-left m-0;
   }
 }
 
