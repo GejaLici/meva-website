@@ -38,12 +38,12 @@ export function ContactSubmissionsTable() {
   }, [user]);
 
   const submissionsQuery = useMemo(() => {
-    if (!db) {
+    if (!user || !db) {
       return null;
     }
     // Firestore security rules will enforce that only authenticated users can read.
     return query(collection(db, 'contactSubmissions'));
-  }, [db]);
+  }, [user, db]);
   
   const { data: submissions, loading, error } = useCollection<Submission>(submissionsQuery);
 
