@@ -14,6 +14,7 @@ import { CalendarDays, UserCircle } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ServiceGallery } from '@/components/services/ServiceGallery';
+import { BlogContentWrapper } from '@/components/blog/BlogContentWrapper';
 
 const BlogPostClient = dynamic(
   () => import('./_components/BlogPostClient'),
@@ -250,10 +251,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               )}
             </header>
-
-            <div className="prose prose-lg max-w-none text-foreground prose-headings:scroll-mt-24 prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground prose-blockquote:border-accent">
-              {renderedContent}
-            </div>
+            
+            <BlogContentWrapper>
+              <div className="prose prose-lg max-w-none text-foreground prose-headings:scroll-mt-24 prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground prose-blockquote:border-accent">
+                {renderedContent}
+              </div>
+            </BlogContentWrapper>
 
              {post.gallery && post.gallery.length > 0 && (
                 <section className="my-12 md:my-16 not-prose">
