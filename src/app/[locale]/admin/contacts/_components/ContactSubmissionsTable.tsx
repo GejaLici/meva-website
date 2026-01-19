@@ -37,11 +37,13 @@ export function ContactSubmissionsTable() {
   }, [user]);
 
   const submissionsQuery = useMemo(() => {
-    if (!user || !db) {
+    if (userLoading || !db) {
       return null;
     }
+    // The query can be fired as soon as loading is done.
+    // Firestore security rules will enforce that only authenticated users can read.
     return query(collection(db, 'contactSubmissions'), orderBy('submittedAt', 'desc'));
-  }, [user?.uid, db]);
+  }, [userLoading, db]);
   
   const { data: submissions, loading, error } = useCollection<Submission>(submissionsQuery);
 
