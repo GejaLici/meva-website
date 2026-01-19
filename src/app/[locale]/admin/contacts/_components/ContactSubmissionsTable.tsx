@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser, useFirestore } from '@/firebase';
@@ -42,7 +43,7 @@ export function ContactSubmissionsTable() {
     }
     // Firestore security rules will enforce that only authenticated users can read.
     return query(collection(db, 'contactSubmissions'));
-  }, [user?.uid, db]);
+  }, [user, db]);
   
   const { data: submissions, loading, error } = useCollection<Submission>(submissionsQuery);
 
