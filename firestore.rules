@@ -19,8 +19,8 @@ service cloud.firestore {
     // Allow anyone to create (submit), but only authenticated users can read/list/delete.
     match /contactSubmissions/{submissionId} {
       allow create: if true;
-      // TEMPORARY: Make readable by anyone for debugging
-      allow get, list: if true;
+      allow get: if request.auth != null;
+      allow list: if request.auth != null;
       allow delete: if request.auth != null;
       allow update: if false;
     }
