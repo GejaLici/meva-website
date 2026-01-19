@@ -279,7 +279,19 @@ export async function getPostForEditing({ postId, language }: { postId: string; 
             return { success: false, error: 'Post not found.' };
         }
 
-        const baseData = postSnap.data() as PostBaseData;
+        const rawData = postSnap.data();
+        if (!rawData) {
+            return { success: false, error: 'Post data is empty.' };
+        }
+
+        // Explicitly create a serializable object, omitting non-serializable fields like Timestamps
+        const baseData: PostBaseData = {
+            slug: rawData.slug,
+            author: rawData.author,
+            category: rawData.category,
+            imageUrl: rawData.imageUrl,
+            imageHint: rawData.imageHint
+        };
 
         const translationRef = postRef.collection('translations').doc(language);
         const translationSnap = await translationRef.get();
@@ -338,4 +350,5 @@ export async function updateBlogPost({ postId, language, idToken, postData }: Up
     return { success: false, error: error.message || "Failed to update blog post." };
   }
 }
+
 
