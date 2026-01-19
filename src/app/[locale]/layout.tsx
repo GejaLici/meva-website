@@ -7,7 +7,6 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { locales } from '@/navigation';
-import { seedExampleBlogPost } from '@/lib/seed';
 import { Providers } from './providers';
 
 const inter = Inter({
@@ -48,19 +47,6 @@ export default async function RootLayout({
     return null;
   }
   
-  // NOTE: This is a temporary function to seed the database with an example post.
-  // You can safely remove this line after the post has been created.
-  try {
-    await seedExampleBlogPost();
-  } catch (error) {
-    if (error instanceof Error && error.message.includes('already exists')) {
-      // This is expected, do nothing.
-    } else {
-      console.error("Error seeding blog post:", error);
-    }
-  }
-
-
   const messages = await getMessages();
 
   return (
