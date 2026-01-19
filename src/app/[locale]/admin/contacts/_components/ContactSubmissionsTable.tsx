@@ -2,7 +2,7 @@
 'use client';
 import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser, useFirestore } from '@/firebase';
-import { collection, query, orderBy } from 'firebase/firestore';
+import { collection, query } from 'firebase/firestore';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Trash2 } from 'lucide-react';
@@ -42,7 +42,7 @@ export function ContactSubmissionsTable() {
       return null;
     }
     // Firestore security rules will enforce that only authenticated users can read.
-    return query(collection(db, 'contactSubmissions'), orderBy('submittedAt', 'desc'));
+    return query(collection(db, 'contactSubmissions'));
   }, [user?.uid, db]);
   
   const { data: submissions, loading, error } = useCollection<Submission>(submissionsQuery);
@@ -123,7 +123,7 @@ export function ContactSubmissionsTable() {
                 <TableCell>{submission.email}</TableCell>
                 <TableCell>{submission.subject}</TableCell>
                 <TableCell><span className="font-mono text-xs">{submission.source || 'N/A'}</span></TableCell>
-                <TableCell>{submission.submittedAt.toDate().toLocaleString()}</TableCell>
+                <TableCell>{submission.submittedAt ? submission.submittedAt.toDate().toLocaleString() : 'N/A'}</TableCell>
                 <TableCell className="text-right">
                     <Button 
                         variant="destructive" 
