@@ -43,7 +43,7 @@ export function ContactSubmissionsTable() {
     }
     // Firestore security rules will enforce that only authenticated users can read.
     return query(collection(db, 'contactSubmissions'));
-  }, [user, db]);
+  }, [user?.uid, db]);
   
   const { data: submissions, loading, error } = useCollection<Submission>(submissionsQuery);
 
