@@ -10,7 +10,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from '@/components/ui/form';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
@@ -28,6 +28,7 @@ const formSchema = z.object({
   excerpt: z.string().min(20, 'Excerpt must be at least 20 characters long.'),
   content: z.string().min(50, 'Content must be at least 50 characters long.'),
   language: z.enum(locales),
+  gallery: z.string().optional(),
 });
 
 type AddPostFormValues = z.infer<typeof formSchema>;
@@ -51,6 +52,7 @@ export function AddPostForm() {
       excerpt: '',
       content: '',
       language: 'en',
+      gallery: '',
     },
   });
 
@@ -207,6 +209,26 @@ export function AddPostForm() {
         />
         <FormField
           control={form.control}
+          name="gallery"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t('fieldGallery')}</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder={'[\\n  {\\n    "url": "/images/your-image.jpg",\\n    "hint": "a description"\\n  }\\n]'}
+                  className="min-h-[150px] font-mono"
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription>
+                {t('fieldGalleryHint')}
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="excerpt"
           render={({ field }) => (
             <FormItem>
@@ -231,7 +253,7 @@ export function AddPostForm() {
                   {...field}
                 />
               </FormControl>
-               <p className="text-sm text-muted-foreground">{t('fieldContentHint')}</p>
+               <FormDescription>{t('fieldContentHint')}</FormDescription>
               <FormMessage />
             </FormItem>
           )}

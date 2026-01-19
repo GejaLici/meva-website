@@ -413,14 +413,14 @@
     "fieldCategory": "Category (Optional)",
     "fieldCategoryPlaceholder": "e.g., Skincare",
     "fieldImageUrl": "Feature Image URL (Optional)",
-    "fieldImageUrlPlaceholder": "https://...",
+    "fieldImageUrlPlaceholder": "/images/your-image.jpg",
     "fieldImageHint": "Image AI Hint (Optional)",
     "fieldImageHintPlaceholder": "e.g., person smiling",
     "fieldExcerpt": "Excerpt",
     "fieldExcerptPlaceholder": "A short, compelling summary of the article...",
     "fieldContent": "Content",
-    "fieldContentPlaceholder": "Enter the article content here. You can use Markdown for formatting.",
-    "fieldContentHint": "Content must be a valid JSON string representing a ContentBlock[]. Example: [{\\\"id\\\":\\\"p1\\\",\\\"type\\\":\\\"paragraph\\\",\\\"children\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"This is the first paragraph.\\\"}]}]",
+    "fieldContentPlaceholder": "Enter the article content here. You can use Markdown for formatting or direct HTML.",
+    "fieldContentHint": "Content can be a raw HTML string. Use standard <img> tags for images.",
     "submitPostButton": "Submit Post",
     "submittingButton": "Submitting...",
     "postSuccessTitle": "Blog Post Added Successfully",
@@ -434,7 +434,9 @@
     "updateSuccessDescription": "The {lng} version of post ID {postId} has been updated.",
     "languageSelectDescription": "Select the language you want to edit. Common fields like slug and images will apply to all languages.",
     "translationSectionTitle": "{lng} Translation Content",
-    "submitUpdateButton": "Update Post"
+    "submitUpdateButton": "Update Post",
+    "fieldGallery": "Image Gallery (JSON format)",
+    "fieldGalleryHint": "Provide an array of image objects in JSON format. Example: [{\"url\": \"/images/your-image.jpg\", \"hint\": \"description\"}]"
   },
   "AdminNav": {
     "dashboard": "Dashboard",
@@ -535,11 +537,11 @@
       },
       "blepharoplasty-2": {
         "question": "Will my scars be visible?",
-        "answer": "<p>Surgeons are experts at hiding incisions. For an upper blepharoplasty, the scar is in the eyelid crease and virtually invisible when the eye is open. For a lower blepharoplasty, it is just below the lashes or entirely hidden inside the eyelid.</p>"
+        "answer": "<p>For an upper blepharoplasty, the scar is in the eyelid crease and virtually invisible when the eye is open. For a lower blepharoplasty, it is just below the lashes or entirely hidden inside the eyelid.</p>"
       },
       "blepharoplasty-3": {
         "question": "How long do the results last?",
-        "answer": "<p>The results are very long-lasting. Upper eyelid surgery can last for many years, while lower eyelid surgery rarely needs to be repeated. The natural aging process will continue, but from a much more youthful starting point.</p>"
+        "answer": "<p>The results are very long-lasting. Upper eyelid surgery can last for many years, while lower eyelid surgery rarely needs to be repeated.</p>"
       }
     },
      "facelift": {

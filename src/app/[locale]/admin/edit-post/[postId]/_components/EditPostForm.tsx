@@ -10,7 +10,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, FormDescription } from '@/components/ui/form';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
@@ -28,6 +28,7 @@ const formSchema = z.object({
   imageHint: z.string().optional(),
   excerpt: z.string().min(1, 'Excerpt is required.'),
   content: z.string().min(1, 'Content is required.'),
+  gallery: z.string().optional(),
 });
 
 type EditPostFormValues = z.infer<typeof formSchema>;
@@ -56,6 +57,7 @@ export function EditPostForm({ postId }: EditPostFormProps) {
       imageHint: '',
       excerpt: '',
       content: '',
+      gallery: '',
     },
   });
 
@@ -81,6 +83,7 @@ export function EditPostForm({ postId }: EditPostFormProps) {
                 category: baseData?.category || '',
                 imageUrl: baseData?.imageUrl || '',
                 imageHint: baseData?.imageHint || '',
+                gallery: baseData?.gallery ? JSON.stringify(baseData.gallery, null, 2) : '',
                 title: translationData?.title || '',
                 excerpt: translationData?.excerpt || '',
                 content: contentString,
@@ -98,6 +101,7 @@ export function EditPostForm({ postId }: EditPostFormProps) {
                 category: baseResult.baseData?.category || '',
                 imageUrl: baseResult.baseData?.imageUrl || '',
                 imageHint: baseResult.baseData?.imageHint || '',
+                gallery: baseResult.baseData?.gallery ? JSON.stringify(baseResult.baseData.gallery, null, 2) : '',
                 title: '',
                 excerpt: '',
                 content: '',
@@ -241,6 +245,27 @@ export function EditPostForm({ postId }: EditPostFormProps) {
               )}
             />
             
+            <FormField
+              control={form.control}
+              name="gallery"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('fieldGallery')}</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder={'[\\n  {\\n    "url": "/images/your-image.jpg",\\n    "hint": "a description"\\n  }\\n]'}
+                      className="min-h-[150px] font-mono"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    {t('fieldGalleryHint')}
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
             <hr className="my-8" />
             <h3 className="text-lg font-medium text-primary">{t('translationSectionTitle', {lng: selectedLanguage.toUpperCase()})}</h3>
             
@@ -279,6 +304,7 @@ export function EditPostForm({ postId }: EditPostFormProps) {
                   <FormControl>
                     <Textarea placeholder={t('fieldContentPlaceholder')} className="min-h-[250px] font-mono" {...field} />
                   </FormControl>
+                   <FormDescription>{t('fieldContentHint')}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}

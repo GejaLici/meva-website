@@ -27,7 +27,7 @@ function toISOString(timestamp: Timestamp | Date | string): string {
  * @param content - The content to parse.
  * @returns An array of ContentBlock, or an empty array if content is empty.
  */
-function parseContent(content: any): ContentBlock[] {
+function parseContent(content: any): ContentBlock[] | string {
   if (!content) return [];
   
   if (Array.isArray(content)) {
@@ -41,17 +41,11 @@ function parseContent(content: any): ContentBlock[] {
         return parsed as ContentBlock[]; // Valid structured content from a JSON string
       }
     } catch (e) {
-      // Not a valid JSON string, so we'll treat it as raw HTML.
-      // Fall through to the raw HTML handler below.
+       // Not a valid JSON string, so we'll treat it as raw HTML.
+      return content;
     }
-
-    // If it's a string (whether it's JSON that's not an array, or just plain text/HTML),
-    // treat it as a single raw HTML block.
-    return [{
-        id: 'rawHtml',
-        type: 'html',
-        html: content
-    }];
+     // It was a valid JSON but not an array, treat as HTML
+    return content;
   }
 
   // If it's not a string or array, we can't handle it.
@@ -168,7 +162,7 @@ interface AddPostData {
     category?: string;
     imageUrl?: string;
     imageHint?: string;
-    gallery?: BlogImage[];
+    gallery?: string;
   };
   idToken: string;
 }
@@ -182,6 +176,16 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
 
   const db = await getDb();
   
+  let galleryData: BlogImage[] = [];
+  if (postData.gallery) {
+      try {
+          galleryData = JSON.parse(postData.gallery);
+      } catch (e) {
+          console.error("Invalid JSON in gallery field:", e);
+          return { success: false, error: "The gallery data is not valid JSON."}
+      }
+  }
+
   const postsCollection = db.collection("blogPosts");
   
   try {
@@ -209,7 +213,7 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
             category: postData.category,
             imageUrl: postData.imageUrl,
             imageHint: postData.imageHint,
-            gallery: postData.gallery || [],
+            gallery: galleryData,
         });
       } else {
          const doc = await transaction.get(postRef);
@@ -220,7 +224,7 @@ export async function addBlogPost({ postData, idToken }: AddPostData) {
             if (postData.category && postData.category !== docData.category) updates.category = postData.category;
             if (postData.imageUrl && postData.imageUrl !== docData.imageUrl) updates.imageUrl = postData.imageUrl;
             if (postData.imageHint && postData.imageHint !== docData.imageHint) updates.imageHint = postData.imageHint;
-            if (postData.gallery) updates.gallery = postData.gallery;
+            if (galleryData) updates.gallery = galleryData;
             if (Object.keys(updates).length > 0) {
               updates.date = FieldValue.serverTimestamp(); // Update date on any modification
               transaction.update(postRef, updates);
@@ -257,6 +261,7 @@ interface PostBaseData {
     category?: string;
     imageUrl?: string;
     imageHint?: string;
+    gallery?: BlogImage[];
 }
 interface UpdatePostData {
   postId: string;
@@ -271,6 +276,7 @@ interface UpdatePostData {
     category?: string;
     imageUrl?: string;
     imageHint?: string;
+    gallery?: string;
   };
 }
 
@@ -295,7 +301,8 @@ export async function getPostForEditing({ postId, language }: { postId: string; 
             author: rawData.author,
             category: rawData.category,
             imageUrl: rawData.imageUrl,
-            imageHint: rawData.imageHint
+            imageHint: rawData.imageHint,
+            gallery: rawData.gallery || []
         };
 
         const translationRef = postRef.collection('translations').doc(language);
@@ -323,6 +330,16 @@ export async function updateBlogPost({ postId, language, idToken, postData }: Up
 
   const db = await getDb();
 
+  let galleryData: BlogImage[] | undefined = undefined;
+  if (postData.gallery) {
+      try {
+          galleryData = JSON.parse(postData.gallery);
+      } catch (e) {
+          console.error("Invalid JSON in gallery field:", e);
+          return { success: false, error: "The gallery data is not valid JSON."}
+      }
+  }
+
   try {
      await db.runTransaction(async (transaction) => {
         const postRef = db.collection('blogPosts').doc(postId);
@@ -335,6 +352,10 @@ export async function updateBlogPost({ postId, language, idToken, postData }: Up
             imageUrl: postData.imageUrl || "",
             imageHint: postData.imageHint || "",
         };
+
+        if(galleryData !== undefined) {
+          updates.gallery = galleryData;
+        }
 
         // Update the base document
         transaction.update(postRef, updates);

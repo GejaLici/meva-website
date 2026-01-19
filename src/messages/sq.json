@@ -230,7 +230,7 @@
     },
     "faq-5": {
       "question": "Si e përcaktoj se cila procedurë estetike është e duhura për mua?",
-      "answer": "<p>Zgjedhja e procedurës estetike më të përshtatshme është një proces vendimmarrës thelbësor dhe bashkëpunues i ndërmarrë me specialistin tuaj në {siteName}. Ai fillon me një konsultë të detajuar ku ekspertët tanë do të dëgjojnë me vëmendje shqetësimet tuaja, aspiratat estetike dhe pritshmëritë. Më pas do të kryejmë një vlerësim të thellë të karakteristikave tuaja individuale anatomike, llojit të lëkurës dhe shëndetit të përgjithshëm. Bazuar në këtë vlerësim gjithëpërfshirës, ne do të rekomandojmë opsionet më të përshtatshme dhe efektive të trajtimit të përshtatura për të arritur rezultatin tuaj të dëshiruar, me pamje natyrale. Ne jemi të përkushtuar ndaj edukimit të pacientit, duke siguruar që ju të merrni të gjithë informacionin e nevojshëm për të marrë një vendim të informuar dhe të sigurt në lidhje me rrugën tuaj të kujdesit.</p>"
+      "answer": "<p>Zgjedhja e procedurës estetike më të përshtatshme është një proces vendimmarrës thelbësor dhe bashkëpunues i ndërmarrë me specialistin tuaj në {siteName}. Ai fillon me një konsultë të detajuar ku ekspertët tanë do të dëgjojnë me vëmendje shqetësimet tuaja, aspiratat estetike dhe pritshmëritë. Ne do të kryejmë një vlerësim të thellë të karakteristikave tuaja individuale anatomike, llojit të lëkurës dhe shëndetit të përgjithshëm. Bazuar në këtë vlerësim gjithëpërfshirës, ne do të rekomandojmë opsionet më të përshtatshme dhe efektive të trajtimit të përshtatura për të arritur rezultatin tuaj të dëshiruar, me pamje natyrale. Ne jemi të përkushtuar ndaj edukimit të pacientit, duke siguruar që ju të merrni të gjithë informacionin e nevojshëm për të marrë një vendim të informuar dhe të sigurt në lidhje me rrugën tuaj të kujdesit.</p>"
     }
   },
   "GalleryPage": {
@@ -321,6 +321,45 @@
     "passwordPlaceholder": "Fjalëkalimi",
     "submitButton": "Hyni",
     "submittingButton": "Duke hyrë..."
+  },
+  "Admin": {
+    "addPostTitle": "Shto postim të ri në blog",
+    "addPostDescription": "Përdorni këtë formular për të shtuar një artikull të ri në blogun e kompanisë.",
+    "editPostTitle": "Redakto postimin në blog",
+    "editPostDescription": "Përdorni këtë formular për të modifikuar përmbajtjen e postimit për gjuhë të ndryshme.",
+    "fieldTitle": "Titulli i postimit",
+    "fieldTitlePlaceholder": "p.sh., Përfitimet e Microneedling",
+    "fieldSlug": "Slug i postimit",
+    "fieldSlugPlaceholder": "p.sh., perfitimet-e-microneedling",
+    "fieldAuthor": "Autori (opsional)",
+    "fieldAuthorPlaceholder": "p.sh., Dr. Jane Doe",
+    "fieldCategory": "Kategoria (opsional)",
+    "fieldCategoryPlaceholder": "p.sh., Kujdesi për lëkurën",
+    "fieldImageUrl": "URL-ja e imazhit kryesor (opsional)",
+    "fieldImageUrlPlaceholder": "/images/your-image.jpg",
+    "fieldImageHint": "Sinjalizues i AI për imazhin (opsional)",
+    "fieldImageHintPlaceholder": "p.sh., person duke qeshur",
+    "fieldExcerpt": "Përmbledhje",
+    "fieldExcerptPlaceholder": "Një përmbledhje e shkurtër dhe tërheqëse e artikullit...",
+    "fieldContent": "Përmbajtja",
+    "fieldContentPlaceholder": "Shkruani përmbajtjen e artikullit këtu. Mund të përdorni HTML direkte.",
+    "fieldContentHint": "Përmbajtja mund të jetë një varg HTML i papërpunuar. Përdorni etiketa standarde <img> për imazhe.",
+    "submitPostButton": "Dërgo postimin",
+    "submittingButton": "Duke dërguar...",
+    "postSuccessTitle": "Postimi në blog u shtua me sukses",
+    "postSuccessDescription": "Postimi juaj i ri (ID: {postId}) është shtuar në bazën e të dhënave.",
+    "postErrorTitle": "Gabim gjatë shtimit të postimit",
+    "fieldLanguage": "Gjuha e postimit",
+    "fieldLanguagePlaceholder": "Zgjidhni një gjuhë",
+    "fetchErrorTitle": "Gabim gjatë marrjes së përkthimit {lng}",
+    "updateErrorTitle": "Gabim gjatë përditësimit të postimit",
+    "updateSuccessTitle": "Postimi u përditësua me sukses",
+    "updateSuccessDescription": "Versioni {lng} i postimit ID {postId} është përditësuar.",
+    "languageSelectDescription": "Zgjidhni gjuhën që dëshironi të redaktoni. Fushat e zakonshme si slug dhe imazhet do të zbatohen për të gjitha gjuhët.",
+    "translationSectionTitle": "Përmbajtja e përkthimit {lng}",
+    "submitUpdateButton": "Përditëso postimin",
+    "fieldGallery": "Galeria e imazheve (format JSON)",
+    "fieldGalleryHint": "Jepni një varg objektesh imazhi në format JSON. Shembull: [{\"url\": \"/images/your-image.jpg\", \"hint\": \"përshkrim\"}]"
   },
   "ServiceFaqs": {
     "details": {
