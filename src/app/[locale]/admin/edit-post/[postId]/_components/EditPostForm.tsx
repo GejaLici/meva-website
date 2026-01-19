@@ -24,7 +24,7 @@ const formSchema = z.object({
   slug: z.string().min(1, 'Slug is required.').regex(/^[a-z0-9-]+$/, 'Slug can only contain lowercase letters, numbers, and hyphens.'),
   author: z.string().optional(),
   category: z.string().optional(),
-  imageUrl: z.string().url('Please enter a valid URL.').optional().or(z.literal('')),
+  imageUrl: z.string().optional(),
   imageHint: z.string().optional(),
   excerpt: z.string().min(1, 'Excerpt is required.'),
   content: z.string().min(1, 'Content is required.'),
@@ -293,4 +293,3 @@ export function EditPostForm({ postId }: EditPostFormProps) {
     </Form>
   );
 }
-

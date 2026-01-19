@@ -23,7 +23,7 @@ const formSchema = z.object({
   slug: z.string().min(3, 'Slug must be at least 3 characters long.').regex(/^[a-z0-9-]+$/, 'Slug can only contain lowercase letters, numbers, and hyphens.'),
   author: z.string().optional(),
   category: z.string().optional(),
-  imageUrl: z.string().url('Please enter a valid URL.').optional().or(z.literal('')),
+  imageUrl: z.string().optional(),
   imageHint: z.string().optional(),
   excerpt: z.string().min(20, 'Excerpt must be at least 20 characters long.'),
   content: z.string().min(50, 'Content must be at least 50 characters long.'),
