@@ -187,18 +187,102 @@ export function EditPostForm({ postId }: EditPostFormProps) {
                 )}
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <FormField control={form.control} name="author" render={({ field }) => ( <FormItem> <FormLabel>{t('fieldAuthor')}</FormLabel> <FormControl> <Input placeholder={t('fieldAuthorPlaceholder')} {...field} /> </FormControl> <FormMessage /> </FormItem> )}/>
-                <FormField control={form.control} name="category" render={({ field }) => ( <FormItem> <FormLabel>{t('fieldCategory')}</FormLabel> <FormControl> <Input placeholder={t('fieldCategoryPlaceholder')} {...field} /> </FormControl> <FormMessage /> </FormItem> )}/>
+              <FormField
+                control={form.control}
+                name="author"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>{t('fieldAuthor')}</FormLabel>
+                    <FormControl>
+                      <Input placeholder={t('fieldAuthorPlaceholder')} {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="category"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>{t('fieldCategory')}</FormLabel>
+                    <FormControl>
+                      <Input placeholder={t('fieldCategoryPlaceholder')} {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             </div>
-            <FormField control={form.control} name="imageUrl" render={({ field }) => ( <FormItem> <FormLabel>{t('fieldImageUrl')}</FormLabel> <FormControl> <Input placeholder={t('fieldImageUrlPlaceholder')} {...field} /> </FormControl> <FormMessage /> </FormItem> )}/>
-            <FormField control={form.control} name="imageHint" render={({ field }) => ( <FormItem> <FormLabel>{t('fieldImageHint')}</FormLabel> <FormControl> <Input placeholder={t('fieldImageHintPlaceholder')} {...field} /> </FormControl> <FormMessage /> </FormItem> )}/>
+            <FormField
+              control={form.control}
+              name="imageUrl"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('fieldImageUrl')}</FormLabel>
+                  <FormControl>
+                    <Input placeholder={t('fieldImageUrlPlaceholder')} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="imageHint"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('fieldImageHint')}</FormLabel>
+                  <FormControl>
+                    <Input placeholder={t('fieldImageHintPlaceholder')} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             
             <hr className="my-8" />
             <h3 className="text-lg font-medium text-primary">{t('translationSectionTitle', {lng: selectedLanguage.toUpperCase()})}</h3>
             
-            <FormField control={form.control} name="title" render={({ field }) => ( <FormItem> <FormLabel>{t('fieldTitle')}</FormLabel> <FormControl> <Input placeholder={t('fieldTitlePlaceholder')} {...field} /> </FormControl> <FormMessage /> </FormItem> )}/>
-            <FormField control={form.control} name="excerpt" render={({ field }) => ( <FormItem> <FormLabel>{t('fieldExcerpt')}</FormLabel> <FormControl> <Textarea placeholder={t('fieldExcerptPlaceholder')} className="min-h-[100px]" {...field} /> </FormControl> <FormMessage /> </FormItem> )}/>
-            <FormField control={form.control} name="content" render={({ field }) => ( <FormItem> <FormLabel>{t('fieldContent')}</FormLabel> <FormControl> <Textarea placeholder={t('fieldContentPlaceholder')} className="min-h-[250px] font-mono" {...field} /> </FormControl> <FormMessage /> </FormItem> )}/>
+            <FormField
+              control={form.control}
+              name="title"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('fieldTitle')}</FormLabel>
+                  <FormControl>
+                    <Input placeholder={t('fieldTitlePlaceholder')} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="excerpt"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('fieldExcerpt')}</FormLabel>
+                  <FormControl>
+                    <Textarea placeholder={t('fieldExcerptPlaceholder')} className="min-h-[100px]" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="content"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('fieldContent')}</FormLabel>
+                  <FormControl>
+                    <Textarea placeholder={t('fieldContentPlaceholder')} className="min-h-[250px] font-mono" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             
             <Button type="submit" disabled={isButtonDisabled} className="w-full">
                 {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
