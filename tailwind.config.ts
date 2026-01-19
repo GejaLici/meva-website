@@ -6,6 +6,10 @@ export default {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'html-cta-card',
+    'cta-button'
+  ],
   theme: {
     extend: {
       fontFamily: {

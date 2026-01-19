@@ -79,7 +79,7 @@
   }
 
   .html-cta-card {
-    @apply my-8 rounded-lg shadow-lg border border-accent/50 bg-accent/20 p-6 flex flex-col md:flex-row items-center justify-between gap-6 not-prose;
+    @apply my-8 rounded-lg shadow-lg border border-accent/50 bg-accent/20 p-6 flex flex-col md:flex-row items-center justify-between gap-6;
   }
   .html-cta-card p {
     @apply text-lg font-semibold text-foreground text-center md:text-left m-0;
