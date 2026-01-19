@@ -62,7 +62,12 @@ export interface CtaBlock extends ContentBlockBase {
   buttonLink: string;
 }
 
-export type ContentBlock = HeadingBlock | ParagraphBlock | ImageBlock | ListBlock | CodeBlock | BlockquoteBlock | CtaBlock;
+export interface RawHtmlBlock extends ContentBlockBase {
+  type: 'html';
+  html: string;
+}
+
+export type ContentBlock = HeadingBlock | ParagraphBlock | ImageBlock | ListBlock | CodeBlock | BlockquoteBlock | CtaBlock | RawHtmlBlock;
 
 // Update BlogPost
 export interface BlogPost {

@@ -132,8 +132,18 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
       case 'paragraph':
         return <p key={block.id}>{renderRichText(block.children)}</p>;
       case 'image':
-        // Images are handled by the prose plugin, this is a fallback.
-        return null; 
+        return (
+          <div key={block.id} className="relative w-full aspect-video my-8 rounded-lg overflow-hidden shadow-lg border">
+            <Image
+              src={block.src}
+              alt={block.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 67vw, 850px"
+              style={{ objectFit: 'cover' }}
+              data-ai-hint={block.imageHint}
+            />
+          </div>
+        );
       case 'list':
         const ListTag = block.ordered ? 'ol' : 'ul';
         return (
@@ -168,6 +178,8 @@ async function renderContentBlocks(blocks: ContentBlock[] | undefined): Promise<
             </CardContent>
           </Card>
         );
+      case 'html':
+        return <div key={block.id} dangerouslySetInnerHTML={{ __html: block.html }} />;
       default:
         return null;
     }

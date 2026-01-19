@@ -22,39 +22,39 @@ function toISOString(timestamp: Timestamp | Date | string): string {
 }
 
 /**
- * Safely parses the blog content. If it's a JSON string, it's parsed.
- * If it's not valid JSON, it's wrapped in a paragraph block.
+ * Safely parses the blog content. If it's a JSON string that's an array, it's treated as structured content.
+ * Otherwise, the raw string is treated as HTML content.
  * @param content - The content to parse.
  * @returns An array of ContentBlock, or an empty array if content is empty.
  */
 function parseContent(content: any): ContentBlock[] {
   if (!content) return [];
+  
   if (Array.isArray(content)) {
-    return content; // Already parsed
+    return content; // Already parsed structured content
   }
   
   if (typeof content === 'string') {
     try {
-      // First, try to parse it as JSON
       const parsed = JSON.parse(content);
-      // Ensure the parsed content is an array, which is what ContentBlock[] expects.
       if (Array.isArray(parsed)) {
-        return parsed as ContentBlock[];
+        return parsed as ContentBlock[]; // Valid structured content from a JSON string
       }
     } catch (e) {
-      // If it's not a valid JSON string, it's just plain text.
-      // Fall through to the next step.
+      // Not a valid JSON string, so we'll treat it as raw HTML.
+      // Fall through to the raw HTML handler below.
     }
-    
-    // If it's a plain string (or non-array JSON), wrap it in a paragraph block.
+
+    // If it's a string (whether it's JSON that's not an array, or just plain text/HTML),
+    // treat it as a single raw HTML block.
     return [{
-        id: 'p1',
-        type: 'paragraph',
-        children: [{ type: 'text', text: content }]
+        id: 'rawHtml',
+        type: 'html',
+        html: content
     }];
   }
 
-  // If it's not a string or array, we can't handle it, return empty.
+  // If it's not a string or array, we can't handle it.
   return [];
 }
 
@@ -284,7 +284,7 @@ export async function getPostForEditing({ postId, language }: { postId: string; 
             return { success: false, error: 'Post data is empty.' };
         }
 
-        // Explicitly create a serializable object, omitting non-serializable fields like Timestamps
+        // Explicitly create a serializable object
         const baseData: PostBaseData = {
             slug: rawData.slug,
             author: rawData.author,
@@ -350,5 +350,3 @@ export async function updateBlogPost({ postId, language, idToken, postData }: Up
     return { success: false, error: error.message || "Failed to update blog post." };
   }
 }
-
-
