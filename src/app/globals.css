@@ -68,7 +68,25 @@
 
 @layer components {
   .cta-button {
-    @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-11 px-8 bg-accent text-accent-foreground hover:bg-accent/90;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 0.5rem; /* --radius */
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.25rem;
+    font-weight: 500; /* font-medium */
+    text-decoration: none !important;
+    transition: background-color 0.2s ease-in-out;
+    height: 2.75rem; /* h-11 */
+    padding-left: 2rem; /* px-8 */
+    padding-right: 2rem; /* px-8 */
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+  .cta-button:hover {
+    background-color: hsl(var(--accent) / 0.9);
+    text-decoration: none !important;
   }
 }
 
