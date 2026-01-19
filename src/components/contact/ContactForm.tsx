@@ -22,7 +22,7 @@ import { useTranslations } from 'next-intl';
 import { formSchema, type ContactFormValues } from './schema';
 import { usePathname } from 'next/navigation';
 
-export function ContactForm() {
+export function ContactForm({ source }: { source?: string }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const t = useTranslations('ContactForm');
@@ -42,7 +42,7 @@ export function ContactForm() {
   async function onSubmit(values: ContactFormValues) {
     setIsSubmitting(true);
     try {
-      const submissionData = { ...values, source: pathname };
+      const submissionData = { ...values, source: source || pathname };
       const result = await submitContactForm(submissionData);
       if (result.success) {
         toast({

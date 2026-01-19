@@ -252,7 +252,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               )}
             </header>
             
-            <BlogContentWrapper>
+            <BlogContentWrapper postSlug={post.slug}>
               <div className="prose prose-lg max-w-none text-foreground prose-headings:scroll-mt-24 prose-headings:text-primary prose-a:text-accent prose-strong:text-foreground prose-blockquote:border-accent">
                 {renderedContent}
               </div>

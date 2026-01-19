@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect, useRef, ReactNode } from 'react';
@@ -7,9 +8,10 @@ import { useTranslations } from 'next-intl';
 
 interface BlogContentWrapperProps {
   children: ReactNode;
+  postSlug: string;
 }
 
-export function BlogContentWrapper({ children }: BlogContentWrapperProps) {
+export function BlogContentWrapper({ children, postSlug }: BlogContentWrapperProps) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const t = useTranslations('ContactPage');
@@ -48,7 +50,7 @@ export function BlogContentWrapper({ children }: BlogContentWrapperProps) {
             </DialogDescription>
           </DialogHeader>
           <div className="pt-4">
-            <ContactForm />
+            <ContactForm source={`/blog/${postSlug}`} />
           </div>
         </DialogContent>
       </Dialog>
