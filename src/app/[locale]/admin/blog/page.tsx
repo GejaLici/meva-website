@@ -18,8 +18,14 @@ export default function AdminBlogPage() {
     const [yearFilter, setYearFilter] = useState('');
 
     const dateFilter = useMemo(() => {
-        if (yearFilter && monthFilter) {
-            return `${yearFilter}-${monthFilter}`;
+        const year = yearFilter && yearFilter !== 'all' ? yearFilter : null;
+        const month = monthFilter && monthFilter !== 'all' ? monthFilter : null;
+
+        if (year && month) {
+            return `${year}-${month}`;
+        }
+        if (year) {
+            return year;
         }
         return '';
     }, [yearFilter, monthFilter]);
@@ -67,7 +73,7 @@ export default function AdminBlogPage() {
                             <SelectValue placeholder={tShared('monthFilterPlaceholder')} />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="">{tShared('allMonths')}</SelectItem>
+                            <SelectItem value="all">{tShared('allMonths')}</SelectItem>
                             {months.map(m => (
                                 <SelectItem key={m.value} value={m.value}>{tShared(`months.${m.label}`)}</SelectItem>
                             ))}
@@ -81,7 +87,7 @@ export default function AdminBlogPage() {
                             <SelectValue placeholder={tShared('yearFilterPlaceholder')} />
                         </SelectTrigger>
                         <SelectContent>
-                             <SelectItem value="">{tShared('allYears')}</SelectItem>
+                             <SelectItem value="all">{tShared('allYears')}</SelectItem>
                             {years.map(y => (
                                 <SelectItem key={y} value={y.toString()}>{y.toString()}</SelectItem>
                             ))}

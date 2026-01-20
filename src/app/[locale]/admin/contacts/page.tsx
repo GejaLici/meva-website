@@ -14,8 +14,14 @@ export default function AdminContactsPage() {
     const [yearFilter, setYearFilter] = useState('');
 
     const dateFilter = useMemo(() => {
-        if (yearFilter && monthFilter) {
-            return `${yearFilter}-${monthFilter}`;
+        const year = yearFilter && yearFilter !== 'all' ? yearFilter : null;
+        const month = monthFilter && monthFilter !== 'all' ? monthFilter : null;
+        
+        if (year && month) {
+            return `${year}-${month}`;
+        }
+        if (year) {
+            return year;
         }
         return '';
     }, [yearFilter, monthFilter]);
@@ -66,7 +72,7 @@ export default function AdminContactsPage() {
                             <SelectValue placeholder={t('monthFilterPlaceholder')} />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="">{t('allMonths')}</SelectItem>
+                            <SelectItem value="all">{t('allMonths')}</SelectItem>
                             {months.map(m => (
                                 <SelectItem key={m.value} value={m.value}>{t(`months.${m.label}`)}</SelectItem>
                             ))}
@@ -80,7 +86,7 @@ export default function AdminContactsPage() {
                             <SelectValue placeholder={t('yearFilterPlaceholder')} />
                         </SelectTrigger>
                         <SelectContent>
-                             <SelectItem value="">{t('allYears')}</SelectItem>
+                             <SelectItem value="all">{t('allYears')}</SelectItem>
                             {years.map(y => (
                                 <SelectItem key={y} value={y.toString()}>{y.toString()}</SelectItem>
                             ))}
