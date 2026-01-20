@@ -1,15 +1,30 @@
-
-import { getTranslations } from 'next-intl/server';
+'use client';
+import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { ContactSubmissionsTable } from './_components/ContactSubmissionsTable';
+import { Input } from '@/components/ui/input';
 
-export default async function AdminContactsPage() {
-    const t = await getTranslations('AdminContacts');
+export default function AdminContactsPage() {
+    const t = useTranslations('AdminContacts');
+    const [searchTerm, setSearchTerm] = useState('');
 
     return (
         <div>
-            <h1 className="text-3xl font-bold tracking-tight mb-6">{t('title')}</h1>
-            <p className="text-muted-foreground mb-6">{t('description')}</p>
-            <ContactSubmissionsTable />
+            <div className="flex justify-between items-center mb-6">
+                 <div>
+                    <h1 className="text-3xl font-bold tracking-tight">{t('title')}</h1>
+                    <p className="text-muted-foreground">{t('description')}</p>
+                </div>
+            </div>
+             <div className="mb-6">
+                <Input
+                    placeholder={t('filterPlaceholder')}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="max-w-sm"
+                />
+            </div>
+            <ContactSubmissionsTable searchTerm={searchTerm} />
         </div>
     );
 }

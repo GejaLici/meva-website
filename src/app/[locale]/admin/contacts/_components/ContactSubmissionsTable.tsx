@@ -1,4 +1,3 @@
-
 'use client';
 import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser, useFirestore } from '@/firebase';
@@ -23,7 +22,11 @@ interface Submission {
   };
 }
 
-export function ContactSubmissionsTable() {
+interface ContactSubmissionsTableProps {
+  searchTerm: string;
+}
+
+export function ContactSubmissionsTable({ searchTerm }: ContactSubmissionsTableProps) {
   const { db } = useFirestore();
   const { user, loading: userLoading } = useUser();
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
@@ -46,6 +49,15 @@ export function ContactSubmissionsTable() {
   }, [user, db]);
   
   const { data: submissions, loading, error } = useCollection<Submission>(submissionsQuery);
+
+  const filteredSubmissions = useMemo(() => {
+    if (!submissions) return [];
+    return submissions.filter(submission =>
+        (submission.name?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
+        (submission.email?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
+        (submission.subject?.toLowerCase() || '').includes(searchTerm.toLowerCase())
+    );
+  }, [submissions, searchTerm]);
 
 
   const handleDelete = async (id: string) => {
@@ -94,7 +106,7 @@ export function ContactSubmissionsTable() {
     return <p className="text-destructive">Error: {error.message}</p>;
   }
 
-  if (!submissions || submissions.length === 0) {
+  if (!filteredSubmissions || filteredSubmissions.length === 0) {
     return <p>{t('noSubmissions')}</p>
   }
 
@@ -117,7 +129,7 @@ export function ContactSubmissionsTable() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {submissions.map((submission) => (
+            {filteredSubmissions.map((submission) => (
               <TableRow key={submission.id}>
                 <TableCell className="font-medium">{submission.name}</TableCell>
                 <TableCell>{submission.email}</TableCell>

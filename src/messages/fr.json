@@ -476,7 +476,7 @@
     "blepharoplasty": {
       "blepharoplasty-1": {
         "question": "La chirurgie des paupières est-elle douloureuse ?",
-        "answer": "<p>La procédure n'est pas douloureuse en raison de l'anesthésie. L'inconfort postopératoire est généralement léger, souvent décrit comme une sensation de tiraillement ou de douleur, qui est facilement gérée avec des analgésiques en vente libre.</p>"
+        "answer": "<p>La procédure n'est pas douloureuse en raison de l'anesthésie. L'inconfort postopératoire est généralement léger, souvent décrit comme une sensation de tiraillement ou de douleur, qui est easily gérée avec des analgésiques en vente libre.</p>"
       },
       "blepharoplasty-2": {
         "question": "Mes cicatrices seront-elles visibles ?",
@@ -543,5 +543,44 @@
         "answer": "<p>Non. Les agents de blanchiment ne fonctionnent que sur l'émail naturel des dents. Si vous avez des restaurations sur vos dents de devant, il se peut qu'elles doivent être remplacées pour correspondre à votre nouveau sourire blanchi.</p>"
       }
     }
+  },
+  "AdminContacts": {
+    "title": "Soumissions de formulaire de contact",
+    "description": "Afficher et gérer tous les messages soumis via les formulaires de contact du site Web.",
+    "filterPlaceholder": "Filtrer par nom, e-mail ou sujet...",
+    "tableTitle": "Soumissions",
+    "tableDescription": "Une liste de toutes les soumissions de formulaires de contact reçues.",
+    "headerName": "Nom",
+    "headerEmail": "E-mail",
+    "headerSubject": "Sujet",
+    "headerSource": "Source",
+    "headerDate": "Date",
+    "headerActions": "Actions",
+    "noSubmissions": "Aucune soumission de formulaire de contact n'a encore été reçue.",
+    "deleteConfirmation": "Êtes-vous sûr de vouloir supprimer cette soumission ? Cette action ne peut pas être annulée.",
+    "deleteSuccessTitle": "Soumission supprimée",
+    "deleteSuccessDescription": "La soumission du formulaire de contact (ID : {submissionId}) a été supprimée de manière permanente.",
+    "deleteErrorTitle": "Erreur lors de la suppression de la soumission",
+    "deleteAriaLabel": "Supprimer la soumission"
+  },
+  "AdminBlog": {
+    "title": "Gestion du blog",
+    "description": "Ajouter, modifier ou supprimer des articles de blog.",
+    "addPost": "Ajouter un nouvel article",
+    "filterPlaceholder": "Filtrer par titre, slug ou catégorie...",
+    "tableTitle": "Articles de blog",
+    "tableDescription": "Une liste de tous les articles publiés sur le blog.",
+    "headerTitle": "Titre",
+    "headerSlug": "Slug",
+    "headerCategory": "Catégorie",
+    "headerDate": "Date",
+    "headerActions": "Actions",
+    "noPosts": "Aucun article de blog trouvé. Cliquez sur 'Ajouter un nouvel article' pour commencer.",
+    "deleteConfirmation": "Êtes-vous sûr de vouloir supprimer cet article de blog ? Cette action ne peut pas être annulée.",
+    "deleteSuccessTitle": "Article supprimé",
+    "deleteSuccessDescription": "L'article de blog (ID : {postId}) a été supprimé de manière permanente.",
+    "deleteErrorTitle": "Erreur lors de la suppression de l'article",
+    "editAriaLabel": "Modifier l'article",
+    "deleteAriaLabel": "Supprimer l'article"
   }
 }

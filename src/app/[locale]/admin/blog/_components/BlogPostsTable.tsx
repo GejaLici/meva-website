@@ -21,7 +21,11 @@ interface Post {
   };
 }
 
-export function BlogPostsTable() {
+interface BlogPostsTableProps {
+    searchTerm: string;
+}
+
+export function BlogPostsTable({ searchTerm }: BlogPostsTableProps) {
   const { db } = useFirestore();
   const { user, loading: userLoading } = useUser();
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
@@ -43,6 +47,15 @@ export function BlogPostsTable() {
   }, [user?.uid, db]);
 
   const { data: posts, loading, error } = useCollection<Post>(postsQuery);
+
+  const filteredPosts = useMemo(() => {
+    if (!posts) return [];
+    return posts.filter(post =>
+        (post.title?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
+        (post.slug?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
+        (post.category?.toLowerCase() || '').includes(searchTerm.toLowerCase())
+    );
+  }, [posts, searchTerm]);
 
   const handleDelete = async (id: string) => {
     if (!confirm(t('deleteConfirmation'))) return;
@@ -90,7 +103,7 @@ export function BlogPostsTable() {
     return <p className="text-destructive">Error: {error.message}</p>;
   }
   
-  if (!posts || posts.length === 0) {
+  if (!filteredPosts || filteredPosts.length === 0) {
     return <p>{t('noPosts')}</p>
   }
 
@@ -112,7 +125,7 @@ export function BlogPostsTable() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {posts.map((post) => (
+            {filteredPosts.map((post) => (
               <TableRow key={post.id}>
                 <TableCell className="font-medium">{post.title}</TableCell>
                 <TableCell>{post.slug}</TableCell>

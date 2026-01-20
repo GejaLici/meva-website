@@ -181,7 +181,7 @@
     "headerTitle": "Über {siteName}",
     "headerDescription": "Schönheit transformieren durch medizinisches Fachwissen, technologische Innovation und mitfühlende, patientenorientierte Betreuung.",
     "philosophyTitle": "Unsere Philosophie: Ihre Schönheit, unsere Priorität, geleitet von medizinischer Exzellenz",
-    "philosophyP1": "In der {siteName} glauben wir, dass die ästhetische Verbesserung eine zutiefst persönliche Reise zu mehr Selbstvertrauen und Wohlbefinden ist, die auf medizinischer Wissenschaft und Sicherheit beruht. Unsere Kernphilosophie dreht sich um die Bereitstellung hochgradig personalisierter Betreuung, die Nutzung evidenzbasierter Fortschritte in der ästhetischen Medizin und die Einhaltung der höchsten medizinischen und ethischen Standards.",
+    "philosophyP1": "In der {siteName}, glauben wir, dass die ästhetische Verbesserung eine zutiefst persönliche Reise zu mehr Selbstvertrauen und Wohlbefinden ist, die auf medizinischer Wissenschaft und Sicherheit beruht. Unsere Kernphilosophie dreht sich um die Bereitstellung hochgradig personalisierter Betreuung, die Nutzung evidenzbasierter Fortschritte in der ästhetischen Medizin und die Einhaltung der höchsten medizinischen und ethischen Standards.",
     "philosophyP2": "Wir sind bestrebt, Ihre einzigartigen Wünsche und anatomischen Gegebenheiten gründlich zu verstehen. Unser Expertenteam schneidet Behandlungen zu, um natürlich aussehende, harmonische Ergebnisse zu erzielen, die Ihre individuelle Schönheit unterstreichen und gleichzeitig Ihre Gesundheit und Sicherheit priorisieren. Wir fördern eine unterstützende, professionelle und komfortable Umgebung, in der Sie sich während Ihrer transformativen Erfahrung gehört, respektiert und gestärkt fühlen.",
     "philosophyButton": "Entdecken Sie unsere fortschrittlichen Dienstleistungen",
     "imageAlt": "{siteName} hochmoderne Klinik-Innenausstattung",
@@ -219,7 +219,7 @@
     },
     "faq-2": {
       "question": "Wie lange ist die typische Genesungszeit für ästhetische Eingriffe?",
-      "answer": "<p>Die Genesungszeiten variieren erheblich je nach Art und Invasivität des durchgeführten Eingriffs. Nicht-invasive Behandlungen wie bestimmte Gesichtsbehandlungen oder leichte chemische Peelings können wenig bis gar keine Ausfallzeit erfordern und eine sofortige Rückkehr zu den täglichen Aktivitäten ermöglichen. Minimalinvasive Eingriffe wie injizierbare Füllstoffe können zu leichten Schwellungen oder Blutergüssen für einige Tage führen. Chirurgische Eingriffe wie ein Facelifting oder eine Bauchdeckenstraffung erfordern eine längere Genesungszeit von möglicherweise mehreren Wochen für eine vollständige Heilung. In der {siteName} stellen wir detaillierte, personalisierte postoperative Pflegeanweisungen und engagierte Unterstützung zur Verfügung, um einen reibungslosen, komfortablen und effizienten Genesungsprozess zu gewährleisten.</p>"
+      "answer": "<p>Die Genesungszeiten variieren erheblich je nach Art und Invasivität des durchgeführten Eingriffs. Nicht-invasive Behandlungen wie bestimmte Gesichtsbehandlungen oder leichte chemische Peelings können wenig bis gar keine Ausfallzeit erfordern und eine sofortige Rückkehr zu den täglichen Aktivitäten ermöglichen. Minimalinvasive Eingriffe wie injizierbare Füllstoffe können zu leichten Schwellungen oder Blutergüssen für einige Tage führen. Chirurgische Eingriffe wie ein Facelifting oder eine Bauchdeckenstraffung erfordern eine längere Genesungszeit von möglicherweise mehreren Wochen für eine vollständige Heilung. In der {siteName}, stellen wir detaillierte, personalisierte postoperative Pflegeanweisungen und engagierte Unterstützung zur Verfügung, um einen reibungslosen, komfortablen und effizienten Genesungsprozess zu gewährleisten.</p>"
     },
     "faq-3": {
       "question": "Sind die Ergebnisse ästhetischer Behandlungen dauerhaft?",
@@ -544,5 +544,44 @@
         "answer": "<p>Nein. Bleichmittel wirken nur auf den natürlichen Zahnschmelz. Wenn Sie Restaurationen an Ihren Vorderzähnen haben, werden diese ihre Farbe nicht ändern und müssen möglicherweise ersetzt werden, um zu Ihrem neu aufgehellten Lächeln zu passen.</p>"
       }
     }
+  },
+   "AdminContacts": {
+    "title": "Kontaktformular-Einreichungen",
+    "description": "Alle über die Kontaktformulare der Website eingereichten Nachrichten anzeigen und verwalten.",
+    "filterPlaceholder": "Nach Name, E-Mail oder Betreff filtern...",
+    "tableTitle": "Einreichungen",
+    "tableDescription": "Eine Liste aller eingegangenen Kontaktformular-Einreichungen.",
+    "headerName": "Name",
+    "headerEmail": "E-Mail",
+    "headerSubject": "Betreff",
+    "headerSource": "Quelle",
+    "headerDate": "Datum",
+    "headerActions": "Aktionen",
+    "noSubmissions": "Es wurden noch keine Kontaktformular-Einreichungen empfangen.",
+    "deleteConfirmation": "Möchten Sie diese Einreichung wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "deleteSuccessTitle": "Einreichung gelöscht",
+    "deleteSuccessDescription": "Die Kontaktformular-Einreichung (ID: {submissionId}) wurde dauerhaft gelöscht.",
+    "deleteErrorTitle": "Fehler beim Löschen der Einreichung",
+    "deleteAriaLabel": "Einreichung löschen"
+  },
+  "AdminBlog": {
+    "title": "Blog-Verwaltung",
+    "description": "Blogbeiträge hinzufügen, bearbeiten oder löschen.",
+    "addPost": "Neuen Beitrag hinzufügen",
+    "filterPlaceholder": "Nach Titel, Slug oder Kategorie filtern...",
+    "tableTitle": "Blogbeiträge",
+    "tableDescription": "Eine Liste aller im Blog veröffentlichten Artikel.",
+    "headerTitle": "Titel",
+    "headerSlug": "Slug",
+    "headerCategory": "Kategorie",
+    "headerDate": "Datum",
+    "headerActions": "Aktionen",
+    "noPosts": "Keine Blogbeiträge gefunden. Klicken Sie auf 'Neuen Beitrag hinzufügen', um zu beginnen.",
+    "deleteConfirmation": "Möchten Sie diesen Blogbeitrag wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "deleteSuccessTitle": "Beitrag gelöscht",
+    "deleteSuccessDescription": "Der Blogbeitrag (ID: {postId}) wurde dauerhaft gelöscht.",
+    "deleteErrorTitle": "Fehler beim Löschen des Beitrags",
+    "editAriaLabel": "Beitrag bearbeiten",
+    "deleteAriaLabel": "Beitrag löschen"
   }
 }

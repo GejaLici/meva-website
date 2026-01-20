@@ -467,5 +467,44 @@
         "answer": "<p>No. Gli agenti sbiancanti funzionano solo sullo smalto naturale dei denti. Se hai restauri sui denti anteriori, potrebbe essere necessario sostituirli per abbinarli al tuo nuovo sorriso sbiancato.</p>"
       }
     }
+  },
+  "AdminContacts": {
+    "title": "Invii Modulo di Contatto",
+    "description": "Visualizza e gestisci tutti i messaggi inviati tramite i moduli di contatto del sito web.",
+    "filterPlaceholder": "Filtra per nome, email o oggetto...",
+    "tableTitle": "Invii",
+    "tableDescription": "Un elenco di tutti gli invii dei moduli di contatto ricevuti.",
+    "headerName": "Nome",
+    "headerEmail": "Email",
+    "headerSubject": "Oggetto",
+    "headerSource": "Fonte",
+    "headerDate": "Data",
+    "headerActions": "Azioni",
+    "noSubmissions": "Nessun invio di modulo di contatto ricevuto ancora.",
+    "deleteConfirmation": "Sei sicuro di voler eliminare questo invio? Questa azione non può essere annullata.",
+    "deleteSuccessTitle": "Invio Eliminato",
+    "deleteSuccessDescription": "L'invio del modulo di contatto (ID: {submissionId}) è stato eliminato permanentemente.",
+    "deleteErrorTitle": "Errore nell'Eliminazione dell'Invio",
+    "deleteAriaLabel": "Elimina invio"
+  },
+  "AdminBlog": {
+    "title": "Gestione Blog",
+    "description": "Aggiungi, modifica o elimina articoli del blog.",
+    "addPost": "Aggiungi Nuovo Articolo",
+    "filterPlaceholder": "Filtra per titolo, slug o categoria...",
+    "tableTitle": "Articoli del Blog",
+    "tableDescription": "Un elenco di tutti gli articoli pubblicati sul blog.",
+    "headerTitle": "Titolo",
+    "headerSlug": "Slug",
+    "headerCategory": "Categoria",
+    "headerDate": "Data",
+    "headerActions": "Azioni",
+    "noPosts": "Nessun articolo del blog trovato. Clicca su 'Aggiungi Nuovo Articolo' per iniziare.",
+    "deleteConfirmation": "Sei sicuro di voler eliminare questo articolo del blog? Questa azione non può essere annullata.",
+    "deleteSuccessTitle": "Articolo Eliminato",
+    "deleteSuccessDescription": "L'articolo del blog (ID: {postId}) è stato eliminato permanentemente.",
+    "deleteErrorTitle": "Errore nell'Eliminazione dell'Articolo",
+    "editAriaLabel": "Modifica articolo",
+    "deleteAriaLabel": "Elimina articolo"
   }
 }

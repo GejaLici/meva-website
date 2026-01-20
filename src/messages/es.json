@@ -544,5 +544,44 @@
         "answer": "<p>No. Los agentes blanqueadores solo funcionan en el esmalte dental natural. Si tienes restauraciones en los dientes frontales, es posible que deban ser reemplazadas para que coincidan con tu nueva sonrisa blanqueada.</p>"
       }
     }
+  },
+  "AdminContacts": {
+    "title": "Envíos del formulario de contacto",
+    "description": "Ver y gestionar todos los mensajes enviados a través de los formularios de contacto del sitio web.",
+    "filterPlaceholder": "Filtrar por nombre, correo electrónico o asunto...",
+    "tableTitle": "Envíos",
+    "tableDescription": "Una lista de todos los envíos de formularios de contacto recibidos.",
+    "headerName": "Nombre",
+    "headerEmail": "Correo electrónico",
+    "headerSubject": "Asunto",
+    "headerSource": "Origen",
+    "headerDate": "Fecha",
+    "headerActions": "Acciones",
+    "noSubmissions": "Aún no se han recibido envíos de formularios de contacto.",
+    "deleteConfirmation": "¿Está seguro de que desea eliminar este envío? Esta acción no se puede deshacer.",
+    "deleteSuccessTitle": "Envío eliminado",
+    "deleteSuccessDescription": "El envío del formulario de contacto (ID: {submissionId}) ha sido eliminado permanentemente.",
+    "deleteErrorTitle": "Error al eliminar el envío",
+    "deleteAriaLabel": "Eliminar envío"
+  },
+  "AdminBlog": {
+    "title": "Gestión del blog",
+    "description": "Añadir, editar o eliminar entradas de blog.",
+    "addPost": "Añadir nueva entrada",
+    "filterPlaceholder": "Filtrar por título, slug o categoría...",
+    "tableTitle": "Entradas de blog",
+    "tableDescription": "Una lista de todos los artículos publicados en el blog.",
+    "headerTitle": "Título",
+    "headerSlug": "Slug",
+    "headerCategory": "Categoría",
+    "headerDate": "Fecha",
+    "headerActions": "Acciones",
+    "noPosts": "No se encontraron entradas de blog. Haga clic en 'Añadir nueva entrada' para empezar.",
+    "deleteConfirmation": "¿Está seguro de que desea eliminar esta entrada de blog? Esta acción no se puede deshacer.",
+    "deleteSuccessTitle": "Entrada eliminada",
+    "deleteSuccessDescription": "La entrada de blog (ID: {postId}) ha sido eliminada permanentemente.",
+    "deleteErrorTitle": "Error al eliminar la entrada",
+    "editAriaLabel": "Editar entrada",
+    "deleteAriaLabel": "Eliminar entrada"
   }
 }

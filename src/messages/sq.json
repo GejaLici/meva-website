@@ -466,7 +466,44 @@
         "answer": "<p>Jo. Agjentët zbardhues funksionojnë vetëm në smaltin natyral të dhëmbëve. Nëse keni restaurime në dhëmbët tuaj të përparmë, ato nuk do të ndryshojnë ngjyrë dhe mund të duhet t'i zëvendësoni për t'iu përshtatur buzëqeshjes suaj të re të zbardhur.</p>"
       }
     }
+  },
+  "AdminContacts": {
+    "title": "Dërgesat e formularit të kontaktit",
+    "description": "Shikoni dhe menaxhoni të gjitha mesazhet e dërguara përmes formularëve të kontaktit të faqes së internetit.",
+    "filterPlaceholder": "Filtro sipas emrit, emailit ose subjektit...",
+    "tableTitle": "Dërgesat",
+    "tableDescription": "Një listë e të gjitha dërgesave të formularit të kontaktit të marra.",
+    "headerName": "Emri",
+    "headerEmail": "Email",
+    "headerSubject": "Subjekti",
+    "headerSource": "Burimi",
+    "headerDate": "Data",
+    "headerActions": "Veprimet",
+    "noSubmissions": "Nuk janë marrë ende dërgesa të formularit të kontaktit.",
+    "deleteConfirmation": "A jeni i sigurt që doni të fshini këtë dërgesë? Ky veprim nuk mund të anulohet.",
+    "deleteSuccessTitle": "Dërgesa u fshi",
+    "deleteSuccessDescription": "Dërgesa e formularit të kontaktit (ID: {submissionId}) është fshirë përgjithmonë.",
+    "deleteErrorTitle": "Gabim gjatë fshirjes së dërgesës",
+    "deleteAriaLabel": "Fshi dërgesën"
+  },
+  "AdminBlog": {
+    "title": "Menaxhimi i blogut",
+    "description": "Shto, modifiko ose fshij postimet e blogut.",
+    "addPost": "Shto postim të ri",
+    "filterPlaceholder": "Filtro sipas titullit, slugut ose kategorisë...",
+    "tableTitle": "Postimet e blogut",
+    "tableDescription": "Një listë e të gjithë artikujve të publikuar në blog.",
+    "headerTitle": "Titulli",
+    "headerSlug": "Slug",
+    "headerCategory": "Kategoria",
+    "headerDate": "Data",
+    "headerActions": "Veprimet",
+    "noPosts": "Nuk u gjetën postime në blog. Klikoni 'Shto postim të ri' për të filluar.",
+    "deleteConfirmation": "A jeni i sigurt që doni të fshini këtë postim të blogut? Ky veprim nuk mund të anulohet.",
+    "deleteSuccessTitle": "Postimi u fshi",
+    "deleteSuccessDescription": "Postimi i blogut (ID: {postId}) është fshirë përgjithmonë.",
+    "deleteErrorTitle": "Gabim gjatë fshirjes së postimit",
+    "editAriaLabel": "Redakto postimin",
+    "deleteAriaLabel": "Fshi postimin"
   }
 }
-
-    

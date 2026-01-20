@@ -1,12 +1,16 @@
+'use client';
 
-import { getTranslations } from 'next-intl/server';
+import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { PlusCircle } from 'lucide-react';
 import { Link } from '@/navigation';
 import { BlogPostsTable } from './_components/BlogPostsTable';
+import { Input } from '@/components/ui/input';
 
-export default async function AdminBlogPage() {
+export default function AdminBlogPage() {
     const t = await getTranslations('AdminBlog');
+    const [searchTerm, setSearchTerm] = useState('');
 
     return (
         <div>
@@ -22,7 +26,15 @@ export default async function AdminBlogPage() {
                     </Link>
                 </Button>
             </div>
-            <BlogPostsTable />
+             <div className="mb-6">
+                <Input
+                    placeholder={t('filterPlaceholder')}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="max-w-sm"
+                />
+            </div>
+            <BlogPostsTable searchTerm={searchTerm} />
         </div>
     );
 }

@@ -452,6 +452,7 @@
   "AdminContacts": {
     "title": "Contact Form Submissions",
     "description": "View and manage all messages submitted through the website's contact forms.",
+    "filterPlaceholder": "Filter by name, email, or subject...",
     "tableTitle": "Submissions",
     "tableDescription": "A list of all contact form submissions received.",
     "headerName": "Name",
@@ -471,6 +472,7 @@
     "title": "Blog Management",
     "description": "Add, edit, or delete blog posts.",
     "addPost": "Add New Post",
+    "filterPlaceholder": "Filter by title, slug, or category...",
     "tableTitle": "Blog Posts",
     "tableDescription": "A list of all articles published on the blog.",
     "headerTitle": "Title",
