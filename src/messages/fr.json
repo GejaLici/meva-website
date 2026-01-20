@@ -218,7 +218,7 @@
     },
     "faq-2": {
       "question": "Quelle est la durée de récupération typique pour les procédures esthétiques ?",
-      "answer": "<p>Les périodes de récupération varient considérablement en fonction du type et de l'invasivité de la procédure effectuée. Les traitements non invasifs, tels que certains soins du visage ou des peelings chimiques légers, peuvent n'entraîner que peu ou pas de temps d'arrêt, permettant un retour immédiat aux activités quotidiennes. Les procédures minimalement invasives comme les produits de comblement injectables peuvent entraîner un léger gonflement ou des ecchymoses pendant quelques jours. Les procédures chirurgicales, telles qu'un lifting du visage ou une abdominoplastie, nécessiteront une période de récupération plus longue, potentiellement de plusieurs semaines, pour une guérison complète. À la {siteName}, nous fournissons des instructions post-opératoires détaillées et personnalisées et un soutien dévoué pour assurer un processus de récupération fluide, confortable et efficace.</p>"
+      "answer": "<p>Les périodes de récupération varient considérablement en fonction du type et de l'invasivité de la procédure effectuée. Les traitements non invasifs, tels que certains soins du visage ou des peelings chimiques légers, possono n'entraîner que peu ou pas de temps d'arrêt, permettant un retour immédiat aux activités quotidiennes. Les procédures minimalement invasives comme les produits de comblement injectables peuvent entraîner un léger gonflement ou des ecchymoses pendant quelques jours. Les procédures chirurgicales, telles qu'un lifting du visage ou une abdominoplastie, nécessiteront une période de récupération plus longue, potentiellement de plusieurs semaines, pour une guérison complète. À la {siteName}, nous fournissons des instructions post-opératoires détaillées et personnalisées et un soutien dévoué pour assurer un processus de récupération fluide, confortable et efficace.</p>"
     },
     "faq-3": {
       "question": "Les résultats des traitements esthétiques sont-ils permanents ?",
@@ -226,7 +226,7 @@
     },
     "faq-4": {
       "question": "Quels sont les risques potentiels associés aux procédures esthétiques ?",
-      "answer": "<p>Toutes les procédures médicales et chirurgicales comportent un certain niveau de risque inhérent, bien que les complications graves soient rares lorsque les traitements esthétiques sont effectués par des professionnels de la santé qualifiés et expérimentés dans un établissement accrédité comme la {siteName}. Les risques potentiels, qui varient selon la procédure, peuvent inclure des ecchymoses, un gonflement, une gêne, une infection, des saignements, des cicatrices ou une réaction indésirable à l'anesthésie ou aux matériaux injectés. Lors de votre consultation complète avant le traitement, nos spécialistes discuteront en detail de tous les risques et avantages potentiels spécifiques à la procédure que vous avez choisie, afin que vous ayez une compréhension complète avant de poursuivre. Nous accordons la priorité à la sécurité des patients avant tout et nous respectons les protocoles médicaux les plus stricts.</p>"
+      "answer": "<p>Toutes les procédures médicales et chirurgicales comportent un certain niveau de risque inhérent, bien que les complications graves soient rares lorsque les traitements esthétiques sont effectués par des professionnels de la santé qualifiés et expérimentés dans un établissement accrédité comme la {siteName}. Les risques potentiels, qui varient selon la procédure, possono inclure des ecchymoses, un gonflement, une gêne, une infection, des saignements, des cicatrices ou une réaction indésirable à l'anesthésie ou aux matériaux injectés. Lors de votre consultation complète avant le traitement, nos spécialistes discuteront en detail de tous les risques et avantages potentiels spécifiques à la procédure que vous avez choisie, afin que vous ayez une compréhension complète avant de poursuivre. Nous accordons la priorité à la sécurité des patients avant tout et nous respectons les protocoles médicaux les plus stricts.</p>"
     },
     "faq-5": {
       "question": "Comment puis-je déterminer quelle procédure esthétique me convient le mieux ?",
@@ -360,7 +360,7 @@
     "h2_1": "1. ACCORD SUR LES CONDITIONS",
     "p1_1": "Ces conditions d'utilisation (« Conditions ») constituent un accord juridiquement contraignant conclu entre vous, que ce soit à titre personnel ou au nom d'une entité (« vous » ou « Utilisateur »), et {siteName} (« nous » ou « notre »), concernant votre accès et votre utilisation du site Web {SITE_DOMAIN} ainsi que toute autre forme de média, canal multimédia, site Web mobile ou application mobile connexe, lié ou autrement connecté (collectivement, le « Site » et les « Services »).",
     "p1_2": "Vous reconnaissez et acceptez qu'en accédant au Site et/ou en utilisant nos Services, vous avez lu, compris et acceptez d'être lié par all de ces Conditions d'utilisation. Si vous n'acceptez pas all de ces Conditions d'utilisation, il vous est expressément interdit d'utiliser le Site et nos Services, et vous devez cesser immédiatement de les utiliser.",
-    "p1_3": "Les termes et conditions supplémentaires ou les documents qui peuvent être publiés sur le Site de temps à autre sont expressément incorporés aux présentes par référence.",
+    "p1_3": "Les termes et conditions supplémentaires ou les documents qui possono essere pubblicati sul Sito di tanto in tanto sono espressamente incorporati qui per riferimento.",
     "h2_2": "2. DROITS DE PROPRIÉTÉ INTELLECTUELLE",
     "p2_1": "Sauf indication contraire, le Site et les Services sont notre propriété exclusive. Tous les codes sources, bases de données, fonctionnalités, logiciels, conceptions de sites Web, fichiers audio, vidéo, textes, photographies et graphiques sur le Site (collectivement, le « Contenu ») et les marques de commerce, marques de service et logos qui y sont contenus (les « Marques ») sont détenus ou contrôlés par nous ou nous sont concédés sous licence. Ils sont protégés par les lois sur le droit d'auteur et les marques de commerce et diverses autres lois sur la propriété intellectuelle et la concurrence déloyale de l'Albanie, des juridictions étrangères et des conventions internationales. Sauf disposition expresse dans les présentes Conditions, aucune partie du Site, des Services, du Contenu ou des Marques ne peut être copiée, reproduite, agrégée, republiée, téléchargée, publiée, affichée publiquement, encodée, traduite, transmise, distribuée, vendue, concédée sous licence ou exploitée de toute autre manière à des fins commerciales, sans notre autorisation écrite préalable expresse.",
     "h2_3": "3. DÉCLARATIONS ET GARANTIES DE L'UTILISATEUR",
@@ -549,7 +549,8 @@
     "description": "Afficher et gérer tous les messages soumis via les formulaires de contact du site Web.",
     "filterPlaceholder": "Filtrer par nom, e-mail ou sujet...",
     "sourceFilterPlaceholder": "Filtrer par source...",
-    "dateFilterLabel": "Filtrer par date",
+    "dateFilterFromLabel": "De la date",
+    "dateFilterToLabel": "À la date",
     "tableTitle": "Soumissions",
     "tableDescription": "Une liste de toutes les soumissions de formulaires de contact reçues.",
     "headerName": "Nom",

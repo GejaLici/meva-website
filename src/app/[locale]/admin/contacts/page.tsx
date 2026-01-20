@@ -1,3 +1,4 @@
+
 'use client';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
@@ -9,7 +10,8 @@ export default function AdminContactsPage() {
     const t = useTranslations('AdminContacts');
     const [searchTerm, setSearchTerm] = useState('');
     const [sourceFilter, setSourceFilter] = useState('');
-    const [dateFilter, setDateFilter] = useState('');
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
 
     return (
         <div>
@@ -19,7 +21,7 @@ export default function AdminContactsPage() {
                     <p className="text-muted-foreground">{t('description')}</p>
                 </div>
             </div>
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 p-4 border rounded-lg bg-card">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 p-4 border rounded-lg bg-card">
                  <div>
                     <Label htmlFor="searchTerm">{t('filterPlaceholder')}</Label>
                     <Input
@@ -38,18 +40,30 @@ export default function AdminContactsPage() {
                         onChange={(e) => setSourceFilter(e.target.value)}
                     />
                 </div>
-                 <div>
-                    <Label htmlFor="dateFilter">{t('dateFilterLabel')}</Label>
-                    <Input
-                        id="dateFilter"
-                        type="date"
-                        value={dateFilter}
-                        onChange={(e) => setDateFilter(e.target.value)}
-                        className="w-full"
-                    />
+                 <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                     <div>
+                        <Label htmlFor="startDate">{t('dateFilterFromLabel')}</Label>
+                        <Input
+                            id="startDate"
+                            type="date"
+                            value={startDate}
+                            onChange={(e) => setStartDate(e.target.value)}
+                            className="w-full"
+                        />
+                    </div>
+                    <div>
+                        <Label htmlFor="endDate">{t('dateFilterToLabel')}</Label>
+                        <Input
+                            id="endDate"
+                            type="date"
+                            value={endDate}
+                            onChange={(e) => setEndDate(e.target.value)}
+                            className="w-full"
+                        />
+                    </div>
                 </div>
             </div>
-            <ContactSubmissionsTable searchTerm={searchTerm} sourceFilter={sourceFilter} dateFilter={dateFilter} />
+            <ContactSubmissionsTable searchTerm={searchTerm} sourceFilter={sourceFilter} startDate={startDate} endDate={endDate} />
         </div>
     );
 }

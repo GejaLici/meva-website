@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser, useFirestore } from '@/firebase';
@@ -23,10 +24,11 @@ interface Post {
 
 interface BlogPostsTableProps {
     searchTerm: string;
-    dateFilter: string;
+    startDate: string;
+    endDate: string;
 }
 
-export function BlogPostsTable({ searchTerm, dateFilter }: BlogPostsTableProps) {
+export function BlogPostsTable({ searchTerm, startDate, endDate }: BlogPostsTableProps) {
   const { db } = useFirestore();
   const { user, loading: userLoading } = useUser();
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
@@ -57,14 +59,20 @@ export function BlogPostsTable({ searchTerm, dateFilter }: BlogPostsTableProps) 
         (post.slug?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
         (post.category?.toLowerCase() || '').includes(searchTerm.toLowerCase());
 
-      const dateMatch = !dateFilter || (
-        post.date &&
-        post.date.toDate().toISOString().startsWith(dateFilter)
-      );
+      const postDate = post.date?.toDate();
+      if (!postDate) return false;
+
+      const start = startDate ? new Date(startDate) : null;
+      if(start) start.setHours(0, 0, 0, 0);
+      
+      const end = endDate ? new Date(endDate) : null;
+      if(end) end.setHours(23, 59, 59, 999);
+
+      const dateMatch = (!start || postDate >= start) && (!end || postDate <= end);
 
       return searchMatch && dateMatch;
     });
-  }, [posts, searchTerm, dateFilter]);
+  }, [posts, searchTerm, startDate, endDate]);
 
 
   const handleDelete = async (id: string) => {

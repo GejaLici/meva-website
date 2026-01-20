@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useMemo, useEffect } from 'react';
 import { useCollection, useUser, useFirestore } from '@/firebase';
@@ -25,10 +26,11 @@ interface Submission {
 interface ContactSubmissionsTableProps {
   searchTerm: string;
   sourceFilter: string;
-  dateFilter: string;
+  startDate: string;
+  endDate: string;
 }
 
-export function ContactSubmissionsTable({ searchTerm, sourceFilter, dateFilter }: ContactSubmissionsTableProps) {
+export function ContactSubmissionsTable({ searchTerm, sourceFilter, startDate, endDate }: ContactSubmissionsTableProps) {
   const { db } = useFirestore();
   const { user, loading: userLoading } = useUser();
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
@@ -62,14 +64,20 @@ export function ContactSubmissionsTable({ searchTerm, sourceFilter, dateFilter }
         
         const sourceMatch = !sourceFilter || (submission.source?.toLowerCase() || '').includes(sourceFilter.toLowerCase());
 
-        const dateMatch = !dateFilter || (
-            submission.submittedAt &&
-            submission.submittedAt.toDate().toISOString().startsWith(dateFilter)
-        );
+        const submissionDate = submission.submittedAt?.toDate();
+        if (!submissionDate) return false;
+
+        const start = startDate ? new Date(startDate) : null;
+        if(start) start.setHours(0, 0, 0, 0);
+        
+        const end = endDate ? new Date(endDate) : null;
+        if(end) end.setHours(23, 59, 59, 999);
+
+        const dateMatch = (!start || submissionDate >= start) && (!end || submissionDate <= end);
 
         return generalSearchMatch && sourceMatch && dateMatch;
     });
-  }, [submissions, searchTerm, sourceFilter, dateFilter]);
+  }, [submissions, searchTerm, sourceFilter, startDate, endDate]);
 
 
   const handleDelete = async (id: string) => {

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -13,7 +14,8 @@ export default function AdminBlogPage() {
     const t = useTranslations('AdminBlog');
     const tShared = useTranslations('AdminContacts');
     const [searchTerm, setSearchTerm] = useState('');
-    const [dateFilter, setDateFilter] = useState('');
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
 
     return (
         <div>
@@ -29,8 +31,8 @@ export default function AdminBlogPage() {
                     </Link>
                 </Button>
             </div>
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div className="md:col-span-1">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 p-4 border rounded-lg bg-card">
+                <div>
                     <Label htmlFor="searchTerm">{t('filterPlaceholder')}</Label>
                     <Input
                         id="searchTerm"
@@ -39,18 +41,30 @@ export default function AdminBlogPage() {
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
                 </div>
-                <div>
-                    <Label htmlFor="dateFilter">{tShared('dateFilterLabel')}</Label>
-                     <Input
-                        id="dateFilter"
-                        type="date"
-                        value={dateFilter}
-                        onChange={(e) => setDateFilter(e.target.value)}
-                        className="w-full"
-                    />
+                <div className="grid grid-cols-2 gap-4">
+                     <div>
+                        <Label htmlFor="startDate">{tShared('dateFilterFromLabel')}</Label>
+                         <Input
+                            id="startDate"
+                            type="date"
+                            value={startDate}
+                            onChange={(e) => setStartDate(e.target.value)}
+                            className="w-full"
+                        />
+                    </div>
+                    <div>
+                        <Label htmlFor="endDate">{tShared('dateFilterToLabel')}</Label>
+                         <Input
+                            id="endDate"
+                            type="date"
+                            value={endDate}
+                            onChange={(e) => setEndDate(e.target.value)}
+                            className="w-full"
+                        />
+                    </div>
                 </div>
             </div>
-            <BlogPostsTable searchTerm={searchTerm} dateFilter={dateFilter} />
+            <BlogPostsTable searchTerm={searchTerm} startDate={startDate} endDate={endDate} />
         </div>
     );
 }

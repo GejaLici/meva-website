@@ -445,7 +445,7 @@
       },
       "tummy-tuck-2": {
         "question": "Cos'è la diastasi dei retti?",
-        "answer": "<p>La diastasi dei retti è la separazione dei muscoli addominali ('six-pack'), che si verifica comunemente durante la gravidanza. Causa un rigonfiamento persistente. L'addominoplastica è la correzione chirurgica definitiva per questa condizione.</p>"
+        "answer": "<p>La diastasi dei retti è la separazione dei muscoli addominali ('six-pack'), che si verifica comunemente durante la gravidanza. Causa un rigonfiamento persistente che l'esercizio non può correggere. Un'addominoplastica è la correzione chirurgica definitiva per questa condizione.</p>"
       },
       "tummy-tuck-3": {
         "question": "Avrò una cicatrice grande?",
@@ -472,7 +472,8 @@
     "description": "Visualizza e gestisci tutti i messaggi inviati tramite i moduli di contatto del sito web.",
     "filterPlaceholder": "Filtra per nome, email o oggetto...",
     "sourceFilterPlaceholder": "Filtra per fonte...",
-    "dateFilterLabel": "Filtra per data",
+    "dateFilterFromLabel": "Dalla data",
+    "dateFilterToLabel": "Alla data",
     "tableTitle": "Invii",
     "tableDescription": "Un elenco di tutti gli invii dei moduli di contatto ricevuti.",
     "headerName": "Nome",
