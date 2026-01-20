@@ -476,7 +476,7 @@
     "blepharoplasty": {
       "blepharoplasty-1": {
         "question": "La chirurgie des paupières est-elle douloureuse ?",
-        "answer": "<p>La procédure n'est pas douloureuse en raison de l'anesthésie. L'inconfort postopératoire est généralement léger, souvent décrit comme une sensation de tiraillement ou de douleur, qui est easily gérée avec des analgésiques en vente libre.</p>"
+        "answer": "<p>La procédure n'est pas douloureuse en raison de l'anesthésie. L'inconfort postopératoire est généralement léger, often décrit comme une sensation de tiraillement ou de douleur, qui est easily gérée avec des analgésiques en vente libre.</p>"
       },
       "blepharoplasty-2": {
         "question": "Mes cicatrices seront-elles visibles ?",
@@ -504,7 +504,7 @@
     "breast-augmentation": {
       "breast-augmentation-1": {
         "question": "Combien de temps durent les implants mammaires ?",
-        "answer": "<p>Les implants mammaires ne sont pas considérés comme des dispositifs à vie. Bien qu'ils puissent durer de nombreuses années, il est probable que vous ayez besoin d'une chirurgie de révision ou de remplacement à un moment donné, généralement dans les 10 à 20 ans.</p>"
+        "answer": "<p>Les implants mammaires ne sont pas considérés comme des dispositifs à vie. Bien qu'ils puissent durer de nombreuses années, il est probable que vous ayez besoin d'une chirurgie de révision ou de remplacement à un moment donné, typiquement dans les 10 à 20 ans.</p>"
       },
       "breast-augmentation-2": {
         "question": "Puis-je encore allaiter avec des implants ?",
@@ -548,6 +548,27 @@
     "title": "Soumissions de formulaire de contact",
     "description": "Afficher et gérer tous les messages soumis via les formulaires de contact du site Web.",
     "filterPlaceholder": "Filtrer par nom, e-mail ou sujet...",
+    "sourceFilterPlaceholder": "Filtrer par source...",
+    "monthFilterLabel": "Filtrer par mois",
+    "monthFilterPlaceholder": "Sélectionner un mois",
+    "yearFilterLabel": "Filtrer par année",
+    "yearFilterPlaceholder": "Sélectionner une année",
+    "allMonths": "Tous les mois",
+    "allYears": "Toutes les années",
+    "months": {
+      "January": "Janvier",
+      "February": "Février",
+      "March": "Mars",
+      "April": "Avril",
+      "May": "Mai",
+      "June": "Juin",
+      "July": "Juillet",
+      "August": "Août",
+      "September": "Septembre",
+      "October": "Octobre",
+      "November": "Novembre",
+      "December": "Décembre"
+    },
     "tableTitle": "Soumissions",
     "tableDescription": "Une liste de toutes les soumissions de formulaires de contact reçues.",
     "headerName": "Nom",

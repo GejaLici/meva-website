@@ -24,9 +24,11 @@ interface Submission {
 
 interface ContactSubmissionsTableProps {
   searchTerm: string;
+  sourceFilter: string;
+  dateFilter: string;
 }
 
-export function ContactSubmissionsTable({ searchTerm }: ContactSubmissionsTableProps) {
+export function ContactSubmissionsTable({ searchTerm, sourceFilter, dateFilter }: ContactSubmissionsTableProps) {
   const { db } = useFirestore();
   const { user, loading: userLoading } = useUser();
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
@@ -52,12 +54,22 @@ export function ContactSubmissionsTable({ searchTerm }: ContactSubmissionsTableP
 
   const filteredSubmissions = useMemo(() => {
     if (!submissions) return [];
-    return submissions.filter(submission =>
-        (submission.name?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
-        (submission.email?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
-        (submission.subject?.toLowerCase() || '').includes(searchTerm.toLowerCase())
-    );
-  }, [submissions, searchTerm]);
+    return submissions.filter(submission => {
+        const generalSearchMatch = !searchTerm ||
+            (submission.name?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
+            (submission.email?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
+            (submission.subject?.toLowerCase() || '').includes(searchTerm.toLowerCase());
+        
+        const sourceMatch = !sourceFilter || (submission.source?.toLowerCase() || '').includes(sourceFilter.toLowerCase());
+
+        const dateMatch = !dateFilter || (
+            submission.submittedAt &&
+            submission.submittedAt.toDate().toISOString().startsWith(dateFilter)
+        );
+
+        return generalSearchMatch && sourceMatch && dateMatch;
+    });
+  }, [submissions, searchTerm, sourceFilter, dateFilter]);
 
 
   const handleDelete = async (id: string) => {

@@ -23,9 +23,10 @@ interface Post {
 
 interface BlogPostsTableProps {
     searchTerm: string;
+    dateFilter: string;
 }
 
-export function BlogPostsTable({ searchTerm }: BlogPostsTableProps) {
+export function BlogPostsTable({ searchTerm, dateFilter }: BlogPostsTableProps) {
   const { db } = useFirestore();
   const { user, loading: userLoading } = useUser();
   const [isDeleting, setIsDeleting] = useState<string | null>(null);
@@ -50,12 +51,21 @@ export function BlogPostsTable({ searchTerm }: BlogPostsTableProps) {
 
   const filteredPosts = useMemo(() => {
     if (!posts) return [];
-    return posts.filter(post =>
+    return posts.filter(post => {
+      const searchMatch = !searchTerm ||
         (post.title?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
         (post.slug?.toLowerCase() || '').includes(searchTerm.toLowerCase()) ||
-        (post.category?.toLowerCase() || '').includes(searchTerm.toLowerCase())
-    );
-  }, [posts, searchTerm]);
+        (post.category?.toLowerCase() || '').includes(searchTerm.toLowerCase());
+
+      const dateMatch = !dateFilter || (
+        post.date &&
+        post.date.toDate().toISOString().startsWith(dateFilter)
+      );
+
+      return searchMatch && dateMatch;
+    });
+  }, [posts, searchTerm, dateFilter]);
+
 
   const handleDelete = async (id: string) => {
     if (!confirm(t('deleteConfirmation'))) return;
