@@ -531,18 +531,18 @@
       }
     },
     "teeth-whitening": {
-      "teeth-whitening-1": {
-        "question": "Wie weiß werden meine Zähne?",
-        "answer": "<p>Die Ergebnisse variieren, aber eine professionelle Aufhellung kann die Zähne um mehrere Farbtöne aufhellen und ein merklich helleres, aber natürliches Aussehen erzielen.</p>"
-      },
-      "teeth-whitening-2": {
-        "question": "Ist das Zähnebleichen schmerzhaft?",
-        "answer": "<p>Der häufigste Nebeneffekt ist eine vorübergehende Empfindlichkeit der Zähne gegenüber Hitze oder Kälte, die normalerweise innerhalb von 24-48 Stunden nachlässt. Die Verwendung einer desensibilisierenden Zahnpasta kann helfen.</p>"
-      },
-      "teeth-whitening-3": {
-        "question": "Wirkt das Bleichen bei Kronen oder Füllungen?",
-        "answer": "<p>Nein. Bleichmittel wirken nur auf den natürlichen Zahnschmelz. Wenn Sie Restaurationen an Ihren Vorderzähnen haben, werden diese ihre Farbe nicht ändern und müssen möglicherweise ersetzt werden, um zu Ihrem neu aufgehellten Lächeln zu passen.</p>"
-      }
+        "teeth-whitening-1": {
+            "question": "Wie weiß werden meine Zähne?",
+            "answer": "<p>Die Ergebnisse variieren, aber eine professionelle Aufhellung kann die Zähne um mehrere Farbtöne aufhellen und ein merklich helleres, aber natürliches Aussehen erzielen.</p>"
+        },
+        "teeth-whitening-2": {
+            "question": "Ist das Zähnebleichen schmerzhaft?",
+            "answer": "<p>Der häufigste Nebeneffekt ist eine vorübergehende Empfindlichkeit der Zähne gegenüber Hitze oder Kälte, die normalerweise innerhalb von 24-48 Stunden nachlässt. Die Verwendung einer desensibilisierenden Zahnpasta kann helfen.</p>"
+        },
+        "teeth-whitening-3": {
+            "question": "Wirkt das Bleichen bei Kronen oder Füllungen?",
+            "answer": "<p>Nein. Bleichmittel wirken nur auf den natürlichen Zahnschmelz. Wenn Sie Restaurationen an Ihren Vorderzähnen haben, werden diese ihre Farbe nicht ändern und müssen möglicherweise ersetzt werden, um zu Ihrem neu aufgehellten Lächeln zu passen.</p>"
+        }
     }
   },
    "AdminContacts": {
@@ -550,26 +550,7 @@
     "description": "Alle über die Kontaktformulare der Website eingereichten Nachrichten anzeigen und verwalten.",
     "filterPlaceholder": "Nach Name, E-Mail oder Betreff filtern...",
     "sourceFilterPlaceholder": "Nach Quelle filtern...",
-    "monthFilterLabel": "Nach Monat filtern",
-    "monthFilterPlaceholder": "Monat auswählen",
-    "yearFilterLabel": "Nach Jahr filtern",
-    "yearFilterPlaceholder": "Jahr auswählen",
-    "allMonths": "Alle Monate",
-    "allYears": "Alle Jahre",
-    "months": {
-      "January": "Januar",
-      "February": "Februar",
-      "March": "März",
-      "April": "April",
-      "May": "Mai",
-      "June": "Juni",
-      "July": "Juli",
-      "August": "August",
-      "September": "September",
-      "October": "Oktober",
-      "November": "November",
-      "December": "Dezember"
-    },
+    "dateFilterLabel": "Nach Datum filtern",
     "tableTitle": "Einreichungen",
     "tableDescription": "Eine Liste aller eingegangenen Kontaktformular-Einreichungen.",
     "headerName": "Name",
